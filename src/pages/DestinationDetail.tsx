@@ -235,32 +235,32 @@ const DestinationDetail: React.FC = () => {
             {/* Emergency Information Panel */}
             {showEmergencyInfo && (
               <div className="mt-6 p-6 bg-red-50 border border-red-200 rounded-2xl">
-                <h3 className="text-lg font-bold text-red-900 mb-4 flex items-center">
+                <h3 className="text-lg font-display text-red-900 mb-4 flex items-center">
                   <Phone className="h-5 w-5 mr-2" />
                   Emergency Contacts - {destination.city}, {destination.country}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   <div className="bg-white p-4 rounded-lg border border-red-200">
-                    <h4 className="font-semibold text-red-800 mb-2">Police</h4>
+                    <h4 className="font-display text-red-800 mb-2">Police</h4>
                     <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.police}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-red-200">
-                    <h4 className="font-semibold text-red-800 mb-2">Fire Service</h4>
+                    <h4 className="font-display text-red-800 mb-2">Fire Service</h4>
                     <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.fire}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-red-200">
-                    <h4 className="font-semibold text-red-800 mb-2">Medical Emergency</h4>
+                    <h4 className="font-display text-red-800 mb-2">Medical Emergency</h4>
                     <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.medical}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-red-200">
-                    <h4 className="font-semibold text-red-800 mb-2">General Emergency</h4>
+                    <h4 className="font-display text-red-800 mb-2">General Emergency</h4>
                     <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.general}</p>
                   </div>
                 </div>
                 
                 {/* Embassy Information */}
                 <div className="bg-white p-4 rounded-lg border border-red-200">
-                  <h4 className="font-semibold text-red-800 mb-3 flex items-center">
+                  <h4 className="font-display text-red-800 mb-3 flex items-center">
                     <Building className="h-4 w-4 mr-2" />
                     Embassy Information
                   </h4>
@@ -310,7 +310,7 @@ const DestinationDetail: React.FC = () => {
                 {activeTab === 'overview' && (
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Safety Overview</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Safety Overview</h3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-4 bg-gray-50 rounded-lg">
                           <Moon className="h-8 w-8 text-blue-500 mx-auto mb-2" />
@@ -333,42 +333,10 @@ const DestinationDetail: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Currency Information */}
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                        <CreditCard className="h-5 w-5 mr-2" />
-                        Currency & Exchange
-                      </h3>
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <h4 className="font-semibold text-blue-900 mb-2">Local Currency</h4>
-                            <p className="text-blue-800">{destination.currency.name} ({destination.currency.code})</p>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-blue-900 mb-2">Exchange Rates (1 {destination.currency.code})</h4>
-                            <div className="space-y-1 text-sm text-blue-800">
-                              <p>USD: {formatCurrency(1/destination.currency.exchangeRate.usd, 'USD')}</p>
-                              <p>EUR: {formatCurrency(1/destination.currency.exchangeRate.eur, 'EUR')}</p>
-                              <p>GBP: {formatCurrency(1/destination.currency.exchangeRate.gbp, 'GBP')}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-blue-900 mb-2">Exchange Tips</h4>
-                          <ul className="text-sm text-blue-800 space-y-1">
-                            {destination.currency.scamWarnings.map((warning: string, index: number) => (
-                              <li key={index}>• {warning}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
                     {/* Scam Warnings - Separate Container */}
                     {destination.scamWarnings && destination.scamWarnings.length > 0 && (
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
                           <AlertTriangle className="h-5 w-5 mr-2 text-orange-500" />
                           Scam Warnings
                         </h3>
@@ -413,7 +381,7 @@ const DestinationDetail: React.FC = () => {
                     {/* Alerts */}
                     {destination.alerts && destination.alerts.length > 0 && (
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
                           <AlertTriangle className="h-5 w-5 mr-2 text-red-500" />
                           Current Safety Alerts
                         </h3>
@@ -461,6 +429,38 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       </div>
                     )}
+
+                    {/* Currency Information - moved to bottom */}
+                    <div>
+                      <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
+                        <CreditCard className="h-5 w-5 mr-2" />
+                        Currency & Exchange
+                      </h3>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                          <div>
+                            <h4 className="font-display text-blue-900 mb-2">Local Currency</h4>
+                            <p className="text-blue-800">{destination.currency.name} ({destination.currency.code})</p>
+                          </div>
+                          <div>
+                            <h4 className="font-display text-blue-900 mb-2">Exchange Rates (1 {destination.currency.code})</h4>
+                            <div className="space-y-1 text-sm text-blue-800">
+                              <p>USD: {formatCurrency(1/destination.currency.exchangeRate.usd, 'USD')}</p>
+                              <p>EUR: {formatCurrency(1/destination.currency.exchangeRate.eur, 'EUR')}</p>
+                              <p>GBP: {formatCurrency(1/destination.currency.exchangeRate.gbp, 'GBP')}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-display text-blue-900 mb-2">Exchange Tips</h4>
+                          <ul className="text-sm text-blue-800 space-y-1">
+                            {destination.currency.scamWarnings.map((warning: string, index: number) => (
+                              <li key={index}>• {warning}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
 
@@ -468,24 +468,24 @@ const DestinationDetail: React.FC = () => {
                 {activeTab === 'safety' && (
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Detailed Safety Breakdown</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Detailed Safety Breakdown</h3>
                       <div className="space-y-4">
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <h4 className="font-display text-gray-900 mb-2 flex items-center">
                             <Moon className="h-4 w-4 mr-2 text-blue-500" />
                             Night Safety ({destination.nightSafety}/10)
                           </h4>
                           <p className="text-gray-700">{destination.safetyBreakdown.nightSafety.context}</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <h4 className="font-display text-gray-900 mb-2 flex items-center">
                             <Bus className="h-4 w-4 mr-2 text-green-500" />
                             Public Transit ({destination.publicTransit}/10)
                           </h4>
                           <p className="text-gray-700">{destination.safetyBreakdown.publicTransit.context}</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <h4 className="font-display text-gray-900 mb-2 flex items-center">
                             <Users className="h-4 w-4 mr-2 text-purple-500" />
                             Walking Alone ({destination.walkingAlone}/10)
                           </h4>
@@ -496,10 +496,10 @@ const DestinationDetail: React.FC = () => {
 
                     {/* Neighborhoods */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Neighborhood Safety</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Neighborhood Safety</h3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                          <h4 className="font-semibold text-green-900 mb-2">Safe Areas</h4>
+                          <h4 className="font-display text-green-900 mb-2">Safe Areas</h4>
                           <ul className="text-sm text-green-800 space-y-1">
                             {destination.neighborhoods.safe.map((area: string, index: number) => (
                               <li key={index}>• {area}</li>
@@ -507,7 +507,7 @@ const DestinationDetail: React.FC = () => {
                           </ul>
                         </div>
                         <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                          <h4 className="font-semibold text-yellow-900 mb-2">Use Caution</h4>
+                          <h4 className="font-display text-yellow-900 mb-2">Use Caution</h4>
                           <ul className="text-sm text-yellow-800 space-y-1">
                             {destination.neighborhoods.caution.map((area: string, index: number) => (
                               <li key={index}>• {area}</li>
@@ -515,7 +515,7 @@ const DestinationDetail: React.FC = () => {
                           </ul>
                         </div>
                         <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                          <h4 className="font-semibold text-red-900 mb-2">Avoid</h4>
+                          <h4 className="font-display text-red-900 mb-2">Avoid</h4>
                           <ul className="text-sm text-red-800 space-y-1">
                             {destination.neighborhoods.avoid.map((area: string, index: number) => (
                               <li key={index}>• {area}</li>
@@ -532,14 +532,14 @@ const DestinationDetail: React.FC = () => {
                   <div className="space-y-6">
                     {/* Safety Tips */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Safety Tips</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Safety Tips</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                          <h4 className="font-semibold text-blue-900 mb-2">Clothing Recommendations</h4>
+                          <h4 className="font-display text-blue-900 mb-2">Clothing Recommendations</h4>
                           <p className="text-sm text-blue-800">{destination.safetyTips.clothing}</p>
                         </div>
                         <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
-                          <h4 className="font-semibold text-purple-900 mb-2">First-Timer Tips</h4>
+                          <h4 className="font-display text-purple-900 mb-2">First-Timer Tips</h4>
                           <p className="text-sm text-purple-800">{destination.safetyTips.firstTimers}</p>
                         </div>
                       </div>
@@ -547,7 +547,7 @@ const DestinationDetail: React.FC = () => {
 
                     {/* Useful Apps */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Useful Apps</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Useful Apps</h3>
                       <div className="flex flex-wrap gap-2">
                         {destination.safetyTips.apps.map((app: string, index: number) => (
                           <span key={index} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">
@@ -559,7 +559,7 @@ const DestinationDetail: React.FC = () => {
 
                     {/* Emergency Phrases */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Emergency Phrases</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Emergency Phrases</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {destination.safetyTips.emergencyPhrases.map((phrase: string, index: number) => (
                           <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
@@ -571,14 +571,14 @@ const DestinationDetail: React.FC = () => {
 
                     {/* Cultural Expectations */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">Cultural Information</h3>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
                       <div className="space-y-4">
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-2">Dress Code</h4>
+                          <h4 className="font-display text-gray-900 mb-2">Dress Code</h4>
                           <p className="text-gray-700">{destination.culturalExpectations.dressCode}</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-2">Behavior Norms</h4>
+                          <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
                           <ul className="text-gray-700 space-y-1">
                             {destination.culturalExpectations.behaviorNorms.map((norm: string, index: number) => (
                               <li key={index}>• {norm}</li>
@@ -586,7 +586,7 @@ const DestinationDetail: React.FC = () => {
                           </ul>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-2">Solo Women Perception</h4>
+                          <h4 className="font-display text-gray-900 mb-2">Solo Women Perception</h4>
                           <p className="text-gray-700">{destination.culturalExpectations.perception}</p>
                         </div>
                       </div>
@@ -644,7 +644,7 @@ const DestinationDetail: React.FC = () => {
                     ) : (
                       <div className="text-center py-12">
                         <MessageSquare className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">No reviews yet</h3>
+                        <h3 className="text-lg font-display text-gray-900 mb-2">No reviews yet</h3>
                         <p className="text-gray-600 mb-6">Be the first to share your safety experience in {destination.city}!</p>
                         <button 
                           onClick={() => setShowReviewModal(true)}
@@ -664,7 +664,7 @@ const DestinationDetail: React.FC = () => {
               
               {/* Quick Stats */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Stats</h3>
+                <h3 className="text-lg font-display text-gray-900 mb-4">Quick Stats</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Reviews</span>
@@ -683,13 +683,13 @@ const DestinationDetail: React.FC = () => {
 
               {/* Best Time to Visit */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                <h3 className="text-lg font-display text-gray-900 mb-4 flex items-center">
                   <Calendar className="h-5 w-5 mr-2" />
                   Best Time to Visit
                 </h3>
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Safest Months</h4>
+                    <h4 className="font-display text-gray-900 mb-1">Safest Months</h4>
                     <div className="flex flex-wrap gap-2">
                       {destination.bestTimeToVisit.safestMonths.map((month: string, index: number) => (
                         <span key={index} className="px-2 py-1 bg-green-100 text-green-800 rounded text-sm">
@@ -699,7 +699,7 @@ const DestinationDetail: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Events & Notes</h4>
+                    <h4 className="font-display text-gray-900 mb-1">Events & Notes</h4>
                     <p className="text-sm text-gray-700">{destination.bestTimeToVisit.events}</p>
                   </div>
                 </div>
@@ -708,12 +708,12 @@ const DestinationDetail: React.FC = () => {
               {/* Recommended Accommodations */}
               {destination.accommodations && destination.accommodations.length > 0 && (
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Recommended Stays</h3>
+                  <h3 className="text-lg font-display text-gray-900 mb-4">Recommended Stays</h3>
                   <div className="space-y-4">
                     {destination.accommodations.map((accommodation: any, index: number) => (
                       <div key={index} className="p-4 bg-gray-50 rounded-lg">
                         <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-semibold text-gray-900">{accommodation.name}</h4>
+                          <h4 className="font-display text-gray-900">{accommodation.name}</h4>
                           <div className="flex items-center space-x-1">
                             {[1,2,3,4,5].map((star) => (
                               <Star 

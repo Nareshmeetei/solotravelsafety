@@ -69,3 +69,17 @@ WHERE id IN (
   SELECT id FROM auth.users 
   WHERE email_confirmed_at IS NULL
 );
+
+-- Create newsletter_signups table for newsletter email collection
+CREATE TABLE IF NOT EXISTS public.newsletter_signups (
+  id serial PRIMARY KEY,
+  email text UNIQUE NOT NULL,
+  created_at timestamp with time zone DEFAULT now()
+);
+
+-- Create email_signups table for collecting email inputs
+CREATE TABLE IF NOT EXISTS public.email_signups (
+  id serial PRIMARY KEY,
+  email text UNIQUE NOT NULL,
+  created_at timestamp with time zone DEFAULT now()
+);

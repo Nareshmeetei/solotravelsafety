@@ -302,7 +302,7 @@ const SafetyTips: React.FC = () => {
             <div className={`space-y-4 ${showFilters ? 'block' : 'hidden'} sm:block`}>
               {/* Category Filters */}
               <div>
-                <h4 className="text-sm font-medium text-gray-700 mb-3 sm:hidden">Categories</h4>
+                <h4 className="text-sm font-display text-gray-700 mb-3 sm:hidden">Categories</h4>
                 <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3">
                   {categories.map((category) => (
                     <button

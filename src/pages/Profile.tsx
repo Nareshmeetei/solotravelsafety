@@ -335,7 +335,7 @@ const Profile: React.FC = () => {
         <Navbar />
         <div className="pt-24 px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-2xl font-black text-gray-900 mb-4">Please sign in to access your profile</h1>
+            <h1 className="text-2xl font-display text-gray-900 mb-4">Please sign in to access your profile</h1>
           </div>
         </div>
         <Footer />
@@ -376,7 +376,7 @@ const Profile: React.FC = () => {
                       </label>
                     </div>
                     <div>
-                      <h2 className="text-xl font-black text-gray-900">
+                      <h2 className="text-xl font-display text-gray-900">
                         {userProfile?.full_name || user.user_metadata?.full_name || 'Solo Traveler'}
                       </h2>
                       <p className="text-gray-600 text-sm">@{user.email?.split('@')[0]}</p>
@@ -431,7 +431,7 @@ const Profile: React.FC = () => {
 
               {/* Quick Actions */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
-                <h3 className="text-lg font-black text-gray-900 mb-4">Quick Actions</h3>
+                <h3 className="text-lg font-display text-gray-900 mb-4">Quick Actions</h3>
                 <div className="space-y-3">
                   <Link 
                     to="/add-destination"
@@ -544,7 +544,7 @@ const Profile: React.FC = () => {
                                 </div>
                               </div>
                               
-                              <h4 className="font-bold text-gray-900 mb-2">
+                              <h4 className="font-display text-gray-900 mb-2">
                                 {review.destination_city}, {review.destination_country} - Solo Female Travel Experience
                               </h4>
                               <p className="text-gray-700 mb-3">
@@ -626,7 +626,7 @@ const Profile: React.FC = () => {
                   ) : (
                     <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-200 text-center">
                       <Shield className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">Share Your Safety Experience</h3>
+                      <h3 className="text-lg font-display text-gray-900 mb-2">Share Your Safety Experience</h3>
                       <p className="text-gray-600 mb-6">Help other solo female travelers by sharing your safety insights and experiences.</p>
                       <button 
                         onClick={() => setShowReviewModal(true)}
@@ -686,7 +686,7 @@ const Profile: React.FC = () => {
                               </div>
                             </div>
                             
-                            <h4 className="font-bold text-gray-900 mb-2">
+                            <h4 className="font-display text-gray-900 mb-2">
                               {post.destination_city}, {post.destination_country} - Solo Female Travel Experience
                             </h4>
                             <p className="text-gray-700 mb-3">
@@ -802,9 +802,9 @@ const Profile: React.FC = () => {
                       <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-start justify-between mb-4">
                           <div>
-                            <h3 className="font-bold text-gray-900 mb-1">
-                              {review.destination_city}, {review.destination_country}
-                            </h3>
+                                            <h3 className="font-display text-gray-900 mb-1">
+                  {review.destination_city}, {review.destination_country}
+                </h3>
                             <div className="flex items-center space-x-2">
                               <div className="flex space-x-1">
                                 {[1,2,3,4,5].map((star) => (
@@ -841,7 +841,7 @@ const Profile: React.FC = () => {
                   ) : (
                     <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-200 text-center">
                       <Star className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">No Safety Reviews Yet</h3>
+                      <h3 className="text-lg font-display text-gray-900 mb-2">No Safety Reviews Yet</h3>
                       <p className="text-gray-600 mb-6">Start sharing your travel safety experiences with the community.</p>
                       <button 
                         onClick={() => setShowReviewModal(true)}
@@ -870,12 +870,12 @@ const Profile: React.FC = () => {
             </button>
 
             <div className="p-6">
-              <h2 className="text-2xl font-black text-gray-900 mb-6">Your Contributions</h2>
+                              <h2 className="text-2xl font-display text-gray-900 mb-6">Your Contributions</h2>
               
               <div className="space-y-6">
                 {/* Reviews Section */}
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-lg font-display text-gray-900 mb-3 flex items-center">
                     <Star className="h-5 w-5 mr-2 text-yellow-500" />
                     Safety Reviews ({userReviews.length})
                   </h3>
@@ -883,7 +883,7 @@ const Profile: React.FC = () => {
                     <div className="space-y-3">
                       {userReviews.map((review, index) => (
                         <div key={index} className="p-3 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900">
+                          <h4 className="font-display text-gray-900">
                             {review.destination_city}, {review.destination_country}
                           </h4>
                           <p className="text-sm text-gray-600">
@@ -899,7 +899,7 @@ const Profile: React.FC = () => {
 
                 {/* Destinations Section */}
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-lg font-display text-gray-900 mb-3 flex items-center">
                     <MapPin className="h-5 w-5 mr-2 text-blue-500" />
                     Destination Submissions ({userDestinations.length})
                   </h3>
@@ -907,7 +907,7 @@ const Profile: React.FC = () => {
                     <div className="space-y-3">
                       {userDestinations.map((destination, index) => (
                         <div key={index} className="p-3 bg-gray-50 rounded-lg">
-                          <h4 className="font-semibold text-gray-900">
+                          <h4 className="font-display text-gray-900">
                             {destination.city}, {destination.country}
                           </h4>
                           <p className="text-sm text-gray-600">

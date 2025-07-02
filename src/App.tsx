@@ -11,7 +11,6 @@ import SafetyTips from './pages/SafetyTips';
 import Community from './pages/Community';
 import AuthCallback from './pages/AuthCallback';
 import FloatingBoltLogo from './components/FloatingBoltLogo';
-import DonateButton from './components/DonateButton';
 import ScrollToTop from './components/ScrollToTop';
 
 // Protected Route component
@@ -86,7 +85,6 @@ function App() {
         <div className="min-h-screen bg-white font-sans">
           <AppRoutes />
           <FloatingBoltLogo />
-          <DonateButton />
         </div>
       </Router>
     </AuthProvider>

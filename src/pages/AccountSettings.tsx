@@ -554,7 +554,7 @@ const AccountSettings: React.FC = () => {
                         </label>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900">Profile Photo</h3>
+                        <h3 className="font-display text-gray-900">Profile Photo</h3>
                         <p className="text-sm text-gray-600">Upload a photo to personalize your profile</p>
                         <p className="text-xs text-gray-500 mt-1">Supported: JPEG, PNG, WebP, GIF (max 5MB)</p>
                       </div>
@@ -744,7 +744,7 @@ const AccountSettings: React.FC = () => {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
                         <div>
-                          <h3 className="font-bold text-gray-900">Review Responses</h3>
+                          <h3 className="font-display text-gray-900">Review Responses</h3>
                           <p className="text-sm text-gray-600">Get notified when someone responds to your reviews</p>
                         </div>
                         <label className="relative inline-flex items-center cursor-pointer">
@@ -760,7 +760,7 @@ const AccountSettings: React.FC = () => {
 
                       <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
                         <div>
-                          <h3 className="font-bold text-gray-900">Safety Alerts</h3>
+                          <h3 className="font-display text-gray-900">Safety Alerts</h3>
                           <p className="text-sm text-gray-600">Receive important safety alerts for destinations you've visited</p>
                         </div>
                         <label className="relative inline-flex items-center cursor-pointer">
@@ -776,7 +776,7 @@ const AccountSettings: React.FC = () => {
 
                       <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
                         <div>
-                          <h3 className="font-bold text-gray-900">Newsletter</h3>
+                          <h3 className="font-display text-gray-900">Newsletter</h3>
                           <p className="text-sm text-gray-600">Monthly newsletter with travel safety tips and destination highlights</p>
                         </div>
                         <label className="relative inline-flex items-center cursor-pointer">
@@ -823,7 +823,7 @@ const AccountSettings: React.FC = () => {
 
                     <div className="space-y-4">
                       <div className="p-4 border border-gray-200 rounded-xl">
-                        <h3 className="font-bold text-gray-900 mb-2">Profile Visibility</h3>
+                        <h3 className="font-display text-gray-900 mb-2">Profile Visibility</h3>
                         <div className="space-y-2">
                           <label className="flex items-center">
                             <input
@@ -858,7 +858,7 @@ const AccountSettings: React.FC = () => {
 
                       <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
                         <div>
-                          <h3 className="font-bold text-gray-900">Show Location</h3>
+                          <h3 className="font-display text-gray-900">Show Location</h3>
                           <p className="text-sm text-gray-600">Display your location on your public profile</p>
                         </div>
                         <label className="relative inline-flex items-center cursor-pointer">
@@ -874,7 +874,7 @@ const AccountSettings: React.FC = () => {
 
                       <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
                         <div>
-                          <h3 className="font-bold text-gray-900">Show Reviews</h3>
+                          <h3 className="font-display text-gray-900">Show Reviews</h3>
                           <p className="text-sm text-gray-600">Allow others to see your safety reviews and ratings</p>
                         </div>
                         <label className="relative inline-flex items-center cursor-pointer">
@@ -923,7 +923,7 @@ const AccountSettings: React.FC = () => {
                       <div className="flex items-start space-x-4">
                         <AlertTriangle className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
                         <div className="flex-1">
-                          <h3 className="font-bold text-red-900 mb-2">Delete Account</h3>
+                          <h3 className="font-display text-red-900 mb-2">Delete Account</h3>
                           <p className="text-red-800 mb-4">
                             Once you delete your account, there is no going back. This will permanently delete:
                           </p>

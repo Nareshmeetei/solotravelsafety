@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { User, LogOut, Menu, X, Heart } from 'lucide-react';
+import { User, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
 import UserAvatar from './UserAvatar';
@@ -10,7 +10,6 @@ const Navbar: React.FC = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showDonateModal, setShowDonateModal] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
@@ -56,11 +55,6 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleDonateClick = () => {
-    setShowDonateModal(true);
-    setIsMobileMenuOpen(false);
-  };
-
   // Determine logo destination based on user status
   const getLogoDestination = () => {
     // If user is signed in, always go to destinations
@@ -75,7 +69,6 @@ const Navbar: React.FC = () => {
     { to: '/destinations', label: 'Destinations' },
     { to: '/safety-tips', label: 'Safety Tips' },
     { to: '/community', label: 'Community' },
-    { action: 'donate', label: 'Donate' }
   ];
 
   return (
@@ -99,29 +92,18 @@ const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
-              link.action === 'donate' ? (
-                <button
-                  key={link.action}
-                  onClick={handleDonateClick}
-                  className="flex items-center space-x-1 font-medium text-sm transition-all duration-300 hover:scale-105 text-gray-700 hover:text-primary-400"
-                >
-                  <Heart className="h-4 w-4" />
-                  <span>{link.label}</span>
-                </button>
-              ) : (
-                <Link 
-                  key={link.to}
-                  to={link.to} 
-                  onClick={handleNavClick}
-                  className={`font-medium text-sm transition-all duration-300 hover:scale-105 ${
-                    location.pathname === link.to 
-                      ? 'text-primary-400' 
-                      : 'text-gray-700 hover:text-primary-400'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
+              <Link 
+                key={link.to}
+                to={link.to} 
+                onClick={handleNavClick}
+                className={`font-medium text-sm transition-all duration-300 hover:scale-105 ${
+                  location.pathname === link.to 
+                    ? 'text-primary-400' 
+                    : 'text-gray-700 hover:text-primary-400'
+                }`}
+              >
+                {link.label}
+              </Link>
             ))}
             
             {user ? (
@@ -169,29 +151,18 @@ const Navbar: React.FC = () => {
         }`}>
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
-              link.action === 'donate' ? (
-                <button
-                  key={link.action}
-                  onClick={handleDonateClick}
-                  className="flex items-center space-x-2 w-full text-left font-medium text-base py-2 transition-all duration-300 text-gray-700 hover:text-primary-400"
-                >
-                  <Heart className="h-4 w-4" />
-                  <span>{link.label}</span>
-                </button>
-              ) : (
-                <Link 
-                  key={link.to}
-                  to={link.to} 
-                  onClick={handleNavClick}
-                  className={`block font-medium text-base py-2 transition-all duration-300 ${
-                    location.pathname === link.to 
-                      ? 'text-primary-400' 
-                      : 'text-gray-700 hover:text-primary-400'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
+              <Link 
+                key={link.to}
+                to={link.to} 
+                onClick={handleNavClick}
+                className={`block font-medium text-base py-2 transition-all duration-300 ${
+                  location.pathname === link.to 
+                    ? 'text-primary-400' 
+                    : 'text-gray-700 hover:text-primary-400'
+                }`}
+              >
+                {link.label}
+              </Link>
             ))}
             
             <div className="pt-4 border-t border-gray-200">
@@ -250,29 +221,18 @@ const Navbar: React.FC = () => {
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center space-x-6">
                   {navLinks.map((link) => (
-                    link.action === 'donate' ? (
-                      <button
-                        key={link.action}
-                        onClick={handleDonateClick}
-                        className="flex items-center space-x-1 font-medium text-sm transition-all duration-300 hover:scale-105 text-gray-600 hover:text-primary-400"
-                      >
-                        <Heart className="h-4 w-4" />
-                        <span>{link.label}</span>
-                      </button>
-                    ) : (
-                      <Link 
-                        key={link.to}
-                        to={link.to} 
-                        onClick={handleNavClick}
-                        className={`font-medium text-sm transition-all duration-300 hover:scale-105 ${
-                          location.pathname === link.to 
-                            ? 'text-primary-400' 
-                            : 'text-gray-600 hover:text-primary-400'
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    )
+                    <Link 
+                      key={link.to}
+                      to={link.to} 
+                      onClick={handleNavClick}
+                      className={`font-medium text-sm transition-all duration-300 hover:scale-105 ${
+                        location.pathname === link.to 
+                          ? 'text-primary-400' 
+                          : 'text-gray-600 hover:text-primary-400'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
                   ))}
                   
                   {user ? (
@@ -318,29 +278,18 @@ const Navbar: React.FC = () => {
               {isMobileMenuOpen && (
                 <div className="lg:hidden mt-4 pt-4 space-y-3">
                   {navLinks.map((link) => (
-                    link.action === 'donate' ? (
-                      <button
-                        key={link.action}
-                        onClick={handleDonateClick}
-                        className="flex items-center space-x-2 w-full text-left font-medium text-sm py-2 transition-all duration-300 text-gray-600 hover:text-primary-400"
-                      >
-                        <Heart className="h-4 w-4" />
-                        <span>{link.label}</span>
-                      </button>
-                    ) : (
-                      <Link 
-                        key={link.to}
-                        to={link.to} 
-                        onClick={handleNavClick}
-                        className={`block font-medium text-sm py-2 transition-all duration-300 ${
-                          location.pathname === link.to 
-                            ? 'text-primary-400' 
-                            : 'text-gray-600 hover:text-primary-400'
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    )
+                    <Link 
+                      key={link.to}
+                      to={link.to} 
+                      onClick={handleNavClick}
+                      className={`block font-medium text-sm py-2 transition-all duration-300 ${
+                        location.pathname === link.to 
+                          ? 'text-primary-400' 
+                          : 'text-gray-600 hover:text-primary-400'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
                   ))}
                   
                   <div className="pt-3 space-y-2">
@@ -382,76 +331,6 @@ const Navbar: React.FC = () => {
         onClose={() => setShowAuthModal(false)}
         initialMode={authMode}
       />
-
-      {/* Donation Modal */}
-      {showDonateModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4">
-          <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-xl animate-fade-in">
-            <button
-              onClick={() => setShowDonateModal(false)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors duration-300 hover:scale-110 z-10"
-            >
-              <X className="h-5 w-5" />
-            </button>
-
-            <div className="p-6 pb-3 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-primary-400 to-secondary-pink-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Heart className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-xl font-black text-gray-900 mb-2">
-                Fund Freedom For More Women
-              </h2>
-              <p className="text-sm text-gray-600">
-                Help us keep solo female travelers safe worldwide
-              </p>
-            </div>
-
-            <div className="px-6 pb-6">
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                {[
-                  { amount: 5, label: 'Buy us a coffee' },
-                  { amount: 15, label: 'Safety research' },
-                  { amount: 30, label: 'Support a traveler' },
-                  { amount: 50, label: 'Champion safety' }
-                ].map((option) => (
-                  <button
-                    key={option.amount}
-                    onClick={() => {
-                      alert(`Thank you for your $${option.amount} donation! Your support helps keep solo female travelers safe worldwide. 💜`);
-                      setShowDonateModal(false);
-                    }}
-                    className="flex flex-col items-center space-y-2 p-4 border border-gray-200 rounded-xl hover:border-primary-400 hover:bg-primary-50 transition-all duration-300 hover:scale-[1.02]"
-                  >
-                    <div className="text-lg font-black text-primary-600">${option.amount}</div>
-                    <div className="text-sm font-semibold text-gray-900">{option.label}</div>
-                  </button>
-                ))}
-              </div>
-
-              <div className="border-t border-gray-100 pt-4">
-                <div className="flex space-x-2">
-                  <div className="relative flex-1">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                    <input
-                      type="number"
-                      min="1"
-                      placeholder="Custom amount"
-                      className="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none"
-                    />
-                  </div>
-                  <button className="px-6 py-3 bg-primary-400 hover:bg-primary-500 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg">
-                    Donate
-                  </button>
-                </div>
-              </div>
-
-              <p className="text-xs text-gray-500 text-center mt-4">
-                Secure payment • Helps keep the platform free for all travelers
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };

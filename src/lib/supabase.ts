@@ -440,3 +440,11 @@ export const getAllDestinations = async () => {
     .order('created_at', { ascending: false });
   return { data, error };
 }
+
+// Newsletter signup
+export const addNewsletterEmail = async (email: string) => {
+  const { data, error } = await supabase
+    .from('newsletter_signups')
+    .insert([{ email }]);
+  return { data, error };
+};

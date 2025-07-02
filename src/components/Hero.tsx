@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
+import { addNewsletterEmail } from '../lib/supabase';
 
 const Hero: React.FC = () => {
   const { user } = useAuth();
@@ -18,14 +19,14 @@ const Hero: React.FC = () => {
     setSubmitMessage('');
 
     try {
-      // Simulate newsletter signup - in a real app, this would call an API
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitMessage('Thanks! You\'re in the safe loop 🎉');
-      setEmail('');
-      
-      // Clear success message after 3 seconds
-      setTimeout(() => setSubmitMessage(''), 3000);
+      const { error } = await addNewsletterEmail(email);
+      if (error) {
+        setSubmitMessage('Something went wrong. Please try again.');
+      } else {
+        setSubmitMessage('Thanks! You\'re in the safe loop 🎉');
+        setEmail('');
+        setTimeout(() => setSubmitMessage(''), 3000);
+      }
     } catch (error) {
       setSubmitMessage('Something went wrong. Please try again.');
     } finally {

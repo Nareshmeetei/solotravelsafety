@@ -96,7 +96,7 @@ const AuthCallback: React.FC = () => {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Loader className="h-8 w-8 text-blue-600 animate-spin" />
                 </div>
-                <h1 className="text-xl font-bold text-gray-900 mb-2">Confirming Your Email</h1>
+                <h1 className="text-xl font-display text-gray-900 mb-2">Confirming Your Email</h1>
                 <p className="text-gray-600">Please wait while we verify your email address...</p>
               </>
             )}
@@ -106,7 +106,7 @@ const AuthCallback: React.FC = () => {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-green-600" />
                 </div>
-                <h1 className="text-xl font-bold text-gray-900 mb-2">Email Confirmed!</h1>
+                <h1 className="text-xl font-display text-gray-900 mb-2">Email Confirmed!</h1>
                 <p className="text-gray-600 mb-4">{message}</p>
                 <p className="text-sm text-gray-500">Redirecting you to the destinations page...</p>
               </>
@@ -117,7 +117,7 @@ const AuthCallback: React.FC = () => {
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <AlertCircle className="h-8 w-8 text-red-600" />
                 </div>
-                <h1 className="text-xl font-bold text-gray-900 mb-2">Confirmation Failed</h1>
+                <h1 className="text-xl font-display text-gray-900 mb-2">Confirmation Failed</h1>
                 <p className="text-gray-600 mb-6">{message}</p>
                 <button
                   onClick={() => navigate('/')}

@@ -320,9 +320,9 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
 
         {/* Header */}
         <div className="p-6 pb-4 border-b border-gray-100">
-          <h2 className="text-2xl font-black text-gray-900 mb-2">
-            Share Your Safety Experience
-          </h2>
+                        <h2 className="text-2xl font-display text-gray-900 mb-2">
+                Share Your Safety Experience
+              </h2>
           <p className="text-gray-600">
             Help other solo female travelers by sharing your honest safety insights
           </p>
