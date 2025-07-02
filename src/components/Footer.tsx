@@ -1,0 +1,65 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer: React.FC = () => {
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="bg-white border-t border-gray-100 px-4 py-12">
+      <div className="mx-auto max-w-6xl">
+        {/* Main Footer Content */}
+        <div className="mb-8 text-center animate-fade-in-up">
+          <div className="mb-4 flex items-center justify-center">
+            <Link to="/" onClick={handleNavClick}>
+              <img 
+                src="/Solo Travel Safety logo 1.svg" 
+                alt="SoloTravelSafety Logo" 
+                className="h-10 w-auto transition-all duration-300 hover:scale-105 hover:brightness-110"
+              />
+            </Link>
+          </div>
+          <p className="text-sm text-gray-600 max-w-md mx-auto transition-colors duration-300 hover:text-gray-700">
+            Real safety info, from real women, for solo female travelers.
+          </p>
+        </div>
+        
+        {/* Footer Links */}
+        <div className="border-t border-gray-100 pt-8">
+          <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-8 animate-fade-in-up animate-delay-200">
+            <Link 
+              to="/destinations"
+              onClick={handleNavClick}
+              className="text-sm text-gray-600 transition-all duration-300 hover:text-primary-400 hover:scale-105 focus-smooth"
+            >
+              Destinations
+            </Link>
+            <Link 
+              to="/safety-tips"
+              onClick={handleNavClick}
+              className="text-sm text-gray-600 transition-all duration-300 hover:text-primary-400 hover:scale-105 focus-smooth"
+            >
+              Safety Tips
+            </Link>
+            <Link 
+              to="/community"
+              onClick={handleNavClick}
+              className="text-sm text-gray-600 transition-all duration-300 hover:text-primary-400 hover:scale-105 focus-smooth"
+            >
+              Community
+            </Link>
+          </div>
+          
+          <div className="mt-6 text-center animate-fade-in-up animate-delay-400">
+            <p className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600">
+              © 2025 SoloTravelSafety.com. Made with ❤️ for fearless women travelers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
