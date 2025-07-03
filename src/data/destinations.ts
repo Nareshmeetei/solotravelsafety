@@ -1,5 +1,3 @@
-import { Destination } from '../types/destination';
-
 export interface Destination {
   city: string;
   country: string;
@@ -2858,8 +2856,8 @@ export const destinations: Destination[] = [
 export const getDestinationBySlug = (city: string, country: string): Destination | undefined => {
   return destinations.find(
     dest => 
-      dest.city.toLowerCase().replace(/\s+/g, '-') === city.toLowerCase() &&
-      dest.country.toLowerCase().replace(/\s+/g, '-') === country.toLowerCase()
+      dest.city.toLowerCase().replace(/\s+/g, '-') === city &&
+      dest.country.toLowerCase().replace(/\s+/g, '-') === country
   );
 };
 
