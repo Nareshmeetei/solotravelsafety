@@ -279,9 +279,9 @@ const AllDestinations: React.FC = () => {
                   {/* Header */}
                   <div className="mb-4 flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-6 rounded-sm overflow-hidden shadow-sm border border-gray-200 transition-transform duration-300 animate-pulse-soft">
+                      <div className="w-12 h-8 rounded-md overflow-hidden shadow-sm border border-gray-200 transition-transform duration-300 animate-pulse-soft">
                         <img 
-                          src={`https://flagcdn.com/w40/${destination.countryCode}.png`}
+                          src={`https://flagcdn.com/w80/${destination.countryCode}.png`}
                           alt={`${destination.country} flag`}
                           className="w-full h-full object-cover"
                           loading="lazy"

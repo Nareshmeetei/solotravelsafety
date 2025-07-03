@@ -91,6 +91,7 @@ export interface Destination {
     description: string;
     severity: 'low' | 'medium' | 'high';
   }[];
+  languages: string[];
 }
 
 export const destinations: Destination[] = [
@@ -200,7 +201,8 @@ export const destinations: Destination[] = [
         description: 'Souvenir shops near major attractions often have inflated prices',
         severity: 'low'
       }
-    ]
+    ],
+    languages: ['Icelandic', 'English'],
   },
 
   // Switzerland
@@ -302,7 +304,8 @@ export const destinations: Destination[] = [
         description: 'Restaurants near major attractions may charge significantly more than local establishments',
         severity: 'low'
       }
-    ]
+    ],
+    languages: ['German', 'French', 'Italian', 'English (major cities)'],
   },
 
   // Japan
@@ -418,7 +421,8 @@ export const destinations: Destination[] = [
         description: 'Some bars in Roppongi and Kabukicho may have hidden charges - always check prices upfront',
         severity: 'medium'
       }
-    ]
+    ],
+    languages: ['Japanese', 'English (major cities)'],
   },
 
   // Singapore
@@ -2740,6 +2744,114 @@ export const destinations: Destination[] = [
         severity: 'low'
       }
     ]
+  },
+
+  // Seoul, South Korea
+  {
+    city: 'Seoul',
+    country: 'South Korea',
+    continent: 'Asia',
+    countryCode: 'kr',
+    overallScore: 8.6,
+    nightSafety: 8.4,
+    publicTransit: 9.3,
+    walkingAlone: 8.2,
+    tags: ['safe', 'modern', 'public-transit'],
+    bgColor: 'bg-green-25',
+    reviewCount: 412,
+    lastUpdated: '2 days ago',
+    harassmentRisk: 'medium',
+    safetyBreakdown: {
+      nightSafety: {
+        score: 8.4,
+        context: 'Generally safe at night, especially in busy areas. Some caution advised in nightlife districts late at night.'
+      },
+      publicTransit: {
+        score: 9.3,
+        context: 'Extensive, clean, and safe subway and bus system. English signage in most stations.'
+      },
+      walkingAlone: {
+        score: 8.2,
+        context: 'Safe to walk alone in most areas. Petty crime is rare but possible in crowded places.'
+      }
+    },
+    neighborhoods: {
+      safe: ['Gangnam', 'Itaewon', 'Hongdae', 'Insadong', 'Myeongdong'],
+      caution: ['Nightlife areas in Itaewon and Hongdae late at night'],
+      avoid: ['None - generally safe city']
+    },
+    accommodations: [
+      {
+        name: 'Bunk Guesthouse',
+        type: 'hostel',
+        features: ['Female dorms', 'Central location', 'Friendly staff'],
+        rating: 4.6,
+        notes: 'Popular with solo travelers, safe and clean.'
+      },
+      {
+        name: 'L7 Myeongdong by Lotte',
+        type: 'hotel',
+        features: ['Modern hotel', 'Great location', 'English-speaking staff'],
+        rating: 4.7,
+        notes: 'Excellent safety and amenities.'
+      }
+    ],
+    alerts: [],
+    safetyTips: {
+      clothing: 'Dress modestly in temples and palaces. Casual wear is fine elsewhere.',
+      firstTimers: 'Download KakaoMap and Subway Korea apps. Taxis are safe but traffic can be heavy.',
+      apps: ['KakaoMap', 'Subway Korea', 'KakaoTalk'],
+      emergencyPhrases: ['도와주세요 (Help me)', '경찰을 불러주세요 (Call the police)']
+    },
+    culturalExpectations: {
+      dressCode: 'Modest dress in religious sites. Trendy, casual wear is common in the city.',
+      behaviorNorms: ['Respect elders', 'No loud talking on public transport', 'Remove shoes in homes'],
+      perception: 'Solo female travelers are common and generally respected. Some staring may occur.'
+    },
+    bestTimeToVisit: {
+      safestMonths: ['April-June', 'September-November'],
+      events: 'Cherry blossom season (April), autumn foliage (October-November). Safe year-round.'
+    },
+    emergencyInfo: {
+      police: '112',
+      fire: '119',
+      medical: '119',
+      general: '112'
+    },
+    embassy: {
+      name: 'US Embassy Seoul',
+      address: '188 Sejong-daero, Jongno-gu, Seoul',
+      phone: '+82-2-397-4114',
+      email: 'SeoulInfo@state.gov',
+      website: 'https://kr.usembassy.gov/'
+    },
+    currency: {
+      name: 'South Korean Won',
+      code: 'KRW',
+      exchangeRate: {
+        usd: 0.00075,
+        eur: 0.00069,
+        gbp: 0.00059
+      },
+      scamWarnings: [
+        'Beware of overcharging taxis late at night',
+        'Pickpocketing in crowded markets',
+        'Counterfeit goods in some shopping areas'
+      ]
+    },
+    scamWarnings: [
+      {
+        title: 'Taxi Overcharging',
+        description: 'Some taxi drivers may overcharge tourists, especially late at night. Use official taxis or ride apps.',
+        severity: 'medium'
+      },
+      {
+        title: 'Pickpocketing in Markets',
+        description: 'Petty theft can occur in crowded places like Namdaemun and Dongdaemun markets.',
+        severity: 'low'
+      }
+    ],
+    languages: ['Korean', 'English (major tourist areas)'],
   }
 ];
 

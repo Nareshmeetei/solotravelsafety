@@ -10,6 +10,7 @@ import AccountSettings from './pages/AccountSettings';
 import SafetyTips from './pages/SafetyTips';
 import Community from './pages/Community';
 import AuthCallback from './pages/AuthCallback';
+import MCPTestPage from './pages/MCPTestPage';
 import FloatingBoltLogo from './components/FloatingBoltLogo';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -56,6 +57,7 @@ function AppRoutes() {
       <Route path="/safety-tips" element={<SafetyTips />} />
       <Route path="/community" element={<Community />} />
       <Route path="/auth/callback" element={<AuthCallback />} />
+      <Route path="/mcp-test" element={<MCPTestPage />} />
       <Route path="/profile" element={
         <ProtectedRoute>
           <Profile />

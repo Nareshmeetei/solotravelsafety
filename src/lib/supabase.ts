@@ -443,8 +443,22 @@ export const getAllDestinations = async () => {
 
 // Newsletter signup
 export const addNewsletterEmail = async (email: string) => {
-  const { data, error } = await supabase
-    .from('newsletter_signups')
-    .insert([{ email }]);
-  return { data, error };
+  try {
+    // Simple insert into newsletter_signups table
+    const { data, error } = await supabase
+      .from('newsletter_signups')
+      .insert([{ email }])
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error adding newsletter email:', error);
+      return { error };
+    }
+
+    return { data };
+  } catch (error) {
+    console.error('Error adding newsletter email:', error);
+    return { error };
+  }
 };

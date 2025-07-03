@@ -31,6 +31,13 @@ import ReviewModal from '../components/ReviewModal';
 import { getDestinationBySlug } from '../data/destinations';
 import { getReviewsForDestination } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
+import SafetyByTimeOfDay from '../components/SafetyByTimeOfDay';
+import MostReportedRedFlags from '../components/MostReportedRedFlags';
+import CulturalSensitivityTips from '../components/CulturalSensitivityTips';
+import WomensConfidenceScore from '../components/WomensConfidenceScore';
+import ConfidenceByActivity from '../components/ConfidenceByActivity';
+import LanguageAndHelp from '../components/LanguageAndHelp';
+import { seoulEmbassies, Embassy } from '../data/embassies';
 
 const DestinationDetail: React.FC = () => {
   const { city, country } = useParams<{ city: string; country: string }>();
@@ -42,6 +49,8 @@ const DestinationDetail: React.FC = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
   const [showEmergencyInfo, setShowEmergencyInfo] = useState(false);
+  const [embassySearch, setEmbassySearch] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState<string>('');
 
   useEffect(() => {
     if (city && country) {
@@ -119,6 +128,13 @@ const DestinationDetail: React.FC = () => {
     }).format(amount);
   };
 
+  // Filter embassies by search or selected country
+  const filteredEmbassies = embassySearch
+    ? seoulEmbassies.filter(e => e.country.toLowerCase().includes(embassySearch.toLowerCase()))
+    : selectedCountry
+      ? seoulEmbassies.filter(e => e.country === selectedCountry)
+      : seoulEmbassies.filter(e => ['United States', 'United Kingdom', 'Australia'].includes(e.country));
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 font-sans">
@@ -186,9 +202,9 @@ const DestinationDetail: React.FC = () => {
           {/* Header */}
           <div className="mb-8">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-8 rounded-sm overflow-hidden shadow-sm border border-gray-200">
+              <div className="w-20 h-12 rounded-xl overflow-hidden shadow-sm border border-gray-200">
                 <img 
-                  src={`https://flagcdn.com/w40/${destination.countryCode}.png`}
+                  src={`https://flagcdn.com/w80/${destination.countryCode}.png`}
                   alt={`${destination.country} flag`}
                   className="w-full h-full object-cover"
                 />
@@ -204,7 +220,7 @@ const DestinationDetail: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <Shield className="h-6 w-6 text-primary-400" />
                 <span className="text-lg font-medium text-gray-700">Overall Safety:</span>
-                <div className={`rounded-full px-4 py-2 text-lg font-bold ${getScoreColor(destination.overallScore)}`}>
+                <div className={`rounded-full px-4 py-2 text-2xl font-extrabold ${getScoreColor(destination.overallScore)}`}>
                   {destination.overallScore}/10
                 </div>
               </div>
@@ -257,21 +273,52 @@ const DestinationDetail: React.FC = () => {
                     <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.general}</p>
                   </div>
                 </div>
-                
-                {/* Embassy Information */}
+                {/* Embassy Information - Multi-country, Searchable */}
                 <div className="bg-white p-4 rounded-lg border border-red-200">
                   <h4 className="font-display text-red-800 mb-3 flex items-center">
                     <Building className="h-4 w-4 mr-2" />
                     Embassy Information
                   </h4>
-                  <div className="space-y-2 text-sm">
-                    <p><strong>{destination.embassy.name}</strong></p>
-                    <p>{destination.embassy.address}</p>
-                    <p>Phone: <a href={`tel:${destination.embassy.phone}`} className="text-red-700 hover:text-red-800">{destination.embassy.phone}</a></p>
-                    <p>Email: <a href={`mailto:${destination.embassy.email}`} className="text-red-700 hover:text-red-800">{destination.embassy.email}</a></p>
-                    <p>Website: <a href={destination.embassy.website} target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 flex items-center">
-                      {destination.embassy.website} <ExternalLink className="h-3 w-3 ml-1" />
+                  <div className="mb-4 flex flex-col md:flex-row md:items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="Search your country..."
+                      value={embassySearch}
+                      onChange={e => {
+                        setEmbassySearch(e.target.value);
+                        setSelectedCountry('');
+                      }}
+                      className="border border-gray-300 rounded px-3 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                    />
+                    <select
+                      value={selectedCountry}
+                      onChange={e => {
+                        setSelectedCountry(e.target.value);
+                        setEmbassySearch('');
+                      }}
+                      className="border border-gray-300 rounded px-3 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                    >
+                      <option value="">Popular Countries</option>
+                      {seoulEmbassies.map(e => (
+                        <option key={e.country} value={e.country}>{e.country}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="space-y-4">
+                    {filteredEmbassies.length === 0 && (
+                      <div className="text-sm text-gray-500">No embassy found for your search.</div>
+                    )}
+                    {filteredEmbassies.map((embassy: Embassy) => (
+                      <div key={embassy.country} className="mb-2 p-3 rounded border border-gray-200 bg-gray-50">
+                        <p><strong>{embassy.name}</strong> <span className="text-xs text-gray-500">({embassy.country})</span></p>
+                        <p>{embassy.address}</p>
+                        <p>Phone: <a href={`tel:${embassy.phone}`} className="text-red-700 hover:text-red-800">{embassy.phone}</a></p>
+                        <p>Email: <a href={`mailto:${embassy.email}`} className="text-red-700 hover:text-red-800">{embassy.email}</a></p>
+                        <p>Website: <a href={embassy.website} target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 flex items-center">
+                          {embassy.website} <ExternalLink className="h-3 w-3 ml-1" />
                     </a></p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -312,19 +359,19 @@ const DestinationDetail: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Safety Overview</h3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="text-center p-4 bg-gray-50 rounded-lg">
+                        <div className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                           <Moon className="h-8 w-8 text-blue-500 mx-auto mb-2" />
                           <div className="text-2xl font-bold text-gray-900 mb-1">{destination.nightSafety}/10</div>
                           <div className="text-sm text-gray-600">Night Safety</div>
                           {renderScoreBar(destination.nightSafety)}
                         </div>
-                        <div className="text-center p-4 bg-gray-50 rounded-lg">
+                        <div className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                           <Bus className="h-8 w-8 text-green-500 mx-auto mb-2" />
                           <div className="text-2xl font-bold text-gray-900 mb-1">{destination.publicTransit}/10</div>
                           <div className="text-sm text-gray-600">Public Transit</div>
                           {renderScoreBar(destination.publicTransit)}
                         </div>
-                        <div className="text-center p-4 bg-gray-50 rounded-lg">
+                        <div className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                           <Users className="h-8 w-8 text-purple-500 mx-auto mb-2" />
                           <div className="text-2xl font-bold text-gray-900 mb-1">{destination.walkingAlone}/10</div>
                           <div className="text-sm text-gray-600">Walking Alone</div>
@@ -332,6 +379,15 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
+                    {/* --- NEW DATA SECTIONS --- */}
+                    <SafetyByTimeOfDay />
+                    <MostReportedRedFlags />
+                    <CulturalSensitivityTips />
+                    <WomensConfidenceScore />
+                    <ConfidenceByActivity />
+                    <LanguageAndHelp languages={destination.languages} />
+                    {/* --- END NEW DATA SECTIONS --- */}
 
                     {/* Scam Warnings - Separate Container */}
                     {destination.scamWarnings && destination.scamWarnings.length > 0 && (
