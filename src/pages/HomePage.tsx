@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Benefits from '../components/Benefits';
 import PopularDestinations from '../components/PopularDestinations';
 import Footer from '../components/Footer';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 const HomePage: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage: React.FC = () => {
       <Hero />
       <Benefits />
       <PopularDestinations />
+      <NewsletterSignup />
       <Footer />
     </>
   );

@@ -168,7 +168,7 @@ const PopularDestinations: React.FC = () => {
           <Link 
             to="/destinations"
             onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
-            className="btn-hover inline-flex items-center justify-center rounded-full bg-primary-400 px-8 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-primary-500 hover:shadow-xl hover:scale-105 focus-smooth"
+            className="inline-flex items-center justify-center rounded-full border-2 border-primary-400 bg-gray-50 px-8 py-3 text-base font-semibold text-primary-400 shadow-none transition-all duration-300 hover:bg-primary-50 hover:text-primary-500 hover:border-primary-500 focus-smooth"
           >
             View All Destinations
           </Link>

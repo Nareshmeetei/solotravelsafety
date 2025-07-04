@@ -103,6 +103,6 @@ const caracas: Destination = {
         sourceUrl: "https://www.numbeo.com/crime/country_result.jsp?country=Venezuela"
       }
     ], // Tips sourced from UK Gov, US State Dept, Numbeo, 2025
-};
+  };
 
 export default caracas;
