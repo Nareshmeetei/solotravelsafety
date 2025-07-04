@@ -3,7 +3,7 @@ import { Search, Filter, SlidersHorizontal, MapPin, Moon, Bus, Users, Lightbulb,
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { destinations, createDestinationSlug } from '../data/destinations';
+import { destinations } from '../data/destinations';
 
 const AllDestinations: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -272,7 +272,7 @@ const AllDestinations: React.FC = () => {
               {filteredAndSortedDestinations.map((destination, index) => (
                 <Link
                   key={index}
-                  to={`/destination/${createDestinationSlug(destination.city, destination.country)}`}
+                  to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
                   onClick={handleDestinationClick}
                   className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
                 >

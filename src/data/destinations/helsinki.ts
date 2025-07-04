@@ -1,0 +1,106 @@
+import { Destination } from './types';
+
+const helsinki: Destination = {
+    city: 'Helsinki',
+    country: 'Finland',
+    continent: 'Europe',
+    countryCode: 'fi',
+    overallScore: 9.3,
+    nightSafety: 9.1,
+    publicTransit: 9.2,
+    walkingAlone: 9.5,
+    tags: ['insider-tips', 'extremely-safe'],
+    bgColor: 'bg-green-25',
+    reviewCount: 210,
+    lastUpdated: '3 days ago',
+    harassmentRisk: 'low',
+    safetyBreakdown: {
+      nightSafety: { score: 9.1, context: 'Very safe at night. Well-lit streets and low crime rates.' },
+      publicTransit: { score: 9.2, context: 'Efficient, clean, and safe public transport. Trams and buses are reliable.' },
+      walkingAlone: { score: 9.5, context: 'Extremely safe to walk alone. Finnish culture is very respectful.' }
+    },
+    neighborhoods: {
+      safe: ['Kamppi', 'Punavuori', 'Kallio', 'Eira', 'Töölö'],
+      caution: ['Some nightlife areas late at night'],
+      avoid: ['None - city is very safe overall']
+    },
+    accommodations: [
+      { name: 'Omena Hotel Helsinki', type: 'hotel', features: ['Central location', 'Affordable', 'Safe'], rating: 4.2, notes: 'Simple, clean, and safe hotel in the city center' },
+      { name: 'Hostel Diana Park', type: 'hostel', features: ['Female dorms', 'Central location', 'Friendly staff'], rating: 4.5, notes: 'Popular with solo travelers, safe and clean.' }
+    ],
+    alerts: [],
+    safetyTips: {
+      clothing: 'Dress warmly, especially in winter. Layering is key.',
+      firstTimers: 'Very easy for beginners. English widely spoken.',
+      apps: ['HSL', 'Reittiopas', 'Nysse'],
+      emergencyPhrases: ['Apu (Help)', 'Soita poliisille (Call the police)']
+    },
+    culturalExpectations: {
+      dressCode: 'Practical, warm clothing. No specific restrictions.',
+      behaviorNorms: ['Quiet in public transport', 'Respect personal space'],
+      perception: 'Solo female travelers are common and completely accepted.'
+    },
+    bestTimeToVisit: {
+      safestMonths: ['June-August'],
+      events: 'Summer is best for weather. Winter is safe but cold and dark.'
+    },
+    emergencyInfo: {
+      police: '112', fire: '112', medical: '112', general: '112'
+    },
+    currency: {
+      name: 'Euro', code: 'EUR', exchangeRate: { usd: 1.1, eur: 1, gbp: 0.85 }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
+    },
+    scamWarnings: [
+      { title: 'Pickpocketing', description: 'Rare but possible in tourist areas', severity: 'low' }
+    ],
+    languages: ['Finnish', 'Swedish', 'English (widely spoken)'],
+    daytimeSafetyPercent: 93.5, // Source: Numbeo 2025, Travel Ladies 2025
+    nighttimeSafetyPercent: 88.0, // Source: Numbeo 2025, Travel Ladies 2025
+    safetySourceName: 'Numbeo 2025',
+    safetySourceUrl: 'https://www.numbeo.com/crime/in/Helsinki',
+    redFlags: [
+      { label: 'Pickpocketing (Tourist Areas, Public Transport)', frequency: 'Occasional', icon: 'Hand' }, // Numbeo 2025, Travel Ladies 2025
+      { label: 'Bicycle Theft', frequency: 'Occasional', icon: 'Bike' }, // Numbeo 2025
+      { label: 'Scams (Fake Charities, Overcharging)', frequency: 'Rare', icon: 'Shield' }, // Travel Ladies 2025
+      { label: 'Drunken Disturbances (Nightlife)', frequency: 'Rare', icon: 'Beer' }, // Travel Ladies 2025
+    ],
+    usefulTips: [
+      {
+        title: "Take advantage of Helsinki's safe, walkable city center",
+        description: "Most attractions are within walking distance. The city is compact, well-lit, and safe for solo exploration day or night.",
+        severity: "low",
+        sourceName: "MyHelsinki, 2025",
+        sourceUrl: "https://www.myhelsinki.fi/visit/plan-your-trip/guide-to-helsinki/"
+      },
+      {
+        title: "Use public transport and city bikes for easy, safe travel",
+        description: "Helsinki's HSL app covers trams, buses, metro, and city bikes. All are reliable, clean, and safe for solo travelers.",
+        severity: "low",
+        sourceName: "MyHelsinki, 2025",
+        sourceUrl: "https://www.myhelsinki.fi/visit/plan-your-trip/getting-around/"
+      },
+      {
+        title: "Keep an eye on your belongings in crowded areas",
+        description: "Pickpocketing is rare but possible in busy tourist spots and on public transport. Use a zipped bag and stay aware.",
+        severity: "low",
+        sourceName: "Numbeo, 2025",
+        sourceUrl: "https://www.numbeo.com/crime/in/Helsinki"
+      },
+      {
+        title: "Try a sauna for a true Finnish experience",
+        description: "Public saunas are safe, welcoming, and a great way to meet locals. Follow posted etiquette and enjoy the tradition.",
+        severity: "low",
+        sourceName: "MyHelsinki, 2025",
+        sourceUrl: "https://www.myhelsinki.fi/visit/plan-your-trip/guide-to-helsinki/"
+      },
+      {
+        title: "Dress for the weather and pack layers",
+        description: "Helsinki weather can change quickly, especially in winter. Bring warm, waterproof layers and comfortable shoes for walking.",
+        severity: "low",
+        sourceName: "MyHelsinki, 2025",
+        sourceUrl: "https://www.myhelsinki.fi/visit/plan-your-trip/guide-to-helsinki/"
+      }
+    ], // Tips sourced from MyHelsinki, Numbeo (2025)
+};
+
+export default helsinki;

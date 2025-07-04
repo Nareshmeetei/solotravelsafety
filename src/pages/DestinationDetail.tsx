@@ -56,6 +56,13 @@ const DestinationDetail: React.FC = () => {
     }
   }, [city, country]);
 
+  useEffect(() => {
+    if (destination) {
+      // Debug log to check if usefulTips is present
+      console.log('DEBUG: Loaded destination object:', destination);
+    }
+  }, [destination]);
+
   const loadDestinationData = async () => {
     try {
       setLoading(true);
@@ -325,60 +332,14 @@ const DestinationDetail: React.FC = () => {
                     </div>
 
                     {/* --- NEW DATA SECTIONS --- */}
-                    <SafetyByTimeOfDay />
-                    <MostReportedRedFlags />
-                    <CulturalSensitivityTips />
-                    <WomensConfidenceScore />
-                    <ConfidenceByActivity />
-                    <LanguageAndHelp languages={destination.languages} />
-                    {/* --- END NEW DATA SECTIONS --- */}
+                    <SafetyByTimeOfDay
+                      daytimeSafetyPercent={destination.daytimeSafetyPercent}
+                      nighttimeSafetyPercent={destination.nighttimeSafetyPercent}
+                      safetySourceName={destination.safetySourceName}
+                      safetySourceUrl={destination.safetySourceUrl}
+                    />
 
-                    {/* Scam Warnings - Separate Container */}
-                    {destination.scamWarnings && destination.scamWarnings.length > 0 && (
-                      <div>
-                        <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
-                          <AlertTriangle className="h-5 w-5 mr-2 text-orange-500" />
-                          Scam Warnings
-                        </h3>
-                        <div className="space-y-3">
-                          {destination.scamWarnings.map((scam: any, index: number) => (
-                            <div key={index} className={`p-4 rounded-lg border ${
-                              scam.severity === 'high' ? 'bg-red-50 border-red-200' :
-                              scam.severity === 'medium' ? 'bg-orange-50 border-orange-200' :
-                              'bg-yellow-50 border-yellow-200'
-                            }`}>
-                              <div className="flex items-start justify-between">
-                                <div>
-                                  <h4 className={`font-semibold mb-1 ${
-                                    scam.severity === 'high' ? 'text-red-900' :
-                                    scam.severity === 'medium' ? 'text-orange-900' :
-                                    'text-yellow-900'
-                                  }`}>
-                                    {scam.title}
-                                  </h4>
-                                  <p className={`text-sm ${
-                                    scam.severity === 'high' ? 'text-red-800' :
-                                    scam.severity === 'medium' ? 'text-orange-800' :
-                                    'text-yellow-800'
-                                  }`}>
-                                    {scam.description}
-                                  </p>
-                                </div>
-                                <div className={`px-2 py-1 rounded text-xs font-semibold ${
-                                  scam.severity === 'high' ? 'bg-red-200 text-red-800' :
-                                  scam.severity === 'medium' ? 'bg-orange-200 text-orange-800' :
-                                  'bg-yellow-200 text-yellow-800'
-                                }`}>
-                                  {scam.severity.toUpperCase()}
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Alerts */}
+                    {/* Alerts - moved up below SafetyByTimeOfDay */}
                     {destination.alerts && destination.alerts.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
@@ -408,20 +369,6 @@ const DestinationDetail: React.FC = () => {
                                   }`}>
                                     {alert.description}
                                   </p>
-                                  <div className={`text-xs ${
-                                    alert.severity === 'high' ? 'text-red-700' :
-                                    alert.severity === 'medium' ? 'text-yellow-700' :
-                                    'text-blue-700'
-                                  }`}>
-                                    {alert.location} • {alert.reportCount} reports • {alert.dateReported}
-                                  </div>
-                                </div>
-                                <div className={`px-2 py-1 rounded text-xs font-semibold ${
-                                  alert.severity === 'high' ? 'bg-red-200 text-red-800' :
-                                  alert.severity === 'medium' ? 'bg-yellow-200 text-yellow-800' :
-                                  'bg-blue-200 text-blue-800'
-                                }`}>
-                                  {alert.severity.toUpperCase()}
                                 </div>
                               </div>
                             </div>
@@ -430,10 +377,20 @@ const DestinationDetail: React.FC = () => {
                       </div>
                     )}
 
+                    <MostReportedRedFlags 
+                      redFlags={destination.redFlags}
+                      safetySourceName={destination.safetySourceName}
+                      safetySourceUrl={destination.safetySourceUrl}
+                    />
+                    <CulturalSensitivityTips />
+                    <WomensConfidenceScore />
+                    <ConfidenceByActivity />
+                    <LanguageAndHelp languages={destination.languages} />
+                    {/* --- END NEW DATA SECTIONS --- */}
+
                     {/* Currency Information - moved to bottom */}
                     <div>
-                      <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
-                        <CreditCard className="h-5 w-5 mr-2" />
+                      <h3 className="text-xl font-display text-gray-900 mb-4">
                         Currency & Exchange
                       </h3>
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
@@ -461,6 +418,55 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
+                    {/* Useful Tips - moved below Currency & Exchange */}
+                    {(destination.usefulTips && destination.usefulTips.length > 0) ? (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">
+                          Useful Tips
+                        </h3>
+                        <div className="space-y-3">
+                          {destination.usefulTips.slice(0, 5).map((tip: any, index: number) => (
+                            <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <h4 className={`font-semibold mb-1 text-green-900`}>
+                                    {tip.title}
+                                  </h4>
+                                  <p className={`text-sm text-green-800`}>
+                                    {tip.description}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      destination.scamWarnings && destination.scamWarnings.length > 0 && (
+                        <div>
+                          <h3 className="text-xl font-display text-gray-900 mb-4">
+                            Useful Tips
+                          </h3>
+                          <div className="space-y-3">
+                            {destination.scamWarnings.slice(0, 5).map((scam: any, index: number) => (
+                              <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
+                                <div className="flex items-start justify-between">
+                                  <div>
+                                    <h4 className={`font-semibold mb-1 text-green-900`}>
+                                      {scam.title}
+                                    </h4>
+                                    <p className={`text-sm text-green-800`}>
+                                      {scam.description}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )
+                    )}
                   </div>
                 )}
 

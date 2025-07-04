@@ -17,7 +17,9 @@ const WomensConfidenceScore: React.FC = () => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-gray-500 mt-2">Source: <a href="https://www.solofemaletravelers.club/solo-female-travel-stats" target="_blank" rel="noopener noreferrer" className="underline">Solo Female Travelers Survey 2025</a></p>
+      <p className="text-xs text-gray-500 mt-2">
+        Source: <a href="https://www.numbeo.com/crime/in/Wellington" target="_blank" rel="noopener noreferrer" className="underline">Numbeo 2025</a>
+      </p>
     </div>
   );
 };

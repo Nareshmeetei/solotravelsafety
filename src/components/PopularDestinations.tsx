@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Moon, Bus, Users, Lightbulb, AlertTriangle } from 'lucide-react';
-import { createDestinationSlug, destinations } from '../data/destinations';
+import { destinations } from '../data/destinations';
 
 const PopularDestinations: React.FC = () => {
   // Dynamic background color based on safety score with lighter hover states
@@ -71,7 +71,7 @@ const PopularDestinations: React.FC = () => {
           {destinations.map((destination, index) => (
             <Link
               key={index}
-              to={`/destination/${createDestinationSlug(destination.city, destination.country)}`}
+              to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
               onClick={() => handleDestinationClick(destination.city, destination.country)}
               className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
             >

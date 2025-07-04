@@ -1,10 +1,17 @@
 import React from 'react';
 import { Sun, Moon } from 'lucide-react';
 
-const SafetyByTimeOfDay: React.FC = () => {
-  // Real data from Solo Female Travelers Survey 2025
-  const daytimeSafe = 80; // % feel safe during the day
-  const nighttimeSafe = 40; // % feel safe at night
+interface SafetyByTimeOfDayProps {
+  daytimeSafetyPercent?: number;
+  nighttimeSafetyPercent?: number;
+  safetySourceName?: string;
+  safetySourceUrl?: string;
+}
+
+const SafetyByTimeOfDay: React.FC<SafetyByTimeOfDayProps> = ({ daytimeSafetyPercent, nighttimeSafetyPercent, safetySourceName, safetySourceUrl }) => {
+  // Fallback values if not provided
+  const daytime = daytimeSafetyPercent ?? 80;
+  const nighttime = nighttimeSafetyPercent ?? 40;
 
   return (
     <div className="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
@@ -15,10 +22,10 @@ const SafetyByTimeOfDay: React.FC = () => {
           <div className="w-full">
             <div className="flex justify-between mb-1">
               <span className="font-medium text-gray-700">Daytime</span>
-              <span className="font-bold text-green-700">{daytimeSafe}% feel safe</span>
+              <span className="font-bold text-green-700">{daytime.toFixed(1)}% feel safe</span>
             </div>
-            <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-              <div className="h-full bg-green-400" style={{ width: `${daytimeSafe}%` }} />
+            <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden mt-2">
+              <div className="h-full bg-green-400" style={{ width: `${daytime}%` }} />
             </div>
           </div>
         </div>
@@ -27,15 +34,17 @@ const SafetyByTimeOfDay: React.FC = () => {
           <div className="w-full">
             <div className="flex justify-between mb-1">
               <span className="font-medium text-gray-700">Nighttime</span>
-              <span className="font-bold text-blue-700">{nighttimeSafe}% feel safe</span>
+              <span className="font-bold text-blue-700">{nighttime.toFixed(1)}% feel safe</span>
             </div>
-            <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-              <div className="h-full bg-blue-400" style={{ width: `${nighttimeSafe}%` }} />
+            <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden mt-2">
+              <div className="h-full bg-blue-400" style={{ width: `${nighttime}%` }} />
             </div>
           </div>
         </div>
       </div>
-      <p className="text-xs text-gray-500 mt-2">Source: <a href="https://www.solofemaletravelers.club/solo-female-travel-stats" target="_blank" rel="noopener noreferrer" className="underline">Solo Female Travelers Survey 2025</a></p>
+      <p className="text-xs text-gray-500 mt-6">
+        Source: <a href={safetySourceUrl || 'https://www.numbeo.com/crime/'} target="_blank" rel="noopener noreferrer" className="underline">{safetySourceName || 'Numbeo 2025'}</a>
+      </p>
     </div>
   );
 };
