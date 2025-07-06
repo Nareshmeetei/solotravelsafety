@@ -36,9 +36,21 @@ const amsterdam: Destination = {
       emergencyPhrases: ['Help (Help)', 'Bel de politie (Call the police)']
     },
     culturalExpectations: {
-      dressCode: 'Practical, warm clothing. No specific restrictions.',
-      behaviorNorms: ['Quiet in public transport', 'Respect personal space'],
-      perception: 'Solo female travelers are common and completely accepted.'
+      dressCode: 'Dress is generally casual and practical, but neat. Jeans, t-shirts, and sneakers are fine in most settings. For business or upscale restaurants, smart-casual is expected. Rain gear is essential year-round. Swimwear is only for pools and beaches. Topless sunbathing is accepted in some parks and beaches, but nudity is only allowed in designated areas.',
+      behaviorNorms: [
+        'Respect personal space and privacy; the Dutch value directness but not intrusion.',
+        'Be punctual for appointments and social events.',
+        'Greet with a handshake and maintain eye contact.',
+        'Tipping is appreciated (5–10%) but not mandatory.',
+        'Don\'t be arrogant or boastful; humility is valued.',
+        'Avoid walking in bike lanes—cyclists have priority and expect you to move.',
+        'Don\'t photograph people in the Red Light District.',
+        'Try to learn and use a few Dutch phrases, even though most people speak English.',
+        'The Dutch are tolerant of different lifestyles and expect the same from visitors.',
+        'Plan visits in advance; unannounced drop-ins are uncommon.',
+        'Join in on "gezelligheid" (coziness, togetherness) in social settings.'
+      ],
+      perception: 'Solo women travelers are generally respected and safe in Amsterdam. The city is progressive and open-minded, but as in any major city, it\'s wise to stay aware of your surroundings, especially at night or in crowded areas. Catcalling is rare but can happen. Locals are used to solo travelers and are usually helpful if you ask for directions or advice.',
     },
     bestTimeToVisit: {
       safestMonths: ['June-August'],
@@ -79,13 +91,6 @@ const amsterdam: Destination = {
         severity: 'low',
         sourceName: 'I amsterdam',
         sourceUrl: 'https://www.iamsterdam.com/en/travel-stay/health-safety-and-crime-in-amsterdam'
-      },
-      {
-        title: 'Don\'t Accept Drinks from Strangers and Watch Your Drink',
-        description: 'Drink spiking can happen in nightlife areas. Never leave your drink unattended and don\'t accept drinks from strangers.',
-        severity: 'low',
-        sourceName: 'A Solo Woman Traveling',
-        sourceUrl: 'https://asinglewomantraveling.com/solo-trip-to-amsterdam/'
       }
     ],
     languages: ['Dutch', 'English (widely spoken)'],
@@ -98,7 +103,7 @@ const amsterdam: Destination = {
       { label: 'Scams (Fake Police, Taxi Scams)', frequency: 'Frequent', icon: 'Shield' }, // BMTM 2024
       { label: 'Bicycle Accidents', frequency: 'Occasional', icon: 'Bike' }, // BMTM 2024
       { label: 'Drug-related Incidents', frequency: 'Occasional', icon: 'Syringe' }, // BMTM 2024
-    ],
+    ]
 };
 
 export default amsterdam;

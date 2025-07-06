@@ -68,9 +68,9 @@ const Hero: React.FC = () => {
         </div>
         {/* Right: Signup Form */}
         <div className="flex-1 flex items-center justify-center w-full h-full">
-          <form onSubmit={handleSubmit} className="w-full max-w-md bg-white bg-opacity-90 rounded-2xl border border-gray-200 p-8 animate-fade-in-up">
+          <form onSubmit={handleSubmit} className="w-full max-w-md rounded-3xl border border-gray-300 p-8 animate-fade-in-up hover:shadow-lg transition-shadow duration-300" style={{ backgroundColor: '#FFF1F6' }}>
             <h2 className="text-2xl font-display text-gray-900 mb-2">Join the Safety Squad</h2>
-            <p className="text-gray-600 mb-6">Sign up for city safety, scam alerts, and solo travel secrets.</p>
+            <p className="text-gray-600 mb-6">Yes, you belong here.</p>
             {success && (
               <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm flex items-center">
                 <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0" />
@@ -92,6 +92,7 @@ const Hero: React.FC = () => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300"
                 placeholder="Your full name"
                 required
+                style={{ backgroundColor: '#FFF3F8' }}
               />
             </div>
             <div className="mb-4">
@@ -103,6 +104,7 @@ const Hero: React.FC = () => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300"
                 placeholder="you@email.com"
                 required
+                style={{ backgroundColor: '#FFF3F8' }}
               />
             </div>
             <div className="mb-6">
@@ -115,6 +117,7 @@ const Hero: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300 pr-12"
                   placeholder="Create a password"
                   required
+                  style={{ backgroundColor: '#FFF3F8' }}
                 />
                 <button
                   type="button"
