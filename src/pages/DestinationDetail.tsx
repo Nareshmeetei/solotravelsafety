@@ -215,7 +215,7 @@ const DestinationDetail: React.FC = () => {
             </div>
             
             {/* Overall Safety Score */}
-            <div className="flex items-center space-x-6 mb-6">
+            <div className="flex items-center space-x-6 mb-6 flex-wrap">
               <div className="flex items-center space-x-2">
                 <Shield className="h-6 w-6 text-primary-400" />
                 <span className="text-lg font-medium text-gray-700">Overall Safety:</span>
@@ -223,23 +223,27 @@ const DestinationDetail: React.FC = () => {
                   {destination.overallScore}/10
                 </div>
               </div>
-              <div className={`px-3 py-1 rounded-full text-sm font-semibold ${getHarassmentColor(destination.harassmentRisk)}`}>
+            </div>
+            {/* Harassment Risk Badge - now below and left-aligned */}
+            <div className="mb-4 flex">
+              <div className={`px-4 py-2 min-h-[2.5rem] rounded-full text-xs sm:text-sm font-semibold max-w-full truncate flex items-center ${getHarassmentColor(destination.harassmentRisk)}`}
+                style={{lineHeight: '1.2'}}>
                 {destination.harassmentRisk.toUpperCase()} HARASSMENT RISK
               </div>
             </div>
 
             {/* Quick Actions - Minimal Style */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 w-full">
               <button 
                 onClick={() => setShowReviewModal(true)}
-                className="flex items-center space-x-2 px-6 py-3 bg-transparent border-2 border-blue-500 text-blue-600 hover:bg-blue-50 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                className="w-full sm:w-auto block flex items-center justify-center space-x-2 px-6 py-3 bg-transparent border-2 border-blue-500 text-blue-600 hover:bg-blue-50 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02] mb-2 sm:mb-0"
               >
                 <Plus className="h-4 w-4" />
                 <span>Write Review</span>
               </button>
               <button 
                 onClick={() => setShowEmergencyInfo(!showEmergencyInfo)}
-                className="flex items-center space-x-2 px-6 py-3 bg-transparent border-2 border-red-500 text-red-600 hover:bg-red-50 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                className="w-full sm:w-auto block flex items-center justify-center space-x-2 px-6 py-3 bg-transparent border-2 border-red-500 text-red-600 hover:bg-red-50 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
               >
                 <Phone className="h-4 w-4" />
                 <span>{showEmergencyInfo ? 'Hide' : 'Show'} Emergency Info</span>
@@ -282,7 +286,7 @@ const DestinationDetail: React.FC = () => {
             <div className="lg:col-span-2">
               
               {/* Tab Navigation */}
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 mb-6">
+              <div className="hidden sm:block bg-white rounded-2xl shadow-sm border border-gray-200 mb-6">
                 <div className="flex space-x-8 overflow-x-auto px-6">
                   {tabs.map((tab) => (
                     <button
@@ -299,6 +303,23 @@ const DestinationDetail: React.FC = () => {
                     </button>
                   ))}
                 </div>
+              </div>
+              {/* Floating Mobile Tab Bar */}
+              <div className="sm:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 flex justify-around py-2 shadow-md">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex flex-col items-center justify-center px-2 py-1 text-xs font-medium focus:outline-none transition-all duration-200 ${
+                      activeTab === tab.id
+                        ? 'text-primary-400'
+                        : 'text-gray-500 hover:text-primary-400'
+                    }`}
+                  >
+                    <tab.icon className="h-6 w-6 mb-0.5" />
+                    <span>{tab.label}</span>
+                  </button>
+                ))}
               </div>
 
               {/* Tab Content */}
