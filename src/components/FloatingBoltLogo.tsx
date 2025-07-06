@@ -1,12 +1,16 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const FloatingBoltLogo: React.FC = () => {
   const handleClick = () => {
     window.open('https://bolt.new/', '_blank', 'noopener,noreferrer');
   };
+  const location = useLocation();
+  // Check if on a destination detail page
+  const isDestinationDetail = location.pathname.startsWith('/destination/');
 
   return (
-    <div className="fixed bottom-20 right-6 z-50 sm:bottom-6">
+    <div className={`fixed right-6 z-50 ${isDestinationDetail ? 'bottom-20' : 'bottom-6'} sm:bottom-6`}>
       <div className="group">
         <button
           onClick={handleClick}
