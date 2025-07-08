@@ -123,6 +123,20 @@ const toronto: Destination = {
         sourceUrl: "https://www.toronto.ca/explore-enjoy/visitor-toronto/information-resources-for-visitors/"
       }
     ],
+    culturalDos: [
+      'Respect personal space and keep a polite distance.',
+      'Be punctual for meetings and public transport.',
+      'Dress appropriately for the weather and setting.',
+      'Use quiet voices in public and on transport.',
+      'Queue patiently and wait your turn.'
+    ],
+    culturalDonts: [
+      "Don't cut in line or push ahead.",
+      "Don't speak loudly or draw attention in public.",
+      "Don't ask personal questions on first meeting.",
+      "Don't litter or leave trash in public spaces.",
+      "Don't make jokes about Canada's history or politics."
+    ]
 };
 
 export default toronto; 

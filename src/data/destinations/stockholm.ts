@@ -119,6 +119,21 @@ const stockholm: Destination = {
         icon: 'Beer',
       }
     ],
+    culturalDos: [
+      'Respect personal space and keep a polite distance.',
+      'Be punctual for meetings and public transport.',
+      'Dress appropriately for the weather and setting.',
+      'Use quiet voices in public and on transport.',
+      'Recycle and dispose of waste properly.'
+    ],
+    culturalDonts: [
+      "Don't cut in line or push ahead.",
+      "Don't speak loudly or draw attention in public.",
+      "Don't ask personal questions on first meeting.",
+      "Don't litter or leave trash in nature.",
+      "Don't make jokes about Sweden's history or politics."
+    ],
+    scamWarnings: []
   };
 
 export default stockholm;

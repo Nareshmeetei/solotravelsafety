@@ -203,7 +203,7 @@ const Navbar: React.FC = () => {
             : '-translate-y-full opacity-0'
         }`}>
           <div className="flex justify-center mt-2 sm:mt-4 px-4 animate-slide-down">
-            <div className="w-full max-w-4xl bg-white/80 backdrop-blur-[100px] shadow-sm border border-white/30 px-4 sm:px-6 py-3 sm:py-4 transition-all duration-300 hover:shadow-md" style={{ borderRadius: '45px' }}>
+            <div className="w-full max-w-4xl bg-white/80 backdrop-blur-[100px] shadow-sm border border-white/30 px-4 sm:px-6 py-3 sm:py-4 transition-all duration-300 hover:shadow-md" style={{ borderRadius: '30px' }}>
               <div className="flex items-center justify-between">
                 {/* Logo */}
                 <Link 

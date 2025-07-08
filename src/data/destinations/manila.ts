@@ -103,6 +103,20 @@ const manila: Destination = {
         sourceUrl: "https://www.pna.gov.ph/articles/1229214"
       }
     ],
+    culturalDos: [
+      "Use polite titles like 'po' and 'ate/kuya' when addressing locals, especially elders.",
+      'Smile and be friendly—Filipinos value warmth and approachability.',
+      'Join in group activities or celebrations if invited; it\'s a sign of respect and openness.',
+      'Bring a small gift ("pasalubong") if visiting someone\'s home.',
+      'Dress modestly, especially in churches and traditional neighborhoods.'
+    ],
+    culturalDonts: [
+      'Don\'t raise your voice or show anger in public—keep calm and polite even if frustrated.',
+      'Don\'t refuse food or drink offered by a host; try a small amount to show appreciation.',
+      'Don\'t stare at people, especially men or groups, as it can be seen as confrontational.',
+      'Don\'t openly criticize local customs, religion, or the Philippines itself.',
+      'Don\'t flaunt wealth or act arrogantly; humility is highly valued.'
+    ],
 };
 
 export default manila;

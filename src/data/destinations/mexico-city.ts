@@ -120,6 +120,20 @@ const mexicocity: Destination = {
         sourceUrl: "https://mexicocity.cdmx.gob.mx/e/"
       }
     ],
+    culturalDos: [
+      'Greet people with a polite "buenos días" or "buenas tardes."',
+      'Dress modestly, especially in churches and traditional areas.',
+      'Accept food or drink offered by hosts as a sign of respect.',
+      'Use formal titles (Señor/Señora) when addressing elders.',
+      'Learn and use basic Spanish phrases.'
+    ],
+    culturalDonts: [
+      'Don’t discuss politics, crime, or drug cartels.',
+      'Don’t refuse hospitality outright—decline politely if needed.',
+      'Don’t wear flashy jewelry or display wealth.',
+      'Don’t take photos of people without permission.',
+      'Don’t enter churches or sacred sites in revealing clothing.'
+    ],
   };
 
 export default mexicocity;

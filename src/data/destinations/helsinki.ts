@@ -101,6 +101,20 @@ const helsinki: Destination = {
         sourceUrl: "https://www.myhelsinki.fi/visit/plan-your-trip/guide-to-helsinki/"
       }
     ], // Tips sourced from MyHelsinki, Numbeo (2025)
+    culturalDos: [
+      'Use public transport and city bikes.',
+      'Keep valuables secure in crowded areas.',
+      'Dress for the weather and pack layers.',
+      'Try a public sauna and follow etiquette.',
+      'Explore the city center on foot.'
+    ],
+    culturalDonts: [
+      "Don't leave valuables unattended.",
+      "Don't ignore bike lane rules.",
+      "Don't walk alone in unlit parks late at night.",
+      "Don't be loud on public transport.",
+      "Don't accept unsolicited help with money or tickets."
+    ],
 };
 
 export default helsinki;

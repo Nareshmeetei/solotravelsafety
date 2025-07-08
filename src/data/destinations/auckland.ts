@@ -99,6 +99,20 @@ const auckland: Destination = {
         sourceUrl: 'https://www.newzealand.com/int/feature/auckland-city/'
       }
     ],
+    culturalDos: [
+      'Respect Māori culture.',
+      'Dress casual; cover up at marae.',
+      'Remove shoes in homes/marae.',
+      'Be friendly and on time.',
+      'Protect nature.'
+    ],
+    culturalDonts: [
+      "Don't drink alcohol in public.",
+      "Don't ignore Māori customs.",
+      "Don't leave valuables in cars.",
+      "Don't jaywalk; use crosswalks.",
+      "Don't skip sunscreen."
+    ],
   };
 
 export default auckland;

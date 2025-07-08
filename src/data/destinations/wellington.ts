@@ -119,6 +119,21 @@ const wellington: Destination = {
         icon: 'AlertTriangle',
       }
     ],
+    culturalDos: [
+      'Greet with a friendly "Kia ora" or "Hello."',
+      'Respect Maori culture and learn basic phrases.',
+      'Be punctual for meetings and public transport.',
+      'Dress appropriately for the weather and setting.',
+      'Recycle and dispose of waste properly.'
+    ],
+    culturalDonts: [
+      "Don't cut in line or push ahead.",
+      "Don't speak loudly or draw attention in public.",
+      "Don't ask personal questions on first meeting.",
+      "Don't litter or leave trash in public spaces.",
+      "Don't make jokes about New Zealand's history or politics."
+    ],
+    scamWarnings: []
   };
 
 export default wellington;

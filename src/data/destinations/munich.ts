@@ -116,6 +116,20 @@ const munich: Destination = {
         icon: 'Bike',
       },
     ], // Sources: https://www.numbeo.com/crime/in/Munich, https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/germany-travel-advisory.html, https://www.gov.uk/foreign-travel-advice/germany/safety-and-security, https://www.realjourneytravels.com/is-munich-safe/
-  };
+    culturalDos: [
+      'Greet with a handshake and make eye contact.',
+      'Be punctual for appointments and tours.',
+      'Respect quiet zones on public transport.',
+      'Recycle and dispose of waste properly.',
+      'Dress modestly in churches and traditional settings.'
+    ],
+    culturalDonts: [
+      "Don't jaywalk or ignore pedestrian signals.",
+      "Don't speak loudly in public or on transport.",
+      "Don't make jokes about WWII or local history.",
+      "Don't walk in bike lanes—cyclists have priority.",
+      "Don't bring outside food or drink into beer gardens."
+    ]
+};
 
 export default munich;

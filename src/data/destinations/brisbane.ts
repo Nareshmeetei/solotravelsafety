@@ -101,6 +101,20 @@ const brisbane: Destination = {
         sourceUrl: "https://www.brisbane.qld.gov.au/community-support-and-safety/health-and-safety/personal-safety"
       }
     ], // Tips sourced from Brisbane City Council, Visit Brisbane, and The Accidental Australian (2025)
+    culturalDos: [
+      'Greet with a friendly hello and make eye contact.',
+      'Respect personal space and privacy.',
+      'Queue patiently and wait your turn.',
+      'Dress casually and appropriately for the weather.',
+      'Use polite language and thank yous.'
+    ],
+    culturalDonts: [
+      "Don't walk alone in dark or quiet areas at night.",
+      "Don't leave valuables unattended in public.",
+      "Don't hitchhike; it's illegal in Queensland.",
+      "Don't drink excessively in unfamiliar places.",
+      "Don't ignore local laws or park rules."
+    ],
 };
 
 export default brisbane;

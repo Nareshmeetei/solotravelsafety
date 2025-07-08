@@ -99,6 +99,20 @@ const bern: Destination = {
     nighttimeSafetyPercent: 80.0,
     safetySourceName: 'Travel Ladies 2025',
     safetySourceUrl: 'https://travelladies.app/safety/switzerland',
+    culturalDos: [
+      'Be quiet on public transport.',
+      'Respect personal space.',
+      'Greet with Grüezi.',
+      'Dress for the weather.',
+      'Observe quiet hours.'
+    ],
+    culturalDonts: [
+      "Don't be late; punctuality is key.",
+      "Don't ignore quiet hours (10pm–7am, Sundays).",
+      "Don't litter or leave trash outdoors.",
+      "Don't cover your face in public (from 2025).",
+      "Don't wear swimwear in saunas; nudity is expected."
+    ],
 };
 
 export default bern;

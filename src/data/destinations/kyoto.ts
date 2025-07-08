@@ -143,6 +143,20 @@ const kyoto: Destination = {
         sourceUrl: "https://kyoto.travel/en/see-and-do/disaster_safetytips.html"
       }
     ], // Tips sourced from Hostelz.com, Travel Ladies, Kyoto City Official Guide (2025)
+    culturalDos: [
+      'Dress modestly at temples and shrines.',
+      'Remove shoes when entering homes or temples.',
+      'Speak quietly in public and on transport.',
+      'Respect local customs and bow when greeting.',
+      'Ask before taking photos of people or religious sites.'
+    ],
+    culturalDonts: [
+      "Don't talk loudly or make phone calls on public transport.",
+      "Don't eat or drink while walking in public.",
+      "Don't touch or point at religious objects.",
+      "Don't enter private areas of temples or shrines.",
+      "Don't ignore etiquette signs or instructions."
+    ],
   };
 
 export default kyoto;

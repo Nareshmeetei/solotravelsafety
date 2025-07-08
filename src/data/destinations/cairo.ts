@@ -100,6 +100,20 @@ const cairo: Destination = {
         sourceUrl: "https://www.egyptadventurestravel.com/blog/is-cairo-worth-visiting"
       }
     ],
+    culturalDos: [
+      'Dress modestly—cover shoulders, chest, and knees.',
+      'Carry a scarf for mosques and conservative areas.',
+      'Greet with "As-salamu alaykum" and use polite language.',
+      'Accept tea or hospitality graciously.',
+      'Use your right hand for eating and giving.'
+    ],
+    culturalDonts: [
+      "Don't show public displays of affection.",
+      "Don't take photos of people without permission.",
+      "Don't discuss religion or politics openly.",
+      "Don't raise your voice or display anger in public.",
+      "Don't enter mosques without proper attire."
+    ],
   };
 
 export default cairo;

@@ -150,6 +150,20 @@ const reykjavik: Destination = {
         sourceUrl: 'https://catisoutoftheoffice.com/safest-countries-for-solo-female-travelers/'
       }
     ],
+    culturalDos: [
+      'Remove shoes when entering homes.',
+      'Dress warmly and practically for the weather.',
+      'Respect nature and stay on marked paths.',
+      'Be punctual for tours and activities.',
+      'Use quiet voices in public and respect personal space.'
+    ],
+    culturalDonts: [
+      "Don't litter or disturb natural sites.",
+      "Don't walk on private property or fenced areas.",
+      "Don't make jokes about elves or local beliefs.",
+      "Don't ask personal questions on first meeting.",
+      "Don't haggle over prices—prices are fixed."
+    ],
     scamWarnings: [],
 };
 

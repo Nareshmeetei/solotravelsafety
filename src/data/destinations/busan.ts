@@ -159,6 +159,20 @@ const busan: Destination = {
         icon: 'Waves'
       }
     ], // Red flags sourced from Visit Korea, SmarterTravel, Under30Experiences, 2025
+    culturalDos: [
+      'Use public transport and official taxis.',
+      'Dress modestly in temples.',
+      'Keep valuables secure in crowds.',
+      'Learn basic Korean phrases.',
+      'Respect elders and local customs.'
+    ],
+    culturalDonts: [
+      "Don't take unofficial taxis at night.",
+      "Don't speak loudly on public transport.",
+      "Don't leave shoes on in homes.",
+      "Don't display valuables in markets.",
+      "Don't ignore beach safety warnings."
+    ],
 };
 
 export default busan;

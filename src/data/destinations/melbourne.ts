@@ -101,6 +101,20 @@ const melbourne: Destination = {
         sourceUrl: "https://www.yourground.org/"
       }
     ],
+    culturalDos: [
+      'Respect personal space and privacy.',
+      'Queue politely and wait your turn.',
+      'Dress casually and appropriately for the weather.',
+      'Be punctual for meetings and events.',
+      'Use polite greetings and thank yous.'
+    ],
+    culturalDonts: [
+      "Don't be loud or disruptive in public.",
+      "Don't cut in line or push ahead.",
+      "Don't make jokes about race or religion.",
+      "Don't stare at others or invade personal space.",
+      "Don't litter or disrespect public spaces."
+    ],
   };
 
 export default melbourne;

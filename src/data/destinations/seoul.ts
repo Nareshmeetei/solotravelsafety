@@ -150,6 +150,20 @@ const seoul: Destination = {
       icon: 'AlertTriangle',
     },
   ],
+  culturalDos: [
+    'Greet elders with a slight bow and use polite language.',
+    'Dress modestly, especially in temples and palaces.',
+    'Remove shoes when entering homes and some restaurants.',
+    'Use quiet voices in public and on transport.',
+    'Accept and give items with both hands.'
+  ],
+  culturalDonts: [
+    "Don't point with your finger—gesture with your whole hand.",
+    "Don't speak loudly or make phone calls on public transport.",
+    "Don't stick chopsticks upright in rice.",
+    "Don't touch people unnecessarily or show public affection.",
+    "Don't take photos in temples without permission."
+  ]
 };
 
 export default seoul; 

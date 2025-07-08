@@ -103,6 +103,20 @@ const guatemalacity: Destination = {
         sourceUrl: "https://ladyabroad.com/safety-in-antigua-heres-what-to-know/"
       }
     ], // Tips sourced from Journey By Backpack, Lady Abroad, She Roams The Globe (2025)
+    culturalDos: [
+      'Stay in safe zones like Zona 10 or 14.',
+      'Use registered taxis, Uber, or hotel transport.',
+      'Keep valuables hidden and secure.',
+      'Arrange tours and rides through trusted providers.',
+      'Have a local SIM and emergency contacts ready.'
+    ],
+    culturalDonts: [
+      "Don't walk alone after dark.",
+      "Don't use public buses or unregistered taxis.",
+      "Don't display valuables or wear flashy jewelry.",
+      "Don't accept rides from strangers.",
+      "Don't discuss politics in public."
+    ],
 };
 
 export default guatemalacity; 

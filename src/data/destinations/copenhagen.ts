@@ -98,6 +98,26 @@ const copenhagen: Destination = {
       { label: 'Taxi Overcharging', frequency: 'Rare', icon: 'Car' }, // OneVasco 2025
       { label: 'Fake Tour Guides', frequency: 'Rare', icon: 'Users' }, // OneVasco 2025
     ],
+    scamWarnings: [
+      { title: 'Pickpocketing', description: 'Can occur in busy tourist areas and on public transport. Keep valuables secure.', severity: 'low' },
+      { title: 'Currency Exchange Scams', description: 'Avoid exchanging money with street vendors. Use official banks or ATMs.', severity: 'low' },
+      { title: 'Taxi Overcharging', description: 'Use only licensed taxis or official apps to avoid being overcharged.', severity: 'low' },
+      { title: 'Fake Tour Guides', description: 'Book tours through reputable companies to avoid scams.', severity: 'low' }
+    ],
+    culturalDos: [
+      'Use public transport and licensed taxis.',
+      'Explore by bike and follow local rules.',
+      'Keep valuables secure in crowds.',
+      'Stay in central, well-lit neighborhoods.',
+      'Trust your instincts and ask for help if needed.'
+    ],
+    culturalDonts: [
+      "Don't use unmarked taxis.",
+      "Don't leave valuables unattended.",
+      "Don't walk in unlit areas late at night.",
+      "Don't ignore bike lane rules.",
+      "Don't exchange money with street vendors."
+    ],
 };
 
 export default copenhagen;

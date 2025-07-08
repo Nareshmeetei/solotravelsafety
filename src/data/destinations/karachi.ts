@@ -101,6 +101,20 @@ const karachi: Destination = {
         sourceUrl: "https://royalroutes.godaddysites.com/"
       }
     ], // Tips sourced from Traveler Wiz, Karachi Police, CPLC, Royal Routes (2025)
+    culturalDos: [
+      'Dress modestly, covering arms and legs.',
+      'Greet elders with respect.',
+      'Ask before taking photos of people.',
+      'Use your right hand for eating and giving.',
+      'Observe local customs during Ramadan.'
+    ],
+    culturalDonts: [
+      "Don't show affection in public.",
+      "Don't criticize religion or local traditions.",
+      "Don't enter mosques without permission.",
+      "Don't wear revealing or tight clothing.",
+      "Don't discuss sensitive political topics."
+    ],
   };
 
 export default karachi;

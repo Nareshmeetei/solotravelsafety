@@ -113,6 +113,20 @@ const zurich: Destination = {
         icon: 'Bike',
       },
     ],
+    culturalDos: [
+      'Greet with a polite "Grüezi" and use formal titles.',
+      'Be punctual for meetings and public transport.',
+      'Respect quiet zones and personal space.',
+      'Dress neatly, especially in restaurants and theaters.',
+      'Recycle and dispose of waste properly.'
+    ],
+    culturalDonts: [
+      "Don't cut in line or push ahead.",
+      "Don't speak loudly or draw attention in public.",
+      "Don't ask personal questions on first meeting.",
+      "Don't litter or leave trash in public spaces.",
+      "Don't make jokes about Switzerland's history or politics."
+    ]
   };
 
 export default zurich;

@@ -124,6 +124,20 @@ const sansalvador: Destination = {
         sourceUrl: "https://www.safetravel.govt.nz/destinations/el-salvador"
       }
     ],
+    culturalDos: [
+      'Dress modestly and avoid flashy clothing.',
+      'Greet people with a polite "buenos días" or "buenas tardes."',
+      'Show respect for elders and authority figures.',
+      'Ask permission before taking photos of people.',
+      'Learn and use basic Spanish phrases.'
+    ],
+    culturalDonts: [
+      "Don't display wealth or use your phone openly in public.",
+      "Don't discuss politics or criticize the government.",
+      "Don't refuse hospitality—decline politely if needed.",
+      "Don't enter churches in revealing clothing.",
+      "Don't take photos of police, military, or government buildings."
+    ]
   };
 
 export default sansalvador;

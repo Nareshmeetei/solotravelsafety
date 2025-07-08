@@ -162,6 +162,20 @@ const nagano: Destination = {
         sourceUrl: "https://db.go-nagano.net/en/travel-guide/faq/"
       }
     ], // Tips sourced from Go Nagano Official Tourism FAQ and Dot Hostel Nagano (2025)
+    culturalDos: [
+      'Remove shoes before entering homes and temples.',
+      'Dress modestly, especially at religious sites.',
+      'Use quiet voices in public and on transport.',
+      'Bow politely when greeting or thanking.',
+      'Respect local wildlife and nature.'
+    ],
+    culturalDonts: [
+      "Don't point feet at people or religious objects.",
+      "Don't speak loudly or make phone calls on public transport.",
+      "Don't eat or drink while walking in public.",
+      "Don't take photos in temples without permission.",
+      "Don't tip in restaurants—service charge is included."
+    ]
   };
 
 export default nagano;

@@ -103,6 +103,20 @@ const capetown: Destination = {
         sourceUrl: "https://www.noxrentals.com/cape-town-stay-safe-tourists-visit"
       }
     ], // Tips sourced from Nox Rentals, Viva Expeditions, 2025
+    culturalDos: [
+      'Stay in safe, central neighborhoods.',
+      'Use registered taxis or rideshare apps.',
+      'Keep valuables hidden and secure.',
+      'Join guided tours for hikes and township visits.',
+      'Dress modestly and avoid flashy jewelry.'
+    ],
+    culturalDonts: [
+      "Don't walk alone after dark.",
+      "Don't accept help at ATMs.",
+      "Don't use public transport at night.",
+      "Don't display valuables in public.",
+      "Don't leave drinks unattended."
+    ],
 };
 
 export default capetown;

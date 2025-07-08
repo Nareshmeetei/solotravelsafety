@@ -103,7 +103,21 @@ const amsterdam: Destination = {
       { label: 'Scams (Fake Police, Taxi Scams)', frequency: 'Frequent', icon: 'Shield' }, // BMTM 2024
       { label: 'Bicycle Accidents', frequency: 'Occasional', icon: 'Bike' }, // BMTM 2024
       { label: 'Drug-related Incidents', frequency: 'Occasional', icon: 'Syringe' }, // BMTM 2024
-    ]
+    ],
+    culturalDos: [
+      'Respect personal space.',
+      'Dress neat casual.',
+      'Use Dutch phrases.',
+      'Be on time.',
+      'Be polite in public.'
+    ],
+    culturalDonts: [
+      "Don't walk in bike lanes.",
+      "Don't leave valuables unattended.",
+      "Don't take photos in Red Light District.",
+      "Don't buy drugs on the street.",
+      "Don't pee in public."
+    ],
 };
 
 export default amsterdam;

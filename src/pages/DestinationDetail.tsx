@@ -305,7 +305,7 @@ const DestinationDetail: React.FC = () => {
                 </div>
               </div>
               {/* Floating Mobile Tab Bar */}
-              <div className="sm:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 flex justify-around py-2 shadow-md">
+              <div className="sm:hidden fixed bottom-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-t border-gray-200 flex justify-around py-2 shadow-md">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
@@ -403,7 +403,7 @@ const DestinationDetail: React.FC = () => {
                       safetySourceName={destination.safetySourceName}
                       safetySourceUrl={destination.safetySourceUrl}
                     />
-                    <CulturalSensitivityTips />
+                    <CulturalSensitivityTips dos={destination.culturalDos || []} donts={destination.culturalDonts || []} />
                     <WomensConfidenceScore />
                     <ConfidenceByActivity />
                     <LanguageAndHelp languages={destination.languages} />

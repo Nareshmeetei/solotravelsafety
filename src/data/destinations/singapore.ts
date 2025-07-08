@@ -118,6 +118,20 @@ const singapore: Destination = {
         icon: 'AlertTriangle',
       },
     ],
+    culturalDos: [
+      'Dress modestly in temples and religious sites.',
+      'Respect local laws and follow public signs.',
+      'Queue patiently and wait your turn.',
+      'Use quiet voices in public and on transport.',
+      'Dispose of litter properly and recycle when possible.'
+    ],
+    culturalDonts: [
+      "Don't eat or drink on public transport.",
+      "Don't show public displays of affection in conservative areas.",
+      "Don't touch someone's head or point with your feet.",
+      "Don't bring durians into hotels or public transport.",
+      "Don't discuss race, religion, or politics openly."
+    ]
   };
 
 export default singapore;

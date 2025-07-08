@@ -101,6 +101,20 @@ const edinburgh: Destination = {
         sourceUrl: "https://findingalexx.com/edinburgh-solo-travel-guide/"
       }
     ], // Tips sourced from Alyssa O Writes, Finding Alexx, Qeepl, VisitScotland (2025)
+    culturalDos: [
+      'Greet with a friendly hello or good morning.',
+      'Respect local festivals and traditions.',
+      'Dress modestly in churches or formal events.',
+      'Queue patiently and wait your turn.',
+      'Learn a few Scottish phrases.'
+    ],
+    culturalDonts: [
+      "Don't joke about Scottish history or accents.",
+      "Don't speak loudly in public places.",
+      "Don't refuse hospitality abruptly.",
+      "Don't take photos in churches or of people without asking.",
+      "Don't be overly familiar with strangers."
+    ],
 };
 
 export default edinburgh;

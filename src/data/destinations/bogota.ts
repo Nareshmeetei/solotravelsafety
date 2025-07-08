@@ -103,6 +103,20 @@ const bogota: Destination = {
         sourceUrl: 'https://travelhapp.com/tips/colombia-travel-health-guide'
       }
     ],
+    culturalDos: [
+      'Dress modestly.',
+      'Use ride apps or official taxis.',
+      'Explore during the day.',
+      'Be cautious with strangers.',
+      'Stay alert in crowds.'
+    ],
+    culturalDonts: [
+      "Don't hail taxis on the street.",
+      "Don't flaunt valuables or jewelry.",
+      "Don't walk alone at night.",
+      "Don't accept drinks from strangers.",
+      "Don't share your address with new acquaintances."
+    ],
 };
 
 export default bogota; 

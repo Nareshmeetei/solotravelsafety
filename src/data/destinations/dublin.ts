@@ -101,6 +101,20 @@ const dublin: Destination = {
         sourceUrl: "https://blog.onevasco.com/safe-to-visit/ireland"
       }
     ], // Tips sourced from Go-to-Ireland.com, OneVasco, 2025
+    culturalDos: [
+      'Greet with a friendly hello and make eye contact.',
+      'Join in local conversation and humor—Irish are chatty.',
+      'Queue patiently and respect personal space.',
+      'Dress smart-casual; blend in with locals.',
+      'Thank bus drivers and service staff.'
+    ],
+    culturalDonts: [
+      "Don't joke about Irish history, religion, or accents.",
+      "Don't speak loudly or draw attention in public.",
+      "Don't refuse hospitality abruptly—decline politely.",
+      "Don't take photos of people or in pubs without asking.",
+      "Don't discuss money, religion, or politics openly."
+    ],
 };
 
 export default dublin;

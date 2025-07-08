@@ -103,6 +103,20 @@ const lagos: Destination = {
         sourceUrl: "https://www.gov.uk/foreign-travel-advice/nigeria/warnings-and-insurance"
       }
     ], // Tips sourced from UK Government Travel Advice (2025)
+    culturalDos: [
+      'Dress modestly, covering shoulders and knees.',
+      'Greet elders and locals respectfully.',
+      'Ask before taking photos of people.',
+      'Use your right hand for eating and giving.',
+      'Respect local customs and religious practices.'
+    ],
+    culturalDonts: [
+      "Don't show affection in public.",
+      "Don't criticize religion or local traditions.",
+      "Don't enter mosques or churches without permission.",
+      "Don't wear revealing or tight clothing.",
+      "Don't discuss sensitive political topics."
+    ],
 };
 
 export default lagos;

@@ -103,6 +103,20 @@ const johannesburg: Destination = {
         sourceUrl: "https://www.qantas.com/travelinsider/en/explore/africa/south-africa/things-to-know-before-you-go-to-johannesburg.html"
       }
     ], // Tips sourced from Qantas Travel Insider (2025)
+    culturalDos: [
+      'Stay in safe neighborhoods like Sandton or Rosebank.',
+      'Use registered taxis, Uber, or hotel transport.',
+      'Keep valuables hidden and secure.',
+      'Visit townships only with organized tours.',
+      'Use the Gautrain or Rea Vaya for safer public transport.'
+    ],
+    culturalDonts: [
+      "Don't walk alone after dark.",
+      "Don't use public minibuses or unregistered taxis.",
+      "Don't display valuables or wear flashy jewelry.",
+      "Don't accept help from strangers at ATMs.",
+      "Don't discuss politics in public."
+    ],
 };
 
 export default johannesburg;

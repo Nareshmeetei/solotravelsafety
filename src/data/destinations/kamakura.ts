@@ -145,6 +145,20 @@ const kamakura: Destination = {
         sourceUrl: "https://travelladies.app/safety/japan/kamakura"
       }
     ], // Tips sourced from Visit Kamakura, Take Your Backpack, Travel Ladies (2025)
+    culturalDos: [
+      'Use public transport and official taxis.',
+      'Dress modestly at temples and shrines.',
+      'Carry cash for small shops.',
+      'Learn basic Japanese phrases and etiquette.',
+      'Swim only in designated beach areas.'
+    ],
+    culturalDonts: [
+      "Don't talk loudly on public transport.",
+      "Don't ignore local customs at religious sites.",
+      "Don't hike alone after dark.",
+      "Don't leave shoes on in homes or temples.",
+      "Don't use unofficial taxis."
+    ],
 };
 
 export default kamakura;

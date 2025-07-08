@@ -122,6 +122,20 @@ const riodejaneiro: Destination = {
         icon: 'AlertTriangle',
       },
     ],
+    culturalDos: [
+      'Greet with a friendly "bom dia" or "boa tarde."',
+      'Dress modestly outside the beach; beachwear is for the beach only.',
+      'Respect local customs and ask before taking photos of people.',
+      'Use polite language and thank people (obrigada).',
+      'Be mindful of personal space in crowded places.'
+    ],
+    culturalDonts: [
+      "Don't display wealth or use your phone openly in public.",
+      "Don't discuss politics or criticize Brazil.",
+      "Don't wear swimwear away from the beach or pool.",
+      "Don't take photos of police, military, or favelas.",
+      "Don't refuse hospitality—decline politely if needed."
+    ]
   };
 
 export default riodejaneiro;

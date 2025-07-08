@@ -99,6 +99,9 @@ export interface Destination {
     sourceName: string;
     sourceUrl: string;
   }[];
+  culturalSensitivityTips?: string[];
+  culturalDos?: string[];
+  culturalDonts?: string[];
 }
 
 export const getDestinationBySlug = (city: string, country: string): Destination | undefined => {

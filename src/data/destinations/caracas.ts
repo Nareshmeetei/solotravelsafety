@@ -103,6 +103,20 @@ const caracas: Destination = {
         sourceUrl: "https://www.numbeo.com/crime/country_result.jsp?country=Venezuela"
       }
     ], // Tips sourced from UK Gov, US State Dept, Numbeo, 2025
-  };
+    culturalDos: [
+      'Stay in safe neighborhoods.',
+      'Use only registered taxis or trusted ride apps.',
+      'Keep valuables hidden and secure.',
+      'Arrange airport transfers in advance.',
+      'Travel in groups when possible.'
+    ],
+    culturalDonts: [
+      "Don't walk alone after dark.",
+      "Don't hail taxis on the street.",
+      "Don't display valuables or wear flashy jewelry.",
+      "Don't accept help from strangers at ATMs.",
+      "Don't discuss politics in public."
+    ],
+};
 
 export default caracas;

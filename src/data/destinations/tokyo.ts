@@ -159,6 +159,20 @@ const tokyo: Destination = {
       sourceUrl: "https://travelladies.app/safety/japan"
     }
   ],
+  culturalDos: [
+    'Remove shoes before entering homes and temples.',
+    'Dress modestly, especially at religious sites.',
+    'Use quiet voices in public and on transport.',
+    'Bow politely when greeting or thanking.',
+    'Queue patiently and respect order.'
+  ],
+  culturalDonts: [
+    "Don't eat or drink while walking in public.",
+    "Don't speak loudly or make phone calls on public transport.",
+    "Don't take photos in temples without permission.",
+    "Don't tip in restaurants—service charge is included.",
+    "Don't point feet at people or religious objects."
+  ]
 };
 
 export default tokyo; 

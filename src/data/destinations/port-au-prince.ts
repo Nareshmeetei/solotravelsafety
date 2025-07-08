@@ -125,6 +125,20 @@ const portauprince: Destination = {
         sourceUrl: "https://en.wikipedia.org/wiki/Crime_in_Haiti"
       }
     ], // Tips sourced from US State Department, Travel Safe Abroad, World Nomads, Numbeo, and Wikipedia (2025)
+    culturalDos: [
+      'Dress modestly and cover shoulders and knees.',
+      'Greet people politely with "Bonjour" or "Bonjou".',
+      'Ask permission before taking photos of people.',
+      'Show respect for elders and authority figures.',
+      'Learn basic French or Haitian Creole phrases.'
+    ],
+    culturalDonts: [
+      "Don't display wealth or wear flashy jewelry.",
+      "Don't discuss politics or criticize the government.",
+      "Don't refuse hospitality—decline politely if needed.",
+      "Don't enter churches in revealing clothing.",
+      "Don't take photos of police, military, or government buildings."
+    ]
 };
 
 export default portauprince;
