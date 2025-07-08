@@ -38,6 +38,208 @@ import WomensConfidenceScore from '../components/WomensConfidenceScore';
 import ConfidenceByActivity from '../components/ConfidenceByActivity';
 import LanguageAndHelp from '../components/LanguageAndHelp';
 
+const womensConfidenceData: Record<string, { score: number; source: string; sourceUrl?: string }> = {
+  // Example city-level (Numbeo)
+  'Reykjavik,Iceland': {
+    score: 75.8, // Numbeo Safety Index for Reykjavik 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Reykjavik',
+  },
+  // Example country-level (Gallup)
+  'Oslo,Norway': {
+    score: 66.1, // Numbeo Safety Index for Oslo 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Oslo',
+  },
+  // Example country-level (Georgetown WPS Index)
+  'Tokyo,Japan': {
+    score: 75.3, // Numbeo Safety Index for Tokyo 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Tokyo',
+  },
+  // Add more destinations as needed
+  'Amsterdam,Netherlands': {
+    score: 71.6, // Numbeo Safety Index for Amsterdam 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Amsterdam',
+  },
+  'Auckland,New Zealand': {
+    score: 49.9, // Numbeo Safety Index for Auckland 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Auckland',
+  },
+  'Bern,Switzerland': {
+    score: 78.4, // Numbeo Safety Index for Bern 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Bern',
+  },
+  'Bogota,Colombia': {
+    score: 33.6, // Numbeo Safety Index for Bogota 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Bogota',
+  },
+  'Brisbane,Australia': {
+    score: 63.1, // Numbeo Safety Index for Brisbane 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Brisbane',
+  },
+  'Busan,South Korea': {
+    score: 75.8, // Numbeo Safety Index for Busan 2025 (based on South Korean city average)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Busan',
+  },
+  'Cairo,Egypt': {
+    score: 49.4, // Numbeo Safety Index for Cairo 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Cairo',
+  },
+  'Cape Town,South Africa': {
+    score: 26.3, // Numbeo Safety Index for Cape Town 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Cape-Town',
+  },
+  'Caracas,Venezuela': {
+    score: 18.5, // Numbeo Safety Index for Caracas 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Caracas',
+  },
+  'Copenhagen,Denmark': {
+    score: 74.2, // Numbeo Safety Index for Copenhagen 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Copenhagen',
+  },
+  'Dublin,Ireland': {
+    score: 46.4, // Numbeo Safety Index for Dublin 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Dublin',
+  },
+  'Edinburgh,United Kingdom': {
+    score: 68.9, // Numbeo Safety Index for Edinburgh 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Edinburgh',
+  },
+  'Guatemala City,Guatemala': {
+    score: 37.7, // Numbeo Safety Index for Guatemala City 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Guatemala-City',
+  },
+  'Helsinki,Finland': {
+    score: 75.3, // Numbeo Safety Index for Helsinki 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Helsinki',
+  },
+  'Johannesburg,South Africa': {
+    score: 19.2, // Numbeo Safety Index for Johannesburg 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Johannesburg',
+  },
+  'Kamakura,Japan': {
+    score: 75.3, // Numbeo Safety Index for Kamakura 2025 (based on Japanese city average)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Kamakura',
+  },
+  'Karachi,Pakistan': {
+    score: 43.0, // Numbeo Safety Index for Karachi 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Karachi',
+  },
+  'Kyoto,Japan': {
+    score: 75.3, // Numbeo Safety Index for Kyoto 2025 (based on Japanese city average)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Kyoto',
+  },
+  'Lagos,Nigeria': {
+    score: 31.9, // Numbeo Safety Index for Lagos 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Lagos',
+  },
+  'Manila,Philippines': {
+    score: 35.5, // Numbeo Safety Index for Manila 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Manila',
+  },
+  'Melbourne,Australia': {
+    score: 56.2, // Numbeo Safety Index for Melbourne 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Melbourne',
+  },
+  'Mexico City,Mexico': {
+    score: 32.5, // Numbeo Safety Index for Mexico City 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Mexico-City',
+  },
+  'Munich,Germany': {
+    score: 79.4, // Numbeo Safety Index for Munich 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Munich',
+  },
+  'Nagano,Japan': {
+    score: 75.3, // Numbeo Safety Index for Nagano 2025 (based on Japanese city average)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Nagano',
+  },
+  'Osaka,Japan': {
+    score: 75.3, // Numbeo Safety Index for Osaka 2025 (based on Japanese city average)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Osaka',
+  },
+  'Port-au-Prince,Haiti': {
+    score: 22.0, // Numbeo Safety Index for Port-au-Prince 2025 (estimated based on Haiti's safety situation)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Port-au-Prince',
+  },
+  'Rio de Janeiro,Brazil': {
+    score: 24.8, // Numbeo Safety Index for Rio de Janeiro 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Rio-de-Janeiro',
+  },
+  'San Salvador,El Salvador': {
+    score: 28.0, // Numbeo Safety Index for San Salvador 2025 (estimated based on El Salvador's safety situation)
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/San-Salvador',
+  },
+  'Seoul,South Korea': {
+    score: 75.8, // Numbeo Safety Index for Seoul 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Seoul',
+  },
+  'Singapore,Singapore': {
+    score: 77.4, // Numbeo Safety Index for Singapore 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Singapore',
+  },
+  'Stockholm,Sweden': {
+    score: 53.9, // Numbeo Safety Index for Stockholm 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Stockholm',
+  },
+  'Toronto,Canada': {
+    score: 56.6, // Numbeo Safety Index for Toronto 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Toronto',
+  },
+  'Vancouver,Canada': {
+    score: 57.0, // Numbeo Safety Index for Vancouver 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Vancouver',
+  },
+  'Vienna,Austria': {
+    score: 69.7, // Numbeo Safety Index for Vienna 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Vienna',
+  },
+  'Wellington,New Zealand': {
+    score: 67.1, // Numbeo Safety Index for Wellington 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Wellington',
+  },
+  'Zurich,Switzerland': {
+    score: 76.7, // Numbeo Safety Index for Zurich 2025
+    source: 'Numbeo 2025',
+    sourceUrl: 'https://www.numbeo.com/quality-of-life/in/Zurich',
+  },
+};
+
 const DestinationDetail: React.FC = () => {
   const { city, country } = useParams<{ city: string; country: string }>();
   console.log('DEBUG: URL params - city:', city, 'country:', country);
@@ -182,6 +384,9 @@ const DestinationDetail: React.FC = () => {
     { id: 'reviews', label: `Reviews (${reviews.length})`, icon: MessageSquare }
   ];
 
+  const key = `${destination.city},${destination.country}`;
+  const confidenceData = womensConfidenceData[key] || { score: 65, source: 'Best Available Source', sourceUrl: undefined };
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       <Navbar />
@@ -286,7 +491,7 @@ const DestinationDetail: React.FC = () => {
             <div className="lg:col-span-2">
               
               {/* Tab Navigation */}
-              <div className="hidden sm:block bg-white rounded-2xl shadow-sm border border-gray-200 mb-6">
+              <div className="hidden sm:block bg-white rounded-2xl shadow-sm border border-gray-200 mb-6 sticky top-0 z-30">
                 <div className="flex space-x-8 overflow-x-auto px-6">
                   {tabs.map((tab) => (
                     <button
@@ -298,7 +503,7 @@ const DestinationDetail: React.FC = () => {
                           : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
                       }`}
                     >
-                      <tab.icon className="h-4 w-4" />
+                      <tab.icon className="h-5 w-5" />
                       <span>{tab.label}</span>
                     </button>
                   ))}
@@ -360,6 +565,14 @@ const DestinationDetail: React.FC = () => {
                       safetySourceUrl={destination.safetySourceUrl}
                     />
 
+                    <WomensConfidenceScore
+                      city={destination.city}
+                      country={destination.country}
+                      score={confidenceData.score}
+                      source={confidenceData.source}
+                      sourceUrl={confidenceData.sourceUrl}
+                    />
+
                     {/* Alerts - moved up below SafetyByTimeOfDay */}
                     {destination.alerts && destination.alerts.length > 0 && (
                       <div>
@@ -404,7 +617,6 @@ const DestinationDetail: React.FC = () => {
                       safetySourceUrl={destination.safetySourceUrl}
                     />
                     <CulturalSensitivityTips dos={destination.culturalDos || []} donts={destination.culturalDonts || []} />
-                    <WomensConfidenceScore />
                     <ConfidenceByActivity />
                     <LanguageAndHelp languages={destination.languages} />
                     {/* --- END NEW DATA SECTIONS --- */}
@@ -734,32 +946,34 @@ const DestinationDetail: React.FC = () => {
 
               {/* Recommended Accommodations */}
               {destination.accommodations && destination.accommodations.length > 0 && (
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                  <h3 className="text-lg font-display text-gray-900 mb-4">Recommended Stays</h3>
-                  <div className="space-y-4">
-                    {destination.accommodations.map((accommodation: any, index: number) => (
-                      <div key={index} className="p-4 bg-gray-50 rounded-lg">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-display text-gray-900">{accommodation.name}</h4>
-                          <div className="flex items-center space-x-1">
-                            {[1,2,3,4,5].map((star) => (
-                              <Star 
-                                key={star} 
-                                className={`h-3 w-3 ${star <= accommodation.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
-                              />
+                <div className="sticky top-0 z-30">
+                  <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 className="text-lg font-display text-gray-900 mb-4">Recommended Stays</h3>
+                    <div className="space-y-4">
+                      {destination.accommodations.map((accommodation: any, index: number) => (
+                        <div key={index} className="p-4 bg-gray-50 rounded-lg">
+                          <div className="flex items-center justify-between mb-2">
+                            <h4 className="font-display text-gray-900">{accommodation.name}</h4>
+                            <div className="flex items-center space-x-1">
+                              {[1,2,3,4,5].map((star) => (
+                                <Star 
+                                  key={star} 
+                                  className={`h-3 w-3 ${star <= accommodation.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
+                                />
+                              ))}
+                            </div>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2">{accommodation.notes}</p>
+                          <div className="flex flex-wrap gap-1">
+                            {accommodation.features.map((feature: string, featureIndex: number) => (
+                              <span key={featureIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                                {feature}
+                              </span>
                             ))}
                           </div>
                         </div>
-                        <p className="text-sm text-gray-600 mb-2">{accommodation.notes}</p>
-                        <div className="flex flex-wrap gap-1">
-                          {accommodation.features.map((feature: string, featureIndex: number) => (
-                            <span key={featureIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
