@@ -159,6 +159,37 @@ const kamakura: Destination = {
       "Don't leave shoes on in homes or temples.",
       "Don't use unofficial taxis."
     ],
+    womensConfidenceScore: {
+      score: 77.1, // Numbeo 2025 Safety Index for Japan
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/rankings_by_country.jsp?title=2025"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 95,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/japan/kamakura'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 85,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/japan/kabukicho'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 97,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/japan'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 93,
+        source: 'Be My Travel Muse 2025',
+        sourceUrl: 'https://www.bemytravelmuse.com/safest-countries-for-women-to-travel-in/'
+      }
+    ],
 };
 
 export default kamakura;

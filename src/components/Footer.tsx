@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PrivacyPolicy from './PrivacyPolicy';
+import DataManagement from './DataManagement';
 
 const Footer: React.FC = () => {
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showDataManagement, setShowDataManagement] = useState(false);
+
   const handleNavClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
@@ -52,12 +57,38 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="mt-6 text-center animate-fade-in-up animate-delay-400">
+            <div className="flex flex-wrap justify-center items-center space-x-4 mb-2">
+              <button
+                onClick={() => setShowPrivacyPolicy(true)}
+                className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600 hover:underline"
+              >
+                Privacy Policy
+              </button>
+              <button
+                onClick={() => setShowDataManagement(true)}
+                className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600 hover:underline"
+              >
+                Data Management
+              </button>
+            </div>
             <p className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600">
               © 2025 SoloTravelSafety.com. Made with ❤️ for fearless women travelers.
             </p>
           </div>
         </div>
       </div>
+
+      {/* Privacy Policy Modal */}
+      <PrivacyPolicy 
+        isOpen={showPrivacyPolicy} 
+        onClose={() => setShowPrivacyPolicy(false)} 
+      />
+
+      {/* Data Management Modal */}
+      <DataManagement 
+        isOpen={showDataManagement} 
+        onClose={() => setShowDataManagement(false)} 
+      />
     </footer>
   );
 };

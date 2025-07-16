@@ -92,6 +92,37 @@ const vancouver: Destination = {
     nighttimeSafetyPercent: 51.2, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Vancouver)
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Vancouver',
+    womensConfidenceScore: {
+      score: 74.3, // Travel Ladies, Numbeo 2025
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 93,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 85,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 95,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 90,
+        source: '',
+        sourceUrl: ''
+      }
+    ],
     // Red flags based on VPD, Numbeo 2025, StaySafeVancouver, and local advisories
     // Sources:
     // https://www.numbeo.com/crime/in/Vancouver

@@ -115,6 +115,37 @@ const edinburgh: Destination = {
       "Don't take photos in churches or of people without asking.",
       "Don't be overly familiar with strangers."
     ],
+    womensConfidenceScore: {
+      score: 68.8, // Numbeo 2025 Safety Index for Edinburgh
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Edinburgh"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 90,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/united-kingdom/edinburgh'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 75,
+        source: 'Alyssa O Writes 2025',
+        sourceUrl: 'https://alyssaowrites.com/edinburgh-3-day-itinerary/'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 92,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/united-kingdom/edinburgh'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 88,
+        source: 'SoloGuides 2025',
+        sourceUrl: 'https://sologuides.com/edinburgh/'
+      }
+    ],
 };
 
 export default edinburgh;

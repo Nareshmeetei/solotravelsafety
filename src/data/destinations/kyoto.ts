@@ -157,6 +157,37 @@ const kyoto: Destination = {
       "Don't enter private areas of temples or shrines.",
       "Don't ignore etiquette signs or instructions."
     ],
+    womensConfidenceScore: {
+      score: 77.1, // Numbeo 2025 Safety Index for Japan (Kyoto aligns with national average)
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/rankings_by_country.jsp?title=2025"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 95,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/japan/kyoto'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 85,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/japan/kyoto'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 97,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/japan/kyoto'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 93,
+        source: 'Be My Travel Muse 2025',
+        sourceUrl: 'https://www.bemytravelmuse.com/solo-female-travel-in-japan/'
+      }
+    ],
   };
 
 export default kyoto;

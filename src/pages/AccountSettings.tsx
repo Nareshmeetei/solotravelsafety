@@ -14,15 +14,20 @@ import {
   Eye,
   EyeOff,
   Lock,
-  AlertTriangle
+  AlertTriangle,
+  Clock,
+  Monitor,
+  LogOut
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { useSessionManagement } from '../hooks/useSessionManagement';
 import { supabase, uploadProfileImage, ensureProfileExists } from '../lib/supabase';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const AccountSettings: React.FC = () => {
   const { user, signOut } = useAuth();
+  const { sessionInfo, getSessionStatus, forceLogoutFromAllSessions, getSessionStats } = useSessionManagement();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
@@ -426,6 +431,7 @@ const AccountSettings: React.FC = () => {
     { id: 'security', label: 'Security & Password', icon: Shield },
     { id: 'notifications', label: 'Notifications', icon: Bell },
     { id: 'privacy', label: 'Privacy Settings', icon: Eye },
+    { id: 'session', label: 'Session Management', icon: Monitor },
     { id: 'danger', label: 'Danger Zone', icon: AlertTriangle }
   ];
 
@@ -910,6 +916,95 @@ const AccountSettings: React.FC = () => {
                     </div>
                   </div>
                 )}
+
+                                 {/* Session Management */}
+                 {activeSection === 'session' && (
+                   <div className="space-y-6">
+                     <div>
+                       <h2 className="text-2xl font-display text-gray-900 mb-2">Session Management</h2>
+                       <p className="text-gray-600">View and manage your active sessions.</p>
+                     </div>
+
+                     <div className="bg-gray-50 rounded-xl p-6">
+                       <h3 className="font-display text-gray-900 mb-4">Current Session</h3>
+                       <div className="space-y-4">
+                         <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl bg-white">
+                           <div className="flex items-center space-x-3">
+                             <div className="p-2 bg-primary-100 rounded-lg">
+                               <Monitor className="h-5 w-5 text-primary-600" />
+                             </div>
+                             <div>
+                               <p className="text-sm font-medium text-gray-900">
+                                 {sessionInfo.deviceInfo || 'Current Device'}
+                               </p>
+                               <p className="text-xs text-gray-500 mt-1">
+                                 {getSessionStatus()}
+                               </p>
+                             </div>
+                           </div>
+                           <div className="text-right">
+                             <p className="text-xs text-gray-500">
+                               {sessionInfo.lastActivity ? 
+                                 `Last active: ${sessionInfo.lastActivity.toLocaleTimeString()}` : 
+                                 'No activity recorded'
+                               }
+                             </p>
+                             {sessionInfo.sessionAge !== null && (
+                               <p className="text-xs text-gray-500">
+                                 Session age: {sessionInfo.sessionAge} minutes
+                               </p>
+                             )}
+                           </div>
+                         </div>
+
+                         <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+                           <div className="flex items-start space-x-2">
+                             <Shield className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                             <div>
+                               <p className="text-sm text-blue-800 font-medium">Session Security</p>
+                               <p className="text-xs text-blue-700 mt-1">
+                                 {sessionInfo.isPersistent 
+                                   ? 'Your session is persistent and will remain active across browser restarts.'
+                                   : 'Your session will end when you close your browser.'
+                                 }
+                               </p>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+                       <div className="mt-6 flex justify-end">
+                         <button
+                           onClick={async () => {
+                             setLoading(true);
+                             const result = await forceLogoutFromAllSessions();
+                             if (result.success) {
+                               setSuccess('Successfully logged out from all sessions');
+                               setTimeout(() => setSuccess(''), 3000);
+                             } else {
+                               setError('Failed to log out from all sessions');
+                             }
+                             setLoading(false);
+                           }}
+                           disabled={loading}
+                           className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                         >
+                           {loading ? (
+                             <>
+                               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                               Logging out...
+                             </>
+                           ) : (
+                             <>
+                               <LogOut className="h-4 w-4 mr-2" />
+                               Sign Out from All Sessions
+                             </>
+                           )}
+                         </button>
+                       </div>
+                     </div>
+                   </div>
+                 )}
 
                 {/* Danger Zone */}
                 {activeSection === 'danger' && (

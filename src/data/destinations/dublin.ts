@@ -115,6 +115,37 @@ const dublin: Destination = {
       "Don't take photos of people or in pubs without asking.",
       "Don't discuss money, religion, or politics openly."
     ],
+    womensConfidenceScore: {
+      score: 47.0, // Numbeo 2025 Safety Index for Dublin
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Dublin"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 80,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/ireland/dublin'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 60,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/ireland/dublin'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 75,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/ireland/dublin'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 85,
+        source: 'The Lady Who Travels 2025',
+        sourceUrl: 'https://www.theladywhotravels.com/is-dublin-safe-for-solo-female-travelers/'
+      }
+    ],
 };
 
 export default dublin;

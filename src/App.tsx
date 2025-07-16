@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import HomePage from './pages/HomePage';
@@ -10,9 +10,11 @@ import AccountSettings from './pages/AccountSettings';
 import SafetyTips from './pages/SafetyTips';
 import Community from './pages/Community';
 import AuthCallback from './pages/AuthCallback';
-import MCPTestPage from './pages/MCPTestPage';
 import FloatingBoltLogo from './components/FloatingBoltLogo';
 import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/CookieConsent';
+import SentryErrorBoundary from './components/SentryErrorBoundary';
+import SentryTest from './components/SentryTest';
 
 // Protected Route component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -57,7 +59,7 @@ function AppRoutes() {
       <Route path="/safety-tips" element={<SafetyTips />} />
       <Route path="/community" element={<Community />} />
       <Route path="/auth/callback" element={<AuthCallback />} />
-      <Route path="/mcp-test" element={<MCPTestPage />} />
+      <Route path="/sentry-test" element={<SentryTest />} />
       <Route path="/profile" element={
         <ProtectedRoute>
           <Profile />
@@ -80,16 +82,43 @@ function AppRoutes() {
 }
 
 function App() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+    essential: true,
+    analytics: false,
+    functional: false
+  });
+
+  const handleCookieAccept = (preferences: any) => {
+    setCookiePreferences(preferences);
+    // Here you could also set up analytics or other services based on preferences
+    console.log('Cookie preferences:', preferences);
+  };
+
+  const handleCookieDecline = () => {
+    setCookiePreferences({
+      essential: true,
+      analytics: false,
+      functional: false
+    });
+    console.log('Cookies declined, only essential cookies enabled');
+  };
+
   return (
+    <SentryErrorBoundary>
     <AuthProvider>
       <Router>
         <ScrollToTop />
         <div className="min-h-screen bg-white font-sans">
           <AppRoutes />
           <FloatingBoltLogo />
+          <CookieConsent 
+            onAccept={handleCookieAccept}
+            onDecline={handleCookieDecline}
+          />
         </div>
       </Router>
     </AuthProvider>
+    </SentryErrorBoundary>
   );
 }
 

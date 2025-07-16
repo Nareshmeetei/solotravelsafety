@@ -129,6 +129,37 @@ const munich: Destination = {
       "Don't make jokes about WWII or local history.",
       "Don't walk in bike lanes—cyclists have priority.",
       "Don't bring outside food or drink into beer gardens."
+    ],
+    womensConfidenceScore: {
+      score: 77.6, // Numbeo 2025 Safety Index for Munich
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Munich"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 95,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/germany/munich'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 85,
+        source: 'NomadSister 2025',
+        sourceUrl: 'https://www.nomadsister.com/en/blog/articles/solo-female-travel-in-germany-destinations-and-tips-for-women/'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 97,
+        source: 'Real Journey Travels 2025',
+        sourceUrl: 'https://www.realjourneytravels.com/is-munich-safe/'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 92,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/germany/munich'
+      }
     ]
 };
 

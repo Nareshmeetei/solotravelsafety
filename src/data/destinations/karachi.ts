@@ -115,6 +115,37 @@ const karachi: Destination = {
       "Don't wear revealing or tight clothing.",
       "Don't discuss sensitive political topics."
     ],
+    womensConfidenceScore: {
+      score: 43.0, // Numbeo 2025 Safety Index for Karachi
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Karachi"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 55,
+        source: 'Lost With Purpose 2024',
+        sourceUrl: 'https://www.lostwithpurpose.com/female-travel-pakistan/'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 30,
+        source: 'Laure Wanders 2025',
+        sourceUrl: 'https://www.laurewanders.com/is-pakistan-safe-for-women/'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 40,
+        source: 'Urraan Mobility 2025',
+        sourceUrl: 'https://www.linkedin.com/company/urraan-mobility/'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 50,
+        source: 'Lost With Purpose 2024',
+        sourceUrl: 'https://www.lostwithpurpose.com/female-travel-pakistan/'
+      }
+    ],
   };
 
 export default karachi;

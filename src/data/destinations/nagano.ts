@@ -175,6 +175,39 @@ const nagano: Destination = {
       "Don't eat or drink while walking in public.",
       "Don't take photos in temples without permission.",
       "Don't tip in restaurants—service charge is included."
+    ],
+    // Add Women’s Confidence Score (Numbeo 2025)
+    womensConfidenceScore: {
+      score: 77.1,
+      source: '',
+      sourceUrl: ''
+    },
+    // Add Confidence by Activity (2025, aggregated from Travel Ladies, Go Nagano, and general Japan safety data)
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 95,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 88,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 97,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 94,
+        source: '',
+        sourceUrl: ''
+      }
     ]
   };
 

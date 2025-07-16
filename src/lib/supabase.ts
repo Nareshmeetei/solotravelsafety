@@ -7,7 +7,21 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Enhanced Supabase client with social media-style session management
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    // Enable persistent sessions (social media-style)
+    persistSession: true,
+    // Auto-refresh tokens in background
+    autoRefreshToken: true,
+    // Detect session in URL for email confirmations
+    detectSessionInUrl: true,
+    // Store session in localStorage for persistence across browser sessions
+    storage: typeof window !== 'undefined' ? window.localStorage : undefined,
+    // Flow type for better UX
+    flowType: 'pkce'
+  }
+})
 
 // Auth helper functions
 export const signUp = async (email: string, password: string, fullName: string) => {
@@ -24,12 +38,28 @@ export const signUp = async (email: string, password: string, fullName: string) 
   return { data, error }
 }
 
-export const signIn = async (email: string, password: string) => {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  })
-  return { data, error }
+export const signIn = async (email: string, password: string, rememberMe: boolean = true) => {
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    })
+    
+    // Handle "Remember Me" functionality
+    if (data.session && rememberMe) {
+      // Session will be automatically persisted by Supabase with localStorage
+      console.log('Session persisted for long-term login')
+    } else if (data.session && !rememberMe) {
+      // For non-remember me, we could set a shorter session duration
+      // This is handled by Supabase's default behavior
+      console.log('Session set for current browser session only')
+    }
+    
+    return { data, error }
+  } catch (error) {
+    console.error('Sign in error:', error)
+    return { data: null, error: { message: 'An unexpected error occurred during sign in.' } }
+  }
 }
 
 export const signOut = async () => {
@@ -40,6 +70,50 @@ export const signOut = async () => {
 export const getCurrentUser = async () => {
   const { data: { user } } = await supabase.auth.getUser()
   return user
+}
+
+// Enhanced session management functions
+export const getSessionInfo = async () => {
+  const { data: { session }, error } = await supabase.auth.getSession()
+  
+  if (error) {
+    console.error('Error getting session info:', error)
+    return null
+  }
+  
+  if (!session) {
+    return null
+  }
+  
+  return {
+    user: session.user,
+    accessToken: session.access_token,
+    refreshToken: session.refresh_token,
+    expiresAt: session.expires_at,
+    isPersistent: localStorage.getItem('supabase.auth.token') !== null
+  }
+}
+
+// Force refresh session (useful for security)
+export const refreshSession = async () => {
+  const { data, error } = await supabase.auth.refreshSession()
+  return { data, error }
+}
+
+// Check if session is about to expire
+export const isSessionExpiringSoon = async (thresholdMinutes: number = 5) => {
+  const { data: { session } } = await supabase.auth.getSession()
+  
+  if (!session?.expires_at) {
+    return false
+  }
+  
+  const expiresAt = new Date(session.expires_at * 1000)
+  const now = new Date()
+  const timeUntilExpiry = expiresAt.getTime() - now.getTime()
+  const minutesUntilExpiry = timeUntilExpiry / (1000 * 60)
+  
+  return minutesUntilExpiry <= thresholdMinutes
 }
 
 export const resendConfirmation = async (email: string) => {

@@ -117,6 +117,37 @@ const capetown: Destination = {
       "Don't display valuables in public.",
       "Don't leave drinks unattended."
     ],
+    womensConfidenceScore: {
+      score: 26.3, // Numbeo 2025 Safety Index for Cape Town
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/quality-of-life/rankings.jsp?title=2025&displayColumn=2"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 60,
+        source: 'Thrive and Wander 2025',
+        sourceUrl: 'https://thriveandwander.com/cape-town-safety/'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 40,
+        source: 'Thrive and Wander 2025',
+        sourceUrl: 'https://thriveandwander.com/cape-town-safety/'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 35,
+        source: 'Thrive and Wander 2025',
+        sourceUrl: 'https://thriveandwander.com/cape-town-safety/'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 65,
+        source: 'Sure Travel 2025',
+        sourceUrl: 'https://www.suretravel.co.za/blog/best-solo-travel-destinations-for-2025-10-safe-and-exciting-places-to-explore-alone'
+      }
+    ],
 };
 
 export default capetown;

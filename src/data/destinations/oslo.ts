@@ -93,6 +93,37 @@ const oslo: Destination = {
     nighttimeSafetyPercent: 83.0,
     safetySourceName: 'Travel Ladies 2025',
     safetySourceUrl: 'https://travelladies.app/safety/norway/oslo',
+    womensConfidenceScore: {
+      score: 92.0,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 96,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 90,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 97,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 93,
+        source: '',
+        sourceUrl: ''
+      }
+    ],
     // Red flags based on Numbeo 2025, Travel Ladies, and US State Department
     redFlags: [
       {

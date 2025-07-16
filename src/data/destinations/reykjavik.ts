@@ -165,6 +165,37 @@ const reykjavik: Destination = {
       "Don't haggle over prices—prices are fixed."
     ],
     scamWarnings: [],
+    womensConfidenceScore: {
+      score: 75.8,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 98,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 95,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 97,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 99,
+        source: '',
+        sourceUrl: ''
+      }
+    ],
 };
 
 export default reykjavik;

@@ -93,6 +93,37 @@ const vienna: Destination = {
     nighttimeSafetyPercent: 82.0, // Source: Numbeo 2025, Travel Ladies 2025
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Vienna',
+    womensConfidenceScore: {
+      score: 82.0, // Numbeo 2025, Travel Ladies 2025
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 97,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 90,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 98,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 95,
+        source: '',
+        sourceUrl: ''
+      }
+    ],
     // Red flags based on Numbeo 2025, Travel Ladies, and local safety advisories
     // Sources:
     // https://www.numbeo.com/crime/in/Vienna

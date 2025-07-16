@@ -117,6 +117,37 @@ const johannesburg: Destination = {
       "Don't accept help from strangers at ATMs.",
       "Don't discuss politics in public."
     ],
+    womensConfidenceScore: {
+      score: 19.2, // Numbeo 2025 Safety Index for Johannesburg
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Johannesburg"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 40,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-africa/johannesburg'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 20,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-africa/johannesburg'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 25,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-africa/johannesburg'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 45,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-africa/johannesburg'
+      }
+    ],
 };
 
 export default johannesburg;

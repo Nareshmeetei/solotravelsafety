@@ -117,6 +117,37 @@ const lagos: Destination = {
       "Don't wear revealing or tight clothing.",
       "Don't discuss sensitive political topics."
     ],
+    womensConfidenceScore: {
+      score: 22.4, // Numbeo 2025 Safety Index for Lagos
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Lagos"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 40,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/nigeria/lagos'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 20,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/nigeria/lagos'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 25,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/nigeria/lagos'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 35,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/nigeria/lagos'
+      }
+    ],
 };
 
 export default lagos;

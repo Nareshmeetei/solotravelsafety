@@ -3,6 +3,10 @@ import { X, Mail, Lock, User, Eye, EyeOff, CheckCircle, AlertCircle } from 'luci
 import { useAuth } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { resendConfirmation } from '../lib/supabase'
+import { signUpSchema, signInSchema, validateAndSanitize } from '../lib/validation'
+import { sanitizeEmail, sanitizeName, containsMaliciousContent } from '../lib/sanitize'
+import { useAuthRateLimit } from '../hooks/useRateLimit'
+import { AuthRateLimitStatus } from './RateLimitStatus'
 
 interface AuthModalProps {
   isOpen: boolean
@@ -20,9 +24,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [resendingConfirmation, setResendingConfirmation] = useState(false)
+  const [rememberMe, setRememberMe] = useState(true) // Default to true for social media-style UX
   const navigate = useNavigate()
 
   const { signIn, signUp } = useAuth()
+  const { trackRequest, isLimited } = useAuthRateLimit(() => {
+    setError('Too many authentication attempts. Please try again later.')
+  })
 
   // Update mode when initialMode changes
   React.useEffect(() => {
@@ -31,17 +39,42 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Check rate limit before proceeding
+    if (!trackRequest()) {
+      setLoading(false)
+      return
+    }
+    
     setLoading(true)
     setError('')
     setSuccess('')
 
     try {
       if (mode === 'signup') {
-        if (!fullName.trim()) {
-          setError('Full name is required')
+        // Validate and sanitize signup data
+        const signupData = {
+          email: sanitizeEmail(email),
+          password,
+          fullName: sanitizeName(fullName)
+        }
+
+        // Check for malicious content
+        if (containsMaliciousContent(email) || containsMaliciousContent(fullName)) {
+          setError('Invalid input detected. Please check your information and try again.')
+          setLoading(false)
           return
         }
-        const { data, error } = await signUp(email, password, fullName)
+
+        // Validate with Zod schema
+        const validation = validateAndSanitize(signUpSchema, signupData)
+        if (!validation.success) {
+          setError(validation.errors.join(', '))
+          setLoading(false)
+          return
+        }
+
+        const { data, error } = await signUp(validation.data.email, validation.data.password, validation.data.fullName)
         if (error) {
           // Handle specific error cases with user-friendly messages
           if (error.message.includes('User already registered') || error.message.includes('user_already_exists')) {
@@ -55,7 +88,28 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
           setSuccess('Please check your email and click the confirmation link to complete your registration.')
         }
       } else {
-        const { error } = await signIn(email, password)
+        // Validate and sanitize signin data
+        const signinData = {
+          email: sanitizeEmail(email),
+          password
+        }
+
+        // Check for malicious content
+        if (containsMaliciousContent(email)) {
+          setError('Invalid input detected. Please check your information and try again.')
+          setLoading(false)
+          return
+        }
+
+        // Validate with Zod schema
+        const validation = validateAndSanitize(signInSchema, signinData)
+        if (!validation.success) {
+          setError(validation.errors.join(', '))
+          setLoading(false)
+          return
+        }
+
+        const { error } = await signIn(validation.data.email, validation.data.password, rememberMe)
         if (error) {
           if (error.message.includes('Email not confirmed') || error.message.includes('confirm your email')) {
             setMode('confirm-email')
@@ -83,12 +137,30 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
       return
     }
 
+    // Check rate limit before proceeding
+    if (!trackRequest()) {
+      return
+    }
+
+    // Sanitize email before sending
+    const sanitizedEmail = sanitizeEmail(email)
+    if (!sanitizedEmail) {
+      setError('Please enter a valid email address')
+      return
+    }
+
+    // Check for malicious content
+    if (containsMaliciousContent(email)) {
+      setError('Invalid email address detected.')
+      return
+    }
+
     setResendingConfirmation(true)
     setError('')
     setSuccess('')
 
     try {
-      const { error } = await resendConfirmation(email)
+      const { error } = await resendConfirmation(sanitizedEmail)
       if (error) {
         setError(error.message)
       } else {
@@ -238,6 +310,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
               </div>
             )}
 
+            {/* Rate Limit Status */}
+            <AuthRateLimitStatus className="mb-4" />
+
             <div className="space-y-4">
               {mode === 'signup' && (
                 <div>
@@ -307,6 +382,31 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
                   </p>
                 )}
               </div>
+
+              {/* Remember Me checkbox - only show for sign in */}
+              {mode === 'signin' && (
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center space-x-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="w-4 h-4 text-primary-400 border-gray-300 rounded focus:ring-primary-400 focus:ring-2"
+                    />
+                    <span className="text-sm text-gray-700">Keep me signed in</span>
+                  </label>
+                  <button
+                    type="button"
+                    className="text-sm text-primary-400 hover:text-primary-500 transition-colors duration-300"
+                    onClick={() => {
+                      // TODO: Implement forgot password functionality
+                      setError('Password reset functionality coming soon!')
+                    }}
+                  >
+                    Forgot password?
+                  </button>
+                </div>
+              )}
             </div>
 
             {mode === 'signup' && (

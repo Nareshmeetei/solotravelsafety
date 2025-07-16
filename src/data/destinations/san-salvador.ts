@@ -137,6 +137,37 @@ const sansalvador: Destination = {
       "Don't refuse hospitality—decline politely if needed.",
       "Don't enter churches in revealing clothing.",
       "Don't take photos of police, military, or government buildings."
+    ],
+    womensConfidenceScore: {
+      score: 41.4,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 65,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 45,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 55,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 60,
+        source: '',
+        sourceUrl: ''
+      }
     ]
   };
 

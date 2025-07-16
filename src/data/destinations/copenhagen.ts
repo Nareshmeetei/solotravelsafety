@@ -118,6 +118,37 @@ const copenhagen: Destination = {
       "Don't ignore bike lane rules.",
       "Don't exchange money with street vendors."
     ],
+    womensConfidenceScore: {
+      score: 73.8, // Numbeo 2025 Safety Index for Copenhagen
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Copenhagen"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 94,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/denmark/copenhagen'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 85,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/denmark/copenhagen'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 96,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/denmark/copenhagen'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 92,
+        source: 'The Lady Who Travels 2025',
+        sourceUrl: 'https://www.theladywhotravels.com/is-copenhagen-safe-for-solo-female-travelers/'
+      }
+    ],
 };
 
 export default copenhagen;

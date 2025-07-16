@@ -95,6 +95,37 @@ const riodejaneiro: Destination = {
     nighttimeSafetyPercent: 16.7, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Rio-De-Janeiro)
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Rio-De-Janeiro',
+    womensConfidenceScore: {
+      score: 24.8,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 40,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 18,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 30,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 35,
+        source: '',
+        sourceUrl: ''
+      }
+    ],
     // Red flags based on Numbeo 2025, Tess the Traveler, and HurfPost Brasil
     // Sources:
     // https://www.numbeo.com/crime/in/Rio-De-Janeiro

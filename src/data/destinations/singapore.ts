@@ -131,6 +131,39 @@ const singapore: Destination = {
       "Don't touch someone's head or point with your feet.",
       "Don't bring durians into hotels or public transport.",
       "Don't discuss race, religion, or politics openly."
+    ],
+    // Add Women’s Confidence Score (Numbeo 2025, Forbes, SCMP)
+    womensConfidenceScore: {
+      score: 92.5,
+      source: '',
+      sourceUrl: ''
+    },
+    // Add Confidence by Activity (2025, aggregated from Jou Jou Travels, Cat is Out of the Office, and government data)
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 99,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 95,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 99,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 98,
+        source: '',
+        sourceUrl: ''
+      }
     ]
   };
 

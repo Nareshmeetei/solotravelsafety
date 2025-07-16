@@ -114,6 +114,37 @@ const cairo: Destination = {
       "Don't raise your voice or display anger in public.",
       "Don't enter mosques without proper attire."
     ],
+    womensConfidenceScore: {
+      score: 34.7, // Travel Ladies 2025 Women's Safety Index for Cairo
+      source: "Travel Ladies 2025",
+      sourceUrl: "https://travelladies.app/crime/egypt/cairo"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 65,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/crime/egypt/cairo'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 45,
+        source: 'Nomadic Matt 2025',
+        sourceUrl: 'https://www.nomadicmatt.com/travel-blogs/egypt-women-safety/'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 58,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/crime/egypt/cairo'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 70,
+        source: 'Bea Adventurous 2025',
+        sourceUrl: 'https://bea-adventurous.com/is-egypt-safe-for-solo-female-travellers/'
+      }
+    ],
   };
 
 export default cairo;

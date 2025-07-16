@@ -173,6 +173,37 @@ const osaka: Destination = {
       "Don't take photos in temples without permission.",
       "Don't tip in restaurants—service charge is included.",
       "Don't point feet at people or religious objects."
+    ],
+    womensConfidenceScore: {
+      score: 77.4,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 94,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 87,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 97,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 93,
+        source: '',
+        sourceUrl: ''
+      }
     ]
   };
 

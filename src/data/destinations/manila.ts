@@ -117,6 +117,37 @@ const manila: Destination = {
       'Don\'t openly criticize local customs, religion, or the Philippines itself.',
       'Don\'t flaunt wealth or act arrogantly; humility is highly valued.'
     ],
+    womensConfidenceScore: {
+      score: 35.5, // Numbeo 2025 Safety Index for Manila
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Manila"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 65,
+        source: 'SoloGuides 2025',
+        sourceUrl: 'https://sologuides.com/manila/'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 45,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/philippines/manila'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 55,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/philippines/manila'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 70,
+        source: 'SoloGuides 2025',
+        sourceUrl: 'https://sologuides.com/manila/'
+      }
+    ],
 };
 
 export default manila;

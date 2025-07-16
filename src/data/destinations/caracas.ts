@@ -117,6 +117,37 @@ const caracas: Destination = {
       "Don't accept help from strangers at ATMs.",
       "Don't discuss politics in public."
     ],
+    womensConfidenceScore: {
+      score: 18.7, // Numbeo 2025 Safety Index for Caracas
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Caracas"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 30,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/venezuela/caracas'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 15,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/venezuela/caracas'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 18,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/venezuela/caracas'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 35,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/venezuela/caracas'
+      }
+    ],
 };
 
 export default caracas;

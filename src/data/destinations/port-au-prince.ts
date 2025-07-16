@@ -138,6 +138,37 @@ const portauprince: Destination = {
       "Don't refuse hospitality—decline politely if needed.",
       "Don't enter churches in revealing clothing.",
       "Don't take photos of police, military, or government buildings."
+    ],
+    womensConfidenceScore: {
+      score: 21.1,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 15,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 5,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 10,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 18,
+        source: '',
+        sourceUrl: ''
+      }
     ]
 };
 

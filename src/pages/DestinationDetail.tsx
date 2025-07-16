@@ -23,7 +23,8 @@ import {
   Bookmark,
   Plus,
   Eye,
-  EyeOff
+  EyeOff,
+  Volume2
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -251,6 +252,8 @@ const DestinationDetail: React.FC = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
   const [showEmergencyInfo, setShowEmergencyInfo] = useState(false);
+  const [embassySearch, setEmbassySearch] = useState('');
+  const [selectedEmbassy, setSelectedEmbassy] = useState<any>(null);
 
   useEffect(() => {
     if (city && country) {
@@ -387,6 +390,14 @@ const DestinationDetail: React.FC = () => {
   const key = `${destination.city},${destination.country}`;
   const confidenceData = womensConfidenceData[key] || { score: 65, source: 'Best Available Source', sourceUrl: undefined };
 
+  const embassyList = [
+    destination.legalResources?.embassy,
+    ...(destination.legalResources?.embassies || [])
+  ].filter(Boolean);
+  const filteredEmbassies = embassyList.filter((embassy: any) =>
+    embassy.name.toLowerCase().includes(embassySearch.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       <Navbar />
@@ -463,6 +474,7 @@ const DestinationDetail: React.FC = () => {
                   <Phone className="h-5 w-5 mr-2" />
                   Emergency Contacts - {destination.city}, {destination.country}
                 </h3>
+                {/* Emergency Numbers - now at the very top */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   <div className="bg-white p-4 rounded-lg border border-red-200">
                     <h4 className="font-display text-red-800 mb-2">Police</h4>
@@ -481,6 +493,213 @@ const DestinationDetail: React.FC = () => {
                     <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.general}</p>
                   </div>
                 </div>
+                {/* Emergency Phrases - now second */}
+                {destination.safetyTips.emergencyPhrases && destination.safetyTips.emergencyPhrases.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="font-display text-red-800 mb-2">Emergency Phrases</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {destination.safetyTips.emergencyPhrases.map((phrase: any, index: number) => (
+                        <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                          <div className="flex items-center justify-between mb-1">
+                            <p className="text-red-800 font-medium text-sm">{phrase.english}</p>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <p className="text-red-900 font-bold text-lg">{phrase.local}</p>
+                            <button
+                              type="button"
+                              aria-label={`Play pronunciation of ${phrase.local}`}
+                              className="ml-2 p-1 rounded-full hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors"
+                              onClick={() => {
+                                const utterance = new window.SpeechSynthesisUtterance(phrase.local);
+                                const languageMap: { [key: string]: string } = {
+                                  'Dutch': 'nl-NL',
+                                  'German': 'de-DE',
+                                  'French': 'fr-FR',
+                                  'Spanish': 'es-ES',
+                                  'Italian': 'it-IT',
+                                  'Portuguese': 'pt-PT',
+                                  'Japanese': 'ja-JP',
+                                  'Korean': 'ko-KR',
+                                  'Chinese': 'zh-CN',
+                                  'Thai': 'th-TH',
+                                  'Vietnamese': 'vi-VN',
+                                  'Arabic': 'ar-SA',
+                                  'Russian': 'ru-RU',
+                                  'Turkish': 'tr-TR',
+                                  'Greek': 'el-GR',
+                                  'Hebrew': 'he-IL',
+                                  'Hindi': 'hi-IN',
+                                  'Bengali': 'bn-IN',
+                                  'Urdu': 'ur-PK',
+                                  'Persian': 'fa-IR',
+                                  'Swedish': 'sv-SE',
+                                  'Norwegian': 'no-NO',
+                                  'Danish': 'da-DK',
+                                  'Finnish': 'fi-FI',
+                                  'Polish': 'pl-PL',
+                                  'Czech': 'cs-CZ',
+                                  'Hungarian': 'hu-HU',
+                                  'Romanian': 'ro-RO',
+                                  'Bulgarian': 'bg-BG',
+                                  'Croatian': 'hr-HR',
+                                  'Serbian': 'sr-RS',
+                                  'Slovenian': 'sl-SI',
+                                  'Slovak': 'sk-SK',
+                                  'Estonian': 'et-EE',
+                                  'Latvian': 'lv-LV',
+                                  'Lithuanian': 'lt-LT',
+                                  'Icelandic': 'is-IS',
+                                  'Maltese': 'mt-MT',
+                                  'Luxembourgish': 'lb-LU',
+                                  'Albanian': 'sq-AL',
+                                  'Macedonian': 'mk-MK',
+                                  'Bosnian': 'bs-BA',
+                                  'Montenegrin': 'cnr-ME',
+                                  'Kosovar': 'sq-XK',
+                                  'Māori': 'mi-NZ',
+                                  'English': 'en-US'
+                                };
+                                
+                                utterance.lang = languageMap[phrase.localLanguage] || 'en';
+                                utterance.rate = 0.8;
+                                
+                                const speakWithFemaleVoice = () => {
+                                  const voices = window.speechSynthesis.getVoices();
+                                  const langCode = utterance.lang.split('-')[0];
+                                  
+                                  // Female voice names to look for
+                                  const femaleNames = [
+                                    'female', 'woman', 'girl', 'samantha', 'victoria', 'karen', 'zira', 'hazel',
+                                    'lucia', 'mia', 'julie', 'helena', 'alice', 'claire', 'olivia', 'linda',
+                                    'emma', 'isabella', 'sara', 'amelie', 'audrey', 'juliette', 'virginie',
+                                    'marion', 'lea', 'chloe', 'sophie', 'camille', 'elena', 'ines', 'luciana',
+                                    'bianca', 'giulia', 'alessia', 'giovanna', 'marina', 'carla', 'sofia',
+                                    'laura', 'rosa', 'ana', 'carolina', 'gabriela', 'fernanda', 'juliana',
+                                    'patricia', 'monica', 'daniela', 'marcela', 'paola', 'valeria', 'veronica',
+                                    'viviana', 'yolanda', 'zulema', 'paulina', 'soledad', 'carmen', 'maria',
+                                    'eva', 'anna', 'susan', 'frau', 'mujer', 'dame', 'feminine'
+                                  ];
+                                  
+                                  // Try to find a female voice for the language
+                                  let femaleVoice = voices.find(v => 
+                                    v.lang.startsWith(langCode) && 
+                                    femaleNames.some(name => v.name.toLowerCase().includes(name))
+                                  );
+                                  
+                                  // If no female voice, try any voice for the language
+                                  if (!femaleVoice) {
+                                    femaleVoice = voices.find(v => v.lang.startsWith(langCode));
+                                  }
+                                  
+                                  // If still no voice, try English female voice
+                                  if (!femaleVoice) {
+                                    femaleVoice = voices.find(v => 
+                                      v.lang.startsWith('en') && 
+                                      femaleNames.some(name => v.name.toLowerCase().includes(name))
+                                    );
+                                  }
+                                  
+                                  // Final fallback: any English voice
+                                  if (!femaleVoice) {
+                                    femaleVoice = voices.find(v => v.lang.startsWith('en'));
+                                  }
+                                  
+                                  if (femaleVoice) {
+                                    utterance.voice = femaleVoice;
+                                  }
+                                  
+                                  window.speechSynthesis.speak(utterance);
+                                };
+                                
+                                // Check if voices are loaded
+                                if (window.speechSynthesis.getVoices().length === 0) {
+                                  window.speechSynthesis.onvoiceschanged = speakWithFemaleVoice;
+                                  window.speechSynthesis.getVoices();
+                                } else {
+                                  speakWithFemaleVoice();
+                                }
+                              }}
+                            >
+                              <Volume2 className="h-5 w-5 text-red-700" />
+                            </button>
+                          </div>
+                          <p className="text-red-600 text-xs mt-1">{phrase.localLanguage}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* Embassy section (no search) */}
+                <div className="mb-4">
+                  <h4 className="font-display text-red-800 mb-2">Embassy</h4>
+                  <div className="mt-2">
+                    {embassyList.map((embassy: any, idx: number) => (
+                      <div key={idx} className="mb-2">
+                        <a href={embassy.link} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">
+                          {embassy.name}
+                        </a>
+                        <span className="text-gray-700 text-sm"> — {embassy.address}, {embassy.phone}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Hospitals */}
+                {destination.healthSafety?.hospitals && destination.healthSafety.hospitals.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="font-display text-red-800 mb-2">Major Hospitals</h4>
+                    <ul className="space-y-1">
+                      {destination.healthSafety.hospitals.map((h: any, i: number) => (
+                        <li key={i}>
+                          {h.link ? (
+                            <a href={h.link} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{h.name}</a>
+                          ) : (
+                            <span className="font-medium">{h.name}</span>
+                          )}
+                          <span className="text-gray-700 text-sm"> — {h.address}, {h.phone}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {/* Pharmacies */}
+                {destination.healthSafety?.pharmacies && destination.healthSafety.pharmacies.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="font-display text-red-800 mb-2">24/7 Pharmacies</h4>
+                    <ul className="space-y-1">
+                      {destination.healthSafety.pharmacies.map((p: any, i: number) => (
+                        <li key={i}>
+                          {p.link ? (
+                            <a href={p.link} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{p.name}</a>
+                          ) : (
+                            <span className="font-medium">{p.name}</span>
+                          )}
+                          <span className="text-gray-700 text-sm"> — {p.address}, {p.phone} ({p.hours})</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {/* Support Resources */}
+                {destination.sexualHarassmentData?.supportResources && destination.sexualHarassmentData.supportResources.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="font-display text-red-800 mb-2">Support & Victim Resources</h4>
+                    <ul className="space-y-1">
+                      {destination.sexualHarassmentData.supportResources.map((r: string, i: number) => {
+                        const match = r.match(/(https?:\/\/[^ ,]+)/);
+                        return (
+                          <li key={i}>
+                            {match ? (
+                              <a href={match[1]} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{r.split(':')[0]}</a>
+                            ) : (
+                              <span className="font-medium">{r}</span>
+                            )}
+                            <span className="text-gray-700 text-sm"> {r.replace(/.*https?:\/\/[^ ,]+/, '')}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -617,37 +836,36 @@ const DestinationDetail: React.FC = () => {
                       safetySourceUrl={destination.safetySourceUrl}
                     />
                     <CulturalSensitivityTips dos={destination.culturalDos || []} donts={destination.culturalDonts || []} />
-                    <ConfidenceByActivity />
+                    <ConfidenceByActivity activities={destination.confidenceByActivity} />
                     <LanguageAndHelp languages={destination.languages} />
                     {/* --- END NEW DATA SECTIONS --- */}
 
-                    {/* Currency Information - moved to bottom */}
-                    <div>
-                      <h3 className="text-xl font-display text-gray-900 mb-4">
-                        Currency & Exchange
-                      </h3>
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <h4 className="font-display text-blue-900 mb-2">Local Currency</h4>
-                            <p className="text-blue-800">{destination.currency.name} ({destination.currency.code})</p>
-                          </div>
-                          <div>
-                            <h4 className="font-display text-blue-900 mb-2">Exchange Rates (1 {destination.currency.code})</h4>
-                            <div className="space-y-1 text-sm text-blue-800">
-                              <p>USD: {formatCurrency(1/destination.currency.exchangeRate.usd, 'USD')}</p>
-                              <p>EUR: {formatCurrency(1/destination.currency.exchangeRate.eur, 'EUR')}</p>
-                              <p>GBP: {formatCurrency(1/destination.currency.exchangeRate.gbp, 'GBP')}</p>
-                            </div>
-                          </div>
+                    {/* Currency & Exchange */}
+                    <h3 className="text-xl font-display text-gray-900 mb-4">Currency & Exchange</h3>
+                    <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-6">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                          <h4 className="font-bold text-blue-900 mb-1">Local Currency</h4>
+                          <div className="text-[12pt] text-blue-900">{destination.currency.name} ({destination.currency.code})</div>
                         </div>
                         <div>
-                          <h4 className="font-display text-blue-900 mb-2">Exchange Tips</h4>
-                          <ul className="text-sm text-blue-800 space-y-1">
-                            {destination.currency.scamWarnings.map((warning: string, index: number) => (
-                              <li key={index}>• {warning}</li>
-                            ))}
-                          </ul>
+                          <h4 className="font-bold text-blue-900 mb-1">Exchange Rates (1 {destination.currency.code})</h4>
+                          <div className="text-[12pt] text-blue-900">
+                            USD: ${destination.currency.exchangeRate.usd.toFixed(2)}<br />
+                            EUR: €{destination.currency.exchangeRate.eur.toFixed(2)}<br />
+                            GBP: £{destination.currency.exchangeRate.gbp.toFixed(2)}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-4">
+                        <h4 className="font-bold text-blue-900 mb-1">Exchange Tips</h4>
+                        <div className="text-[10pt] text-blue-800">
+                          {(() => {
+                            const tip = destination.usefulTips?.find((t: any) => t.title?.toLowerCase().includes('currency & exchange tips'));
+                            if (tip) return tip.description;
+                            if (destination.currency.scamWarnings && destination.currency.scamWarnings.length > 0) return destination.currency.scamWarnings[0];
+                            return null;
+                          })()}
                         </div>
                       </div>
                     </div>
@@ -663,10 +881,10 @@ const DestinationDetail: React.FC = () => {
                             <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
                               <div className="flex items-start justify-between">
                                 <div>
-                                  <h4 className={`font-semibold mb-1 text-green-900`}>
+                                  <h4 className="font-bold mb-1 text-green-900">
                                     {tip.title}
                                   </h4>
-                                  <p className={`text-sm text-green-800`}>
+                                  <p className="text-[12pt] text-green-800">
                                     {tip.description}
                                   </p>
                                 </div>
@@ -686,10 +904,10 @@ const DestinationDetail: React.FC = () => {
                               <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
                                 <div className="flex items-start justify-between">
                                   <div>
-                                    <h4 className={`font-semibold mb-1 text-green-900`}>
+                                    <h4 className="font-bold mb-1 text-green-900">
                                       {scam.title}
                                     </h4>
-                                    <p className={`text-sm text-green-800`}>
+                                    <p className="text-[12pt] text-green-800">
                                       {scam.description}
                                     </p>
                                   </div>
@@ -736,28 +954,35 @@ const DestinationDetail: React.FC = () => {
                     {/* Neighborhoods */}
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Neighborhood Safety</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="space-y-4">
                         <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
                           <h4 className="font-display text-green-900 mb-2">Safe Areas</h4>
-                          <ul className="text-sm text-green-800 space-y-1">
-                            {destination.neighborhoods.safe.map((area: string, index: number) => (
-                              <li key={index}>• {area}</li>
+                          <ul className="text-[12pt] text-green-800 space-y-4">
+                            {destination.neighborhoods.safe.map((area: any, index: number) => (
+                              typeof area === 'string' ? (
+                                <li key={index}><span className="font-bold">{area}</span></li>
+                              ) : (
+                                <li key={index}>
+                                  <span className="font-bold">{area.name}</span>
+                                  <div className="mt-1">{area.description}</div>
+                                </li>
+                              )
                             ))}
                           </ul>
                         </div>
                         <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                           <h4 className="font-display text-yellow-900 mb-2">Use Caution</h4>
-                          <ul className="text-sm text-yellow-800 space-y-1">
-                            {destination.neighborhoods.caution.map((area: string, index: number) => (
-                              <li key={index}>• {area}</li>
+                          <ul className="text-[12pt] text-yellow-800 space-y-2">
+                            {destination.neighborhoods.caution.map((area: string, idx: number) => (
+                              <li key={idx}>• {area}</li>
                             ))}
                           </ul>
                         </div>
                         <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                           <h4 className="font-display text-red-900 mb-2">Avoid</h4>
-                          <ul className="text-sm text-red-800 space-y-1">
-                            {destination.neighborhoods.avoid.map((area: string, index: number) => (
-                              <li key={index}>• {area}</li>
+                          <ul className="text-[12pt] text-red-800 space-y-2">
+                            {destination.neighborhoods.avoid.map((area: string, idx: number) => (
+                              <li key={idx}>• {area}</li>
                             ))}
                           </ul>
                         </div>
@@ -775,11 +1000,33 @@ const DestinationDetail: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                           <h4 className="font-display text-blue-900 mb-2">Clothing Recommendations</h4>
-                          <p className="text-sm text-blue-800">{destination.safetyTips.clothing}</p>
+                          {Array.isArray(destination.safetyTips.clothing) || (typeof destination.safetyTips.clothing === 'string' && destination.safetyTips.clothing.match(/[\n•]/)) ? (
+                            <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
+                              {(Array.isArray(destination.safetyTips.clothing)
+                                ? destination.safetyTips.clothing
+                                : destination.safetyTips.clothing.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
+                              ).map((item: string, idx: number) => (
+                                <li key={idx}>{item.trim()}</li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="text-sm text-blue-800">{destination.safetyTips.clothing}</p>
+                          )}
                         </div>
                         <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                           <h4 className="font-display text-purple-900 mb-2">First-Timer Tips</h4>
-                          <p className="text-sm text-purple-800">{destination.safetyTips.firstTimers}</p>
+                          {Array.isArray(destination.safetyTips.firstTimers) || (typeof destination.safetyTips.firstTimers === 'string' && destination.safetyTips.firstTimers.match(/[\n•]/)) ? (
+                            <ul className="text-sm text-purple-800 list-disc list-inside space-y-1">
+                              {(Array.isArray(destination.safetyTips.firstTimers)
+                                ? destination.safetyTips.firstTimers
+                                : destination.safetyTips.firstTimers.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
+                              ).map((item: string, idx: number) => (
+                                <li key={idx}>{item.trim()}</li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="text-sm text-purple-800">{destination.safetyTips.firstTimers}</p>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -787,24 +1034,52 @@ const DestinationDetail: React.FC = () => {
                     {/* Useful Apps */}
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Useful Apps</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {destination.safetyTips.apps.map((app: string, index: number) => (
-                          <span key={index} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">
-                            {app}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Emergency Phrases */}
-                    <div>
-                      <h3 className="text-xl font-display text-gray-900 mb-4">Emergency Phrases</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {destination.safetyTips.emergencyPhrases.map((phrase: string, index: number) => (
-                          <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
-                            <p className="text-red-800 font-medium">{phrase}</p>
-                          </div>
-                        ))}
+                        {destination.safetyTips.apps.map((app: string, index: number) => {
+                          const appLinkObj = destination.safetyTips.appLinks?.find((a: any) => a.name === app);
+                          let url = '';
+                          switch (app) {
+                            case 'GVB':
+                              url = 'https://www.gvb.nl/en';
+                              break;
+                            case '9292':
+                              url = 'https://9292.nl/en';
+                              break;
+                            case 'Google Maps':
+                              url = 'https://maps.google.com';
+                              break;
+                            case 'bSafe':
+                              url = 'https://getbsafe.com/';
+                              break;
+                            case 'Noonlight':
+                              url = 'https://www.noonlight.com/';
+                              break;
+                            default:
+                              url = appLinkObj?.link || appLinkObj?.ios;
+                          }
+                          return (
+                            <div key={index} className="p-3 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors">
+                              <div className="flex items-center justify-between mb-2">
+                                {url ? (
+                            <a
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                                    className="font-semibold text-gray-900 hover:text-blue-700 transition-colors flex items-center"
+                            >
+                              {app}
+                                    <ExternalLink className="h-3 w-3 ml-1" />
+                            </a>
+                          ) : (
+                                  <span className="font-semibold text-gray-900">{app}</span>
+                                )}
+                              </div>
+                              {appLinkObj?.description && (
+                                <p className="text-sm text-gray-600">{appLinkObj.description}</p>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
 
@@ -812,21 +1087,40 @@ const DestinationDetail: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
                       <div className="space-y-4">
+                        {/* Dress Code */}
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2">Dress Code</h4>
-                          <p className="text-gray-700">{destination.culturalExpectations.dressCode}</p>
-                        </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
-                          <ul className="text-gray-700 space-y-1">
-                            {destination.culturalExpectations.behaviorNorms.map((norm: string, index: number) => (
-                              <li key={index}>• {norm}</li>
+                          <ul className="text-gray-700 space-y-1 list-disc list-inside">
+                            {(Array.isArray(destination.culturalExpectations.dressCode)
+                              ? destination.culturalExpectations.dressCode
+                              : destination.culturalExpectations.dressCode.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
+                            ).map((item: string, idx: number) => (
+                              <li key={idx}>{item.trim()}</li>
                             ))}
                           </ul>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
+                          <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
+                          <ul className="text-gray-700 space-y-1 list-disc list-inside">
+                            {(Array.isArray(destination.culturalExpectations.behaviorNorms)
+                              ? destination.culturalExpectations.behaviorNorms
+                              : destination.culturalExpectations.behaviorNorms.split(/\n|,|•/).filter(Boolean)
+                            ).map((norm: string, index: number) => (
+                              <li key={index}>{norm.trim()}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        {/* Solo Women Perception */}
+                        <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2">Solo Women Perception</h4>
-                          <p className="text-gray-700">{destination.culturalExpectations.perception}</p>
+                          <ul className="text-gray-700 space-y-1 list-disc list-inside">
+                            {(Array.isArray(destination.culturalExpectations.perception)
+                              ? destination.culturalExpectations.perception
+                              : destination.culturalExpectations.perception.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
+                            ).map((item: string, idx: number) => (
+                              <li key={idx}>{item.trim()}</li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -953,7 +1247,18 @@ const DestinationDetail: React.FC = () => {
                       {destination.accommodations.map((accommodation: any, index: number) => (
                         <div key={index} className="p-4 bg-gray-50 rounded-lg">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-display text-gray-900">{accommodation.name}</h4>
+                            {accommodation.link ? (
+                              <a
+                                href={accommodation.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-display text-gray-900 hover:underline hover:text-blue-700 transition-colors"
+                              >
+                                <h4>{accommodation.name}</h4>
+                              </a>
+                            ) : (
+                              <h4 className="font-display text-gray-900">{accommodation.name}</h4>
+                            )}
                             <div className="flex items-center space-x-1">
                               {[1,2,3,4,5].map((star) => (
                                 <Star 

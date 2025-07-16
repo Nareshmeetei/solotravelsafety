@@ -117,6 +117,37 @@ const guatemalacity: Destination = {
       "Don't accept rides from strangers.",
       "Don't discuss politics in public."
     ],
+    womensConfidenceScore: {
+      score: 37.7, // Numbeo 2025 Safety Index for Guatemala City
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/quality-of-life/in/Guatemala-City"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 55,
+        source: 'Be My Travel Muse 2025',
+        sourceUrl: 'https://www.bemytravelmuse.com/solo-female-travel-in-central-america/'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 30,
+        source: 'Backpacker’s Blueprint 2025',
+        sourceUrl: 'https://www.backpackersblueprint.com/post/is-guatemala-safe-a-backpacker-s-guide-to-exploring-guatemala'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 40,
+        source: 'Be My Travel Muse 2025',
+        sourceUrl: 'https://www.bemytravelmuse.com/solo-female-travel-in-central-america/'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 60,
+        source: 'She Roams The Globe 2025',
+        sourceUrl: 'https://sheroamstheglobe.com/solo-female-travel-guatemala/'
+      }
+    ],
 };
 
 export default guatemalacity; 

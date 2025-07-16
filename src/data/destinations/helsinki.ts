@@ -115,6 +115,37 @@ const helsinki: Destination = {
       "Don't be loud on public transport.",
       "Don't accept unsolicited help with money or tickets."
     ],
+    womensConfidenceScore: {
+      score: 75.3, // Numbeo 2025 Safety Index for Helsinki
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/quality-of-life/in/Helsinki"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 95,
+        source: 'Solo Travel in Style Blog 2025',
+        sourceUrl: 'https://thesolotravelinstyleblog.com/helsinki-in-2-days/'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 85,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/finland/helsinki'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 97,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/finland/helsinki'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 93,
+        source: 'Solo Travel in Style Blog 2025',
+        sourceUrl: 'https://thesolotravelinstyleblog.com/helsinki-in-2-days/'
+      }
+    ],
 };
 
 export default helsinki;

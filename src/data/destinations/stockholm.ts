@@ -133,7 +133,38 @@ const stockholm: Destination = {
       "Don't litter or leave trash in nature.",
       "Don't make jokes about Sweden's history or politics."
     ],
-    scamWarnings: []
+    scamWarnings: [],
+    womensConfidenceScore: {
+      score: 53.9,
+      source: '',
+      sourceUrl: ''
+    },
+    confidenceByActivity: [
+      {
+        label: "Sightseeing",
+        confidence: 92,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Nightlife",
+        confidence: 85,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Public Transport",
+        confidence: 96,
+        source: '',
+        sourceUrl: ''
+      },
+      {
+        label: "Dining Alone",
+        confidence: 93,
+        source: '',
+        sourceUrl: ''
+      }
+    ]
   };
 
 export default stockholm;

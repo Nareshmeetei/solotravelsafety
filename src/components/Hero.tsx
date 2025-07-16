@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowRight, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { signUpSchema, validateAndSanitize } from '../lib/validation';
+import { sanitizeEmail, sanitizeName, containsMaliciousContent } from '../lib/sanitize';
 
 const Hero: React.FC = () => {
   const { signUp } = useAuth();
@@ -17,13 +19,31 @@ const Hero: React.FC = () => {
     setLoading(true);
     setError('');
     setSuccess('');
-    if (!fullName.trim()) {
-      setError('Full name is required');
-      setLoading(false);
-      return;
-    }
+
     try {
-      const { error } = await signUp(email, password, fullName);
+      // Validate and sanitize signup data
+      const signupData = {
+        email: sanitizeEmail(email),
+        password,
+        fullName: sanitizeName(fullName)
+      };
+
+      // Check for malicious content
+      if (containsMaliciousContent(email) || containsMaliciousContent(fullName)) {
+        setError('Invalid input detected. Please check your information and try again.');
+        setLoading(false);
+        return;
+      }
+
+      // Validate with Zod schema
+      const validation = validateAndSanitize(signUpSchema, signupData);
+      if (!validation.success) {
+        setError(validation.errors.join(', '));
+        setLoading(false);
+        return;
+      }
+
+      const { error } = await signUp(validation.data.email, validation.data.password, validation.data.fullName);
       if (error) {
         if (error.message.includes('User already registered') || error.message.includes('user_already_exists')) {
           setError('An account with this email already exists. Please sign in instead or use a different email address.');

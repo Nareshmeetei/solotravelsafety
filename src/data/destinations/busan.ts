@@ -54,7 +54,48 @@ const busan: Destination = {
       clothing: 'Dress modestly in temples and palaces. Casual wear is fine elsewhere.',
       firstTimers: 'Download KakaoMap and Subway Korea apps. Taxis are safe but traffic can be heavy.',
       apps: ['KakaoMap', 'Subway Korea', 'KakaoTalk'],
-      emergencyPhrases: ['도와주세요 (Help me)', '경찰을 불러주세요 (Call the police)']
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: '도와주세요!',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'Call the police!',
+          local: '경찰을 불러주세요!',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'I need a doctor.',
+          local: '의사가 필요합니다.',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'Where is the nearest hospital?',
+          local: '가장 가까운 병원이 어디인가요?',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'I am lost.',
+          local: '길을 잃었습니다.',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'Please leave me alone.',
+          local: '저를 혼자 두어 주세요.',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'I feel unsafe.',
+          local: '안전하지 않다고 느낍니다.',
+          localLanguage: 'Korean'
+        },
+        {
+          english: 'Can you help me?',
+          local: '도와주실 수 있나요?',
+          localLanguage: 'Korean'
+        }
+      ]
     },
     culturalExpectations: {
       dressCode: 'Modest dress in religious sites. Trendy, casual wear is common in the city.',
@@ -172,6 +213,37 @@ const busan: Destination = {
       "Don't leave shoes on in homes.",
       "Don't display valuables in markets.",
       "Don't ignore beach safety warnings."
+    ],
+    womensConfidenceScore: {
+      score: 75.8, // Numbeo 2025 Safety Index for Busan
+      source: "Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Busan"
+    },
+    confidenceByActivity: [
+      {
+        label: 'Sightseeing',
+        confidence: 92,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-korea'
+      },
+      {
+        label: 'Nightlife',
+        confidence: 80,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-korea'
+      },
+      {
+        label: 'Public Transport',
+        confidence: 95,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/south-korea'
+      },
+      {
+        label: 'Dining Alone',
+        confidence: 90,
+        source: 'Adventure to Every Country 2025',
+        sourceUrl: 'https://adventuretoeverycountry.com/guide-to-solo-travel-in-south-korea/'
+      }
     ],
 };
 

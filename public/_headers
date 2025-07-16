@@ -1,0 +1,98 @@
+# Security Headers for Solo Travel Safety App
+# These headers protect against XSS, clickjacking, MIME sniffing, and other attacks
+
+/*
+  # Content Security Policy (CSP)
+  # Prevents XSS attacks by controlling which resources can be loaded
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co https://api.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+
+  # X-Frame-Options
+  # Prevents clickjacking attacks by controlling iframe embedding
+  X-Frame-Options: DENY
+
+  # X-Content-Type-Options
+  # Prevents MIME sniffing attacks
+  X-Content-Type-Options: nosniff
+
+  # Referrer Policy
+  # Controls how much referrer information is sent with requests
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Permissions Policy
+  # Controls which browser features can be used
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+
+  # X-XSS-Protection (legacy, but still useful)
+  # Enables browser's built-in XSS protection
+  X-XSS-Protection: 1; mode=block
+
+  # Strict-Transport-Security (HSTS)
+  # Forces HTTPS connections
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Cross-Origin Embedder Policy
+  # Prevents cross-origin data leaks
+  Cross-Origin-Embedder-Policy: require-corp
+
+  # Cross-Origin Opener Policy
+  # Prevents cross-origin window manipulation
+  Cross-Origin-Opener-Policy: same-origin
+
+  # Cross-Origin Resource Policy
+  # Prevents cross-origin resource access
+  Cross-Origin-Resource-Policy: same-origin
+
+# Specific paths that need different CSP rules
+/api/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'
+
+/netlify/functions/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'
+
+# Allow Supabase auth callback to work properly
+/auth/callback
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://*.supabase.co; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'
+
+# Static assets (images, fonts, etc.)
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+*.gif
+  Cache-Control: public, max-age=31536000, immutable
+
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript and CSS files
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files (no caching to ensure fresh content)
+*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0 
