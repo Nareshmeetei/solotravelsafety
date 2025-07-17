@@ -1,7 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Moon, Bus, Users, Lightbulb, AlertTriangle } from 'lucide-react';
 import { destinations } from '../data/destinations';
+import { getFlagFallbackUrls } from '../lib/flag-utils';
+
+// Flag component with fallback handling
+const FlagImageWithFallback: React.FC<{ destination: any }> = ({ destination }) => {
+  const [imageError, setImageError] = useState(false);
+  const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
+  const fallbackUrls = getFlagFallbackUrls(destination.countryCode);
+
+  const handleImageError = () => {
+    if (currentUrlIndex < fallbackUrls.length - 1) {
+      setCurrentUrlIndex(prev => prev + 1);
+    } else {
+      setImageError(true);
+    }
+  };
+
+  if (imageError) {
+    return (
+      <div className="w-12 h-8 rounded-md overflow-hidden shadow-sm border border-gray-200 transition-transform duration-300 animate-pulse-soft bg-gray-200 flex items-center justify-center">
+        <div className="text-gray-500 text-xs font-medium">
+          {destination.countryCode.toUpperCase()}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-12 h-8 rounded-md overflow-hidden shadow-sm border border-gray-200 transition-transform duration-300 animate-pulse-soft">
+      <img 
+        src={fallbackUrls[currentUrlIndex]}
+        alt={`${destination.country} flag`}
+        className="w-full h-full object-cover"
+        loading="lazy"
+        onError={handleImageError}
+      />
+    </div>
+  );
+};
 
 const PopularDestinations: React.FC = () => {
   // Dynamic background color based on safety score with lighter hover states
@@ -78,14 +116,7 @@ const PopularDestinations: React.FC = () => {
               {/* Header */}
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-8 rounded-md overflow-hidden shadow-sm border border-gray-200 transition-transform duration-300 animate-pulse-soft">
-                    <img 
-                      src={`https://flagcdn.com/w80/${destination.countryCode}.png`}
-                      alt={`${destination.country} flag`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
+                  <FlagImageWithFallback destination={destination} />
                   <div>
                     <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
                       {destination.city}
