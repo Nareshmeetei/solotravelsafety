@@ -32,44 +32,8 @@ import ReviewModal from '../components/ReviewModal';
 import { getDestinationBySlug } from '../data/destinations';
 import { getReviewsForDestination } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
-import { getFlagFallbackUrls } from '../lib/flag-utils';
+import FlagImage from '../components/FlagImage';
 import SafetyByTimeOfDay from '../components/SafetyByTimeOfDay';
-
-// Flag component with fallback handling
-const FlagImageWithFallback: React.FC<{ destination: any; className?: string }> = ({ destination, className = "w-20 h-12 rounded-xl overflow-hidden shadow-sm border border-gray-200" }) => {
-  const [imageError, setImageError] = useState(false);
-  const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
-  const fallbackUrls = getFlagFallbackUrls(destination.countryCode);
-
-  const handleImageError = () => {
-    if (currentUrlIndex < fallbackUrls.length - 1) {
-      setCurrentUrlIndex(prev => prev + 1);
-    } else {
-      setImageError(true);
-    }
-  };
-
-  if (imageError) {
-    return (
-      <div className={`${className} bg-gray-200 flex items-center justify-center`}>
-        <div className="text-gray-500 text-sm font-medium">
-          {destination.countryCode.toUpperCase()}
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={className}>
-      <img 
-        src={fallbackUrls[currentUrlIndex]}
-        alt={`${destination.country} flag`}
-        className="w-full h-full object-cover"
-        onError={handleImageError}
-      />
-    </div>
-  );
-};
 import MostReportedRedFlags from '../components/MostReportedRedFlags';
 import CulturalSensitivityTips from '../components/CulturalSensitivityTips';
 import WomensConfidenceScore from '../components/WomensConfidenceScore';
@@ -454,7 +418,12 @@ const DestinationDetail: React.FC = () => {
           {/* Header */}
           <div className="mb-8">
             <div className="flex items-center space-x-4 mb-4">
-              <FlagImageWithFallback destination={destination} />
+              <FlagImage 
+                countryCode={destination.countryCode}
+                alt={`${destination.country} flag`}
+                size="lg"
+                className="rounded-xl"
+              />
               <div>
                 <h1 className="text-4xl font-display text-gray-900">{destination.city}</h1>
                 <p className="text-xl text-gray-600">{destination.country}</p>
