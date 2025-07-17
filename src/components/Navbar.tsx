@@ -14,8 +14,12 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
 
-  // Check if current page is a destination detail page
+  // Check if current page is a destination detail page, profile page, add destination page, or account settings page
   const isDestinationDetailPage = location.pathname.startsWith('/destination/');
+  const isProfilePage = location.pathname === '/profile';
+  const isAddDestinationPage = location.pathname === '/add-destination';
+  const isAccountSettingsPage = location.pathname === '/account-settings';
+  const shouldDisableFloatingNav = isDestinationDetailPage || isProfilePage || isAddDestinationPage || isAccountSettingsPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -195,8 +199,8 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Floating navbar that appears on scroll - DISABLED for destination detail pages */}
-      {!isDestinationDetailPage && (
+      {/* Floating navbar that appears on scroll - DISABLED for destination detail pages, profile page, add destination page, and account settings page */}
+      {!shouldDisableFloatingNav && (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled 
             ? 'translate-y-0 opacity-100' 

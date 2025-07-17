@@ -12,17 +12,17 @@ import {
 Sentry.init({
   dsn: 'https://07e4e0358624c871bd1a90d9bcf9d38f@o4509672197128192.ingest.us.sentry.io/4509672231206912',
   
-  // Performance monitoring
-  integrations: [
+  // Performance monitoring (disabled in development for faster loading)
+  integrations: import.meta.env.DEV ? [] : [
     Sentry.browserTracingIntegration(),
   ],
   
   // Set sampling rate for performance monitoring
-  tracesSampleRate: 0.1, // 10% of transactions will be sent to Sentry
+  tracesSampleRate: import.meta.env.DEV ? 0.0 : 0.1, // Disabled in dev
   
   // Set sampling rate for error monitoring
-  replaysSessionSampleRate: 0.1, // 10% of sessions will be recorded
-  replaysOnErrorSampleRate: 1.0, // 100% of sessions with errors will be recorded
+  replaysSessionSampleRate: import.meta.env.DEV ? 0.0 : 0.1, // Disabled in dev
+  replaysOnErrorSampleRate: import.meta.env.DEV ? 0.0 : 1.0, // Disabled in dev
   
   // Environment configuration
   environment: import.meta.env.MODE || 'development',

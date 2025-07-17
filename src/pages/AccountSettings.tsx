@@ -24,6 +24,7 @@ import { useSessionManagement } from '../hooks/useSessionManagement';
 import { supabase, uploadProfileImage, ensureProfileExists } from '../lib/supabase';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PasswordStrengthIndicator from '../components/PasswordStrengthIndicator';
 
 const AccountSettings: React.FC = () => {
   const { user, signOut } = useAuth();
@@ -353,8 +354,32 @@ const AccountSettings: React.FC = () => {
       return;
     }
 
-    if (passwordForm.newPassword.length < 6) {
-      setError('New password must be at least 6 characters long');
+    if (passwordForm.newPassword.length < 8) {
+      setError('New password must be at least 8 characters long');
+      return;
+    }
+
+    // Check for uppercase letter
+    if (!/[A-Z]/.test(passwordForm.newPassword)) {
+      setError('New password must contain at least one uppercase letter (A-Z)');
+      return;
+    }
+
+    // Check for lowercase letter
+    if (!/[a-z]/.test(passwordForm.newPassword)) {
+      setError('New password must contain at least one lowercase letter (a-z)');
+      return;
+    }
+
+    // Check for number
+    if (!/\d/.test(passwordForm.newPassword)) {
+      setError('New password must contain at least one number (0-9)');
+      return;
+    }
+
+    // Check for special character
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(passwordForm.newPassword)) {
+      setError('New password must contain at least one special character (!@#$%^&*)');
       return;
     }
 
@@ -693,6 +718,12 @@ const AccountSettings: React.FC = () => {
                             {showPasswords.new ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                           </button>
                         </div>
+                        {passwordForm.newPassword.length > 0 && (
+                          <PasswordStrengthIndicator 
+                            password={passwordForm.newPassword} 
+                            className="mt-3" 
+                          />
+                        )}
                       </div>
 
                       <div>

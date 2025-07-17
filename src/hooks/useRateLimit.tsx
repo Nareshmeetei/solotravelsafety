@@ -111,8 +111,8 @@ export const useSensitiveRateLimit = () => useRateLimit('sensitive')
 
 // Rate limit error component
 interface RateLimitErrorProps {
-  retryAfter: number;
-  onRetry?: () => void;
+  retryAfter: number
+  onRetry?: () => void
 }
 
 export const RateLimitError: React.FC<RateLimitErrorProps> = ({ 

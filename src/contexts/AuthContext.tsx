@@ -7,7 +7,7 @@ interface AuthContextType {
   user: User | null
   loading: boolean
   session: Session | null
-  signUp: (email: string, password: string, fullName: string) => Promise<{ data?: any; error: any }>
+  signUp: (email: string, password: string, fullName?: string) => Promise<{ data?: any; error: any }>
   signIn: (email: string, password: string, rememberMe?: boolean) => Promise<{ error: any }>
   signOut: () => Promise<void>
   isSessionPersistent: boolean
@@ -30,10 +30,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isSessionPersistent, setIsSessionPersistent] = useState(false)
 
   useEffect(() => {
-    // Get initial session with enhanced error handling
+    // Get initial session with enhanced error handling and timeout
     const getInitialSession = async () => {
       try {
-        const { data: { session }, error } = await supabase.auth.getSession()
+        // Add timeout to prevent hanging
+        const timeoutPromise = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Session check timeout')), 5000)
+        );
+        
+        const sessionPromise = supabase.auth.getSession();
+        const { data: { session }, error } = await Promise.race([sessionPromise, timeoutPromise]) as any;
         
         if (error) {
           console.error('Error getting initial session:', error)
@@ -58,8 +64,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             username: session.user.user_metadata?.full_name || undefined,
           })
           addBreadcrumb('User authenticated', 'auth', { userId: session.user.id })
-          // Ensure profile exists for authenticated user
-          await ensureProfileExists(session.user.id, session.user)
+          // Ensure profile exists for authenticated user (non-blocking)
+          ensureProfileExists(session.user.id, session.user).catch(console.error)
         } else {
           setUser(null)
           setSession(null)
@@ -69,6 +75,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setLoading(false)
       } catch (error) {
         console.error('Error in getInitialSession:', error)
+        // Fallback: set loading to false even if Supabase fails
         setUser(null)
         setSession(null)
         setLoading(false)
@@ -108,8 +115,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 username: session.user.user_metadata?.full_name || undefined,
               })
               addBreadcrumb('User signed in', 'auth', { userId: session.user.id })
-              // Ensure profile exists for newly signed in user
-              await ensureProfileExists(session.user.id, session.user)
+              // Ensure profile exists for newly signed in user (non-blocking)
+              ensureProfileExists(session.user.id, session.user).catch(console.error)
             } else {
               setUser(null)
               setSession(null)
@@ -134,8 +141,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             if (session?.user && session.user.email_confirmed_at) {
               setUser(session.user)
               setSession(session)
-              // Ensure profile exists when email gets confirmed
-              await ensureProfileExists(session.user.id, session.user)
+              // Ensure profile exists when email gets confirmed (non-blocking)
+              ensureProfileExists(session.user.id, session.user).catch(console.error)
             } else {
               setUser(null)
               setSession(null)
@@ -166,14 +173,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return () => subscription.unsubscribe()
   }, [])
 
-  const signUp = async (email: string, password: string, fullName: string) => {
+  const signUp = async (email: string, password: string, fullName?: string) => {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         emailRedirectTo: `${window.location.origin}/auth/callback`,
         data: {
-          full_name: fullName,
+          full_name: fullName || '',
         }
       }
     })

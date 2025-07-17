@@ -23,7 +23,9 @@ import {
   Compass,
   PenTool,
   LogOut,
-  X
+  X,
+  Feather,
+  FileText
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase, uploadProfileImage, getUserDestinations, getUserReviews } from '../lib/supabase';
@@ -31,6 +33,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ReviewModal from '../components/ReviewModal';
+import ChirpModal from '../components/ChirpModal';
+import ChirpCard from '../components/ChirpCard';
 import UserAvatar from '../components/UserAvatar';
 
 const Profile: React.FC = () => {
@@ -38,9 +42,11 @@ const Profile: React.FC = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('activity');
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [showChirpModal, setShowChirpModal] = useState(false);
   const [userReviews, setUserReviews] = useState<any[]>([]);
   const [userDestinations, setUserDestinations] = useState<any[]>([]);
   const [allPosts, setAllPosts] = useState<any[]>([]);
+  const [userChirps, setUserChirps] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [uploadingImage, setUploadingImage] = useState(false);
   const [userProfile, setUserProfile] = useState<any>(null);
@@ -51,6 +57,7 @@ const Profile: React.FC = () => {
       loadUserData();
       loadUserProfile();
       loadAllPosts();
+      loadUserChirps();
     }
   }, [user]);
 
@@ -227,6 +234,163 @@ const Profile: React.FC = () => {
     }
   };
 
+  const loadUserChirps = async () => {
+    if (!user) return;
+    
+    try {
+      // Try to load from database first
+      const { data: chirps, error } = await supabase
+        .from('chirps')
+        .select(`
+          *,
+          user:profiles!chirps_user_id_fkey(
+            id,
+            full_name,
+            avatar_url,
+            email
+          )
+        `)
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.warn('Database load failed, using demo mode:', error);
+        // Load from localStorage and sessionStorage
+        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+        
+        // Merge and deduplicate chirps by ID
+        const allChirps = [...localChirps, ...sessionChirps];
+        const uniqueChirps = allChirps.filter((chirp: any, index: number, self: any[]) => 
+          index === self.findIndex((c: any) => c.id === chirp.id)
+        );
+        
+        const userChirps = uniqueChirps.filter((chirp: any) => chirp.user_id === user.id);
+        
+        // Sort by created_at (newest first)
+        userChirps.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+        
+        console.log('Loaded chirps from storage:', {
+          localChirps: localChirps.length,
+          sessionChirps: sessionChirps.length,
+          allChirps: allChirps.length,
+          uniqueChirps: uniqueChirps.length,
+          userChirps: userChirps.length,
+          userChirpsData: userChirps
+        });
+        
+        // Add demo chirps if no user chirps exist
+        if (userChirps.length === 0) {
+          const demoChirps = [
+            {
+              id: 'demo-1',
+              user_id: user.id,
+              content: 'Just arrived in Tokyo! The metro system is incredible and I feel so safe walking around. The locals are incredibly helpful when you look lost. 🌸 #SoloTravel #Tokyo',
+              images: ['https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400'],
+              likes_count: 12,
+              comments_count: 3,
+              rechirps_count: 2,
+              created_at: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
+              user: {
+                id: user.id,
+                full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+                avatar_url: user.user_metadata?.avatar_url,
+                email: user.email
+              }
+            },
+            {
+              id: 'demo-2',
+              user_id: user.id,
+              content: 'Pro tip: Always trust your gut when traveling solo. If a situation feels off, don\'t hesitate to leave. Your safety comes first! 💪 #SoloTravelTips #SafetyFirst',
+              images: [],
+              likes_count: 8,
+              comments_count: 1,
+              rechirps_count: 0,
+              created_at: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(), // 5 hours ago
+              user: {
+                id: user.id,
+                full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+                avatar_url: user.user_metadata?.avatar_url,
+                email: user.email
+              }
+            }
+          ];
+          setUserChirps(demoChirps);
+        } else {
+          setUserChirps(userChirps);
+        }
+      } else {
+        setUserChirps(chirps || []);
+      }
+    } catch (error) {
+      console.warn('Database error, using demo mode:', error);
+      // Load from localStorage and sessionStorage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      
+      // Merge and deduplicate chirps by ID
+      const allChirps = [...localChirps, ...sessionChirps];
+      const uniqueChirps = allChirps.filter((chirp: any, index: number, self: any[]) => 
+        index === self.findIndex((c: any) => c.id === chirp.id)
+      );
+      
+      const userChirps = uniqueChirps.filter((chirp: any) => chirp.user_id === user.id);
+      
+      // Sort by created_at (newest first)
+      userChirps.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+      
+      console.log('Loaded chirps from storage (catch block):', {
+        localChirps: localChirps.length,
+        sessionChirps: sessionChirps.length,
+        allChirps: allChirps.length,
+        uniqueChirps: uniqueChirps.length,
+        userChirps: userChirps.length,
+        userChirpsData: userChirps
+      });
+      
+      // Add demo chirps if no user chirps exist
+      if (userChirps.length === 0) {
+        const demoChirps = [
+          {
+            id: 'demo-1',
+            user_id: user.id,
+            content: 'Just arrived in Tokyo! The metro system is incredible and I feel so safe walking around. The locals are incredibly helpful when you look lost. 🌸 #SoloTravel #Tokyo',
+            images: ['https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400'],
+            likes_count: 12,
+            comments_count: 3,
+            rechirps_count: 2,
+            created_at: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
+            user: {
+              id: user.id,
+              full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+              avatar_url: user.user_metadata?.avatar_url,
+              email: user.email
+            }
+          },
+          {
+            id: 'demo-2',
+            user_id: user.id,
+            content: 'Pro tip: Always trust your gut when traveling solo. If a situation feels off, don\'t hesitate to leave. Your safety comes first! 💪 #SoloTravelTips #SafetyFirst',
+            images: [],
+            likes_count: 8,
+            comments_count: 1,
+            rechirps_count: 0,
+            created_at: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(), // 5 hours ago
+            user: {
+              id: user.id,
+              full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+              avatar_url: user.user_metadata?.avatar_url,
+              email: user.email
+            }
+          }
+        ];
+        setUserChirps(demoChirps);
+      } else {
+        setUserChirps(userChirps);
+      }
+    }
+  };
+
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file || !user) return;
@@ -316,6 +480,41 @@ const Profile: React.FC = () => {
 
   const getTotalContributions = () => {
     return userReviews.length + userDestinations.length;
+  };
+
+  const getProfileCompletionPercentage = () => {
+    if (!user) return 0;
+    
+    let completedFields = 0;
+    const totalFields = 5; // avatar, full_name, location, bio, contributions
+
+    // Check avatar
+    if (getUserAvatar()) completedFields++;
+    
+    // Check full name
+    if (userProfile?.full_name || user.user_metadata?.full_name) completedFields++;
+    
+    // Check location
+    if (userProfile?.location) completedFields++;
+    
+    // Check bio
+    if (userProfile?.bio) completedFields++;
+    
+    // Check contributions (at least one review or destination)
+    if (getTotalContributions() > 0) completedFields++;
+
+    // Debug logging
+    console.log('Profile completion check:', {
+      avatar: !!getUserAvatar(),
+      fullName: !!(userProfile?.full_name || user.user_metadata?.full_name),
+      location: !!userProfile?.location,
+      bio: !!userProfile?.bio,
+      contributions: getTotalContributions() > 0,
+      completedFields,
+      totalFields
+    });
+
+    return Math.round((completedFields / totalFields) * 100);
   };
 
   const handleReviewSubmitted = () => {
@@ -427,12 +626,61 @@ const Profile: React.FC = () => {
                     <p className="text-sm text-gray-700">{userProfile.bio}</p>
                   </div>
                 )}
+
+                {/* Profile Completion Progress */}
+                <div className="mt-4 p-4 bg-gradient-to-r from-red-50 to-pink-50 rounded-lg border border-red-100">
+                  <div className="mb-2">
+                    <h4 className="text-sm font-medium text-gray-700 mb-1">Your wings aren't fully open yet.</h4>
+                    <span className="text-sm font-bold text-red-600">{getProfileCompletionPercentage()}% completed</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
+                    <div 
+                      className="bg-gradient-to-r from-red-400 to-pink-400 h-2 rounded-full transition-all duration-500 ease-out"
+                      style={{ width: `${getProfileCompletionPercentage()}%` }}
+                    />
+                  </div>
+                  
+                  {/* Missing Requirements */}
+                  {getProfileCompletionPercentage() < 100 ? (
+                    <div className="mb-3 text-xs text-gray-600">
+                      <p className="font-medium mb-1">To complete your profile:</p>
+                      <ul className="space-y-1">
+                        {!getUserAvatar() && <li>• Add a profile picture</li>}
+                        {!(userProfile?.full_name || user.user_metadata?.full_name) && <li>• Add your full name</li>}
+                        {!userProfile?.location && <li>• Add your location</li>}
+                        {!userProfile?.bio && <li>• Add a bio</li>}
+                        {getTotalContributions() === 0 && <li>• Write a safety review or add a destination</li>}
+                      </ul>
+                    </div>
+                  ) : (
+                    <div className="mb-3 text-xs text-green-600">
+                      <p className="font-medium">🎉 Your profile is complete!</p>
+                    </div>
+                  )}
+                  
+                  <Link 
+                    to="/account-settings"
+                    className="inline-flex items-center space-x-2 text-sm font-medium text-red-600 hover:text-red-700 transition-colors duration-300"
+                  >
+                    <span>Complete your profile to fly free.</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
 
               {/* Quick Actions */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
                 <h3 className="text-lg font-display text-gray-900 mb-4">Quick Actions</h3>
                 <div className="space-y-3">
+                  <button 
+                    onClick={() => setShowReviewModal(true)}
+                    className="w-full flex items-center space-x-3 p-3 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors duration-300 border border-primary-200"
+                  >
+                    <Feather className="h-5 w-5" />
+                    <span className="font-medium">Write Safety Review</span>
+                  </button>
                   <Link 
                     to="/add-destination"
                     className="w-full flex items-center space-x-3 p-3 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors duration-300"
@@ -461,7 +709,7 @@ const Profile: React.FC = () => {
             {/* Main Content Area */}
             <div className="lg:col-span-2">
               
-              {/* Tab Navigation with Write Review Button */}
+              {/* Tab Navigation */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 mb-6">
                 <div className="flex items-center justify-between px-6">
                   <div className="flex space-x-8 overflow-x-auto">
@@ -481,14 +729,13 @@ const Profile: React.FC = () => {
                     ))}
                   </div>
                   
-                  {/* Write Safety Review Button */}
+                  {/* Chirp Button */}
                   <button 
-                    onClick={() => setShowReviewModal(true)}
-                    className="flex items-center space-x-2 px-4 py-2 bg-primary-400 hover:bg-primary-500 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] flex-shrink-0"
+                    onClick={() => setShowChirpModal(true)}
+                    className="px-8 py-2 bg-primary-400 text-white rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300 flex items-center space-x-2"
                   >
-                    <PenTool className="h-4 w-4" />
-                    <span className="hidden sm:inline">Write Safety Review</span>
-                    <span className="sm:hidden">Review</span>
+                    <Plus className="h-4 w-4" />
+                    <span>Chirp</span>
                   </button>
                 </div>
               </div>
@@ -501,139 +748,28 @@ const Profile: React.FC = () => {
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400 mx-auto mb-4"></div>
                       <p className="text-gray-600">Loading your activity...</p>
                     </div>
-                  ) : userReviews.length > 0 ? (
-                    userReviews.map((review, index) => (
-                      <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
-                        <div className="flex items-start space-x-4">
-                          <UserAvatar user={{ ...user, ...userProfile }} size="md" />
-                          <div className="flex-1">
-                            <div className="flex items-center justify-between mb-3">
-                              <div>
-                                <span className="font-semibold text-gray-900">
-                                  {userProfile?.full_name || user.user_metadata?.full_name || 'You'}
-                                </span>
-                                <span className="text-gray-600 ml-2">wrote a safety review</span>
-                                <div className="text-sm text-gray-500 mt-1">{review.created_at}</div>
-                              </div>
-                              <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300">
-                                <MoreHorizontal className="h-5 w-5 text-gray-400" />
-                              </button>
-                            </div>
-
-                            {/* Review Content */}
-                            <div className="mb-4">
-                              <div className="flex items-center space-x-4 mb-3">
-                                <div className="flex items-center space-x-2">
-                                  <Shield className="h-4 w-4 text-primary-400" />
-                                  <span className="text-sm font-medium">Overall Safety:</span>
-                                  <div className="flex space-x-1">
-                                    {[1,2,3,4,5].map((star) => (
-                                      <Star 
-                                        key={star} 
-                                        className={`h-4 w-4 ${star <= review.overall_rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
-                                      />
-                                    ))}
-                                  </div>
-                                </div>
-                                <div className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                                  review.harassment_level === 'low' ? 'bg-green-100 text-green-800' :
-                                  review.harassment_level === 'medium' ? 'bg-yellow-100 text-yellow-800' :
-                                  'bg-red-100 text-red-800'
-                                }`}>
-                                  {review.harassment_level.toUpperCase()} HARASSMENT
-                                </div>
-                              </div>
-                              
-                              <h4 className="font-display text-gray-900 mb-2">
-                                {review.destination_city}, {review.destination_country} - Solo Female Travel Experience
-                              </h4>
-                              <p className="text-gray-700 mb-3">
-                                "{review.review_text}"
-                              </p>
-                              <div className="text-sm text-gray-600 mb-3">
-                                Visited: {review.visited_date}
-                              </div>
-
-                              {/* Safety Breakdown */}
-                              <div className="grid grid-cols-3 gap-4 p-4 bg-gray-50 rounded-lg mb-4">
-                                <div className="text-center">
-                                  <div className="flex items-center justify-center space-x-1 mb-1">
-                                    <Moon className="h-4 w-4 text-blue-500" />
-                                    <span className="text-xs font-medium">Night Safety</span>
-                                  </div>
-                                  <div className="text-lg font-bold text-gray-900">{review.night_safety_rating}/5</div>
-                                </div>
-                                <div className="text-center">
-                                  <div className="flex items-center justify-center space-x-1 mb-1">
-                                    <Users className="h-4 w-4 text-green-500" />
-                                    <span className="text-xs font-medium">Walking Alone</span>
-                                  </div>
-                                  <div className="text-lg font-bold text-gray-900">{review.walking_alone_rating}/5</div>
-                                </div>
-                                <div className="text-center">
-                                  <div className="flex items-center justify-center space-x-1 mb-1">
-                                    <MapPin className="h-4 w-4 text-purple-500" />
-                                    <span className="text-xs font-medium">Public Transit</span>
-                                  </div>
-                                  <div className="text-lg font-bold text-gray-900">{review.public_transit_rating}/5</div>
-                                </div>
-                              </div>
-
-                              {/* Tags */}
-                              {review.tags && review.tags.length > 0 && (
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                  {review.tags.map((tag: string, tagIndex: number) => (
-                                    <span 
-                                      key={tagIndex} 
-                                      className={`px-3 py-1 text-sm rounded-full ${
-                                        tag.includes('warning') || tag.includes('pushy') ? 'bg-red-100 text-red-800' :
-                                        tag.includes('safe') || tag.includes('helpful') || tag.includes('friendly') ? 'bg-green-100 text-green-800' :
-                                        tag.includes('transport') ? 'bg-blue-100 text-blue-800' :
-                                        'bg-gray-100 text-gray-800'
-                                      }`}
-                                    >
-                                      {tag}
-                                    </span>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-
-                            {/* Actions */}
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-6 text-sm text-gray-600">
-                                <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
-                                  <ThumbsUp className="h-4 w-4" />
-                                  <span>Helpful ({review.helpful_count})</span>
-                                </button>
-                                <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
-                                  <Bookmark className="h-4 w-4" />
-                                  <span>Save</span>
-                                </button>
-                                <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
-                                  <Share className="h-4 w-4" />
-                                  <span>Share</span>
-                                </button>
-                              </div>
-                              <div className="text-sm text-gray-500">
-                                Helped {review.helpful_count} travelers
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  ) : userChirps.length > 0 ? (
+                    userChirps.map((chirp, index) => (
+                      <ChirpCard 
+                        key={chirp.id} 
+                        chirp={chirp} 
+                        onChirpDeleted={loadUserChirps}
+                      />
                     ))
                   ) : (
                     <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-200 text-center">
                       <Shield className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                       <h3 className="text-lg font-display text-gray-900 mb-2">Share Your Safety Experience</h3>
                       <p className="text-gray-600 mb-6">Help other solo female travelers by sharing your safety insights and experiences.</p>
+                      <div className="flex justify-center">
                       <button 
-                        onClick={() => setShowReviewModal(true)}
-                        className="px-6 py-3 bg-primary-400 text-white rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300"
+                          onClick={() => setShowChirpModal(true)}
+                          className="px-6 py-3 bg-primary-400 text-white rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300 flex items-center space-x-2"
                       >
-                        Write Your First Safety Review
+                          <Plus className="h-5 w-5" />
+                          <span>Chirp</span>
                       </button>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -931,6 +1067,16 @@ const Profile: React.FC = () => {
         isOpen={showReviewModal}
         onClose={() => setShowReviewModal(false)}
         onReviewSubmitted={handleReviewSubmitted}
+      />
+
+      {/* Chirp Modal */}
+      <ChirpModal 
+        isOpen={showChirpModal}
+        onClose={() => setShowChirpModal(false)}
+        onChirpPosted={() => {
+          console.log('onChirpPosted callback triggered');
+          loadUserChirps();
+        }}
       />
 
       <Footer />

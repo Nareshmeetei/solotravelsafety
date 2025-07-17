@@ -3,10 +3,11 @@ import { ArrowRight, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext';
 import { signUpSchema, validateAndSanitize } from '../lib/validation';
 import { sanitizeEmail, sanitizeName, containsMaliciousContent } from '../lib/sanitize';
+import { getAuthErrorMessage, getValidationErrorMessage, logError } from '../lib/error-handling';
+import PasswordStrengthIndicator from './PasswordStrengthIndicator';
 
 const Hero: React.FC = () => {
   const { signUp } = useAuth();
-  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -24,13 +25,12 @@ const Hero: React.FC = () => {
       // Validate and sanitize signup data
       const signupData = {
         email: sanitizeEmail(email),
-        password,
-        fullName: sanitizeName(fullName)
+        password
       };
 
       // Check for malicious content
-      if (containsMaliciousContent(email) || containsMaliciousContent(fullName)) {
-        setError('Invalid input detected. Please check your information and try again.');
+      if (containsMaliciousContent(email)) {
+        setError('Invalid characters detected. Please use only letters, numbers, and common symbols.');
         setLoading(false);
         return;
       }
@@ -38,26 +38,23 @@ const Hero: React.FC = () => {
       // Validate with Zod schema
       const validation = validateAndSanitize(signUpSchema, signupData);
       if (!validation.success) {
-        setError(validation.errors.join(', '));
+        setError(getValidationErrorMessage(validation.errors));
         setLoading(false);
         return;
       }
 
-      const { error } = await signUp(validation.data.email, validation.data.password, validation.data.fullName);
+      const { error } = await signUp(validation.data.email, validation.data.password);
       if (error) {
-        if (error.message.includes('User already registered') || error.message.includes('user_already_exists')) {
-          setError('An account with this email already exists. Please sign in instead or use a different email address.');
-        } else {
-          setError(error.message);
-        }
+        logError(error, 'Hero SignUp');
+        setError(getAuthErrorMessage(error, 'signUp'));
       } else {
         setSuccess('Please check your email and click the confirmation link to complete your registration.');
-        setFullName('');
         setEmail('');
         setPassword('');
       }
     } catch (err) {
-      setError('An unexpected error occurred');
+      logError(err, 'Hero General');
+      setError('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -104,18 +101,6 @@ const Hero: React.FC = () => {
               </div>
             )}
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-              <input
-                type="text"
-                value={fullName}
-                onChange={e => setFullName(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-gray-900 placeholder-gray-400 transition-all duration-300"
-                placeholder="Your full name"
-                required
-                style={{ backgroundColor: '#FFF3F8' }}
-              />
-            </div>
-            <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
               <input
                 type="email"
@@ -148,6 +133,12 @@ const Hero: React.FC = () => {
                   {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                 </button>
               </div>
+              {password.length > 0 && (
+                <PasswordStrengthIndicator 
+                  password={password} 
+                  className="mt-3" 
+                />
+              )}
             </div>
             <button
               type="submit"

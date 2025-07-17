@@ -4,9 +4,12 @@ import { z } from 'zod'
 export const emailSchema = z.string().email('Please enter a valid email address')
 
 export const passwordSchema = z.string()
-  .min(6, 'Password must be at least 6 characters long')
+  .min(8, 'Password must be at least 8 characters long')
   .max(128, 'Password must be less than 128 characters')
-  .regex(/^(?=.*[a-zA-Z])/, 'Password must contain at least one letter')
+  .regex(/^(?=.*[a-z])/, 'Password must contain at least one lowercase letter')
+  .regex(/^(?=.*[A-Z])/, 'Password must contain at least one uppercase letter')
+  .regex(/^(?=.*\d)/, 'Password must contain at least one number')
+  .regex(/^(?=.*[!@#$%^&*(),.?":{}|<>])/, 'Password must contain at least one special character (!@#$%^&*)')
 
 export const nameSchema = z.string()
   .min(1, 'Name is required')
@@ -49,9 +52,10 @@ export const reviewSchema = z.object({
     .min(1, 'Rating must be at least 1')
     .max(5, 'Rating must be at most 5'),
   
-  harassment_level: z.enum(['low', 'medium', 'high'], {
-    errorMap: () => ({ message: 'Harassment level must be low, medium, or high' })
-  }),
+  harassment_level: z.enum(['low', 'medium', 'high']).refine(
+    (val) => ['low', 'medium', 'high'].includes(val),
+    { message: 'Harassment level must be low, medium, or high' }
+  ),
   
   review_text: z.string()
     .min(10, 'Review must be at least 10 characters long')
@@ -86,9 +90,10 @@ export const userDestinationSchema = z.object({
     .max(100, 'Country name must be less than 100 characters')
     .regex(/^[a-zA-Z\s\-'\.]+$/, 'Country name can only contain letters, spaces, hyphens, apostrophes, and periods'),
   
-  continent: z.enum(['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Australia', 'Antarctica'], {
-    errorMap: () => ({ message: 'Please select a valid continent' })
-  }),
+  continent: z.enum(['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Australia', 'Antarctica']).refine(
+    (val) => ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Australia', 'Antarctica'].includes(val),
+    { message: 'Please select a valid continent' }
+  ),
   
   country_code: z.string()
     .length(2, 'Country code must be exactly 2 characters')
@@ -109,7 +114,7 @@ export const newsletterSignupSchema = z.object({
 export const signUpSchema = z.object({
   email: emailSchema,
   password: passwordSchema,
-  fullName: nameSchema
+  fullName: nameSchema.optional()
 })
 
 export const signInSchema = z.object({
@@ -135,7 +140,7 @@ export const validateAndSanitize = <T>(
     return { success: true, data: validatedData }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      const errors = error.errors.map(err => err.message)
+      const errors = error.issues.map(issue => issue.message)
       return { success: false, errors }
     }
     return { success: false, errors: ['Validation failed'] }

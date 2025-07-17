@@ -7,6 +7,8 @@ import { signUpSchema, signInSchema, validateAndSanitize } from '../lib/validati
 import { sanitizeEmail, sanitizeName, containsMaliciousContent } from '../lib/sanitize'
 import { useAuthRateLimit } from '../hooks/useRateLimit'
 import { AuthRateLimitStatus } from './RateLimitStatus'
+import { getAuthErrorMessage, getValidationErrorMessage, logError } from '../lib/error-handling'
+import PasswordStrengthIndicator from './PasswordStrengthIndicator'
 
 interface AuthModalProps {
   isOpen: boolean
@@ -18,7 +20,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
   const [mode, setMode] = useState<'signin' | 'signup' | 'confirm-email'>(initialMode)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [fullName, setFullName] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -55,13 +56,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
         // Validate and sanitize signup data
         const signupData = {
           email: sanitizeEmail(email),
-          password,
-          fullName: sanitizeName(fullName)
+          password
         }
 
         // Check for malicious content
-        if (containsMaliciousContent(email) || containsMaliciousContent(fullName)) {
-          setError('Invalid input detected. Please check your information and try again.')
+        if (containsMaliciousContent(email)) {
+          setError('Invalid characters detected. Please use only letters, numbers, and common symbols.')
           setLoading(false)
           return
         }
@@ -69,19 +69,15 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
         // Validate with Zod schema
         const validation = validateAndSanitize(signUpSchema, signupData)
         if (!validation.success) {
-          setError(validation.errors.join(', '))
+          setError(getValidationErrorMessage(validation.errors))
           setLoading(false)
           return
         }
 
-        const { data, error } = await signUp(validation.data.email, validation.data.password, validation.data.fullName)
+        const { data, error } = await signUp(validation.data.email, validation.data.password)
         if (error) {
-          // Handle specific error cases with user-friendly messages
-          if (error.message.includes('User already registered') || error.message.includes('user_already_exists')) {
-            setError('An account with this email already exists. Please sign in instead or use a different email address.')
-          } else {
-            setError(error.message)
-          }
+          logError(error, 'AuthModal SignUp')
+          setError(getAuthErrorMessage(error, 'signUp'))
         } else {
           // Always show email confirmation screen after signup
           setMode('confirm-email')
@@ -96,7 +92,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
 
         // Check for malicious content
         if (containsMaliciousContent(email)) {
-          setError('Invalid input detected. Please check your information and try again.')
+          setError('Invalid characters detected. Please use only letters, numbers, and common symbols.')
           setLoading(false)
           return
         }
@@ -104,20 +100,22 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
         // Validate with Zod schema
         const validation = validateAndSanitize(signInSchema, signinData)
         if (!validation.success) {
-          setError(validation.errors.join(', '))
+          setError(getValidationErrorMessage(validation.errors))
           setLoading(false)
           return
         }
 
         const { error } = await signIn(validation.data.email, validation.data.password, rememberMe)
         if (error) {
+          logError(error, 'AuthModal SignIn')
+          const errorMessage = getAuthErrorMessage(error, 'signIn')
+          
+          // Handle email confirmation case
           if (error.message.includes('Email not confirmed') || error.message.includes('confirm your email')) {
             setMode('confirm-email')
-            setError('Please confirm your email address before signing in. Check your inbox for a confirmation link.')
-          } else if (error.message.includes('Invalid login credentials')) {
-            setError('Invalid email or password. Please check your credentials and try again.')
+            setError(errorMessage)
           } else {
-            setError(error.message)
+            setError(errorMessage)
           }
         } else {
           onClose()
@@ -125,7 +123,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
         }
       }
     } catch (err) {
-      setError('An unexpected error occurred')
+      logError(err, 'AuthModal General')
+      setError('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -162,21 +161,22 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
     try {
       const { error } = await resendConfirmation(sanitizedEmail)
       if (error) {
-        setError(error.message)
+        logError(error, 'AuthModal ResendConfirmation')
+        setError(getAuthErrorMessage(error, 'emailConfirmation'))
       } else {
         setSuccess('Confirmation email sent! Please check your inbox.')
       }
     } catch (err) {
-      setError('Failed to resend confirmation email')
+      logError(err, 'AuthModal ResendConfirmation')
+      setError('Unable to send confirmation email. Please try again.')
     } finally {
       setResendingConfirmation(false)
     }
   }
 
   const resetForm = () => {
-    setEmail('')
-    setPassword('')
-    setFullName('')
+            setEmail('')
+        setPassword('')
     setError('')
     setSuccess('')
     setShowPassword(false)
@@ -314,25 +314,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
             <AuthRateLimitStatus className="mb-4" />
 
             <div className="space-y-4">
-              {mode === 'signup' && (
-                <div>
-                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="fullName"
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                </div>
-              )}
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -376,10 +357,11 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                   </button>
                 </div>
-                {mode === 'signup' && (
-                  <p className="mt-1 text-xs text-gray-500">
-                    Password must be at least 6 characters long
-                  </p>
+                {mode === 'signup' && password.length > 0 && (
+                  <PasswordStrengthIndicator 
+                    password={password} 
+                    className="mt-3" 
+                  />
                 )}
               </div>
 
@@ -409,20 +391,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
               )}
             </div>
 
-            {mode === 'signup' && (
-              <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-start space-x-2">
-                  <Mail className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm text-blue-800 font-medium">Email Verification Required</p>
-                    <p className="text-xs text-blue-700 mt-1">
-                      You'll need to verify your email address before you can access your account. 
-                      We'll send you a confirmation link after you sign up.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
+
 
             <button
               type="submit"
