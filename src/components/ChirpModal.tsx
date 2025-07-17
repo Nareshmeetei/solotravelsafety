@@ -81,9 +81,19 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
 
       // Try to insert into database, but handle gracefully if table doesn't exist
       try {
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('chirps')
-          .insert(chirpData);
+          .insert(chirpData)
+          .select(`
+            *,
+            user:profiles!chirps_user_id_fkey(
+              id,
+              full_name,
+              avatar_url,
+              email
+            )
+          `)
+          .single();
 
         if (error) {
           console.warn('Database insert failed, using demo mode:', error);
@@ -109,7 +119,7 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
           
           console.log('Chirp stored in localStorage:', demoChirp);
         } else {
-          console.log('Chirp stored in database successfully');
+          console.log('Chirp stored in database successfully:', data);
         }
       } catch (dbError) {
         console.warn('Database error, using demo mode:', dbError);
@@ -153,8 +163,17 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
 
   if (!isOpen) return null;
 
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+      onClick={handleBackdropClick}
+    >
       <div className="relative w-full max-w-2xl mx-4 bg-white rounded-2xl shadow-xl">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">

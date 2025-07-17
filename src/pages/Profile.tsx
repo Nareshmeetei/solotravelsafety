@@ -754,6 +754,7 @@ const Profile: React.FC = () => {
                         key={chirp.id} 
                         chirp={chirp} 
                         onChirpDeleted={loadUserChirps}
+                        onChirpEdited={loadUserChirps}
                       />
                     ))
                   ) : (
@@ -996,7 +997,14 @@ const Profile: React.FC = () => {
 
       {/* Contributions Modal */}
       {showContributionsModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowContributionsModal(false);
+            }
+          }}
+        >
           <div className="relative w-full max-w-2xl mx-4 bg-white rounded-2xl shadow-xl animate-fade-in">
             <button
               onClick={() => setShowContributionsModal(false)}

@@ -506,6 +506,161 @@ export const getReviewLikes = async (reviewId: string) => {
   return { data, error }
 }
 
+// Chirp interaction functions
+export const likeChirp = async (chirpId: string) => {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!user) {
+      throw new Error('User not authenticated')
+    }
+
+    const { data, error } = await supabase
+      .from('chirp_likes')
+      .insert([{ 
+        chirp_id: chirpId,
+        user_id: user.id
+      }])
+      .select()
+    
+    return { data, error }
+  } catch (error) {
+    console.error('Error liking chirp:', error)
+    return { data: null, error }
+  }
+}
+
+export const unlikeChirp = async (chirpId: string) => {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!user) {
+      throw new Error('User not authenticated')
+    }
+
+    const { error } = await supabase
+      .from('chirp_likes')
+      .delete()
+      .eq('chirp_id', chirpId)
+      .eq('user_id', user.id)
+    
+    return { error }
+  } catch (error) {
+    console.error('Error unliking chirp:', error)
+    return { error }
+  }
+}
+
+export const getChirpLikes = async (chirpId: string) => {
+  const { data, error } = await supabase
+    .from('chirp_likes')
+    .select('*')
+    .eq('chirp_id', chirpId)
+  
+  return { data, error }
+}
+
+export const createChirpComment = async (commentData: {
+  chirp_id: string
+  comment_text: string
+}) => {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!user) {
+      throw new Error('User not authenticated')
+    }
+
+    const { data, error } = await supabase
+      .from('chirp_comments')
+      .insert([{
+        ...commentData,
+        user_id: user.id
+      }])
+      .select(`
+        *,
+        profiles (
+          full_name,
+          avatar_url
+        )
+      `)
+    
+    return { data, error }
+  } catch (error) {
+    console.error('Error creating chirp comment:', error)
+    return { data: null, error }
+  }
+}
+
+export const getChirpComments = async (chirpId: string) => {
+  const { data, error } = await supabase
+    .from('chirp_comments')
+    .select(`
+      *,
+      profiles (
+        full_name,
+        avatar_url
+      )
+    `)
+    .eq('chirp_id', chirpId)
+    .order('created_at', { ascending: true })
+  
+  return { data, error }
+}
+
+export const rechirp = async (chirpId: string) => {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!user) {
+      throw new Error('User not authenticated')
+    }
+
+    const { data, error } = await supabase
+      .from('chirp_rechirps')
+      .insert([{ 
+        chirp_id: chirpId,
+        user_id: user.id
+      }])
+      .select()
+    
+    return { data, error }
+  } catch (error) {
+    console.error('Error rechirping:', error)
+    return { data: null, error }
+  }
+}
+
+export const unrechirp = async (chirpId: string) => {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!user) {
+      throw new Error('User not authenticated')
+    }
+
+    const { error } = await supabase
+      .from('chirp_rechirps')
+      .delete()
+      .eq('chirp_id', chirpId)
+      .eq('user_id', user.id)
+    
+    return { error }
+  } catch (error) {
+    console.error('Error unrechirping:', error)
+    return { error }
+  }
+}
+
+export const getChirpRechirps = async (chirpId: string) => {
+  const { data, error } = await supabase
+    .from('chirp_rechirps')
+    .select('*')
+    .eq('chirp_id', chirpId)
+  
+  return { data, error }
+}
+
 // Fetch all approved destinations
 export const getAllDestinations = async () => {
   const { data, error } = await supabase
