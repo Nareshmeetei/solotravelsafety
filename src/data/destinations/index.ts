@@ -85,9 +85,13 @@ export const destinations: Destination[] = [
 ];
 
 export const getDestinationBySlug = (city: string, country: string): Destination | undefined => {
+  // Convert search parameters to lowercase and replace spaces with hyphens for comparison
+  const searchCity = city.toLowerCase().replace(/\s+/g, '-');
+  const searchCountry = country.toLowerCase().replace(/\s+/g, '-');
+  
   return destinations.find(dest => 
-    dest.city.toLowerCase().replace(/\s+/g, '-') === city.toLowerCase() &&
-    dest.country.toLowerCase().replace(/\s+/g, '-') === country.toLowerCase()
+    dest.city.toLowerCase().replace(/\s+/g, '-') === searchCity &&
+    dest.country.toLowerCase().replace(/\s+/g, '-') === searchCountry
   );
 };
 
