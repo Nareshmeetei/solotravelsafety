@@ -8,12 +8,12 @@ import bogota from './bogota';
 import brisbane from './brisbane';
 import busan from './busan';
 import cairo from './cairo';
-import cape-town from './cape-town';
+import capeTown from './cape-town';
 import caracas from './caracas';
 import copenhagen from './copenhagen';
 import dublin from './dublin';
 import edinburgh from './edinburgh';
-import guatemala-city from './guatemala-city';
+import guatemalaCity from './guatemala-city';
 import helsinki from './helsinki';
 import johannesburg from './johannesburg';
 import kamakura from './kamakura';
@@ -22,15 +22,15 @@ import kyoto from './kyoto';
 import lagos from './lagos';
 import manila from './manila';
 import melbourne from './melbourne';
-import mexico-city from './mexico-city';
+import mexicoCity from './mexico-city';
 import munich from './munich';
 import nagano from './nagano';
 import osaka from './osaka';
 import oslo from './oslo';
-import port-au-prince from './port-au-prince';
+import portAuPrince from './port-au-prince';
 import reykjavik from './reykjavik';
-import rio-de-janeiro from './rio-de-janeiro';
-import san-salvador from './san-salvador';
+import rioDeJaneiro from './rio-de-janeiro';
+import sanSalvador from './san-salvador';
 import seoul from './seoul';
 import singapore from './singapore';
 import stockholm from './stockholm';
@@ -50,12 +50,12 @@ export const destinations: Destination[] = [
   brisbane,
   busan,
   cairo,
-  cape-town,
+  capeTown,
   caracas,
   copenhagen,
   dublin,
   edinburgh,
-  guatemala-city,
+  guatemalaCity,
   helsinki,
   johannesburg,
   kamakura,
@@ -64,15 +64,15 @@ export const destinations: Destination[] = [
   lagos,
   manila,
   melbourne,
-  mexico-city,
+  mexicoCity,
   munich,
   nagano,
   osaka,
   oslo,
-  port-au-prince,
+  portAuPrince,
   reykjavik,
-  rio-de-janeiro,
-  san-salvador,
+  rioDeJaneiro,
+  sanSalvador,
   seoul,
   singapore,
   stockholm,
@@ -104,12 +104,12 @@ export {
   brisbane,
   busan,
   cairo,
-  cape-town,
+  capeTown,
   caracas,
   copenhagen,
   dublin,
   edinburgh,
-  guatemala-city,
+  guatemalaCity,
   helsinki,
   johannesburg,
   kamakura,
@@ -118,15 +118,15 @@ export {
   lagos,
   manila,
   melbourne,
-  mexico-city,
+  mexicoCity,
   munich,
   nagano,
   osaka,
   oslo,
-  port-au-prince,
+  portAuPrince,
   reykjavik,
-  rio-de-janeiro,
-  san-salvador,
+  rioDeJaneiro,
+  sanSalvador,
   seoul,
   singapore,
   stockholm,

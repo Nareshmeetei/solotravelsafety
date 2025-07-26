@@ -35,19 +35,24 @@ class DestinationUpdater {
       const dataDir = path.join(__dirname, '../src/data/destinations');
       const files = await fs.readdir(dataDir);
       
-      const destinationFiles = files
+            const destinationFiles = files
         .filter(file => file.endsWith('.ts') && !['types.ts', 'index.ts'].includes(file))
         .map(file => file.replace('.ts', ''));
 
-      const indexContent = `// Auto-generated destination index
-// Last updated: ${new Date().toISOString()}
+      // Convert filenames with hyphens to camelCase variable names
+      const toCamelCase = (str) => {
+        return str.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+      };
 
-${destinationFiles.map(file => `import ${file} from './${file}';`).join('\n')}
+      const indexContent = `// Auto-generated destination index
+ // Last updated: ${new Date().toISOString()}
+
+ ${destinationFiles.map(file => `import ${toCamelCase(file)} from './${file}';`).join('\n')}
 import { Destination } from './types';
 
-export const destinations: Destination[] = [
-${destinationFiles.map(file => `  ${file},`).join('\n')}
-];
+ export const destinations: Destination[] = [
+ ${destinationFiles.map(file => `  ${toCamelCase(file)},`).join('\n')}
+ ];
 
 export const getDestinationBySlug = (city: string, country: string): Destination | undefined => {
   return destinations.find(dest => 
@@ -60,10 +65,10 @@ export const createDestinationSlug = (city: string, country: string): string => 
   return \`\${city.toLowerCase().replace(/\s+/g, '-')}-\${country.toLowerCase().replace(/\s+/g, '-')}\`;
 };
 
-// Export individual destinations
-export {
-${destinationFiles.map(file => `  ${file},`).join('\n')}
-};
+ // Export individual destinations
+ export {
+ ${destinationFiles.map(file => `  ${toCamelCase(file)},`).join('\n')}
+ };
 `;
 
       const indexPath = path.join(dataDir, 'index.ts');
