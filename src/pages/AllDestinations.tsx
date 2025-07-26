@@ -10,6 +10,7 @@ import WeatherDisplay from '../components/WeatherDisplay';
 const AllDestinations: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState('overall-score');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [selectedContinent, setSelectedContinent] = useState('all');
@@ -276,6 +277,8 @@ const AllDestinations: React.FC = () => {
                     window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
                   }}
                   className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
+                  onMouseEnter={() => setHoveredCard(`${destination.city}-${destination.country}`)}
+                  onMouseLeave={() => setHoveredCard(null)}
                 >
                   {/* Header */}
                   <div className="mb-4 flex items-center justify-between">
@@ -299,6 +302,7 @@ const AllDestinations: React.FC = () => {
                       country={destination.country}
                       className="transition-transform duration-300 group-hover:scale-105"
                       isExpanded={expandedCard === `${destination.city}-${destination.country}`}
+                      showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
                     />
                   </div>
                   

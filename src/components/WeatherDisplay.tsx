@@ -5,6 +5,7 @@ interface WeatherDisplayProps {
   country: string;
   className?: string;
   isExpanded?: boolean;
+  showCelsius?: boolean; // New prop to control temperature unit from parent
 }
 
 interface WeatherData {
@@ -14,14 +15,19 @@ interface WeatherData {
   error: string | null;
 }
 
-const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ city, country, className = '', isExpanded = false }) => {
+const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ 
+  city, 
+  country, 
+  className = '', 
+  isExpanded = false,
+  showCelsius: parentShowCelsius = false // New prop
+}) => {
   const [weather, setWeather] = useState<WeatherData>({
     temperature: 0,
     description: '',
     isLoading: true,
     error: null
   });
-  const [showCelsius, setShowCelsius] = useState(false);
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -216,8 +222,8 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ city, country, classNam
     return Math.round((celsius * 9/5) + 32);
   };
 
-  // Show Celsius if: desktop hover OR mobile expanded
-  const shouldShowCelsius = showCelsius || (isExpanded && window.innerWidth < 768);
+  // Show Celsius if: parent says so OR mobile expanded
+  const shouldShowCelsius = parentShowCelsius || (isExpanded && window.innerWidth < 768);
   const displayTemp = shouldShowCelsius ? weather.temperature : convertToFahrenheit(weather.temperature);
   const tempUnit = shouldShowCelsius ? 'C' : 'F';
 
@@ -231,10 +237,8 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ city, country, classNam
 
   return (
     <div 
-      className={`text-gray-700 cursor-pointer ${className}`}
-      onMouseEnter={() => setShowCelsius(true)}
-      onMouseLeave={() => setShowCelsius(false)}
-      title={`${weather.description} • Hover to switch temperature unit`}
+      className={`text-gray-700 ${className}`}
+      title={`${weather.description} • Hover card to switch temperature unit`}
     >
       <span className="text-sm font-bold">
         {displayTemp}°{tempUnit}

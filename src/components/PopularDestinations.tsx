@@ -7,6 +7,7 @@ import WeatherDisplay from './WeatherDisplay';
 
 const PopularDestinations: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   
   const toggleCardExpansion = (destinationId: string) => {
     setExpandedCard(prev => prev === destinationId ? null : destinationId);
@@ -71,6 +72,8 @@ const PopularDestinations: React.FC = () => {
             <div
               key={index}
               className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
+              onMouseEnter={() => setHoveredCard(`${destination.city}-${destination.country}`)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Header */}
               <div
@@ -96,13 +99,14 @@ const PopularDestinations: React.FC = () => {
                   </div>
                 </div>
                 
-                                      {/* Live Weather Temperature */}
-                    <WeatherDisplay 
-                      city={destination.city}
-                      country={destination.country}
-                      className="transition-transform duration-300 group-hover:scale-105"
-                      isExpanded={expandedCard === `${destination.city}-${destination.country}`}
-                    />
+                {/* Live Weather Temperature */}
+                <WeatherDisplay 
+                  city={destination.city}
+                  country={destination.country}
+                  className="transition-transform duration-300 group-hover:scale-105"
+                  isExpanded={expandedCard === `${destination.city}-${destination.country}`}
+                  showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
+                />
                 </div>
               </div>
               
