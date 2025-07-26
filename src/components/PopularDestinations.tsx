@@ -73,18 +73,27 @@ const PopularDestinations: React.FC = () => {
               className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
             >
               {/* Header */}
-              <Link
-                to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
+              <div
                 onClick={(e) => {
-                  // Prevent navigation on mobile when tapping to expand
-                  if (window.innerWidth < 768 && !expandedCard) {
-                    e.preventDefault();
-                    toggleCardExpansion(`${destination.city}-${destination.country}`);
+                  // Handle mobile tap-to-expand logic
+                  if (window.innerWidth < 768) {
+                    const isExpanded = expandedCard === `${destination.city}-${destination.country}`;
+                    if (!isExpanded) {
+                      // First tap: expand
+                      e.preventDefault();
+                      toggleCardExpansion(`${destination.city}-${destination.country}`);
+                    } else {
+                      // Second tap or tap on expanded content: navigate
+                      handleDestinationClick(destination.city, destination.country);
+                      window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
+                    }
                   } else {
+                    // Desktop: navigate immediately
                     handleDestinationClick(destination.city, destination.country);
+                    window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
                   }
                 }}
-                className="block"
+                className="block cursor-pointer"
               >
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -109,7 +118,7 @@ const PopularDestinations: React.FC = () => {
                       isExpanded={expandedCard === `${destination.city}-${destination.country}`}
                     />
                 </div>
-              </Link>
+              </div>
               
               {/* Overall Score */}
               <div className="mb-4">
@@ -215,7 +224,7 @@ const PopularDestinations: React.FC = () => {
                   ? 'max-h-48 opacity-100' 
                   : 'max-h-0 opacity-0'
               }`}>
-                <div className="pt-2 space-y-3">
+                <div className="pt-4 space-y-3">
                   {/* Top Red Flag */}
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
