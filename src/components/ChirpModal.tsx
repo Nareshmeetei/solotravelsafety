@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { X, Image, Send, Loader2 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { supabase } from '../lib/supabase';
+import { supabase, uploadChirpImages } from '../lib/supabase';
 
 interface ChirpModalProps {
   isOpen: boolean;
@@ -68,11 +68,29 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
     setIsPosting(true);
 
     try {
+      let finalImageUrls = imageUrls;
+
+      // If there are images to upload, upload them to Supabase storage
+      if (images.length > 0) {
+        console.log('Uploading images to Supabase storage...');
+        const { publicUrls, error: uploadError } = await uploadChirpImages(images, user.id);
+        
+        if (uploadError) {
+          console.error('Image upload failed:', uploadError);
+          // Fall back to data URLs if upload fails
+          console.log('Falling back to data URLs for images');
+          finalImageUrls = imageUrls;
+        } else {
+          console.log('Images uploaded successfully to Supabase:', publicUrls);
+          finalImageUrls = publicUrls;
+        }
+      }
+
       // Create chirp data with images
       const chirpData = {
         user_id: user.id,
         content: content.trim(),
-        images: imageUrls, // Include the uploaded image URLs
+        images: finalImageUrls, // Use uploaded URLs or fallback to data URLs
         likes_count: 0,
         comments_count: 0,
         rechirps_count: 0,
@@ -97,17 +115,21 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
 
         if (error) {
           console.warn('Database insert failed, using demo mode:', error);
-          // Create a demo chirp that works everywhere
-          const demoChirp = {
-            id: Date.now().toString(),
-            ...chirpData,
-            user: {
-              id: user.id,
-              full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-              avatar_url: user.user_metadata?.avatar_url,
-              email: user.email
-            }
-          };
+                  // Create a demo chirp that works everywhere
+        const demoChirp = {
+          id: Date.now().toString(),
+          ...chirpData,
+          user: {
+            id: user.id,
+            full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+            avatar_url: user.user_metadata?.avatar_url,
+            email: user.email
+          },
+          userLikes: [],
+          userRechirps: [],
+          comments: [],
+          comments_count: 0
+        };
           
           // Store in localStorage for this session
           const existingChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
@@ -132,7 +154,11 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
             full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
             avatar_url: user.user_metadata?.avatar_url,
             email: user.email
-          }
+          },
+          userLikes: [],
+          userRechirps: [],
+          comments: [],
+          comments_count: 0
         };
         
         // Store in localStorage for this session

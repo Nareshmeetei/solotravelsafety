@@ -11,6 +11,7 @@ interface AuthContextType {
   signIn: (email: string, password: string, rememberMe?: boolean) => Promise<{ error: any }>
   signOut: () => Promise<void>
   isSessionPersistent: boolean
+  refreshUser: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -137,11 +138,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             break
             
           case 'USER_UPDATED':
-            // Handle email confirmation
+            // Handle user updates (email confirmation, metadata changes, etc.)
             if (session?.user && session.user.email_confirmed_at) {
               setUser(session.user)
               setSession(session)
-              // Ensure profile exists when email gets confirmed (non-blocking)
+              // Update Sentry user context with latest metadata
+              setUserContext({
+                id: session.user.id,
+                email: session.user.email || undefined,
+                username: session.user.user_metadata?.username || session.user.user_metadata?.full_name || undefined,
+              })
+              // Ensure profile exists when user gets updated (non-blocking)
               ensureProfileExists(session.user.id, session.user).catch(console.error)
             } else {
               setUser(null)
@@ -245,6 +252,33 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }
 
+  const refreshUser = async () => {
+    try {
+      console.log('refreshUser: Getting current user from Supabase...');
+      const { data: { user: refreshedUser }, error } = await supabase.auth.getUser()
+      if (error) {
+        console.error('Error refreshing user:', error)
+        return
+      }
+      
+      console.log('refreshUser: Got user data:', refreshedUser?.user_metadata);
+      
+      if (refreshedUser && refreshedUser.email_confirmed_at) {
+        console.log('refreshUser: Setting user state with updated metadata');
+        setUser(refreshedUser)
+        // Update Sentry user context with latest metadata
+        setUserContext({
+          id: refreshedUser.id,
+          email: refreshedUser.email || undefined,
+          username: refreshedUser.user_metadata?.username || refreshedUser.user_metadata?.full_name || undefined,
+        })
+        console.log('refreshUser: User state updated successfully');
+      }
+    } catch (error) {
+      console.error('Error refreshing user:', error)
+    }
+  }
+
   const value = {
     user,
     loading,
@@ -253,6 +287,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     signIn,
     signOut,
     isSessionPersistent,
+    refreshUser,
   }
 
   return (

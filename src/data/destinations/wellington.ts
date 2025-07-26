@@ -30,10 +30,9 @@ const wellington: Destination = {
     ],
     alerts: [],
     safetyTips: {
-      clothing: 'Dress for the weather. Wellington can be windy.',
+      clothing: 'Dress for the weather. Wellington is windy and can be rainy.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['Metlink', 'Uber', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['Metlink', 'Uber', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Casual and practical. No specific restrictions.',

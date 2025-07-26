@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Image, Save, Loader2 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { supabase } from '../lib/supabase';
+import { supabase, uploadChirpImages } from '../lib/supabase';
 
 interface EditChirpModalProps {
   isOpen: boolean;
@@ -31,10 +31,17 @@ const EditChirpModal: React.FC<EditChirpModalProps> = ({ isOpen, onClose, chirp,
   const [timeRemaining, setTimeRemaining] = useState<string>('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Calculate time remaining for editing
+  // Set time remaining message for editing
   useEffect(() => {
     if (!isOpen) return;
 
+    // For own posts, show that editing is always available
+    if (user && chirp.user.id === user.id) {
+      setTimeRemaining('You can edit your own posts anytime');
+      return;
+    }
+
+    // For other users' posts, show time remaining (if this feature is still needed)
     const updateTimeRemaining = () => {
       const chirpDate = new Date(chirp.created_at);
       const now = new Date();
@@ -54,7 +61,7 @@ const EditChirpModal: React.FC<EditChirpModalProps> = ({ isOpen, onClose, chirp,
     const interval = setInterval(updateTimeRemaining, 60000); // Update every minute
 
     return () => clearInterval(interval);
-  }, [isOpen, chirp.created_at]);
+  }, [isOpen, chirp.created_at, user, chirp.user.id]);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
@@ -100,22 +107,39 @@ const EditChirpModal: React.FC<EditChirpModalProps> = ({ isOpen, onClose, chirp,
       return;
     }
 
-    // Check if still within 5-hour limit
-    const chirpDate = new Date(chirp.created_at);
-    const now = new Date();
-    const diffHours = (now.getTime() - chirpDate.getTime()) / (1000 * 60 * 60);
-    
-    if (diffHours > 5) {
-      alert('Chirps can only be edited within 5 hours of posting.');
+    // Check if user can edit this chirp (own posts can be edited anytime)
+    if (!user || chirp.user.id !== user.id) {
+      alert('You can only edit your own posts.');
       return;
     }
 
     setIsSaving(true);
 
     try {
+      let finalImages = [...images]; // Start with existing images
+
+      // If there are new images to upload, upload them to Supabase storage
+      if (newImages.length > 0) {
+        console.log('Uploading new images to Supabase storage...');
+        const { publicUrls, error: uploadError } = await uploadChirpImages(newImages, user.id);
+        
+        if (uploadError) {
+          console.error('Image upload failed:', uploadError);
+          // Fall back to data URLs if upload fails
+          console.log('Falling back to data URLs for new images');
+          finalImages = [...images, ...newImageUrls];
+        } else {
+          console.log('New images uploaded successfully to Supabase:', publicUrls);
+          finalImages = [...images, ...publicUrls];
+        }
+      } else {
+        // No new images, just use existing ones
+        finalImages = [...images, ...newImageUrls];
+      }
+
       const updatedChirpData = {
         content: content.trim(),
-        images: [...images, ...newImageUrls], // Combine existing and new images
+        images: finalImages, // Use uploaded URLs or fallback to data URLs
         updated_at: new Date().toISOString()
       };
 

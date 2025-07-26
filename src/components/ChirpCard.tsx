@@ -1,18 +1,279 @@
-import React, { useState, useEffect } from 'react';
-import { Heart, MessageSquare, Repeat2, MoreHorizontal, Trash2, Edit } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Heart, MessageSquare, MoreHorizontal, Trash2, Edit, Loader2 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { 
   likeChirp, 
   unlikeChirp, 
   getChirpLikes, 
-  rechirp, 
-  unrechirp, 
-  getChirpRechirps,
   supabase
 } from '../lib/supabase';
 import UserAvatar from './UserAvatar';
 import EditChirpModal from './EditChirpModal';
 import CommentModal from './CommentModal';
+
+// New component for top 3 most hugged comments
+interface TopLikedCommentsProps {
+  comments: any[];
+  user: any;
+  chirp: any;
+  openCommentDropdownId: string | null;
+  setOpenCommentDropdownId: (id: string | null) => void;
+  handleDeleteComment: (commentId: string) => void;
+  deletingCommentId: string | null;
+  editingCommentId: string | null;
+  editingCommentText: string;
+  setEditingCommentId: (id: string | null) => void;
+  setEditingCommentText: (text: string) => void;
+  handleEditComment: (commentId: string, newText: string) => void;
+  isEditingComment: boolean;
+  handleCommentHug: (commentId: string) => void;
+  handleCommentReply: (commentId: string, commentText: string) => void;
+  replyingToCommentId: string | null;
+  setReplyingToCommentId: (id: string | null) => void;
+  replyText: string;
+  setReplyText: (text: string) => void;
+  isReplying: boolean;
+  showCommentHugAnimation: string | null;
+}
+
+const TopLikedComments: React.FC<TopLikedCommentsProps> = ({
+  comments,
+  user,
+  chirp,
+  openCommentDropdownId,
+  setOpenCommentDropdownId,
+  handleDeleteComment,
+  deletingCommentId,
+  editingCommentId,
+  editingCommentText,
+  setEditingCommentId,
+  setEditingCommentText,
+  handleEditComment,
+  isEditingComment,
+  handleCommentHug,
+  handleCommentReply,
+  replyingToCommentId,
+  setReplyingToCommentId,
+  replyText,
+  setReplyText,
+  isReplying,
+  showCommentHugAnimation
+}) => {
+  // Helper function to format time
+  const formatTime = (dateString: string) => {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - date.getTime());
+    const diffHours = Math.ceil(diffTime / (1000 * 60 * 60));
+    const diffMinutes = Math.ceil(diffTime / (1000 * 60));
+    
+    if (diffMinutes < 60) return `${diffMinutes}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffHours < 48) return '1d ago';
+    return `${Math.ceil(diffHours / 24)}d ago`;
+  };
+
+  // Sort comments by hugs count and get top 3
+  const topHuggedComments = comments
+    .sort((a: any, b: any) => (b.likes_count || 0) - (a.likes_count || 0))
+    .slice(0, 3);
+  
+  if (topHuggedComments.length === 0) return null;
+  
+  return (
+    <div className="space-y-3">
+      {topHuggedComments.map((comment, index) => {
+        // Check if current user can edit/delete this comment
+        const canEdit = user && comment.user.id === user.id; // Only comment author can edit
+        const canDelete = user && (
+          comment.user.id === user.id || // Comment author
+          chirp.user.id === user.id      // Chirp author
+        );
+        
+        return (
+          <div key={comment.id} className="flex items-start space-x-2">
+            <UserAvatar user={comment.user} size="sm" />
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center space-x-2">
+                  <span className="font-semibold text-gray-900 text-base">
+                    {comment.user.full_name || comment.user.email?.split('@')[0] || 'Solo Traveler'}
+                  </span>
+                  <span className="text-sm text-gray-500">
+                    {formatTime(comment.created_at)}
+                  </span>
+                </div>
+                {(canDelete || canEdit) && (
+                  <div className="relative">
+                    <button
+                      onClick={() => setOpenCommentDropdownId(openCommentDropdownId === comment.id ? null : comment.id)}
+                      className="p-1 hover:bg-gray-100 rounded transition-colors duration-300 comment-dropdown-trigger"
+                      title="Comment options"
+                    >
+                      <MoreHorizontal className="h-4 w-4 text-gray-500" />
+                    </button>
+                    
+                    {openCommentDropdownId === comment.id && (
+                      <div className="absolute right-0 top-full mt-1 w-32 bg-white rounded-lg shadow-lg border border-gray-200 z-10 comment-dropdown">
+                        {canEdit && (
+                          <button
+                            onClick={() => {
+                              setEditingCommentId(comment.id);
+                              setEditingCommentText(comment.comment_text);
+                              setOpenCommentDropdownId(null);
+                            }}
+                            className="w-full flex items-center space-x-2 px-3 py-2 text-gray-700 hover:bg-gray-50 transition-colors duration-300 rounded-lg"
+                          >
+                            <Edit className="h-4 w-4" />
+                            <span className="text-base">Edit</span>
+                          </button>
+                        )}
+                        <button
+                          onClick={() => {
+                            if (confirm('Are you sure you want to delete this comment?')) {
+                              handleDeleteComment(comment.id);
+                            }
+                            setOpenCommentDropdownId(null);
+                          }}
+                          disabled={deletingCommentId === comment.id}
+                          className="w-full flex items-center space-x-2 px-3 py-2 text-red-600 hover:bg-red-50 transition-colors duration-300 rounded-lg disabled:opacity-50"
+                        >
+                          {deletingCommentId === comment.id ? (
+                            <Loader2 className="h-4 w-4 animate-spin" />
+                          ) : (
+                            <Trash2 className="h-4 w-4" />
+                          )}
+                          <span className="text-base">Delete</span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+              {editingCommentId === comment.id ? (
+                                  <div className="mt-2">
+                  <textarea
+                    value={editingCommentText}
+                    onChange={(e) => setEditingCommentText(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-lg text-base resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
+                    rows={2}
+                    placeholder="Edit your comment..."
+                    autoFocus
+                  />
+                  <div className="flex items-center space-x-2 mt-2">
+                    <button
+                      onClick={() => handleEditComment(comment.id, editingCommentText)}
+                      disabled={isEditingComment || !editingCommentText.trim()}
+                      className="px-4 py-2 bg-primary-500 text-white text-sm rounded-lg hover:bg-primary-600 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isEditingComment ? 'Saving...' : 'Save'}
+                    </button>
+                    <button
+                      onClick={() => {
+                        setEditingCommentId(null);
+                        setEditingCommentText('');
+                      }}
+                      disabled={isEditingComment}
+                      className="px-4 py-2 bg-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-400 transition-colors duration-300 disabled:opacity-50"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <p className="text-gray-700 text-base">{comment.comment_text}</p>
+                  
+                  {/* Comment Actions */}
+                  <div className="flex items-center space-x-5 mt-3 text-sm text-gray-500">
+                    {/* Hug Button */}
+                    <button
+                      onClick={() => handleCommentHug(comment.id)}
+                      disabled={!user}
+                      className={`relative flex items-center space-x-1 hover:text-red-500 transition-all duration-300 ${
+                        comment.userHugs?.includes(user?.id) ? 'text-red-500' : ''
+                      } ${!user ? 'opacity-50 cursor-not-allowed' : ''} active:scale-95`}
+                    >
+                      <div className="relative">
+                        <Heart 
+                          className={`h-4 w-4 transition-all duration-300 ${
+                            comment.userHugs?.includes(user?.id) ? 'fill-current' : ''
+                          } ${showCommentHugAnimation === comment.id ? 'heart-beat heart-glow' : ''}`} 
+                        />
+                        {/* Heart burst animation */}
+                        {showCommentHugAnimation === comment.id && (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="heart-burst">
+                              <Heart className="h-5 w-5 text-red-500 fill-current" />
+                            </div>
+                            <div className="absolute heart-burst" style={{ animationDelay: '0.1s' }}>
+                              <Heart className="h-4 w-4 text-red-400 fill-current" />
+                            </div>
+                            <div className="absolute heart-burst" style={{ animationDelay: '0.2s' }}>
+                              <Heart className="h-3 w-3 text-red-300 fill-current" />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <span className={`transition-all duration-300 ${showCommentHugAnimation === comment.id ? 'text-red-500 font-semibold' : ''}`}>
+                        {comment.likes_count || 0} Hug{(comment.likes_count || 0) !== 1 ? 's' : ''}
+                      </span>
+                    </button>
+                    
+                    {/* Reply Button */}
+                    <button
+                      onClick={() => setReplyingToCommentId(replyingToCommentId === comment.id ? null : comment.id)}
+                      disabled={!user}
+                      className={`flex items-center space-x-1 hover:text-primary-400 transition-colors duration-300 ${
+                        !user ? 'opacity-50 cursor-not-allowed' : ''
+                      }`}
+                    >
+                      <MessageSquare className="h-4 w-4" />
+                      <span>Reply</span>
+                    </button>
+                  </div>
+                  
+                  {/* Reply Input */}
+                  {replyingToCommentId === comment.id && (
+                    <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <textarea
+                        value={replyText}
+                        onChange={(e) => setReplyText(e.target.value)}
+                        className="w-full p-3 border border-gray-300 rounded-lg text-base resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
+                        rows={2}
+                        placeholder={`Reply to ${comment.user.full_name || comment.user.email?.split('@')[0] || 'Solo Traveler'}...`}
+                        autoFocus
+                      />
+                      <div className="flex items-center space-x-2 mt-2">
+                        <button
+                          onClick={() => handleCommentReply(comment.id, replyText)}
+                          disabled={isReplying || !replyText.trim()}
+                          className="px-4 py-2 bg-primary-500 text-white text-sm rounded-lg hover:bg-primary-600 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {isReplying ? 'Sending...' : 'Reply'}
+                        </button>
+                        <button
+                          onClick={() => {
+                            setReplyingToCommentId(null);
+                            setReplyText('');
+                          }}
+                          disabled={isReplying}
+                          className="px-4 py-2 bg-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-400 transition-colors duration-300 disabled:opacity-50"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 interface ChirpCardProps {
   chirp: {
@@ -21,13 +282,18 @@ interface ChirpCardProps {
     images?: string[];
     likes_count: number;
     comments_count: number;
-    rechirps_count: number;
     created_at: string;
     user: {
       id: string;
       full_name?: string;
       avatar_url?: string;
       email?: string;
+      username?: string;
+      user_metadata?: {
+        username?: string;
+        full_name?: string;
+        avatar_url?: string;
+      };
     };
   };
   onChirpDeleted?: () => void;
@@ -35,51 +301,172 @@ interface ChirpCardProps {
 }
 
 const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdited }) => {
+  // Add custom CSS for enhanced animations
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes heartBurst {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.5); opacity: 0.8; }
+        100% { transform: scale(2); opacity: 0; }
+      }
+      @keyframes heartBeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      @keyframes heartGlow {
+        0%, 100% { filter: drop-shadow(0 0 0 rgba(239, 68, 68, 0)); }
+        50% { filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6)); }
+      }
+      .heart-burst {
+        animation: heartBurst 0.6s ease-out forwards;
+      }
+      .heart-beat {
+        animation: heartBeat 0.3s ease-in-out;
+      }
+      .heart-glow {
+        animation: heartGlow 0.6s ease-in-out;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
   const { user } = useAuth();
+  
+  // Get the most up-to-date user data for display
+  const getDisplayUser = () => {
+    // If this is the current user's chirp, use the latest auth metadata
+    if (user && chirp.user.id === user.id) {
+      return {
+        ...chirp.user,
+        full_name: user.user_metadata?.full_name || chirp.user.full_name,
+        username: user.user_metadata?.username,
+        avatar_url: user.user_metadata?.avatar_url || chirp.user.avatar_url,
+        user_metadata: user.user_metadata
+      };
+    }
+    // For other users' chirps, use the stored data
+    return chirp.user;
+  };
+  
+  const displayUser = getDisplayUser();
+  
+  // Update chirp in localStorage with current user metadata if it's the current user's chirp
+  useEffect(() => {
+    if (user && chirp.user.id === user.id) {
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      
+      const updateChirpInStorage = (storage: Storage, key: string) => {
+        const chirps = JSON.parse(storage.getItem(key) || '[]');
+        const updatedChirps = chirps.map((c: any) => {
+          if (c.id === chirp.id) {
+            return {
+              ...c,
+              user: {
+                ...c.user,
+                full_name: user.user_metadata?.full_name || c.user.full_name,
+                avatar_url: user.user_metadata?.avatar_url || c.user.avatar_url,
+                user_metadata: user.user_metadata
+              }
+            };
+          }
+          return c;
+        });
+        storage.setItem(key, JSON.stringify(updatedChirps));
+      };
+      
+      updateChirpInStorage(localStorage, 'localChirps');
+      updateChirpInStorage(sessionStorage, 'sessionChirps');
+    }
+  }, [user, chirp.id, chirp.user.id]);
+  
+  // Debug: Log avatar URL for troubleshooting
+  console.log('ChirpCard displayUser:', {
+    id: displayUser.id,
+    full_name: displayUser.full_name,
+    username: displayUser.username,
+    avatar_url: displayUser.avatar_url,
+    user_metadata: displayUser.user_metadata
+  });
   const [isLiked, setIsLiked] = useState(false);
-  const [isRechirped, setIsRechirped] = useState(false);
   const [likesCount, setLikesCount] = useState(chirp.likes_count);
   const [commentsCount, setCommentsCount] = useState(chirp.comments_count);
-  const [rechirpsCount, setRechirpsCount] = useState(chirp.rechirps_count);
-  const [isLiking, setIsLiking] = useState(false);
-  const [isRechirping, setIsRechirping] = useState(false);
+  const [isHugging, setIsHugging] = useState(false);
+  const [showHugAnimation, setShowHugAnimation] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
+  const [replyingToCommentId, setReplyingToCommentId] = useState<string | null>(null);
+  const [replyText, setReplyText] = useState('');
+  const [isReplying, setIsReplying] = useState(false);
+  const [showCommentHugAnimation, setShowCommentHugAnimation] = useState<string | null>(null);
   const [showEditModal, setShowEditModal] = useState(false);
   const [showCommentModal, setShowCommentModal] = useState(false);
+  const [comments, setComments] = useState<any[]>([]);
+  const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
+  const [openCommentDropdownId, setOpenCommentDropdownId] = useState<string | null>(null);
+  const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
+  const [editingCommentText, setEditingCommentText] = useState('');
+  const [isEditingComment, setIsEditingComment] = useState(false);
 
-  // Check if chirp is within 5 hours of creation for editing
+  // Check if user can edit this chirp (own posts can be edited anytime)
   const canEdit = () => {
+    // Users can always edit their own posts
+    if (user && displayUser.id === user.id) {
+      return true;
+    }
+    
+    // For other users' posts, check if within 5 hours (if this feature is still needed)
     const chirpDate = new Date(chirp.created_at);
     const now = new Date();
     const diffHours = (now.getTime() - chirpDate.getTime()) / (1000 * 60 * 60);
     return diffHours <= 5;
   };
 
-  // Check user's interaction status on component mount
+  // Check user's interaction status and load comments on component mount
   useEffect(() => {
-    if (!user) return;
-
-    const checkUserInteractions = async () => {
+    const loadChirpData = async () => {
       try {
+        // Load comments from local storage first
+        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+        const allChirps = [...localChirps, ...sessionChirps];
+        const chirpData = allChirps.find((c: any) => c.id === chirp.id);
+        
+        if (chirpData) {
+          // Update counts from local storage
+          setCommentsCount(chirpData.comments_count || 0);
+          setLikesCount(chirpData.likes_count || 0);
+          // Load comments from local storage
+          setComments(chirpData.comments || []);
+          console.log('Loaded comments for chirp:', chirp.id, chirpData.comments);
+        }
+
+        if (!user) return;
+
         // Check if user has liked this chirp
-        const { data: likes } = await getChirpLikes(chirp.id);
-        if (likes) {
+        const { data: likes, error: likesError } = await getChirpLikes(chirp.id);
+        if (likes && !likesError) {
           const userLiked = likes.some((like: any) => like.user_id === user.id);
           setIsLiked(userLiked);
+        } else {
+          console.warn('Database likes check failed, using local storage:', likesError);
+          // Check local storage for likes
+          if (chirpData && chirpData.userLikes && chirpData.userLikes.includes(user.id)) {
+            setIsLiked(true);
+          }
         }
 
-        // Check if user has rechirped this chirp
-        const { data: rechirps } = await getChirpRechirps(chirp.id);
-        if (rechirps) {
-          const userRechirped = rechirps.some((rechirp: any) => rechirp.user_id === user.id);
-          setIsRechirped(userRechirped);
-        }
+
       } catch (error) {
-        console.error('Error checking user interactions:', error);
+        console.error('Error loading chirp data:', error);
       }
     };
 
-    checkUserInteractions();
+    loadChirpData();
   }, [user, chirp.id]);
 
   // Handle clicks outside the options dropdown
@@ -90,41 +477,114 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
       if (showOptions && !target.closest('.options-dropdown') && !target.closest('.options-trigger')) {
         setShowOptions(false);
       }
+      // Check if click is outside the comment dropdown and not on the trigger button
+      if (openCommentDropdownId && !target.closest('.comment-dropdown') && !target.closest('.comment-dropdown-trigger')) {
+        setOpenCommentDropdownId(null);
+      }
     };
 
-    if (showOptions) {
+    if (showOptions || openCommentDropdownId) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [showOptions]);
+  }, [showOptions, openCommentDropdownId]);
 
-  const handleLift = async () => {
+  const handleHug = async () => {
     if (!user) return;
     
-    setIsLiking(true);
+    setIsHugging(true);
+    
+    // Trigger animation
+    if (!isLiked) {
+      setShowHugAnimation(true);
+      setTimeout(() => setShowHugAnimation(false), 600);
+    } else {
+      // Subtle animation for unhugging
+      setShowHugAnimation(true);
+      setTimeout(() => setShowHugAnimation(false), 300);
+    }
     try {
       if (isLiked) {
         // Unlike
         const { error } = await unlikeChirp(chirp.id);
-        if (!error) {
-          setIsLiked(false);
-          setLikesCount(prev => prev - 1);
+        if (error) {
+          console.warn('Database unlike failed, using local storage:', error);
         }
+        
+        // Always update local state and storage
+        setIsLiked(false);
+        setLikesCount(prev => prev - 1);
+        
+        // Update in localStorage
+        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+        const updatedLocalChirps = localChirps.map((c: any) => 
+          c.id === chirp.id 
+            ? { 
+                ...c, 
+                likes_count: Math.max(0, (c.likes_count || 0) - 1),
+                userLikes: (c.userLikes || []).filter((userId: string) => userId !== user.id)
+              }
+            : c
+        );
+        localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+        
+        // Update in sessionStorage
+        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+        const updatedSessionChirps = sessionChirps.map((c: any) => 
+          c.id === chirp.id 
+            ? { 
+                ...c, 
+                likes_count: Math.max(0, (c.likes_count || 0) - 1),
+                userLikes: (c.userLikes || []).filter((userId: string) => userId !== user.id)
+              }
+            : c
+        );
+        sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
+        
       } else {
         // Like
         const { error } = await likeChirp(chirp.id);
-        if (!error) {
-          setIsLiked(true);
-          setLikesCount(prev => prev + 1);
+        if (error) {
+          console.warn('Database like failed, using local storage:', error);
         }
+        
+        // Always update local state and storage
+        setIsLiked(true);
+        setLikesCount(prev => prev + 1);
+        
+        // Update in localStorage
+        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+        const updatedLocalChirps = localChirps.map((c: any) => 
+          c.id === chirp.id 
+            ? { 
+                ...c, 
+                likes_count: (c.likes_count || 0) + 1,
+                userLikes: [...(c.userLikes || []), user.id]
+              }
+            : c
+        );
+        localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+        
+        // Update in sessionStorage
+        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+        const updatedSessionChirps = sessionChirps.map((c: any) => 
+          c.id === chirp.id 
+            ? { 
+                ...c, 
+                likes_count: (c.likes_count || 0) + 1,
+                userLikes: [...(c.userLikes || []), user.id]
+              }
+            : c
+        );
+        sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
       }
     } catch (error) {
-      console.error('Error toggling like:', error);
+      console.error('Error toggling hug:', error);
     } finally {
-      setIsLiking(false);
+      setIsHugging(false);
     }
   };
 
@@ -133,38 +593,34 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
       alert('Please sign in to comment');
       return;
     }
+    
+    // Debug: Check current storage state
+    const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+    const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+    console.log('Opening comment modal for chirp:', chirp.id);
+    console.log('Current chirps in storage:', { localChirps, sessionChirps });
+    
     setShowCommentModal(true);
   };
 
-  const handleRechirp = async () => {
-    if (!user) return;
+  const handleCommentModalClose = () => {
+    setShowCommentModal(false);
+    // Refresh comment count and data from local storage
+    const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+    const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+    const allChirps = [...localChirps, ...sessionChirps];
+    const chirpData = allChirps.find((c: any) => c.id === chirp.id);
     
-    setIsRechirping(true);
-    try {
-      if (isRechirped) {
-        // Unrechirp
-        const { error } = await unrechirp(chirp.id);
-        if (!error) {
-          setIsRechirped(false);
-          setRechirpsCount(prev => prev - 1);
-        }
-      } else {
-        // Rechirp
-        const { error } = await rechirp(chirp.id);
-        if (!error) {
-          setIsRechirped(true);
-          setRechirpsCount(prev => prev + 1);
-        }
-      }
-    } catch (error) {
-      console.error('Error toggling rechirp:', error);
-    } finally {
-      setIsRechirping(false);
+    if (chirpData) {
+      setCommentsCount(chirpData.comments_count || 0);
+      setComments(chirpData.comments || []);
     }
   };
 
+
+
   const handleDelete = async () => {
-    if (!user || chirp.user.id !== user.id) return;
+    if (!user || displayUser.id !== user.id) return;
     
     if (confirm('Are you sure you want to delete this chirp?')) {
       try {
@@ -201,11 +657,222 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
   const handleEdit = () => {
     if (!canEdit()) {
-      alert('Chirps can only be edited within 5 hours of posting.');
+      alert('You can only edit your own posts.');
       return;
     }
     setShowEditModal(true);
     setShowOptions(false);
+  };
+
+  const handleDeleteComment = async (commentId: string) => {
+    if (!user) return;
+    
+    setDeletingCommentId(commentId);
+    try {
+      // Remove comment from local state
+      const updatedComments = comments.filter(c => c.id !== commentId);
+      setComments(updatedComments);
+
+      // Update chirp in localStorage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const updatedLocalChirps = localChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { 
+              ...c, 
+              comments: updatedComments,
+              comments_count: Math.max(0, (c.comments_count || 0) - 1)
+            }
+          : c
+      );
+      localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+
+      // Update chirp in sessionStorage
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      const updatedSessionChirps = sessionChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { 
+              ...c, 
+              comments: updatedComments,
+              comments_count: Math.max(0, (c.comments_count || 0) - 1)
+            }
+          : c
+      );
+      sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
+
+      // Update comment count
+      setCommentsCount(Math.max(0, commentsCount - 1));
+
+      console.log('Comment deleted successfully:', commentId);
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+      alert('Failed to delete comment. Please try again.');
+    } finally {
+      setDeletingCommentId(null);
+    }
+  };
+
+  const handleEditComment = async (commentId: string, newText: string) => {
+    if (!user || !newText.trim()) return;
+    
+    setIsEditingComment(true);
+    try {
+      // Update local state
+      const updatedComments = comments.map(comment => 
+        comment.id === commentId 
+          ? { ...comment, comment_text: newText.trim(), updated_at: new Date().toISOString() }
+          : comment
+      );
+      setComments(updatedComments);
+
+      // Update chirp in localStorage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const updatedLocalChirps = localChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { ...c, comments: updatedComments }
+          : c
+      );
+      localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+
+      // Update chirp in sessionStorage
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      const updatedSessionChirps = sessionChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { ...c, comments: updatedComments }
+          : c
+      );
+      sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
+
+      console.log('Comment edited successfully:', commentId);
+    } catch (error) {
+      console.error('Error editing comment:', error);
+      alert('Failed to edit comment. Please try again.');
+    } finally {
+      setIsEditingComment(false);
+      setEditingCommentId(null);
+      setEditingCommentText('');
+    }
+  };
+
+  const handleCommentHug = async (commentId: string) => {
+    if (!user) return;
+    
+    // Trigger animation
+    const comment = comments.find(c => c.id === commentId);
+    const isHugged = comment?.userHugs?.includes(user.id);
+    
+    if (!isHugged) {
+      setShowCommentHugAnimation(commentId);
+      setTimeout(() => setShowCommentHugAnimation(null), 600);
+    } else {
+      setShowCommentHugAnimation(commentId);
+      setTimeout(() => setShowCommentHugAnimation(null), 300);
+    }
+    
+    try {
+      // Update local state
+      const updatedComments = comments.map(comment => {
+        if (comment.id === commentId) {
+          const userHugs = comment.userHugs || [];
+          const isHugged = userHugs.includes(user.id);
+          
+          if (isHugged) {
+            // Remove hug
+            return {
+              ...comment,
+              userHugs: userHugs.filter((id: string) => id !== user.id),
+              likes_count: Math.max(0, (comment.likes_count || 0) - 1)
+            };
+          } else {
+            // Add hug
+            return {
+              ...comment,
+              userHugs: [...userHugs, user.id],
+              likes_count: (comment.likes_count || 0) + 1
+            };
+          }
+        }
+        return comment;
+      });
+      
+      setComments(updatedComments);
+
+      // Update chirp in localStorage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const updatedLocalChirps = localChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { ...c, comments: updatedComments }
+          : c
+      );
+      localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+
+      // Update chirp in sessionStorage
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      const updatedSessionChirps = sessionChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { ...c, comments: updatedComments }
+          : c
+      );
+      sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
+
+      console.log('Comment hugged successfully:', commentId);
+    } catch (error) {
+      console.error('Error hugging comment:', error);
+    }
+  };
+
+  const handleCommentReply = async (commentId: string, replyText: string) => {
+    if (!user || !replyText.trim()) return;
+    
+    setIsReplying(true);
+    try {
+      // Create new reply comment
+      const replyComment = {
+        id: `reply-${Date.now()}-${Math.random()}`,
+        comment_text: replyText.trim(),
+        user: {
+          id: user.id,
+          full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+          email: user.email,
+          avatar_url: user.user_metadata?.avatar_url
+        },
+        created_at: new Date().toISOString(),
+        likes_count: 0,
+        userHugs: [],
+        parent_comment_id: commentId
+      };
+      
+      const updatedComments = [...comments, replyComment];
+      setComments(updatedComments);
+      setCommentsCount(prev => prev + 1);
+
+      // Update chirp in localStorage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const updatedLocalChirps = localChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { ...c, comments: updatedComments, comments_count: commentsCount + 1 }
+          : c
+      );
+      localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+
+      // Update chirp in sessionStorage
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      const updatedSessionChirps = sessionChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { ...c, comments: updatedComments, comments_count: commentsCount + 1 }
+          : c
+      );
+      sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
+
+      // Clear reply state immediately after successful submission
+      setReplyingToCommentId(null);
+      setReplyText('');
+
+      console.log('Reply added successfully:', commentId);
+    } catch (error) {
+      console.error('Error replying to comment:', error);
+    } finally {
+      setIsReplying(false);
+    }
   };
 
   const formatDate = (dateString: string) => {
@@ -225,15 +892,17 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
     <>
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
         <div className="flex items-start space-x-4">
-          <UserAvatar user={chirp.user} size="md" />
+          <UserAvatar user={displayUser} size="md" />
           <div className="flex-1">
             {/* Header */}
             <div className="flex items-start justify-between mb-3">
               <div>
-                <span className="font-semibold text-gray-900">
-                  {chirp.user.full_name || chirp.user.email?.split('@')[0] || 'Solo Traveler'}
+                <span className="font-bold text-gray-900">
+                  {displayUser.full_name || displayUser.email?.split('@')[0] || 'Solo Traveler'}
                 </span>
-                <span className="text-gray-600 ml-2">chirped</span>
+                <span className="text-gray-600 ml-2">
+                  @{displayUser.user_metadata?.username || displayUser.username || displayUser.email?.split('@')[0]}
+                </span>
                 <div className="text-sm text-gray-500 mt-1">{formatDate(chirp.created_at)}</div>
               </div>
               <div className="relative">
@@ -245,7 +914,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
                 </button>
                 
                 {/* Options Menu */}
-                {showOptions && user?.id === chirp.user.id && (
+                {showOptions && user?.id === displayUser.id && (
                   <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10 options-dropdown">
                     {canEdit() && (
                       <button
@@ -293,20 +962,44 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
                   ))}
                 </div>
               )}
+
+
             </div>
 
             {/* Actions */}
             <div className="flex items-center space-x-6 text-sm text-gray-600">
-              {/* Lift Button */}
+              {/* Hug Button */}
               <button 
-                onClick={handleLift}
-                disabled={isLiking}
-                className={`flex items-center space-x-2 hover:text-red-500 transition-colors duration-300 ${
+                onClick={handleHug}
+                disabled={isHugging}
+                className={`relative flex items-center space-x-2 hover:text-red-500 transition-all duration-300 ${
                   isLiked ? 'text-red-500' : ''
-                }`}
+                } ${isHugging ? 'scale-95' : ''} active:scale-95`}
               >
-                <Heart className={`h-4 w-4 ${isLiked ? 'fill-current' : ''}`} />
-                <span>Lift ({likesCount})</span>
+                <div className="relative">
+                  <Heart 
+                    className={`h-4 w-4 transition-all duration-300 ${
+                      isLiked ? 'fill-current' : ''
+                    } ${showHugAnimation ? 'heart-beat heart-glow' : ''}`} 
+                  />
+                  {/* Heart burst animation */}
+                  {showHugAnimation && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="heart-burst">
+                        <Heart className="h-6 w-6 text-red-500 fill-current" />
+                      </div>
+                      <div className="absolute heart-burst" style={{ animationDelay: '0.1s' }}>
+                        <Heart className="h-5 w-5 text-red-400 fill-current" />
+                      </div>
+                      <div className="absolute heart-burst" style={{ animationDelay: '0.2s' }}>
+                        <Heart className="h-4 w-4 text-red-300 fill-current" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <span className={`transition-all duration-300 ${showHugAnimation ? 'text-red-500 font-semibold' : ''}`}>
+                  Hug ({likesCount})
+                </span>
               </button>
 
               {/* Comment Button */}
@@ -317,19 +1010,46 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
                 <MessageSquare className="h-4 w-4" />
                 <span>Comment ({commentsCount})</span>
               </button>
-
-              {/* Rechirp Button */}
-              <button 
-                onClick={handleRechirp}
-                disabled={isRechirping}
-                className={`flex items-center space-x-2 hover:text-green-500 transition-colors duration-300 ${
-                  isRechirped ? 'text-green-500' : ''
-                }`}
-              >
-                <Repeat2 className={`h-4 w-4 ${isRechirped ? 'fill-current' : ''}`} />
-                <span>Rechirp ({rechirpsCount})</span>
-              </button>
             </div>
+
+            {/* View all comments link and top 3 most hugged comments */}
+            {commentsCount > 0 && (
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <button 
+                  onClick={handleComment}
+                  className="text-gray-500 text-sm hover:text-primary-400 transition-colors duration-300 mb-3"
+                >
+                  View all {commentsCount} comment{commentsCount !== 1 ? 's' : ''}
+                </button>
+                
+                {/* Top 3 most hugged comments */}
+                {comments.length > 0 && (
+                  <TopLikedComments
+                    comments={comments}
+                    user={user}
+                    chirp={chirp}
+                    openCommentDropdownId={openCommentDropdownId}
+                    setOpenCommentDropdownId={setOpenCommentDropdownId}
+                    handleDeleteComment={handleDeleteComment}
+                    deletingCommentId={deletingCommentId}
+                    editingCommentId={editingCommentId}
+                    editingCommentText={editingCommentText}
+                    setEditingCommentId={setEditingCommentId}
+                    setEditingCommentText={setEditingCommentText}
+                    handleEditComment={handleEditComment}
+                    isEditingComment={isEditingComment}
+                    handleCommentHug={handleCommentHug}
+                    handleCommentReply={handleCommentReply}
+                    replyingToCommentId={replyingToCommentId}
+                    setReplyingToCommentId={setReplyingToCommentId}
+                    replyText={replyText}
+                    setReplyText={setReplyText}
+                    isReplying={isReplying}
+                    showCommentHugAnimation={showCommentHugAnimation}
+                  />
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -350,8 +1070,26 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
       {/* Comment Modal */}
       <CommentModal
         isOpen={showCommentModal}
-        onClose={() => setShowCommentModal(false)}
+        onClose={handleCommentModalClose}
         chirp={chirp}
+        onCommentAdded={() => {
+          // Refresh comment count and data
+          const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+          const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+          const allChirps = [...localChirps, ...sessionChirps];
+          const chirpData = allChirps.find((c: any) => c.id === chirp.id);
+          
+          console.log('Comment added, chirpData:', chirpData);
+          console.log('All chirps after comment:', allChirps);
+          
+          if (chirpData) {
+            setCommentsCount(chirpData.comments_count || 0);
+            setComments(chirpData.comments || []);
+            console.log('Updated comments state:', chirpData.comments);
+          } else {
+            console.warn('Chirp not found in storage after comment added');
+          }
+        }}
       />
     </>
   );

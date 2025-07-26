@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'
-import { clientSideRateLimit, clientRateLimits } from '../lib/rateLimit'
+import React, { useState, useEffect, useCallback } from 'react'
+import { clientRateLimit } from '../lib/rateLimit'
 
 interface RateLimitConfig {
   maxRequests: number
@@ -11,6 +11,47 @@ interface RateLimitState {
   remaining: number
   resetTime: number
   retryAfter: number
+}
+
+// Client-side rate limit configurations
+const clientRateLimits = {
+  auth: { maxRequests: 5, windowMs: 15 * 60 * 1000 },
+  api: { maxRequests: 100, windowMs: 15 * 60 * 1000 },
+  search: { maxRequests: 50, windowMs: 15 * 60 * 1000 },
+  upload: { maxRequests: 10, windowMs: 15 * 60 * 1000 },
+  sensitive: { maxRequests: 3, windowMs: 15 * 60 * 1000 }
+}
+
+// Simple client-side rate limiter
+const clientSideRateLimit = {
+  requests: new Map<string, number[]>(),
+  
+  check: (identifier: string, maxRequests: number, windowMs: number): boolean => {
+    const now = Date.now()
+    const requests = clientSideRateLimit.requests.get(identifier) || []
+    const validRequests = requests.filter(time => now - time < windowMs)
+    
+    if (validRequests.length >= maxRequests) {
+      return true // Limited
+    }
+    
+    validRequests.push(now)
+    clientSideRateLimit.requests.set(identifier, validRequests)
+    return false // Not limited
+  },
+  
+  getRemaining: (identifier: string): number => {
+    const requests = clientSideRateLimit.requests.get(identifier) || []
+    const now = Date.now()
+    const validRequests = requests.filter(time => now - time < 15 * 60 * 1000)
+    return Math.max(0, 100 - validRequests.length)
+  },
+  
+  getResetTime: (identifier: string): number => {
+    const requests = clientSideRateLimit.requests.get(identifier) || []
+    if (requests.length === 0) return Date.now()
+    return Math.max(...requests) + 15 * 60 * 1000
+  }
 }
 
 export const useRateLimit = (type: keyof typeof clientRateLimits) => {
@@ -42,10 +83,10 @@ export const useRateLimit = (type: keyof typeof clientRateLimits) => {
   }, [identifier, config.maxRequests, config.windowMs])
 
   // Execute function with rate limiting
-  const executeWithRateLimit = useCallback(async <T>(
-    fn: () => Promise<T>,
+  const executeWithRateLimit = useCallback(async (
+    fn: () => Promise<any>,
     onRateLimited?: (retryAfter: number) => void
-  ): Promise<T | null> => {
+  ): Promise<any | null> => {
     if (checkRateLimit()) {
       const retryAfter = Math.max(0, Math.ceil((rateLimitState.resetTime - Date.now()) / 1000))
       onRateLimited?.(retryAfter)

@@ -30,10 +30,9 @@ const melbourne: Destination = {
     ],
     alerts: [],
     safetyTips: {
-      clothing: 'Dress for the weather. Melbourne can be unpredictable.',
+      clothing: 'Dress for the weather. Melbourne has four seasons in one day.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['PTV', 'Uber', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['PTV', 'Uber', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Casual and practical. No specific restrictions.',

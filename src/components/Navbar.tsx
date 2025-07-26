@@ -4,6 +4,7 @@ import { User, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
 import UserAvatar from './UserAvatar';
+import NotificationBell from './NotificationBell';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -111,13 +112,16 @@ const Navbar: React.FC = () => {
             ))}
             
             {user ? (
-              <button
-                onClick={handleProfileClick}
-                className="flex items-center space-x-2 text-gray-700 hover:text-primary-400 font-medium text-sm transition-all duration-300 hover:scale-105 focus-smooth"
-              >
-                <UserAvatar user={user} size="sm" />
-                <span className="hidden xl:inline">{user.user_metadata?.full_name || 'User'}</span>
-              </button>
+              <>
+                <NotificationBell />
+                <button
+                  onClick={handleProfileClick}
+                  className="flex items-center space-x-2 text-gray-700 hover:text-primary-400 font-medium text-sm transition-all duration-300 hover:scale-105 focus-smooth"
+                >
+                  <UserAvatar user={user} size="sm" />
+                  <span className="hidden xl:inline">{user.user_metadata?.full_name || 'User'}</span>
+                </button>
+              </>
             ) : (
               <>
                 <button 
@@ -171,13 +175,19 @@ const Navbar: React.FC = () => {
             
             <div className="pt-4 border-t border-gray-200">
               {user ? (
-                <button
-                  onClick={handleProfileClick}
-                  className="flex items-center space-x-3 w-full text-left text-gray-700 hover:text-primary-400 font-medium text-base py-2 transition-all duration-300"
-                >
-                  <UserAvatar user={user} size="sm" />
-                  <span>{user.user_metadata?.full_name || 'User'}</span>
-                </button>
+                <>
+                  <div className="flex items-center justify-between py-2">
+                    <span className="text-gray-700 font-medium text-base">Notifications</span>
+                    <NotificationBell />
+                  </div>
+                  <button
+                    onClick={handleProfileClick}
+                    className="flex items-center space-x-3 w-full text-left text-gray-700 hover:text-primary-400 font-medium text-base py-2 transition-all duration-300"
+                  >
+                    <UserAvatar user={user} size="sm" />
+                    <span>{user.user_metadata?.full_name || 'User'}</span>
+                  </button>
+                </>
               ) : (
                 <div className="space-y-3">
                   <button 
@@ -240,13 +250,16 @@ const Navbar: React.FC = () => {
                   ))}
                   
                   {user ? (
-                    <button
-                      onClick={handleProfileClick}
-                      className="flex items-center space-x-2 text-gray-600 hover:text-primary-400 font-medium text-sm transition-all duration-300 hover:scale-105 focus-smooth"
-                    >
-                      <UserAvatar user={user} size="sm" />
-                      <span className="hidden xl:inline">{user.user_metadata?.full_name || 'User'}</span>
-                    </button>
+                    <>
+                      <NotificationBell />
+                      <button
+                        onClick={handleProfileClick}
+                        className="flex items-center space-x-2 text-gray-600 hover:text-primary-400 font-medium text-sm transition-all duration-300 hover:scale-105 focus-smooth"
+                      >
+                        <UserAvatar user={user} size="sm" />
+                        <span className="hidden xl:inline">{user.user_metadata?.full_name || 'User'}</span>
+                      </button>
+                    </>
                   ) : (
                     <>
                       <button 
@@ -335,6 +348,7 @@ const Navbar: React.FC = () => {
         onClose={() => setShowAuthModal(false)}
         initialMode={authMode}
       />
+
     </>
   );
 };

@@ -27,7 +27,7 @@ import Footer from '../components/Footer';
 import PasswordStrengthIndicator from '../components/PasswordStrengthIndicator';
 
 const AccountSettings: React.FC = () => {
-  const { user, signOut } = useAuth();
+  const { user, signOut, refreshUser } = useAuth();
   const { sessionInfo, getSessionStatus, forceLogoutFromAllSessions, getSessionStats } = useSessionManagement();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -39,9 +39,18 @@ const AccountSettings: React.FC = () => {
   // Profile form state
   const [profileForm, setProfileForm] = useState({
     full_name: '',
+    username: '',
     bio: '',
     location: '',
     avatar_url: ''
+  });
+
+  // Username change tracking
+  const [usernameChangeInfo, setUsernameChangeInfo] = useState({
+    username_change_count: 0,
+    last_username_change: null as string | null,
+    original_username: '',
+    can_change_username: true
   });
 
   // Password form state
@@ -106,18 +115,36 @@ const AccountSettings: React.FC = () => {
           if (newProfile) {
             setProfileForm({
               full_name: newProfile.full_name || user.user_metadata?.full_name || '',
+              username: newProfile.username || user.user_metadata?.username || '',
               bio: newProfile.bio || '',
               location: newProfile.location || '',
               avatar_url: newProfile.avatar_url || user.user_metadata?.avatar_url || ''
+            });
+            
+            // Set username change info
+            setUsernameChangeInfo({
+              username_change_count: newProfile.username_change_count || 0,
+              last_username_change: newProfile.last_username_change,
+              original_username: newProfile.original_username || newProfile.username || '',
+              can_change_username: (newProfile.username_change_count || 0) < 2
             });
           }
         }
       } else if (profile) {
         setProfileForm({
           full_name: profile.full_name || user.user_metadata?.full_name || '',
+          username: profile.username || user.user_metadata?.username || '',
           bio: profile.bio || '',
           location: profile.location || '',
           avatar_url: profile.avatar_url || user.user_metadata?.avatar_url || ''
+        });
+        
+        // Set username change info
+        setUsernameChangeInfo({
+          username_change_count: profile.username_change_count || 0,
+          last_username_change: profile.last_username_change,
+          original_username: profile.original_username || profile.username || '',
+          can_change_username: (profile.username_change_count || 0) < 2
         });
       }
     } catch (error) {
@@ -232,6 +259,67 @@ const AccountSettings: React.FC = () => {
   const handleSaveProfile = async () => {
     if (!user) return;
 
+    // Validate that username is not empty
+    if (!profileForm.username.trim()) {
+      setError('Username cannot be empty. Please enter a valid username.');
+      return;
+    }
+
+    // Get current profile data to check username changes
+    let currentProfile = null;
+    let isUsernameChange = false;
+    let hasExceededLimit = false;
+    
+    try {
+      const { data: profileData } = await supabase
+        .from('profiles')
+        .select('username, username_change_count')
+        .eq('id', user.id)
+        .single();
+      
+      currentProfile = profileData;
+      
+      // Check if username is being changed and if user has exceeded the limit
+      isUsernameChange = !!(currentProfile && profileForm.username !== currentProfile.username);
+      
+      // Check if user has exceeded the limit using current database data
+      hasExceededLimit = !!(currentProfile && currentProfile.username_change_count >= 2);
+      
+      console.log('Username change debug:', {
+        currentUsername: currentProfile?.username,
+        newUsername: profileForm.username,
+        isUsernameChange,
+        currentChangeCount: currentProfile?.username_change_count,
+        hasExceededLimit,
+        stateCanChange: usernameChangeInfo.can_change_username
+      });
+      
+      if (isUsernameChange && hasExceededLimit) {
+        setError('You have reached the maximum number of username changes (2). You cannot change your username again.');
+        return;
+      }
+
+      // Additional validation: check if username is already taken
+      if (isUsernameChange && profileForm.username) {
+        const { data: existingUser } = await supabase
+          .from('profiles')
+          .select('id')
+          .eq('username', profileForm.username)
+          .neq('id', user.id)
+          .single();
+
+        if (existingUser) {
+          setError('This username is already taken. Please choose a different one.');
+          return;
+        }
+      }
+    } catch (error) {
+      console.log('Username column not available yet, skipping username validation');
+      // If username column doesn't exist, skip username validation
+      isUsernameChange = false;
+      hasExceededLimit = false;
+    }
+
     setLoading(true);
     setError('');
     setSuccess('');
@@ -241,36 +329,89 @@ const AccountSettings: React.FC = () => {
       await ensureProfileExists(user.id, user);
 
       // Update profile in database
+      const updateData: any = {
+        id: user.id,
+        full_name: profileForm.full_name || 'Solo Traveler',
+        bio: profileForm.bio,
+        location: profileForm.location,
+        avatar_url: profileForm.avatar_url,
+        updated_at: new Date().toISOString()
+      };
+      
+      // Only include username if the column exists (check by trying to update it separately)
+      try {
+        // Try to update username separately to avoid schema cache issues
+        const { error: usernameError } = await supabase
+          .from('profiles')
+          .update({ username: profileForm.username })
+          .eq('id', user.id);
+          
+        if (usernameError) {
+          console.warn('Username column not available, skipping username update:', usernameError.message);
+        } else {
+          console.log('Username updated successfully in database');
+        }
+      } catch (error) {
+        console.warn('Username column not available, skipping username update');
+      }
+      
       const { error: profileError } = await supabase
         .from('profiles')
-        .upsert({
-          id: user.id,
-          full_name: profileForm.full_name || 'Solo Traveler',
-          bio: profileForm.bio,
-          location: profileForm.location,
-          avatar_url: profileForm.avatar_url,
-          updated_at: new Date().toISOString()
-        }, {
+        .upsert(updateData, {
           onConflict: 'id'
         });
 
       if (profileError) {
         console.error('Profile update error:', profileError);
-        throw profileError;
+        
+        // Provide more specific error messages
+        if (profileError.message.includes('duplicate key') || profileError.message.includes('unique')) {
+          throw new Error('This username is already taken. Please choose a different one.');
+        } else if (profileError.message.includes('not null')) {
+          throw new Error('Username cannot be empty. Please enter a valid username.');
+        } else {
+          throw profileError;
+        }
       }
 
-      // Update auth metadata
+      // Update auth metadata (this always works regardless of database schema)
+      const authData: any = { 
+        full_name: profileForm.full_name || 'Solo Traveler',
+        username: profileForm.username, // Always include username in auth metadata
+        avatar_url: profileForm.avatar_url
+      };
+      
+      console.log('AccountSettings: Updating auth metadata with username:', profileForm.username);
+      
       const { error: authError } = await supabase.auth.updateUser({
-        data: { 
-          full_name: profileForm.full_name || 'Solo Traveler',
-          avatar_url: profileForm.avatar_url
-        }
+        data: authData
       });
 
       if (authError) {
         console.warn('Auth metadata update warning:', authError);
         // Don't throw here as profile was updated successfully
       }
+
+      console.log('AccountSettings: Auth metadata updated successfully');
+      console.log('AccountSettings: Updated auth data:', authData);
+
+      // Refresh the user data in AuthContext to get updated metadata
+      console.log('Calling refreshUser() to update auth metadata...');
+      await refreshUser();
+      console.log('refreshUser() completed');
+
+      // Reload profile data to get updated username change info
+      console.log('Reloading profile data...');
+      await loadUserProfile();
+      console.log('Profile data reloaded');
+
+      // Dispatch custom event to notify other components (like Profile page) that profile was updated
+      window.dispatchEvent(new CustomEvent('profileUpdated', { 
+        detail: { 
+          type: 'profile',
+          data: { username: profileForm.username, full_name: profileForm.full_name }
+        }
+      }));
 
       setSuccess('Profile updated successfully!');
       
@@ -594,7 +735,7 @@ const AccountSettings: React.FC = () => {
                     {/* Form Fields */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Profile Name</label>
                         <div className="relative">
                           <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                           <input
@@ -602,8 +743,55 @@ const AccountSettings: React.FC = () => {
                             value={profileForm.full_name}
                             onChange={(e) => setProfileForm({...profileForm, full_name: e.target.value})}
                             className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300"
-                            placeholder="Enter your full name"
+                            placeholder="Enter your display name"
                           />
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">This is your display name and can be changed anytime</p>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
+                        <div className="relative">
+                          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">@</span>
+                          <input
+                            type="text"
+                            value={profileForm.username}
+                            onChange={(e) => setProfileForm({...profileForm, username: e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, '')})}
+                            className={`w-full pl-8 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300 ${
+                              usernameChangeInfo.username_change_count >= 2 && profileForm.username !== (user.user_metadata?.username || '')
+                                ? 'border-red-300 bg-red-50'
+                                : 'border-gray-200'
+                            }`}
+                            placeholder="username"
+                            disabled={usernameChangeInfo.username_change_count >= 2}
+                          />
+                        </div>
+                        
+                        {/* Username Change Limit Info */}
+                        <div className="mt-2">
+                          <div className="flex items-center justify-between text-xs">
+                            <span className="text-gray-600">
+                              Username changes: {usernameChangeInfo.username_change_count}/2
+                            </span>
+                            {usernameChangeInfo.last_username_change && (
+                              <span className="text-gray-500">
+                                Last changed: {new Date(usernameChangeInfo.last_username_change).toLocaleDateString()}
+                              </span>
+                            )}
+                          </div>
+                          
+                          {usernameChangeInfo.username_change_count >= 2 && (
+                            <div className="mt-1 flex items-center text-red-600 text-xs">
+                              <AlertTriangle className="h-3 w-3 mr-1" />
+                              <span>You can only change your username twice</span>
+                            </div>
+                          )}
+                          
+                          {usernameChangeInfo.username_change_count > 0 && (
+                            <div className="mt-1 text-xs text-gray-500">
+                              Original username: @{usernameChangeInfo.original_username}
+                            </div>
+                          )}
                         </div>
                       </div>
 
@@ -719,10 +907,11 @@ const AccountSettings: React.FC = () => {
                           </button>
                         </div>
                         {passwordForm.newPassword.length > 0 && (
-                          <PasswordStrengthIndicator 
-                            password={passwordForm.newPassword} 
-                            className="mt-3" 
-                          />
+                          <div className="mt-3">
+                            <PasswordStrengthIndicator 
+                              password={passwordForm.newPassword} 
+                            />
+                          </div>
                         )}
                       </div>
 

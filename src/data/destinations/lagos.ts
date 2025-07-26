@@ -34,8 +34,7 @@ const lagos: Destination = {
     safetyTips: {
       clothing: 'Dress modestly and avoid flashy jewelry. Keep valuables hidden.',
       firstTimers: 'Arrange airport transfers in advance. Avoid public transport after dark.',
-      apps: ['Uber', 'Bolt', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['Uber', 'Bolt', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Modest dress recommended. Avoid drawing attention.',

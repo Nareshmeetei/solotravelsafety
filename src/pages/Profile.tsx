@@ -25,24 +25,29 @@ import {
   LogOut,
   X,
   Feather,
-  FileText
+  FileText,
+  Cloud,
+  Train
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase, uploadProfileImage, getUserDestinations, getUserReviews } from '../lib/supabase';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ReviewModal from '../components/ReviewModal';
 import ChirpModal from '../components/ChirpModal';
 import ChirpCard from '../components/ChirpCard';
 import UserAvatar from '../components/UserAvatar';
+import DMModal from '../components/DMModal';
 
 const Profile: React.FC = () => {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('activity');
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showChirpModal, setShowChirpModal] = useState(false);
+  const [showDMModal, setShowDMModal] = useState(false);
   const [userReviews, setUserReviews] = useState<any[]>([]);
   const [userDestinations, setUserDestinations] = useState<any[]>([]);
   const [allPosts, setAllPosts] = useState<any[]>([]);
@@ -51,6 +56,8 @@ const Profile: React.FC = () => {
   const [uploadingImage, setUploadingImage] = useState(false);
   const [userProfile, setUserProfile] = useState<any>(null);
   const [showContributionsModal, setShowContributionsModal] = useState(false);
+  const [alerts, setAlerts] = useState<any[]>([]);
+  const [unreadAlertsCount, setUnreadAlertsCount] = useState(0);
 
   useEffect(() => {
     if (user) {
@@ -58,7 +65,65 @@ const Profile: React.FC = () => {
       loadUserProfile();
       loadAllPosts();
       loadUserChirps();
+      loadAlerts();
     }
+  }, [user]);
+
+  // Refresh profile data when navigating to this page
+  useEffect(() => {
+    if (user && location.pathname === '/profile') {
+      console.log('Navigated to Profile page, refreshing data...');
+      loadUserProfile();
+    }
+  }, [location.pathname, user]);
+
+  // Refresh profile data on component mount
+  useEffect(() => {
+    if (user) {
+      console.log('Profile component mounted, refreshing data...');
+      loadUserProfile();
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
+  // Refresh profile data when component becomes visible (e.g., when navigating back from settings)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!document.hidden && user) {
+        console.log('Visibility changed, refreshing profile data...');
+        loadUserProfile();
+      }
+    };
+
+    const handleProfileUpdate = (event: CustomEvent) => {
+      if (event.detail?.type === 'profile' && user) {
+        console.log('Profile updated event received, refreshing profile data...');
+        loadUserProfile();
+      }
+    };
+
+    const handleFocus = () => {
+      if (user) {
+        console.log('Window focused, refreshing profile data...');
+        loadUserProfile();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    window.addEventListener('focus', handleFocus);
+    
+    // Also refresh profile data when user object changes (e.g., after refreshUser is called)
+    if (user) {
+      console.log('User object changed, refreshing profile data...');
+      console.log('Current user metadata:', user.user_metadata);
+      loadUserProfile();
+    }
+    
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('profileUpdated', handleProfileUpdate as EventListener);
+      window.removeEventListener('focus', handleFocus);
+    };
   }, [user]);
 
   const loadUserProfile = async () => {
@@ -391,6 +456,119 @@ const Profile: React.FC = () => {
     }
   };
 
+  const loadAlerts = async () => {
+    if (!user) return;
+
+    try {
+      // Load alerts from localStorage
+      const storedAlerts = JSON.parse(localStorage.getItem(`alerts_${user.id}`) || '[]');
+      
+      // Add some sample safety alerts for demo
+      const sampleAlerts = [
+        {
+          id: '1',
+          type: 'safety_alert',
+          title: 'Safety Alert: Increased incidents in Paris',
+          message: 'Recent reports indicate increased pickpocketing in tourist areas. Stay vigilant and keep belongings secure.',
+          severity: 'medium',
+          location: 'Paris, France',
+          created_at: new Date(Date.now() - 30 * 60 * 1000).toISOString(), // 30 minutes ago
+          is_read: false
+        },
+        {
+          id: '2',
+          type: 'weather_alert',
+          title: 'Weather Alert: Heavy rain expected in Tokyo',
+          message: 'Heavy rainfall expected this weekend. Plan indoor activities and avoid flood-prone areas.',
+          severity: 'low',
+          location: 'Tokyo, Japan',
+          created_at: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
+          is_read: false
+        },
+        {
+          id: '3',
+          type: 'transport_alert',
+          title: 'Transport Alert: Metro delays in Barcelona',
+          message: 'Metro Line 3 experiencing delays due to maintenance. Plan extra travel time.',
+          severity: 'low',
+          location: 'Barcelona, Spain',
+          created_at: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(), // 4 hours ago
+          is_read: true
+        },
+        {
+          id: '4',
+          type: 'safety_alert',
+          title: 'Safety Alert: New safety feature available',
+          message: 'Emergency contact sharing feature now available. Add trusted contacts for quick access.',
+          severity: 'low',
+          location: 'Global',
+          created_at: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(), // 6 hours ago
+          is_read: true
+        }
+      ];
+
+      const allAlerts = [...storedAlerts, ...sampleAlerts];
+      setAlerts(allAlerts);
+      
+      // Calculate unread count
+      const unreadCount = allAlerts.filter(alert => !alert.is_read).length;
+      setUnreadAlertsCount(unreadCount);
+    } catch (error) {
+      console.error('Error loading alerts:', error);
+    }
+  };
+
+  const markAlertAsRead = (alertId: string) => {
+    setAlerts(prev => 
+      prev.map(alert => 
+        alert.id === alertId ? { ...alert, is_read: true } : alert
+      )
+    );
+
+    // Update localStorage
+    if (user) {
+      const updatedAlerts = alerts.map(alert => 
+        alert.id === alertId ? { ...alert, is_read: true } : alert
+      );
+      localStorage.setItem(`alerts_${user.id}`, JSON.stringify(updatedAlerts));
+      
+      // Update unread count
+      const unreadCount = updatedAlerts.filter(alert => !alert.is_read).length;
+      setUnreadAlertsCount(unreadCount);
+    }
+  };
+
+  const markAllAlertsAsRead = () => {
+    setAlerts(prev => 
+      prev.map(alert => ({ ...alert, is_read: true }))
+    );
+
+    // Update localStorage
+    if (user) {
+      const updatedAlerts = alerts.map(alert => ({ ...alert, is_read: true }));
+      localStorage.setItem(`alerts_${user.id}`, JSON.stringify(updatedAlerts));
+      setUnreadAlertsCount(0);
+    }
+  };
+
+  const getAlertIcon = (type: string) => {
+    switch (type) {
+      case 'safety_alert': return <Shield className="h-4 w-4 text-red-500" />;
+      case 'weather_alert': return <Cloud className="h-4 w-4 text-blue-500" />;
+      case 'transport_alert': return <Train className="h-4 w-4 text-orange-500" />;
+      default: return <AlertTriangle className="h-4 w-4 text-gray-500" />;
+    }
+  };
+
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'high': return 'bg-red-100 text-red-800';
+      case 'medium': return 'bg-yellow-100 text-yellow-800';
+      case 'low': return 'bg-green-100 text-green-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file || !user) return;
@@ -525,7 +703,8 @@ const Profile: React.FC = () => {
   const tabs = [
     { id: 'activity', label: 'Activity feed', icon: MessageSquare },
     { id: 'discover', label: 'Discover', icon: Compass },
-    { id: 'reviews', label: 'My Reviews', icon: Star }
+    { id: 'reviews', label: 'My Reviews', icon: Star },
+    { id: 'alerts', label: 'Alerts', icon: AlertTriangle }
   ];
 
   if (!user) {
@@ -578,7 +757,9 @@ const Profile: React.FC = () => {
                       <h2 className="text-xl font-display text-gray-900">
                         {userProfile?.full_name || user.user_metadata?.full_name || 'Solo Traveler'}
                       </h2>
-                      <p className="text-gray-600 text-sm">@{user.email?.split('@')[0]}</p>
+                      <p className="text-gray-600 text-sm">
+                        @{user.user_metadata?.username || userProfile?.username || user.email?.split('@')[0]}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -688,6 +869,13 @@ const Profile: React.FC = () => {
                     <MapPin className="h-5 w-5" />
                     <span className="font-medium">Add Destination</span>
                   </Link>
+                  <button 
+                    onClick={() => setShowDMModal(true)}
+                    className="w-full flex items-center space-x-3 p-3 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                  >
+                    <MessageSquare className="h-5 w-5" />
+                    <span className="font-medium">Messages</span>
+                  </button>
                   <Link 
                     to="/account-settings"
                     className="w-full flex items-center space-x-3 p-3 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors duration-300"
@@ -1085,6 +1273,12 @@ const Profile: React.FC = () => {
           console.log('onChirpPosted callback triggered');
           loadUserChirps();
         }}
+      />
+
+      {/* DM Modal */}
+      <DMModal
+        isOpen={showDMModal}
+        onClose={() => setShowDMModal(false)}
       />
 
       <Footer />

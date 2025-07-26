@@ -30,10 +30,9 @@ const vancouver: Destination = {
     ],
     alerts: [],
     safetyTips: {
-      clothing: 'Dress for the weather. Vancouver can be rainy.',
+      clothing: 'Dress for the weather. Vancouver is rainy and mild.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['TransLink', 'Uber', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['TransLink', 'Uber', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Casual and practical. No specific restrictions.',

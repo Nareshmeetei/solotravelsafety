@@ -32,8 +32,7 @@ const dublin: Destination = {
     safetyTips: {
       clothing: 'Dress for the weather. Ireland can be rainy.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['Dublin Bus', 'Luas', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['Dublin Bus', 'Luas', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Casual and practical. No specific restrictions.',

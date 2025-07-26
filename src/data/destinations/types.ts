@@ -52,7 +52,7 @@ export interface Destination {
     firstTimers: string;
     apps: string[];
     appLinks?: { name: string; link: string; ios?: string; description?: string }[];
-    emergencyPhrases: {
+    emergencyPhrases?: {
       english: string;
       local: string;
       localLanguage: string;
@@ -81,7 +81,10 @@ export interface Destination {
       eur: number;
       gbp: number;
     };
+    exchangeTips?: string[];
     scamWarnings: string[];
+    bestExchangeLocations?: string[];
+    tippingCulture?: string[];
     description?: string;
   };
   scamWarnings: {
@@ -239,9 +242,12 @@ export interface Destination {
   };
   governmentAdvisory?: {
     level: 'Exercise Normal Precautions' | 'Exercise Increased Caution' | 'Reconsider Travel' | 'Do Not Travel';
+    levelNumber: 1 | 2 | 3 | 4;
     source: string;
     lastUpdated: string;
     details: string;
+    reason?: string;
+    link?: string;
   };
   crimeStatistics?: {
     violentCrime: number; // per 100,000
@@ -263,6 +269,26 @@ export interface Destination {
       number: string;
       type: string;
     }[];
+  };
+  costAndComfort?: {
+    dailyBudget: {
+      range: string;
+      description: string;
+      tip: string;
+    };
+    accommodation: {
+      type: string;
+      avgCost: string;
+      safetyNote: string;
+      safetyLevel: 'high' | 'medium' | 'low';
+    }[];
+    transport: {
+      method: string;
+      cost: string;
+      safetyDescription: string;
+      safetyLevel: 'high' | 'medium' | 'low';
+    }[];
+    budgetTips: string[];
   };
 }
 

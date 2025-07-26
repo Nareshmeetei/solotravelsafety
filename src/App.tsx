@@ -15,6 +15,7 @@ import ScrollToTop from './components/ScrollToTop';
 import CookieConsent from './components/CookieConsent';
 import SentryErrorBoundary from './components/SentryErrorBoundary';
 import SentryTest from './components/SentryTest';
+import EnvironmentChecker from './components/EnvironmentChecker';
 
 // Protected Route component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -115,6 +116,7 @@ function App() {
             onAccept={handleCookieAccept}
             onDecline={handleCookieDecline}
           />
+          <EnvironmentChecker />
         </div>
       </Router>
     </AuthProvider>

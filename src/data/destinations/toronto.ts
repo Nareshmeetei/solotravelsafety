@@ -30,10 +30,9 @@ const toronto: Destination = {
     ],
     alerts: [],
     safetyTips: {
-      clothing: 'Dress for the weather. Toronto can be cold in winter.',
+      clothing: 'Dress for the weather. Toronto has four distinct seasons.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['TTC', 'Uber', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['TTC', 'Uber', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Casual and practical. No specific restrictions.',

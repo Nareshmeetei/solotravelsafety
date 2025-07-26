@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Moon, Bus, Users, Lightbulb, AlertTriangle } from 'lucide-react';
+import { Moon, Bus, Users } from 'lucide-react';
 import { destinations } from '../data/destinations';
 import FlagImage from './FlagImage';
+import WeatherDisplay from './WeatherDisplay';
 
 const PopularDestinations: React.FC = () => {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  
+  const toggleCardExpansion = (destinationId: string) => {
+    setExpandedCard(prev => prev === destinationId ? null : destinationId);
+  };
+
   // Dynamic background color based on safety score with lighter hover states
   const getSafetyBackgroundColor = (score: number) => {
     if (score >= 8.0) {
@@ -16,16 +23,7 @@ const PopularDestinations: React.FC = () => {
     }
   };
 
-  // Dynamic icon color based on safety score
-  const getSafetyIconColor = (score: number) => {
-    if (score >= 8.0) {
-      return 'bg-green-100 text-green-600'; // High safety - green
-    } else if (score >= 6.0) {
-      return 'bg-yellow-100 text-yellow-600'; // Medium safety - yellow
-    } else {
-      return 'bg-red-100 text-red-600'; // Low safety - red
-    }
-  };
+
 
   const getScoreColor = (score: number) => {
     if (score >= 8) return 'text-green-600 bg-green-100';
@@ -70,13 +68,24 @@ const PopularDestinations: React.FC = () => {
         
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destinations.map((destination, index) => (
-            <Link
+            <div
               key={index}
-              to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
-              onClick={() => handleDestinationClick(destination.city, destination.country)}
               className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
             >
               {/* Header */}
+              <Link
+                to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
+                onClick={(e) => {
+                  // Prevent navigation on mobile when tapping to expand
+                  if (window.innerWidth < 768 && !expandedCard) {
+                    e.preventDefault();
+                    toggleCardExpansion(`${destination.city}-${destination.country}`);
+                  } else {
+                    handleDestinationClick(destination.city, destination.country);
+                  }
+                }}
+                className="block"
+              >
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <FlagImage 
@@ -92,20 +101,15 @@ const PopularDestinations: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Tags with Safety-Based Colors */}
-                <div className="flex items-center space-x-1">
-                  {destination.tags.includes('insider-tips') && (
-                    <div className={`rounded-full p-1.5 transition-all duration-300 ${getSafetyIconColor(destination.overallScore)}`}>
-                      <Lightbulb className="h-3 w-3 transition-transform duration-300" />
-                    </div>
-                  )}
-                  {destination.tags.includes('warning-flags') && (
-                    <div className={`rounded-full p-1.5 transition-all duration-300 ${getSafetyIconColor(destination.overallScore)}`}>
-                      <AlertTriangle className="h-3 w-3 transition-transform duration-300" />
-                    </div>
-                  )}
+                                      {/* Live Weather Temperature */}
+                    <WeatherDisplay 
+                      city={destination.city}
+                      country={destination.country}
+                      className="transition-transform duration-300 group-hover:scale-105"
+                      isExpanded={expandedCard === `${destination.city}-${destination.country}`}
+                    />
                 </div>
-              </div>
+              </Link>
               
               {/* Overall Score */}
               <div className="mb-4">
@@ -117,8 +121,8 @@ const PopularDestinations: React.FC = () => {
                 </div>
               </div>
               
-              {/* Safety Indicators */}
-              <div className="space-y-3">
+              {/* Safety Indicators - Default View */}
+              <div className="space-y-3 md:group-hover:opacity-0 transition-opacity duration-300">
                 <div className="flex items-center justify-between group/item">
                   <div className="flex items-center space-x-2">
                     <Moon className="h-4 w-4 text-gray-500 transition-all duration-300" />
@@ -158,7 +162,133 @@ const PopularDestinations: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+
+              {/* Desktop Hover Overlay - Additional Info */}
+              <div className={`hidden md:block absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getSafetyBackgroundColor(destination.overallScore)} backdrop-blur-sm rounded-b-2xl p-4`}>
+                <div className="space-y-2">
+                  {/* Top Red Flag */}
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-[10px] font-semibold text-red-600 uppercase tracking-wide">Top Red Flag</h4>
+                      <p className="text-sm text-gray-700 leading-tight">
+                        {destination.redFlags && destination.redFlags.length > 0 
+                          ? destination.redFlags[0].label 
+                          : "No significant red flags"}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Safest Area */}
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-[10px] font-semibold text-green-600 uppercase tracking-wide">Safest Area</h4>
+                      <p className="text-sm text-gray-700 leading-tight">
+                        {destination.neighborhoods && destination.neighborhoods.safe && destination.neighborhoods.safe.length > 0
+                          ? typeof destination.neighborhoods.safe[0] === 'string' 
+                            ? destination.neighborhoods.safe[0]
+                            : destination.neighborhoods.safe[0].name
+                          : "City Center"}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Daily Budget */}
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Daily Budget</h4>
+                      <p className="text-sm text-gray-700 leading-tight">
+                        {destination.costAndComfort && destination.costAndComfort.dailyBudget
+                          ? destination.costAndComfort.dailyBudget.range
+                          : "$40-80 USD/day"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Expanded View */}
+              <div className={`md:hidden overflow-hidden transition-all duration-300 ${
+                expandedCard === `${destination.city}-${destination.country}` 
+                  ? 'max-h-48 opacity-100' 
+                  : 'max-h-0 opacity-0'
+              }`}>
+                <div className="pt-2 space-y-3">
+                  {/* Top Red Flag */}
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-[10px] font-semibold text-red-600 uppercase tracking-wide">Top Red Flag</h4>
+                      <p className="text-sm text-gray-700 leading-tight">
+                        {destination.redFlags && destination.redFlags.length > 0 
+                          ? destination.redFlags[0].label 
+                          : "No significant red flags"}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Safest Area */}
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-[10px] font-semibold text-green-600 uppercase tracking-wide">Safest Area</h4>
+                      <p className="text-sm text-gray-700 leading-tight">
+                        {destination.neighborhoods && destination.neighborhoods.safe && destination.neighborhoods.safe.length > 0
+                          ? typeof destination.neighborhoods.safe[0] === 'string' 
+                            ? destination.neighborhoods.safe[0]
+                            : destination.neighborhoods.safe[0].name
+                          : "City Center"}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Daily Budget */}
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Daily Budget</h4>
+                      <p className="text-sm text-gray-700 leading-tight">
+                        {destination.costAndComfort && destination.costAndComfort.dailyBudget
+                          ? destination.costAndComfort.dailyBudget.range
+                          : "$40-80 USD/day"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Meta Info with Mobile Button */}
+              <div className="flex items-center justify-between mt-5">
+                <div className="text-xs text-gray-500 space-y-1">
+                  <div>{destination.reviewCount} reviews</div>
+                  <div>Updated {destination.lastUpdated}</div>
+                </div>
+                
+                {/* Mobile Quick View Button - Bottom Right */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleCardExpansion(`${destination.city}-${destination.country}`);
+                  }}
+                  className="md:hidden p-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full text-gray-400 hover:text-gray-600 transition-all duration-300"
+                  aria-label="Quick view"
+                >
+                  <svg 
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      expandedCard === `${destination.city}-${destination.country}` ? 'rotate-180' : ''
+                    }`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           ))}
         </div>
         

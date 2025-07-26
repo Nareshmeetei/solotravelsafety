@@ -30,10 +30,9 @@ const singapore: Destination = {
     ],
     alerts: [],
     safetyTips: {
-      clothing: 'Dress for the weather. Singapore is hot and humid.',
+      clothing: 'Dress for the hot, humid weather. Light, breathable clothing.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['MyTransport.SG', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['SMRT', 'Grab', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Light, comfortable clothing. No specific restrictions.',

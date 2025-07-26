@@ -364,28 +364,10 @@ const amsterdam: Destination = {
       },
       embassies: [
         {
-          name: 'U.S. Embassy The Hague (serves Amsterdam)',
-          address: 'John Adams Park 1, 2244 BZ Wassenaar',
-          phone: '+31 70 310 2209',
-          link: 'https://nl.usembassy.gov/'
-        },
-        {
           name: 'British Embassy The Hague',
           address: 'Lange Voorhout 10, 2514 ED The Hague',
           phone: '+31 70 427 0427',
           link: 'https://www.gov.uk/world/organisations/british-embassy-the-hague'
-        },
-        {
-          name: 'Australian Embassy The Hague',
-          address: 'Carnegieplein 4, 2517 KJ The Hague',
-          phone: '+31 70 310 8200',
-          link: 'https://netherlands.embassy.gov.au/'
-        },
-        {
-          name: 'Embassy of France in the Netherlands',
-          address: 'Anna Paulownastraat 76, 2518 BJ The Hague',
-          phone: '+31 70 312 5800',
-          link: 'https://nl.ambafrance.org/'
         },
         {
           name: 'Embassy of Germany in The Hague',
@@ -394,34 +376,40 @@ const amsterdam: Destination = {
           link: 'https://niederlande.diplo.de/'
         },
         {
+          name: 'Embassy of France in the Netherlands',
+          address: 'Anna Paulownastraat 76, 2518 BJ The Hague',
+          phone: '+31 70 312 5800',
+          link: 'https://nl.ambafrance.org/'
+        },
+        {
+          name: 'Australian Embassy The Hague',
+          address: 'Carnegieplein 4, 2517 KJ The Hague',
+          phone: '+31 70 310 8200',
+          link: 'https://netherlands.embassy.gov.au/'
+        },
+        {
           name: 'Embassy of Canada in The Hague',
           address: 'Sophialaan 7, 2514 JP The Hague',
           phone: '+31 70 311 1600',
           link: 'https://www.international.gc.ca/country-pays/netherlands-pays_bas/the-hague-la-haye.aspx?lang=eng'
         },
         {
-          name: 'Embassy of Italy in The Hague',
-          address: 'Parkstraat 28, 2514 JK The Hague',
-          phone: '+31 70 302 1030',
-          link: 'https://ambhaydel.esteri.it/ambasciata_lAia/en/'
+          name: 'Embassy of Denmark in The Hague',
+          address: 'Koninginnegracht 30, 2514 AB The Hague',
+          phone: '+31 70 302 5959',
+          link: 'https://netherlands.um.dk/en'
         },
         {
-          name: 'Embassy of Spain in The Hague',
-          address: 'Lange Voorhout 50, 2514 EG The Hague',
-          phone: '+31 70 302 4999',
-          link: 'https://www.exteriores.gob.es/Embajadas/lahaya/en/Pages/inicio.aspx'
+          name: 'Embassy of Switzerland in The Hague',
+          address: 'Lange Voorhout 42, 2514 EG The Hague',
+          phone: '+31 70 364 28 31',
+          link: 'https://www.eda.admin.ch/netherlands'
         },
         {
-          name: 'Embassy of Japan in The Hague',
-          address: 'Tobias Asserlaan 5, 2517 KC The Hague',
-          phone: '+31 70 346 9544',
-          link: 'https://www.nl.emb-japan.go.jp/itprtop_en/index.html'
-        },
-        {
-          name: 'Royal Thai Embassy The Hague',
-          address: 'Laan Copes van Cattenburch 123, 2585 EZ The Hague',
-          phone: '+31 70 345 9703',
-          link: 'https://hague.thaiembassy.org/'
+          name: 'Embassy of India in The Hague',
+          address: 'Buitenrustweg 2, 2243 AB Wassenaar',
+          phone: '+31 70 346 9771',
+          link: 'https://www.indianembassynetherlands.gov.in/'
         }
       ],
       consulate: {
@@ -660,9 +648,12 @@ const amsterdam: Destination = {
     },
     governmentAdvisory: {
       level: 'Exercise Normal Precautions',
+      levelNumber: 1,
       source: 'U.S. Department of State',
-      lastUpdated: '2025-01-15',
-      details: 'The Netherlands is generally safe for travelers. Exercise normal precautions. Be aware of petty crime in tourist areas and use common sense safety measures.'
+      lastUpdated: 'January 2025',
+      details: 'The Netherlands is generally safe for travelers. Exercise normal precautions. Be aware of petty crime in tourist areas and use common sense safety measures.',
+      reason: 'Petty theft near tourist hotspots.',
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/netherlands-travel-advisory.html'
     },
     crimeStatistics: {
       violentCrime: 8.2, // per 100,000 (2023 data)
@@ -765,7 +756,66 @@ const amsterdam: Destination = {
         sourceName: 'I amsterdam',
         sourceUrl: 'https://www.iamsterdam.com/en/travel-stay/health-safety-and-crime-in-amsterdam'
       }
-    ]
+    ],
+    costAndComfort: {
+      dailyBudget: {
+        range: '$45 - $65 USD / day',
+        description: 'Covers food, stay, and transport at a safe and comfortable level.',
+        tip: 'Low-budget travel is possible, but a mid-range budget provides safer and more comfortable options for solo women.'
+      },
+      accommodation: [
+        {
+          type: 'Women-only Hostel',
+          avgCost: '$12-20',
+          safetyNote: 'Best for safety on a budget',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Budget Hotel',
+          avgCost: '$30-50',
+          safetyNote: 'Mixed reviews - check for well-lit areas & verified listings',
+          safetyLevel: 'medium'
+        },
+        {
+          type: 'Private Airbnb / Hotel',
+          avgCost: '$40+',
+          safetyNote: 'Safer with reviewed hosts & 24/7 access',
+          safetyLevel: 'high'
+        }
+      ],
+      transport: [
+        {
+          method: 'Public Transit',
+          cost: '$2-5/day',
+          safetyDescription: 'Safe during daytime. Can get crowded.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Rideshare (Uber/Bolt)',
+          cost: '$8-15/ride',
+          safetyDescription: 'Most women report feeling safe, especially at night.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Local Buses',
+          cost: '$1-3',
+          safetyDescription: 'Cheap but confusing for non-locals. Avoid at night.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Walking',
+          cost: 'Free',
+          safetyDescription: 'Safe during the day | Caution after dark',
+          safetyLevel: 'medium'
+        }
+      ],
+      budgetTips: [
+        'Spending slightly more often means safer, central neighborhoods',
+        '24/7 hotel security or staff',
+        'Trusted rides over random taxis',
+        'What you spend can directly affect how safe you feel'
+      ]
+    }
 };
 
 export default amsterdam;

@@ -24,7 +24,8 @@ import {
   Plus,
   Eye,
   EyeOff,
-  Volume2
+  Volume2,
+  Wallet
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -383,8 +384,9 @@ const DestinationDetail: React.FC = () => {
 
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Info },
-    { id: 'safety', label: 'Safety Details', icon: Shield },
+    { id: 'safety', label: 'Safety', icon: Shield },
     { id: 'practical', label: 'Practical Info', icon: MapPin },
+    { id: 'cost', label: 'Cost & Comfort', icon: Wallet },
     { id: 'reviews', label: `Reviews (${reviews.length})`, icon: MessageSquare }
   ];
 
@@ -494,7 +496,8 @@ const DestinationDetail: React.FC = () => {
                   </div>
                 </div>
                 {/* Emergency Phrases - now second */}
-                {destination.safetyTips.emergencyPhrases && destination.safetyTips.emergencyPhrases.length > 0 && (
+                {destination.safetyTips.emergencyPhrases && destination.safetyTips.emergencyPhrases.length > 0 && 
+                 !['Australia', 'Canada', 'Ireland', 'New Zealand', 'United Kingdom', 'United States'].includes(destination.country) && (
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">Emergency Phrases</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -711,7 +714,7 @@ const DestinationDetail: React.FC = () => {
               
               {/* Tab Navigation */}
               <div className="hidden sm:block bg-white rounded-2xl shadow-sm border border-gray-200 mb-6 sticky top-0 z-30">
-                <div className="flex space-x-8 overflow-x-auto px-6">
+                <div className="flex space-x-4 overflow-x-auto px-6">
                   {tabs.map((tab) => (
                     <button
                       key={tab.id}
@@ -734,7 +737,7 @@ const DestinationDetail: React.FC = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex flex-col items-center justify-center px-2 py-1 text-xs font-medium focus:outline-none transition-all duration-200 ${
+                    className={`flex flex-col items-center justify-center px-1 py-1 text-xs font-medium focus:outline-none transition-all duration-200 ${
                       activeTab === tab.id
                         ? 'text-primary-400'
                         : 'text-gray-500 hover:text-primary-400'
@@ -796,8 +799,8 @@ const DestinationDetail: React.FC = () => {
                     {destination.alerts && destination.alerts.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
-                          <AlertTriangle className="h-5 w-5 mr-2 text-red-500" />
-                          Current Safety Alerts
+                          <span>Current Safety Alerts</span>
+                          <AlertTriangle className="h-5 w-5 ml-2 text-red-500" />
                         </h3>
                         <div className="space-y-3">
                           {destination.alerts.map((alert: any, index: number) => (
@@ -1127,6 +1130,98 @@ const DestinationDetail: React.FC = () => {
                   </div>
                 )}
 
+                {/* Cost & Comfort Tab */}
+                {activeTab === 'cost' && destination.costAndComfort && (
+                  <div className="space-y-6">
+                    {/* Daily Budget Range */}
+                    <div>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Estimated Daily Budget</h3>
+                      <div className="p-6 bg-green-50 border border-green-200 rounded-2xl">
+                        <div className="text-center mb-4">
+                          <div className="text-3xl font-bold text-green-900 mb-2">
+                            {destination.costAndComfort.dailyBudget.range}
+                          </div>
+                          <p className="text-green-800 mb-3">{destination.costAndComfort.dailyBudget.description}</p>
+                          <div className="bg-green-100 border border-green-300 rounded-lg p-3">
+                            <p className="text-sm text-green-900 font-medium">{destination.costAndComfort.dailyBudget.tip}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Accommodation Safety vs Cost */}
+                    <div>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Where to Stay - Cost vs Safety</h3>
+                      <div className="space-y-4">
+                        {destination.costAndComfort.accommodation.map((acc: any, index: number) => (
+                          <div key={index} className="p-4 border rounded-lg bg-white">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center space-x-3">
+                                <div className={`w-3 h-3 rounded-full ${
+                                  acc.safetyLevel === 'high' ? 'bg-green-500' : 
+                                  acc.safetyLevel === 'medium' ? 'bg-yellow-500' : 'bg-red-500'
+                                }`}></div>
+                                <span className="font-semibold text-gray-900">{acc.type}</span>
+                              </div>
+                              <span className="font-bold text-gray-900">{acc.avgCost}</span>
+                            </div>
+                            <p className={`text-sm ${
+                              acc.safetyLevel === 'high' ? 'text-green-700' : 
+                              acc.safetyLevel === 'medium' ? 'text-yellow-700' : 'text-red-700'
+                            }`}>
+                              {acc.safetyLevel === 'high' ? '✓ ' : acc.safetyLevel === 'medium' ? '⚠ ' : '✗ '}
+                              {acc.safetyNote}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Getting Around - Cost & Comfort */}
+                    <div>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Transport Options</h3>
+                      <div className="space-y-4">
+                        {destination.costAndComfort.transport.map((trans: any, index: number) => (
+                          <div key={index} className="p-4 border rounded-lg bg-white">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center space-x-3">
+                                <div className={`w-3 h-3 rounded-full ${
+                                  trans.safetyLevel === 'high' ? 'bg-green-500' : 
+                                  trans.safetyLevel === 'medium' ? 'bg-yellow-500' : 'bg-red-500'
+                                }`}></div>
+                                <span className="font-semibold text-gray-900">{trans.method}</span>
+                              </div>
+                              <span className="font-bold text-gray-900">{trans.cost}</span>
+                            </div>
+                            <p className={`text-sm ${
+                              trans.safetyLevel === 'high' ? 'text-green-700' : 
+                              trans.safetyLevel === 'medium' ? 'text-yellow-700' : 'text-red-700'
+                            }`}>
+                              {trans.safetyLevel === 'high' ? '✓ ' : trans.safetyLevel === 'medium' ? '⚠ ' : '✗ '}
+                              {trans.safetyDescription}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Budget-Safety Tips */}
+                    <div>
+                      <h3 className="text-xl font-display text-gray-900 mb-4">Smart Budgeting = Safer Travel</h3>
+                      <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                        <ul className="space-y-2">
+                          {destination.costAndComfort.budgetTips.map((tip: string, index: number) => (
+                            <li key={index} className="flex items-start space-x-2">
+                              <span className="text-green-600 font-bold mt-0.5">✓</span>
+                              <span className="text-blue-900">{tip}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Reviews Tab */}
                 {activeTab === 'reviews' && (
                   <div className="space-y-6">
@@ -1214,10 +1309,92 @@ const DestinationDetail: React.FC = () => {
                 </div>
               </div>
 
+              {/* Travel Advisory */}
+              {destination.governmentAdvisory && (
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                  <h3 className="text-lg font-display text-gray-900 mb-4">
+                    Travel Advisory
+                  </h3>
+                  
+                  {/* Section 1: Advisory Status */}
+                  <div className={`p-4 rounded-lg mb-4 ${
+                    destination.governmentAdvisory.level === 'Exercise Normal Precautions' ? 'bg-green-50 border border-green-200' :
+                    destination.governmentAdvisory.level === 'Exercise Increased Caution' ? 'bg-yellow-50 border border-yellow-200' :
+                    destination.governmentAdvisory.level === 'Reconsider Travel' ? 'bg-orange-50 border border-orange-200' :
+                    'bg-red-50 border border-red-200'
+                  }`}>
+                    <div className="text-center">
+                      <div className={`text-lg font-bold mb-1 ${
+                        destination.governmentAdvisory.level === 'Exercise Normal Precautions' ? 'text-green-900' :
+                        destination.governmentAdvisory.level === 'Exercise Increased Caution' ? 'text-yellow-900' :
+                        destination.governmentAdvisory.level === 'Reconsider Travel' ? 'text-orange-900' :
+                        'text-red-900'
+                      }`}>
+                        Level {destination.governmentAdvisory.levelNumber}: {destination.governmentAdvisory.level}
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        Issued by: {destination.governmentAdvisory.source}
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        Updated: {destination.governmentAdvisory.lastUpdated}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Section 2: Summary */}
+                  {destination.governmentAdvisory.reason && (
+                    <div className="mb-4">
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {destination.governmentAdvisory.reason}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Section 3: What This Means for You */}
+                  <div className="mb-4">
+                    <h4 className="font-display text-gray-900 mb-2 text-sm">What this means for solo travelers</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 mt-0.5">•</span>
+                        Watch your bag in markets and metros
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 mt-0.5">•</span>
+                        Avoid isolated streets at night
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 mt-0.5">•</span>
+                        Use rideshare apps over local taxis
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Section 4: Community Match */}
+                  <div className="mb-4 text-xs text-gray-500 flex items-center">
+                    <Eye className="h-3 w-3 mr-1" />
+                    Matched by 2 community reports
+                  </div>
+
+                  {/* Section 5: CTA Link */}
+                  {destination.governmentAdvisory.link && (
+                    <div>
+                      <a
+                        href={destination.governmentAdvisory.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-primary-400 hover:text-primary-500 font-medium transition-colors text-sm"
+                      >
+                        Read Full Advisory
+                        <ExternalLink className="h-4 w-4 ml-1" />
+                      </a>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* Best Time to Visit */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                <h3 className="text-lg font-display text-gray-900 mb-4 flex items-center">
-                  <Calendar className="h-5 w-5 mr-2" />
+                <h3 className="text-lg font-display text-gray-900 mb-4">
                   Best Time to Visit
                 </h3>
                 <div className="space-y-3">

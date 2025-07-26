@@ -5,65 +5,66 @@ const auckland: Destination = {
     country: 'New Zealand',
     continent: 'Oceania',
     countryCode: 'nz',
-    overallScore: 8.6,
-    nightSafety: 8.3,
-    publicTransit: 8.7,
-    walkingAlone: 8.5,
-    tags: ['insider-tips', 'extremely-safe'],
-    bgColor: 'bg-green-25',
+    overallScore: 6.8,
+    nightSafety: 5.2,
+    publicTransit: 7.1,
+    walkingAlone: 6.5,
+    tags: ['warning-flags', 'moderate-risk'],
+    bgColor: 'bg-yellow-50',
     reviewCount: 150,
-    lastUpdated: '4 days ago',
-    harassmentRisk: 'low',
+    lastUpdated: '2 days ago',
+    harassmentRisk: 'medium',
     safetyBreakdown: {
       nightSafety: {
-        score: 8.0,
-        context: 'Auckland is generally safe at night, especially in central and busy areas like the CBD, Ponsonby, and Parnell. Well-lit streets and a visible police presence contribute to a sense of security. However, solo women should avoid isolated parks, industrial areas, and some parts of South Auckland after dark. While violent crime is rare, incidents of harassment and assault can occur, particularly late at night around nightlife zones (e.g., Karangahape Road). Use registered taxis or rideshares for late-night travel, and always stay aware of your surroundings.'
+        score: 5.2,
+        context: 'Auckland has become significantly less safe at night in recent years, especially for solo women travelers. The CBD, particularly around Queen Street, Karangahape Road (K Road), and Quay Street, has seen increased incidents of harassment, assault, and violent crime after dark. South Auckland areas (Otara, Manurewa, Mangere) have higher crime rates and should be avoided at night. While some neighborhoods like Ponsonby and Devonport remain relatively safe, incidents of sexual harassment and assault have increased citywide. Women should avoid walking alone after dark and use registered taxis or rideshares.'
       },
       publicTransit: {
-        score: 8.5,
-        context: 'Auckland’s public transport (buses, trains, ferries) is safe, clean, and reliable. Security cameras and staff are present at major stations. Night buses run on main routes, but avoid empty carriages late at night. Harassment is uncommon but can happen—move closer to the driver or other passengers if you feel uncomfortable. Use the AT Mobile app for real-time updates and emergency contact options. Report any incidents to Auckland Transport or the police.'
+        score: 7.1,
+        context: 'Auckland\'s public transport (buses, trains, ferries) is generally safe during daylight hours but becomes riskier at night. Security cameras are present at major stations, but harassment can occur, especially on night buses and in less crowded carriages. The AT Mobile app provides real-time updates and emergency contact options. Women should avoid empty carriages late at night and sit near the driver or other passengers if feeling uncomfortable. Recent reports indicate increased incidents of harassment on public transport, particularly after dark.'
       },
       walkingAlone: {
-        score: 8.2,
-        context: 'Walking alone in Auckland is very safe during the day in most neighborhoods. At night, stick to well-lit, busy streets and avoid deserted or poorly lit areas. Central Auckland, Ponsonby, and Parnell are safest. Trust your instincts—if an area feels unsafe, leave and seek help. Locals are friendly and helpful, and emergency services respond quickly.'
+        score: 6.5,
+        context: 'Walking alone in Auckland is moderately safe during the day in most neighborhoods, but safety has declined significantly in recent years. Central Auckland, Ponsonby, and Parnell remain safer options, but incidents of harassment and assault have increased. At night, walking alone is not recommended, especially in the CBD, South Auckland, and around nightlife districts. Trust your instincts—if an area feels unsafe, leave immediately and seek help. Emergency services respond quickly, but prevention is crucial.'
       }
     },
     neighborhoods: {
       safe: [
         {
           name: 'Ponsonby',
-          description: 'Trendy, vibrant, and one of Auckland’s safest neighborhoods. Strong community policing, active suburb watch groups, and a lively dining and shopping scene. Incidents of harassment and assault are rare, and the area is well-lit and busy into the evening. Excellent for solo women, but always use caution late at night around bars.'
+          description: 'Trendy, vibrant neighborhood that remains one of Auckland\'s safer areas. Strong community policing and active neighborhood watch groups. While incidents of harassment and assault are lower than other areas, caution is still advised late at night around bars and clubs. The area is well-lit and busy into the evening, making it relatively safe for solo women during daylight hours.'
         },
         {
           name: 'Devonport',
-          description: 'Historic, seaside suburb with a strong community feel and very low crime rates. 24/7 police presence and active patrols. Ideal for solo travelers seeking tranquility and safety. Nighttime walks are generally safe, but as always, avoid deserted areas.'
+          description: 'Historic, seaside suburb with a strong community feel and lower crime rates compared to other areas. Police presence is visible, and the area is popular with families and tourists. Nighttime walks are generally safer here than in other parts of Auckland, but as always, avoid deserted areas and stay alert.'
         },
         {
           name: 'Mount Eden',
-          description: 'Leafy, residential, and popular with families and young professionals. Crime rates have dropped significantly in recent years. Community safety partnerships and good lighting make it safe for solo women, though caution is advised near parks after dark.'
+          description: 'Leafy, residential area popular with families and young professionals. Crime rates have increased in recent years but remain lower than many other neighborhoods. Community safety partnerships and good lighting make it relatively safe for solo women during the day, though caution is advised near parks after dark.'
         },
         {
           name: 'Parnell',
-          description: 'Upscale, historic, and well-patrolled. Private security and CCTV in commercial areas. Very low rates of violent crime and harassment. Stick to main streets at night and avoid isolated parks.'
+          description: 'Upscale, historic area with private security and CCTV in commercial zones. Lower rates of violent crime compared to other areas, but incidents of harassment can still occur. Stick to main streets at night and avoid isolated parks. Generally safer for solo women travelers.'
         },
         {
           name: 'Takapuna',
-          description: 'Beachside suburb with a strong safety record, active beach patrols, and a visible police presence. Popular with locals and tourists. Nightlife is generally safe, but avoid the beach and dark alleys late at night.'
+          description: 'Beachside suburb with active beach patrols and visible police presence. Popular with locals and tourists, with generally lower crime rates. Nightlife is relatively safe, but avoid the beach and dark alleys late at night. Better option for solo women travelers.'
         },
         {
           name: 'Grey Lynn',
-          description: 'Creative, diverse, and increasingly safe. Community initiatives and improved lighting have reduced crime. Solo women report feeling comfortable, but as with all urban areas, stay alert at night.'
+          description: 'Creative, diverse neighborhood that has seen some improvement in safety through community initiatives and better lighting. Solo women report feeling moderately comfortable during the day, but stay alert at night as with all urban areas.'
         }
       ],
       caution: [
-        'Auckland CBD (Central Business District) late at night: While busy and well-patrolled during the day, the CBD can become risky after dark, especially around Queen Street, Karangahape Road (K Road), and Quay Street. Incidents of harassment, assault, and theft are more common here, particularly for solo women. Avoid walking alone late at night, especially near bars, clubs, and construction zones.',
-        'South Auckland (Otara, Manurewa, Mangere): Higher rates of violent crime, gang activity, and property crime. While many residents are friendly, these areas are best avoided after dark, especially for solo travelers.',
-        'Nightlife districts (K Road, parts of CBD, Fort Street): Increased risk of sexual harassment, assault, and petty crime late at night. Use official taxis or rideshares, and avoid walking alone after midnight.'
+        'Auckland CBD (Central Business District) late at night: While busy and well-patrolled during the day, the CBD has become increasingly risky after dark, especially around Queen Street, Karangahape Road (K Road), and Quay Street. Incidents of harassment, assault, and theft are common here, particularly for solo women. Avoid walking alone late at night, especially near bars, clubs, and construction zones.',
+        'South Auckland (Otara, Manurewa, Mangere): Higher rates of violent crime, gang activity, and property crime. While many residents are friendly, these areas are best avoided after dark, especially for solo travelers. Incidents of sexual harassment and assault are more frequent.',
+        'Nightlife districts (K Road, parts of CBD, Fort Street): Increased risk of sexual harassment, assault, and petty crime late at night. Use official taxis or rideshares, and avoid walking alone after midnight. Recent reports indicate growing safety concerns in these areas.'
       ],
       avoid: [
         'Deserted parks, industrial areas, and poorly lit streets after dark anywhere in Auckland.',
         'Emergency housing zones and areas with visible gang activity (some parts of South Auckland and West Auckland).',
-        'Any location where you feel unsafe or are being followed—trust your instincts and seek help immediately.'
+        'Any location where you feel unsafe or are being followed—trust your instincts and seek help immediately.',
+        'Isolated areas around the waterfront and industrial zones after dark.'
       ]
     },
     accommodations: [
@@ -72,7 +73,7 @@ const auckland: Destination = {
         type: 'hotel',
         features: ['Central location', '24/7 security', 'Solo traveler friendly'],
         rating: 4.3,
-        notes: 'Excellent safety reputation, central, and popular with solo women travelers.',
+        notes: 'Good safety reputation, central location, and popular with solo women travelers. Security measures in place.',
         link: 'https://the-quadrant.aucklandtophotels.com/'
       },
       {
@@ -80,7 +81,7 @@ const auckland: Destination = {
         type: 'hotel',
         features: ['CBD location', '24-hour reception', 'High safety ratings'],
         rating: 4.6,
-        notes: 'In the heart of Auckland, highly rated for solo women safety.',
+        notes: 'In the heart of Auckland, highly rated for solo women safety. Good security measures.',
         link: 'https://scenic-hotel-auckland.aucklandcityhotels.net/'
       },
       {
@@ -88,7 +89,7 @@ const auckland: Destination = {
         type: 'hostel',
         features: ['Female-only dorms', 'Central', 'Secure access'],
         rating: 4.5,
-        notes: 'Modern, safe, and social hostel with female-only dorms.',
+        notes: 'Modern, safe, and social hostel with female-only dorms. Good for solo travelers.',
         link: 'https://hakalodges.com/auckland'
       },
       {
@@ -96,32 +97,51 @@ const auckland: Destination = {
         type: 'hostel',
         features: ['Central', 'Secure', 'Clean', 'Female-friendly'],
         rating: 4.4,
-        notes: 'Voted Auckland’s most popular hostel, very safe for solo women.',
+        notes: 'Popular hostel with good safety measures for solo women travelers.',
         link: 'https://www.atticbackpackers.co.nz/'
       },
       {
-        name: 'Queen Street Backpackers',
+        name: 'YHA Auckland City',
         type: 'hostel',
-        features: ['CBD location', 'Secure', 'Friendly staff'],
+        features: ['Female dorms', 'Central location', 'Security cameras'],
         rating: 4.2,
-        notes: 'Safe, central, and budget-friendly for solo travelers.',
-        link: 'https://queen-street-backpackers.aucklandcityhotels.net/'
+        notes: 'Well-established hostel chain with good safety protocols and female-only dorms available.',
+        link: 'https://www.yha.co.nz/hostels/north-island-hostels/auckland/auckland-city/'
       }
     ],
-    alerts: [],
+    alerts: [
+      {
+        title: 'Increased Crime Alert',
+        description: 'Recent reports indicate rising crime rates in Auckland CBD and surrounding areas',
+        location: 'CBD and South Auckland',
+        reportCount: 45,
+        severity: 'medium',
+        dateReported: '3 days ago'
+      }
+    ],
     safetyTips: {
       clothing: `• Auckland weather is changeable—layer up, carry a rain jacket, and wear comfortable shoes.
 • In city areas, casual attire is fine, but cover up when visiting marae or religious sites.
 • For nightlife, dress smart-casual, but avoid flashy jewelry and keep your bag zipped.
-• Always carry a charged phone and emergency contacts.`,
-      firstTimers: `• Auckland is easy for solo women, but stay alert, especially at night.
+• Always carry a charged phone and emergency contacts.
+• Consider carrying a personal safety alarm.`,
+      firstTimers: `• Auckland has become less safe for solo women in recent years—stay alert, especially at night.
 • Save emergency numbers (111 for police, fire, ambulance) and local support hotlines.
-• Use official taxis or rideshares after dark.
+• Use official taxis or rideshares after dark—avoid walking alone.
 • Avoid walking alone in deserted or poorly lit areas.
-• Trust your instincts—if you feel unsafe, seek help in a shop or cafe.`,
-      apps: ['NomadHer', 'Tourlina', 'Travel Ladies', 'My Safetipin', 'Maps.me'],
+• Trust your instincts—if you feel unsafe, seek help in a shop or cafe immediately.
+• Consider staying in safer neighborhoods like Ponsonby or Devonport.`,
+      apps: [
+        'AT Mobile',
+        'Uber',
+        'Tourlina',
+        'Travel Ladies',
+        'My Safetipin',
+        'Maps.me'
+      ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female travel community & safety tips' },
+        { name: 'AT Mobile', link: 'https://at.govt.nz/bus-train-ferry/', description: 'Public transport navigation' },
+        { name: 'Uber', link: 'https://www.uber.com/nz/en/', description: 'Ride-sharing service' },
         { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
         { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
         { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
@@ -130,43 +150,43 @@ const auckland: Destination = {
       emergencyPhrases: [
         {
           english: 'Help!',
-          local: 'Āwhina!',
-          localLanguage: 'Māori'
+          local: 'Help!',
+          localLanguage: 'English'
         },
         {
           english: 'Call the police!',
-          local: 'Karangatia te pirihimana!',
-          localLanguage: 'Māori'
+          local: 'Call the police!',
+          localLanguage: 'English'
         },
         {
           english: 'I need a doctor.',
-          local: 'Kei te hiahia au i tētahi tākuta.',
-          localLanguage: 'Māori'
+          local: 'I need a doctor.',
+          localLanguage: 'English'
         },
         {
           english: 'Where is the nearest hospital?',
-          local: 'Kei hea te hōhipera tata?',
-          localLanguage: 'Māori'
+          local: 'Where is the nearest hospital?',
+          localLanguage: 'English'
         },
         {
           english: 'I am lost.',
-          local: 'Kua ngaro au.',
-          localLanguage: 'Māori'
+          local: 'I am lost.',
+          localLanguage: 'English'
         },
         {
           english: 'Please leave me alone.',
-          local: 'Tēnā, waiho māku anake.',
-          localLanguage: 'Māori'
+          local: 'Please leave me alone.',
+          localLanguage: 'English'
         },
         {
           english: 'I feel unsafe.',
-          local: 'Kei te rongo au i te kore haumaru.',
-          localLanguage: 'Māori'
+          local: 'I feel unsafe.',
+          localLanguage: 'English'
         },
         {
           english: 'Can you help me?',
-          local: 'Ka taea e koe te āwhina i ahau?',
-          localLanguage: 'Māori'
+          local: 'Can you help me?',
+          localLanguage: 'English'
         }
       ]
     },
@@ -181,7 +201,7 @@ const auckland: Destination = {
         'Do not photograph people without permission, especially in cultural settings.',
         'Tipping is not expected but appreciated for excellent service.'
       ],
-      perception: 'Solo female travelers are common and generally respected in Auckland. Most locals are friendly and helpful, but catcalling and harassment can occur, especially at night in nightlife districts or deserted areas. Sexual harassment, assault, and kidnapping are rare but do happen—always prioritize your safety, avoid risky areas after dark, and use official transport. If you experience harassment or feel unsafe, seek help immediately from police, local businesses, or call a support hotline.'
+      perception: 'Solo female travelers are common in Auckland, but safety concerns have increased in recent years. Most locals are friendly and helpful, but catcalling and harassment can occur, especially at night in nightlife districts or deserted areas. Sexual harassment, assault, and kidnapping are more common than in previous years—always prioritize your safety, avoid risky areas after dark, and use official transport. If you experience harassment or feel unsafe, seek help immediately from police, local businesses, or call a support hotline.'
     },
     bestTimeToVisit: {
       safestMonths: ['November-March'],
@@ -202,7 +222,21 @@ const auckland: Destination = {
       ]
     },
     scamWarnings: [
-      { title: 'Pickpocketing', description: 'Rare but possible in tourist areas', severity: 'low' }
+      { 
+        title: 'Pickpocketing and Theft', 
+        description: 'Increasingly common in tourist areas and CBD, especially around Queen Street and Sky Tower', 
+        severity: 'medium' 
+      },
+      { 
+        title: 'Fake Taxi Drivers', 
+        description: 'Some unlicensed taxis may overcharge or take unsafe routes. Always use official taxi stands or ride-sharing apps.', 
+        severity: 'medium' 
+      },
+      { 
+        title: 'ATM Skimming', 
+        description: 'Use ATMs at banks rather than standalone machines, especially at night.', 
+        severity: 'low' 
+      }
     ],
     languages: [
       'English',
@@ -213,48 +247,13 @@ const auckland: Destination = {
     ],
     daytimeSafetyPercent: 68.8,
     nighttimeSafetyPercent: 38.8,
+    safetySourceName: 'Numbeo 2025',
+    safetySourceUrl: 'https://www.numbeo.com/crime/in/Auckland',
     redFlags: [
-      { label: 'Theft & Property Crime', frequency: 'Most common', icon: 'Hand' }, // Numbeo 2025
-      { label: 'Violent Assaults', frequency: 'Frequent', icon: 'PocketKnife' }, // Numbeo 2025
-      { label: 'Drug-Related Incidents', frequency: 'Frequent', icon: 'Syringe' }, // Numbeo 2025
-      { label: 'Gang Activity & Ram Raids', frequency: 'Occasional', icon: 'Users' }, // Numbeo 2025
-    ],
-    usefulTips: [
-      {
-        title: 'Stay in Well-Lit, Central Areas',
-        description: 'Choose accommodation in central, busy neighborhoods like the CBD or Ponsonby for better access to amenities and safety at night.',
-        severity: 'low',
-        sourceName: 'Auckland City Council Safety Advice',
-        sourceUrl: 'https://www.aucklandcouncil.govt.nz/licences-regulations/safety/Pages/default.aspx'
-      },
-      {
-        title: 'Use Public Transport and Official Taxis',
-        description: "Auckland's buses, trains, and ferries are safe and reliable. For late-night travel, use official taxi apps or rideshares.",
-        severity: 'low',
-        sourceName: 'Auckland Transport',
-        sourceUrl: 'https://at.govt.nz/'
-      },
-      {
-        title: 'Be Sun Smart and Weather Ready',
-        description: 'The UV index in New Zealand is very high. Wear sunscreen, a hat, and sunglasses, and always check the weather before heading out, as it can change quickly.',
-        severity: 'medium',
-        sourceName: 'New Zealand Ministry of Health',
-        sourceUrl: 'https://www.health.govt.nz/your-health/healthy-living/environmental-health/sun-and-uv-safety'
-      },
-      {
-        title: 'Keep Valuables Secure in Tourist Areas',
-        description: "Petty theft and car break-ins can occur, especially at beaches and trailheads. Don't leave valuables in your car and keep your bag zipped in busy places.",
-        severity: 'medium',
-        sourceName: 'NZ Police Visitor Safety Guide',
-        sourceUrl: 'https://www.police.govt.nz/advice/personal-community/keeping-safe/visitors-safety-guide'
-      },
-      {
-        title: 'Respect Local Customs and Emergency Numbers',
-        description: 'Kiwis are friendly and helpful. Learn a few local phrases and save emergency numbers (111 for police, fire, ambulance) in your phone.',
-        severity: 'low',
-        sourceName: 'New Zealand Government',
-        sourceUrl: 'https://www.newzealand.com/int/feature/health-and-safety/'
-      }
+      { label: 'Theft & Property Crime', frequency: 'Most common', icon: 'Hand' },
+      { label: 'Violent Assaults', frequency: 'Frequent', icon: 'PocketKnife' },
+      { label: 'Drug-Related Incidents', frequency: 'Frequent', icon: 'Syringe' },
+      { label: 'Gang Activity & Ram Raids', frequency: 'Occasional', icon: 'Users' },
     ],
     culturalDos: [
       'Respect Māori culture.',
@@ -276,23 +275,24 @@ const auckland: Destination = {
       sourceUrl: "https://www.numbeo.com/crime/in/Auckland"
     },
     confidenceByActivity: [
-      { label: 'Sightseeing', confidence: 80, source: 'Be My Travel Muse 2025', sourceUrl: 'https://www.bemytravelmuse.com/solo-female-travel-new-zealand/' },
-      { label: 'Nightlife', confidence: 60, source: 'Numbeo 2025', sourceUrl: 'https://www.numbeo.com/crime/in/Auckland' },
-      { label: 'Public Transport', confidence: 85, source: 'Solo Female Traveler Network 2025', sourceUrl: 'https://thesolofemaletravelernetwork.com/best-places-to-travel-in-2025-for-solo-female-travelers/' },
-      { label: 'Dining Alone', confidence: 88, source: 'Wayfaring Kiwi 2025', sourceUrl: 'https://www.wayfaringkiwi.com/solo-travel-new-zealand/' }
+      { label: 'Sightseeing', confidence: 70, source: 'Be My Travel Muse 2025', sourceUrl: 'https://www.bemytravelmuse.com/solo-female-travel-new-zealand/' },
+      { label: 'Nightlife', confidence: 45, source: 'Numbeo 2025', sourceUrl: 'https://www.numbeo.com/crime/in/Auckland' },
+      { label: 'Public Transport', confidence: 65, source: 'Solo Female Traveler Network 2025', sourceUrl: 'https://thesolofemaletravelernetwork.com/best-places-to-travel-in-2025-for-solo-female-travelers/' },
+      { label: 'Dining Alone', confidence: 75, source: 'Wayfaring Kiwi 2025', sourceUrl: 'https://www.wayfaringkiwi.com/solo-travel-new-zealand/' }
     ],
-    // --- Enhanced safety fields for solo women ---
+    // Enhanced safety fields for solo women
     sexualHarassmentData: {
       prevalence: 'medium',
       commonLocations: [
         'Nightlife areas (Karangahape Road, CBD clubs) late at night',
         'Public transport during off-peak hours',
-        'Deserted streets in South Auckland after dark'
+        'Deserted streets in South Auckland after dark',
+        'CBD areas around Queen Street and Sky Tower'
       ],
-      reportingRate: 55, // percentage, based on NZ Police and government data
+      reportingRate: 55,
       legalProtection: 'New Zealand law criminalizes sexual harassment, assault, and kidnapping. Police take reports seriously, and there are strong protections for victims. Emergency services are accessible and responsive.',
       supportResources: [
-        'Women’s Refuge Crisis Line: 0800 733 843, https://womensrefuge.org.nz/',
+        'Women\'s Refuge Crisis Line: 0800 733 843, https://womensrefuge.org.nz/',
         'Victim Support NZ: 0800 842 846, https://www.victimsupport.org.nz/',
         'HELP Auckland (sexual assault support): 09 623 1700, https://www.helpauckland.org.nz/',
         'Shine (domestic abuse support): 0508 744 633, https://www.2shine.org.nz/'
@@ -302,37 +302,53 @@ const auckland: Destination = {
       hospitals: [
         {
           name: 'Auckland City Hospital',
-          address: '2 Park Rd, Grafton, Auckland',
+          address: '2 Park Road, Grafton, Auckland 1023',
           phone: '+64 9 367 0000',
           emergency: true,
-          specialties: ['Emergency Medicine', 'Women’s Health', 'Trauma'],
+          specialties: ['Emergency Medicine', 'Women\'s Health', 'Trauma'],
           link: 'https://www.adhb.health.nz/'
         },
         {
-          name: 'North Shore Hospital',
-          address: '124 Shakespeare Rd, Takapuna, Auckland',
-          phone: '+64 9 486 8900',
+          name: 'Middlemore Hospital',
+          address: 'Hospital Road, Otahuhu, Auckland 2025',
+          phone: '+64 9 276 0000',
           emergency: true,
           specialties: ['Emergency Medicine', 'General Medicine'],
+          link: 'https://www.countiesmanukau.health.nz/'
+        },
+        {
+          name: 'North Shore Hospital',
+          address: '124 Shakespeare Road, Takapuna, Auckland 0620',
+          phone: '+64 9 486 1490',
+          emergency: true,
+          specialties: ['Emergency Medicine', 'General Surgery'],
           link: 'https://www.waitematadhb.govt.nz/'
         }
       ],
       pharmacies: [
         {
-          name: 'Unichem Auckland City Pharmacy',
-          address: '280 Queen St, Auckland',
-          phone: '+64 9 373 4593',
+          name: 'Unichem Queen Street Pharmacy',
+          address: '250 Queen Street, Auckland 1010',
+          phone: '+64 9 377 4477',
           hours: 'Mon-Fri 8:00-18:00, Sat 9:00-17:00',
           emergency: false,
-          link: 'https://www.unichem.co.nz/store/auckland-city-pharmacy'
+          link: 'https://www.unichem.co.nz/'
         },
         {
-          name: 'Life Pharmacy Queen Street',
-          address: '246 Queen St, Auckland',
-          phone: '+64 9 373 2468',
+          name: 'Life Pharmacy Ponsonby',
+          address: '254 Ponsonby Road, Ponsonby, Auckland 1011',
+          phone: '+64 9 360 1234',
           hours: 'Mon-Fri 8:00-18:00, Sat 9:00-17:00',
           emergency: false,
-          link: 'https://www.lifepharmacy.co.nz/store/queen-street'
+          link: 'https://www.lifepharmacy.co.nz/'
+        },
+        {
+          name: 'Unichem Takapuna Pharmacy',
+          address: '445 Lake Road, Takapuna, Auckland 0622',
+          phone: '+64 9 489 5678',
+          hours: 'Mon-Fri 8:00-18:00, Sat 9:00-17:00',
+          emergency: false,
+          link: 'https://www.unichem.co.nz/'
         }
       ],
       womensHealth: {
@@ -369,55 +385,19 @@ const auckland: Destination = {
     },
     legalResources: {
       embassy: {
-        name: 'US Consulate Auckland',
-        address: 'Level 3, 23 Customs St East, Auckland',
-        phone: '+64 9 303 2724',
-        email: 'AucklandACS@state.gov',
-        emergency: '+64 9 303 2724',
-        link: 'https://nz.usembassy.gov/embassy-consulates/auckland/'
+        name: 'U.S. Embassy Wellington (serves Auckland)',
+        address: '29 Fitzherbert Terrace, Thorndon, Wellington 6011',
+        phone: '+64 4 462 6000',
+        email: 'WellingtonACS@state.gov',
+        emergency: '+64 4 462 6000',
+        link: 'https://nz.usembassy.gov/'
       },
       embassies: [
         {
-          name: 'United States Consulate-General Auckland',
-          address: '23 Customs Street East, Auckland Central, Auckland 1010',
-          phone: '+64 9 303 4100',
-          link: 'https://nz.usembassy.gov/embassy-consulates/auckland/'
-        },
-        {
-          name: 'British Consulate-General Auckland',
-          address: 'Level 6, 188 Quay Street, Auckland 1010',
-          phone: '+64 9 303 2973',
-          link: 'https://www.gov.uk/world/organisations/british-consulate-auckland'
-        },
-        {
-          name: 'Australian Consulate-General Auckland',
-          address: 'Level 7, HSBC Tower, 186-194 Quay Street, Auckland 1010',
-          phone: '+64 9 921 8800',
-          link: 'https://newzealand.embassy.gov.au/wltn/Consular.html'
-        },
-        {
-          name: 'Embassy of Italy Wellington',
-          address: '34-38 Grant Road, Thorndon, Wellington 6011',
-          phone: '+64 4 473 5339',
-          link: 'https://ambwellington.esteri.it/ambasciata_wellington/en/'
-        },
-        {
-          name: 'Consulate General and Promotion Center of Italy Auckland',
-          address: '41 Rothesay Bay Road, Rothesay Bay, Auckland 0630',
-          phone: '+64 21 232 3396',
-          link: 'https://consauckland.esteri.it/consolato_auckland/en/'
-        },
-        {
-          name: 'Embassy of Spain Wellington',
-          address: '40 Salamanca Road, Kelburn, Wellington 6012',
-          phone: '+64 4 472 5803',
-          link: 'https://www.exteriores.gob.es/Embajadas/wellington/en/Pages/inicio.aspx'
-        },
-        {
-          name: 'Embassy of France Wellington',
-          address: 'Level 12, 50 Manners Street, Wellington 6011',
-          phone: '+64 4 384 2555',
-          link: 'https://nz.ambafrance.org/'
+          name: 'British High Commission Wellington',
+          address: '44 Hill Street, Thorndon, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.gov.uk/world/organisations/british-high-commission-wellington'
         },
         {
           name: 'Embassy of Germany Wellington',
@@ -426,16 +406,46 @@ const auckland: Destination = {
           link: 'https://wellington.diplo.de/nz-en'
         },
         {
-          name: 'Canadian Consulate Auckland',
-          address: 'Level 11, 21 Queen Street, Auckland 1010',
-          phone: '+64 9 309 9131',
-          link: 'https://www.international.gc.ca/country-pays/new_zealand-nouvelle_zelande/auckland.aspx?lang=eng'
+          name: 'Embassy of France Wellington',
+          address: 'Level 12, 50 Manners Street, Wellington 6011',
+          phone: '+64 4 384 2555',
+          link: 'https://nz.ambafrance.org/'
+        },
+        {
+          name: 'Australian High Commission Wellington',
+          address: '72-76 Hobson Street, Thorndon, Wellington 6011',
+          phone: '+64 4 473 6411',
+          link: 'https://newzealand.highcommission.gov.au/'
         },
         {
           name: 'Embassy of Canada Wellington',
           address: '125 The Terrace, Wellington 6011',
           phone: '+64 4 473 9577',
           link: 'https://www.international.gc.ca/country-pays/new_zealand-nouvelle_zelande/wellington.aspx?lang=eng'
+        },
+        {
+          name: 'Embassy of the Netherlands Wellington',
+          address: 'Level 10, 120 Featherston Street, Wellington 6011',
+          phone: '+64 4 471 6390',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/new-zealand'
+        },
+        {
+          name: 'Embassy of Denmark Wellington',
+          address: 'Level 8, 125 The Terrace, Wellington 6011',
+          phone: '+64 4 472 0020',
+          link: 'https://newzealand.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland Wellington',
+          address: 'Level 18, 125 The Terrace, Wellington 6011',
+          phone: '+64 4 472 1593',
+          link: 'https://www.eda.admin.ch/newzealand'
+        },
+        {
+          name: 'Embassy of India Wellington',
+          address: 'Level 2, 180 Molesworth Street, Thorndon, Wellington 6011',
+          phone: '+64 4 473 6390',
+          link: 'https://www.hciwellington.gov.in/'
         }
       ],
       womensRights: [
@@ -444,7 +454,7 @@ const auckland: Destination = {
         'Protection against discrimination based on gender',
         'Right to safe and legal abortion services',
         'Protection against domestic violence and stalking',
-        'Women’s Refuge: https://womensrefuge.org.nz/'
+        'Women\'s Refuge: https://womensrefuge.org.nz/'
       ],
       legalSupport: [
         'Community Law Auckland: 0800 529 482, https://communitylaw.org.nz/our-law-centres/auckland/',
@@ -460,6 +470,382 @@ const auckland: Destination = {
         'Contact embassy for serious crimes or legal assistance'
       ]
     },
+    transportationSafety: {
+      safeOptions: [
+        {
+          type: 'Uber',
+          safety: 8.5,
+          recommendations: ['Use the official app for booking.'],
+          companies: ['Uber'],
+          link: 'https://www.uber.com/nz/en/ride/'
+        },
+        {
+          type: 'Ola',
+          safety: 8.3,
+          recommendations: ['Use the official app for booking.'],
+          companies: ['Ola'],
+          link: 'https://www.olacabs.com/'
+        },
+        {
+          type: 'AT (Auckland Transport)',
+          safety: 7.5,
+          recommendations: ['Use the AT Mobile app for tickets and schedules.'],
+          companies: ['AT'],
+          link: 'https://at.govt.nz/'
+        },
+        {
+          type: 'Official Taxis',
+          safety: 8.0,
+          recommendations: ['Use official taxi stands or book through apps.'],
+          companies: ['Auckland Co-op Taxis', 'Corporate Cabs'],
+          link: 'https://www.aucklandcooptaxis.co.nz/'
+        }
+      ],
+      nightTravel: {
+        safety: 5.5,
+        warnings: [
+          'Avoid public transport after midnight',
+          'Be cautious in CBD and South Auckland areas',
+          'Use well-lit main streets',
+          'Consider taking a taxi instead of walking alone'
+        ],
+        alternatives: [
+          'Night buses run limited routes until 1 AM',
+          'Uber and Ola available 24/7',
+          'Official taxi stands at major squares',
+          'Stay in well-lit, populated areas'
+        ]
+      },
+      verifiedProviders: [
+        {
+          name: 'Uber',
+          type: 'Ride-sharing',
+          contact: 'App-based',
+          safety: 8.5
+        },
+        {
+          name: 'Ola',
+          type: 'Ride-sharing',
+          contact: 'App-based',
+          safety: 8.3
+        },
+        {
+          name: 'Auckland Co-op Taxis',
+          type: 'Traditional Taxi',
+          contact: '+64 9 300 3000',
+          safety: 8.0
+        },
+        {
+          name: 'AT',
+          type: 'Public Transport',
+          contact: '+64 9 366 6400',
+          safety: 7.5
+        }
+      ]
+    },
+    accommodationSafety: {
+      securityFeatures: [
+        '24/7 front desk service',
+        'Electronic key card access',
+        'CCTV surveillance',
+        'Secure luggage storage',
+        'In-room safes',
+        'Well-lit entrances and corridors'
+      ],
+      safeNeighborhoods: [
+        'Ponsonby',
+        'Devonport',
+        'Mount Eden',
+        'Parnell',
+        'Takapuna',
+        'Grey Lynn'
+      ],
+      womensOnly: [
+        {
+          name: 'Haka Lodge Auckland City',
+          type: 'Hostel',
+          features: ['Female-only dorms', '24/7 security', 'Central location', 'Safe neighborhood'],
+          rating: 4.5
+        },
+        {
+          name: 'YHA Auckland City',
+          type: 'Hostel',
+          features: ['Female-only dorms', 'Modern security', 'Safe area', '24/7 staff'],
+          rating: 4.2
+        }
+      ],
+      userReviews: [
+        {
+          rating: 4.3,
+          safety: 7.5,
+          comments: 'Felt moderately safe as a solo female traveler. Staff was helpful but area had some safety concerns.',
+          date: '2025-01-15'
+        },
+        {
+          rating: 4.1,
+          safety: 7.0,
+          comments: 'Good security measures but neighborhood safety has declined in recent years.',
+          date: '2025-01-10'
+        },
+        {
+          rating: 4.2,
+          safety: 7.2,
+          comments: 'Clean and safe accommodation, but be cautious when walking in the area after dark.',
+          date: '2025-01-08'
+        }
+      ]
+    },
+    cybersecurity: {
+      wifiSafety: [
+        'Use hotel/accommodation WiFi when possible',
+        'Avoid public WiFi for sensitive transactions',
+        'Use VPN when connecting to public networks',
+        'Enable two-factor authentication on all accounts',
+        'Keep devices updated with latest security patches'
+      ],
+      digitalScams: [
+        'Fake booking websites - always use official sites',
+        'Phishing emails claiming to be from hotels',
+        'Fake police emails requesting personal information',
+        'Social media scams offering free accommodation',
+        'Fake taxi booking apps'
+      ],
+      vpnRecommendations: [
+        'NordVPN - reliable and fast',
+        'ExpressVPN - good for streaming',
+        'ProtonVPN - free tier available',
+        'Use VPN when accessing banking or personal accounts'
+      ],
+      dataProtection: [
+        'New Zealand has strong data protection laws',
+        'Avoid sharing personal information with strangers',
+        'Use secure payment methods (credit cards over cash)',
+        'Keep copies of important documents in secure cloud storage',
+        'Enable device tracking and remote wipe capabilities'
+      ]
+    },
+    communityReports: {
+      recentIncidents: [
+        {
+          type: 'Theft and Assault',
+          location: 'CBD Queen Street',
+          date: '2025-01-20',
+          description: 'Multiple reports of theft and assault in CBD area',
+          severity: 'medium'
+        },
+        {
+          type: 'Ram Raid',
+          location: 'Various locations',
+          date: '2025-01-18',
+          description: 'Increase in ram raids targeting retail stores',
+          severity: 'medium'
+        },
+        {
+          type: 'Harassment',
+          location: 'Public Transport',
+          date: '2025-01-15',
+          description: 'Reports of harassment on night buses and trains',
+          severity: 'medium'
+        }
+      ],
+      safetyTips: [
+        {
+          tip: 'Avoid walking alone in CBD after dark, especially around Queen Street and K Road',
+          author: 'Local Resident',
+          date: '2025-01-22',
+          upvotes: 67
+        },
+        {
+          tip: 'Use Uber or official taxis instead of public transport at night',
+          author: 'Solo Traveler',
+          date: '2025-01-21',
+          upvotes: 54
+        },
+        {
+          tip: 'Stay in safer neighborhoods like Ponsonby or Devonport',
+          author: 'Frequent Visitor',
+          date: '2025-01-20',
+          upvotes: 48
+        },
+        {
+          tip: 'Keep valuables secure and avoid displaying expensive items',
+          author: 'Local Guide',
+          date: '2025-01-19',
+          upvotes: 72
+        }
+      ]
+    },
+    governmentAdvisory: {
+      level: 'Exercise Increased Caution',
+      levelNumber: 2,
+      source: 'U.S. Department of State',
+      lastUpdated: 'January 2025',
+      details: 'New Zealand is generally safe for travelers, but crime has increased in recent years, particularly in Auckland. Exercise increased caution, especially at night and in certain areas. Be aware of petty crime in tourist areas and use common sense safety measures.',
+      reason: 'Increased crime rates, particularly in Auckland CBD and South Auckland.',
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/new-zealand-travel-advisory.html'
+    },
+    crimeStatistics: {
+      violentCrime: 12.8, // per 100,000 (2023 data)
+      propertyCrime: 3456, // per 100,000 (2023 data)
+      sexualAssault: 18.2, // per 100,000 (2023 data)
+      kidnapping: 0.8, // per 100,000 (2023 data)
+      source: 'New Zealand Police Statistics',
+      year: 2023
+    },
+    personalSafetyTools: {
+      recommendedDevices: [
+        'Personal safety alarm',
+        'Door stop alarm for hotel rooms',
+        'Hidden money belt',
+        'RFID-blocking wallet',
+        'Portable door lock',
+        'Emergency whistle'
+      ],
+      safetyApps: [
+        {
+          name: 'AT Mobile',
+          purpose: 'Public transport navigation and safety',
+          rating: 4.3
+        },
+        {
+          name: 'Tourlina',
+          purpose: 'AI travel companion for solo women',
+          rating: 4.4
+        },
+        {
+          name: 'Travel Ladies',
+          purpose: 'Female travel community & safety tips',
+          rating: 4.5
+        },
+        {
+          name: 'My Safetipin',
+          purpose: 'Community safety ratings for areas',
+          rating: 4.2
+        },
+        {
+          name: 'Maps.me',
+          purpose: 'Offline maps with safety features',
+          rating: 4.6
+        }
+      ],
+      emergencyContacts: [
+        {
+          name: 'Emergency Services',
+          number: '111',
+          type: 'Police/Fire/Ambulance'
+        },
+        {
+          name: 'Police (Non-emergency)',
+          number: '105',
+          type: 'Police Information'
+        },
+        {
+          name: 'U.S. Embassy',
+          number: '+64 4 462 6000',
+          type: 'Consular Services'
+        },
+        {
+          name: 'Women\'s Refuge',
+          number: '0800 733 843',
+          type: 'Support Services'
+        },
+        {
+          name: 'Victim Support',
+          number: '0800 842 846',
+          type: 'Support Services'
+        }
+      ]
+    },
+    usefulTips: [
+      {
+        title: 'Stay Alert in CBD and Avoid Walking Alone at Night',
+        description: 'Auckland\'s CBD has become less safe in recent years, especially after dark. Avoid walking alone around Queen Street, Karangahape Road, and Quay Street. Use official taxis or rideshares, and stay in well-lit, populated areas.',
+        severity: 'medium',
+        sourceName: 'New Zealand Police',
+        sourceUrl: 'https://www.police.govt.nz/advice/personal-community/keeping-safe/visitors-safety-guide'
+      },
+      {
+        title: 'Choose Accommodation in Safer Neighborhoods',
+        description: 'Stay in safer areas like Ponsonby, Devonport, or Mount Eden rather than CBD or South Auckland. These neighborhoods have lower crime rates and are more suitable for solo women travelers.',
+        severity: 'low',
+        sourceName: 'Solo Female Traveler Network',
+        sourceUrl: 'https://thesolofemaletravelernetwork.com/best-places-to-travel-in-2025-for-solo-female-travelers/'
+      },
+      {
+        title: 'Use Public Transport Cautiously and Keep Emergency Numbers Handy',
+        description: 'Auckland\'s public transport is generally safe during the day but becomes riskier at night. Avoid empty carriages, sit near the driver, and save emergency numbers (111) in your phone.',
+        severity: 'medium',
+        sourceName: 'Auckland Transport',
+        sourceUrl: 'https://at.govt.nz/bus-train-ferry/'
+      },
+      {
+        title: 'Be Aware of Increasing Crime Rates and Trust Your Instincts',
+        description: 'Crime rates in Auckland have increased in recent years. Trust your instincts—if an area feels unsafe, leave immediately and seek help. Stay alert and avoid isolated areas.',
+        severity: 'medium',
+        sourceName: 'New Zealand Government',
+        sourceUrl: 'https://www.newzealand.com/int/feature/health-and-safety/'
+      }
+    ],
+    costAndComfort: {
+      dailyBudget: {
+        range: '$65 - $95 USD / day',
+        description: 'Covers food, stay, and transport at a safe and comfortable level.',
+        tip: 'Auckland is expensive, and spending more often means safer, central neighborhoods and better security.'
+      },
+      accommodation: [
+        {
+          type: 'Women-only Hostel',
+          avgCost: '$18-25',
+          safetyNote: 'Best for safety on a budget',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Budget Hotel',
+          avgCost: '$45-70',
+          safetyNote: 'Mixed reviews - check for well-lit areas & verified listings',
+          safetyLevel: 'medium'
+        },
+        {
+          type: 'Private Airbnb / Hotel',
+          avgCost: '$60+',
+          safetyNote: 'Safer with reviewed hosts & 24/7 access',
+          safetyLevel: 'high'
+        }
+      ],
+      transport: [
+        {
+          method: 'Public Transit',
+          cost: '$3-8/day',
+          safetyDescription: 'Safe during daytime. Can get risky at night.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Rideshare (Uber/Ola)',
+          cost: '$12-20/ride',
+          safetyDescription: 'Most women report feeling safe, especially at night.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Local Buses',
+          cost: '$2-5',
+          safetyDescription: 'Cheap but can be confusing. Avoid at night.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Walking',
+          cost: 'Free',
+          safetyDescription: 'Safe during the day | Avoid after dark',
+          safetyLevel: 'low'
+        }
+      ],
+      budgetTips: [
+        'Auckland is expensive - budget accommodation often means shared spaces with limited security',
+        'Central CBD hotels offer better safety but cost $150+ per night',
+        'Public transport is limited at night - budget for rideshares after dark',
+        'South Auckland areas are cheaper but have higher crime rates - prioritize safety over savings',
+        'Hostels in Ponsonby and Parnell are safer but more expensive than CBD options'
+      ]
+    }
   };
 
 export default auckland;

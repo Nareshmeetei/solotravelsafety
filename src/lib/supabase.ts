@@ -240,6 +240,68 @@ export const uploadProfileImage = async (file: File, userId: string) => {
   }
 }
 
+// Chirp image upload helper
+export const uploadChirpImages = async (files: File[], userId: string) => {
+  try {
+    console.log('Starting chirp image upload for user:', userId, 'Files:', files.length)
+    
+    // Get current user data
+    const { data: { user }, error: userError } = await supabase.auth.getUser()
+    if (userError || !user) {
+      throw new Error('User not authenticated')
+    }
+
+    console.log('User authenticated, uploading chirp images...')
+    
+    const uploadedUrls: string[] = []
+    
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+      
+      // Generate a unique filename with timestamp and index
+      const fileExt = file.name.split('.').pop()?.toLowerCase()
+      const timestamp = Date.now()
+      const fileName = `${userId}/chirps/${timestamp}_${i}.${fileExt}`
+      
+      console.log(`Uploading chirp image ${i + 1}/${files.length}:`, fileName)
+      
+      // Upload file to storage
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('chirp-images')
+        .upload(fileName, file, {
+          cacheControl: '3600',
+          upsert: true,
+          contentType: file.type
+        })
+
+      if (uploadError) {
+        console.error('Upload error for file', i, ':', uploadError)
+        throw new Error(`Upload failed for image ${i + 1}: ${uploadError.message}`)
+      }
+
+      console.log('Upload successful for file', i, ':', uploadData)
+
+      // Get public URL
+      const { data: urlData } = supabase.storage
+        .from('chirp-images')
+        .getPublicUrl(fileName)
+
+      if (!urlData?.publicUrl) {
+        throw new Error(`Failed to get public URL for image ${i + 1}`)
+      }
+
+      uploadedUrls.push(urlData.publicUrl)
+      console.log('Public URL generated for file', i, ':', urlData.publicUrl)
+    }
+
+    console.log('All chirp images uploaded successfully:', uploadedUrls)
+    return { publicUrls: uploadedUrls, error: null }
+  } catch (error: any) {
+    console.error('Error in uploadChirpImages:', error)
+    return { publicUrls: [], error: error.message || 'Upload failed' }
+  }
+}
+
 // Database helper functions
 export const createReview = async (reviewData: {
   destination_city: string

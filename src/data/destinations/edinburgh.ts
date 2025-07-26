@@ -32,8 +32,7 @@ const edinburgh: Destination = {
     safetyTips: {
       clothing: 'Dress for the weather. Scotland can be rainy.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['Lothian Buses', 'Google Maps'],
-      emergencyPhrases: ['Help!', 'Call the police!']
+      apps: ['Lothian Buses', 'ScotRail', 'Google Maps']
     },
     culturalExpectations: {
       dressCode: 'Casual and practical. No specific restrictions.',
