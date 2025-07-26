@@ -12,7 +12,7 @@ const vienna: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 160,
-    lastUpdated: '5 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.4, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -49,7 +49,11 @@ const vienna: Destination = {
       police: '133', fire: '122', medical: '144', general: '112'
     },
     currency: {
-      name: 'Euro', code: 'EUR', exchangeRate: { usd: 1.1, eur: 1, gbp: 0.85 }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
+      name: 'Euro', code: 'EUR', exchangeRate: {
+      usd: 1.1737,
+      eur: 1.0000,
+      gbp: 0.8732
+    }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
     },
     usefulTips: [
       {

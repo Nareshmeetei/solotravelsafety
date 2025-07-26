@@ -12,7 +12,7 @@ const karachi: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 210,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.2, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -50,7 +50,11 @@ const karachi: Destination = {
       police: '117', fire: '160', medical: '911', general: '911'
     },
     currency: {
-      name: 'Pakistani Rupee', code: 'PKR', exchangeRate: { usd: 0.0036, eur: 0.0032, gbp: 0.0027 }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Pakistani Rupee', code: 'PKR', exchangeRate: {
+      usd: 0.0035,
+      eur: 0.0030,
+      gbp: 0.0026
+    }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'ATM Scams', description: 'Criminals may offer to help at ATMs and steal cards or PINs.', severity: 'high' }

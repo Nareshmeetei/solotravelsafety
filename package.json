@@ -9,7 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "mcp": "node mcp-server.js",
-    "mcp:dev": "DEBUG=true node mcp-server.js"
+    "mcp:dev": "DEBUG=true node mcp-server.js",
+    "update-data": "node scripts/update-data.js",
+    "update-destinations": "node scripts/update-destinations.js",
+    "test:data-validation": "node scripts/validate-data.js"
   },
   "dependencies": {
     "@sentry/react": "^9.38.0",

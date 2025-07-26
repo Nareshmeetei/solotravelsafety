@@ -12,7 +12,7 @@ const bogota: Destination = {
     tags: ['warning-flags', 'high-crime'],
     bgColor: 'bg-red-50',
     reviewCount: 245,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: {
@@ -232,7 +232,11 @@ const bogota: Destination = {
     currency: {
       name: 'Colombian Peso',
       code: 'COP',
-      exchangeRate: { usd: 0.00025, eur: 0.00022, gbp: 0.00019 },
+      exchangeRate: {
+      usd: 0.0002,
+      eur: 0.0002,
+      gbp: 0.0002
+    },
       scamWarnings: [
         'Always use official ATMs inside banks or shopping centers, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
       ],

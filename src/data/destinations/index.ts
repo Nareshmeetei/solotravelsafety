@@ -1,102 +1,139 @@
-import { Destination } from './types';
-import reykjavik from './reykjavik';
-import tokyo from './tokyo';
-import osaka from './osaka';
-import kyoto from './kyoto';
-import seoul from './seoul';
-import nagano from './nagano';
-import kamakura from './kamakura';
-import busan from './busan';
-import copenhagen from './copenhagen';
-import helsinki from './helsinki';
-import zurich from './zurich';
-import vienna from './vienna';
-import riodejaneiro from './rio-de-janeiro';
-import cairo from './cairo';
-import lagos from './lagos';
-import karachi from './karachi';
-import stockholm from './stockholm';
-import amsterdam from './amsterdam';
-import melbourne from './melbourne';
-import vancouver from './vancouver';
-import capetown from './cape-town';
-import manila from './manila';
-import mexicocity from './mexico-city';
-import caracas from './caracas';
-import auckland from './auckland';
-import oslo from './oslo';
-import johannesburg from './johannesburg';
-import munich from './munich';
-import singapore from './singapore';
-import edinburgh from './edinburgh';
-import brisbane from './brisbane';
-import sansalvador from './san-salvador';
-import portauprince from './port-au-prince';
-import dublin from './dublin';
-import wellington from './wellington';
-import bern from './bern';
-import guatemalacity from './guatemala-city';
-import toronto from './toronto';
-import bogota from './bogota';
+// Auto-generated destination index
+// Last updated: 2025-07-26T06:09:21.686Z
 
-// Import all destinations here
-const destinations: Destination[] = [
-  reykjavik,
-  tokyo,
-  osaka,
-  kyoto,
-  seoul,
-  nagano,
-  kamakura,
-  busan,
-  copenhagen,
-  helsinki,
-  zurich,
-  vienna,
-  riodejaneiro,
-  cairo,
-  lagos,
-  karachi,
-  stockholm,
+import amsterdam from './amsterdam';
+import auckland from './auckland';
+import bern from './bern';
+import bogota from './bogota';
+import brisbane from './brisbane';
+import busan from './busan';
+import cairo from './cairo';
+import cape-town from './cape-town';
+import caracas from './caracas';
+import copenhagen from './copenhagen';
+import dublin from './dublin';
+import edinburgh from './edinburgh';
+import guatemala-city from './guatemala-city';
+import helsinki from './helsinki';
+import johannesburg from './johannesburg';
+import kamakura from './kamakura';
+import karachi from './karachi';
+import kyoto from './kyoto';
+import lagos from './lagos';
+import manila from './manila';
+import melbourne from './melbourne';
+import mexico-city from './mexico-city';
+import munich from './munich';
+import nagano from './nagano';
+import osaka from './osaka';
+import oslo from './oslo';
+import port-au-prince from './port-au-prince';
+import reykjavik from './reykjavik';
+import rio-de-janeiro from './rio-de-janeiro';
+import san-salvador from './san-salvador';
+import seoul from './seoul';
+import singapore from './singapore';
+import stockholm from './stockholm';
+import tokyo from './tokyo';
+import toronto from './toronto';
+import vancouver from './vancouver';
+import vienna from './vienna';
+import wellington from './wellington';
+import zurich from './zurich';
+import { Destination } from './types';
+
+export const destinations: Destination[] = [
   amsterdam,
-  melbourne,
-  vancouver,
-  capetown,
-  manila,
-  mexicocity,
-  caracas,
   auckland,
-  oslo,
-  johannesburg,
-  munich,
-  singapore,
-  edinburgh,
-  brisbane,
-  sansalvador,
-  portauprince,
-  dublin,
-  wellington,
   bern,
-  guatemalacity,
-  toronto,
   bogota,
+  brisbane,
+  busan,
+  cairo,
+  cape-town,
+  caracas,
+  copenhagen,
+  dublin,
+  edinburgh,
+  guatemala-city,
+  helsinki,
+  johannesburg,
+  kamakura,
+  karachi,
+  kyoto,
+  lagos,
+  manila,
+  melbourne,
+  mexico-city,
+  munich,
+  nagano,
+  osaka,
+  oslo,
+  port-au-prince,
+  reykjavik,
+  rio-de-janeiro,
+  san-salvador,
+  seoul,
+  singapore,
+  stockholm,
+  tokyo,
+  toronto,
+  vancouver,
+  vienna,
+  wellington,
+  zurich,
 ];
 
-export default destinations;
-export { destinations };
-
-// Utility functions
 export const getDestinationBySlug = (city: string, country: string): Destination | undefined => {
   return destinations.find(dest => 
-    dest.city.toLowerCase() === city.toLowerCase() && 
-    dest.country.toLowerCase() === country.toLowerCase()
+    dest.city.toLowerCase().replace(/s+/g, '-') === city.toLowerCase() &&
+    dest.country.toLowerCase().replace(/s+/g, '-') === country.toLowerCase()
   );
 };
 
 export const createDestinationSlug = (city: string, country: string): string => {
-  return `${city.toLowerCase().replace(/\s+/g, '-')}-${country.toLowerCase().replace(/\s+/g, '-')}`;
+  return `${city.toLowerCase().replace(/s+/g, '-')}-${country.toLowerCase().replace(/s+/g, '-')}`;
 };
 
-// Export types
-export type { Destination } from './types';
- 
+// Export individual destinations
+export {
+  amsterdam,
+  auckland,
+  bern,
+  bogota,
+  brisbane,
+  busan,
+  cairo,
+  cape-town,
+  caracas,
+  copenhagen,
+  dublin,
+  edinburgh,
+  guatemala-city,
+  helsinki,
+  johannesburg,
+  kamakura,
+  karachi,
+  kyoto,
+  lagos,
+  manila,
+  melbourne,
+  mexico-city,
+  munich,
+  nagano,
+  osaka,
+  oslo,
+  port-au-prince,
+  reykjavik,
+  rio-de-janeiro,
+  san-salvador,
+  seoul,
+  singapore,
+  stockholm,
+  tokyo,
+  toronto,
+  vancouver,
+  vienna,
+  wellington,
+  zurich,
+};

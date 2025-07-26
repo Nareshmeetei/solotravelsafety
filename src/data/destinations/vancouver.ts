@@ -12,7 +12,7 @@ const vancouver: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 160,
-    lastUpdated: '5 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.0, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -47,7 +47,11 @@ const vancouver: Destination = {
       police: '911', fire: '911', medical: '911', general: '911'
     },
     currency: {
-      name: 'Canadian Dollar', code: 'CAD', exchangeRate: { usd: 0.80, eur: 0.72, gbp: 0.62 }, scamWarnings: [],
+      name: 'Canadian Dollar', code: 'CAD', exchangeRate: {
+      usd: 0.7299,
+      eur: 0.6219,
+      gbp: 0.5431
+    }, scamWarnings: [],
     },
     usefulTips: [
       {

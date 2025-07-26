@@ -12,7 +12,7 @@ const wellington: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 110,
-    lastUpdated: '5 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.3, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -47,7 +47,11 @@ const wellington: Destination = {
       police: '111', fire: '111', medical: '111', general: '111'
     },
     currency: {
-      name: 'New Zealand Dollar', code: 'NZD', exchangeRate: { usd: 0.62, eur: 0.56, gbp: 0.48 }, scamWarnings: [],
+      name: 'New Zealand Dollar', code: 'NZD', exchangeRate: {
+      usd: 0.6024,
+      eur: 0.5133,
+      gbp: 0.4482
+    }, scamWarnings: [],
     },
     usefulTips: [
       {

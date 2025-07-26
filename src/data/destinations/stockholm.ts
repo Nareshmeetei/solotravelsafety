@@ -12,7 +12,7 @@ const stockholm: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 200,
-    lastUpdated: '3 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.6, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -48,7 +48,11 @@ const stockholm: Destination = {
       police: '112', fire: '112', medical: '112', general: '112'
     },
     currency: {
-      name: 'Swedish Krona', code: 'SEK', exchangeRate: { usd: 0.11, eur: 0.10, gbp: 0.085 }, scamWarnings: []
+      name: 'Swedish Krona', code: 'SEK', exchangeRate: {
+      usd: 0.1050,
+      eur: 0.0895,
+      gbp: 0.0782
+    }, scamWarnings: []
     },
     usefulTips: [
       {

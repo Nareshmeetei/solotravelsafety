@@ -12,7 +12,7 @@ const riodejaneiro: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 410,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.9, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of mugging and assault.' },
@@ -50,7 +50,11 @@ const riodejaneiro: Destination = {
       police: '190', fire: '193', medical: '192', general: '192'
     },
     currency: {
-      name: 'Brazilian Real', code: 'BRL', exchangeRate: { usd: 0.19, eur: 0.17, gbp: 0.15 }, scamWarnings: []
+      name: 'Brazilian Real', code: 'BRL', exchangeRate: {
+      usd: 0.1812,
+      eur: 0.1543,
+      gbp: 0.1348
+    }, scamWarnings: []
     },
     scamWarnings: [],
     usefulTips: [

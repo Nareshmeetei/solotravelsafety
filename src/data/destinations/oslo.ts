@@ -12,7 +12,7 @@ const oslo: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 130,
-    lastUpdated: '6 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.1, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -48,7 +48,11 @@ const oslo: Destination = {
       police: '112', fire: '110', medical: '113', general: '112'
     },
     currency: {
-      name: 'Norwegian Krone', code: 'NOK', exchangeRate: { usd: 0.094, eur: 0.086, gbp: 0.073 }, scamWarnings: []
+      name: 'Norwegian Krone', code: 'NOK', exchangeRate: {
+      usd: 0.0984,
+      eur: 0.0839,
+      gbp: 0.0732
+    }, scamWarnings: []
     },
     scamWarnings: [],
     usefulTips: [

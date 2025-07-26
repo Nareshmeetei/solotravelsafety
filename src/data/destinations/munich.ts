@@ -12,7 +12,7 @@ const munich: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 150,
-    lastUpdated: '3 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.3, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -48,7 +48,11 @@ const munich: Destination = {
       police: '110', fire: '112', medical: '112', general: '112'
     },
     currency: {
-      name: 'Euro', code: 'EUR', exchangeRate: { usd: 1.1, eur: 1, gbp: 0.85 }, scamWarnings: []
+      name: 'Euro', code: 'EUR', exchangeRate: {
+      usd: 1.1737,
+      eur: 1.0000,
+      gbp: 0.8732
+    }, scamWarnings: []
     },
     scamWarnings: [],
     usefulTips: [

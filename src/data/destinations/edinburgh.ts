@@ -12,7 +12,7 @@ const edinburgh: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 140,
-    lastUpdated: '4 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.2, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -47,7 +47,11 @@ const edinburgh: Destination = {
       police: '999', fire: '999', medical: '999', general: '999'
     },
     currency: {
-      name: 'Pound Sterling', code: 'GBP', exchangeRate: { usd: 1.3, eur: 1.1, gbp: 1 }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
+      name: 'Pound Sterling', code: 'GBP', exchangeRate: {
+      usd: 1.3441,
+      eur: 1.1452,
+      gbp: 1.0000
+    }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
     },
     scamWarnings: [
       { title: 'Pickpocketing', description: 'Rare but possible in tourist areas', severity: 'low' }

@@ -12,7 +12,7 @@ const mexicocity: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 300,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 3.0, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -50,7 +50,11 @@ const mexicocity: Destination = {
       police: '911', fire: '911', medical: '911', general: '911'
     },
     currency: {
-      name: 'Mexican Peso', code: 'MXN', exchangeRate: { usd: 0.052, eur: 0.045, gbp: 0.038 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Mexican Peso', code: 'MXN', exchangeRate: {
+      usd: 0.0539,
+      eur: 0.0459,
+      gbp: 0.0401
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }

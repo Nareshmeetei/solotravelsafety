@@ -1,0 +1,174 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    # Run every Sunday at 2 AM UTC (adjust timezone as needed)
+    - cron: '0 2 * * 0'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      update_type:
+        description: 'Type of update to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - currency
+          - safety
+          - government
+          - weather
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup environment variables
+        env:
+          EXCHANGE_RATE_API_KEY: ${{ secrets.EXCHANGE_RATE_API_KEY }}
+          FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
+          CURRENCY_LAYER_API_KEY: ${{ secrets.CURRENCY_LAYER_API_KEY }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
+          NUMBEO_API_KEY: ${{ secrets.NUMBEO_API_KEY }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          echo "Environment variables configured"
+
+      - name: Run data update script
+        run: npm run update-data
+        env:
+          EXCHANGE_RATE_API_KEY: ${{ secrets.EXCHANGE_RATE_API_KEY }}
+          FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
+          CURRENCY_LAYER_API_KEY: ${{ secrets.CURRENCY_LAYER_API_KEY }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
+          NUMBEO_API_KEY: ${{ secrets.NUMBEO_API_KEY }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Update destination files
+        run: npm run update-destinations
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Check if there are any changes
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git add .
+          git commit -m "chore: automated weekly data update
+          
+          - Updated currency exchange rates
+          - Updated safety indices and scores  
+          - Updated government travel advisories
+          - Updated weather data cache
+          - Updated cost of living data
+          - Updated emergency contact information
+          
+          Automated update performed on $(date -u +%Y-%m-%d)"
+          
+          git push
+
+      - name: Create update summary
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          echo "## 📊 Weekly Data Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Update Date:** $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### ✅ Successfully Updated:" >> $GITHUB_STEP_SUMMARY
+          echo "- 💱 Currency exchange rates" >> $GITHUB_STEP_SUMMARY
+          echo "- 🛡️ Safety indices and scores" >> $GITHUB_STEP_SUMMARY
+          echo "- 🏛️ Government travel advisories" >> $GITHUB_STEP_SUMMARY
+          echo "- 🌡️ Weather data cache" >> $GITHUB_STEP_SUMMARY
+          echo "- 💰 Cost of living data" >> $GITHUB_STEP_SUMMARY
+          echo "- 🚨 Emergency contact information" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📈 Statistics:" >> $GITHUB_STEP_SUMMARY
+          echo "- **Destinations Updated:** $(find src/data/destinations -name "*.ts" -not -name "types.ts" -not -name "index.ts" | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Files Modified:** $(git diff --name-only HEAD~1 | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All destination data is now current as of $(date -u +%Y-%m-%d)." >> $GITHUB_STEP_SUMMARY
+
+      - name: Send notification on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '⚠️ Weekly Data Update Failed',
+              body: `The automated weekly data update failed on ${new Date().toISOString().split('T')[0]}.
+              
+              **Workflow:** ${context.workflow}
+              **Run ID:** ${context.runId}
+              **Run URL:** https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}
+              
+              Please check the logs and resolve any issues to ensure data remains current.`,
+              labels: ['automated-update', 'bug', 'priority-high']
+            })
+
+  verify-deployment:
+    needs: update-data
+    runs-on: ubuntu-latest
+    if: success()
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run data validation tests
+        run: npm run test:data-validation
+
+      - name: Verify deployment readiness
+        run: |
+          echo "✅ Build successful"
+          echo "✅ Data validation passed"
+          echo "✅ Ready for deployment" 

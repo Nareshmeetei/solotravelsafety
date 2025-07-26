@@ -12,7 +12,7 @@ const melbourne: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 170,
-    lastUpdated: '5 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.2, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -47,7 +47,11 @@ const melbourne: Destination = {
       police: '000', fire: '000', medical: '000', general: '000'
     },
     currency: {
-      name: 'Australian Dollar', code: 'AUD', exchangeRate: { usd: 0.75, eur: 0.68, gbp: 0.58 }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
+      name: 'Australian Dollar', code: 'AUD', exchangeRate: {
+      usd: 0.6579,
+      eur: 0.5605,
+      gbp: 0.4895
+    }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
     },
     scamWarnings: [
       { title: 'Pickpocketing', description: 'Rare but possible in tourist areas', severity: 'low' }

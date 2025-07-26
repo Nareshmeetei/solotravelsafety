@@ -12,7 +12,7 @@ const seoul: Destination = {
   tags: ['safe', 'modern', 'public-transit'],
   bgColor: 'bg-green-25',
   reviewCount: 412,
-  lastUpdated: '2 days ago',
+  lastUpdated: '1 day ago',
   harassmentRisk: 'medium',
   safetyBreakdown: {
     nightSafety: {
@@ -75,9 +75,9 @@ const seoul: Destination = {
     name: 'South Korean Won',
     code: 'KRW',
     exchangeRate: {
-      usd: 0.00075,
-      eur: 0.00069,
-      gbp: 0.00059
+      usd: 0.0007,
+      eur: 0.0006,
+      gbp: 0.0005
     },
     scamWarnings: []
   },

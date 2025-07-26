@@ -12,7 +12,7 @@ const bern: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 100,
-    lastUpdated: '6 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
@@ -169,7 +169,11 @@ const bern: Destination = {
     currency: {
       name: 'Swiss Franc', 
       code: 'CHF', 
-      exchangeRate: { usd: 1.15, eur: 1.05, gbp: 0.89 }, 
+      exchangeRate: {
+      usd: 1.2563,
+      eur: 1.0704,
+      gbp: 0.9347
+    }, 
       exchangeTips: [
         'Use official banks or post offices for currency exchange - avoid airport kiosks and street vendors',
         'Credit cards are widely accepted, but carry some cash for smaller purchases and tips',

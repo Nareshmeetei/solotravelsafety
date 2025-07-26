@@ -12,7 +12,7 @@ const amsterdam: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 180,
-    lastUpdated: '4 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
@@ -198,7 +198,11 @@ const amsterdam: Destination = {
       police: '112', fire: '112', medical: '112', general: '112'
     },
     currency: {
-      name: 'Euro', code: 'EUR', exchangeRate: { usd: 1.1, eur: 1, gbp: 0.85 }, scamWarnings: [
+      name: 'Euro', code: 'EUR', exchangeRate: {
+      usd: 1.1737,
+      eur: 1.0000,
+      gbp: 0.8732
+    }, scamWarnings: [
         'Always use official ATMs (Geldmaat, the yellow machines) or pay by card, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
       ]
     },

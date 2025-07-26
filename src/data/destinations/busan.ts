@@ -12,7 +12,7 @@ const busan: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 445,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
@@ -219,7 +219,11 @@ const busan: Destination = {
     currency: {
       name: 'South Korean Won',
       code: 'KRW',
-      exchangeRate: { usd: 0.00075, eur: 0.00069, gbp: 0.00059 },
+      exchangeRate: {
+      usd: 0.0007,
+      eur: 0.0006,
+      gbp: 0.0005
+    },
       scamWarnings: [
         'Always use official ATMs (major banks) or pay by card, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
       ],

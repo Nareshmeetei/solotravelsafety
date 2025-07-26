@@ -12,7 +12,7 @@ const toronto: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 170,
-    lastUpdated: '3 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.2, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -47,7 +47,11 @@ const toronto: Destination = {
       police: '911', fire: '911', medical: '911', general: '911'
     },
     currency: {
-      name: 'Canadian Dollar', code: 'CAD', exchangeRate: { usd: 0.80, eur: 0.72, gbp: 0.62 }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
+      name: 'Canadian Dollar', code: 'CAD', exchangeRate: {
+      usd: 0.7299,
+      eur: 0.6219,
+      gbp: 0.5431
+    }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
     },
     scamWarnings: [
       { title: 'Pickpocketing', description: 'Rare but possible in tourist areas', severity: 'low' }

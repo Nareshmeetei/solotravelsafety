@@ -12,7 +12,7 @@ const copenhagen: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 334,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { 
@@ -121,7 +121,11 @@ const copenhagen: Destination = {
       police: '114', fire: '112', medical: '112', general: '112'
     },
     currency: {
-      name: 'Danish Krone', code: 'DKK', exchangeRate: { usd: 0.15, eur: 0.13, gbp: 0.11 }, scamWarnings: []
+      name: 'Danish Krone', code: 'DKK', exchangeRate: {
+      usd: 0.1572,
+      eur: 0.1340,
+      gbp: 0.1170
+    }, scamWarnings: []
     },
     scamWarnings: [
       { title: 'Currency Exchange Scams', description: 'Rare but can occur at unofficial exchange offices.', severity: 'low' },

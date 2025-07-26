@@ -12,7 +12,7 @@ const guatemalacity: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 180,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.6, context: 'Unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -50,7 +50,11 @@ const guatemalacity: Destination = {
       police: '110', fire: '122', medical: '123', general: '110'
     },
     currency: {
-      name: 'Guatemalan Quetzal', code: 'GTQ', exchangeRate: { usd: 0.13, eur: 0.12, gbp: 0.10 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Guatemalan Quetzal', code: 'GTQ', exchangeRate: {
+      usd: 0.1304,
+      eur: 0.1111,
+      gbp: 0.0970
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }

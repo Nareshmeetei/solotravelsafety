@@ -12,7 +12,7 @@ const caracas: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 180,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 
@@ -134,7 +134,11 @@ const caracas: Destination = {
       police: '911', fire: '171', medical: '171', general: '911'
     },
     currency: {
-      name: 'Venezuelan Bolívar', code: 'VES', exchangeRate: { usd: 0.00025, eur: 0.00022, gbp: 0.00019 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Venezuelan Bolívar', code: 'VES', exchangeRate: {
+      usd: 0.0082,
+      eur: 0.0070,
+      gbp: 0.0061
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' },

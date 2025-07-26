@@ -12,7 +12,7 @@ const singapore: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 200,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 8.8, context: 'Extremely safe at night. Strict laws and high police presence.' },
@@ -47,7 +47,11 @@ const singapore: Destination = {
       police: '999', fire: '995', medical: '995', general: '999'
     },
     currency: {
-      name: 'Singapore Dollar', code: 'SGD', exchangeRate: { usd: 0.74, eur: 0.67, gbp: 0.57 }, scamWarnings: []
+      name: 'Singapore Dollar', code: 'SGD', exchangeRate: {
+      usd: 0.7813,
+      eur: 0.6656,
+      gbp: 0.5812
+    }, scamWarnings: []
     },
     scamWarnings: [],
     usefulTips: [

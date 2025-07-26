@@ -12,7 +12,7 @@ const manila: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 210,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.5, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -50,7 +50,11 @@ const manila: Destination = {
       police: '117', fire: '160', medical: '911', general: '911'
     },
     currency: {
-      name: 'Philippine Peso', code: 'PHP', exchangeRate: { usd: 0.018, eur: 0.016, gbp: 0.014 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Philippine Peso', code: 'PHP', exchangeRate: {
+      usd: 0.0175,
+      eur: 0.0149,
+      gbp: 0.0130
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }

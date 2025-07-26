@@ -12,7 +12,7 @@ const auckland: Destination = {
     tags: ['warning-flags', 'moderate-risk'],
     bgColor: 'bg-yellow-50',
     reviewCount: 150,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'medium',
     safetyBreakdown: {
       nightSafety: {
@@ -216,7 +216,11 @@ const auckland: Destination = {
     currency: {
       name: 'New Zealand Dollar',
       code: 'NZD',
-      exchangeRate: { usd: 0.62, eur: 0.56, gbp: 0.48 },
+      exchangeRate: {
+      usd: 0.6024,
+      eur: 0.5133,
+      gbp: 0.4482
+    },
       scamWarnings: [
         'New Zealand is highly card-friendly—use your debit or credit card for most purchases, and only withdraw small amounts of cash from major bank ATMs (ANZ, ASB, Westpac, BNZ, TSB). Avoid exchanging money at airports or street kiosks, as rates and fees are much worse than at banks or ATMs.'
       ]

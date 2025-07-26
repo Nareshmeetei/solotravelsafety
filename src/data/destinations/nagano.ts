@@ -12,7 +12,7 @@ const nagano: Destination = {
     tags: ['insider-tips'],
     bgColor: 'bg-purple-50',
     reviewCount: 1200,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
@@ -75,10 +75,10 @@ const nagano: Destination = {
       name: 'Japanese Yen',
       code: 'JPY',
       exchangeRate: {
-        usd: 0.0071,
-        eur: 0.0065,
-        gbp: 0.0056
-      },
+      usd: 0.0068,
+      eur: 0.0058,
+      gbp: 0.0050
+    },
       scamWarnings: [
         'Very few scams due to honest culture',
         'Tourist shops may be overpriced - compare prices',

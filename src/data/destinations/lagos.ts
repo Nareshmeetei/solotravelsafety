@@ -12,7 +12,7 @@ const lagos: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 290,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.0, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -49,7 +49,11 @@ const lagos: Destination = {
       police: '112', fire: '119', medical: '199', general: '112'
     },
     currency: {
-      name: 'Nigerian Naira', code: 'NGN', exchangeRate: { usd: 0.0013, eur: 0.0011, gbp: 0.00095 }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Nigerian Naira', code: 'NGN', exchangeRate: {
+      usd: 0.0007,
+      eur: 0.0006,
+      gbp: 0.0005
+    }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'ATM Scams', description: 'Criminals may offer to help at ATMs and steal cards or PINs.', severity: 'high' }

@@ -12,7 +12,7 @@ const johannesburg: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 170,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 1.8, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -49,7 +49,11 @@ const johannesburg: Destination = {
       police: '10111', fire: '10177', medical: '10177', general: '112'
     },
     currency: {
-      name: 'South African Rand', code: 'ZAR', exchangeRate: { usd: 0.055, eur: 0.05, gbp: 0.043 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'South African Rand', code: 'ZAR', exchangeRate: {
+      usd: 0.0564,
+      eur: 0.0480,
+      gbp: 0.0419
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }

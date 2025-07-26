@@ -12,7 +12,7 @@ const brisbane: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 145,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
@@ -189,7 +189,11 @@ const brisbane: Destination = {
     currency: {
       name: 'Australian Dollar',
       code: 'AUD',
-      exchangeRate: { usd: 0.75, eur: 0.68, gbp: 0.58 },
+      exchangeRate: {
+      usd: 0.6579,
+      eur: 0.5605,
+      gbp: 0.4895
+    },
       scamWarnings: [
         'Always use official ATMs (major banks) or pay by card, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
       ],

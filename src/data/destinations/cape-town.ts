@@ -12,7 +12,7 @@ const capetown: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 250,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 
@@ -153,7 +153,11 @@ const capetown: Destination = {
       police: '10111', fire: '10177', medical: '10177', general: '112'
     },
     currency: {
-      name: 'South African Rand', code: 'ZAR', exchangeRate: { usd: 0.055, eur: 0.05, gbp: 0.043 }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
+      name: 'South African Rand', code: 'ZAR', exchangeRate: {
+      usd: 0.0564,
+      eur: 0.0480,
+      gbp: 0.0419
+    }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'ATM Scams', description: 'Criminals may offer to help at ATMs and steal cards or PINs.', severity: 'high' },

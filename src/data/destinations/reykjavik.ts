@@ -12,7 +12,7 @@ const reykjavik: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 234,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
@@ -75,10 +75,10 @@ const reykjavik: Destination = {
       name: 'Icelandic Króna',
       code: 'ISK',
       exchangeRate: {
-        usd: 0.0072,
-        eur: 0.0067,
-        gbp: 0.0057
-      },
+      usd: 0.0082,
+      eur: 0.0070,
+      gbp: 0.0061
+    },
       scamWarnings: []
     },
     languages: ['Icelandic', 'English (widely spoken)'],

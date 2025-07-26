@@ -12,7 +12,7 @@ const tokyo: Destination = {
   tags: ['insider-tips'],
   bgColor: 'bg-purple-50',
   reviewCount: 1200,
-  lastUpdated: '2 days ago',
+  lastUpdated: '1 day ago',
   harassmentRisk: 'low',
   safetyBreakdown: {
     nightSafety: {
@@ -176,7 +176,11 @@ const tokyo: Destination = {
   currency: {
     name: 'Japanese Yen',
     code: 'JPY',
-    exchangeRate: { usd: 0.0071, eur: 0.0065, gbp: 0.0056 },
+    exchangeRate: {
+      usd: 0.0068,
+      eur: 0.0058,
+      gbp: 0.0050
+    },
     scamWarnings: [
       'Always use official ATMs (7-Eleven, post offices, major banks) or pay by card, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
     ],

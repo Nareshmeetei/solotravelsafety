@@ -12,7 +12,7 @@ const zurich: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 180,
-    lastUpdated: '4 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { score: 9.2, context: 'Very safe at night. Well-lit streets and low crime rates.' },
@@ -48,7 +48,11 @@ const zurich: Destination = {
       police: '117', fire: '118', medical: '144', general: '112'
     },
     currency: {
-      name: 'Swiss Franc', code: 'CHF', exchangeRate: { usd: 1.1, eur: 1, gbp: 0.85 }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
+      name: 'Swiss Franc', code: 'CHF', exchangeRate: {
+      usd: 1.2563,
+      eur: 1.0704,
+      gbp: 0.9347
+    }, scamWarnings: ['Very few scams', 'Pickpocketing in tourist areas is rare but possible']
     },
     // Useful Tips for Solo Female Travelers in Zurich (2025)
     // Sources:

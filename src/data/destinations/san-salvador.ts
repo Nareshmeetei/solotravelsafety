@@ -12,7 +12,7 @@ const sansalvador: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 170,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.3, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -50,7 +50,11 @@ const sansalvador: Destination = {
       police: '911', fire: '913', medical: '132', general: '911'
     },
     currency: {
-      name: 'United States Dollar', code: 'USD', exchangeRate: { usd: 1, eur: 0.91, gbp: 0.77 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'United States Dollar', code: 'USD', exchangeRate: {
+      usd: 1.0000,
+      eur: 0.8520,
+      gbp: 0.7440
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }

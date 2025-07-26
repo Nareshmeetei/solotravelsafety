@@ -12,7 +12,7 @@ const portauprince: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 160,
-    lastUpdated: '1 week ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { score: 2.0, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
@@ -50,7 +50,11 @@ const portauprince: Destination = {
       police: '114', fire: '115', medical: '116', general: '114'
     },
     currency: {
-      name: 'Haitian Gourde', code: 'HTG', exchangeRate: { usd: 0.0087, eur: 0.0079, gbp: 0.0067 }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+      name: 'Haitian Gourde', code: 'HTG', exchangeRate: {
+      usd: 0.0076,
+      eur: 0.0065,
+      gbp: 0.0057
+    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
       { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }

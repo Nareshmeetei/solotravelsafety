@@ -12,7 +12,7 @@ const cairo: Destination = {
     tags: ['warning-flags'],
     bgColor: 'bg-red-50',
     reviewCount: 678,
-    lastUpdated: '2 days ago',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 
@@ -205,7 +205,11 @@ const cairo: Destination = {
     currency: {
       name: 'Egyptian Pound',
       code: 'EGP',
-      exchangeRate: { usd: 0.021, eur: 0.019, gbp: 0.016 },
+      exchangeRate: {
+      usd: 0.0204,
+      eur: 0.0174,
+      gbp: 0.0152
+    },
       exchangeTips: [
         'Use official banks or exchange bureaus - avoid street money changers',
         'Credit cards are accepted in major hotels and restaurants',
