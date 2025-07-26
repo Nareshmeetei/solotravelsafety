@@ -270,24 +270,10 @@ const AllDestinations: React.FC = () => {
               {filteredAndSortedDestinations.map((destination, index) => (
                 <div
                   key={index}
-                  onClick={(e) => {
-                    // Handle mobile tap-to-expand logic
-                    if (window.innerWidth < 768) {
-                      const isExpanded = expandedCard === `${destination.city}-${destination.country}`;
-                      if (!isExpanded) {
-                        // First tap: expand
-                        e.preventDefault();
-                        toggleCardExpansion(`${destination.city}-${destination.country}`);
-                      } else {
-                        // Second tap or tap on expanded content: navigate
-                        handleDestinationClick();
-                        window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
-                      }
-                    } else {
-                      // Desktop: navigate immediately
-                      handleDestinationClick();
-                      window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
-                    }
+                  onClick={() => {
+                    // Navigate to destination page for both mobile and desktop
+                    handleDestinationClick();
+                    window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
                   }}
                   className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
                 >

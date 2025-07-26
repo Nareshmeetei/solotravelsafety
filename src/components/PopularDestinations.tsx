@@ -74,24 +74,10 @@ const PopularDestinations: React.FC = () => {
             >
               {/* Header */}
               <div
-                onClick={(e) => {
-                  // Handle mobile tap-to-expand logic
-                  if (window.innerWidth < 768) {
-                    const isExpanded = expandedCard === `${destination.city}-${destination.country}`;
-                    if (!isExpanded) {
-                      // First tap: expand
-                      e.preventDefault();
-                      toggleCardExpansion(`${destination.city}-${destination.country}`);
-                    } else {
-                      // Second tap or tap on expanded content: navigate
-                      handleDestinationClick(destination.city, destination.country);
-                      window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
-                    }
-                  } else {
-                    // Desktop: navigate immediately
-                    handleDestinationClick(destination.city, destination.country);
-                    window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
-                  }
+                onClick={() => {
+                  // Navigate to destination page for both mobile and desktop
+                  handleDestinationClick(destination.city, destination.country);
+                  window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
                 }}
                 className="block cursor-pointer"
               >
