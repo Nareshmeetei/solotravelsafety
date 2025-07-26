@@ -271,40 +271,42 @@ const AllDestinations: React.FC = () => {
               {filteredAndSortedDestinations.map((destination, index) => (
                 <div
                   key={index}
-                  onClick={() => {
-                    // Navigate to destination page for both mobile and desktop
-                    handleDestinationClick();
-                    window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
-                  }}
                   className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
                   onMouseEnter={() => setHoveredCard(`${destination.city}-${destination.country}`)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  {/* Header */}
-                  <div className="mb-4 flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <FlagImage 
-                        countryCode={destination.countryCode}
-                        alt={`${destination.country} flag`}
-                        className="transition-transform duration-300 animate-pulse-soft"
-                      />
-                      <div>
-                        <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
-                          {destination.city}
-                        </h3>
-                        <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
+                  <Link
+                    to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
+                    className="block cursor-pointer"
+                    onClick={() => {
+                      handleDestinationClick();
+                    }}
+                  >
+                    {/* Header */}
+                    <div className="mb-4 flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <FlagImage 
+                          countryCode={destination.countryCode}
+                          alt={`${destination.country} flag`}
+                          className="transition-transform duration-300 animate-pulse-soft"
+                        />
+                        <div>
+                          <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
+                            {destination.city}
+                          </h3>
+                          <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
+                        </div>
                       </div>
+                      
+                      {/* Live Weather Temperature */}
+                      <WeatherDisplay 
+                        city={destination.city}
+                        country={destination.country}
+                        className="transition-transform duration-300 group-hover:scale-105"
+                        isExpanded={expandedCard === `${destination.city}-${destination.country}`}
+                        showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
+                      />
                     </div>
-                    
-                    {/* Live Weather Temperature */}
-                    <WeatherDisplay 
-                      city={destination.city}
-                      country={destination.country}
-                      className="transition-transform duration-300 group-hover:scale-105"
-                      isExpanded={expandedCard === `${destination.city}-${destination.country}`}
-                      showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
-                    />
-                  </div>
                   
                   {/* Overall Score */}
                   <div className="mb-4">
@@ -456,43 +458,44 @@ const AllDestinations: React.FC = () => {
                   
                   {/* Meta Info with Mobile Button */}
                   <div className="flex items-center justify-between mt-5">
-                  <div className="text-xs text-gray-500 space-y-1 transition-colors duration-300">
-                    <div>{destination.reviewCount} reviews</div>
-                    <div>Updated {destination.lastUpdated}</div>
+                    <div className="text-xs text-gray-500 space-y-1 transition-colors duration-300">
+                      <div>{destination.reviewCount} reviews</div>
+                      <div>Updated {destination.lastUpdated}</div>
                     </div>
-                    
-                    {/* Mobile Quick View Button - Bottom Right */}
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        toggleCardExpansion(`${destination.city}-${destination.country}`);
-                      }}
-                      className="md:hidden p-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full text-gray-400 hover:text-gray-600 transition-all duration-300"
-                      aria-label="Quick view"
-                    >
-                      <svg 
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          expandedCard === `${destination.city}-${destination.country}` ? 'rotate-180' : ''
-                        }`} 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-      
-      <Footer />
-    </div>
-  );
+                </Link>
+                
+                {/* Mobile Quick View Button - Bottom Right */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleCardExpansion(`${destination.city}-${destination.country}`);
+                  }}
+                  className="absolute bottom-4 right-4 md:hidden p-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full text-gray-400 hover:text-gray-600 transition-all duration-300"
+                  aria-label="Quick view"
+                >
+                  <svg 
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      expandedCard === `${destination.city}-${destination.country}` ? 'rotate-180' : ''
+                    }`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+    
+    <Footer />
+  </div>
+);
 };
 
 export default AllDestinations;

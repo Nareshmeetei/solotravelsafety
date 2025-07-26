@@ -75,218 +75,217 @@ const PopularDestinations: React.FC = () => {
               onMouseEnter={() => setHoveredCard(`${destination.city}-${destination.country}`)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Header */}
-              <div
-                onClick={() => {
-                  // Navigate to destination page for both mobile and desktop
-                  handleDestinationClick(destination.city, destination.country);
-                  window.location.href = `/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`;
-                }}
+              <Link
+                to={`/destination/${encodeURIComponent(destination.city)}/${encodeURIComponent(destination.country)}`}
                 className="block cursor-pointer"
+                onClick={() => {
+                  handleDestinationClick(destination.city, destination.country);
+                }}
               >
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <FlagImage 
-                    countryCode={destination.countryCode}
-                    alt={`${destination.country} flag`}
-                    className="transition-transform duration-300 animate-pulse-soft"
+                {/* Header */}
+                <div className="mb-4 flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <FlagImage 
+                      countryCode={destination.countryCode}
+                      alt={`${destination.country} flag`}
+                      className="transition-transform duration-300 animate-pulse-soft"
+                    />
+                    <div>
+                      <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
+                        {destination.city}
+                      </h3>
+                      <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Live Weather Temperature */}
+                  <WeatherDisplay 
+                    city={destination.city}
+                    country={destination.country}
+                    className="transition-transform duration-300 group-hover:scale-105"
+                    isExpanded={expandedCard === `${destination.city}-${destination.country}`}
+                    showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
                   />
-                  <div>
-                    <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
-                      {destination.city}
-                    </h3>
-                    <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
-                  </div>
                 </div>
                 
-                {/* Live Weather Temperature */}
-                <WeatherDisplay 
-                  city={destination.city}
-                  country={destination.country}
-                  className="transition-transform duration-300 group-hover:scale-105"
-                  isExpanded={expandedCard === `${destination.city}-${destination.country}`}
-                  showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
-                />
+                {/* Overall Score */}
+                <div className="mb-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-700 transition-colors duration-300">Overall Safety</span>
+                    <div className={`rounded-full px-2 py-1 text-xs font-semibold transition-all duration-300 ${getScoreColor(destination.overallScore)}`}>
+                      {destination.overallScore}/10
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                {/* Safety Indicators - Default View */}
+                <div className="space-y-3 md:group-hover:opacity-0 transition-opacity duration-300">
+                  <div className="flex items-center space-x-3">
+                    <Moon className="h-4 w-4 text-gray-600 transition-colors duration-300" />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700 transition-colors duration-300">Night Safety</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.nightSafety}/10</span>
+                          {renderScoreBar(destination.nightSafety)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <Bus className="h-4 w-4 text-gray-600 transition-colors duration-300" />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700 transition-colors duration-300">Public Transit</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.publicTransit}/10</span>
+                          {renderScoreBar(destination.publicTransit)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <Users className="h-4 w-4 text-gray-600 transition-colors duration-300" />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700 transition-colors duration-300">Walking Alone</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.walkingAlone}/10</span>
+                          {renderScoreBar(destination.walkingAlone)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Hover Overlay */}
+                <div className={`hidden md:block absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getSafetyBackgroundColor(destination.overallScore)} backdrop-blur-sm rounded-b-2xl p-4`}>
+                  <div className="space-y-2">
+                    {/* Top Red Flag */}
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="text-[10px] font-semibold text-red-600 uppercase tracking-wide">Top Red Flag</h4>
+                        <p className="text-sm text-gray-700 leading-tight">
+                          {destination.redFlags && destination.redFlags.length > 0 
+                            ? destination.redFlags[0].label 
+                            : "No significant red flags"}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Safest Area */}
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="text-[10px] font-semibold text-green-600 uppercase tracking-wide">Safest Area</h4>
+                        <p className="text-sm text-gray-700 leading-tight">
+                          {destination.neighborhoods && destination.neighborhoods.safe && destination.neighborhoods.safe.length > 0
+                            ? typeof destination.neighborhoods.safe[0] === 'string' 
+                              ? destination.neighborhoods.safe[0]
+                              : destination.neighborhoods.safe[0].name
+                            : "City Center"}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Daily Budget */}
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Daily Budget</h4>
+                        <p className="text-sm text-gray-700 leading-tight">
+                          {destination.costAndComfort && destination.costAndComfort.dailyBudget
+                            ? destination.costAndComfort.dailyBudget.range
+                            : "$40-80 USD/day"}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile Expanded View */}
+                <div className={`md:hidden overflow-hidden transition-all duration-300 ${
+                  expandedCard === `${destination.city}-${destination.country}` 
+                    ? 'max-h-48 opacity-100' 
+                    : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="pt-4 space-y-3">
+                    {/* Top Red Flag */}
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="text-[10px] font-semibold text-red-600 uppercase tracking-wide">Top Red Flag</h4>
+                        <p className="text-sm text-gray-700 leading-tight">
+                          {destination.redFlags && destination.redFlags.length > 0 
+                            ? destination.redFlags[0].label 
+                            : "No significant red flags"}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Safest Area */}
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="text-[10px] font-semibold text-green-600 uppercase tracking-wide">Safest Area</h4>
+                        <p className="text-sm text-gray-700 leading-tight">
+                          {destination.neighborhoods && destination.neighborhoods.safe && destination.neighborhoods.safe.length > 0
+                            ? typeof destination.neighborhoods.safe[0] === 'string' 
+                              ? destination.neighborhoods.safe[0]
+                              : destination.neighborhoods.safe[0].name
+                            : "City Center"}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Daily Budget */}
+                    <div className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Daily Budget</h4>
+                        <p className="text-sm text-gray-700 leading-tight">
+                          {destination.costAndComfort && destination.costAndComfort.dailyBudget
+                            ? destination.costAndComfort.dailyBudget.range
+                            : "$40-80 USD/day"}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Meta Info */}
+                <div className="flex items-center justify-between mt-5">
+                  <div className="text-xs text-gray-500 space-y-1">
+                    <div>{destination.reviewCount} reviews</div>
+                    <div>Updated {destination.lastUpdated}</div>
+                  </div>
+                </div>
+              </Link>
               
-              {/* Overall Score */}
-              <div className="mb-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 transition-colors duration-300">Overall Safety</span>
-                  <div className={`rounded-full px-2 py-1 text-xs font-semibold transition-all duration-300 ${getScoreColor(destination.overallScore)}`}>
-                    {destination.overallScore}/10
-                  </div>
-                </div>
-              </div>
-              
-              {/* Safety Indicators - Default View */}
-              <div className="space-y-3 md:group-hover:opacity-0 transition-opacity duration-300">
-                <div className="flex items-center justify-between group/item">
-                  <div className="flex items-center space-x-2">
-                    <Moon className="h-4 w-4 text-gray-500 transition-all duration-300" />
-                    <span className="text-sm text-gray-700 transition-colors duration-300">Night Safety</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs font-medium text-gray-600 transition-colors duration-300">
-                      {destination.nightSafety}
-                    </span>
-                    {renderScoreBar(destination.nightSafety)}
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between group/item">
-                  <div className="flex items-center space-x-2">
-                    <Bus className="h-4 w-4 text-gray-500 transition-all duration-300" />
-                    <span className="text-sm text-gray-700 transition-colors duration-300">Public Transit</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs font-medium text-gray-600 transition-colors duration-300">
-                      {destination.publicTransit}
-                    </span>
-                    {renderScoreBar(destination.publicTransit)}
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between group/item">
-                  <div className="flex items-center space-x-2">
-                    <Users className="h-4 w-4 text-gray-500 transition-all duration-300" />
-                    <span className="text-sm text-gray-700 transition-colors duration-300">Walking Alone</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs font-medium text-gray-600 transition-colors duration-300">
-                      {destination.walkingAlone}
-                    </span>
-                    {renderScoreBar(destination.walkingAlone)}
-                  </div>
-                </div>
-              </div>
-
-              {/* Desktop Hover Overlay - Additional Info */}
-              <div className={`hidden md:block absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getSafetyBackgroundColor(destination.overallScore)} backdrop-blur-sm rounded-b-2xl p-4`}>
-                <div className="space-y-2">
-                  {/* Top Red Flag */}
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-[10px] font-semibold text-red-600 uppercase tracking-wide">Top Red Flag</h4>
-                      <p className="text-sm text-gray-700 leading-tight">
-                        {destination.redFlags && destination.redFlags.length > 0 
-                          ? destination.redFlags[0].label 
-                          : "No significant red flags"}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Safest Area */}
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-[10px] font-semibold text-green-600 uppercase tracking-wide">Safest Area</h4>
-                      <p className="text-sm text-gray-700 leading-tight">
-                        {destination.neighborhoods && destination.neighborhoods.safe && destination.neighborhoods.safe.length > 0
-                          ? typeof destination.neighborhoods.safe[0] === 'string' 
-                            ? destination.neighborhoods.safe[0]
-                            : destination.neighborhoods.safe[0].name
-                          : "City Center"}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Daily Budget */}
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Daily Budget</h4>
-                      <p className="text-sm text-gray-700 leading-tight">
-                        {destination.costAndComfort && destination.costAndComfort.dailyBudget
-                          ? destination.costAndComfort.dailyBudget.range
-                          : "$40-80 USD/day"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile Expanded View */}
-              <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-                expandedCard === `${destination.city}-${destination.country}` 
-                  ? 'max-h-48 opacity-100' 
-                  : 'max-h-0 opacity-0'
-              }`}>
-                <div className="pt-4 space-y-3">
-                  {/* Top Red Flag */}
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-[10px] font-semibold text-red-600 uppercase tracking-wide">Top Red Flag</h4>
-                      <p className="text-sm text-gray-700 leading-tight">
-                        {destination.redFlags && destination.redFlags.length > 0 
-                          ? destination.redFlags[0].label 
-                          : "No significant red flags"}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Safest Area */}
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-[10px] font-semibold text-green-600 uppercase tracking-wide">Safest Area</h4>
-                      <p className="text-sm text-gray-700 leading-tight">
-                        {destination.neighborhoods && destination.neighborhoods.safe && destination.neighborhoods.safe.length > 0
-                          ? typeof destination.neighborhoods.safe[0] === 'string' 
-                            ? destination.neighborhoods.safe[0]
-                            : destination.neighborhoods.safe[0].name
-                          : "City Center"}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Daily Budget */}
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Daily Budget</h4>
-                      <p className="text-sm text-gray-700 leading-tight">
-                        {destination.costAndComfort && destination.costAndComfort.dailyBudget
-                          ? destination.costAndComfort.dailyBudget.range
-                          : "$40-80 USD/day"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Meta Info with Mobile Button */}
-              <div className="flex items-center justify-between mt-5">
-                <div className="text-xs text-gray-500 space-y-1">
-                  <div>{destination.reviewCount} reviews</div>
-                  <div>Updated {destination.lastUpdated}</div>
-                </div>
-                
-                {/* Mobile Quick View Button - Bottom Right */}
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleCardExpansion(`${destination.city}-${destination.country}`);
-                  }}
-                  className="md:hidden p-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full text-gray-400 hover:text-gray-600 transition-all duration-300"
-                  aria-label="Quick view"
+              {/* Mobile Quick View Button - Outside Link */}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCardExpansion(`${destination.city}-${destination.country}`);
+                }}
+                className="absolute bottom-4 right-4 md:hidden p-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full text-gray-400 hover:text-gray-600 transition-all duration-300"
+                aria-label="Quick view"
+              >
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    expandedCard === `${destination.city}-${destination.country}` ? 'rotate-180' : ''
+                  }`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
                 >
-                  <svg 
-                    className={`w-4 h-4 transition-transform duration-300 ${
-                      expandedCard === `${destination.city}-${destination.country}` ? 'rotate-180' : ''
-                    }`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
             </div>
           ))}
         </div>
