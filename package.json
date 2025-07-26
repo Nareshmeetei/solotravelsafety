@@ -12,7 +12,10 @@
     "mcp:dev": "DEBUG=true node mcp-server.js",
     "update-data": "node scripts/update-data.js",
     "update-destinations": "node scripts/update-destinations.js",
-    "test:data-validation": "node scripts/validate-data.js"
+    "test:data-validation": "node scripts/validate-data.js",
+    "validate-comprehensive": "node scripts/comprehensive-data-validator.js",
+    "scrape-advisories": "node scripts/government-advisory-scraper.js",
+    "audit-data": "npm run validate-comprehensive && npm run scrape-advisories"
   },
   "dependencies": {
     "@sentry/react": "^9.38.0",

@@ -4,6 +4,15 @@ A safety platform for women traveling solo — with honest stories, safety tips,
 
 ## 🚀 Features
 
+### 🔍 **Data Accuracy & Validation System**
+- **Real-time validation** against 15+ official government sources (US State Dept, UK FCDO, WHO, CDC)
+- **Automated weekly updates** from travel advisories and health organizations
+- **Multi-source verification** of safety scores and risk assessments
+- **Quality scoring** for each destination (Excellent/Good/Fair/Poor ratings)
+- **Government advisory integration** with live travel warning levels
+- See [DATA_ACCURACY_SYSTEM.md](./DATA_ACCURACY_SYSTEM.md) for complete details
+
+### 🛡️ **Core Safety Features**
 - **Safety Reviews**: Real user experiences and safety ratings for destinations
 - **Community**: Connect with other solo female travelers
 - **Safety Tips**: Comprehensive safety advice and resources
