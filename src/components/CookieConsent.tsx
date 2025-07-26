@@ -72,50 +72,51 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept, onDecline }) =>
     <>
       {/* Main Banner */}
       {!showSettings && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
-          <div className="max-w-7xl mx-auto px-4 py-4">
-            <div className="flex items-start space-x-4">
-              <Cookie className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
+        <div className="fixed bottom-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg max-w-sm">
+          <div className="p-4">
+            <div className="flex items-start space-x-3">
+              <Cookie className="h-5 w-5 text-primary-600 mt-0.5 flex-shrink-0" />
               
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">
                   We use cookies to enhance your experience
                 </h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  We use essential cookies to make our site work, and optional cookies to improve your experience. 
-                  You can choose which cookies to accept below.
+                <p className="text-xs text-gray-600 mb-3">
+                  We use essential cookies to make our site work, and optional cookies to improve your experience.
                 </p>
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col gap-2">
                   <button
                     onClick={handleAcceptAll}
-                    className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 text-sm font-medium"
+                    className="px-3 py-1.5 bg-primary-600 text-white rounded text-xs font-medium hover:bg-primary-700 transition-colors duration-200"
                   >
                     Accept All
                   </button>
                   
-                  <button
-                    onClick={() => setShowSettings(true)}
-                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-sm font-medium flex items-center space-x-2"
-                  >
-                    <Settings className="h-4 w-4" />
-                    <span>Customize</span>
-                  </button>
-                  
-                  <button
-                    onClick={handleDecline}
-                    className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200 text-sm font-medium"
-                  >
-                    Decline
-                  </button>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setShowSettings(true)}
+                      className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded text-xs font-medium hover:bg-gray-200 transition-colors duration-200 flex items-center space-x-1 flex-1"
+                    >
+                      <Settings className="h-3 w-3" />
+                      <span>Customize</span>
+                    </button>
+                    
+                    <button
+                      onClick={handleDecline}
+                      className="px-3 py-1.5 bg-red-600 text-white rounded text-xs font-medium hover:bg-red-700 transition-colors duration-200"
+                    >
+                      Decline
+                    </button>
+                  </div>
                 </div>
               </div>
               
               <button
                 onClick={handleDecline}
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                className="p-1 text-gray-400 hover:text-gray-600 transition-colors duration-200"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
               </button>
             </div>
           </div>
