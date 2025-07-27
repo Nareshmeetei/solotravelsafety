@@ -1,0 +1,21 @@
+{
+  "name": "Solo Travel Safety",
+  "short_name": "Solo Travel Safety",
+  "description": "Plan safer solo trips with real safety reviews, practical tips, and insights from solo female travelers.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#9E7DFF",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+} 
