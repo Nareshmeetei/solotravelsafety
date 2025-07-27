@@ -724,7 +724,14 @@ const bogota: Destination = {
       lastUpdated: 'January 2025',
       details: 'Colombia has high crime rates, including violent crime such as homicide, assault, and armed robbery. Organized criminal groups, narcotics traffickers, and some local gangs operate in various parts of the country. Terrorist groups and other armed actors continue operating in some rural areas and continue to pose a threat to travelers.',
       reason: 'High crime rates, organized criminal groups, and security concerns.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/colombia-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/colombia-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Higher risk city - never walk alone at night, use Uber/official taxis only',
+        'Stay in safe neighborhoods: Zona Rosa, Chapinero, or Usaquén',
+        'Phone theft is extremely common - keep devices hidden or use inside only', 
+        'Avoid La Candelaria after dark despite tourist attractions there',
+        'Join group tours and stick to busy areas - safety in numbers essential'
+      ]
     },
     crimeStatistics: {
       violentCrime: 850, // per 100,000 (2024 data)

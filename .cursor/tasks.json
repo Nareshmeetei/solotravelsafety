@@ -1,0 +1,93 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Start Development Environment",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": [],
+      "detail": "Starts the Vite development server on localhost:5173"
+    },
+    {
+      "label": "🔧 Setup Environment Check",
+      "type": "shell",
+      "command": "node",
+      "args": ["scripts/setup-check.js"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": [],
+      "problemMatcher": [],
+      "detail": "Checks and sets up environment variables and dependencies"
+    },
+    {
+      "label": "📊 MCP Test",
+      "type": "shell", 
+      "command": "npm",
+      "args": ["run", "mcp:dev"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      },
+      "problemMatcher": [],
+      "detail": "Tests MCP server connection and functionality"
+    },
+    {
+      "label": "🏗️ Build Project",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "Builds the project for production"
+    },
+    {
+      "label": "🧪 Run Data Validation",
+      "type": "shell",
+      "command": "npm", 
+      "args": ["run", "validate-comprehensive"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always", 
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "Validates data integrity and structure"
+    }
+  ]
+} 

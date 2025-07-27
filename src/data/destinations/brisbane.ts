@@ -680,7 +680,14 @@ const brisbane: Destination = {
       lastUpdated: 'January 2025',
       details: 'Australia is generally safe for travelers. Exercise normal precautions. The country has low crime rates and excellent emergency services. However, petty crime such as pickpocketing can occur in tourist areas and on public transportation.',
       reason: 'Petty theft in tourist areas.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/australia-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/australia-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Excellent for solo female travelers - very safe and welcoming culture',
+        'Use TransLink app for easy public transport navigation around the city',
+        'Stay in CBD, South Bank, or New Farm for best safety and convenience',
+        'Join group tours to Great Barrier Reef or day trips to meet other travelers',
+        'Watch for strong sun exposure - use sunscreen and stay hydrated'
+      ]
     },
     crimeStatistics: {
       violentCrime: 120, // per 100,000 (2024 data)

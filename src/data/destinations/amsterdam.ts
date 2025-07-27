@@ -657,7 +657,14 @@ const amsterdam: Destination = {
       lastUpdated: 'January 2025',
       details: 'The Netherlands is generally safe for travelers. Exercise normal precautions. Be aware of petty crime in tourist areas and use common sense safety measures.',
       reason: 'Petty theft near tourist hotspots.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/netherlands-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/netherlands-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Very safe for solo female travelers - excellent for first-time solo travelers',
+        'Stay in Jordaan, De Pijp, or Oud-West for best walkability and safety',
+        'Avoid Red Light District at night - attracts rowdy drunk tourists',
+        'Use GVB transport passes (€9.50/24hrs) and avoid unlicensed taxis',
+        'Carry offline maps - canal layout is confusing and easy to get lost'
+      ]
     },
     crimeStatistics: {
       violentCrime: 8.2, // per 100,000 (2023 data)

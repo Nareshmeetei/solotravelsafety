@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:setup": "node scripts/setup-check.js && npm run dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -15,7 +16,9 @@
     "test:data-validation": "node scripts/validate-data.js",
     "validate-comprehensive": "node scripts/comprehensive-data-validator.js",
     "scrape-advisories": "node scripts/government-advisory-scraper.js",
-    "audit-data": "npm run validate-comprehensive && npm run scrape-advisories"
+    "audit-data": "npm run validate-comprehensive && npm run scrape-advisories",
+    "setup": "node scripts/setup-check.js",
+    "start": "npm run dev:setup"
   },
   "dependencies": {
     "@sentry/react": "^9.38.0",

@@ -81,23 +81,23 @@ const PopularDestinations: React.FC = () => {
                 onClick={() => {
                   handleDestinationClick(destination.city, destination.country);
                 }}
-              >
-                {/* Header */}
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <FlagImage 
-                      countryCode={destination.countryCode}
-                      alt={`${destination.country} flag`}
-                      className="transition-transform duration-300 animate-pulse-soft"
-                    />
-                    <div>
-                      <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
-                        {destination.city}
-                      </h3>
-                      <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
-                    </div>
+            >
+              {/* Header */}
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <FlagImage 
+                    countryCode={destination.countryCode}
+                    alt={`${destination.country} flag`}
+                    className="transition-transform duration-300 animate-pulse-soft"
+                  />
+                  <div>
+                    <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
+                      {destination.city}
+                    </h3>
+                    <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
                   </div>
-                  
+                </div>
+                
                   {/* Live Weather Temperature */}
                   <WeatherDisplay 
                     city={destination.city}
@@ -106,18 +106,18 @@ const PopularDestinations: React.FC = () => {
                     isExpanded={expandedCard === `${destination.city}-${destination.country}`}
                     showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
                   />
-                </div>
-                
-                {/* Overall Score */}
-                <div className="mb-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700 transition-colors duration-300">Overall Safety</span>
-                    <div className={`rounded-full px-2 py-1 text-xs font-semibold transition-all duration-300 ${getScoreColor(destination.overallScore)}`}>
-                      {destination.overallScore}/10
-                    </div>
+              </div>
+              
+              {/* Overall Score */}
+              <div className="mb-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700 transition-colors duration-300">Overall Safety</span>
+                  <div className={`rounded-full px-2 py-1 text-xs font-semibold transition-all duration-300 ${getScoreColor(destination.overallScore)}`}>
+                    {destination.overallScore}/10
                   </div>
                 </div>
-
+              </div>
+              
                 {/* Safety Indicators - Default View */}
                 <div className="space-y-3 md:group-hover:opacity-0 transition-opacity duration-300">
                   <div className="flex items-center space-x-3">
@@ -138,7 +138,7 @@ const PopularDestinations: React.FC = () => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700 transition-colors duration-300">Public Transit</span>
-                        <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2">
                           <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.publicTransit}/10</span>
                           {renderScoreBar(destination.publicTransit)}
                         </div>
@@ -151,7 +151,7 @@ const PopularDestinations: React.FC = () => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700 transition-colors duration-300">Walking Alone</span>
-                        <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2">
                           <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.walkingAlone}/10</span>
                           {renderScoreBar(destination.walkingAlone)}
                         </div>
@@ -159,7 +159,7 @@ const PopularDestinations: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
+                
                 {/* Desktop Hover Overlay */}
                 <div className={`hidden md:block absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getSafetyBackgroundColor(destination.overallScore)} backdrop-blur-sm rounded-b-2xl p-4`}>
                   <div className="space-y-2">
@@ -202,10 +202,10 @@ const PopularDestinations: React.FC = () => {
                             : "$40-80 USD/day"}
                         </p>
                       </div>
-                    </div>
+                  </div>
                   </div>
                 </div>
-
+                
                 {/* Mobile Expanded View */}
                 <div className={`md:hidden overflow-hidden transition-all duration-300 ${
                   expandedCard === `${destination.city}-${destination.country}` 
@@ -286,7 +286,7 @@ const PopularDestinations: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-            </div>
+              </div>
           ))}
         </div>
         

@@ -1,0 +1,29 @@
+{
+  "task.autoDetect": "on",
+  "terminal.integrated.automationProfile.windows": {
+    "path": "cmd.exe",
+    "args": ["/c", "npm run dev"]
+  },
+  "terminal.integrated.automationProfile.linux": {
+    "path": "/bin/bash",
+    "args": ["-c", "npm run dev"]
+  },
+  "terminal.integrated.automationProfile.osx": {
+    "path": "/bin/bash", 
+    "args": ["-c", "npm run dev"]
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "typescript.preferences.useLabelDetailsInCompletionEntries": true,
+  "typescript.suggest.autoImports": true,
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "workbench.startupEditor": "welcomePage",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "debug.autoExpandLazyVariables": true
+} 

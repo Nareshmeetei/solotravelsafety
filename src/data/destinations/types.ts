@@ -248,6 +248,7 @@ export interface Destination {
     details: string;
     reason?: string;
     link?: string;
+    soloTravelerAdvice?: string[];
   };
   crimeStatistics?: {
     violentCrime: number; // per 100,000

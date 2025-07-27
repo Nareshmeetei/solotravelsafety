@@ -709,7 +709,14 @@ const busan: Destination = {
       lastUpdated: 'January 2025',
       details: 'South Korea is generally safe for travelers. Exercise normal precautions. The country has low crime rates and excellent emergency services. However, petty crime such as pickpocketing can occur in tourist areas and on public transportation.',
       reason: 'Petty theft in tourist areas.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-korea-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-korea-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Extremely safe for solo female travelers - among world\'s safest cities',
+        'Stay in Haeundae, Gwangalli, or Seomyeon for best safety and convenience',
+        'Use KakaoTaxi app or excellent public transport (women-only subway cars available)',
+        'Download KakaoMap and Subway Korea apps - Google Maps doesn\'t work well',
+        'Respectful culture with minimal harassment - dress modestly at temples'
+      ]
     },
     crimeStatistics: {
       violentCrime: 45, // per 100,000 (2024 data)

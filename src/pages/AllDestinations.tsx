@@ -281,23 +281,23 @@ const AllDestinations: React.FC = () => {
                     onClick={() => {
                       handleDestinationClick();
                     }}
-                  >
-                    {/* Header */}
-                    <div className="mb-4 flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <FlagImage 
-                          countryCode={destination.countryCode}
-                          alt={`${destination.country} flag`}
-                          className="transition-transform duration-300 animate-pulse-soft"
-                        />
-                        <div>
-                          <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
-                            {destination.city}
-                          </h3>
-                          <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
-                        </div>
+                >
+                  {/* Header */}
+                  <div className="mb-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <FlagImage 
+                        countryCode={destination.countryCode}
+                        alt={`${destination.country} flag`}
+                        className="transition-transform duration-300 animate-pulse-soft"
+                      />
+                      <div>
+                        <h3 className="text-lg font-display text-gray-900 transition-colors duration-300">
+                          {destination.city}
+                        </h3>
+                        <p className="text-sm text-gray-600 transition-colors duration-300">{destination.country}</p>
                       </div>
-                      
+                    </div>
+                    
                       {/* Live Weather Temperature */}
                       <WeatherDisplay 
                         city={destination.city}
@@ -306,7 +306,7 @@ const AllDestinations: React.FC = () => {
                         isExpanded={expandedCard === `${destination.city}-${destination.country}`}
                         showCelsius={hoveredCard === `${destination.city}-${destination.country}`}
                       />
-                    </div>
+                  </div>
                   
                   {/* Overall Score */}
                   <div className="mb-4">
@@ -458,9 +458,9 @@ const AllDestinations: React.FC = () => {
                   
                   {/* Meta Info with Mobile Button */}
                   <div className="flex items-center justify-between mt-5">
-                    <div className="text-xs text-gray-500 space-y-1 transition-colors duration-300">
-                      <div>{destination.reviewCount} reviews</div>
-                      <div>Updated {destination.lastUpdated}</div>
+                  <div className="text-xs text-gray-500 space-y-1 transition-colors duration-300">
+                    <div>{destination.reviewCount} reviews</div>
+                    <div>Updated {destination.lastUpdated}</div>
                     </div>
                   </div>
                 </Link>
@@ -487,15 +487,15 @@ const AllDestinations: React.FC = () => {
                   </svg>
                 </button>
               </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
-    
-    <Footer />
-  </div>
-);
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
 };
 
 export default AllDestinations;

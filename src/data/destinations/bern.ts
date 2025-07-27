@@ -653,7 +653,14 @@ const bern: Destination = {
       lastUpdated: 'January 2025',
       details: 'Switzerland is generally safe for travelers. Exercise normal precautions. The country has low crime rates and excellent emergency services. However, petty crime such as pickpocketing can occur in tourist areas and on public transportation.',
       reason: 'Petty theft in tourist areas.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/switzerland-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/switzerland-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Extremely safe for solo female travelers - one of world\'s safest countries',
+        'Stay in Old Town or Kirchenfeld for best safety and convenience',
+        'Never hike alone in Alps - always go with groups or guides',
+        'Use Bern Ticket for unlimited safe public transport (CHF 13/day)',
+        'English widely spoken - easy to get help and directions'
+      ]
     },
     crimeStatistics: {
       violentCrime: 12, // per 100,000 (2024 data)

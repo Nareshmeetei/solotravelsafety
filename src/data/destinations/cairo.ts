@@ -215,7 +215,7 @@ const cairo: Destination = {
         usd: 0.0203,
         eur: 0.0195,
         gbp: 0.0162
-      },
+    },
       exchangeTips: [
         'Use only official banks and exchange bureaus - avoid street money changers completely',
         'Major hotels and restaurants accept credit cards but carry cash for tips and small purchases',
@@ -492,6 +492,30 @@ const cairo: Destination = {
           address: '26 Kamel El Shenawy Street, Garden City, Cairo',
           phone: '+20 2 2791 8700',
           link: 'https://www.canadainternational.gc.ca/egypt-egypte/'
+        },
+        {
+          name: 'Embassy of the Netherlands Cairo',
+          address: '18 Hassan Sabry Street, Zamalek, Cairo',
+          phone: '+20 2 2739 5500',
+          link: 'https://www.netherlandsandyou.nl/countries/egypt'
+        },
+        {
+          name: 'Embassy of Denmark Cairo',
+          address: '12 Hassan Sabry Street, Zamalek, Cairo',
+          phone: '+20 2 2728 6800',
+          link: 'https://egypten.um.dk/'
+        },
+        {
+          name: 'Embassy of Switzerland Cairo',
+          address: '10 Abdel Khalek Sarwat Street, Cairo',
+          phone: '+20 2 2575 8284',
+          link: 'https://www.eda.admin.ch/cairo'
+        },
+        {
+          name: 'Embassy of India Cairo',
+          address: '5 Aziz Abaza Street, Zamalek, Cairo',
+          phone: '+20 2 2736 4059',
+          link: 'https://www.eoicairo.gov.in/'
         }
       ],
       womensRights: [

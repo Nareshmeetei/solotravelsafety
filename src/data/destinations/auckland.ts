@@ -686,7 +686,14 @@ const auckland: Destination = {
       lastUpdated: 'January 2025',
       details: 'New Zealand is generally safe for travelers, but crime has increased in recent years, particularly in Auckland. Exercise increased caution, especially at night and in certain areas. Be aware of petty crime in tourist areas and use common sense safety measures.',
       reason: 'Increased crime rates, particularly in Auckland CBD and South Auckland.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/new-zealand-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/new-zealand-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Auckland is very safe for solo female travelers - among world\'s safest cities',
+        'Stay in CBD or Ponsonby for best access to hostels and activities', 
+        'Use public transport after dark (safer than walking K Road area)',
+        'AT HOP card essential - $9.50 unlimited daily, works on all transport',
+        'Join hostel activities or take ferry day trips to meet people'
+      ]
     },
     crimeStatistics: {
       violentCrime: 12.8, // per 100,000 (2023 data)

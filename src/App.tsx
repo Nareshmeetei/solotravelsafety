@@ -10,7 +10,7 @@ import AccountSettings from './pages/AccountSettings';
 import SafetyTips from './pages/SafetyTips';
 import Community from './pages/Community';
 import AuthCallback from './pages/AuthCallback';
-import FloatingBoltLogo from './components/FloatingBoltLogo';
+
 import ScrollToTop from './components/ScrollToTop';
 import CookieConsent from './components/CookieConsent';
 import SentryErrorBoundary from './components/SentryErrorBoundary';
@@ -111,7 +111,6 @@ function App() {
         <ScrollToTop />
         <div className="min-h-screen bg-white font-sans">
           <AppRoutes />
-          <FloatingBoltLogo />
           <CookieConsent 
             onAccept={handleCookieAccept}
             onDecline={handleCookieDecline}

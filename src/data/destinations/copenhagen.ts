@@ -508,7 +508,14 @@ const copenhagen: Destination = {
       lastUpdated: 'January 2025',
       details: 'Denmark is generally safe for travelers. Exercise normal precautions. The country has very low crime rates and excellent emergency services.',
       reason: 'Very low crime rates and excellent safety standards.',
-      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/denmark-travel-advisory.html'
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/denmark-travel-advisory.html',
+      soloTravelerAdvice: [
+        'One of the world\'s safest cities for solo females - ranked #8 globally',
+        'Get Copenhagen Card for unlimited transport + 87 attractions (saves money)',
+        'Rent a bike - best cycling infrastructure globally with dedicated superhighways',
+        'Stay in Indre By or Vesterbro hostels for safety and social atmosphere',
+        'English widely spoken everywhere - easy to get help when needed'
+      ]
     },
     crimeStatistics: {
       violentCrime: 8, // per 100,000 (2024 data)

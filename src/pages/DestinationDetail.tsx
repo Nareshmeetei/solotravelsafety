@@ -991,6 +991,137 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
+                    {/* Cultural Expectations */}
+                    {destination.culturalExpectations && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Expectations</h3>
+                        <div className="space-y-4">
+                          <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <h4 className="font-display text-blue-900 mb-2">Dress Code</h4>
+                            <div className="text-[12pt] text-blue-800 whitespace-pre-line">
+                              {destination.culturalExpectations.dressCode}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
+                            <h4 className="font-display text-purple-900 mb-2">Behavior Norms</h4>
+                            <ul className="text-[12pt] text-purple-800 space-y-1">
+                              {destination.culturalExpectations.behaviorNorms.map((norm: string, idx: number) => (
+                                <li key={idx}>• {norm}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                            <h4 className="font-display text-gray-900 mb-2">Local Perception</h4>
+                            <div className="text-[12pt] text-gray-800 whitespace-pre-line">
+                              {destination.culturalExpectations.perception}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Scam Warnings */}
+                    {destination.scamWarnings && destination.scamWarnings.length > 0 && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Scam Warnings</h3>
+                        <div className="space-y-3">
+                          {destination.scamWarnings.map((scam: any, index: number) => (
+                            <div key={index} className={`p-4 rounded-lg border ${
+                              scam.severity === 'high' ? 'bg-red-50 border-red-200' : 
+                              scam.severity === 'medium' ? 'bg-yellow-50 border-yellow-200' : 
+                              'bg-orange-50 border-orange-200'
+                            }`}>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <h4 className="font-bold mb-1 text-gray-900">
+                                    {scam.title}
+                                  </h4>
+                                  <p className="text-[12pt] text-gray-700">
+                                    {scam.description}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Useful Tips */}
+                    {destination.usefulTips && destination.usefulTips.length > 0 && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Useful Tips</h3>
+                        <div className="space-y-3">
+                          {destination.usefulTips.map((tip: any, index: number) => (
+                            <div key={index} className={`p-4 rounded-lg border ${
+                              tip.severity === 'high' ? 'bg-red-50 border-red-200' : 
+                              tip.severity === 'medium' ? 'bg-yellow-50 border-yellow-200' : 
+                              'bg-green-50 border-green-200'
+                            }`}>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <h4 className="font-bold mb-1 text-gray-900">
+                                    {tip.title}
+                                  </h4>
+                                  <p className="text-[12pt] text-gray-700 mb-2">
+                                    {tip.description}
+                                  </p>
+                                  {tip.sourceName && (
+                                    <p className="text-xs text-gray-500">
+                                      Source: {tip.sourceName}
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Cultural Sensitivity Tips */}
+                    {destination.culturalSensitivityTips && destination.culturalSensitivityTips.length > 0 && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Sensitivity Tips</h3>
+                        <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-lg">
+                          <ul className="text-[12pt] text-indigo-800 space-y-2">
+                            {destination.culturalSensitivityTips.map((tip: string, idx: number) => (
+                              <li key={idx}>• {tip}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Cultural Dos and Don'ts */}
+                    {(destination.culturalDos && destination.culturalDos.length > 0) || (destination.culturalDonts && destination.culturalDonts.length > 0) && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Guidelines</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {destination.culturalDos && destination.culturalDos.length > 0 && (
+                            <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                              <h4 className="font-display text-green-900 mb-2">Do's</h4>
+                              <ul className="text-[12pt] text-green-800 space-y-1">
+                                {destination.culturalDos.map((doItem: string, idx: number) => (
+                                  <li key={idx}>• {doItem}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {destination.culturalDonts && destination.culturalDonts.length > 0 && (
+                            <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                              <h4 className="font-display text-red-900 mb-2">Don'ts</h4>
+                              <ul className="text-[12pt] text-red-800 space-y-1">
+                                {destination.culturalDonts.map((dontItem: string, idx: number) => (
+                                  <li key={idx}>• {dontItem}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -1354,18 +1485,29 @@ const DestinationDetail: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="font-display text-gray-900 mb-2 text-sm">What this means for solo travelers</h4>
                     <ul className="space-y-1 text-sm text-gray-700">
-                      <li className="flex items-start">
-                        <span className="text-green-600 mr-2 mt-0.5">•</span>
-                        Watch your bag in markets and metros
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-600 mr-2 mt-0.5">•</span>
-                        Avoid isolated streets at night
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-600 mr-2 mt-0.5">•</span>
-                        Use rideshare apps over local taxis
-                      </li>
+                      {destination.governmentAdvisory.soloTravelerAdvice && destination.governmentAdvisory.soloTravelerAdvice.length > 0 ? (
+                        destination.governmentAdvisory.soloTravelerAdvice.map((advice, index) => (
+                          <li key={index} className="flex items-start">
+                            <span className="text-red-600 mr-2 mt-0.5">•</span>
+                            {advice}
+                          </li>
+                        ))
+                      ) : (
+                        <>
+                          <li className="flex items-start">
+                            <span className="text-green-600 mr-2 mt-0.5">•</span>
+                            Watch your bag in markets and metros
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-green-600 mr-2 mt-0.5">•</span>
+                            Avoid isolated streets at night
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-green-600 mr-2 mt-0.5">•</span>
+                            Use rideshare apps over local taxis
+                          </li>
+                        </>
+                      )}
                     </ul>
                   </div>
 
