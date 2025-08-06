@@ -6,6 +6,7 @@ import auckland from './auckland';
 import bern from './bern';
 import bogota from './bogota';
 import brisbane from './brisbane';
+import brussels from './brussels';
 import busan from './busan';
 import cairo from './cairo';
 import capeTown from './cape-town';
@@ -48,6 +49,7 @@ export const destinations: Destination[] = [
   bern,
   bogota,
   brisbane,
+  brussels,
   busan,
   cairo,
   capeTown,
@@ -106,6 +108,7 @@ export {
   bern,
   bogota,
   brisbane,
+  brussels,
   busan,
   cairo,
   capeTown,
