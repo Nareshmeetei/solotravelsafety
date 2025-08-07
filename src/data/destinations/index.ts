@@ -3,6 +3,7 @@
 
 import amsterdam from './amsterdam';
 import auckland from './auckland';
+import bangkok from './bangkok';
 import barcelona from './barcelona';
 import bern from './bern';
 import bogota from './bogota';
@@ -15,6 +16,7 @@ import caracas from './caracas';
 import copenhagen from './copenhagen';
 import dublin from './dublin';
 import edinburgh from './edinburgh';
+import florence from './florence';
 import guatemalaCity from './guatemala-city';
 import helsinki from './helsinki';
 import johannesburg from './johannesburg';
@@ -32,6 +34,7 @@ import osaka from './osaka';
 import oslo from './oslo';
 import paris from './paris';
 import portAuPrince from './port-au-prince';
+import prague from './prague';
 import reykjavik from './reykjavik';
 import rioDeJaneiro from './rio-de-janeiro';
 import sanSalvador from './san-salvador';
@@ -49,6 +52,7 @@ import { Destination } from './types';
 export const destinations: Destination[] = [
   amsterdam,
   auckland,
+  bangkok,
   barcelona,
   bern,
   bogota,

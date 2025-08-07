@@ -5,6 +5,40 @@ import { destinations } from '../data/destinations';
 import FlagImage from './FlagImage';
 import WeatherDisplay from './WeatherDisplay';
 
+// 30 Most Popular Solo Travel Destinations for Women
+const POPULAR_DESTINATIONS = [
+  'Reykjavik, Iceland',
+  'Lisbon, Portugal', 
+  'Kyoto, Japan',
+  'Denpasar, Indonesia', // Bali
+  'Cape Town, South Africa',
+  'Vancouver, Canada',
+  'Hanoi, Vietnam',
+  'Auckland, New Zealand',
+  'Barcelona, Spain',
+  'Paris, France',
+  'Singapore, Singapore',
+  'Seoul, South Korea',
+  'Dubrovnik, Croatia', // Will show when available
+  'Budapest, Hungary', // Will show when available
+  'Florence, Italy',
+  'Bangkok, Thailand',
+  'Queenstown, New Zealand', // Will show when available
+  'Amsterdam, Netherlands',
+  'Chiang Mai, Thailand', // Will show when available
+  'Maun, Botswana', // Will show when available
+  'Abu Dhabi, UAE', // Will show when available
+  'Thimphu, Bhutan', // Will show when available
+  'Manuel Antonio, Costa Rica', // Will show when available
+  'Porto, Portugal', // Will show when available
+  'Prague, Czech Republic',
+  'Corfu, Greece', // Will show when available
+  'Riga, Latvia', // Will show when available
+  'Ubud, Indonesia', // Will show when available
+  'Melbourne, Australia',
+  'Hobart, Australia' // Will show when available
+];
+
 const PopularDestinations: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
@@ -55,6 +89,12 @@ const PopularDestinations: React.FC = () => {
     });
   };
 
+  // Filter destinations to show only the 30 most popular
+  const popularDestinations = destinations.filter(destination => {
+    const destinationString = `${destination.city}, ${destination.country}`;
+    return POPULAR_DESTINATIONS.includes(destinationString);
+  }).slice(0, 30); // Ensure we don't show more than 30
+
   return (
     <section className="bg-gray-50 px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl">
@@ -68,7 +108,7 @@ const PopularDestinations: React.FC = () => {
         </div>
         
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {destinations.map((destination, index) => (
+          {popularDestinations.map((destination, index) => (
             <div
               key={index}
               className={`group relative overflow-hidden rounded-2xl ${getSafetyBackgroundColor(destination.overallScore)} p-6 shadow-sm card-hover cursor-pointer ring-1 block transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
