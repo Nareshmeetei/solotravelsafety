@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, CheckCircle, AlertTriangle, X, Info } from 'lucide-react';
+import { Shield, CheckCircle, X, Info } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SecurityHeaders from '../components/SecurityHeaders';
 import RateLimitTest from '../components/RateLimitTest';
 
 const SecurityTest: React.FC = () => {
-  const [securityChecks, setSecurityChecks] = useState<any>({});
+  const [securityChecks, setSecurityChecks] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

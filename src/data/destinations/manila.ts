@@ -152,6 +152,95 @@ const manila: Destination = {
         sourceUrl: 'https://sologuides.com/manila/'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-manila'
+        },
+        {
+          name: 'Embassy of Germany in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://ph.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://ph.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://www.exteriores.gob.es/embajadas/manila'
+        },
+        {
+          name: 'Australian Embassy Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://ph.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://www.canadainternational.gc.ca/ph-philippines/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/philippines'
+        },
+        {
+          name: 'Embassy of Denmark in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://ph.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://www.eda.admin.ch/manila'
+        },
+        {
+          name: 'Embassy of India in Manila',
+          address: '1201 Roxas Boulevard, Manila',
+          phone: '+63 2 5301 2000',
+          link: 'https://www.indianembassyph.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default manila;

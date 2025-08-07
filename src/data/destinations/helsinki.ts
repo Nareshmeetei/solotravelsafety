@@ -70,7 +70,7 @@ const helsinki: Destination = {
     ],
     usefulTips: [
       {
-        title: "Take advantage of Helsinki's safe, walkable city center",
+        title: "Take advantage of Helsinki\'s safe, walkable city center",
         description: "Most attractions are within walking distance. The city is compact, well-lit, and safe for solo exploration day or night.",
         severity: "low",
         sourceName: "MyHelsinki, 2025",
@@ -150,6 +150,95 @@ const helsinki: Destination = {
         sourceUrl: 'https://thesolotravelinstyleblog.com/helsinki-in-2-days/'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-helsinki'
+        },
+        {
+          name: 'Embassy of Germany in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://fi.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://fi.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://www.exteriores.gob.es/embajadas/helsinki'
+        },
+        {
+          name: 'Australian Embassy Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://fi.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://www.canadainternational.gc.ca/fi-finland/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/finland'
+        },
+        {
+          name: 'Embassy of Denmark in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://fi.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://www.eda.admin.ch/helsinki'
+        },
+        {
+          name: 'Embassy of India in Helsinki',
+          address: 'Itäinen Puistotie 14B, 00140 Helsinki',
+          phone: '+358 9 616 250',
+          link: 'https://www.indianembassyfi.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default helsinki;

@@ -1,15 +1,44 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { X, Send, MoreHorizontal, Trash2, Eye, EyeOff, Loader2, User, Edit, Check, X as XIcon } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { X, Send, MoreHorizontal, Trash2, Loader2, User, Edit, Check, X as XIcon } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 import UserAvatar from './UserAvatar';
 
 // Helper function to update chirp in storage
+interface ChirpUser {
+  id: string;
+  full_name?: string;
+  avatar_url?: string;
+  email?: string;
+}
+
+interface ChirpData {
+  id: string;
+  content: string;
+  user: ChirpUser;
+  comments?: CommentData[];
+  comments_count?: number;
+  likes_count?: number;
+  rechirps_count?: number;
+  created_at?: string;
+  userLikes?: string[];
+  userRechirps?: string[];
+}
+
+interface CommentData {
+  id: string;
+  comment_text: string;
+  created_at: string;
+  likes_count?: number;
+  userLikes?: string[];
+  user: ChirpUser;
+}
+
 const updateChirpInStorage = (
   storage: Storage,
   storageKey: string,
-  chirp: any,
-  newComment: any,
+  chirp: ChirpData,
+  newComment: CommentData | null,
   isDeleting: boolean = false,
   commentIdToDelete?: string
 ) => {
@@ -17,15 +46,15 @@ const updateChirpInStorage = (
   console.log(`Current chirps in ${storageKey}:`, chirps);
   console.log('Looking for chirp ID:', chirp.id);
   
-  let chirpExists = chirps.some((c: any) => c.id === chirp.id);
+  const chirpExists = chirps.some((c: ChirpData) => c.id === chirp.id);
   
-  let updatedChirps;
+  let updatedChirps: ChirpData[];
   if (chirpExists) {
     // Update existing chirp
     if (isDeleting && commentIdToDelete) {
       // Delete comment logic
-      const updatedComments = chirps.find((c: any) => c.id === chirp.id)?.comments?.filter((c: any) => c.id !== commentIdToDelete) || [];
-      updatedChirps = chirps.map((c: any) => 
+      const updatedComments = chirps.find((c: ChirpData) => c.id === chirp.id)?.comments?.filter((c: CommentData) => c.id !== commentIdToDelete) || [];
+      updatedChirps = chirps.map((c: ChirpData) => 
         c.id === chirp.id 
           ? { 
               ...c, 
@@ -36,11 +65,11 @@ const updateChirpInStorage = (
       );
     } else {
       // Add comment logic
-      updatedChirps = chirps.map((c: any) => 
+      updatedChirps = chirps.map((c: ChirpData) => 
         c.id === chirp.id 
           ? { 
               ...c, 
-              comments: [newComment, ...(c.comments || [])],
+              comments: [newComment!, ...(c.comments || [])],
               comments_count: (c.comments_count || 0) + 1
             }
           : c
@@ -48,11 +77,11 @@ const updateChirpInStorage = (
     }
   } else if (!isDeleting) {
     // Create new chirp entry with comment (only when adding, not deleting)
-    const newChirpEntry = {
+    const newChirpEntry: ChirpData = {
       id: chirp.id,
       content: chirp.content,
       user: chirp.user,
-      comments: [newComment],
+      comments: [newComment!],
       comments_count: 1,
       likes_count: 0,
       rechirps_count: 0,
@@ -107,16 +136,54 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
   const [isLoading, setIsLoading] = useState(false);
   const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
   const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
-  const [hiddenCommentIds, setHiddenCommentIds] = useState<Set<string>>(new Set());
   const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
   const [editCommentText, setEditCommentText] = useState('');
   const [isEditing, setIsEditing] = useState(false);
+
+  const loadComments = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      // Try to load from database first
+      const { data, error } = await supabase.from('comments').select('*, user:users(*)').eq('chirp_id', chirp.id).order('created_at', { ascending: false });
+      if (!error && data) {
+        setComments(data);
+      } else {
+        console.warn('Database comments load failed, using local storage:', error);
+        // Load from local storage
+        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]') as ChirpData[];
+        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]') as ChirpData[];
+        const allChirps = [...localChirps, ...sessionChirps];
+        const chirpData = allChirps.find((c: ChirpData) => c.id === chirp.id);
+        
+        if (chirpData && chirpData.comments) {
+          setComments(chirpData.comments);
+        } else {
+          setComments([]);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading comments:', error);
+      // Fallback to local storage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]') as ChirpData[];
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]') as ChirpData[];
+      const allChirps = [...localChirps, ...sessionChirps];
+      const chirpData = allChirps.find((c: ChirpData) => c.id === chirp.id);
+      
+      if (chirpData && chirpData.comments) {
+        setComments(chirpData.comments);
+      } else {
+        setComments([]);
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  }, [chirp.id]);
 
   useEffect(() => {
     if (isOpen) {
       loadComments();
     }
-  }, [isOpen, chirp.id]);
+  }, [isOpen, loadComments]);
 
   // Handle clicks outside dropdown
   useEffect(() => {
@@ -135,45 +202,6 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [openDropdownId]);
-
-  const loadComments = async () => {
-    setIsLoading(true);
-    try {
-      // Try to load from database first
-      const { data, error } = await supabase.from('comments').select('*, user:users(*)').eq('chirp_id', chirp.id).order('created_at', { ascending: false });
-      if (!error && data) {
-        setComments(data);
-      } else {
-        console.warn('Database comments load failed, using local storage:', error);
-        // Load from local storage
-        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const allChirps = [...localChirps, ...sessionChirps];
-        const chirpData = allChirps.find((c: any) => c.id === chirp.id);
-        
-        if (chirpData && chirpData.comments) {
-          setComments(chirpData.comments);
-        } else {
-          setComments([]);
-        }
-      }
-    } catch (error) {
-      console.error('Error loading comments:', error);
-      // Fallback to local storage
-      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      const allChirps = [...localChirps, ...sessionChirps];
-      const chirpData = allChirps.find((c: any) => c.id === chirp.id);
-      
-      if (chirpData && chirpData.comments) {
-        setComments(chirpData.comments);
-      } else {
-        setComments([]);
-      }
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const handlePostComment = async () => {
     if (!comment.trim() || !user) return;
@@ -196,7 +224,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
       };
 
       // Try to save to database first
-      const { data, error } = await supabase.from('comments').insert({
+      const { error } = await supabase.from('comments').insert({
         chirp_id: chirp.id,
         comment_text: comment.trim(),
         user_id: user.id
@@ -210,12 +238,11 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
       setComment('');
 
       // Update chirp in localStorage
-      const updatedLocalChirps = updateChirpInStorage(localStorage, 'localChirps', chirp, newComment);
+      updateChirpInStorage(localStorage, 'localChirps', chirp, newComment);
       console.log('Saved comment to localStorage:', newComment);
-      console.log('Updated localChirps:', updatedLocalChirps);
 
       // Update chirp in sessionStorage
-      const updatedSessionChirps = updateChirpInStorage(sessionStorage, 'sessionChirps', chirp, newComment);
+      updateChirpInStorage(sessionStorage, 'sessionChirps', chirp, newComment);
 
       // Notify parent component that comment was added
       if (onCommentAdded) {
@@ -241,10 +268,10 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
       setComments(updatedComments);
 
       // Update chirp in localStorage
-      const updatedLocalChirps = updateChirpInStorage(localStorage, 'localChirps', chirp, null, true, commentId);
+      updateChirpInStorage(localStorage, 'localChirps', chirp, null, true, commentId);
 
       // Update chirp in sessionStorage
-      const updatedSessionChirps = updateChirpInStorage(sessionStorage, 'sessionChirps', chirp, null, true, commentId);
+      updateChirpInStorage(sessionStorage, 'sessionChirps', chirp, null, true, commentId);
 
       // Notify parent component that comment was deleted
       if (onCommentAdded) {
@@ -260,21 +287,6 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
     }
   };
 
-  const handleHideComment = (commentId: string) => {
-    setHiddenCommentIds(prev => new Set([...prev, commentId]));
-    setOpenDropdownId(null);
-    console.log('Comment hidden:', commentId);
-  };
-
-  const handleShowComment = (commentId: string) => {
-    setHiddenCommentIds(prev => {
-      const newSet = new Set(prev);
-      newSet.delete(commentId);
-      return newSet;
-    });
-    setOpenDropdownId(null);
-    console.log('Comment shown:', commentId);
-  };
 
   const handleEditComment = async (commentId: string) => {
     if (!user || !editCommentText.trim()) return;
@@ -290,12 +302,12 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
       setComments(updatedComments);
 
       // Update chirp in localStorage
-      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const updatedLocalChirps = localChirps.map((c: any) => 
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]') as ChirpData[];
+      const updatedLocalChirps = localChirps.map((c: ChirpData) => 
         c.id === chirp.id 
           ? { 
               ...c, 
-              comments: c.comments?.map((comment: any) => 
+              comments: c.comments?.map((comment: CommentData) => 
                 comment.id === commentId 
                   ? { ...comment, comment_text: editCommentText.trim() }
                   : comment
@@ -306,12 +318,12 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
       localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
 
       // Update chirp in sessionStorage
-      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      const updatedSessionChirps = sessionChirps.map((c: any) => 
+      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]') as ChirpData[];
+      const updatedSessionChirps = sessionChirps.map((c: ChirpData) => 
         c.id === chirp.id 
           ? { 
               ...c, 
-              comments: c.comments?.map((comment: any) => 
+              comments: c.comments?.map((comment: CommentData) => 
                 comment.id === commentId 
                   ? { ...comment, comment_text: editCommentText.trim() }
                   : comment

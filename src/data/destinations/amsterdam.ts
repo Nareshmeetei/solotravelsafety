@@ -368,52 +368,64 @@ const amsterdam: Destination = {
       },
       embassies: [
         {
-          name: 'British Embassy The Hague',
+          name: 'British Embassy Amsterdam',
           address: 'Lange Voorhout 10, 2514 ED The Hague',
           phone: '+31 70 427 0427',
           link: 'https://www.gov.uk/world/organisations/british-embassy-the-hague'
         },
         {
-          name: 'Embassy of Germany in The Hague',
-          address: 'Groot Hertoginnelaan 18–20, 2517 EG The Hague',
-          phone: '+31 70 342 0600',
-          link: 'https://niederlande.diplo.de/'
+          name: 'Embassy of Germany in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://nl.diplo.de/'
         },
         {
-          name: 'Embassy of France in the Netherlands',
-          address: 'Anna Paulownastraat 76, 2518 BJ The Hague',
-          phone: '+31 70 312 5800',
+          name: 'Embassy of France in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
           link: 'https://nl.ambafrance.org/'
         },
         {
-          name: 'Australian Embassy The Hague',
-          address: 'Carnegieplein 4, 2517 KJ The Hague',
-          phone: '+31 70 310 8200',
-          link: 'https://netherlands.embassy.gov.au/'
+          name: 'Embassy of Spain in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://www.exteriores.gob.es/embajadas/the-hague'
         },
         {
-          name: 'Embassy of Canada in The Hague',
-          address: 'Sophialaan 7, 2514 JP The Hague',
-          phone: '+31 70 311 1600',
-          link: 'https://www.international.gc.ca/country-pays/netherlands-pays_bas/the-hague-la-haye.aspx?lang=eng'
+          name: 'Australian Embassy Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://nl.embassy.gov.au/'
         },
         {
-          name: 'Embassy of Denmark in The Hague',
-          address: 'Koninginnegracht 30, 2514 AB The Hague',
-          phone: '+31 70 302 5959',
-          link: 'https://netherlands.um.dk/en'
+          name: 'Canadian Embassy Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://www.canadainternational.gc.ca/nl-netherlands/'
         },
         {
-          name: 'Embassy of Switzerland in The Hague',
-          address: 'Lange Voorhout 42, 2514 EG The Hague',
-          phone: '+31 70 364 28 31',
-          link: 'https://www.eda.admin.ch/netherlands'
+          name: 'Embassy of the Netherlands in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/netherlands'
         },
         {
-          name: 'Embassy of India in The Hague',
-          address: 'Buitenrustweg 2, 2243 AB Wassenaar',
-          phone: '+31 70 346 9771',
-          link: 'https://www.indianembassynetherlands.gov.in/'
+          name: 'Embassy of Denmark in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://nl.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://www.eda.admin.ch/the-hague'
+        },
+        {
+          name: 'Embassy of India in Amsterdam',
+          address: 'Lange Voorhout 10, 2514 ED The Hague',
+          phone: '+31 70 427 0427',
+          link: 'https://www.indianembassynl.gov.in/'
         }
       ],
       consulate: {

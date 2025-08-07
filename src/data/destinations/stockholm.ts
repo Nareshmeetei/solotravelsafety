@@ -4,7 +4,7 @@ const stockholm: Destination = {
     city: 'Stockholm',
     country: 'Sweden',
     continent: 'Europe',
-    countryCode: 'se',
+          countryCode: 'se',
     overallScore: 8.8,
     nightSafety: 8.6,
     publicTransit: 9.1,
@@ -123,6 +123,7 @@ const stockholm: Destination = {
         icon: 'Beer',
       }
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Respect personal space and keep a polite distance.',
       'Be punctual for meetings and public transport.',
@@ -135,9 +136,10 @@ const stockholm: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in nature.",
-      "Don't make jokes about Sweden's history or politics."
-    ],
-    scamWarnings: [],
+      "Don't make jokes about Sweden\'s history or politics."
+    ]
+  },
+  scamWarnings: [],
     womensConfidenceScore: {
       score: 53.9,
       source: '',
@@ -168,7 +170,95 @@ const stockholm: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-stockholm'
+        },
+        {
+          name: 'Embassy of Germany in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://se.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://se.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://www.exteriores.gob.es/embajadas/stockholm'
+        },
+        {
+          name: 'Australian Embassy Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://se.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://www.canadainternational.gc.ca/se-sweden/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/sweden'
+        },
+        {
+          name: 'Embassy of Denmark in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://se.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://www.eda.admin.ch/stockholm'
+        },
+        {
+          name: 'Embassy of India in Stockholm',
+          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+          phone: '+46 8 783 5300',
+          link: 'https://www.indianembassyse.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default stockholm;

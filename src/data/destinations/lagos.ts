@@ -151,6 +151,95 @@ const lagos: Destination = {
         sourceUrl: 'https://travelladies.app/safety/nigeria/lagos'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-abuja'
+        },
+        {
+          name: 'Embassy of Germany in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://ng.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://ng.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://www.exteriores.gob.es/embajadas/abuja'
+        },
+        {
+          name: 'Australian Embassy Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://ng.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://www.canadainternational.gc.ca/ng-nigeria/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/nigeria'
+        },
+        {
+          name: 'Embassy of Denmark in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://ng.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://www.eda.admin.ch/abuja'
+        },
+        {
+          name: 'Embassy of India in Lagos',
+          address: '1075 Diplomatic Drive, Central Business District, Abuja',
+          phone: '+234 9 461 4000',
+          link: 'https://www.indianembassyng.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default lagos;

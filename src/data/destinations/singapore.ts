@@ -4,7 +4,7 @@ const singapore: Destination = {
     city: 'Singapore',
     country: 'Singapore',
     continent: 'Asia',
-    countryCode: 'sg',
+          countryCode: 'sg',
     overallScore: 8.9,
     nightSafety: 8.8,
     publicTransit: 9.5,
@@ -121,6 +121,7 @@ const singapore: Destination = {
         icon: 'AlertTriangle',
       },
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Dress modestly in temples and religious sites.',
       'Respect local laws and follow public signs.',
@@ -131,10 +132,11 @@ const singapore: Destination = {
     culturalDonts: [
       "Don't eat or drink on public transport.",
       "Don't show public displays of affection in conservative areas.",
-      "Don't touch someone's head or point with your feet.",
+      "Don't touch someone\'s head or point with your feet.",
       "Don't bring durians into hotels or public transport.",
       "Don't discuss race, religion, or politics openly."
-    ],
+    ]
+  },
     // Add Women’s Confidence Score (Numbeo 2025, Forbes, SCMP)
     womensConfidenceScore: {
       score: 92.5,
@@ -167,7 +169,95 @@ const singapore: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-singapore'
+        },
+        {
+          name: 'Embassy of Germany in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://sg.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://sg.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://www.exteriores.gob.es/embajadas/singapore'
+        },
+        {
+          name: 'Australian Embassy Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://sg.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://www.canadainternational.gc.ca/sg-singapore/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/singapore'
+        },
+        {
+          name: 'Embassy of Denmark in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://sg.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://www.eda.admin.ch/singapore'
+        },
+        {
+          name: 'Embassy of India in Singapore',
+          address: '27 Napier Road, Singapore 258508',
+          phone: '+65 6476 9100',
+          link: 'https://www.indianembassysg.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default singapore;

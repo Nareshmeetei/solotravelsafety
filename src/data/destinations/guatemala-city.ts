@@ -152,6 +152,95 @@ const guatemalacity: Destination = {
         sourceUrl: 'https://sheroamstheglobe.com/solo-female-travel-guatemala/'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-guatemala-city'
+        },
+        {
+          name: 'Embassy of Germany in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://gt.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://gt.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://www.exteriores.gob.es/embajadas/guatemala-city'
+        },
+        {
+          name: 'Australian Embassy Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://gt.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://www.canadainternational.gc.ca/gt-guatemala/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/guatemala'
+        },
+        {
+          name: 'Embassy of Denmark in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://gt.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://www.eda.admin.ch/guatemala-city'
+        },
+        {
+          name: 'Embassy of India in Guatemala-city',
+          address: 'Avenida La Reforma 16-85, Zona 10, Guatemala City',
+          phone: '+502 2326 4000',
+          link: 'https://www.indianembassygt.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default guatemalacity; 

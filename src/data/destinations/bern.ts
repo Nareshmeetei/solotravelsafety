@@ -25,22 +25,22 @@ const bern: Destination = {
       },
       walkingAlone: {
         score: 8.6,
-        context: 'Walking alone in Bern is very safe, both day and night, thanks to the city\'s respectful culture and strong community norms. The city is well-lit and busy, even after dark. Most locals and visitors feel comfortable walking alone, but it\'s best to stay on main streets and avoid deserted areas late at night. The Old Town and central areas are particularly safe for solo women.'
+                  context: 'Walking alone in Bern is very safe, both day and night, thanks to the city\'s respectful culture and strong community norms. The city is well-lit and busy, even after dark. Most locals and visitors feel comfortable walking alone, but it\'s best to stay on main streets and avoid deserted areas late at night. The Old Town and central areas are particularly safe for solo women.'
       }
     },
     neighborhoods: {
       safe: [
         {
           name: 'Old Town (Altstadt)',
-          description: 'Bern\'s UNESCO-listed Old Town is vibrant and well-patrolled, with a strong police presence and excellent lighting. While pickpocketing can occur in crowded tourist spots (like the Zytglogge and Bärenplatz), violent crime is extremely rare. The area is safe day and night, with many restaurants and cafes open late. The medieval architecture and cobblestone streets are well-lit and busy with locals and tourists.'
+                      description: 'Bern\'s UNESCO-listed Old Town is vibrant and well-patrolled, with a strong police presence and excellent lighting. While pickpocketing can occur in crowded tourist spots (like the Zytglogge and Bärenplatz), violent crime is extremely rare. The area is safe day and night, with many restaurants and cafes open late. The medieval architecture and cobblestone streets are well-lit and busy with locals and tourists.'
         },
         {
           name: 'Kirchenfeld',
-          description: 'An upscale, residential neighborhood known for its embassies, museums, and diplomatic residences. Kirchenfeld is considered one of the safest and most prestigious areas in Bern, with very low crime rates and excellent security. It\'s popular with both locals and visitors for its peaceful atmosphere and cultural attractions like the Bern Historical Museum.'
+                      description: 'An upscale, residential neighborhood known for its embassies, museums, and diplomatic residences. Kirchenfeld is considered one of the safest and most prestigious areas in Bern, with very low crime rates and excellent security. It\'s popular with both locals and visitors for its peaceful atmosphere and cultural attractions like the Bern Historical Museum.'
         },
         {
           name: 'Breitenrain',
-          description: 'A quiet, residential area with a mix of families and young professionals. Breitenrain is known for its safety, local shops, and proximity to the Aare River. Streets are well-lit and there\'s a friendly, neighborhood feel. Crime is very low, and the area is popular with solo travelers seeking a peaceful environment.'
+                      description: 'A quiet, residential area with a mix of families and young professionals. Breitenrain is known for its safety, local shops, and proximity to the Aare River. Streets are well-lit and there\'s a friendly, neighborhood feel. Crime is very low, and the area is popular with solo travelers seeking a peaceful environment.'
         },
         {
           name: 'Länggasse',
@@ -405,46 +405,58 @@ const bern: Destination = {
           link: 'https://www.gov.uk/world/organisations/british-embassy-bern'
         },
         {
-          name: 'Embassy of Germany in Switzerland',
-          address: 'Willadingweg 83, 3006 Bern',
-          phone: '+41 31 359 41 11',
-          link: 'https://bern.diplo.de/'
+          name: 'Embassy of Germany in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.diplo.de/'
         },
         {
-          name: 'Embassy of France in Switzerland',
-          address: 'Schosshaldenstrasse 46, 3006 Bern',
-          phone: '+41 31 359 21 11',
+          name: 'Embassy of France in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
           link: 'https://ch.ambafrance.org/'
         },
         {
+          name: 'Embassy of Spain in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.exteriores.gob.es/embajadas/bern'
+        },
+        {
           name: 'Australian Embassy Bern',
-          address: 'Alpenstrasse 29, 3006 Bern',
-          phone: '+41 31 310 18 40',
-          link: 'https://switzerland.embassy.gov.au/'
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.embassy.gov.au/'
         },
         {
           name: 'Canadian Embassy Bern',
-          address: 'Kirchenfeldstrasse 88, 3005 Bern',
-          phone: '+41 31 357 32 00',
-          link: 'https://www.canadainternational.gc.ca/switzerland-suisse/'
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.canadainternational.gc.ca/ch-switzerland/'
         },
         {
-          name: 'Embassy of the Netherlands in Switzerland',
-          address: 'Seftigenstrasse 7, 3007 Bern',
-          phone: '+41 31 350 87 00',
+          name: 'Embassy of the Netherlands in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/switzerland'
         },
         {
-          name: 'Embassy of Denmark in Switzerland',
-          address: 'Seftigenstrasse 7, 3007 Bern',
-          phone: '+41 31 350 87 00',
-          link: 'https://switzerland.um.dk/en'
+          name: 'Embassy of Denmark in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.um.dk/en'
         },
         {
-          name: 'Embassy of India in Switzerland',
-          address: 'Kirchenfeldstrasse 28, 3005 Bern',
-          phone: '+41 31 350 11 10',
-          link: 'https://www.indembassybern.gov.in/'
+          name: 'Embassy of Switzerland in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.eda.admin.ch/bern'
+        },
+        {
+          name: 'Embassy of India in Bern',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.indianembassych.gov.in/'
         }
       ],
       consulate: {

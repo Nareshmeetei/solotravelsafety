@@ -3,6 +3,7 @@
 
 import amsterdam from './amsterdam';
 import auckland from './auckland';
+import barcelona from './barcelona';
 import bern from './bern';
 import bogota from './bogota';
 import brisbane from './brisbane';
@@ -21,6 +22,7 @@ import kamakura from './kamakura';
 import karachi from './karachi';
 import kyoto from './kyoto';
 import lagos from './lagos';
+import lisbon from './lisbon';
 import manila from './manila';
 import melbourne from './melbourne';
 import mexicoCity from './mexico-city';
@@ -28,6 +30,7 @@ import munich from './munich';
 import nagano from './nagano';
 import osaka from './osaka';
 import oslo from './oslo';
+import paris from './paris';
 import portAuPrince from './port-au-prince';
 import reykjavik from './reykjavik';
 import rioDeJaneiro from './rio-de-janeiro';
@@ -46,6 +49,7 @@ import { Destination } from './types';
 export const destinations: Destination[] = [
   amsterdam,
   auckland,
+  barcelona,
   bern,
   bogota,
   brisbane,
@@ -64,6 +68,7 @@ export const destinations: Destination[] = [
   karachi,
   kyoto,
   lagos,
+  lisbon,
   manila,
   melbourne,
   mexicoCity,

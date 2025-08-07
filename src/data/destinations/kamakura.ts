@@ -111,7 +111,7 @@ const kamakura: Destination = {
     usefulTips: [
       {
         title: "Use public transport and official taxis",
-        description: "Kamakura's trains and buses are safe, punctual, and easy to use. Official taxis are reliable, especially at night or for longer distances.",
+        description: "Kamakura\'s trains and buses are safe, punctual, and easy to use. Official taxis are reliable, especially at night or for longer distances.",
         severity: "low",
         sourceName: "Visit Kamakura (Official Tourism)",
         sourceUrl: "https://visit.trip-kamakura.com/"
@@ -190,6 +190,95 @@ const kamakura: Destination = {
         sourceUrl: 'https://www.bemytravelmuse.com/safest-countries-for-women-to-travel-in/'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
+        },
+        {
+          name: 'Embassy of Germany in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.exteriores.gob.es/embajadas/tokyo'
+        },
+        {
+          name: 'Australian Embassy Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.canadainternational.gc.ca/jp-japan/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/japan'
+        },
+        {
+          name: 'Embassy of Denmark in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.eda.admin.ch/tokyo'
+        },
+        {
+          name: 'Embassy of India in Kamakura',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.indianembassyjp.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default kamakura;

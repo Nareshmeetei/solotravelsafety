@@ -308,7 +308,7 @@ const capetown: Destination = {
       },
       {
         title: "Travel with emergency contact and evacuation insurance",
-        description: "Given Cape Town's high crime rates, have 24/7 emergency contacts and comprehensive travel insurance with medical evacuation coverage.",
+        description: "Given Cape Town\'s high crime rates, have 24/7 emergency contacts and comprehensive travel insurance with medical evacuation coverage.",
         severity: "high",
         sourceName: "U.S. State Department Travel Advisory",
         sourceUrl: "https://travel.state.gov/"
@@ -492,58 +492,64 @@ const capetown: Destination = {
       },
       embassies: [
         {
-          name: 'British High Commission Cape Town',
-          address: '15 Southern Life Plaza, 8 Riebeek Street, Cape Town',
-          phone: '+27 21 405 2400',
-          link: 'https://www.gov.uk/world/organisations/british-high-commission-pretoria'
+          name: 'British Embassy Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-pretoria'
         },
         {
-          name: 'German Consulate General Cape Town',
-          address: '19th Floor, Safmarine House, 22 Riebeek Street, Cape Town',
-          phone: '+27 21 405 3000',
-          link: 'https://southafrica.diplo.de/'
+          name: 'Embassy of Germany in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.diplo.de/'
         },
         {
-          name: 'French Consulate General Cape Town',
-          address: '2 Dean Street, Gardens, Cape Town',
-          phone: '+27 21 423 1575',
+          name: 'Embassy of France in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
           link: 'https://za.ambafrance.org/'
         },
         {
-          name: 'Australian High Commission Pretoria (serves Cape Town)',
-          address: '292 Orient Street, Arcadia, Pretoria',
-          phone: '+27 12 423 6000',
-          link: 'https://southafrica.embassy.gov.au/'
+          name: 'Embassy of Spain in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.exteriores.gob.es/embajadas/pretoria'
         },
         {
-          name: 'Canadian High Commission Pretoria (serves Cape Town)',
-          address: '1103 Arcadia Street, Hatfield, Pretoria',
-          phone: '+27 12 422 3000',
-          link: 'https://www.canadainternational.gc.ca/south_africa-afrique_du_sud/'
+          name: 'Australian Embassy Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.embassy.gov.au/'
         },
         {
-          name: 'Netherlands Consulate General Cape Town',
-          address: '100 Strand Street, Cape Town',
-          phone: '+27 21 421 5660',
-          link: 'https://www.netherlandsandyou.nl/countries/south-africa'
+          name: 'Canadian Embassy Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.canadainternational.gc.ca/za-south-africa/'
         },
         {
-          name: 'Danish Consulate Cape Town',
-          address: 'Merchant Place, Cnr Fredman Dr & Matroosberg Rd, Ashton',
-          phone: '+27 23 615 1621',
-          link: 'https://sydafrika.um.dk/'
+          name: 'Embassy of the Netherlands in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/south-africa'
         },
         {
-          name: 'Swiss Consulate General Cape Town',
-          address: '1 Thibault Square, Long Street, Cape Town',
-          phone: '+27 21 418 3665',
-          link: 'https://www.eda.admin.ch/southafrica'
+          name: 'Embassy of Denmark in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.um.dk/en'
         },
         {
-          name: 'Indian Consulate General Cape Town',
-          address: 'Level 4, Merchant Place, Corner Fredman Drive and Matroosberg Road, Ashton',
-          phone: '+27 21 614 3777',
-          link: 'https://www.hcicapetown.gov.in/'
+          name: 'Embassy of Switzerland in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.eda.admin.ch/pretoria'
+        },
+        {
+          name: 'Embassy of India in Cape-town',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.indianembassyza.gov.in/'
         }
       ],
       womensRights: [

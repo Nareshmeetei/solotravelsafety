@@ -116,7 +116,7 @@ const kyoto: Destination = {
       },
       {
         title: "Use public transport and avoid deserted areas at night",
-        description: "Kyoto's buses and trains are safe and reliable. Stick to well-lit, busy streets at night and avoid isolated parks or alleys.",
+        description: "Kyoto\'s buses and trains are safe and reliable. Stick to well-lit, busy streets at night and avoid isolated parks or alleys.",
         severity: "low",
         sourceName: "Travel Ladies (2025)",
         sourceUrl: "https://travelladies.app/safety/japan/kyoto"
@@ -188,6 +188,95 @@ const kyoto: Destination = {
         sourceUrl: 'https://www.bemytravelmuse.com/solo-female-travel-in-japan/'
       }
     ],
-  };
+  
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
+        },
+        {
+          name: 'Embassy of Germany in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.exteriores.gob.es/embajadas/tokyo'
+        },
+        {
+          name: 'Australian Embassy Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.canadainternational.gc.ca/jp-japan/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/japan'
+        },
+        {
+          name: 'Embassy of Denmark in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.eda.admin.ch/tokyo'
+        },
+        {
+          name: 'Embassy of India in Kyoto',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.indianembassyjp.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
+};
 
 export default kyoto;

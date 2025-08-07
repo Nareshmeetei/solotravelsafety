@@ -4,7 +4,6 @@ import {
   MapPin, 
   Shield, 
   Users, 
-  Clock, 
   ThumbsUp, 
   MessageSquare, 
   Bookmark,
@@ -12,13 +11,11 @@ import {
   Search,
   Globe,
   AlertTriangle,
-  Heart,
   Star,
   ChevronDown
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useAuth } from '../contexts/AuthContext';
 
 interface SafetyTip {
   id: string;
@@ -42,7 +39,6 @@ interface SafetyTip {
 }
 
 const SafetyTips: React.FC = () => {
-  const { user } = useAuth();
   const [tips, setTips] = useState<SafetyTip[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');

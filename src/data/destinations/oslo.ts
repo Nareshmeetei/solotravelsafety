@@ -151,6 +151,7 @@ const oslo: Destination = {
         icon: 'PocketKnife',
       },
     ], // Sources: https://www.numbeo.com/crime/in/Oslo, https://travelladies.app/safety/norway/oslo, https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/norway-travel-advisory.html
+  culturalSensitivity: {
     culturalDos: [
       'Respect personal space and keep a polite distance.',
       'Be punctual for meetings and public transport.',
@@ -163,8 +164,97 @@ const oslo: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in nature.",
-      "Don't make jokes about Norway's history or politics."
+      "Don't make jokes about Norway\'s history or politics."
     ]
+  },
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-oslo'
+        },
+        {
+          name: 'Embassy of Germany in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://no.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://no.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://www.exteriores.gob.es/embajadas/oslo'
+        },
+        {
+          name: 'Australian Embassy Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://no.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://www.canadainternational.gc.ca/no-norway/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/norway'
+        },
+        {
+          name: 'Embassy of Denmark in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://no.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://www.eda.admin.ch/oslo'
+        },
+        {
+          name: 'Embassy of India in Oslo',
+          address: 'Drammensveien 18, 0244 Oslo',
+          phone: '+47 21 99 40 00',
+          link: 'https://www.indianembassyno.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
 };
 
 export default oslo;

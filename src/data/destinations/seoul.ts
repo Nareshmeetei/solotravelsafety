@@ -9,7 +9,7 @@ const seoul: Destination = {
   nightSafety: 8.4,
   publicTransit: 9.3,
   walkingAlone: 8.2,
-  tags: ['safe', 'modern', 'public-transit'],
+      tags: ['safe', 'modern', 'public-transit'],
   bgColor: 'bg-green-25',
   reviewCount: 412,
   lastUpdated: '1 day ago',
@@ -183,7 +183,8 @@ const seoul: Destination = {
       icon: 'AlertTriangle',
     },
   ],
-  culturalDos: [
+  culturalSensitivity: {
+    culturalDos: [
     'Greet elders with a slight bow and use polite language.',
     'Dress modestly, especially in temples and palaces.',
     'Remove shoes when entering homes and some restaurants.',
@@ -196,7 +197,96 @@ const seoul: Destination = {
     "Don't stick chopsticks upright in rice.",
     "Don't touch people unnecessarily or show public affection.",
     "Don't take photos in temples without permission."
-  ]
+    ]
+  },
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-seoul'
+        },
+        {
+          name: 'Embassy of Germany in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.exteriores.gob.es/embajadas/seoul'
+        },
+        {
+          name: 'Australian Embassy Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.canadainternational.gc.ca/kr-south-korea/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/south-korea'
+        },
+        {
+          name: 'Embassy of Denmark in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.eda.admin.ch/seoul'
+        },
+        {
+          name: 'Embassy of India in Seoul',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.indianembassykr.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
 };
 
 export default seoul; 

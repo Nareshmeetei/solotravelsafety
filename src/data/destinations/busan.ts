@@ -248,7 +248,7 @@ const busan: Destination = {
     usefulTips: [
       {
         title: "Use public transport and official taxis",
-        description: "Busan's subway and buses are safe and efficient. Use official taxis or ride apps like KakaoTaxi, especially at night, to avoid overcharging.",
+        description: "Busan\'s subway and buses are safe and efficient. Use official taxis or ride apps like KakaoTaxi, especially at night, to avoid overcharging.",
         severity: "low",
         sourceName: "Visit Korea, Korea Tourism Organization",
         sourceUrl: "https://english.visitkorea.or.kr/"
@@ -426,64 +426,70 @@ const busan: Destination = {
         name: 'U.S. Embassy Seoul (serves Busan)',
         address: '188 Sejong-daero, Jongno-gu, Seoul',
         phone: '+82 2 397-4114',
-        email: 'seoulacs@state.gov',
+                  email: 'seoulacs@state.gov',
         emergency: '+82 2 397-4114',
         link: 'https://kr.usembassy.gov/embassy-consulates/seoul/'
       },
       embassies: [
         {
-          name: 'British Embassy Seoul',
-          address: 'Sejong-daero 19-gil 24, Jung-gu, Seoul',
-          phone: '+82 2 3210 5500',
+          name: 'British Embassy Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
           link: 'https://www.gov.uk/world/organisations/british-embassy-seoul'
         },
         {
-          name: 'Embassy of Germany Seoul',
-          address: '13-1 Jeong-dong, Jung-gu, Seoul',
-          phone: '+82 2 748 4114',
-          link: 'https://seoul.diplo.de/kr-en'
+          name: 'Embassy of Germany in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.diplo.de/'
         },
         {
-          name: 'Embassy of France Seoul',
-          address: '30 Hap-dong, Seodaemun-gu, Seoul',
-          phone: '+82 2 3149 4300',
+          name: 'Embassy of France in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
           link: 'https://kr.ambafrance.org/'
         },
         {
-          name: 'Australian Embassy Seoul',
-          address: '19th Floor, Kyobo Building, 1 Jongno 1-ga, Jongno-gu, Seoul',
-          phone: '+82 2 2003 0100',
-          link: 'https://southkorea.embassy.gov.au/'
+          name: 'Embassy of Spain in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.exteriores.gob.es/embajadas/seoul'
         },
         {
-          name: 'Embassy of Canada Seoul',
-          address: '21 Jeongdong-gil, Jung-gu, Seoul',
-          phone: '+82 2 3783 6000',
-          link: 'https://www.canadainternational.gc.ca/south-korea-coree_du_sud/'
+          name: 'Australian Embassy Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.embassy.gov.au/'
         },
         {
-          name: 'Embassy of the Netherlands Seoul',
-          address: '10th Floor, Jeong-dong Building, 15-5 Jeong-dong, Jung-gu, Seoul',
-          phone: '+82 2 311 8600',
-          link: 'https://www.netherlandsworldwide.nl/countries/south-korea/about-us/embassy-in-seoul'
+          name: 'Canadian Embassy Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.canadainternational.gc.ca/kr-south-korea/'
         },
         {
-          name: 'Embassy of Denmark Seoul',
-          address: '5-1 Hannam-dong, Yongsan-gu, Seoul',
-          phone: '+82 2 2170 5200',
-          link: 'https://southkorea.um.dk/en'
+          name: 'Embassy of the Netherlands in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/south-korea'
         },
         {
-          name: 'Embassy of Switzerland Seoul',
-          address: '3-1 Hannam-dong, Yongsan-gu, Seoul',
-          phone: '+82 2 796 0491',
+          name: 'Embassy of Denmark in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://kr.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
           link: 'https://www.eda.admin.ch/seoul'
         },
         {
-          name: 'Embassy of India Seoul',
-          address: '2-2 Hannam-dong, Yongsan-gu, Seoul',
-          phone: '+82 2 794 3581',
-          link: 'https://www.indembassyseoul.gov.in/'
+          name: 'Embassy of India in Busan',
+          address: '188 Eulji-ro, Jung-gu, Seoul',
+          phone: '+82 2 397 4114',
+          link: 'https://www.indianembassykr.gov.in/'
         }
       ],
       womensRights: [

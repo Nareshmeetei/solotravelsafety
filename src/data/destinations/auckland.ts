@@ -398,58 +398,64 @@ const auckland: Destination = {
       },
       embassies: [
         {
-          name: 'British High Commission Wellington',
-          address: '44 Hill Street, Thorndon, Wellington 6011',
+          name: 'British Embassy Auckland',
+          address: '44 Hill Street, Wellington 6011',
           phone: '+64 4 924 2888',
-          link: 'https://www.gov.uk/world/organisations/british-high-commission-wellington'
+          link: 'https://www.gov.uk/world/organisations/british-embassy-wellington'
         },
         {
-          name: 'Embassy of Germany Wellington',
-          address: '90–92 Molesworth Street, Thorndon, Wellington 6011',
-          phone: '+64 4 473 6063',
-          link: 'https://wellington.diplo.de/nz-en'
+          name: 'Embassy of Germany in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.diplo.de/'
         },
         {
-          name: 'Embassy of France Wellington',
-          address: 'Level 12, 50 Manners Street, Wellington 6011',
-          phone: '+64 4 384 2555',
+          name: 'Embassy of France in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
           link: 'https://nz.ambafrance.org/'
         },
         {
-          name: 'Australian High Commission Wellington',
-          address: '72-76 Hobson Street, Thorndon, Wellington 6011',
-          phone: '+64 4 473 6411',
-          link: 'https://newzealand.highcommission.gov.au/'
+          name: 'Embassy of Spain in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.exteriores.gob.es/embajadas/wellington'
         },
         {
-          name: 'Embassy of Canada Wellington',
-          address: '125 The Terrace, Wellington 6011',
-          phone: '+64 4 473 9577',
-          link: 'https://www.international.gc.ca/country-pays/new_zealand-nouvelle_zelande/wellington.aspx?lang=eng'
+          name: 'Australian Embassy Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.embassy.gov.au/'
         },
         {
-          name: 'Embassy of the Netherlands Wellington',
-          address: 'Level 10, 120 Featherston Street, Wellington 6011',
-          phone: '+64 4 471 6390',
+          name: 'Canadian Embassy Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.canadainternational.gc.ca/nz-new-zealand/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/new-zealand'
         },
         {
-          name: 'Embassy of Denmark Wellington',
-          address: 'Level 8, 125 The Terrace, Wellington 6011',
-          phone: '+64 4 472 0020',
-          link: 'https://newzealand.um.dk/en'
+          name: 'Embassy of Denmark in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.um.dk/en'
         },
         {
-          name: 'Embassy of Switzerland Wellington',
-          address: 'Level 18, 125 The Terrace, Wellington 6011',
-          phone: '+64 4 472 1593',
-          link: 'https://www.eda.admin.ch/newzealand'
+          name: 'Embassy of Switzerland in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.eda.admin.ch/wellington'
         },
         {
-          name: 'Embassy of India Wellington',
-          address: 'Level 2, 180 Molesworth Street, Thorndon, Wellington 6011',
-          phone: '+64 4 473 6390',
-          link: 'https://www.hciwellington.gov.in/'
+          name: 'Embassy of India in Auckland',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.indianembassynz.gov.in/'
         }
       ],
       womensRights: [

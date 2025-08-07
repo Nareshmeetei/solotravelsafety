@@ -126,6 +126,7 @@ const toronto: Destination = {
         sourceUrl: "https://www.toronto.ca/explore-enjoy/visitor-toronto/information-resources-for-visitors/"
       }
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Respect personal space and keep a polite distance.',
       'Be punctual for meetings and public transport.',
@@ -138,8 +139,9 @@ const toronto: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
-      "Don't make jokes about Canada's history or politics."
-    ],
+      "Don't make jokes about Canada\'s history or politics."
+    ]
+  },
     // Add Women’s Confidence Score (Travel Ladies, Numbeo 2025)
     womensConfidenceScore: {
       score: 74.3,
@@ -172,7 +174,95 @@ const toronto: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-ottawa'
+        },
+        {
+          name: 'Embassy of Germany in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.exteriores.gob.es/embajadas/ottawa'
+        },
+        {
+          name: 'Australian Embassy Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.canadainternational.gc.ca/ca-canada/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/canada'
+        },
+        {
+          name: 'Embassy of Denmark in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.eda.admin.ch/ottawa'
+        },
+        {
+          name: 'Embassy of India in Toronto',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.indianembassyca.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
 };
 
 export default toronto; 

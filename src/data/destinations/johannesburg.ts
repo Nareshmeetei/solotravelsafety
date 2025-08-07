@@ -151,6 +151,95 @@ const johannesburg: Destination = {
         sourceUrl: 'https://travelladies.app/safety/south-africa/johannesburg'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-pretoria'
+        },
+        {
+          name: 'Embassy of Germany in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.exteriores.gob.es/embajadas/pretoria'
+        },
+        {
+          name: 'Australian Embassy Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.canadainternational.gc.ca/za-south-africa/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/south-africa'
+        },
+        {
+          name: 'Embassy of Denmark in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.eda.admin.ch/pretoria'
+        },
+        {
+          name: 'Embassy of India in Johannesburg',
+          address: '255 Hill Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://www.indianembassyza.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default johannesburg;

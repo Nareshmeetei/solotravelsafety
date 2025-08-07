@@ -76,8 +76,25 @@ const Hero: React.FC = () => {
       <div className="relative z-10 mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12 min-h-[500px] md:min-h-[500px]">
         {/* Left: Text */}
         <div className="flex-1 flex flex-col justify-center text-left h-full items-center md:items-start">
+          {/* Product Hunt Badge */}
+          <div className="mb-6 flex justify-center md:justify-start">
+            <a 
+              href="https://www.producthunt.com/products/solo-travel-safety?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-solo&#0045;travel&#0045;safety" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block hover:scale-105 transition-transform duration-200"
+            >
+              <img 
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001050&theme=light&t=1754224930975" 
+                alt="Solo Travel Safety - Safety platform for solo female travelers, by solo travelers | Product Hunt" 
+                style={{ width: '250px', height: '54px' }} 
+                width="250" 
+                height="54" 
+              />
+            </a>
+          </div>
           <h1 className="mb-6 text-5xl font-display tracking-tight text-gray-900 sm:text-6xl lg:text-7xl animate-fade-in-up text-left">
-            Travel Solo, Not Alone.
+            Travel Smart, Not Scared.
           </h1>
           <p className="mb-10 text-lg text-gray-600 sm:text-xl animate-fade-in-up animate-delay-200 text-left">
             A safety platform for women traveling solo — with honest stories, safety tips, and feel-good places to help you explore more and stress less.

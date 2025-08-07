@@ -25,7 +25,7 @@ const brisbane: Destination = {
       },
       walkingAlone: {
         score: 8.6,
-        context: 'Walking alone in Brisbane is very safe, both day and night, thanks to the city\'s respectful culture and strong community norms. The city is well-lit and busy, even after dark. Most locals and visitors feel comfortable walking alone, but it\'s best to stay on main streets and avoid deserted areas late at night. The CBD and South Bank are particularly safe for solo women. The city\'s subtropical climate means people are often out and about, creating a safe, social atmosphere.'
+                  context: 'Walking alone in Brisbane is very safe, both day and night, thanks to the city\'s respectful culture and strong community norms. The city is well-lit and busy, even after dark. Most locals and visitors feel comfortable walking alone, but it\'s best to stay on main streets and avoid deserted areas late at night. The CBD and South Bank are particularly safe for solo women. The city\'s subtropical climate means people are often out and about, creating a safe, social atmosphere.'
       }
     },
     neighborhoods: {
@@ -232,7 +232,7 @@ const brisbane: Destination = {
       },
       {
         title: "Secure your valuables at public swimming spots",
-        description: "Keep valuables out of sight and use lockers at public swimming spots like South Bank's Streets Beach.",
+        description: "Keep valuables out of sight and use lockers at public swimming spots like South Bank\'s Streets Beach.",
         severity: "low",
         sourceName: "The Accidental Australian",
         sourceUrl: "https://www.theaccidentalaustralian.com/best-things-to-do-in-brisbane-as-a-solo-traveller/"
@@ -262,7 +262,7 @@ const brisbane: Destination = {
     culturalDonts: [
       "Don't walk alone in dark or quiet areas at night.",
       "Don't leave valuables unattended in public.",
-      "Don't hitchhike; it's illegal in Queensland.",
+      "Don't hitchhike; it\'s illegal in Queensland.",
       "Don't drink excessively in unfamiliar places.",
       "Don't ignore local laws or park rules."
     ],
@@ -402,58 +402,64 @@ const brisbane: Destination = {
       },
       embassies: [
         {
-          name: 'British High Commission Canberra',
-          address: 'Commonwealth Avenue, Yarralumla, ACT 2600',
+          name: 'British Embassy Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
           phone: '+61 2 6270 6666',
-          link: 'https://www.gov.uk/world/organisations/british-high-commission-australia'
+          link: 'https://www.gov.uk/world/organisations/british-embassy-canberra'
         },
         {
-          name: 'Embassy of Germany Canberra',
-          address: '119 Empire Circuit, Yarralumla, ACT 2600',
-          phone: '+61 2 6270 1911',
-          link: 'https://australien.diplo.de/au-en'
+          name: 'Embassy of Germany in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.diplo.de/'
         },
         {
-          name: 'Embassy of France Canberra',
-          address: '6 Perth Avenue, Yarralumla, ACT 2600',
-          phone: '+61 2 6216 0100',
+          name: 'Embassy of France in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
           link: 'https://au.ambafrance.org/'
         },
         {
-          name: 'Australian High Commission Canberra',
-          address: 'Commonwealth Avenue, Yarralumla, ACT 2600',
-          phone: '+61 2 6270 4000',
-          link: 'https://www.dfat.gov.au/'
+          name: 'Embassy of Spain in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.exteriores.gob.es/embajadas/canberra'
         },
         {
-          name: 'Canadian High Commission Canberra',
-          address: 'Commonwealth Avenue, Yarralumla, ACT 2600',
-          phone: '+61 2 6270 4000',
-          link: 'https://www.canadainternational.gc.ca/australia-australie/'
+          name: 'Australian Embassy Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.embassy.gov.au/'
         },
         {
-          name: 'Embassy of the Netherlands Canberra',
-          address: '120 Empire Circuit, Yarralumla, ACT 2600',
-          phone: '+61 2 6220 9400',
-          link: 'https://www.netherlandsworldwide.nl/countries/australia/about-us/embassy-in-canberra'
+          name: 'Canadian Embassy Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.canadainternational.gc.ca/au-australia/'
         },
         {
-          name: 'Embassy of Denmark Canberra',
-          address: '15 Arkana Street, Yarralumla, ACT 2600',
-          phone: '+61 2 6273 3555',
-          link: 'https://australia.um.dk/en'
+          name: 'Embassy of the Netherlands in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/australia'
         },
         {
-          name: 'Embassy of Switzerland Canberra',
-          address: '7 Melbourne Avenue, Forrest, ACT 2603',
-          phone: '+61 2 6162 8400',
+          name: 'Embassy of Denmark in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
           link: 'https://www.eda.admin.ch/canberra'
         },
         {
-          name: 'Embassy of India Canberra',
-          address: '3 Moonah Place, Yarralumla, ACT 2600',
-          phone: '+61 2 6273 3999',
-          link: 'https://www.hcicanberra.gov.in/'
+          name: 'Embassy of India in Brisbane',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.indianembassyau.gov.in/'
         }
       ],
       womensRights: [

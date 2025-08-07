@@ -1,4 +1,3 @@
-import { Destination } from '../data/destinations/types';
 
 interface UpdateResult {
   success: boolean;
@@ -7,13 +6,6 @@ interface UpdateResult {
   timestamp: string;
 }
 
-interface CurrencyRates {
-  [key: string]: {
-    usd: number;
-    eur: number;
-    gbp: number;
-  };
-}
 
 interface SafetyIndex {
   [key: string]: {
@@ -118,7 +110,7 @@ export class DataUpdateService {
         }
       ];
 
-      let rates: any = null;
+      let rates: Record<string, number> | null = null;
 
       // Try each API until one succeeds
       for (const api of apis) {
@@ -132,8 +124,8 @@ export class DataUpdateService {
             console.log(`✅ Got currency rates from ${api.name}`);
             break;
           }
-        } catch (error) {
-          console.warn(`⚠️ ${api.name} failed:`, error);
+        } catch {
+          console.warn(`⚠️ ${api.name} failed`);
         }
       }
 
@@ -144,13 +136,13 @@ export class DataUpdateService {
           const data = await response.json();
           rates = data.rates;
           console.log('✅ Got currency rates from fallback API');
-        } catch (error) {
+        } catch {
           throw new Error('All currency APIs failed');
         }
       }
 
       // Update destination currency data
-      const updatedDestinations = await this.updateDestinationCurrencies(rates);
+      const updatedDestinations = await this.updateDestinationCurrencies();
       result.updated.push(`Currency rates for ${updatedDestinations} destinations`);
       
     } catch (error) {
@@ -188,15 +180,15 @@ export class DataUpdateService {
 
       for (const api of safetyAPIs) {
         try {
-          const data = await this.fetchSafetyData(api.endpoint);
-          const parsed = api.parser(data);
+          await this.fetchSafetyData(api.endpoint);
+          const parsed = api.parser();
           Object.assign(safetyData, parsed);
         } catch (error) {
           console.warn(`⚠️ ${api.name} failed:`, error);
         }
       }
 
-      const updatedCount = await this.updateDestinationSafety(safetyData);
+      const updatedCount = await this.updateDestinationSafety();
       result.updated.push(`Safety scores for ${updatedCount} destinations`);
       
     } catch (error) {
@@ -234,16 +226,15 @@ export class DataUpdateService {
 
       for (const source of advisorySources) {
         try {
-          const data = await fetch(source.url);
-          const json = await data.json();
-          const parsed = source.parser(json);
+          await fetch(source.url);
+          const parsed = source.parser();
           Object.assign(advisories, parsed);
         } catch (error) {
           console.warn(`⚠️ ${source.name} failed:`, error);
         }
       }
 
-      const updatedCount = await this.updateDestinationAdvisories(advisories);
+      const updatedCount = await this.updateDestinationAdvisories();
       result.updated.push(`Government advisories for ${updatedCount} destinations`);
       
     } catch (error) {
@@ -259,12 +250,6 @@ export class DataUpdateService {
       console.log('📊 Updating crime statistics...');
       
       // This would integrate with official crime databases
-      const crimeAPIs = [
-        'https://api.unodc.org/crime-statistics',
-        'https://ec.europa.eu/eurostat/api/crime',
-        'https://api.interpol.int/statistics'
-      ];
-
       // Implementation would depend on available APIs
       // For now, we'll mark it as a placeholder for future implementation
       result.updated.push('Crime statistics (placeholder - requires API access)');
@@ -282,12 +267,6 @@ export class DataUpdateService {
       console.log('🏨 Updating accommodation data...');
       
       // This would integrate with booking APIs
-      const accommodationAPIs = [
-        'Booking.com Partner API',
-        'Hostelworld API',
-        'Airbnb API'
-      ];
-
       // Placeholder for accommodation data updates
       result.updated.push('Accommodation data (placeholder - requires API partnerships)');
       
@@ -319,13 +298,8 @@ export class DataUpdateService {
     try {
       console.log('💰 Updating cost of living data...');
       
-      // Sources for cost data
-      const costAPIs = [
-        'https://www.numbeo.com/api/cost_of_living',
-        'https://api.expatistan.com/v1/cost',
-        'https://api.nomadlist.com/v2/cities'
-      ];
-
+      // Sources for cost data would include:
+      // Numbeo, Expatistan, and Nomad List APIs
       // Implementation would fetch real cost data
       result.updated.push('Cost of living data (placeholder - requires API access)');
       
@@ -335,52 +309,52 @@ export class DataUpdateService {
   }
 
   // Helper methods for parsing different API responses
-  private parseNumberoData(data: any): SafetyIndex {
+  private parseNumberoData(): SafetyIndex {
     // Parse Numbeo crime index data
     return {};
   }
 
-  private parseGlobalPeaceIndex(data: any): SafetyIndex {
+  private parseGlobalPeaceIndex(): SafetyIndex {
     // Parse Global Peace Index data
     return {};
   }
 
-  private parseWorldRiskIndex(data: any): SafetyIndex {
+  private parseWorldRiskIndex(): SafetyIndex {
     // Parse World Risk Index data
     return {};
   }
 
-  private parseUSStateAdvisories(data: any): GovernmentAdvisory {
+  private parseUSStateAdvisories(): GovernmentAdvisory {
     // Parse US State Department data
     return {};
   }
 
-  private parseUKFCOAdvisories(data: any): GovernmentAdvisory {
+  private parseUKFCOAdvisories(): GovernmentAdvisory {
     // Parse UK FCO data
     return {};
   }
 
-  private parseCanadianAdvisories(data: any): GovernmentAdvisory {
+  private parseCanadianAdvisories(): GovernmentAdvisory {
     // Parse Canadian government data
     return {};
   }
 
-  private async fetchSafetyData(endpoint: string): Promise<any> {
+  private async fetchSafetyData(endpoint: string): Promise<Record<string, unknown>> {
     const response = await fetch(endpoint);
-    return response.json();
+    return response.json() as Record<string, unknown>;
   }
 
-  private async updateDestinationCurrencies(rates: any): Promise<number> {
+  private async updateDestinationCurrencies(): Promise<number> {
     // This would update destination files with new currency rates
     return 0;
   }
 
-  private async updateDestinationSafety(safetyData: SafetyIndex): Promise<number> {
+  private async updateDestinationSafety(): Promise<number> {
     // This would update destination files with new safety scores
     return 0;
   }
 
-  private async updateDestinationAdvisories(advisories: GovernmentAdvisory): Promise<number> {
+  private async updateDestinationAdvisories(): Promise<number> {
     // This would update destination files with new advisories
     return 0;
   }

@@ -129,6 +129,7 @@ const portauprince: Destination = {
         sourceUrl: "https://en.wikipedia.org/wiki/Crime_in_Haiti"
       }
     ], // Tips sourced from US State Department, Travel Safe Abroad, World Nomads, Numbeo, and Wikipedia (2025)
+  culturalSensitivity: {
     culturalDos: [
       'Dress modestly and cover shoulders and knees.',
       'Greet people politely with "Bonjour" or "Bonjou".',
@@ -142,8 +143,9 @@ const portauprince: Destination = {
       "Don't refuse hospitality—decline politely if needed.",
       "Don't enter churches in revealing clothing.",
       "Don't take photos of police, military, or government buildings."
-    ],
-    womensConfidenceScore: {
+    ]
+  },
+  womensConfidenceScore: {
       score: 21.1,
       source: '',
       sourceUrl: ''
@@ -173,7 +175,95 @@ const portauprince: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-port-au-prince'
+        },
+        {
+          name: 'Embassy of Germany in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://ht.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://ht.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://www.exteriores.gob.es/embajadas/port-au-prince'
+        },
+        {
+          name: 'Australian Embassy Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://ht.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://www.canadainternational.gc.ca/ht-haiti/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/haiti'
+        },
+        {
+          name: 'Embassy of Denmark in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://ht.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://www.eda.admin.ch/port-au-prince'
+        },
+        {
+          name: 'Embassy of India in Port-au-prince',
+          address: 'Tabarre 41, Route de Tabarre, Port-au-Prince',
+          phone: '+509 2229 8000',
+          link: 'https://www.indianembassyht.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
 };
 
 export default portauprince;

@@ -154,6 +154,7 @@ const vancouver: Destination = {
         icon: 'AlertTriangle',
       },
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Respect personal space and keep a polite distance.',
       'Be punctual for meetings and public transport.',
@@ -166,9 +167,98 @@ const vancouver: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
-      "Don't make jokes about Canada's history or politics."
-    ],
-    scamWarnings: []
-  };
+      "Don't make jokes about Canada\'s history or politics."
+    ]
+  },
+  scamWarnings: [],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-ottawa'
+        },
+        {
+          name: 'Embassy of Germany in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.exteriores.gob.es/embajadas/ottawa'
+        },
+        {
+          name: 'Australian Embassy Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.canadainternational.gc.ca/ca-canada/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/canada'
+        },
+        {
+          name: 'Embassy of Denmark in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://ca.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.eda.admin.ch/ottawa'
+        },
+        {
+          name: 'Embassy of India in Vancouver',
+          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
+          phone: '+1 613 688 5335',
+          link: 'https://www.indianembassyca.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default vancouver;

@@ -117,6 +117,7 @@ const zurich: Destination = {
         icon: 'Bike',
       },
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Greet with a polite "Grüezi" and use formal titles.',
       'Be punctual for meetings and public transport.',
@@ -129,8 +130,9 @@ const zurich: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
-      "Don't make jokes about Switzerland's history or politics."
-    ],
+      "Don't make jokes about Switzerland\'s history or politics."
+    ]
+  },
     // Add Women’s Confidence Score (Numbeo 2025, Travel Ladies 2025)
     womensConfidenceScore: {
       score: 90.0, // Numbeo 2025, Travel Ladies 2025
@@ -163,7 +165,95 @@ const zurich: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-bern'
+        },
+        {
+          name: 'Embassy of Germany in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.exteriores.gob.es/embajadas/bern'
+        },
+        {
+          name: 'Australian Embassy Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.canadainternational.gc.ca/ch-switzerland/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/switzerland'
+        },
+        {
+          name: 'Embassy of Denmark in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://ch.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.eda.admin.ch/bern'
+        },
+        {
+          name: 'Embassy of India in Zurich',
+          address: 'Thunstrasse 50, 3005 Bern',
+          phone: '+41 31 359 77 00',
+          link: 'https://www.indianembassych.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default zurich;

@@ -226,7 +226,7 @@ const tokyo: Destination = {
   usefulTips: [
     {
       title: "Use women-only train cars during rush hour",
-      description: "Tokyo's trains are safe, but women-only cars are available during rush hour to avoid unwanted attention or groping. Look for pink signs on platforms.",
+      description: "Tokyo\'s trains are safe, but women-only cars are available during rush hour to avoid unwanted attention or groping. Look for pink signs on platforms.",
       severity: "low",
       sourceName: "Travel Ladies (2025)",
       sourceUrl: "https://travelladies.app/safety/japan"
@@ -316,31 +316,67 @@ const tokyo: Destination = {
       link: 'https://jp.usembassy.gov/embassy-consulates/tokyo/'
     },
     embassies: [
-      {
-        name: 'U.S. Embassy Tokyo',
-        address: '1-10-5 Akasaka, Minato-ku, Tokyo 107-8420',
-        phone: '+81 3-3224-5000',
-        link: 'https://jp.usembassy.gov/embassy-consulates/tokyo/'
-      },
-      {
-        name: 'British Embassy Tokyo',
-        address: '1 Ichiban-cho, Chiyoda-ku, Tokyo 102-8381',
-        phone: '+81 3-5211-1100',
-        link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
-      },
-      {
-        name: 'Australian Embassy Tokyo',
-        address: '2-1-14 Mita, Minato-ku, Tokyo 108-8361',
-        phone: '+81 3-5232-4111',
-        link: 'https://japan.embassy.gov.au/'
-      },
-      {
-        name: 'Embassy of Canada Tokyo',
-        address: '7-3-38 Akasaka, Minato-ku, Tokyo 107-8503',
-        phone: '+81 3-5412-6200',
-        link: 'https://www.canadainternational.gc.ca/japan-japon/'
-      }
-    ],
+        {
+          name: 'British Embassy Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
+        },
+        {
+          name: 'Embassy of Germany in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.exteriores.gob.es/embajadas/tokyo'
+        },
+        {
+          name: 'Australian Embassy Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.canadainternational.gc.ca/jp-japan/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/japan'
+        },
+        {
+          name: 'Embassy of Denmark in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.eda.admin.ch/tokyo'
+        },
+        {
+          name: 'Embassy of India in Tokyo',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.indianembassyjp.gov.in/'
+        }
+      ],
     womensRights: [
       'Right to equal pay and employment',
       'Protection against sexual harassment and assault',

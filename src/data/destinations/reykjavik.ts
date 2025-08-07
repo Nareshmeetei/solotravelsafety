@@ -196,6 +196,95 @@ const reykjavik: Destination = {
         sourceUrl: ''
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-reykjavik'
+        },
+        {
+          name: 'Embassy of Germany in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://is.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://is.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://www.exteriores.gob.es/embajadas/reykjavik'
+        },
+        {
+          name: 'Australian Embassy Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://is.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://www.canadainternational.gc.ca/is-iceland/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/iceland'
+        },
+        {
+          name: 'Embassy of Denmark in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://is.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://www.eda.admin.ch/reykjavik'
+        },
+        {
+          name: 'Embassy of India in Reykjavik',
+          address: 'Laufásvegur 31, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://www.indianembassyis.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default reykjavik;

@@ -111,7 +111,7 @@ const mexicocity: Destination = {
       },
       {
         title: "Learn basic Spanish and keep emergency contacts accessible",
-        description: "Knowing a few key phrases in Spanish helps in emergencies and daily interactions. Save the emergency number (911) and your embassy's contact info.",
+        description: "Knowing a few key phrases in Spanish helps in emergencies and daily interactions. Save the emergency number (911) and your embassy\'s contact info.",
         severity: "medium",
         sourceName: "The Lady Who Travels",
         sourceUrl: "https://www.theladywhotravels.com/is-mexico-safe-for-solo-female-travellers/"
@@ -138,6 +138,95 @@ const mexicocity: Destination = {
       'Don’t take photos of people without permission.',
       'Don’t enter churches or sacred sites in revealing clothing.'
     ],
-  };
+  
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-mexico-city'
+        },
+        {
+          name: 'Embassy of Germany in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://mx.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://mx.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://www.exteriores.gob.es/embajadas/mexico-city'
+        },
+        {
+          name: 'Australian Embassy Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://mx.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://www.canadainternational.gc.ca/mx-mexico/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/mexico'
+        },
+        {
+          name: 'Embassy of Denmark in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://mx.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://www.eda.admin.ch/mexico-city'
+        },
+        {
+          name: 'Embassy of India in Mexico-city',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, Mexico City',
+          phone: '+52 55 5080 2000',
+          link: 'https://www.indianembassymx.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
+};
 
 export default mexicocity;

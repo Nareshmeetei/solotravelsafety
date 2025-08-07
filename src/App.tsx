@@ -83,13 +83,13 @@ function AppRoutes() {
 }
 
 function App() {
-  const [cookiePreferences, setCookiePreferences] = useState({
+  const [, setCookiePreferences] = useState({
     essential: true,
     analytics: false,
     functional: false
   });
 
-  const handleCookieAccept = (preferences: any) => {
+  const handleCookieAccept = (preferences: { essential: boolean; analytics: boolean; functional: boolean }) => {
     setCookiePreferences(preferences);
     // Here you could also set up analytics or other services based on preferences
     console.log('Cookie preferences:', preferences);

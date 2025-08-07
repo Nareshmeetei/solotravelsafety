@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Heart, MessageSquare, MoreHorizontal, Trash2, Edit, Loader2 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { 
@@ -12,10 +12,52 @@ import EditChirpModal from './EditChirpModal';
 import CommentModal from './CommentModal';
 
 // New component for top 3 most hugged comments
+interface Comment {
+  id: string;
+  comment_text: string;
+  user: {
+    id: string;
+    full_name?: string;
+    email?: string;
+    avatar_url?: string;
+  };
+  created_at: string;
+  likes_count?: number;
+  userHugs?: string[];
+  parent_comment_id?: string;
+  updated_at?: string;
+}
+
+interface User {
+  id: string;
+  email?: string;
+  user_metadata?: {
+    full_name?: string;
+    username?: string;
+    avatar_url?: string;
+  };
+}
+
+interface ChirpUser {
+  id: string;
+  full_name?: string;
+  email?: string;
+  avatar_url?: string;
+  username?: string;
+  user_metadata?: {
+    username?: string;
+    full_name?: string;
+    avatar_url?: string;
+  };
+}
+
 interface TopLikedCommentsProps {
-  comments: any[];
-  user: any;
-  chirp: any;
+  comments: Comment[];
+  user: User | null;
+  chirp: {
+    id: string;
+    user: ChirpUser;
+  };
   openCommentDropdownId: string | null;
   setOpenCommentDropdownId: (id: string | null) => void;
   handleDeleteComment: (commentId: string) => void;
@@ -58,7 +100,7 @@ const TopLikedComments: React.FC<TopLikedCommentsProps> = ({
   setReplyText,
   isReplying,
   showCommentHugAnimation
-}) => {
+}: TopLikedCommentsProps) => {
   // Helper function to format time
   const formatTime = (dateString: string) => {
     const date = new Date(dateString);
@@ -75,14 +117,14 @@ const TopLikedComments: React.FC<TopLikedCommentsProps> = ({
 
   // Sort comments by hugs count and get top 3
   const topHuggedComments = comments
-    .sort((a: any, b: any) => (b.likes_count || 0) - (a.likes_count || 0))
+    .sort((a, b) => (b.likes_count || 0) - (a.likes_count || 0))
     .slice(0, 3);
   
   if (topHuggedComments.length === 0) return null;
   
   return (
     <div className="space-y-3">
-      {topHuggedComments.map((comment, index) => {
+      {topHuggedComments.map((comment) => {
         // Check if current user can edit/delete this comment
         const canEdit = user && comment.user.id === user.id; // Only comment author can edit
         const canDelete = user && (
@@ -358,12 +400,9 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
   // Update chirp in localStorage with current user metadata if it's the current user's chirp
   useEffect(() => {
     if (user && chirp.user.id === user.id) {
-      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      
       const updateChirpInStorage = (storage: Storage, key: string) => {
         const chirps = JSON.parse(storage.getItem(key) || '[]');
-        const updatedChirps = chirps.map((c: any) => {
+        const updatedChirps = chirps.map((c: { id: string; user: ChirpUser }) => {
           if (c.id === chirp.id) {
             return {
               ...c,
@@ -405,7 +444,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
   const [showCommentHugAnimation, setShowCommentHugAnimation] = useState<string | null>(null);
   const [showEditModal, setShowEditModal] = useState(false);
   const [showCommentModal, setShowCommentModal] = useState(false);
-  const [comments, setComments] = useState<any[]>([]);
+  const [comments, setComments] = useState<Comment[]>([]);
   const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
   const [openCommentDropdownId, setOpenCommentDropdownId] = useState<string | null>(null);
   const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
@@ -434,7 +473,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
         const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
         const allChirps = [...localChirps, ...sessionChirps];
-        const chirpData = allChirps.find((c: any) => c.id === chirp.id);
+        const chirpData = allChirps.find((c: { id: string }) => c.id === chirp.id);
         
         if (chirpData) {
           // Update counts from local storage
@@ -450,7 +489,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         // Check if user has liked this chirp
         const { data: likes, error: likesError } = await getChirpLikes(chirp.id);
         if (likes && !likesError) {
-          const userLiked = likes.some((like: any) => like.user_id === user.id);
+          const userLiked = likes.some((like: { user_id: string }) => like.user_id === user.id);
           setIsLiked(userLiked);
         } else {
           console.warn('Database likes check failed, using local storage:', likesError);
@@ -520,7 +559,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         
         // Update in localStorage
         const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const updatedLocalChirps = localChirps.map((c: any) => 
+        const updatedLocalChirps = localChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
           c.id === chirp.id 
             ? { 
                 ...c, 
@@ -533,7 +572,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         
         // Update in sessionStorage
         const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const updatedSessionChirps = sessionChirps.map((c: any) => 
+        const updatedSessionChirps = sessionChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
           c.id === chirp.id 
             ? { 
                 ...c, 
@@ -557,7 +596,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         
         // Update in localStorage
         const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const updatedLocalChirps = localChirps.map((c: any) => 
+        const updatedLocalChirps = localChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
           c.id === chirp.id 
             ? { 
                 ...c, 
@@ -570,7 +609,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         
         // Update in sessionStorage
         const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const updatedSessionChirps = sessionChirps.map((c: any) => 
+        const updatedSessionChirps = sessionChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
           c.id === chirp.id 
             ? { 
                 ...c, 
@@ -609,7 +648,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
     const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
     const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
     const allChirps = [...localChirps, ...sessionChirps];
-    const chirpData = allChirps.find((c: any) => c.id === chirp.id);
+    const chirpData = allChirps.find((c: { id: string }) => c.id === chirp.id);
     
     if (chirpData) {
       setCommentsCount(chirpData.comments_count || 0);
@@ -636,12 +675,12 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
         // Remove from localStorage
         const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const updatedLocalChirps = localChirps.filter((c: any) => c.id !== chirp.id);
+        const updatedLocalChirps = localChirps.filter((c: { id: string }) => c.id !== chirp.id);
         localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
 
         // Remove from sessionStorage
         const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const updatedSessionChirps = sessionChirps.filter((c: any) => c.id !== chirp.id);
+        const updatedSessionChirps = sessionChirps.filter((c: { id: string }) => c.id !== chirp.id);
         sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
 
         if (onChirpDeleted) {
@@ -675,7 +714,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in localStorage
       const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const updatedLocalChirps = localChirps.map((c: any) => 
+      const updatedLocalChirps = localChirps.map((c: { id: string; comments_count?: number }) => 
         c.id === chirp.id 
           ? { 
               ...c, 
@@ -688,7 +727,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in sessionStorage
       const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      const updatedSessionChirps = sessionChirps.map((c: any) => 
+      const updatedSessionChirps = sessionChirps.map((c: { id: string; comments_count?: number }) => 
         c.id === chirp.id 
           ? { 
               ...c, 
@@ -726,7 +765,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in localStorage
       const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const updatedLocalChirps = localChirps.map((c: any) => 
+      const updatedLocalChirps = localChirps.map((c: { id: string }) => 
         c.id === chirp.id 
           ? { ...c, comments: updatedComments }
           : c
@@ -735,7 +774,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in sessionStorage
       const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      const updatedSessionChirps = sessionChirps.map((c: any) => 
+      const updatedSessionChirps = sessionChirps.map((c: { id: string }) => 
         c.id === chirp.id 
           ? { ...c, comments: updatedComments }
           : c
@@ -798,7 +837,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in localStorage
       const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const updatedLocalChirps = localChirps.map((c: any) => 
+      const updatedLocalChirps = localChirps.map((c: { id: string }) => 
         c.id === chirp.id 
           ? { ...c, comments: updatedComments }
           : c
@@ -807,7 +846,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in sessionStorage
       const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      const updatedSessionChirps = sessionChirps.map((c: any) => 
+      const updatedSessionChirps = sessionChirps.map((c: { id: string }) => 
         c.id === chirp.id 
           ? { ...c, comments: updatedComments }
           : c
@@ -847,7 +886,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in localStorage
       const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const updatedLocalChirps = localChirps.map((c: any) => 
+      const updatedLocalChirps = localChirps.map((c: { id: string }) => 
         c.id === chirp.id 
           ? { ...c, comments: updatedComments, comments_count: commentsCount + 1 }
           : c
@@ -856,7 +895,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
 
       // Update chirp in sessionStorage
       const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-      const updatedSessionChirps = sessionChirps.map((c: any) => 
+      const updatedSessionChirps = sessionChirps.map((c: { id: string }) => 
         c.id === chirp.id 
           ? { ...c, comments: updatedComments, comments_count: commentsCount + 1 }
           : c
@@ -949,13 +988,13 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
                   chirp.images.length === 3 ? 'grid-cols-2' :
                   'grid-cols-2'
                 }`}>
-                  {chirp.images.map((image, index) => (
-                    <div key={index} className={`${
-                      chirp.images!.length === 3 && index === 2 ? 'col-span-2' : ''
+                  {chirp.images.map((image, imageIndex) => (
+                    <div key={imageIndex} className={`${
+                      chirp.images!.length === 3 && imageIndex === 2 ? 'col-span-2' : ''
                     }`}>
                       <img
                         src={image}
-                        alt={`Chirp image ${index + 1}`}
+                        alt={`Chirp image ${imageIndex + 1}`}
                         className="w-full aspect-square object-cover rounded-lg"
                       />
                     </div>
@@ -1077,7 +1116,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
           const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
           const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
           const allChirps = [...localChirps, ...sessionChirps];
-          const chirpData = allChirps.find((c: any) => c.id === chirp.id);
+          const chirpData = allChirps.find((c: { id: string }) => c.id === chirp.id);
           
           console.log('Comment added, chirpData:', chirpData);
           console.log('All chirps after comment:', allChirps);

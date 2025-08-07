@@ -150,6 +150,95 @@ const karachi: Destination = {
         sourceUrl: 'https://www.lostwithpurpose.com/female-travel-pakistan/'
       }
     ],
-  };
+  
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-islamabad'
+        },
+        {
+          name: 'Embassy of Germany in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://pk.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://pk.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://www.exteriores.gob.es/embajadas/islamabad'
+        },
+        {
+          name: 'Australian Embassy Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://pk.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://www.canadainternational.gc.ca/pk-pakistan/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/pakistan'
+        },
+        {
+          name: 'Embassy of Denmark in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://pk.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://www.eda.admin.ch/islamabad'
+        },
+        {
+          name: 'Embassy of India in Karachi',
+          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
+          phone: '+92 51 201 4000',
+          link: 'https://www.indianembassypk.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
+};
 
 export default karachi;

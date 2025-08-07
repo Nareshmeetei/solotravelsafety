@@ -162,6 +162,7 @@ const nagano: Destination = {
         sourceUrl: "https://db.go-nagano.net/en/travel-guide/faq/"
       }
     ], // Tips sourced from Go Nagano Official Tourism FAQ and Dot Hostel Nagano (2025)
+  culturalSensitivity: {
     culturalDos: [
       'Remove shoes before entering homes and temples.',
       'Dress modestly, especially at religious sites.',
@@ -175,7 +176,8 @@ const nagano: Destination = {
       "Don't eat or drink while walking in public.",
       "Don't take photos in temples without permission.",
       "Don't tip in restaurants—service charge is included."
-    ],
+    ]
+  },
     // Add Women’s Confidence Score (Numbeo 2025)
     womensConfidenceScore: {
       score: 77.1,
@@ -208,7 +210,95 @@ const nagano: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
+        },
+        {
+          name: 'Embassy of Germany in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.exteriores.gob.es/embajadas/tokyo'
+        },
+        {
+          name: 'Australian Embassy Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.canadainternational.gc.ca/jp-japan/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/japan'
+        },
+        {
+          name: 'Embassy of Denmark in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.eda.admin.ch/tokyo'
+        },
+        {
+          name: 'Embassy of India in Nagano',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.indianembassyjp.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default nagano;

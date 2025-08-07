@@ -157,6 +157,7 @@ const riodejaneiro: Destination = {
         icon: 'AlertTriangle',
       },
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Greet with a friendly "bom dia" or "boa tarde."',
       'Dress modestly outside the beach; beachwear is for the beach only.',
@@ -171,6 +172,95 @@ const riodejaneiro: Destination = {
       "Don't take photos of police, military, or favelas.",
       "Don't refuse hospitality—decline politely if needed."
     ]
-  };
+  },
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-rio-de-janeiro'
+        },
+        {
+          name: 'Embassy of Germany in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://br.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://br.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://www.exteriores.gob.es/embajadas/rio-de-janeiro'
+        },
+        {
+          name: 'Australian Embassy Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://br.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://www.canadainternational.gc.ca/br-brazil/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/brazil'
+        },
+        {
+          name: 'Embassy of Denmark in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://br.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://www.eda.admin.ch/rio-de-janeiro'
+        },
+        {
+          name: 'Embassy of India in Rio-de-janeiro',
+          address: 'Avenida Presidente Wilson 147, Castelo, Rio de Janeiro',
+          phone: '+55 21 3823 2000',
+          link: 'https://www.indianembassybr.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default riodejaneiro;

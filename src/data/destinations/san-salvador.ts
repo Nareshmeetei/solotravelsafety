@@ -4,7 +4,7 @@ const sansalvador: Destination = {
     city: 'San Salvador',
     country: 'El Salvador',
     continent: 'North America',
-    countryCode: 'sv',
+          countryCode: 'sv',
     overallScore: 3.5,
     nightSafety: 2.3,
     publicTransit: 3.5,
@@ -128,6 +128,7 @@ const sansalvador: Destination = {
         sourceUrl: "https://www.safetravel.govt.nz/destinations/el-salvador"
       }
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Dress modestly and avoid flashy clothing.',
       'Greet people with a polite "buenos días" or "buenas tardes."',
@@ -141,8 +142,9 @@ const sansalvador: Destination = {
       "Don't refuse hospitality—decline politely if needed.",
       "Don't enter churches in revealing clothing.",
       "Don't take photos of police, military, or government buildings."
-    ],
-    womensConfidenceScore: {
+    ]
+  },
+  womensConfidenceScore: {
       score: 41.4,
       source: '',
       sourceUrl: ''
@@ -172,7 +174,95 @@ const sansalvador: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-san-salvador'
+        },
+        {
+          name: 'Embassy of Germany in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://sv.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://sv.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://www.exteriores.gob.es/embajadas/san-salvador'
+        },
+        {
+          name: 'Australian Embassy San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://sv.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://www.canadainternational.gc.ca/sv-el-salvador/'
+        },
+        {
+          name: 'Embassy of the Netherlands in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/el-salvador'
+        },
+        {
+          name: 'Embassy of Denmark in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://sv.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://www.eda.admin.ch/san-salvador'
+        },
+        {
+          name: 'Embassy of India in San-salvador',
+          address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
+          phone: '+503 2501 2999',
+          link: 'https://www.indianembassysv.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default sansalvador;

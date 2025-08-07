@@ -131,7 +131,7 @@ const bogota: Destination = {
       { title: 'Transportation Warning', description: 'Avoid hailing taxis on the street', location: 'City-wide', reportCount: 18, severity: 'medium', dateReported: '1 week ago' }
     ],
     safetyTips: {
-      clothing: `• Dress modestly and avoid flashy jewelry—don't draw attention to yourself
+      clothing: `• Dress modestly and avoid flashy jewelry—don\'t draw attention to yourself
 • Keep valuables hidden and use anti-theft bags with secure zippers
 • Wear comfortable, sturdy shoes for walking on uneven streets
 • Avoid expensive watches, jewelry, or designer items
@@ -446,58 +446,64 @@ const bogota: Destination = {
       },
       embassies: [
         {
-          name: 'British Embassy Bogotá',
-          address: 'Carrera 9 No. 76-49, Piso 8, Bogotá',
-          phone: '+57 1 326-8300',
-          link: 'https://www.gov.uk/world/organisations/british-embassy-colombia'
+          name: 'British Embassy Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-bogota'
         },
         {
-          name: 'Embassy of Germany Bogotá',
-          address: 'Calle 110 No. 9-25, Bogotá',
-          phone: '+57 1 423-2600',
-          link: 'https://bogota.diplo.de/co-en'
+          name: 'Embassy of Germany in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://co.diplo.de/'
         },
         {
-          name: 'Embassy of France Bogotá',
-          address: 'Calle 94 No. 14-17, Bogotá',
-          phone: '+57 1 638-1400',
+          name: 'Embassy of France in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
           link: 'https://co.ambafrance.org/'
         },
         {
-          name: 'Australian Embassy Bogotá',
-          address: 'Carrera 9 No. 76-49, Piso 8, Bogotá',
-          phone: '+57 1 657-8030',
-          link: 'https://colombia.embassy.gov.au/'
+          name: 'Embassy of Spain in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://www.exteriores.gob.es/embajadas/bogota'
         },
         {
-          name: 'Embassy of Canada Bogotá',
-          address: 'Carrera 7 No. 114-33, Piso 14, Bogotá',
-          phone: '+57 1 657-9800',
-          link: 'https://www.canadainternational.gc.ca/colombia-colombie/'
+          name: 'Australian Embassy Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://co.embassy.gov.au/'
         },
         {
-          name: 'Embassy of the Netherlands Bogotá',
-          address: 'Calle 69A No. 4-41, Bogotá',
-          phone: '+57 1 317-8650',
-          link: 'https://www.netherlandsworldwide.nl/countries/colombia/about-us/embassy-in-bogota'
+          name: 'Canadian Embassy Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://www.canadainternational.gc.ca/co-colombia/'
         },
         {
-          name: 'Embassy of Denmark Bogotá',
-          address: 'Calle 94A No. 11A-67, Bogotá',
-          phone: '+57 1 746-3200',
-          link: 'https://colombia.um.dk/'
+          name: 'Embassy of the Netherlands in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/colombia'
         },
         {
-          name: 'Embassy of Switzerland Bogotá',
-          address: 'Calle 81 No. 9-70, Piso 11, Bogotá',
-          phone: '+57 1 746-2800',
+          name: 'Embassy of Denmark in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://co.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
           link: 'https://www.eda.admin.ch/bogota'
         },
         {
-          name: 'Embassy of India Bogotá',
-          address: 'Calle 68 No. 4-47, Bogotá',
-          phone: '+57 1 317-5320',
-          link: 'https://www.eoibogota.gov.in/'
+          name: 'Embassy of India in Bogota',
+          address: 'Carrera 11 No. 93-12, Bogotá',
+          phone: '+57 1 326 8300',
+          link: 'https://www.indianembassyco.gov.in/'
         }
       ],
       womensRights: [

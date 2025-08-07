@@ -70,7 +70,7 @@ const melbourne: Destination = {
     usefulTips: [
       {
         title: "Use public transport and official taxis at night",
-        description: "Melbourne's trams, trains, and buses are safe and reliable. For late-night travel, use official taxis or rideshare apps like Uber for added security.",
+        description: "Melbourne\'s trams, trains, and buses are safe and reliable. For late-night travel, use official taxis or rideshare apps like Uber for added security.",
         severity: "low",
         sourceName: "Visit Victoria (Official Tourism)",
         sourceUrl: "https://www.visitvictoria.com/Information/Travel-information/Safety"
@@ -118,6 +118,95 @@ const melbourne: Destination = {
       "Don't stare at others or invade personal space.",
       "Don't litter or disrespect public spaces."
     ],
-  };
+  
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-canberra'
+        },
+        {
+          name: 'Embassy of Germany in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.exteriores.gob.es/embajadas/canberra'
+        },
+        {
+          name: 'Australian Embassy Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.canadainternational.gc.ca/au-australia/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/australia'
+        },
+        {
+          name: 'Embassy of Denmark in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://au.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.eda.admin.ch/canberra'
+        },
+        {
+          name: 'Embassy of India in Melbourne',
+          address: 'Commonwealth Avenue, Yarralumla ACT 2600',
+          phone: '+61 2 6270 6666',
+          link: 'https://www.indianembassyau.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
+};
 
 export default melbourne;

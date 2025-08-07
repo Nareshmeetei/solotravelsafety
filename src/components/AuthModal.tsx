@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { X, Mail, Lock, User, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-react'
+import { X, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { resendConfirmation } from '../lib/supabase'
 import { signUpSchema, signInSchema, validateAndSanitize } from '../lib/validation'
-import { sanitizeEmail, sanitizeName, containsMaliciousContent } from '../lib/sanitize'
+import { sanitizeEmail, containsMaliciousContent } from '../lib/sanitize'
 import { useAuthRateLimit } from '../hooks/useRateLimit'
 import { AuthRateLimitStatus } from './RateLimitStatus'
 import { getAuthErrorMessage, getValidationErrorMessage, logError } from '../lib/error-handling'
@@ -29,7 +29,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
   const navigate = useNavigate()
 
   const { signIn, signUp } = useAuth()
-  const { trackRequest, isLimited } = useAuthRateLimit(() => {
+  const { trackRequest } = useAuthRateLimit(() => {
     setError('Too many authentication attempts. Please try again later.')
   })
 
@@ -74,7 +74,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
           return
         }
 
-        const { data, error } = await signUp(validation.data.email, validation.data.password)
+        const { error } = await signUp(validation.data.email, validation.data.password)
         if (error) {
           logError(error, 'AuthModal SignUp')
           setError(getAuthErrorMessage(error, 'signUp'))

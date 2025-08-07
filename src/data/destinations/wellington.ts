@@ -122,6 +122,7 @@ const wellington: Destination = {
         icon: 'AlertTriangle',
       }
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Greet with a friendly "Kia ora" or "Hello."',
       'Respect Maori culture and learn basic phrases.',
@@ -134,9 +135,10 @@ const wellington: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
-      "Don't make jokes about New Zealand's history or politics."
-    ],
-    scamWarnings: [],
+      "Don't make jokes about New Zealand\'s history or politics."
+    ]
+  },
+  scamWarnings: [],
     // Add Women’s Confidence Score (Numbeo 2025, Cat is Out of the Office, WEF Global Gender Gap 2024)
     womensConfidenceScore: {
       score: 83.5, // WEF Global Gender Gap 2024, New Zealand
@@ -169,7 +171,95 @@ const wellington: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+    embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-wellington'
+        },
+        {
+          name: 'Embassy of Germany in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.exteriores.gob.es/embajadas/wellington'
+        },
+        {
+          name: 'Australian Embassy Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.canadainternational.gc.ca/nz-new-zealand/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/new-zealand'
+        },
+        {
+          name: 'Embassy of Denmark in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://nz.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.eda.admin.ch/wellington'
+        },
+        {
+          name: 'Embassy of India in Wellington',
+          address: '44 Hill Street, Wellington 6011',
+          phone: '+64 4 924 2888',
+          link: 'https://www.indianembassynz.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default wellington;

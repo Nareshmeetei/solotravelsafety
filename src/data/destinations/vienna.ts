@@ -26,7 +26,7 @@ const vienna: Destination = {
     },
     accommodations: [
       { name: 'Hotel Sacher Wien', type: 'hotel', features: ['Central location', 'Luxury', 'Safe'], rating: 4.8, notes: 'Famous luxury hotel in the city center' },
-      { name: "Wombat's City Hostel Vienna", type: 'hostel', features: ['Female dorms', 'Central location', 'Friendly staff'], rating: 4.6, notes: 'Popular with solo travelers, safe and clean.' },
+      { name: "Wombat\'s City Hostel Vienna", type: 'hostel', features: ['Female dorms', 'Central location', 'Friendly staff'], rating: 4.6, notes: 'Popular with solo travelers, safe and clean.' },
       { name: 'Hotel Kämp', type: 'hotel', features: ['Luxury', 'Safe area', 'Security'], rating: 4.9, notes: 'High security and professional staff.' }
     ],
     alerts: [],
@@ -155,6 +155,7 @@ const vienna: Destination = {
         icon: 'Bike',
       },
     ],
+  culturalSensitivity: {
     culturalDos: [
       'Greet with a polite "Guten Tag" and use formal titles.',
       'Be punctual for meetings and public transport.',
@@ -167,9 +168,98 @@ const vienna: Destination = {
       "Don't speak loudly or draw attention in public.",
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
-      "Don't make jokes about Austria's history or politics."
-    ],
-    scamWarnings: []
+      "Don't make jokes about Austria\'s history or politics."
+    ]
+  },
+  scamWarnings: [],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-vienna'
+        },
+        {
+          name: 'Embassy of Germany in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://at.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://at.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://www.exteriores.gob.es/embajadas/vienna'
+        },
+        {
+          name: 'Australian Embassy Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://at.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://www.canadainternational.gc.ca/at-austria/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/austria'
+        },
+        {
+          name: 'Embassy of Denmark in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://at.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://www.eda.admin.ch/vienna'
+        },
+        {
+          name: 'Embassy of India in Vienna',
+          address: 'Boltzmanngasse 16, 1090 Vienna',
+          phone: '+43 1 313 39 0',
+          link: 'https://www.indianembassyat.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
 };
 
 export default vienna;

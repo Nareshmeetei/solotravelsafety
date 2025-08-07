@@ -26,7 +26,7 @@ const AllDestinations: React.FC = () => {
   ];
 
   const filteredAndSortedDestinations = useMemo(() => {
-    let filtered = destinations.filter(destination => {
+    const filtered = destinations.filter(destination => {
       // Search filter
       const matchesSearch = destination.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            destination.country.toLowerCase().includes(searchQuery.toLowerCase());

@@ -160,6 +160,7 @@ const osaka: Destination = {
         sourceUrl: "https://www.the-kansai-guide.com/en/summary/area/osaka/"
       }
     ], // Tips sourced from Travel Ladies and The Kansai Guide (2025)
+  culturalSensitivity: {
     culturalDos: [
       'Remove shoes before entering homes and temples.',
       'Dress modestly, especially at religious sites.',
@@ -173,8 +174,9 @@ const osaka: Destination = {
       "Don't take photos in temples without permission.",
       "Don't tip in restaurants—service charge is included.",
       "Don't point feet at people or religious objects."
-    ],
-    womensConfidenceScore: {
+    ]
+  },
+  womensConfidenceScore: {
       score: 77.4,
       source: '',
       sourceUrl: ''
@@ -204,7 +206,95 @@ const osaka: Destination = {
         source: '',
         sourceUrl: ''
       }
-    ]
-  };
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
+        },
+        {
+          name: 'Embassy of Germany in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.exteriores.gob.es/embajadas/tokyo'
+        },
+        {
+          name: 'Australian Embassy Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.canadainternational.gc.ca/jp-japan/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/japan'
+        },
+        {
+          name: 'Embassy of Denmark in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://jp.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.eda.admin.ch/tokyo'
+        },
+        {
+          name: 'Embassy of India in Osaka',
+          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
+          phone: '+81 3 3224 5000',
+          link: 'https://www.indianembassyjp.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
+};
 
 export default osaka;

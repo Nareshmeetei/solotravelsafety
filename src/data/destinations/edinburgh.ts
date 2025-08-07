@@ -77,7 +77,7 @@ const edinburgh: Destination = {
       },
       {
         title: "Be vigilant at night and avoid dark alleys",
-        description: "Stick to well-lit streets, especially after enjoying Edinburgh's nightlife. Avoid walking alone through parks or alleys late at night.",
+        description: "Stick to well-lit streets, especially after enjoying Edinburgh\'s nightlife. Avoid walking alone through parks or alleys late at night.",
         severity: "low",
         sourceName: "Finding Alexx, 2025",
         sourceUrl: "https://findingalexx.com/edinburgh-solo-travel-guide/"
@@ -149,6 +149,95 @@ const edinburgh: Destination = {
         sourceUrl: 'https://sologuides.com/edinburgh/'
       }
     ],
+
+    legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-edinburgh'
+        },
+        {
+          name: 'Embassy of Germany in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://gb.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://gb.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://www.exteriores.gob.es/embajadas/edinburgh'
+        },
+        {
+          name: 'Australian Embassy Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://gb.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://www.canadainternational.gc.ca/gb-united-kingdom/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/united-kingdom'
+        },
+        {
+          name: 'Embassy of Denmark in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://gb.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://www.eda.admin.ch/edinburgh'
+        },
+        {
+          name: 'Embassy of India in Edinburgh',
+          address: '3 Regent Terrace, Edinburgh EH7 5BW',
+          phone: '+44 131 556 8315',
+          link: 'https://www.indianembassygb.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    },
 };
 
 export default edinburgh;

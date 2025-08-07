@@ -120,7 +120,7 @@ const caracas: Destination = {
     safetyTips: {
       clothing: `• Dress extremely modestly and avoid any jewelry, watches, or visible electronics at all times
 • Carry a decoy wallet with small bills and expired cards - leave real valuables in hotel safe
-• Wear simple, worn clothing that doesn't stand out - new or branded items attract criminals
+• Wear simple, worn clothing that doesn\'t stand out - new or branded items attract criminals
 • Keep your phone hidden and never use it openly on streets - phone theft is epidemic
 • Always wear closed-toe shoes for quick movement and avoid anything that looks expensive`,
       firstTimers: `• Register with your embassy within 24 hours of arrival - critical for emergency evacuation capabilities
@@ -213,7 +213,7 @@ const caracas: Destination = {
         'Do not engage with vendors, taxi drivers, or anyone approaching you on the street',
         'Keep all valuables completely hidden - even glimpses of cash or cards invite robbery'
       ],
-      perception: `Foreign women are seen as extremely wealthy targets regardless of actual income - criminals assume all foreigners have significant money and valuable possessions. Solo female travelers face the highest risk of sexual assault, kidnapping, and violent crime in Caracas. White or light-skinned women are particularly targeted due to perceived wealth. Venezuelan women rarely travel alone and never at night - following local women's behavior is essential for survival. Conservative dress and behavior may reduce risk slightly but do not eliminate danger. Local women understand that showing any sign of wealth or foreign status can be fatal. The economic crisis has created desperation-driven crime where criminals have nothing to lose and will use extreme violence for minimal gain. Women are specifically targeted for sexual crimes in addition to robbery, making Caracas one of the most dangerous cities globally for solo female travelers.`
+      perception: `Foreign women are seen as extremely wealthy targets regardless of actual income - criminals assume all foreigners have significant money and valuable possessions. Solo female travelers face the highest risk of sexual assault, kidnapping, and violent crime in Caracas. White or light-skinned women are particularly targeted due to perceived wealth. Venezuelan women rarely travel alone and never at night - following local women\'s behavior is essential for survival. Conservative dress and behavior may reduce risk slightly but do not eliminate danger. Local women understand that showing any sign of wealth or foreign status can be fatal. The economic crisis has created desperation-driven crime where criminals have nothing to lose and will use extreme violence for minimal gain. Women are specifically targeted for sexual crimes in addition to robbery, making Caracas one of the most dangerous cities globally for solo female travelers.`
     },
     bestTimeToVisit: {
       safestMonths: ['February-April (dry season with better visibility)'],
@@ -311,7 +311,7 @@ const caracas: Destination = {
       },
       {
         title: "Never leave hotel grounds without professional security escort",
-        description: "Caracas has the world's highest murder rate (over 100 per 100,000). Even 'safe' areas become deadly after dark. Hotel security knows current danger zones and safe routes. Walking alone is essentially suicide for foreign women.",
+        description: "Caracas has the world\'s highest murder rate (over 100 per 100,000). Even 'safe' areas become deadly after dark. Hotel security knows current danger zones and safe routes. Walking alone is essentially suicide for foreign women.",
         severity: "high",
         sourceName: "Venezuelan Observatory of Violence",
         sourceUrl: "https://observatoriodeviolencia.org.ve/"
@@ -325,7 +325,7 @@ const caracas: Destination = {
       },
       {
         title: "Carry emergency cash in multiple currencies hidden throughout body",
-        description: "ATMs are robbery traps and cards often don't work. Distribute $500+ in USD, EUR, and local currency in hidden body belts, shoes, and clothing. Keep separate 'robbery money' of $50-100 to hand over during attacks.",
+        description: "ATMs are robbery traps and cards often don\'t work. Distribute $500+ in USD, EUR, and local currency in hidden body belts, shoes, and clothing. Keep separate 'robbery money' of $50-100 to hand over during attacks.",
         severity: "high",
         sourceName: "Survival Guide Venezuela",
         sourceUrl: "https://venezuelasurvival.org/"
@@ -549,57 +549,63 @@ const caracas: Destination = {
       embassies: [
         {
           name: 'British Embassy Caracas',
-          address: 'Torre La Castellana, Piso 11, Avenida Principal de La Castellana',
-          phone: '+58 212 263 8411',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
           link: 'https://www.gov.uk/world/organisations/british-embassy-caracas'
         },
         {
-          name: 'Embassy of Germany',
-          address: 'Edificio Banaven, Torre C, Piso 1, Avenida San Felipe',
-          phone: '+58 212 219 2500',
-          link: 'https://caracas.diplo.de/'
+          name: 'Embassy of Germany in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://ve.diplo.de/'
         },
         {
-          name: 'Embassy of France',
-          address: 'Calle Madrid con Trinidad, Las Mercedes',
-          phone: '+58 212 909 6500',
+          name: 'Embassy of France in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
           link: 'https://ve.ambafrance.org/'
         },
         {
-          name: 'Australian Embassy (through Colombian Embassy)',
-          address: 'Avenida San Juan Bosco con 2da Transversal, Altamira',
-          phone: '+58 212 261 4769',
-          link: 'https://venezuela.embassy.gov.au/'
+          name: 'Embassy of Spain in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://www.exteriores.gob.es/embajadas/caracas'
         },
         {
-          name: 'Canadian Embassy',
-          address: 'Avenida Francisco de Miranda, Torre Altamira',
-          phone: '+58 212 600 3000',
-          link: 'https://www.canadainternational.gc.ca/venezuela-venezuela/'
+          name: 'Australian Embassy Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://ve.embassy.gov.au/'
         },
         {
-          name: 'Embassy of the Netherlands',
-          address: 'Torre Credival, Piso 3, 2da Avenida de Campo Alegre',
-          phone: '+58 212 276 2311',
-          link: 'https://www.netherlandsandyou.nl/countries/venezuela'
+          name: 'Canadian Embassy Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://www.canadainternational.gc.ca/ve-venezuela/'
         },
         {
-          name: 'Embassy of Denmark (through Swedish Embassy)',
-          address: 'Torre Europa, Piso 9, Avenida Francisco de Miranda',
-          phone: '+58 212 263 7044',
-          link: 'https://venezuela.um.dk/'
+          name: 'Embassy of the Netherlands in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/venezuela'
         },
         {
-          name: 'Embassy of Switzerland',
-          address: 'Torre Europa, Piso 8, Avenida Francisco de Miranda',
-          phone: '+58 212 267 8939',
-          link: 'https://www.eda.admin.ch/venezuela'
+          name: 'Embassy of Denmark in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://ve.um.dk/en'
         },
         {
-          name: 'Embassy of India',
-          address: 'Quinta Dharam, Calle Los Chaguaramos, La Castellana',
-          phone: '+58 212 261 3668',
-          link: 'https://www.eoicaracas.gov.in/'
+          name: 'Embassy of Switzerland in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://www.eda.admin.ch/caracas'
+        },
+        {
+          name: 'Embassy of India in Caracas',
+          address: 'Calle F con Avenida Principal de la Castellana, Caracas',
+          phone: '+58 212 975 6411',
+          link: 'https://www.indianembassyve.gov.in/'
         }
       ],
       womensRights: [

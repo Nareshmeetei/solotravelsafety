@@ -14,7 +14,7 @@ const PasswordStrengthIndicator: React.FC<PasswordStrengthIndicatorProps> = ({
 
   const getPasswordStrength = (password: string) => {
     let score = 0;
-    let feedback: string[] = [];
+    const feedback: string[] = [];
 
     // Length check
     if (password.length >= 8) {

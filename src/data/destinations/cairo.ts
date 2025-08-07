@@ -269,7 +269,7 @@ const cairo: Destination = {
         title: "Book a reputable female tour guide",
         description: "Female guides understand the challenges and can provide protection. Companies like Emo Tours and Memphis Tours offer female Egyptologists.",
         severity: "high",
-        sourceName: "Egypt Adventures Travel, Women's Travel Safety",
+        sourceName: "Egypt Adventures Travel, Women\'s Travel Safety",
         sourceUrl: "https://www.egyptadventurestravel.com/blog/is-cairo-worth-visiting"
       },
       {
@@ -465,57 +465,63 @@ const cairo: Destination = {
       embassies: [
         {
           name: 'British Embassy Cairo',
-          address: '7 Ahmed Ragheb Street, Garden City, Cairo',
-          phone: '+20 2 2791 6000',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
           link: 'https://www.gov.uk/world/organisations/british-embassy-cairo'
         },
         {
-          name: 'Embassy of Germany Cairo',
-          address: '2 Sharia Berlin, Garden City, Cairo',
-          phone: '+20 2 2795 8800',
-          link: 'https://kairo.diplo.de/eg-en'
+          name: 'Embassy of Germany in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://eg.diplo.de/'
         },
         {
-          name: 'Embassy of France Cairo',
-          address: '29 Avenue Charles de Gaulle, Giza, Cairo',
-          phone: '+20 2 3567 3200',
+          name: 'Embassy of France in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
           link: 'https://eg.ambafrance.org/'
         },
         {
+          name: 'Embassy of Spain in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://www.exteriores.gob.es/embajadas/cairo'
+        },
+        {
           name: 'Australian Embassy Cairo',
-          address: '11th Floor, World Trade Centre, 1191 Corniche El Nil, Cairo',
-          phone: '+20 2 2770 6600',
-          link: 'https://egypt.embassy.gov.au/'
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://eg.embassy.gov.au/'
         },
         {
           name: 'Canadian Embassy Cairo',
-          address: '26 Kamel El Shenawy Street, Garden City, Cairo',
-          phone: '+20 2 2791 8700',
-          link: 'https://www.canadainternational.gc.ca/egypt-egypte/'
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://www.canadainternational.gc.ca/eg-egypt/'
         },
         {
-          name: 'Embassy of the Netherlands Cairo',
-          address: '18 Hassan Sabry Street, Zamalek, Cairo',
-          phone: '+20 2 2739 5500',
-          link: 'https://www.netherlandsandyou.nl/countries/egypt'
+          name: 'Embassy of the Netherlands in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/egypt'
         },
         {
-          name: 'Embassy of Denmark Cairo',
-          address: '12 Hassan Sabry Street, Zamalek, Cairo',
-          phone: '+20 2 2728 6800',
-          link: 'https://egypten.um.dk/'
+          name: 'Embassy of Denmark in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://eg.um.dk/en'
         },
         {
-          name: 'Embassy of Switzerland Cairo',
-          address: '10 Abdel Khalek Sarwat Street, Cairo',
-          phone: '+20 2 2575 8284',
+          name: 'Embassy of Switzerland in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
           link: 'https://www.eda.admin.ch/cairo'
         },
         {
-          name: 'Embassy of India Cairo',
-          address: '5 Aziz Abaza Street, Zamalek, Cairo',
-          phone: '+20 2 2736 4059',
-          link: 'https://www.eoicairo.gov.in/'
+          name: 'Embassy of India in Cairo',
+          address: '5 Sharia Tawfik Diab, Garden City, Cairo',
+          phone: '+20 2 2797 3300',
+          link: 'https://www.indianembassyeg.gov.in/'
         }
       ],
       womensRights: [

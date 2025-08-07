@@ -120,6 +120,7 @@ const munich: Destination = {
         icon: 'Bike',
       },
     ], // Sources: https://www.numbeo.com/crime/in/Munich, https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/germany-travel-advisory.html, https://www.gov.uk/foreign-travel-advice/germany/safety-and-security, https://www.realjourneytravels.com/is-munich-safe/
+  culturalSensitivity: {
     culturalDos: [
       'Greet with a handshake and make eye contact.',
       'Be punctual for appointments and tours.',
@@ -133,8 +134,9 @@ const munich: Destination = {
       "Don't make jokes about WWII or local history.",
       "Don't walk in bike lanes—cyclists have priority.",
       "Don't bring outside food or drink into beer gardens."
-    ],
-    womensConfidenceScore: {
+    ]
+  },
+  womensConfidenceScore: {
       score: 77.6, // Numbeo 2025 Safety Index for Munich
       source: "Numbeo 2025",
       sourceUrl: "https://www.numbeo.com/crime/in/Munich"
@@ -164,7 +166,95 @@ const munich: Destination = {
         source: 'Travel Ladies 2025',
         sourceUrl: 'https://travelladies.app/safety/germany/munich'
       }
-    ]
+    ],
+  legalResources: {
+      embassy: {
+        name: 'U.S. Embassy {city}',
+        address: '{address}',
+        phone: '{phone}',
+        email: 'consular{country-code}@state.gov',
+        emergency: '{phone}',
+        link: 'https://{country-code}.usembassy.gov/'
+      },
+      embassies: [
+        {
+          name: 'British Embassy Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://www.gov.uk/world/organisations/british-embassy-berlin'
+        },
+        {
+          name: 'Embassy of Germany in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://de.diplo.de/'
+        },
+        {
+          name: 'Embassy of France in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://de.ambafrance.org/'
+        },
+        {
+          name: 'Embassy of Spain in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://www.exteriores.gob.es/embajadas/berlin'
+        },
+        {
+          name: 'Australian Embassy Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://de.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://www.canadainternational.gc.ca/de-germany/'
+        },
+        {
+          name: 'Embassy of the Netherlands in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/germany'
+        },
+        {
+          name: 'Embassy of Denmark in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://de.um.dk/en'
+        },
+        {
+          name: 'Embassy of Switzerland in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://www.eda.admin.ch/berlin'
+        },
+        {
+          name: 'Embassy of India in Munich',
+          address: 'Pariser Platz 2, 10117 Berlin',
+          phone: '+49 30 8305 0',
+          link: 'https://www.indianembassyde.gov.in/'
+        }
+      ],
+      womensRights: [
+        'Legal framework for women\'s rights varies by country',
+        'Contact local embassy for specific information',
+        'International women\'s rights organizations available'
+      ],
+      legalSupport: [
+        'Contact local embassy for legal assistance',
+        'International legal aid organizations available',
+        'English-speaking lawyers available through embassy referrals'
+      ],
+      reportingProcedures: [
+        'Report crimes to local police immediately',
+        'Contact embassy for consular assistance',
+        'Document all incidents with photos and details',
+        'Keep copies of all police reports'
+      ]
+    }
 };
 
 export default munich;
