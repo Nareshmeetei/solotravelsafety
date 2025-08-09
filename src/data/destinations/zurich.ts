@@ -168,73 +168,79 @@ const zurich: Destination = {
     ],
   legalResources: {
       embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
+        name: 'U.S. Embassy Bern',
+        address: 'Sulgeneckstrasse 19, 3007 Bern',
+        phone: '+41 31 357 7011',
+        email: 'consularbern@state.gov',
+        emergency: '+41 31 357 7011',
+        link: 'https://ch.usembassy.gov/'
       },
       embassies: [
         {
-          name: 'British Embassy Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://www.gov.uk/world/organisations/british-embassy-bern'
+          name: 'U.S. Consulate General Zurich',
+          address: 'Dufourstrasse 101, 8008 Zurich',
+          phone: '+41 43 499 2960',
+          link: 'https://ch.usembassy.gov/embassy-consulates/zurich/'
         },
         {
-          name: 'Embassy of Germany in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://ch.diplo.de/'
+          name: 'British Consulate General Zurich',
+          address: 'Minervastrasse 117, 8032 Zurich',
+          phone: '+41 44 918 2400',
+          link: 'https://www.gov.uk/world/organisations/british-consulate-general-zurich'
         },
         {
-          name: 'Embassy of France in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://ch.ambafrance.org/'
+          name: 'German Consulate General Zurich',
+          address: 'Beethovenstrasse 28, 8002 Zurich',
+          phone: '+41 44 286 1111',
+          link: 'https://schweiz.diplo.de/ch-de/vertretungen/gk-zuerich'
         },
         {
-          name: 'Embassy of Spain in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://www.exteriores.gob.es/embajadas/bern'
+          name: 'French Consulate General Zurich',
+          address: 'Münstergasse 9, 8001 Zurich',
+          phone: '+41 44 266 85 85',
+          link: 'https://ch.consulfrance.org/'
         },
         {
-          name: 'Australian Embassy Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://ch.embassy.gov.au/'
+          name: 'Spanish Consulate General Zurich',
+          address: 'Tödistrasse 65, 8002 Zurich',
+          phone: '+41 44 287 24 50',
+          link: 'https://www.exteriores.gob.es/consulados/zurich'
         },
         {
-          name: 'Canadian Embassy Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://www.canadainternational.gc.ca/ch-switzerland/'
+          name: 'Australian Consulate General Geneva',
+          address: 'Chemin des Fins 2, 1218 Grand-Saconnex',
+          phone: '+41 22 799 9100',
+          link: 'https://switzerland.embassy.gov.au/'
         },
         {
-          name: 'Embassy of the Netherlands in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
+          name: 'Canadian Embassy Bern',
+          address: 'Kirchenfeldstrasse 88, 3005 Bern',
+          phone: '+41 31 357 3200',
+          link: 'https://www.canadainternational.gc.ca/switzerland-suisse/'
+        },
+        {
+          name: 'Netherlands Consulate General Zurich',
+          address: 'Klausstrasse 1, 8008 Zurich',
+          phone: '+41 43 336 80 80',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/switzerland'
         },
         {
-          name: 'Embassy of Denmark in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://ch.um.dk/en'
+          name: 'Danish Consulate General Zurich',
+          address: 'Stockerstrasse 33, 8002 Zurich',
+          phone: '+41 44 286 52 50',
+          link: 'https://schweiz.um.dk/en'
         },
         {
-          name: 'Embassy of Switzerland in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://www.eda.admin.ch/bern'
+          name: 'Swiss Government Services',
+          address: 'Multiple locations throughout Zurich',
+          phone: '+41 58 462 78 78',
+          link: 'https://www.ch.ch/en/'
         },
         {
-          name: 'Embassy of India in Zurich',
-          address: 'Thunstrasse 50, 3005 Bern',
-          phone: '+41 31 359 77 00',
-          link: 'https://www.indianembassych.gov.in/'
+          name: 'Indian Consulate General Zurich',
+          address: 'Kirchgasse 28, 8001 Zurich',
+          phone: '+41 44 221 1810',
+          link: 'https://www.cgizurich.gov.in/'
         }
       ],
       womensRights: [

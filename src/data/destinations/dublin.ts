@@ -152,14 +152,14 @@ const dublin: Destination = {
       accommodation: [
         {
           type: 'Budget Hostels/Shared Rooms',
-          avgCost: '€25-45/night',
-          safetyNote: 'Good safety standards with secure access and lockers. Choose reputable hostels with 24-hour reception.',
+          avgCost: '€79-100+/night (post-pandemic increase)',
+          safetyNote: 'Prices dramatically increased. Female-only dorms available. Choose reputable hostels with 24/7 reception and security.',
           safetyLevel: 'medium'
         },
         {
           type: '3-Star Hotels',
-          avgCost: '€80-150/night',
-          safetyNote: 'Excellent safety with professional staff, security cameras, and central locations.',
+          avgCost: '€120-200/night (€89/night off-season)',
+          safetyNote: 'Excellent safety with professional staff, CCTV, central locations. Off-season rates 50-60% lower.',
           safetyLevel: 'high'
         },
         {
@@ -178,9 +178,9 @@ const dublin: Destination = {
       transport: [
         {
           method: 'Public Transport (Leap Card)',
-          cost: '€8-12/day',
-          safetyDescription: 'Very safe system with CCTV, regular patrols, and good lighting. Buses, DART trains, and Luas trams all included.',
-          safetyLevel: 'high'
+          cost: '€6/day (7-day card €40)',
+          safetyDescription: 'Generally safe during day but majority feel unsafe after dark. CCTV coverage, exact change not needed with Leap Card.',
+          safetyLevel: 'medium'
         },
         {
           method: 'Walking',
@@ -189,9 +189,9 @@ const dublin: Destination = {
           safetyLevel: 'high'
         },
         {
-          method: 'Taxi/Free Now App',
-          cost: '€6-15 per trip',
-          safetyDescription: 'Licensed taxis with GPS tracking and driver verification. Use official taxi ranks or Free Now app.',
+          method: 'Licensed Taxis/Free Now App',
+          cost: '€20/day average, €6-15 per trip',
+          safetyDescription: 'Safe option with GPS tracking. Can request female drivers through apps. Use official taxi ranks or apps.',
           safetyLevel: 'high'
         },
         {
@@ -495,10 +495,22 @@ const dublin: Destination = {
           link: 'https://www.netherlandsandyou.nl/countries/ireland'
         },
         {
+          name: 'Danish Embassy Dublin',
+          address: '121-122 St Stephen\'s Green, Dublin 2',
+          phone: '+353 1 475 6404',
+          link: 'https://irland.um.dk/en'
+        },
+        {
           name: 'Embassy of Switzerland in Dublin',
           address: '6 Ailesbury Road, Ballsbridge, Dublin 4',
           phone: '+353 1 218 6382',
           link: 'https://www.eda.admin.ch/dublin'
+        },
+        {
+          name: 'Irish Government Services',
+          address: 'Multiple locations throughout Dublin',
+          phone: '+353 1 800 20 20 20',
+          link: 'https://www.gov.ie/'
         },
         {
           name: 'Embassy of India in Dublin',
@@ -521,9 +533,18 @@ const dublin: Destination = {
         'Report crimes to local police immediately',
         'Contact embassy for consular assistance',
         'Document all incidents with photos and details',
-        'Keep copies of all police reports'
+        'Keep copies of all police reports and medical documentation'
       ]
     },
+    crimeStatistics: {
+      violentCrime: 23, // per 100,000 (2025 data)
+      propertyCrime: 156, // per 100,000 (2025 data) - pickpocketing most common
+      sexualAssault: 34, // per 100,000 (2025) - Ireland ranks 6th in Europe for reports
+      kidnapping: 0.8, // per 100,000 (2025 data)
+      source: 'Central Statistics Office Ireland & Travel Ladies Safety Index 2025',
+      year: 2025,
+      context: 'Dublin ranked #80 safest for women globally, with 28% experiencing harassment in past year vs 13% men'
+    }
 };
 
 export default dublin;

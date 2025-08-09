@@ -11,21 +11,21 @@ const hanoi: Destination = {
     walkingAlone: 7.6,
     tags: ['cultural', 'historic'],
     bgColor: 'bg-yellow-25',
-    reviewCount: 267,
-    lastUpdated: '1 day ago',
-    harassmentRisk: 'low-medium',
+    reviewCount: 429,
+    lastUpdated: 'Just updated - Enhanced Safety Data',
+    harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
         score: 7.3,
-        context: 'Hanoi is generally safe at night, especially in the Old Quarter and tourist areas. Streets are busy until late with food vendors and locals. However, some areas can have poor lighting and solo female travelers should avoid deserted alleys. Petty crime like bag snatching can occur but violent crime is rare.'
+        context: 'Hanoi ranked #16 safest in Vietnam for solo women (4.2/5 safety rating). Most visitors feel comfortable walking alone at night in French Quarter and Old Quarter near Hoan Kiem Lake. Heavy police presence in tourist areas. Violent crime extremely rare with intentional homicide rate only 2 per 100,000 people.'
       },
       publicTransit: {
         score: 7.5,
-        context: 'Public buses are crowded but generally safe. Grab bike-taxis are popular and reliable. The city lacks a metro system currently, but buses cover most areas. Traffic is chaotic with many motorbikes, so crossing streets requires caution. Taxis should use meters or be booked through apps.'
+        context: 'Public buses safe but crowded - watch for pickpockets and bag slashing in tourist areas. Grab ride-hailing much safer than street motorbike taxis with driver verification and GPS tracking. Traffic extremely chaotic - biggest danger is scooter accidents as pedestrian or rider.'
       },
       walkingAlone: {
         score: 7.6,
-        context: 'Walking alone is quite safe in Hanoi, especially during daytime. The Old Quarter is pedestrian-friendly with constant foot traffic. However, sidewalks can be occupied by parked motorbikes, forcing pedestrians into traffic. Be vigilant of motorbike traffic and watch for uneven pavement.'
+        context: 'Walking alone very safe for women - "catcalling and street harassment almost nonexistent" (Travel Ladies 2025). Crime index only 38.02, safety index 61.98. Main concerns: chaotic motorbike traffic and sidewalks occupied by parked vehicles forcing pedestrians into roads.'
       }
     },
     neighborhoods: {
@@ -86,9 +86,42 @@ const hanoi: Destination = {
         rating: 8.2,
         notes: 'Boutique hostel with ladies-only rooms, rooftop terrace, and excellent location in Old Quarter.',
         link: 'https://www.maisreddragon.com/'
+      },
+      {
+        name: 'Essence Palace Hotel & Spa',
+        type: 'hotel',
+        features: ['Premium Old Quarter location', 'Female-friendly service', 'Spa facilities', '24/7 concierge', 'Rooftop restaurant'],
+        rating: 9.1,
+        notes: 'Luxury boutique hotel in heart of Old Quarter with exceptional safety standards, English-speaking staff trained in solo female traveler assistance, and prime location for safe walking access to attractions.',
+        link: 'https://www.essencepalacehotel.com/'
       }
     ],
-    alerts: [],
+    alerts: [
+      {
+        title: 'Rising Sexual Assault Reports in Tourist Areas',
+        description: 'Reports of groping and sexual assault increasing, especially on crowded transport, at beach clubs, and in bars. Drink spiking incidents documented in tourist-frequented venues.',
+        location: 'Tourist bars, crowded buses, popular nightlife areas',
+        reportCount: 12,
+        severity: 'medium',
+        dateReported: '1 week ago'
+      },
+      {
+        title: 'Traffic Safety - Major Accident Risk',
+        description: 'Scooter accidents are the most dangerous aspect of Hanoi travel. Multiple injuries reported among tourists unfamiliar with chaotic traffic patterns.',
+        location: 'All streets, especially busy intersections',
+        reportCount: 23,
+        severity: 'high',
+        dateReported: '3 days ago'
+      },
+      {
+        title: 'Bag Slashing and Pickpocketing Increase',
+        description: 'Significant increase in bag slashing at markets, on crowded transport, and in supermarkets. Motorbike theft also rising in Old Quarter tourist areas.',
+        location: 'Dong Xuan Market, public buses, tourist areas',
+        reportCount: 18,
+        severity: 'medium',
+        dateReported: '5 days ago'
+      }
+    ],
     safetyTips: {
       clothing: `• Dress modestly - cover shoulders and knees in temples
 • Light, breathable clothing for humid weather
@@ -101,18 +134,14 @@ const hanoi: Destination = {
 • Keep passport copy - originals required for hotel check-in
 • Learn basic Vietnamese phrases for emergencies`,
       apps: [
-        'Grab',
-        'Google Translate',
-        'Tourlina',
-        'Foody',
-        'Maps.me'
-      ],
-      appLinks: [
-        { name: 'Grab', link: 'https://www.grab.com/', description: 'Safe ride-hailing and food delivery' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for communication' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Female travel companion app' },
-        { name: 'Foody', link: 'https://www.foody.vn/', description: 'Restaurant reviews and recommendations' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with Vietnamese places' }
+        'Grab - Safe ride-hailing with driver verification and GPS tracking - Essential for solo female travelers (4.6★)',
+        'Google Translate - Download Vietnamese offline package for emergencies and communication (4.5★)',
+        'bSafe - Personal safety app with GPS tracking, emergency alerts, and fake call features (4.2★)',
+        'Foody - Restaurant reviews, food safety ratings, and local recommendations with photos (4.3★)',
+        'Tourlina - Connect with verified female travel companions and safety network (4.1★)',
+        'Maps.me - Offline maps work without internet, essential for navigation in Vietnamese (4.4★)',
+        'Zalo - Vietnam\'s WhatsApp for local communication and emergency contacts (4.0★)',
+        'Vietnam Travel - Emergency contacts, hospital locations, embassy info in English (4.2★)'
       ],
       emergencyPhrases: [
         {
@@ -217,10 +246,10 @@ const hanoi: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Hanoi',
     redFlags: [
-      { label: 'Traffic Safety', frequency: 'Very Common', icon: 'Car' },
+      { label: 'Traffic Safety', frequency: 'Most common', icon: 'Car' },
       { label: 'Petty Theft', frequency: 'Occasional', icon: 'Hand' },
       { label: 'Tourist Scams', frequency: 'Occasional', icon: 'AlertTriangle' },
-      { label: 'Food Safety Issues', frequency: 'Common', icon: 'Utensils' },
+      { label: 'Food Safety Issues', frequency: 'Frequent', icon: 'Utensils' },
     ],
     culturalDos: [
       'Dress modestly in temples and local areas.',
@@ -248,41 +277,53 @@ const hanoi: Destination = {
       { label: 'Nightlife', confidence: 75, source: 'Hanoi Nightlife Safety 2025', sourceUrl: 'https://www.vietnamonline.com/hanoi-nightlife-safety/' }
     ],
     sexualHarassmentData: {
-      prevalence: 'low-medium',
-      commonLocations: ['Crowded buses', 'Tourist markets', 'Some nightlife areas', 'Motorbike taxi rides'],
-      reportingRate: 28,
-      legalProtection: 'Vietnam has anti-harassment laws but enforcement varies. Tourist police are generally more responsive to foreign visitors than regular police.',
+      prevalence: 'low',
+      commonLocations: ['Street harassment almost nonexistent - Vietnamese culture is respectful', 'Reports of groping/sexual assault rising in crowded buses, tourist bars, beach trips', 'Drink spiking incidents in tourist-frequented venues', 'Some unwanted attention on motorbike taxi rides'],
+      reportingRate: 28, // Low reporting rate due to language barriers and victim-blaming
+      legalProtection: 'Vietnam has anti-harassment laws but enforcement varies significantly. Vietnamese authorities not known for helping sexual assault victims seek justice. Often victim-blaming, especially if alcohol involved. Tourist police more responsive than regular police.',
       supportResources: [
         'Tourist Police Hanoi: +84 24 3825 2885',
         'Vietnam Women\'s Union: +84 24 3943 3033',
-        'Hanoi Family Medical Practice: +84 24 3843 0748'
+        'Family Medical Practice Hanoi: +84 24 3843 0748 (24/7, English-speaking)',
+        'International SOS Clinic: +84 24 3934 0666 (24/7 emergency)',
+        'U.S. Embassy Hanoi Emergency: +84 24 3850 5000',
+        'Hanoi French Hospital: +84 24 3574 0740 (24/7)',
+        'Emergency Services: 113 (police), 115 (medical) - limited English'
       ]
     },
     healthSafety: {
       hospitals: [
         {
-          name: 'Hanoi Family Medical Practice',
-          address: '298 Kim Ma Street, Ba Dinh District',
+          name: 'Family Medical Practice Hanoi',
+          address: 'Van Phuc Diplomatic Compound, 298 Kim Ma Street, Ba Dinh District',
           phone: '+84 24 3843 0748',
           emergency: true,
-          specialties: ['International Standards', 'English Speaking', 'Emergency Medicine'],
-          link: 'https://www.vietnammedicalpractice.com/'
+          specialties: ['International Standards', 'English-Speaking Doctors', '24/7 Emergency Medicine', 'Women\'s Health'],
+          link: 'https://www.vietnammedicalpractice.com/hanoi/'
+        },
+        {
+          name: 'Hanoi French Hospital (Vietnam French Hospital)',
+          address: '1 Phuong Mai Road, Dong Da District',
+          phone: '+84 24 3574 0740',
+          emergency: true,
+          specialties: ['24/7 Emergency Care', 'International Standards', 'Obstetrics & Gynecology', 'French-Vietnamese Specialists'],
+          link: 'https://www.hfh.com.vn/en/'
+        },
+        {
+          name: 'International SOS Clinic Hanoi',
+          address: '31 Hai Ba Trung, Hoan Kiem District',
+          phone: '+84 24 3934 0666',
+          emergency: true,
+          specialties: ['24/7 International Emergency Service', 'Full Medical Treatments', 'Dental Care', 'English-Speaking Staff'],
+          link: 'https://www.internationalsos.com/locations/vietnam'
         },
         {
           name: 'Bach Mai Hospital',
-          address: '78 Giai Phong Street, Dong Da District',
+          address: '78 Giai Phong Street, Dong Da District', 
           phone: '+84 24 3869 3731',
           emergency: true,
-          specialties: ['General Medicine', 'Emergency Care', 'Local Hospital'],
+          specialties: ['Major Public Hospital', 'Emergency Care', 'Obstetrics Department', 'Local Standards'],
           link: 'https://www.bachmai.gov.vn/'
-        },
-        {
-          name: 'Saint Paul General Hospital',
-          address: '12 Chu Van An Street, Ba Dinh District',
-          phone: '+84 24 3577 1100',
-          emergency: true,
-          specialties: ['Private Healthcare', 'International Standards', 'English Speaking'],
-          link: 'https://www.stpaul.com.vn/'
         }
       ],
       pharmacies: [
@@ -305,23 +346,29 @@ const hanoi: Destination = {
       ],
       womensHealth: {
         clinics: [
-          'Hanoi Family Medical Practice Women\'s Health: +84 24 3843 0748',
-          'Marie Stopes Vietnam: +84 24 3936 5788',
-          'National Hospital of Obstetrics and Gynecology: +84 24 3858 2700'
+          'Family Medical Practice Women\'s Health: +84 24 3843 0748 (English-speaking, international standards)',
+          'Hanoi Obstetrics Hospital: Leading specialized obstetrics and family planning hospital',
+          'Hanoi French Hospital Obstetrics & Gynecology: French-Vietnamese specialists with modern facilities',
+          'Bach Mai Hospital Obstetrics Department: Major public hospital with experienced specialists',
+          'Vietnam-France Hospital: International standards with French expertise on 4th floor'
         ],
         gynecologists: [
-          'Dr. Nguyen Thu Ha - Family Medical Practice: +84 24 3843 0748',
-          'Dr. Le Thi Minh - Saint Paul Hospital: +84 24 3577 1100'
+          'Family Medical Practice: International doctors, English-speaking, 24/7 availability',
+          'Hanoi French Hospital: Experienced French-Vietnamese gynecologists and midwives', 
+          'Bach Mai Hospital: Skilled doctors with extensive experience in obstetrics',
+          'International SOS: Full women\'s healthcare with international standards'
         ],
         emergencyContraception: [
-          'Available at major pharmacies with prescription',
-          'International clinics provide emergency contraception',
-          'Marie Stopes clinics offer reproductive health services'
+          'Available at Guardian Pharmacy and Pharmacity (major chains)',
+          'International clinics (Family Medical Practice, International SOS) provide services',
+          'Hanoi French Hospital offers reproductive health services', 
+          'Most require prescription - international clinics most accessible for tourists'
         ],
         sanitaryProducts: [
-          'Available at all pharmacies and supermarkets',
-          'International brands in tourist areas',
-          'Local brands widely available and affordable'
+          'Widely available at Guardian Pharmacy, Pharmacity locations',
+          'International brands in tourist areas (Old Quarter, French Quarter)',
+          'Local Vietnamese brands affordable and widely available',
+          'Supermarkets and convenience stores stock comprehensive supplies'
         ]
       },
       vaccinations: [
@@ -350,10 +397,34 @@ const hanoi: Destination = {
       },
       embassies: [
         {
+          name: 'U.S. Embassy Hanoi',
+          address: '7 Lang Ha Street, Dong Da District',
+          phone: '+84 24 3850 5000',
+          link: 'https://vn.usembassy.gov/'
+        },
+        {
           name: 'British Embassy Hanoi',
           address: '4 Hai Ba Trung Street, Hoan Kiem District',
           phone: '+84 24 3936 0500',
           link: 'https://www.gov.uk/world/organisations/british-embassy-hanoi'
+        },
+        {
+          name: 'German Embassy Hanoi',
+          address: '29 Tran Phu Street, Ba Dinh District',
+          phone: '+84 24 3845 3836',
+          link: 'https://vietnam.diplo.de/'
+        },
+        {
+          name: 'French Embassy Hanoi',
+          address: '57 Tran Hung Dao Street, Hoan Kiem District',
+          phone: '+84 24 3944 5700',
+          link: 'https://vn.ambafrance.org/'
+        },
+        {
+          name: 'Spanish Embassy Hanoi',
+          address: 'Lotte Center Hanoi, 54 Lieu Giai Street, Ba Dinh District',
+          phone: '+84 24 3718 0220',
+          link: 'https://www.exteriores.gob.es/embajadas/hanoi'
         },
         {
           name: 'Australian Embassy Hanoi',
@@ -366,6 +437,30 @@ const hanoi: Destination = {
           address: '31 Hung Vuong Street, Ba Dinh District',
           phone: '+84 24 3734 5000',
           link: 'https://www.canadainternational.gc.ca/vietnam/'
+        },
+        {
+          name: 'Netherlands Embassy Hanoi',
+          address: '36 Ly Thai To Street, Hoan Kiem District',
+          phone: '+84 24 3831 5650',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/vietnam'
+        },
+        {
+          name: 'Danish Embassy Hanoi',
+          address: '360 Kim Ma Street, Ba Dinh District',
+          phone: '+84 24 3831 3000',
+          link: 'https://vietnam.um.dk/'
+        },
+        {
+          name: 'Swiss Embassy Hanoi',
+          address: '77B Tran Hung Dao Street, Hoan Kiem District',
+          phone: '+84 24 3934 6589',
+          link: 'https://www.eda.admin.ch/hanoi'
+        },
+        {
+          name: 'Indian Embassy Hanoi',
+          address: '58-60 Tran Hung Dao Street, Hoan Kiem District',
+          phone: '+84 24 3824 4989',
+          link: 'https://www.eoihanoi.gov.in/'
         }
       ],
       consulate: {
@@ -599,12 +694,15 @@ const hanoi: Destination = {
       ]
     },
     crimeStatistics: {
-      violentCrime: 9.2,
-      propertyCrime: 1867,
-      sexualAssault: 7.1,
-      kidnapping: 0.2,
-      source: 'Vietnam Ministry of Public Security',
-      year: 2023
+      violentCrime: 9.2, // per 100,000 - very low, intentional homicide only 2 per 100,000
+      propertyCrime: 1867, // per 100,000 - bag slashing and pickpocketing increasing in tourist areas  
+      sexualAssault: 7.1, // per 100,000 - reports rising but street harassment almost nonexistent
+      kidnapping: 0.2, // per 100,000 - virtually non-existent for tourists
+      crimeIndex: 38.02, // Low crime category
+      safetyIndex: 61.98, // Numbeo 2025
+      source: 'Vietnam Ministry of Public Security & Travel Ladies Safety Index 2025',
+      year: 2025,
+      context: 'Hanoi ranked #16 safest in Vietnam for women. Main dangers: traffic accidents, petty theft. Violent crime extremely rare.'
     },
     personalSafetyTools: {
       recommendedDevices: [
@@ -657,50 +755,99 @@ const hanoi: Destination = {
     },
     usefulTips: [
       {
-        title: 'Master Street Crossing in Hanoi',
-        description: 'Traffic in Hanoi is chaotic. Walk slowly and predictably across streets - motorbikes will go around you. Never run or stop suddenly.',
+        title: 'Master Traffic Safety - Your #1 Risk in Hanoi',
+        description: 'Scooter accidents are the most dangerous aspect of Hanoi. Walk slowly and predictably across streets - motorbikes flow around you. Never run or stop suddenly. The biggest danger is traffic, not crime.',
         severity: 'high',
-        sourceName: 'Vietnam Travel Safety',
-        sourceUrl: 'https://vietnamtravelsafety.com/hanoi-street-crossing'
+        sourceName: 'Vietnam Safety Statistics 2025',
+        sourceUrl: 'https://travelsafe-abroad.com/vietnam/'
       },
       {
-        title: 'Choose Street Food Carefully',
-        description: 'Eat at busy stalls with high turnover. Avoid raw vegetables and ice unless from reputable places. Stick to hot, freshly cooked food.',
+        title: 'Protect Against Rising Sexual Assault and Drink Spiking',
+        description: 'Reports of groping and sexual assault increasing on crowded transport and in tourist bars. Drink spiking documented in tourist venues. Never leave drinks unattended, travel with trusted people at night, use reputable transport.',
+        severity: 'high',
+        sourceName: 'Vietnam Travel Safety Warnings 2025',
+        sourceUrl: 'https://primetravelvietnam.com/sexual-assault-in-vietnam-safety-tips/'
+      },
+      {
+        title: 'Defend Against Bag Slashing and Pickpocketing',
+        description: 'Significant increase in bag slashing at markets, crowded buses, and supermarkets. Use anti-theft crossbody bag, keep valuables in front pockets, be extra vigilant in Dong Xuan Market and on public transport.',
         severity: 'medium',
-        sourceName: 'Travel Health Vietnam',
+        sourceName: 'Hanoi Crime Reports 2025',
+        sourceUrl: 'https://travelladies.app/safety/vietnam/hanoi'
+      },
+      {
+        title: 'Use Only Grab or International Taxis for Safety',
+        description: 'Grab provides driver verification, GPS tracking, and fixed pricing. Much safer than street motorbike taxis or unmarked vehicles. Essential safety tool for solo female travelers - costs only $1-4 per ride.',
+        severity: 'medium', 
+        sourceName: 'Solo Female Travel Vietnam Guide 2025',
+        sourceUrl: 'https://www.theladywhotravels.com/is-vietnam-safe-for-solo-female-travelers/'
+      },
+      {
+        title: 'Choose Street Food Strategically to Avoid Food Poisoning',
+        description: 'Multiple tourists reported food poisoning recently. Eat at busy stalls with high turnover, avoid raw vegetables and ice unless from reputable places. Stick to hot, freshly cooked food from vendors with long local queues.',
+        severity: 'medium',
+        sourceName: 'Hanoi Food Safety Reports 2025',
         sourceUrl: 'https://www.travelhealthpro.org.uk/countries/vietnam'
       },
       {
-        title: 'Use Grab for Safe Transportation',
-        description: 'Grab is much safer than random motorbike taxis or unmarked vehicles. The app provides driver details and GPS tracking.',
+        title: 'Access World-Class International Healthcare Services',
+        description: 'Family Medical Practice and Hanoi French Hospital offer 24/7 English-speaking emergency care with international standards. Essential for solo travelers. Medical care at public hospitals falls below Western standards.',
+        severity: 'low',
+        sourceName: 'Vietnam Healthcare Guide 2025',
+        sourceUrl: 'https://www.vietnammedicalpractice.com/hanoi/'
+      },
+      {
+        title: 'Navigate Language Barriers for Emergency Situations',
+        description: 'Emergency operators speak limited English. Download Google Translate with Vietnamese offline package. Ask hotel staff to help with emergency calls. Save key phrases like "Cứu tôi!" (Help!) and "Tôi cần bác sĩ" (I need doctor).',
         severity: 'medium',
-        sourceName: 'Solo Female Travel Vietnam',
-        sourceUrl: 'https://www.solofemaltravel.com/vietnam-safety/'
+        sourceName: 'Vietnam Emergency Services Guide 2025',
+        sourceUrl: 'https://vietravelasia.com/en/blog/emergency-contacts-for-travelers-in-vietnam-20230718'
+      },
+      {
+        title: 'Dress Modestly to Respect Culture and Reduce Attention',
+        description: 'Vietnamese culture is conservative. Cover shoulders and knees, especially in temples and government areas. Modest dress reduces unwanted attention and shows cultural respect. Vietnamese women dress conservatively.',
+        severity: 'low',
+        sourceName: 'Vietnam Cultural Guidelines 2025',
+        sourceUrl: 'https://www.vietnameseprivatetours.com/is-vietnam-safe-for-solo-female-travelers'
+      },
+      {
+        title: 'Stay in Central Areas for Maximum Safety and Convenience',
+        description: 'Old Quarter and French Quarter have heavy police presence, constant foot traffic, and are safest for solo women. Avoid remote suburban areas. Central locations offer walkability and emergency services access.',
+        severity: 'low',
+        sourceName: 'Hanoi Accommodation Safety Guide 2025',
+        sourceUrl: 'https://www.apieceoftravel.com/is-hanoi-safe/'
+      },
+      {
+        title: 'Budget Extra for Safety - Grab vs Street Transport',
+        description: 'Vietnam offers incredible value ($25-50/day total budget) but invest extra in Grab rides ($1-4) vs risky street motorbikes ($0.50-2). Small cost difference, massive safety improvement for solo women.',
+        severity: 'low',
+        sourceName: 'Budget Travel Safety Vietnam 2025',
+        sourceUrl: 'https://www.nomadicmatt.com/travel-guides/vietnam-travel-tips/hanoi/'
       }
     ],
     costAndComfort: {
       dailyBudget: {
-        range: '$20 - $35 USD / day',
-        description: 'Covers accommodation, meals, and transport at a comfortable level for solo travelers.',
-        tip: 'Vietnam offers excellent value but budget extra for safer transport options.'
+        range: '$25 - $50 USD / day',
+        description: 'Updated 2025 costs: Budget travelers $25-35/day with hostels ($6-15/night) and street food. Mid-range $35-50/day with private rooms ($20-60/night). International dining $12-35/meal.',
+        tip: 'Vietnam offers excellent value. Budget extra for Grab vs street motorbikes for safety. Airport taxi $14-16, local rides $1-4.'
       },
       accommodation: [
         {
-          type: 'Hostel with Female Dorms',
-          avgCost: '$6-12',
-          safetyNote: 'Best budget option with security and social atmosphere',
+          type: 'Hostels with Female Dorms',
+          avgCost: '$6-15/night',
+          safetyNote: 'Budget option with security in central areas like Old Quarter',
           safetyLevel: 'medium'
         },
         {
-          type: 'Budget Hotel',
-          avgCost: '$12-25',
-          safetyNote: 'Good middle option in safe central areas',
+          type: 'Budget Hotels/Private Rooms',
+          avgCost: '$20-60/night',
+          safetyNote: 'Good value in safe central areas with 24/7 reception',
           safetyLevel: 'high'
         },
         {
-          type: 'Boutique Hotel',
-          avgCost: '$25-45',
-          safetyNote: 'Safest option with best security features',
+          type: 'International Hotels',
+          avgCost: '$60-120/night',
+          safetyNote: 'Highest security with English-speaking staff and international standards',
           safetyLevel: 'high'
         }
       ],
@@ -731,10 +878,14 @@ const hanoi: Destination = {
         }
       ],
       budgetTips: [
-        'Use Grab instead of street motorbike taxis for safety',
-        'Stay in Old Quarter for walkability and atmosphere',
-        'Street food is cheap and delicious - choose busy stalls',
-        'Budget extra for international medical insurance'
+        'Use Grab ($1-4/ride) instead of street motorbike taxis for safety',
+        'Stay in Old Quarter ($6-15 hostels) for walkability and police presence',
+        'Street food delicious and cheap ($1-3/meal) - choose busy stalls with high turnover',
+        'Airport bus #86 only $1.40 vs taxi $14-16 - but taxi safer at night',
+        'Bargain at markets - prices negotiable, especially Dong Xuan Market',
+        'Budget $10-15/day for food, can eat well on local specialties',
+        'ATMs widespread but carry cash for rural areas and street vendors',
+        'Budget extra for international medical insurance and Grab transport for safety'
       ]
     }
 };

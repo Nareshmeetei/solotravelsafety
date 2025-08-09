@@ -570,7 +570,7 @@ const DestinationDetail: React.FC = () => {
                                   const voices = window.speechSynthesis.getVoices();
                                   const langCode = utterance.lang.split('-')[0];
                                   
-                                  // Female voice names to look for
+                                  // Female voice names to look for (comprehensive list)
                                   const femaleNames = [
                                     'female', 'woman', 'girl', 'samantha', 'victoria', 'karen', 'zira', 'hazel',
                                     'lucia', 'mia', 'julie', 'helena', 'alice', 'claire', 'olivia', 'linda',
@@ -580,21 +580,38 @@ const DestinationDetail: React.FC = () => {
                                     'laura', 'rosa', 'ana', 'carolina', 'gabriela', 'fernanda', 'juliana',
                                     'patricia', 'monica', 'daniela', 'marcela', 'paola', 'valeria', 'veronica',
                                     'viviana', 'yolanda', 'zulema', 'paulina', 'soledad', 'carmen', 'maria',
-                                    'eva', 'anna', 'susan', 'frau', 'mujer', 'dame', 'feminine'
+                                    'eva', 'anna', 'susan', 'frau', 'mujer', 'dame', 'feminine', 'fiona',
+                                    'tessa', 'kathy', 'allison', 'ava', 'nicky', 'milena', 'ines', 'lupe',
+                                    'esperanza', 'paloma', 'rocio', 'pilar', 'carmen', 'conchita', 'inmaculada',
+                                    'alejandra', 'cristina', 'beatriz', 'raquel', 'nuria', 'amparo', 'lourdes'
                                   ];
                                   
-                                  // Try to find a female voice for the language
-                                  let femaleVoice = voices.find(v => 
-                                    v.lang.startsWith(langCode) && 
+                                  // Male voice names to avoid
+                                  const maleNames = [
+                                    'male', 'man', 'boy', 'jorge', 'carlos', 'antonio', 'francisco', 'manuel',
+                                    'jose', 'juan', 'luis', 'miguel', 'angel', 'pedro', 'rafael', 'david',
+                                    'javier', 'sergio', 'fernando', 'alejandro', 'ricardo', 'alberto', 'eduardo',
+                                    'roberto', 'mario', 'pablo', 'diego', 'alex', 'daniel', 'thomas', 'william',
+                                    'james', 'john', 'michael', 'robert', 'david', 'richard', 'joseph', 'mark',
+                                    'masculine'
+                                  ];
+                                  
+                                  // Get voices for the specific language
+                                  const languageVoices = voices.filter(v => v.lang.startsWith(langCode));
+                                  
+                                  // First priority: Find explicit female voices
+                                  let femaleVoice = languageVoices.find(v => 
                                     femaleNames.some(name => v.name.toLowerCase().includes(name))
                                   );
                                   
-                                  // If no female voice, try any voice for the language
+                                  // Second priority: Find non-male voices for the language
                                   if (!femaleVoice) {
-                                    femaleVoice = voices.find(v => v.lang.startsWith(langCode));
+                                    femaleVoice = languageVoices.find(v => 
+                                      !maleNames.some(name => v.name.toLowerCase().includes(name))
+                                    );
                                   }
                                   
-                                  // If still no voice, try English female voice
+                                  // Third priority: Try English female voice
                                   if (!femaleVoice) {
                                     femaleVoice = voices.find(v => 
                                       v.lang.startsWith('en') && 
@@ -602,7 +619,20 @@ const DestinationDetail: React.FC = () => {
                                     );
                                   }
                                   
-                                  // Final fallback: any English voice
+                                  // Fourth priority: Try English non-male voice
+                                  if (!femaleVoice) {
+                                    const englishVoices = voices.filter(v => v.lang.startsWith('en'));
+                                    femaleVoice = englishVoices.find(v => 
+                                      !maleNames.some(name => v.name.toLowerCase().includes(name))
+                                    );
+                                  }
+                                  
+                                  // Final fallback: First available voice for the language
+                                  if (!femaleVoice && languageVoices.length > 0) {
+                                    femaleVoice = languageVoices[0];
+                                  }
+                                  
+                                  // Ultimate fallback: Any English voice
                                   if (!femaleVoice) {
                                     femaleVoice = voices.find(v => v.lang.startsWith('en'));
                                   }

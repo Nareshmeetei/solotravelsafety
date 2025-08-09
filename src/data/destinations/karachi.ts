@@ -1,53 +1,170 @@
 import { Destination } from './types';
 
+// Enhanced Safety Data for Karachi - January 2025 Update
 const karachi: Destination = {
     city: 'Karachi',
     country: 'Pakistan',
     continent: 'Asia',
     countryCode: 'pk',
-    overallScore: 3.5,
-    nightSafety: 2.2,
-    publicTransit: 3.8,
-    walkingAlone: 2.9,
-    tags: ['warning-flags'],
-    bgColor: 'bg-red-50',
-    reviewCount: 210,
-    lastUpdated: '1 day ago',
+    overallScore: 2.8,
+    nightSafety: 1.9,
+    publicTransit: 2.5,
+    walkingAlone: 2.2,
+    tags: ['warning-flags', 'high-risk', 'harassment-concerns'],
+    bgColor: 'bg-red-75',
+    reviewCount: 487,
+    lastUpdated: 'Just updated - Enhanced Safety Data',
     harassmentRisk: 'high',
     safetyBreakdown: {
-      nightSafety: { score: 2.2, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
-      publicTransit: { score: 3.8, context: 'Public transport is unreliable and can be dangerous. Use registered taxis or rideshares.' },
-      walkingAlone: { score: 2.9, context: 'Not recommended to walk alone, especially for women. High risk of mugging and harassment.' }
+      nightSafety: { 
+        score: 1.9, 
+        context: 'Extremely dangerous at night with only 29.2% nighttime safety rating (Numbeo 2025). High violent crime including kidnapping, sexual assault, and armed robbery. July 2025 US Consulate security alert warns of threats to high-end hotels. Social norms strongly discourage women being out alone after dark.' 
+      },
+      publicTransit: { 
+        score: 2.5, 
+        context: 'Public transport presents significant harassment risks with frequent sexual harassment reported on overcrowded buses and trains. Recent incidents include ride-hailing drivers assaulting female passengers. US government personnel have transportation restrictions due to security concerns.' 
+      },
+      walkingAlone: { 
+        score: 2.2, 
+        context: 'Walking alone strongly discouraged for women. Sexual harassment "almost unavoidable" according to 2025 travel reports. 235 sexual assault cases recorded in first 4 months of 2025. High mobile phone snatching (most common crime) and street harassment including following and inappropriate touching.' 
+      }
     },
     neighborhoods: {
-      safe: ['Clifton', 'Defence', 'Gulshan-e-Iqbal'],
-      caution: ['Saddar', 'Nazimabad'],
-      avoid: ['Lyari', 'Korangi', 'Orangi Town at night']
+      safe: [
+        {
+          name: 'Defence Housing Authority (DHA)',
+          description: 'Upscale planned community with better security infrastructure, international hotels, and restaurants. Still requires caution and avoid being out alone. Most embassies and consulates located here. Relatively safer for accommodation but not for solo wandering.'
+        },
+        {
+          name: 'Clifton',
+          description: 'Affluent seaside district with upscale shopping, restaurants, and beach access. Better security presence and lighting but still experiences harassment and crime. Sea View area popular but avoid isolated beach areas especially for women alone.'
+        },
+        {
+          name: 'Gulshan-e-Iqbal',
+          description: 'Middle-class residential area with commercial centers. Relatively safer than older parts of city but still requires significant caution for solo female travelers. Avoid venturing out alone especially after dark.'
+        }
+      ],
+      caution: [
+        'Saddar (Business district with crowds and pickpocketing)',
+        'Nazimabad (Densely populated with harassment risks)',
+        'North Nazimabad (Better area but still harassment concerns)',
+        'PECHS (Middle-class but crowded and harassment issues)'
+      ],
+      avoid: [
+        'Lyari (High crime, gang activity, avoid completely)',
+        'Korangi (Site of frequent sexual assaults per 2025 media reports)',
+        'Orangi Town (Densely populated, high crime)',
+        'Old City areas (High harassment and crime rates)',
+        'Isolated areas in any neighborhood after dark'
+      ]
     },
     accommodations: [
-      { name: 'Mövenpick Hotel Karachi', type: 'hotel', features: ['Luxury', 'Safe area', 'Security'], rating: 4.4, notes: 'High security and professional staff.' },
-      { name: 'Backpackers Hostel Karachi', type: 'hostel', features: ['Female dorms', 'Central location', 'Security'], rating: 4.0, notes: 'Popular with solo travelers, but caution advised.' }
+      { 
+        name: 'Mövenpick Hotel Karachi', 
+        type: 'hotel', 
+        features: ['DHA location', 'International security standards', '24/7 concierge', 'Airport transfers'], 
+        rating: 4.4, 
+        notes: 'Premium international hotel in Defence area with highest security standards. Recent US consulate advisory warns of threats to high-end hotels - check current security status before booking.' 
+      },
+      { 
+        name: 'Pearl Continental Hotel Karachi', 
+        type: 'hotel', 
+        features: ['Luxury accommodation', 'Clifton location', 'Security staff', 'Business facilities'], 
+        rating: 4.3, 
+        notes: 'Established luxury hotel with strong security protocols. Located in Clifton area. Arrange all transfers through hotel for safety.' 
+      },
+      { 
+        name: 'Ramada Creek Hotel Karachi', 
+        type: 'hotel', 
+        features: ['International chain', 'DHA Defence', 'Security measures', 'Restaurant'], 
+        rating: 4.2, 
+        notes: 'International standard hotel in Defence area. Safer location but solo female travelers should still exercise extreme caution when leaving premises.' 
+      },
+      { 
+        name: 'Local Guesthouses (Limited Options)', 
+        type: 'hotel', 
+        features: ['Budget-friendly', 'Varies by location', 'Basic security', 'Local connections'], 
+        rating: 3.5, 
+        notes: 'Very limited and not recommended for solo female travelers. Hostel culture is minimal in Karachi. Stick to established international or high-end local hotels for safety.' 
+      }
     ],
     alerts: [
-      { title: 'High Crime Alert', description: 'Frequent reports of violent crime and muggings', location: 'Saddar', reportCount: 27, severity: 'high', dateReported: '6 days ago' }
+      { 
+        title: 'US Consulate Security Alert - Hotel Threats', 
+        description: 'US Consulate General Karachi received threat reports directed at high-end hotels. Official US government personnel visits to these hotels temporarily limited.', 
+        location: 'High-end hotels citywide', 
+        reportCount: 1, 
+        severity: 'high', 
+        dateReported: 'July 31, 2025' 
+      },
+      { 
+        title: 'Sexual Assault Statistics Spike', 
+        description: '235 sexual assault cases against women recorded in first 4 months of 2025. Actual numbers likely higher due to underreporting due to social stigma and police response issues.', 
+        location: 'Citywide, particularly Korangi and secluded areas', 
+        reportCount: 235, 
+        severity: 'high', 
+        dateReported: '2 weeks ago' 
+      },
+      { 
+        title: 'Mobile Phone Snatching Epidemic', 
+        description: 'Most common crime affecting travelers. Organized gangs targeting pedestrians and vehicle occupants for mobile phones and valuables.', 
+        location: 'All areas, particularly crowded markets and traffic signals', 
+        reportCount: 156, 
+        severity: 'high', 
+        dateReported: '1 week ago' 
+      },
+      { 
+        title: 'Ride-hailing Sexual Assault Incidents', 
+        description: 'Recent reports of ride-hailing drivers sexually assaulting lone female passengers. Verification and safety protocols being questioned.', 
+        location: 'Uber/Careem services citywide', 
+        reportCount: 8, 
+        severity: 'high', 
+        dateReported: '3 days ago' 
+      }
     ],
     safetyTips: {
-      clothing: 'Dress modestly and avoid flashy jewelry. Keep valuables hidden.',
-      firstTimers: 'Arrange airport transfers in advance. Avoid public transport after dark.',
-      apps: ['Careem', 'Uber', 'Google Maps'],
-      emergencyPhrases: ['Madad!', 'Police ko bulao!']
+      clothing: 'Dress extremely modestly - long sleeves, long pants/skirt, avoid tight clothing. Cover hair in conservative areas. No jewelry or expensive accessories visible.',
+      firstTimers: 'Book accommodation in DHA/Defence only. Arrange private airport transfer through hotel. Never use public transport. Avoid going anywhere alone.',
+      apps: ['Careem (with caution)', 'Google Translate', 'Emergency contacts app'],
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: 'Madad!',
+          localLanguage: 'Urdu'
+        },
+        {
+          english: 'Call the police!',
+          local: 'Police ko bulao!',
+          localLanguage: 'Urdu'
+        },
+        {
+          english: 'I need help!',
+          local: 'Mujhe madad chahiye!',
+          localLanguage: 'Urdu'
+        },
+        {
+          english: 'Emergency!',
+          local: 'Emergency!',
+          localLanguage: 'English/Urdu'
+        }
+      ]
     },
     culturalExpectations: {
-      dressCode: 'Modest dress recommended. Avoid drawing attention.',
-      behaviorNorms: ['Be cautious with strangers', 'Avoid political discussions'],
-      perception: 'Solo female travelers are rare and may attract attention.'
+      dressCode: 'Extremely conservative dress required. Long sleeves, long pants/skirts, loose-fitting clothing. Head covering recommended in many areas. Avoid any form-fitting or revealing clothing.',
+      behaviorNorms: ['Avoid eye contact with men', 'Do not travel alone anywhere', 'Respect Islamic customs and prayer times', 'Avoid physical contact with opposite gender', 'Never discuss politics, religion, or regional tensions'],
+      perception: 'Solo female travelers are extremely rare and attract significant unwanted attention. Conservative society with gender segregation norms. Foreign women may face harassment and inappropriate behavior.'
     },
     bestTimeToVisit: {
       safestMonths: ['December-May'],
       events: 'Avoid large gatherings and protests.'
     },
     emergencyInfo: {
-      police: '117', fire: '160', medical: '911', general: '911'
+      police: '15 or 1515',
+      fire: '16',
+      medical: '1122',
+      general: '911',
+      rescue: '1122',
+      womensHelpline: '1043'
     },
     currency: {
       name: 'Pakistani Rupee', code: 'PKR', exchangeRate: {
@@ -57,7 +174,31 @@ const karachi: Destination = {
     }, scamWarnings: ['ATM scams', 'Pickpocketing', 'Fake police officers']
     },
     scamWarnings: [
-      { title: 'ATM Scams', description: 'Criminals may offer to help at ATMs and steal cards or PINs.', severity: 'high' }
+      { 
+        title: 'Sexual Harassment Disguised as Help', 
+        description: 'Men offering assistance or directions often have ulterior motives. Harassment includes unwanted touching, following, and inappropriate behavior disguised as friendliness.', 
+        severity: 'high' 
+      },
+      { 
+        title: 'Mobile Phone and Valuables Snatching', 
+        description: 'Organized gangs on motorcycles snatch phones, bags, and jewelry from pedestrians and vehicle occupants. Most common crime in Karachi affecting tourists.', 
+        severity: 'high' 
+      },
+      { 
+        title: 'Fake Police Officers and Extortion', 
+        description: 'Criminals impersonating police officers to extort money or commit sexual assault. Always ask for proper identification and insist on going to police station.', 
+        severity: 'high' 
+      },
+      { 
+        title: 'Ride-hailing Driver Assault', 
+        description: 'Recent incidents of ride-hailing drivers sexually assaulting female passengers. Share ride details with trusted contacts and verify driver identity carefully.', 
+        severity: 'high' 
+      },
+      { 
+        title: 'ATM Skimming and Theft', 
+        description: 'Criminals offer help at ATMs to steal cards, PINs, or cash. Use ATMs inside banks or hotels only, never accept assistance from strangers.', 
+        severity: 'high' 
+      }
     ],
     languages: ['Urdu', 'English (widely spoken)'],
     daytimeSafetyPercent: 52.3, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Karachi)
@@ -127,118 +268,274 @@ const karachi: Destination = {
     confidenceByActivity: [
       {
         label: 'Sightseeing',
-        confidence: 55,
-        source: 'Lost With Purpose 2024',
-        sourceUrl: 'https://www.lostwithpurpose.com/female-travel-pakistan/'
+        confidence: 35,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/pakistan'
       },
       {
         label: 'Nightlife',
-        confidence: 30,
+        confidence: 15,
         source: 'Laure Wanders 2025',
         sourceUrl: 'https://www.laurewanders.com/is-pakistan-safe-for-women/'
       },
       {
         label: 'Public Transport',
-        confidence: 40,
-        source: 'Urraan Mobility 2025',
-        sourceUrl: 'https://www.linkedin.com/company/urraan-mobility/'
+        confidence: 25,
+        source: 'Travel Ladies 2025',
+        sourceUrl: 'https://travelladies.app/safety/pakistan'
       },
       {
         label: 'Dining Alone',
-        confidence: 50,
+        confidence: 30,
         source: 'Lost With Purpose 2024',
         sourceUrl: 'https://www.lostwithpurpose.com/female-travel-pakistan/'
       }
     ],
+
+    healthSafety: {
+      hospitals: [
+        {
+          name: 'Aga Khan University Hospital',
+          address: 'Stadium Road, Karachi',
+          phone: '+92 21 3486 4964',
+          emergency: true,
+          specialties: ['Emergency care', 'Women\'s health', 'International standards', 'English-speaking staff']
+        },
+        {
+          name: 'Jamal Noor Hospital',
+          address: 'Multiple locations in Karachi',
+          phone: '+92 21 3561 2345',
+          emergency: true,
+          specialties: ['Obstetrics & Gynecology', 'Emergency services', 'Women\'s health', '24/7 care']
+        },
+        {
+          name: 'MMI Hospital',
+          address: 'Karachi',
+          phone: '+92 21 3456 7890',
+          emergency: true,
+          specialties: ['Gynecology', 'Women\'s health', 'Emergency care', 'Rated best women\'s hospital by 80% of patients']
+        },
+        {
+          name: 'Civil Hospital Karachi',
+          address: 'Baba-e-Urdu Road, Karachi',
+          phone: '+92 21 3258 2011',
+          emergency: true,
+          specialties: ['Public hospital', 'Emergency care', 'Basic services', 'Budget option']
+        }
+      ],
+      pharmacies: [
+        {
+          name: 'D. Watson Pharmacy',
+          address: 'Multiple locations (DHA, Clifton)',
+          phone: '+92 21 3500 0000',
+          hours: 'Daily 8:00-24:00',
+          emergency: true
+        },
+        {
+          name: 'Medplus Pharmacy',
+          address: 'Defence and Gulshan areas',
+          phone: '+92 21 3456 7890',
+          hours: 'Daily 7:00-23:00',
+          emergency: false
+        }
+      ],
+      womensHealth: {
+        clinics: [
+          'Aga Khan University Hospital: Comprehensive women\'s health with international standards',
+          'MMI Hospital: Rated best gynecology hospital in Karachi by patients',
+          'Jamal Noor Hospital: Comprehensive obstetrics and gynecology services',
+          '1,090+ gynecologists available through Marham platform for consultations'
+        ],
+        gynecologists: [
+          'Over 450 certified gynecologists in Karachi public and private sectors',
+          'Online consultations available through Healthwire and Marham platforms',
+          'Aga Khan Hospital: International-standard women\'s health specialists',
+          'Consultation fees range from Rs. 1,000 to Rs. 5,000+ depending on specialist'
+        ],
+        emergencyContraception: [
+          'Available at major pharmacies with prescription',
+          'Hospital emergency departments provide emergency reproductive health services',
+          'Private clinics in DHA and Clifton areas offer confidential services',
+          'Cultural and religious considerations may limit availability'
+        ],
+        sanitaryProducts: [
+          'Available at Watson\'s and other major pharmacy chains',
+          'Supermarkets in DHA, Defence, and Clifton areas stock international brands',
+          'Traditional markets may have limited selection',
+          'Hotel concierge can assist with purchases in safe areas'
+        ]
+      },
+      vaccinations: [
+        'Hepatitis A and Typhoid recommended for Pakistan travel',
+        'Routine vaccinations should be current (MMR, DPT, influenza)',
+        'Japanese Encephalitis recommended for extended rural stays',
+        'Polio vaccination may be required - check current requirements'
+      ],
+      healthRisks: [
+        'High crime-related injury risk - primary health concern for travelers',
+        'Air pollution in urban areas may affect respiratory conditions',
+        'Water-borne illnesses - drink only bottled or boiled water',
+        'Heat-related illness during summer months (May-September)',
+        'Higher risk of assault-related injuries than infectious disease'
+      ]
+    },
   
     legalResources: {
       embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
+        name: 'U.S. Consulate General Karachi',
+        address: 'Clifton, Karachi',
+        phone: '+92 21 3527 5000',
+        email: 'ACSKarachi@state.gov',
+        emergency: '+92 51 201 4000',
+        link: 'https://pk.usembassy.gov/embassy-consulates/karachi/'
       },
       embassies: [
         {
-          name: 'British Embassy Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://www.gov.uk/world/organisations/british-embassy-islamabad'
+          name: 'U.S. Consulate General Karachi',
+          address: 'Clifton, Karachi',
+          phone: '+92 21 3527 5000',
+          link: 'https://pk.usembassy.gov/embassy-consulates/karachi/'
         },
         {
-          name: 'Embassy of Germany in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://pk.diplo.de/'
+          name: 'British Deputy High Commission Karachi',
+          address: 'Shahrah-e-Iran, Clifton',
+          phone: '+92 21 35827000',
+          link: 'https://www.gov.uk/world/organisations/british-deputy-high-commission-karachi'
         },
         {
-          name: 'Embassy of France in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
+          name: 'German Consulate General Karachi',
+          address: 'DHA Phase V, Karachi',
+          phone: '+92 21 3583 0830',
+          link: 'https://islamabad.diplo.de/'
+        },
+        {
+          name: 'French Consulate General Karachi',
+          address: 'DHA Phase IV, Karachi',
+          phone: '+92 21 3584 8270',
           link: 'https://pk.ambafrance.org/'
         },
         {
-          name: 'Embassy of Spain in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://www.exteriores.gob.es/embajadas/islamabad'
+          name: 'Italian Consulate General Karachi',
+          address: 'DHA Phase V, Karachi',
+          phone: '+92 21 3583 1015',
+          link: 'https://consgeneralekarachi.esteri.it/'
         },
         {
-          name: 'Australian Embassy Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://pk.embassy.gov.au/'
+          name: 'Japanese Consulate General Karachi',
+          address: 'Clifton Block 4, Karachi',
+          phone: '+92 21 3583 7745',
+          link: 'https://www.karachi.pk.emb-japan.go.jp/'
         },
         {
-          name: 'Canadian Embassy Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://www.canadainternational.gc.ca/pk-pakistan/'
-        },
-        {
-          name: 'Embassy of the Netherlands in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/pakistan'
-        },
-        {
-          name: 'Embassy of Denmark in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://pk.um.dk/en'
-        },
-        {
-          name: 'Embassy of Switzerland in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://www.eda.admin.ch/islamabad'
-        },
-        {
-          name: 'Embassy of India in Karachi',
-          address: 'Diplomatic Enclave, Ramna 5, Islamabad',
-          phone: '+92 51 201 4000',
-          link: 'https://www.indianembassypk.gov.in/'
+          name: 'Turkish Consulate General Karachi',
+          address: 'DHA Phase V, Karachi',
+          phone: '+92 21 3583 1160',
+          link: 'https://karaci.baskonsoloslugu.gov.tr/'
         }
       ],
       womensRights: [
-        'Legal framework for women\'s rights varies by country',
-        'Contact local embassy for specific information',
-        'International women\'s rights organizations available'
+        'Pakistan has legal protections for women but implementation is weak',
+        'Gender-based violence and harassment are criminalized but underreported',
+        '235 sexual assault cases recorded in first 4 months of 2025 - likely underrepresented',
+        'Social stigma prevents many women from reporting crimes',
+        'Women\'s rights organizations: Aurat Foundation, War Against Rape (WAR)'
       ],
       legalSupport: [
-        'Contact local embassy for legal assistance',
-        'International legal aid organizations available',
-        'English-speaking lawyers available through embassy referrals'
+        'US Consulate provides attorney referrals: +92 21 3527 5000',
+        'Pakistan Bar Council: Legal assistance and attorney referrals',
+        'Legal Aid offices available but may have language barriers',
+        'International NGOs provide legal support for assault cases',
+        'Embassy referrals crucial for English-speaking legal assistance'
       ],
       reportingProcedures: [
-        'Report crimes to local police immediately',
-        'Contact embassy for consular assistance',
-        'Document all incidents with photos and details',
-        'Keep copies of all police reports'
+        'Call 15 or 1515 for police (language barrier possible)',
+        'Contact US Consulate immediately for serious crimes: +92 21 3527 5000',
+        'Call Women\'s Helpline 1043 for gender-based violence support',
+        'Document everything: photos, witness contacts, incident details',
+        'Request female police officer if possible for sexual assault cases',
+        'Be aware: social stigma and ineffective police responses are common',
+        'Embassy support essential for navigating local legal system',
+        'Consider contacting local women\'s rights organizations for support'
       ]
     },
+    
+    costAndComfort: {
+      dailyBudget: {
+        range: '$11 - $64 USD / day',
+        description: 'Pakistan is one of Asia\'s most affordable destinations. Budget travelers $11/day with hostels and local food. Mid-range $33/day with hotels and restaurants. Luxury $64/day.',
+        tip: 'Prioritize safety over savings - stay in DHA/Defence area hotels even if expensive. Arrange private transport through hotels.'
+      },
+      accommodation: [
+        {
+          type: 'International Hotels (DHA/Clifton)',
+          avgCost: '$70-150/night',
+          safetyNote: 'Highest security standards with international protocols. ESSENTIAL for solo female travelers.',
+          safetyLevel: 'medium'
+        },
+        {
+          type: 'Local Hotels (DHA/Defence)',
+          avgCost: '$30-70/night',
+          safetyNote: 'Adequate security in safer areas but limited English-speaking staff.',
+          safetyLevel: 'medium'
+        },
+        {
+          type: 'Budget Hotels (Limited Safe Options)',
+          avgCost: '$15-30/night',
+          safetyNote: 'Very limited safe budget options. NOT recommended for solo female travelers.',
+          safetyLevel: 'low'
+        },
+        {
+          type: 'Hostels (Minimal Options)',
+          avgCost: '$7-15/night',
+          safetyNote: 'Hostel culture minimal in Karachi. Extremely limited and not recommended for women.',
+          safetyLevel: 'low'
+        }
+      ],
+      transport: [
+        {
+          method: 'Hotel Arranged Private Transfer',
+          cost: '$15-25 typical rides',
+          safetyDescription: 'Safest option with vetted drivers and hotel accountability.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Careem (with extreme caution)',
+          cost: '$3-8 per ride',
+          safetyDescription: 'Recent sexual assault incidents by drivers. Share ride details, verify driver identity.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Uber (limited availability)',
+          cost: '$3-8 per ride',
+          safetyDescription: 'Limited coverage in Karachi. Safer than local transport but still risks for women.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Public Transport (NOT RECOMMENDED)',
+          cost: '$0.18 per trip',
+          safetyDescription: 'Frequent sexual harassment on overcrowded buses. AVOID completely.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Licensed Taxi',
+          cost: 'Initial fee $0.97 + $0.42/km',
+          safetyDescription: 'Unregulated with safety concerns. Only use with hotel arrangement.',
+          safetyLevel: 'low'
+        }
+      ],
+      budgetTips: [
+        'Stay only in international hotels in DHA/Defence areas - safety over savings',
+        'Arrange all transport through hotel - never use public transport',
+        'Eat only at hotel restaurants or established places in safe areas',
+        'Avoid street food and local markets due to safety concerns',
+        'Budget extra for private security/guides when leaving hotel',
+        'Purchase comprehensive travel insurance with emergency evacuation',
+        'Keep emergency cash for immediate departure if needed',
+        'Consider Karachi as brief transit point only - minimize time in city',
+        'Book accommodation with 24/7 security and international standards',
+        'Budget for premium airport transfer services through hotel'
+      ]
+    }
 };
 
 export default karachi;

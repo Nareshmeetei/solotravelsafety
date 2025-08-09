@@ -173,73 +173,85 @@ const stockholm: Destination = {
     ],
   legalResources: {
       embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
+        name: 'U.S. Embassy Stockholm',
+        address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
+        phone: '+46 8 783 5300',
+        email: 'stockholmacs@state.gov',
+        emergency: '+46 8 783 5300',
+        link: 'https://se.usembassy.gov/'
       },
       embassies: [
         {
-          name: 'British Embassy Stockholm',
+          name: 'U.S. Embassy Stockholm',
           address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
           phone: '+46 8 783 5300',
+          link: 'https://se.usembassy.gov/'
+        },
+        {
+          name: 'British Embassy Stockholm',
+          address: 'Skarpögatan 6-8, 115 27 Stockholm',
+          phone: '+46 8 671 3000',
           link: 'https://www.gov.uk/world/organisations/british-embassy-stockholm'
         },
         {
-          name: 'Embassy of Germany in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
-          link: 'https://se.diplo.de/'
+          name: 'German Embassy Stockholm',
+          address: 'Skarpögatan 9, 115 27 Stockholm',
+          phone: '+46 8 670 1500',
+          link: 'https://stockholm.diplo.de/'
         },
         {
-          name: 'Embassy of France in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
+          name: 'French Embassy Stockholm',
+          address: 'Kommendörsgatan 13, 114 58 Stockholm',
+          phone: '+46 8 459 5300',
           link: 'https://se.ambafrance.org/'
         },
         {
-          name: 'Embassy of Spain in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
-          link: 'https://www.exteriores.gob.es/embajadas/stockholm'
+          name: 'Spanish Embassy Stockholm',
+          address: 'Djurgårdsbrunnsvägen 24, 115 27 Stockholm',
+          phone: '+46 8 670 1815',
+          link: 'https://www.exteriores.gob.es/embajadas/estocolmo'
         },
         {
           name: 'Australian Embassy Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
-          link: 'https://se.embassy.gov.au/'
+          address: 'Klarabergsviadukten 63, 111 64 Stockholm',
+          phone: '+46 8 613 2900',
+          link: 'https://sweden.embassy.gov.au/'
         },
         {
           name: 'Canadian Embassy Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
-          link: 'https://www.canadainternational.gc.ca/se-sweden/'
+          address: 'Klarabergsgatan 23, 111 64 Stockholm',
+          phone: '+46 8 453 3000',
+          link: 'https://www.canadainternational.gc.ca/sweden-suede/'
         },
         {
-          name: 'Embassy of the Netherlands in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
+          name: 'Netherlands Embassy Stockholm',
+          address: 'Götgatan 16A, 116 46 Stockholm',
+          phone: '+46 8 556 108 00',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/sweden'
         },
         {
-          name: 'Embassy of Denmark in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
-          link: 'https://se.um.dk/en'
+          name: 'Danish Embassy Stockholm',
+          address: 'Jakobs Torg 1, 111 52 Stockholm',
+          phone: '+46 8 406 7500',
+          link: 'https://sverige.um.dk/en'
         },
         {
-          name: 'Embassy of Switzerland in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
+          name: 'Swedish Government Services',
+          address: 'Multiple locations throughout Stockholm',
+          phone: '+46 771 117 117',
+          link: 'https://www.government.se/'
+        },
+        {
+          name: 'Swiss Embassy Stockholm',
+          address: 'Kommendörsgatan 35, 114 58 Stockholm',
+          phone: '+46 8 676 7900',
           link: 'https://www.eda.admin.ch/stockholm'
         },
         {
-          name: 'Embassy of India in Stockholm',
-          address: 'Dag Hammarskjölds väg 31, 115 89 Stockholm',
-          phone: '+46 8 783 5300',
-          link: 'https://www.indianembassyse.gov.in/'
+          name: 'Indian Embassy Stockholm',
+          address: 'Adolf Fredriks Kyrkogata 12, 111 37 Stockholm',
+          phone: '+46 8 107 008',
+          link: 'https://www.indianembassysweden.gov.in/'
         }
       ],
       womensRights: [

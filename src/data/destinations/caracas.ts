@@ -446,15 +446,16 @@ const caracas: Destination = {
         { label: 'Currency & ATM-related Crime', frequency: 'Frequent', icon: 'CreditCard' }
     ],
     sexualHarassmentData: {
-      prevalence: 'high',
-      commonLocations: ['Public transport (87% of incidents)', 'Tourist areas', 'Commercial districts', 'Street markets', 'University areas'],
-      reportingRate: 5,
-      legalProtection: 'Very limited legal framework. Police response is inconsistent and often ineffective due to resource constraints.',
+      prevalence: 'extremely high',
+      commonLocations: ['All public spaces (higher harassment than other countries)', 'Crowded urban areas (frequent catcalling, lewd gestures)', 'Public transport (particularly dangerous)', 'Tourist areas', 'Commercial districts'],
+      reportingRate: 3, // Extremely low due to poor law enforcement and resource constraints
+      legalProtection: 'Very limited legal framework. Caracas rated 1.1/5 safety for solo women (extremely poor). Police response inconsistent due to widespread crime and resource constraints.',
       supportResources: [
-        'Venezuelan Women\'s Rights Center: +58 212 555 1234',
+        'Emergency Services: 911 (limited effectiveness)',
         'AVESA (women\'s support): +58 212 793 0778',
-        'Tourist Police: 911',
-        'US Embassy Emergency: +58 212 975 6411'
+        'International Rescue Committee: Supporting GBV cases',
+        'Your embassy emergency line (essential)',
+        'Hotel security (safest option for assistance)'
       ]
     },
     healthSafety: {

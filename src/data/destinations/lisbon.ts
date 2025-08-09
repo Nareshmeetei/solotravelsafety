@@ -316,10 +316,70 @@ const lisbon: Destination = {
       },
       embassies: [
         {
+          name: 'U.S. Embassy Lisbon',
+          address: 'Avenida das Forças Armadas, 1600-081 Lisboa',
+          phone: '+351 21 727 3300',
+          link: 'https://pt.usembassy.gov/'
+        },
+        {
           name: 'British Embassy Lisbon',
           address: 'Rua de São Bernardo 33, 1249-082 Lisboa',
           phone: '+351 21 392 4000',
           link: 'https://www.gov.uk/world/organisations/british-embassy-lisbon'
+        },
+        {
+          name: 'German Embassy Lisbon',
+          address: 'Campo dos Mártires da Pátria 38, 1169-043 Lisboa',
+          phone: '+351 21 881 0210',
+          link: 'https://lissabon.diplo.de/'
+        },
+        {
+          name: 'French Embassy Lisbon',
+          address: 'Rua Santos-o-Velho 5, 1249-079 Lisboa',
+          phone: '+351 21 393 9100',
+          link: 'https://pt.ambafrance.org/'
+        },
+        {
+          name: 'Spanish Embassy Lisbon',
+          address: 'Rua do Salitre 1, 1269-052 Lisboa',
+          phone: '+351 21 347 2381',
+          link: 'https://www.exteriores.gob.es/embajadas/lisboa'
+        },
+        {
+          name: 'Australian Embassy Lisbon',
+          address: 'Avenida da Liberdade 200, 1250-147 Lisboa',
+          phone: '+351 21 310 1500',
+          link: 'https://portugal.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Lisbon',
+          address: 'Avenida da Liberdade 198-200, 1250-147 Lisboa',
+          phone: '+351 21 316 4600',
+          link: 'https://www.canadainternational.gc.ca/portugal/'
+        },
+        {
+          name: 'Netherlands Embassy Lisbon',
+          address: 'Rua do Sacramento à Lapa 16, 1200-394 Lisboa',
+          phone: '+351 21 714 0900',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/portugal'
+        },
+        {
+          name: 'Danish Embassy Lisbon',
+          address: 'Rua Castilho 16-4°, 1250-070 Lisboa',
+          phone: '+351 21 381 2000',
+          link: 'https://portugal.um.dk/'
+        },
+        {
+          name: 'Swiss Embassy Lisbon',
+          address: 'Travessa do Patrocínio 1, 1350-229 Lisboa',
+          phone: '+351 21 394 0040',
+          link: 'https://www.eda.admin.ch/lisboa'
+        },
+        {
+          name: 'Indian Embassy Lisbon',
+          address: 'Rua Pero da Covilhã 16, 1400-297 Lisboa',
+          phone: '+351 21 301 0210',
+          link: 'https://www.eoilisbon.gov.in/'
         }
       ],
       consulate: {

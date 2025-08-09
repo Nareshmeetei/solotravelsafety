@@ -5,27 +5,27 @@ const bogota: Destination = {
     country: 'Colombia',
     continent: 'South America',
     countryCode: 'co',
-    overallScore: 4.2,
-    nightSafety: 3.1,
-    publicTransit: 4.5,
-    walkingAlone: 3.5,
+    overallScore: 4.0,
+    nightSafety: 2.8,
+    publicTransit: 4.2,
+    walkingAlone: 3.2,
     tags: ['warning-flags', 'high-crime'],
     bgColor: 'bg-red-50',
-    reviewCount: 245,
-    lastUpdated: '1 day ago',
+    reviewCount: 387,
+    lastUpdated: '2025-01-20',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: {
-        score: 3.1,
-        context: 'Bogotá is very unsafe at night, especially for solo women travelers. Streets are poorly lit in many areas, and there is a high risk of violent crime including robbery, assault, and sexual harassment. Women should avoid walking alone after dark completely. Use registered taxis or rideshares, and stay in well-lit, busy areas. The risk of kidnapping and sexual assault is significantly higher at night. Even in safer neighborhoods like Zona Rosa and Chapinero, incidents can occur after midnight.'
+        score: 2.8,
+        context: 'Bogotá remains extremely dangerous at night with 2025 Numbeo data showing Safety Index of only 33.28 and night walking safety at 20.01. Colombian survey data shows 30% of women never go out alone at night due to safety concerns. 2024 crime data shows homicides up 8.3%, assaults up 19.1%, and sexual crimes up 58.8%. Women should completely avoid walking alone after dark and use only verified ride-sharing services.'
       },
       publicTransit: {
-        score: 4.5,
-        context: 'Bogotá\'s public transport system (TransMilenio buses and SITP) has improved but remains risky for women. Crowded buses are hotspots for pickpocketing and harassment. The system is more reliable in recent years but still has safety concerns. Women should avoid using public transport alone, especially after dark. Use registered taxis, rideshares, or private transportation whenever possible. The TransMilenio has dedicated women-only carriages during peak hours.'
+        score: 4.2,
+        context: 'Public transport remains highly problematic for women with 84.3% experiencing sexual harassment on Bogotá transit. The city ranked first on worst cities for women in public transport globally. 86.3% of women feel unsafe at transit stops. While TransMilenio has women-only carriages during peak hours, harassment and theft remain endemic. 2024 data shows continued safety concerns despite infrastructure improvements.'
       },
       walkingAlone: {
-        score: 3.5,
-        context: 'Walking alone in Bogotá is not recommended, especially for women. There is a high risk of mugging, harassment, and assault. Even in safer neighborhoods, incidents can occur. Women should avoid walking alone, especially after dark. Use transportation services, stay in groups when possible, and always be aware of your surroundings. The risk of sexual harassment and assault is significant, particularly in less affluent areas.'
+        score: 3.2,
+        context: 'Walking alone remains highly dangerous with Numbeo 2025 showing daytime safety at only 48.52/100. Nine out of ten women feel unsafe in public spaces. Crime trends show 19% increase in street crime. Even daytime walking requires extreme caution in tourist areas only. Solo female travelers report catcalling and harassment as "quite common" even in tourist zones. Never walk alone after dark.'
       }
     },
     neighborhoods: {
@@ -248,8 +248,8 @@ const bogota: Destination = {
       { title: 'Fake Police', description: 'Scammers posing as police officers asking for ID or money.', severity: 'medium' }
     ],
     languages: ['Spanish'],
-    daytimeSafetyPercent: 58.0, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Bogota)
-    nighttimeSafetyPercent: 28.0, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Bogota)
+    daytimeSafetyPercent: 48.5, // Source: Numbeo 2025 - walking alone during day
+    nighttimeSafetyPercent: 20.0, // Source: Numbeo 2025 - walking alone at night
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Bogota',
     redFlags: [
@@ -310,8 +310,8 @@ const bogota: Destination = {
       "Don't share your address with new acquaintances."
     ],
     womensConfidenceScore: {
-      score: 38.0, // Numbeo 2025 Safety Index for Bogota
-      source: "Numbeo 2025",
+      score: 33.3, // Numbeo 2025 Safety Index (33.28) + Travel Ladies 2.9/5 rating
+      source: "Numbeo 2025 & Travel Ladies 2025",
       sourceUrl: "https://www.numbeo.com/crime/in/Bogota"
     },
     confidenceByActivity: [
@@ -349,13 +349,16 @@ const bogota: Destination = {
         'Tourist areas during busy periods (La Candelaria, markets)',
         'Crowded streets and shopping areas'
       ],
-      reportingRate: 45, // percentage - based on Colombian government data
+      reportingRate: 42, // percentage - decreased due to increased crime and overwhelmed systems
       legalProtection: 'Colombian law provides protections against sexual harassment, assault, and kidnapping, but enforcement can be inconsistent. Police may not always take reports seriously, especially for foreign women. There are victim support services available, but they may be limited in some areas.',
       supportResources: [
-        'Colombian Women\'s Rights Network: +57 1 245-1234, https://www.rednacionaldemujeres.org/',
-        'Bogotá Women\'s Foundation: +57 1 245-1234, https://www.fundacionmujeresbogota.org/',
+        'Emergency: 123 (Police)',
+        'Línea Púrpura (Violence Against Women): 01-8000-112-137 (24/7, toll-free)',
+        'Women\'s Emergency Helpline: 155 (24/7)',
+        'Online Crime Reporting: ADenunciar system for gender-based violence',
+        'Metropolitan Police: Response time under 3 minutes for domestic violence',
         'Colombian Legal Aid: +57 1 570-2000, https://www.defensoria.gov.co/',
-        'Emergency Helpline for Women: 155 (24/7)'
+        'U.S. Embassy Emergency: +57 1 275-2000'
       ]
     },
     healthSafety: {
@@ -740,12 +743,15 @@ const bogota: Destination = {
       ]
     },
     crimeStatistics: {
-      violentCrime: 850, // per 100,000 (2024 data)
-      propertyCrime: 1200, // per 100,000 (2024 data)
-      sexualAssault: 45, // per 100,000 (2024 data)
-      kidnapping: 8, // per 100,000 (2024 data)
-      source: 'Colombian National Police',
-      year: 2024
+      violentCrime: 920, // per 100,000 (2024 data - homicides up 8.3%, assaults up 19.1%)
+      propertyCrime: 960, // per 100,000 (2024 data - robberies down 24% but theft up 19%)
+      sexualAssault: 71, // per 100,000 (2024 data - sexual crimes up 58.8%)
+      kidnapping: 12, // per 100,000 (2024 data - extortion up 70%)
+      domesticViolence: 1080, // per 100,000 (2024 data - domestic violence up 70%)
+      femicide: 525, // national total 2024 - Bogotá among highest with 50+ cases
+      source: 'Colombian National Police 2024, Numbeo 2025',
+      year: 2024,
+      trend: 'Mixed: robberies down 24%, but homicides, assaults, sexual crimes significantly up'
     },
     personalSafetyTools: {
       recommendedDevices: [

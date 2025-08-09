@@ -201,73 +201,79 @@ const seoul: Destination = {
   },
   legalResources: {
       embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
+        name: 'U.S. Embassy Seoul',
+        address: '188 Sejong-daero, Jongno-gu, Seoul 03141',
+        phone: '+82 2 397 4114',
+        email: 'SeoulACS@state.gov',
+        emergency: '+82 2 397 4114',
+        link: 'https://kr.usembassy.gov/'
       },
       embassies: [
         {
-          name: 'British Embassy Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
+          name: 'U.S. Embassy Seoul',
+          address: '188 Sejong-daero, Jongno-gu, Seoul 03141',
           phone: '+82 2 397 4114',
+          link: 'https://kr.usembassy.gov/'
+        },
+        {
+          name: 'British Embassy Seoul',
+          address: '24 Sejong-daero 19-gil, Jung-gu, Seoul 04519',
+          phone: '+82 2 3210 5500',
           link: 'https://www.gov.uk/world/organisations/british-embassy-seoul'
         },
         {
-          name: 'Embassy of Germany in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
-          link: 'https://kr.diplo.de/'
+          name: 'German Embassy Seoul',
+          address: '308-5 Dongbinggo-dong, Yongsan-gu, Seoul 04385',
+          phone: '+82 2 748 4114',
+          link: 'https://korea.diplo.de/'
         },
         {
-          name: 'Embassy of France in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
+          name: 'French Embassy Seoul',
+          address: '43-12 Seosomun-ro 11-gil, Jung-gu, Seoul 04513',
+          phone: '+82 2 3149 4300',
           link: 'https://kr.ambafrance.org/'
         },
         {
-          name: 'Embassy of Spain in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
-          link: 'https://www.exteriores.gob.es/embajadas/seoul'
+          name: 'Spanish Embassy Seoul',
+          address: '726 Hannam-daero, Yongsan-gu, Seoul 04418',
+          phone: '+82 2 794 3581',
+          link: 'https://www.exteriores.gob.es/embajadas/seul'
         },
         {
           name: 'Australian Embassy Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
-          link: 'https://kr.embassy.gov.au/'
+          address: '19th Floor, Kyobo Building, 1 Jongro, Jongro-gu, Seoul 03154',
+          phone: '+82 2 2003 0100',
+          link: 'https://southkorea.embassy.gov.au/'
         },
         {
           name: 'Canadian Embassy Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
-          link: 'https://www.canadainternational.gc.ca/kr-south-korea/'
+          address: '21 Jeongdong-gil, Jung-gu, Seoul 04518',
+          phone: '+82 2 3783 6000',
+          link: 'https://www.canadainternational.gc.ca/korea-coree/'
         },
         {
-          name: 'Embassy of the Netherlands in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
+          name: 'Netherlands Embassy Seoul',
+          address: '10th Floor, Kyobo Building, 1 Jongro, Jongro-gu, Seoul 03154',
+          phone: '+82 2 737 9514',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/south-korea'
         },
         {
-          name: 'Embassy of Denmark in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
-          link: 'https://kr.um.dk/en'
+          name: 'Danish Embassy Seoul',
+          address: '5th Floor, Namsong Building, 260 Itaewon-ro, Yongsan-gu, Seoul 04417',
+          phone: '+82 2 795 4187',
+          link: 'https://sydkorea.um.dk/'
         },
         {
-          name: 'Embassy of Switzerland in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
+          name: 'Swiss Embassy Seoul',
+          address: '32nd-35th Floor, Jongno Tower, 51 Jongno, Jongno-gu, Seoul 03161',
+          phone: '+82 2 739 9511',
           link: 'https://www.eda.admin.ch/seoul'
         },
         {
-          name: 'Embassy of India in Seoul',
-          address: '188 Eulji-ro, Jung-gu, Seoul',
-          phone: '+82 2 397 4114',
-          link: 'https://www.indianembassykr.gov.in/'
+          name: 'Indian Embassy Seoul',
+          address: '37-3 Hannam-dong, Yongsan-gu, Seoul 04419',
+          phone: '+82 2 798 4257',
+          link: 'https://www.eoiseoul.gov.in/'
         }
       ],
       womensRights: [

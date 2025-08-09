@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Shield, EyeOff, PocketKnife, Hand, Bike, Syringe, Users, Car, Megaphone, Briefcase, Beer, CreditCard, Smartphone, CameraOff, Waves } from 'lucide-react';
+import { AlertTriangle, Shield, EyeOff, PocketKnife, Hand, Bike, Syringe, Users, Car, Megaphone, Briefcase, Beer, CreditCard, Smartphone, CameraOff, Waves, Cloud, MapPin, Globe, Clock, Zap, Home, TrendingUp, Heart, Umbrella, ShoppingBag, UserX, DollarSign, Utensils, Mountain } from 'lucide-react';
 
 const iconMap: Record<string, JSX.Element> = {
   AlertTriangle: <AlertTriangle className="h-5 w-5 text-red-500 mr-2" />,
@@ -18,6 +18,20 @@ const iconMap: Record<string, JSX.Element> = {
   Smartphone: <Smartphone className="h-5 w-5 text-red-500 mr-2" />,
   CameraOff: <CameraOff className="h-5 w-5 text-red-500 mr-2" />,
   Waves: <Waves className="h-5 w-5 text-red-500 mr-2" />,
+  Cloud: <Cloud className="h-5 w-5 text-red-500 mr-2" />,
+  MapPin: <MapPin className="h-5 w-5 text-red-500 mr-2" />,
+  Globe: <Globe className="h-5 w-5 text-red-500 mr-2" />,
+  Clock: <Clock className="h-5 w-5 text-red-500 mr-2" />,
+  Zap: <Zap className="h-5 w-5 text-red-500 mr-2" />,
+  Home: <Home className="h-5 w-5 text-red-500 mr-2" />,
+  TrendingUp: <TrendingUp className="h-5 w-5 text-red-500 mr-2" />,
+  Heart: <Heart className="h-5 w-5 text-red-500 mr-2" />,
+  Umbrella: <Umbrella className="h-5 w-5 text-red-500 mr-2" />,
+  ShoppingBag: <ShoppingBag className="h-5 w-5 text-red-500 mr-2" />,
+  UserX: <UserX className="h-5 w-5 text-red-500 mr-2" />,
+  DollarSign: <DollarSign className="h-5 w-5 text-red-500 mr-2" />,
+  Utensils: <Utensils className="h-5 w-5 text-red-500 mr-2" />,
+  Mountain: <Mountain className="h-5 w-5 text-red-500 mr-2" />,
 };
 
 interface RedFlag {

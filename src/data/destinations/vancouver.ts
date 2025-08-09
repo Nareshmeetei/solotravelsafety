@@ -173,73 +173,79 @@ const vancouver: Destination = {
   scamWarnings: [],
   legalResources: {
       embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
+        name: 'U.S. Consulate Vancouver',
+        address: '1095 West Pender Street, Vancouver, BC V6E 2M6',
+        phone: '+1 604 685 4311',
+        email: 'ConsulateVancouver@state.gov',
+        emergency: '+1 604 685 4311',
+        link: 'https://ca.usembassy.gov/embassy-consulates/vancouver/'
       },
       embassies: [
         {
-          name: 'British Embassy Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://www.gov.uk/world/organisations/british-embassy-ottawa'
+          name: 'U.S. Consulate Vancouver',
+          address: '1095 West Pender Street, Vancouver, BC V6E 2M6',
+          phone: '+1 604 685 4311',
+          link: 'https://ca.usembassy.gov/embassy-consulates/vancouver/'
         },
         {
-          name: 'Embassy of Germany in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://ca.diplo.de/'
+          name: 'British Consulate General Vancouver',
+          address: '1111 Melville Street, Suite 800, Vancouver, BC V6E 3V6',
+          phone: '+1 604 683 4421',
+          link: 'https://www.gov.uk/world/organisations/british-consulate-general-vancouver'
         },
         {
-          name: 'Embassy of France in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://ca.ambafrance.org/'
+          name: 'German Consulate General Vancouver',
+          address: '704-999 Canada Place, Vancouver, BC V6C 3E1',
+          phone: '+1 604 684 8377',
+          link: 'https://vancouver.diplo.de/'
         },
         {
-          name: 'Embassy of Spain in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://www.exteriores.gob.es/embajadas/ottawa'
+          name: 'French Consulate General Vancouver',
+          address: '1130 West Pender Street, Suite 1100, Vancouver, BC V6E 4A4',
+          phone: '+1 604 637 5300',
+          link: 'https://vancouver.consulfrance.org/'
         },
         {
-          name: 'Australian Embassy Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://ca.embassy.gov.au/'
+          name: 'Spanish Consulate General Vancouver',
+          address: '1177 West Hastings Street, Suite 1500, Vancouver, BC V6E 2K3',
+          phone: '+1 604 666 8960',
+          link: 'https://www.exteriores.gob.es/consulados/vancouver'
         },
         {
-          name: 'Canadian Embassy Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://www.canadainternational.gc.ca/ca-canada/'
+          name: 'Australian Consulate General Vancouver',
+          address: '1075 West Georgia Street, Suite 2050, Vancouver, BC V6E 3C9',
+          phone: '+1 604 684 1177',
+          link: 'https://canada.embassy.gov.au/ottawa/vancouver.html'
         },
         {
-          name: 'Embassy of the Netherlands in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/canada'
+          name: 'Government of Canada Services',
+          address: 'Multiple Service Canada locations throughout Vancouver',
+          phone: '+1 800 622 6232',
+          link: 'https://www.canada.ca/en/employment-social-development/corporate/contact/local-offices.html'
         },
         {
-          name: 'Embassy of Denmark in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://ca.um.dk/en'
+          name: 'Dutch Consulate General Vancouver',
+          address: '475 Howe Street, Suite 821, Vancouver, BC V6C 2B3',
+          phone: '+1 604 684 6448',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/canada/about-us/consulate-general-vancouver'
         },
         {
-          name: 'Embassy of Switzerland in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://www.eda.admin.ch/ottawa'
+          name: 'Danish Consulate General Vancouver',
+          address: '999 Canada Place, Suite 404, Vancouver, BC V6C 3E1',
+          phone: '+1 604 696 1207',
+          link: 'https://canada.um.dk/en/about-us/danish-missions-in-canada/consulate-general-in-vancouver'
         },
         {
-          name: 'Embassy of India in Vancouver',
-          address: '490 Sussex Drive, Ottawa, Ontario K1N 1G8',
-          phone: '+1 613 688 5335',
-          link: 'https://www.indianembassyca.gov.in/'
+          name: 'Swiss Consulate General Vancouver',
+          address: '790-999 West Hastings Street, Vancouver, BC V6C 2W2',
+          phone: '+1 604 684 2231',
+          link: 'https://www.eda.admin.ch/vancouver'
+        },
+        {
+          name: 'Indian Consulate General Vancouver',
+          address: '325 Howe Street, 2nd Floor, Vancouver, BC V6C 1Z7',
+          phone: '+1 604 662 8811',
+          link: 'https://www.cgivancouver.gov.in/'
         }
       ],
       womensRights: [

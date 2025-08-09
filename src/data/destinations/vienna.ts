@@ -174,73 +174,85 @@ const vienna: Destination = {
   scamWarnings: [],
   legalResources: {
       embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
+        name: 'U.S. Embassy Vienna',
+        address: 'Boltzmanngasse 16, 1090 Vienna',
+        phone: '+43 1 313 39 0',
+        email: 'viennaACS@state.gov',
+        emergency: '+43 1 313 39 0',
+        link: 'https://at.usembassy.gov/'
       },
       embassies: [
         {
-          name: 'British Embassy Vienna',
+          name: 'U.S. Embassy Vienna',
           address: 'Boltzmanngasse 16, 1090 Vienna',
           phone: '+43 1 313 39 0',
+          link: 'https://at.usembassy.gov/'
+        },
+        {
+          name: 'British Embassy Vienna',
+          address: 'Jaurèsgasse 12, 1030 Vienna',
+          phone: '+43 1 716 13 0',
           link: 'https://www.gov.uk/world/organisations/british-embassy-vienna'
         },
         {
-          name: 'Embassy of Germany in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://at.diplo.de/'
+          name: 'German Embassy Vienna',
+          address: 'Gaudenzdorfer Gürtel 95, 1120 Vienna',
+          phone: '+43 1 711 54 0',
+          link: 'https://wien.diplo.de/'
         },
         {
-          name: 'Embassy of France in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
+          name: 'French Embassy Vienna',
+          address: 'Technikerstrasse 2, 1040 Vienna',
+          phone: '+43 1 502 75 0',
           link: 'https://at.ambafrance.org/'
         },
         {
-          name: 'Embassy of Spain in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://www.exteriores.gob.es/embajadas/vienna'
+          name: 'Spanish Embassy Vienna',
+          address: 'Argentinierstrasse 34, 1040 Vienna',
+          phone: '+43 1 505 57 88',
+          link: 'https://www.exteriores.gob.es/embajadas/viena'
         },
         {
           name: 'Australian Embassy Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://at.embassy.gov.au/'
+          address: 'Mattiellistrasse 2-4, 1040 Vienna',
+          phone: '+43 1 506 74 0',
+          link: 'https://austria.embassy.gov.au/'
         },
         {
           name: 'Canadian Embassy Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://www.canadainternational.gc.ca/at-austria/'
+          address: 'Laurenzerberg 2, 1010 Vienna',
+          phone: '+43 1 531 38 3000',
+          link: 'https://www.canadainternational.gc.ca/austria-autriche/'
         },
         {
-          name: 'Embassy of the Netherlands in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
+          name: 'Netherlands Embassy Vienna',
+          address: 'Opernring 5, 1010 Vienna',
+          phone: '+43 1 589 39 200',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/austria'
         },
         {
-          name: 'Embassy of Denmark in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://at.um.dk/en'
+          name: 'Danish Embassy Vienna',
+          address: 'Führichgasse 6, 1010 Vienna',
+          phone: '+43 1 512 79 04',
+          link: 'https://oesterreich.um.dk/en'
         },
         {
-          name: 'Embassy of Switzerland in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://www.eda.admin.ch/vienna'
+          name: 'Austrian Government Services',
+          address: 'Multiple locations throughout Vienna',
+          phone: '+43 1 711 00 0',
+          link: 'https://www.oesterreich.gv.at/'
         },
         {
-          name: 'Embassy of India in Vienna',
-          address: 'Boltzmanngasse 16, 1090 Vienna',
-          phone: '+43 1 313 39 0',
-          link: 'https://www.indianembassyat.gov.in/'
+          name: 'Swiss Embassy Vienna',
+          address: 'Prinz-Eugen-Strasse 7, 1040 Vienna',
+          phone: '+43 1 795 05 0',
+          link: 'https://www.eda.admin.ch/wien'
+        },
+        {
+          name: 'Indian Embassy Vienna',
+          address: 'Kärntner Ring 2, 1010 Vienna',
+          phone: '+43 1 505 86 66',
+          link: 'https://www.indianembassy.at/'
         }
       ],
       womensRights: [

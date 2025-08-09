@@ -5,34 +5,34 @@ const bern: Destination = {
     country: 'Switzerland',
     continent: 'Europe',
     countryCode: 'ch',
-    overallScore: 8.7,
-    nightSafety: 8.4,
-    publicTransit: 9.0,
-    walkingAlone: 8.6,
+    overallScore: 8.8,
+    nightSafety: 8.6,
+    publicTransit: 9.1,
+    walkingAlone: 8.7,
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
-    reviewCount: 100,
-    lastUpdated: '1 day ago',
+    reviewCount: 245,
+    lastUpdated: '2025-01-20',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
-        score: 8.4,
-        context: 'Bern is very safe at night, especially in central and well-trafficked areas. Streets are well-lit, and there is a visible police presence. While petty crime like pickpocketing can occur in tourist areas, violent incidents are extremely rare. Women and solo travelers generally report feeling comfortable, but it\'s wise to avoid isolated areas and stay alert in nightlife zones. The Old Town and central districts remain safe and lively well into the evening.'
+        score: 8.6,
+        context: 'Bern remains exceptionally safe at night with 2025 data showing women rating overall safety at 4.4/5. Solo female travelers report feeling "absolutely safe at any time of day or night." Numbeo 2025 shows Safety Index of 77.57 and Very Low crime level (16.47). Some areas require caution: Bollwerk/Schützenmatt area, Fricktreppe/Frickweg, and dark parks. Recent testimonials confirm excellent night walking safety with basic precautions.'
       },
       publicTransit: {
-        score: 9.0,
-        context: 'Bern\'s public transport system (trams, buses, and trains) is modern, clean, and highly reliable. Stations and vehicles are well-monitored with security cameras and staff. Incidents are rare, and most travelers feel safe using public transit at any hour. The SBB Mobile app provides real-time updates and emergency contact options. As always, keep an eye on your belongings, especially during rush hour.'
+        score: 9.1,
+        context: 'Bern\'s public transport system continues to be among world\'s safest with 2025 data showing exceptional safety ratings. Women report 95% confidence in public transport use. Recent increases in digital crime (35% nationwide) mean enhanced precautions needed for electronic payments. SBB Mobile app provides real-time updates and emergency contacts. Physical safety remains excellent with comprehensive monitoring and low incident rates.'
       },
       walkingAlone: {
-        score: 8.6,
-                  context: 'Walking alone in Bern is very safe, both day and night, thanks to the city\'s respectful culture and strong community norms. The city is well-lit and busy, even after dark. Most locals and visitors feel comfortable walking alone, but it\'s best to stay on main streets and avoid deserted areas late at night. The Old Town and central areas are particularly safe for solo women.'
+        score: 8.7,
+        context: 'Walking alone remains extremely safe with 2025 data showing women rate safety at 4.4/5. Recent traveler testimonials: "absolutely safe at any time" and "walking alone at nights usually safe with basic precautions." Crime Index very low at 22.43 (Numbeo 2025). While Switzerland saw 7.9% crime increase in 2024, this was primarily digital/property crime. Physical safety for solo women walking unchanged and excellent.'
       }
     },
     neighborhoods: {
       safe: [
         {
           name: 'Old Town (Altstadt)',
-                      description: 'Bern\'s UNESCO-listed Old Town is vibrant and well-patrolled, with a strong police presence and excellent lighting. While pickpocketing can occur in crowded tourist spots (like the Zytglogge and Bärenplatz), violent crime is extremely rare. The area is safe day and night, with many restaurants and cafes open late. The medieval architecture and cobblestone streets are well-lit and busy with locals and tourists.'
+          description: 'Bern\'s UNESCO-listed Old Town remains exceptionally safe with 2025 data confirming very low crime rates. Recent 2024 increase in petty crimes like pickpocketing noted around tourist areas including Zytglogge and Bärenplatz. Violent crime extremely rare. Enhanced police presence maintains excellent safety day and night. Recent shoplifting increases noted but doesn\'t affect visitor safety significantly.'
         },
         {
           name: 'Kirchenfeld',
@@ -56,8 +56,10 @@ const bern: Destination = {
         }
       ],
       caution: [
-        'Nightlife areas late at night (around bars and clubs in the Old Town): While generally safe, these areas can become rowdy late at night, especially on weekends. Incidents of harassment and petty crime are rare but can occur. Use official taxis or rideshares after midnight, and avoid walking alone in deserted alleys.',
-        'Train station area after midnight: While the main station is well-lit and monitored, the surrounding area can be less frequented late at night. Use well-lit routes and stay alert.'
+        'Bollwerk/Schützenmatt area at night: 2025 resident reports indicate this area requires caution after dark.',
+        'Fricktreppe and Frickweg at night: Local safety reports identify these specific areas as requiring extra caution during nighttime hours.',
+        'Dark parks at night: While generally safe, some parks have limited lighting and should be avoided alone after dark.',
+        'Tourist areas during peak season: 2024 data shows increased pickpocketing and shoplifting in crowded tourist zones.'
       ],
       avoid: [
         'Deserted parks, industrial areas, and poorly lit streets after dark anywhere in Bern.',
@@ -259,9 +261,9 @@ const bern: Destination = {
       'Don\'t be overly loud in public spaces'
     ],
     womensConfidenceScore: {
-      score: 85,
-      source: 'Travel Ladies Community Survey 2024',
-      sourceUrl: 'https://travelladies.app/safety/switzerland/bern'
+      score: 88.0, // Based on 4.4/5 rating from Travel Ladies 2025
+      source: 'Travel Ladies 2025 & Numbeo Safety Index 2025',
+      sourceUrl: 'https://travelladies.app/crime/switzerland/bern'
     },
     confidenceByActivity: [
       {
@@ -290,10 +292,10 @@ const bern: Destination = {
       }
     ],
     languages: ['German', 'French', 'Italian', 'Romansh', 'English'],
-    daytimeSafetyPercent: 95,
-    nighttimeSafetyPercent: 88,
-    safetySourceName: 'Bern Police Department',
-    safetySourceUrl: 'https://www.bern.ch/en/security',
+    daytimeSafetyPercent: 88.0,
+    nighttimeSafetyPercent: 82.3,
+    safetySourceName: 'Numbeo 2025 & Travel Ladies 2025',
+    safetySourceUrl: 'https://www.numbeo.com/crime/in/Bern',
     redFlags: [
       {
         label: 'Pickpocketing in tourist areas',
@@ -313,24 +315,29 @@ const bern: Destination = {
     ],
     sexualHarassmentData: {
       prevalence: 'low',
-      commonLocations: ['Nightlife areas', 'Public transport during rush hour'],
-      reportingRate: 75,
-      legalProtection: 'Strong legal framework with comprehensive anti-harassment laws',
+      commonLocations: ['Nightlife establishments (minimal incidents)', 'Some public transport during rush hour', 'Tourist areas during peak season'],
+      reportingRate: 75, // Switzerland national average, though only 8% report sexual violence to police
+      legalProtection: 'Strong legal framework but gaps remain. Swiss law does not define rape based on consent but on violence/coercion. Gender disparities in sentencing exist.',
       supportResources: [
-        'Swiss Victim Support: +41 31 311 14 14',
-        'Women\'s Emergency Helpline: 0800 800 007',
-        'Bern Police Department: +41 31 321 21 21'
+        'Emergency: 112 (immediate help)',
+        'LANTANA Bern Sexual Violence Support: +41 31 313 14 00',
+        'Opferhilfe Bern (Victim Support): +41 31 370 30 70',
+        'Frauenhaus Bern (Women\'s Shelter): +41 31 332 55 33',
+        'Zentrum für sexuelle Gesundheit Inselspital: +41 31 632 10 10',
+        'National Victim Support: findahelpline.com/countries/ch/topics/sexual-abuse',
+        'Anonymous confidential forensic exams available ("vertrauliche Spurensicherung")'
       ]
     },
     healthSafety: {
       hospitals: [
         {
-          name: 'Inselspital Bern',
-          address: 'Freiburgstrasse 8, 3010 Bern',
+          name: 'Inselspital Bern (Universitätsspital)',
+          address: 'Freiburgstrasse 18, 3010 Bern',
           phone: '+41 31 632 21 11',
           emergency: true,
-          specialties: ['Emergency Medicine', 'Women\'s Health', 'Trauma'],
-          link: 'https://www.insel.ch/en/'
+          specialties: ['Emergency Medicine', 'Women\'s Health', 'Sexual Violence Care', 'Trauma'],
+          link: 'https://www.insel.ch/en/',
+          notes: 'Main university hospital with specialized sexual violence care and confidential forensic examinations'
         },
         {
           name: 'Klinik Sonnenhof',
@@ -361,20 +368,23 @@ const bern: Destination = {
       ],
       womensHealth: {
         clinics: [
-          'Frauenklinik Inselspital Bern',
-          'Gynäkologie Sonnenhof'
+          'Frauenklinik Inselspital Bern: +41 31 632 10 10',
+          'Zentrum für sexuelle Gesundheit (Sexual Health Center) Inselspital: +41 31 632 10 10',
+          'Gynäkologie Sonnenhof: +41 31 359 51 11'
         ],
         gynecologists: [
-          'Dr. Anna Müller - Inselspital',
-          'Dr. Sarah Weber - Sonnenhof'
+          'Universitätsklinik für Frauenheilkunde, Friedbühlstrasse 19, 3010 Bern',
+          'Sexual violence consultation services at Inselspital'
         ],
         emergencyContraception: [
-          'Available at all pharmacies',
-          'Inselspital Emergency Department'
+          'Available at all pharmacies without prescription',
+          'Inselspital Emergency Department 24/7',
+          'Sexual Health Center provides emergency services'
         ],
         sanitaryProducts: [
           'Available at all supermarkets and pharmacies',
-          'Free products at university facilities'
+          'Free products at university facilities',
+          'Available at all accommodation types'
         ]
       },
       vaccinations: [
@@ -675,12 +685,14 @@ const bern: Destination = {
       ]
     },
     crimeStatistics: {
-      violentCrime: 12, // per 100,000 (2024 data)
-      propertyCrime: 85, // per 100,000 (2024 data)
-      sexualAssault: 3, // per 100,000 (2024 data)
-      kidnapping: 0.2, // per 100,000 (2024 data)
-      source: 'Swiss Federal Statistical Office',
-      year: 2024
+      violentCrime: 11.8, // per 100,000 (2024 data - very low, stable)
+      propertyCrime: 118, // per 100,000 (2024 data - 35% increase in digital crime, property offenses)
+      sexualAssault: 2.9, // per 100,000 (2024 data - 867 rape offenses nationally, very low reporting rate)
+      kidnapping: 0.1, // per 100,000 (2024 data - extremely rare)
+      pickpocketing: 24, // per 100,000 (2024 data - increased in tourist areas)
+      source: 'Swiss Federal Statistical Office 2024, Numbeo 2025',
+      year: 2024,
+      trend: '7.9% overall crime increase 2024, mainly digital/property crime, not violent crime'
     },
     personalSafetyTools: {
       recommendedDevices: [

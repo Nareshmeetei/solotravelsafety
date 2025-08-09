@@ -5,27 +5,27 @@ const brussels: Destination = {
     country: 'Belgium',
     continent: 'Europe',
     countryCode: 'be',
-    overallScore: 7.2,
-    nightSafety: 6.8,
-    publicTransit: 7.5,
-    walkingAlone: 7.0,
-    tags: ['insider-tips', 'moderate-safe'],
+    overallScore: 6.8,
+    nightSafety: 6.2,
+    publicTransit: 7.2,
+    walkingAlone: 6.6,
+    tags: ['warning-flags', 'moderate-risk', 'terrorism-alert'],
     bgColor: 'bg-yellow-25',
     reviewCount: 134,
     lastUpdated: '1 day ago',
-    harassmentRisk: 'medium',
+    harassmentRisk: 'moderate-high',
     safetyBreakdown: {
       nightSafety: {
-        score: 6.8,
-        context: 'Brussels is generally safe at night in central areas but has some concerns, especially for solo women. The city center and tourist areas like Grand Place are well-lit and patrolled, but recent reports indicate groups of men in certain areas make some female travelers uncomfortable. Avoid walking alone late at night, especially around train stations (Gare du Midi, Gare du Nord) and certain neighborhoods like Molenbeek, Anderlecht, and Schaerbeek. Stick to well-lit main streets and use official transport after dark.'
+        score: 6.2,
+        context: 'Brussels night safety has declined with 2025 reviews noting "city has become dangerous at night recently, especially for women alone." Level 3 terrorism threat continues. Crime Index 55.04, Safety Index 44.96. 10 murders per 100,000 citizens (2024). Recent shootings in Marolles and Saint-Gilles areas (Feb 2024). Completely avoid walking alone after dark, especially around train stations and neighborhoods like Molenbeek, Anderlecht, Schaerbeek.'
       },
       publicTransit: {
-        score: 7.5,
-        context: 'Brussels public transport (STIB-MIVB metro, trams, and buses) is generally safe and reliable. However, 60% of women in Belgium report experiencing sexual harassment on public transport at some point. STIB has launched anti-harassment campaigns and reporting mechanisms. The system is well-monitored with security cameras and staff. Incidents are more common during off-peak hours and late at night. Stay alert, especially in less crowded carriages or stations, and report any harassment through official channels.'
+        score: 7.2,
+        context: 'Public transport generally safe but with concerns. 60% of Belgian women report sexual harassment on public transport. High pickpocket risk at Metro stations - Brussels ranks among top European capitals. Night buses available Fri-Sat until 3am. Stay alert in less crowded carriages, sit near drivers on buses. STIB has anti-harassment campaigns but incidents remain frequent during off-peak hours.'
       },
       walkingAlone: {
-        score: 7.0,
-        context: 'Walking alone in Brussels during the day is generally safe in central tourist areas and better neighborhoods like Uccle, Saint-Gilles (excluding Parvis), and Ixelles. However, 22% of women in Brussels report street harassment incidents in the past year. Exercise caution in certain areas like around train stations, some parts of the city center late at night, and neighborhoods like Molenbeek and Anderlecht. Brussels has a moderate crime index of 55.04, requiring reasonable precautions, especially for women traveling alone.'
+        score: 6.6,
+        context: 'Daytime walking moderately safe in tourist areas but 22% of Brussels women report street harassment annually. Crime Index 55.04 requires significant precautions. Recent reports of increased "men staring and making degrading comments." High pickpocket risk in transportation hubs. Avoid Anneessens, Anderlecht, Schaerbeek, Brussels North, and Gare du Midi areas. Multiple 2024-2025 reviews advise against solo nighttime walks.'
       }
     },
     neighborhoods: {
@@ -321,22 +321,23 @@ const brussels: Destination = {
       { label: 'Dining Alone', confidence: 82, source: 'Solo Female Travel Brussels 2025', sourceUrl: 'https://solofemaleTravelbrussels.com/' }
     ],
     sexualHarassmentData: {
-      prevalence: 'medium',
+      prevalence: 'high',
       commonLocations: [
-        'Public transport (metro, trams, buses) during off-peak hours',
-        'Street harassment in central Brussels and nightlife areas',
-        'Crowded tourist areas like Grand Place and surrounding streets',
-        'Train stations, particularly Gare du Midi and Gare du Nord',
-        'Nightlife districts and around bars/clubs after midnight'
+        'Public transport (60% of Belgian women report harassment)',
+        'Street harassment (22% of Brussels women report annually)',
+        'Metro stations and crowded transport hubs',
+        'Train stations (Gare du Midi, Gare du Nord)',
+        'Nightlife areas with increased male staring/degrading comments'
       ],
-      reportingRate: 58,
-      legalProtection: 'Strong legal framework under Belgian and EU law criminalizing sexual harassment. Police take reports seriously and victims have access to comprehensive support services.',
+      reportingRate: 10, // Only 10% of sexual assault cases estimated to be reported
+      legalProtection: 'Strong legal framework under Istanbul Convention (ratified 2016). 10 specialized Sexual Assault Centres nationwide. Evidence collection without requiring immediate police report.',
       supportResources: [
-        'Sexual Assault Centre Brussels: +32 2 535 45 42, https://sac.belgium.be/',
-        'Women Against Violence Europe (WAVE): +32 2 548 05 05, https://www.wave-network.org/',
-        'SOS Viol (Sexual Violence Hotline): 0800 98 100, https://www.sosviol.be/',
-        'Police Emergency: 112',
-        'STIB Harassment Reporting: Available through STIB-MIVB app and staff'
+        'Emergency: 101 (police) or 112 (general)',
+        'Sexual Assault Crisis: 02 349 44 22 (Brussels-wide)',
+        'SOS Viol: 0800 98 100 (free, anonymous, Mon-Fri 8am-6pm)',
+        'CPVS Brussels: 02 535 45 42 (24/7 sexual violence center)',
+        'UMC Sint-Pieter Sexual Assault Centre (24/7, free services)',
+        'Call Alice: Free secure transport to safety centers'
       ]
     },
     healthSafety: {

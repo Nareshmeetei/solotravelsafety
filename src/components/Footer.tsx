@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PrivacyPolicy from './PrivacyPolicy';
 import DataManagement from './DataManagement';
@@ -6,6 +6,17 @@ import DataManagement from './DataManagement';
 const Footer: React.FC = () => {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [showDataManagement, setShowDataManagement] = useState(false);
+  const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
+
+  const emojis = ['☕', '😤', '🕺', '🎉', '🤔', '🤖', '😴', '😢', '😊', '😂', '🤬', '🤦'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentEmojiIndex((prev) => (prev + 1) % emojis.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [emojis.length]);
 
   const handleNavClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
@@ -60,19 +71,19 @@ const Footer: React.FC = () => {
             <div className="flex flex-wrap justify-center items-center space-x-4 mb-2">
               <button
                 onClick={() => setShowPrivacyPolicy(true)}
-                className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600 hover:underline"
+                className="text-sm text-gray-500 transition-colors duration-300 hover:text-gray-600 hover:underline"
               >
                 Privacy Policy
               </button>
               <button
                 onClick={() => setShowDataManagement(true)}
-                className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600 hover:underline"
+                className="text-sm text-gray-500 transition-colors duration-300 hover:text-gray-600 hover:underline"
               >
                 Data Management
               </button>
             </div>
-            <p className="text-xs text-gray-500 transition-colors duration-300 hover:text-gray-600">
-              © 2025 SoloTravelSafety.com. Made with ❤️ for fearless women travelers.
+            <p className="text-sm text-gray-500 transition-colors duration-300 hover:text-gray-600">
+              © 2025 SoloTravelSafety.com | Made with a lot of <span className="inline-block transition-all duration-500 transform hover:scale-110">{emojis[currentEmojiIndex]}</span> for fearless women travelers.
             </p>
           </div>
         </div>

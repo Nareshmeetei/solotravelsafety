@@ -1,7 +1,7 @@
 import { Destination } from './types';
 
 const denpasar: Destination = {
-    city: 'Denpasar',
+    city: 'Denpasar (Bali)',
     country: 'Indonesia',
     continent: 'Asia',
     countryCode: 'id',
@@ -350,16 +350,70 @@ const denpasar: Destination = {
       },
       embassies: [
         {
-          name: 'Australian Consulate Bali',
-          address: 'Jl. Tantular No.32, Renon, Denpasar',
-          phone: '+62 361 241118',
-          link: 'https://indonesia.embassy.gov.au/jakt/Consulate_Bali.html'
+          name: 'U.S. Consular Agency Denpasar',
+          address: 'Jl. Hayam Wuruk 188, Denpasar 80235',
+          phone: '+62 361 233605',
+          link: 'https://id.usembassy.gov/embassy-consulates/denpasar/'
         },
         {
           name: 'British Honorary Consul Bali',
           address: 'Jl. Raya Seminyak, Seminyak',
           phone: '+62 361 747778',
           link: 'https://www.gov.uk/world/organisations/british-embassy-jakarta'
+        },
+        {
+          name: 'German Honorary Consul Bali',
+          address: 'Jl. Pantai Karang 17, Sanur 80228',
+          phone: '+62 361 288535',
+          link: 'https://jakarta.diplo.de/'
+        },
+        {
+          name: 'French Honorary Consul Bali',
+          address: 'Jl. Mertanadi 2, Kerobokan 80361',
+          phone: '+62 361 285985',
+          link: 'https://id.ambafrance.org/'
+        },
+        {
+          name: 'Spanish Honorary Consul Bali',
+          address: 'Jl. Raya Kuta 127, Kuta 80361',
+          phone: '+62 361 756735',
+          link: 'https://www.exteriores.gob.es/consulados/yakarta'
+        },
+        {
+          name: 'Australian Consulate Bali',
+          address: 'Jl. Tantular No.32, Renon, Denpasar',
+          phone: '+62 361 241118',
+          link: 'https://indonesia.embassy.gov.au/jakt/Consulate_Bali.html'
+        },
+        {
+          name: 'Canadian Honorary Consul Bali',
+          address: 'Jl. Uluwatu 18X, Jimbaran 80361',
+          phone: '+62 361 757510',
+          link: 'https://www.canadainternational.gc.ca/indonesia/'
+        },
+        {
+          name: 'Netherlands Honorary Consul Bali',
+          address: 'Jl. Raya Kuta 127, Kuta 80361',
+          phone: '+62 361 751517',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/indonesia'
+        },
+        {
+          name: 'Danish Honorary Consul Bali',
+          address: 'Jl. Bypass Ngurah Rai 260, Sanur 80228',
+          phone: '+62 361 270825',
+          link: 'https://indonesien.um.dk/'
+        },
+        {
+          name: 'Swiss Honorary Consul Bali',
+          address: 'Jl. Raya Seminyak 2000X, Seminyak 80361',
+          phone: '+62 361 731735',
+          link: 'https://www.eda.admin.ch/jakarta'
+        },
+        {
+          name: 'Indian Honorary Consul Bali',
+          address: 'Jl. Raya Puputan 142, Renon, Denpasar 80235',
+          phone: '+62 361 751735',
+          link: 'https://www.indianembassyjakarta.gov.in/'
         }
       ],
       consulate: {

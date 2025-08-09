@@ -362,15 +362,17 @@ const cairo: Destination = {
       { label: 'Transport-Related Incidents', frequency: 'Frequent', icon: 'Car' }
     ],
     sexualHarassmentData: {
-      prevalence: 'high',
-      commonLocations: ['All public spaces', 'Tourist attractions', 'Public transport', 'Streets', 'Markets', 'Hotels'],
-      reportingRate: 8,
-      legalProtection: 'Very limited legal protection. Police often dismiss complaints or blame victims. New laws exist but enforcement is poor.',
+      prevalence: 'extremely high',
+      commonLocations: ['All public spaces (99.3% of women experience harassment)', 'Tourist attractions', 'Public transport (groping common)', 'Streets (aggressive staring/following)', 'Markets and crowded areas', 'Even hotel districts'],
+      reportingRate: 5, // Very low due to social stigma and poor police response
+      legalProtection: 'Very limited legal protection. Cairo ranked last of 19 megacities for women protection (Thomson Reuters 2024). Police often dismiss complaints or blame victims. Egypt ranks first in Arab world for sexual harassment.',
       supportResources: [
-        'Egyptian Women\'s Rights Center: +20 2 2794 6671',
+        'Tourist Police: 126 (limited effectiveness)',
         'Women\'s Emergency Helpline: 15115',
-        'Your country\'s embassy emergency line',
-        'HarassMap reporting platform: harassmap.org'
+        'Egyptian Women\'s Rights Center: +20 2 2794 6671',
+        'Your embassy emergency line (essential to have)',
+        'HarassMap reporting platform: harassmap.org',
+        'Egyptian Foundation for Advancement of Childhood Conditions: +20 2 2531 2056'
       ]
     },
     healthSafety: {

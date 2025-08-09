@@ -10,7 +10,7 @@ const POPULAR_DESTINATIONS = [
   'Reykjavik, Iceland',
   'Lisbon, Portugal', 
   'Kyoto, Japan',
-  'Denpasar, Indonesia', // Bali
+  'Denpasar (Bali), Indonesia',
   'Cape Town, South Africa',
   'Vancouver, Canada',
   'Hanoi, Vietnam',
@@ -19,24 +19,24 @@ const POPULAR_DESTINATIONS = [
   'Paris, France',
   'Singapore, Singapore',
   'Seoul, South Korea',
-  'Dubrovnik, Croatia', // Will show when available
-  'Budapest, Hungary', // Will show when available
   'Florence, Italy',
   'Bangkok, Thailand',
-  'Queenstown, New Zealand', // Will show when available
   'Amsterdam, Netherlands',
-  'Chiang Mai, Thailand', // Will show when available
-  'Maun, Botswana', // Will show when available
-  'Abu Dhabi, UAE', // Will show when available
-  'Thimphu, Bhutan', // Will show when available
-  'Manuel Antonio, Costa Rica', // Will show when available
-  'Porto, Portugal', // Will show when available
   'Prague, Czech Republic',
-  'Corfu, Greece', // Will show when available
-  'Riga, Latvia', // Will show when available
-  'Ubud, Indonesia', // Will show when available
   'Melbourne, Australia',
-  'Hobart, Australia' // Will show when available
+  'Copenhagen, Denmark',
+  'Stockholm, Sweden',
+  'Dublin, Ireland',
+  'Zurich, Switzerland',
+  'Vienna, Austria',
+  'Oslo, Norway',
+  'Edinburgh, United Kingdom',
+  'Helsinki, Finland',
+  'Bern, Switzerland',
+  'Brussels, Belgium',
+  'Tokyo, Japan',
+  'Wellington, New Zealand',
+  'Toronto, Canada'
 ];
 
 const PopularDestinations: React.FC = () => {

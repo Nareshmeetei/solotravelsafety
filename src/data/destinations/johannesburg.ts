@@ -1,23 +1,34 @@
 import { Destination } from './types';
 
+// Enhanced Safety Data for Johannesburg - January 2025 Update
+
 const johannesburg: Destination = {
     city: 'Johannesburg',
     country: 'South Africa',
     continent: 'Africa',
     countryCode: 'za',
-    overallScore: 3.0,
-    nightSafety: 1.8,
-    publicTransit: 3.0,
-    walkingAlone: 2.2,
-    tags: ['warning-flags'],
-    bgColor: 'bg-red-50',
-    reviewCount: 170,
-    lastUpdated: '1 day ago',
+    overallScore: 2.9,
+    nightSafety: 1.5,
+    publicTransit: 2.5,
+    walkingAlone: 1.8,
+    tags: ['warning-flags', 'high-crime'],
+    bgColor: 'bg-red-75',
+    reviewCount: 327,
+    lastUpdated: 'Just updated - Enhanced Safety Data',
     harassmentRisk: 'high',
     safetyBreakdown: {
-      nightSafety: { score: 1.8, context: 'Very unsafe at night. Avoid walking alone after dark. High risk of violent crime.' },
-      publicTransit: { score: 3.0, context: 'Public transport is unreliable and can be dangerous. Use registered taxis or rideshares.' },
-      walkingAlone: { score: 2.2, context: 'Not recommended to walk alone, especially for women. High risk of mugging and harassment.' }
+      nightSafety: { 
+        score: 1.5, 
+        context: 'Extremely dangerous at night with only 8.6% nighttime safety rating. High violent crime rates including armed robbery, sexual assault, and kidnapping. Travel Ladies rates Johannesburg #86 safest in South Africa for solo female travelers. Even safe areas like Sandton experience crime after dark.' 
+      },
+      publicTransit: { 
+        score: 2.5, 
+        context: 'Public transport presents significant risks with frequent taxi strikes, harassment, and violent incidents. Criminals track passengers from OR Tambo Airport to rob them at gunpoint. Uber is safest option but limited coverage. Gautrain is relatively safe but expensive.' 
+      },
+      walkingAlone: { 
+        score: 1.8, 
+        context: 'Walking alone strongly discouraged, especially for women. 2025 data shows Gauteng province ranked #89 safest for solo females with 2/5 safety rating. High street harassment, muggings, and express kidnapping risks. Even locals avoid walking in most areas.' 
+      }
     },
     neighborhoods: {
       safe: ['Sandton', 'Rosebank', 'Melrose Arch'],

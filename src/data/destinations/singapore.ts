@@ -181,64 +181,70 @@ const singapore: Destination = {
       },
       embassies: [
         {
-          name: 'British Embassy Singapore',
+          name: 'U.S. Embassy Singapore',
           address: '27 Napier Road, Singapore 258508',
           phone: '+65 6476 9100',
+          link: 'https://sg.usembassy.gov/'
+        },
+        {
+          name: 'British Embassy Singapore',
+          address: '100 Tanglin Road, Singapore 247919',
+          phone: '+65 6424 4200',
           link: 'https://www.gov.uk/world/organisations/british-embassy-singapore'
         },
         {
-          name: 'Embassy of Germany in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
-          link: 'https://sg.diplo.de/'
+          name: 'German Embassy Singapore',
+          address: '50 Raffles Place, #27-00 Singapore Land Tower, Singapore 048623',
+          phone: '+65 6533 6002',
+          link: 'https://singapur.diplo.de/'
         },
         {
-          name: 'Embassy of France in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
+          name: 'French Embassy Singapore',
+          address: '101-103 Cluny Park Road, Singapore 259595',
+          phone: '+65 6880 7800',
           link: 'https://sg.ambafrance.org/'
         },
         {
-          name: 'Embassy of Spain in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
-          link: 'https://www.exteriores.gob.es/embajadas/singapore'
+          name: 'Spanish Embassy Singapore',
+          address: '7 Temasek Boulevard, #38-03A Suntec Tower One, Singapore 038987',
+          phone: '+65 6732 9069',
+          link: 'https://www.exteriores.gob.es/embajadas/singapur'
         },
         {
-          name: 'Australian Embassy Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
-          link: 'https://sg.embassy.gov.au/'
+          name: 'Australian High Commission Singapore',
+          address: '25 Napier Road, Singapore 258507',
+          phone: '+65 6836 4100',
+          link: 'https://singapore.embassy.gov.au/'
         },
         {
-          name: 'Canadian Embassy Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
-          link: 'https://www.canadainternational.gc.ca/sg-singapore/'
+          name: 'Canadian High Commission Singapore',
+          address: 'One George Street, #11-01, Singapore 049145',
+          phone: '+65 6854 5900',
+          link: 'https://www.canadainternational.gc.ca/singapore-singapour/'
         },
         {
-          name: 'Embassy of the Netherlands in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
+          name: 'Netherlands Embassy Singapore',
+          address: '541 Orchard Road, #13-01 Liat Towers, Singapore 238881',
+          phone: '+65 6737 1155',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/singapore'
         },
         {
-          name: 'Embassy of Denmark in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
-          link: 'https://sg.um.dk/en'
+          name: 'Danish Embassy Singapore',
+          address: '13 Nassim Road, Singapore 258374',
+          phone: '+65 6779 3001',
+          link: 'https://singapore.um.dk/'
         },
         {
-          name: 'Embassy of Switzerland in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
+          name: 'Swiss Embassy Singapore',
+          address: '1 Swiss Club Link, Singapore 288162',
+          phone: '+65 6468 5788',
           link: 'https://www.eda.admin.ch/singapore'
         },
         {
-          name: 'Embassy of India in Singapore',
-          address: '27 Napier Road, Singapore 258508',
-          phone: '+65 6476 9100',
-          link: 'https://www.indianembassysg.gov.in/'
+          name: 'Indian High Commission Singapore',
+          address: '31 Grange Road, Singapore 239702',
+          phone: '+65 6737 6777',
+          link: 'https://www.hcisingapore.gov.in/'
         }
       ],
       womensRights: [

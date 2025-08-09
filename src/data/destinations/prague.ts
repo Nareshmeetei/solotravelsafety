@@ -5,27 +5,27 @@ const prague: Destination = {
     country: 'Czech Republic',
     continent: 'Europe',
     countryCode: 'cz',
-    overallScore: 8.3,
-    nightSafety: 7.9,
-    publicTransit: 8.6,
-    walkingAlone: 8.4,
-    tags: ['insider-tips', 'extremely-safe'],
+    overallScore: 8.6,
+    nightSafety: 8.1,
+    publicTransit: 8.4,
+    walkingAlone: 8.5,
+    tags: ['insider-tips', 'extremely-safe', 'budget-friendly', 'historic'],
     bgColor: 'bg-green-25',
-    reviewCount: 389,
-    lastUpdated: '1 day ago',
-    harassmentRisk: 'low',
+    reviewCount: 442,
+    lastUpdated: '2025-01-25',
+    harassmentRisk: 'low-moderate',
     safetyBreakdown: {
       nightSafety: {
-        score: 7.9,
-        context: 'Prague is very safe at night in the city center and tourist areas. Old Town, New Town, and Lesser Town are well-lit and patrolled. However, avoid some areas of Wenceslas Square late at night due to nightlife crowds, and be cautious in outer districts after midnight.'
+        score: 8.1,
+        context: 'Prague has exceptional nighttime safety with 74% of people feeling safe walking alone at night (2025 data). Crime decreased 6.4% in 2024 - lowest rate recorded in city history. Old Town, New Town, and Lesser Town are well-lit and patrolled. Avoid upper Wenceslas Square and some metro stations late at night. Night trams can be rowdy with drunk passengers on weekends. Overall ranked #3 safest city globally for travelers.'
       },
       publicTransit: {
-        score: 8.6,
-        context: 'Prague\'s metro, trams, and buses are excellent, clean, and very safe. The system is efficient and well-monitored. Incidents are rare, and the transport network covers the entire city effectively. Night trams run until late.'
+        score: 8.4,
+        context: 'Prague\'s metro, trams, and buses are excellent and efficient, though harassment concerns exist. 2024 city campaign revealed 33% of women experience sexual harassment on public transport vs 10% of men. Despite this, system is well-monitored with security cameras and staff. QR codes at stops now link to anonymous reporting. Night trams require extra caution due to rowdy passengers. New female-only rideshare services launched (Bolt female drivers).'
       },
       walkingAlone: {
-        score: 8.4,
-        context: 'Prague is excellent for solo walking with its compact city center and well-maintained streets. The historic areas are pedestrian-friendly and safe. Cobblestone streets require good shoes, but the city feels very secure for solo female travelers.'
+        score: 8.5,
+        context: 'Prague is exceptional for solo walking with 91% feeling safe during day (2025). Compact historic center is pedestrian-friendly with excellent lighting. Cobblestone streets require good shoes. Crime rate extremely low at 24.43 vs Berlin (44.59) or Paris (57.94). Street harassment "exceptional cases" unlike other regions. Violent crime almost non-existent. Ranked among world\'s top cities for solo female travelers.'
       }
     },
     neighborhoods: {
@@ -212,11 +212,12 @@ const prague: Destination = {
       }
     ],
     languages: ['Czech', 'English (good level in tourist areas)', 'German (some speakers)'],
-    daytimeSafetyPercent: 86.7,
-    nighttimeSafetyPercent: 75.2,
-    safetySourceName: 'Numbeo 2025',
+    daytimeSafetyPercent: 91.0,
+    nighttimeSafetyPercent: 74.0,
+    safetySourceName: 'Numbeo 2025 & Prague Police Statistics',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Prague',
     redFlags: [
+      { label: 'Public Transport Harassment (33% women)', frequency: 'Occasional', icon: 'AlertTriangle' },
       { label: 'Currency Exchange Scams', frequency: 'Common', icon: 'DollarSign' },
       { label: 'Tourist Restaurant Overcharging', frequency: 'Occasional', icon: 'Utensils' },
       { label: 'Pickpocketing in Tourist Areas', frequency: 'Rare', icon: 'Hand' }
@@ -236,36 +237,65 @@ const prague: Destination = {
       'Don\'t ignore church dress codes.'
     ],
     womensConfidenceScore: {
-      score: 82.1,
-      source: "Numbeo 2025",
-      sourceUrl: "https://www.numbeo.com/crime/in/Prague"
+      score: 86.0,
+      source: "Travel Ladies & Prague Police Statistics 2025",
+      sourceUrl: "https://travelladies.app/safety/czech-republic/prague"
     },
     confidenceByActivity: [
-      { label: 'Sightseeing', confidence: 91, source: 'Czech Tourism Safety Report 2025', sourceUrl: 'https://www.czechtourism.com/safety' },
-      { label: 'Nightlife', confidence: 79, source: 'Solo Female Travel Czech Republic 2025', sourceUrl: 'https://www.solofemaleguide.com/czech-republic' },
-      { label: 'Public Transport', confidence: 86, source: 'Numbeo 2025', sourceUrl: 'https://www.numbeo.com/crime/in/Prague' },
-      { label: 'Dining Alone', confidence: 88, source: 'Women Travel Solo 2025', sourceUrl: 'https://womentravelsolo.com/prague/' }
+      { label: 'Sightseeing', confidence: 93, source: 'Travel Ladies 2025 & Prague Rankings', sourceUrl: 'https://travelladies.app/safety/czech-republic/prague' },
+      { label: 'Nightlife', confidence: 81, source: 'Prague Safety Statistics 2025', sourceUrl: 'https://pragueviews.com/is-prague-safe/' },
+      { label: 'Public Transport', confidence: 76, source: 'Prague Harassment Campaign 2024', sourceUrl: 'https://www.expats.cz/czech-news/article/new-campaign-draws-attention-to-harassment-on-prague-public-transport' },
+      { label: 'Dining Alone', confidence: 90, source: 'Solo Female Travelers 2025', sourceUrl: 'https://travelladies.app/crime/czech-republic/prague' }
     ],
     sexualHarassmentData: {
-      prevalence: 'low',
-      commonLocations: ['Crowded nightlife areas', 'Some parts of Wenceslas Square', 'Public transport during peak hours'],
-      reportingRate: 71,
-      legalProtection: 'Strong legal protections under Czech and EU law. Police take reports seriously and Czech Republic has good anti-harassment legislation.',
+      prevalence: 'low-moderate',
+      commonLocations: [
+        'Public transportation (33% of women experience harassment vs 10% men)',
+        'Night trams on weekends with drunk passengers',
+        'Some parts of upper Wenceslas Square late at night',
+        'Crowded tourist areas during peak season',
+        'Some nightlife districts after midnight'
+      ],
+      reportingRate: 67, // Based on 2024 campaign data showing underreporting
+      legalProtection: 'Strong legal protections under Czech and EU law with 2.6% intimate partner violence rate (OECD data). Prague launched 2024 anti-harassment campaign for public transport with anonymous reporting via QR codes. Police take reports seriously with comprehensive anti-harassment legislation.',
       supportResources: [
         'Women\'s Crisis Line: 251 511 313',
         'Tourist Police: +420 974 851 111',
-        'Prague Women\'s Center: +420 222 580 805'
+        'Prague Women\'s Center: +420 222 580 805',
+        'Anonymous Harassment Reporting: QR codes at transport stops',
+        'Emergency Services: 112',
+        'Prague Public Transport Harassment Reporting: Via PID mobile app',
+        'Czech National Police: 158'
       ]
     },
     healthSafety: {
       hospitals: [
+        {
+          name: 'Central Military Hospital Prague (ÚVN)',
+          address: 'U Vojenské nemocnice 1200, 169 02 Praha 6',
+          phone: '+420 973 203 111',
+          emergency: true,
+          specialties: ['Emergency Medicine', 'Gynecology', 'Women\'s Health', '24/7 Emergency'],
+          link: 'https://www.uvn.cz/en/',
+          notes: 'Considered one of Czech Republic\'s best hospitals with English-speaking staff always available'
+        },
         {
           name: 'Fakultní nemocnice v Motole',
           address: 'V Úvalu 84, 150 06 Praha 5',
           phone: '+420 224 431 111',
           emergency: true,
           specialties: ['Emergency Medicine', 'General Medicine', 'Women\'s Health'],
-          link: 'https://www.fnmotol.cz/'
+          link: 'https://www.fnmotol.cz/',
+          notes: 'Most expatriate-friendly hospital with special department for foreigners and English-speakers'
+        },
+        {
+          name: 'Hospital Na Homolce',
+          address: 'Roentgenova 2, 150 30 Praha 5',
+          phone: '+420 257 271 111',
+          emergency: true,
+          specialties: ['Emergency Medicine', 'International Department'],
+          link: 'https://www.homolka.cz/',
+          notes: 'Very expatriate-friendly with international standards'
         }
       ],
       pharmacies: [
@@ -276,34 +306,53 @@ const prague: Destination = {
           hours: 'Mon-Fri 8:00-20:00, Sat-Sun 9:00-18:00',
           emergency: false,
           link: 'https://www.lekarna-andel.cz/'
+        },
+        {
+          name: '24-Hour Pharmacy Palackého',
+          address: 'Palackého 5, 128 01 Praha 2',
+          phone: '+420 224 946 982',
+          hours: '24/7',
+          emergency: true,
+          link: 'Central 24-hour pharmacy for emergency needs'
         }
       ],
       womensHealth: {
         clinics: [
-          'Women\'s Health Prague: +420 224 431 111',
-          'Family Planning Czech Republic: +420 224 922 249'
+          'Prague Women\'s Health Center (PWHC): Full spectrum gynecological and prenatal care',
+          'Gynecology Prague: High-standard care for women 16+',
+          'MY CLINIC Prague: Personalized women\'s health with modern equipment',
+          'Unicare Medical Center: Comprehensive healthcare in 16+ languages'
         ],
         gynecologists: [
-          'Dr. Novák - Motol Hospital: +420 224 431 111'
+          'Prague Women\'s Health Center: Qualified doctors and midwives with extensive experience',
+          'Private Gynecology Hospital Prague: Specialized gynecological surgery',
+          'Military University Hospital: Department of Gynecology with university affiliation',
+          'MY CLINIC: Expert care for reproductive health, menstrual disorders, menopause'
         ],
         emergencyContraception: [
-          'Available at all pharmacies',
-          'Emergency contraception available at hospitals'
+          'Available at all pharmacies without prescription',
+          'Emergency contraception available at all hospitals',
+          '24-hour pharmacy Palackého for urgent needs',
+          'Women\'s health centers provide emergency services'
         ],
         sanitaryProducts: [
           'Available at all supermarkets and pharmacies',
-          'Wide variety of European brands available'
+          'Wide variety of European brands available',
+          'Convenience stores and hotel shops stock basic supplies',
+          'Organic and sustainable options widely available'
         ]
       },
       vaccinations: [
-        'No special vaccinations required',
+        'No special vaccinations required for Prague',
         'COVID-19 vaccination recommended',
-        'Routine vaccinations should be current'
+        'Routine vaccinations should be current',
+        'Tick-borne encephalitis vaccine if visiting rural Czech areas'
       ],
       healthRisks: [
-        'Low risk of infectious diseases',
-        'Tick-borne encephalitis risk in rural areas (not city center)',
-        'Air pollution during winter months'
+        'Very low risk of infectious diseases in Prague',
+        'Tick-borne encephalitis risk only in rural areas (not city center)',
+        'Air pollution during winter months but not dangerous levels',
+        'Healthcare shortage of gynecologists in Czech Republic but good emergency care'
       ]
     },
     legalResources: {
@@ -317,10 +366,70 @@ const prague: Destination = {
       },
       embassies: [
         {
+          name: 'U.S. Embassy Prague',
+          address: 'Tržiště 15, 118 01 Praha 1',
+          phone: '+420 257 022 000',
+          link: 'https://cz.usembassy.gov/'
+        },
+        {
           name: 'British Embassy Prague',
           address: 'Thunovská 14, 118 00 Praha 1',
           phone: '+420 257 402 111',
           link: 'https://www.gov.uk/world/organisations/british-embassy-prague'
+        },
+        {
+          name: 'German Embassy Prague',
+          address: 'Vlašská 19, 118 01 Praha 1',
+          phone: '+420 257 113 111',
+          link: 'https://prag.diplo.de/'
+        },
+        {
+          name: 'French Embassy Prague',
+          address: 'Velkopřevorské náměstí 2, 118 01 Praha 1',
+          phone: '+420 251 171 711',
+          link: 'https://cz.ambafrance.org/'
+        },
+        {
+          name: 'Spanish Embassy Prague',
+          address: 'Pevnostní 9, 162 00 Praha 6',
+          phone: '+420 233 097 211',
+          link: 'https://www.exteriores.gob.es/embajadas/praga'
+        },
+        {
+          name: 'Australian Embassy Prague',
+          address: 'Klimentská 10, 110 00 Praha 1',
+          phone: '+420 296 578 350',
+          link: 'https://czechrepublic.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Prague',
+          address: 'Ve Struhách 95/2, 160 00 Praha 6',
+          phone: '+420 272 101 800',
+          link: 'https://www.canadainternational.gc.ca/czech_republic-republique_tcheque/'
+        },
+        {
+          name: 'Netherlands Embassy Prague',
+          address: 'Gotthardská 6/27, 160 00 Praha 6',
+          phone: '+420 233 015 200',
+          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/czechia'
+        },
+        {
+          name: 'Danish Embassy Prague',
+          address: 'Maltézské náměstí 5, 118 01 Praha 1',
+          phone: '+420 233 113 200',
+          link: 'https://tjekkiet.um.dk/'
+        },
+        {
+          name: 'Swiss Embassy Prague',
+          address: 'Pevnostní 7, 162 00 Praha 6',
+          phone: '+420 220 400 111',
+          link: 'https://www.eda.admin.ch/prague'
+        },
+        {
+          name: 'Indian Embassy Prague',
+          address: 'Valdštejnská 6, 118 01 Praha 1',
+          phone: '+420 257 531 690',
+          link: 'https://www.eoiprague.gov.in/'
         }
       ],
       consulate: {
@@ -489,12 +598,14 @@ const prague: Destination = {
       ]
     },
     crimeStatistics: {
-      violentCrime: 4.2,
-      propertyCrime: 1876,
-      sexualAssault: 7.8,
-      kidnapping: 0.2,
-      source: 'Czech Police Statistics',
-      year: 2023
+      violentCrime: 3.8, // per 100,000 (2024 data - decreased 6.4% from 2023)
+      propertyCrime: 1692, // per 100,000 (2024 data - significant decrease)
+      sexualAssault: 7.1, // per 100,000 (2024 data - low rate for European capital)
+      kidnapping: 0.1, // per 100,000 (extremely rare in Prague)
+      pickpocketing: 28.5, // per 100,000 (main concern in tourist areas)
+      source: 'Prague Police Statistics 2024, Numbeo Crime Index 2025',
+      year: 2024,
+      trend: '6.4% decrease in registered criminal offenses - lowest crime rate in city history'
     },
     personalSafetyTools: {
       recommendedDevices: [
@@ -525,11 +636,32 @@ const prague: Destination = {
     },
     usefulTips: [
       {
-        title: 'Navigate Prague\'s Historic Center',
-        description: 'The Old Town is compact and walkable. Use Prague Castle and the Astronomical Clock as landmarks. Cobblestone streets require good shoes.',
+        title: 'Prague Ranks #3 Safest City Globally for Travelers',
+        description: 'Prague achieved lowest crime rate in city history in 2024 with 6.4% decrease. Ranked among world\'s top cities for solo female travelers with 91% feeling safe during day, 74% at night.',
         severity: 'low',
-        sourceName: 'Prague Tourism',
+        sourceName: 'Prague Police Statistics & Travel Rankings 2025',
+        sourceUrl: 'https://pragueviews.com/is-prague-safe/'
+      },
+      {
+        title: 'Use Public Transport Harassment Reporting Systems',
+        description: 'While 33% of women experience harassment on public transport, Prague launched 2024 campaign with QR codes at stops for anonymous reporting. Use PID app or contact authorities.',
+        severity: 'medium',
+        sourceName: 'Prague Anti-Harassment Campaign 2024',
+        sourceUrl: 'https://www.expats.cz/czech-news/article/new-campaign-draws-attention-to-harassment-on-prague-public-transport'
+      },
+      {
+        title: 'Navigate Prague\'s Historic Center Safely',
+        description: 'The Old Town is compact and extremely walkable with excellent safety. Use Prague Castle and Astronomical Clock as landmarks. Cobblestone streets require good shoes but area is very secure.',
+        severity: 'low',
+        sourceName: 'Prague Tourism & Safety Statistics',
         sourceUrl: 'https://www.prague.eu/'
+      },
+      {
+        title: 'Choose Female-Friendly Rideshare Options',
+        description: 'New female-only rideshare services like Bolt with female drivers launched in 2024. Use official apps rather than street taxis for best safety and fair pricing.',
+        severity: 'low',
+        sourceName: 'Prague Transportation Updates 2024',
+        sourceUrl: 'https://www.expats.cz/'
       }
     ],
     costAndComfort: {

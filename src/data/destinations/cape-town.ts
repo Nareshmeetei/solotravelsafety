@@ -389,16 +389,18 @@ const capetown: Destination = {
       { label: 'Gang Violence & Territorial Crime', frequency: 'Frequent', icon: 'Users' }
     ],
     sexualHarassmentData: {
-      prevalence: 'high',
-      commonLocations: ['All public spaces', 'Public transport', 'Tourist attractions', 'Streets and markets', 'Beach areas', 'Township areas'],
-      reportingRate: 12,
-      legalProtection: 'Limited legal framework with poor enforcement. Police response varies significantly and many cases go unreported due to victim-blaming and inadequate protection.',
+      prevalence: 'extremely high',
+      commonLocations: ['All public spaces (40% lifetime rape risk)', 'Public transport (particularly dangerous)', 'Tourist areas including Bo-Kaap', 'Streets and markets', 'Empty beaches (high assault risk)', 'Late afternoons in all neighborhoods'],
+      reportingRate: 8, // Extremely low due to poor police response and victim-blaming
+      legalProtection: 'South Africa received "F" grade on Women\'s Danger Index. Only 25% of women feel safe walking alone at night (lowest globally). New National Council on GBV & Femicide Bill signed May 2024, but enforcement remains poor.',
       supportResources: [
-        'Rape Crisis Cape Town Trust: +27 21 447 9762, https://rapecrisis.org.za/',
-        'Women\'s Legal Centre: +27 21 424 5660, https://www.wlce.co.za/',
-        'Lifeline Cape Town: +27 21 461 1113',
-        'Gender-Based Violence Command Centre: 0800 428 428',
-        'Your country\'s embassy emergency line'
+        'National GBV Helpline: 0800 150 150',
+        'Police Emergency: 10111',
+        'GBV National Command Centre: 0800 428 428',
+        'Counselling Services: *120*7867# (free)',
+        'TEARS Foundation: 24/7 nationwide support',
+        'Saartjie Baartman Centre: Cape Town one-stop centre',
+        'Rape Crisis Cape Town: +27 21 447 9762'
       ]
     },
     healthSafety: {
@@ -492,64 +494,70 @@ const capetown: Destination = {
       },
       embassies: [
         {
-          name: 'British Embassy Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://www.gov.uk/world/organisations/british-embassy-pretoria'
+          name: 'U.S. Consulate General Cape Town',
+          address: '2 Reddam Ave, Westlake 7945, Cape Town',
+          phone: '+27 21 702 7300',
+          link: 'https://za.usembassy.gov/embassy-consulates/cape-town/'
         },
         {
-          name: 'Embassy of Germany in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://za.diplo.de/'
+          name: 'British Consulate General Cape Town',
+          address: '15th Floor, Norton Rose House, 8 Riebeek Street, Cape Town 8001',
+          phone: '+27 21 405 2400',
+          link: 'https://www.gov.uk/world/organisations/british-consulate-general-cape-town'
         },
         {
-          name: 'Embassy of France in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://za.ambafrance.org/'
+          name: 'German Consulate General Cape Town',
+          address: '19th Floor, Absa Centre, 2 Riebeek Street, Cape Town 8001',
+          phone: '+27 21 405 3000',
+          link: 'https://suedafrika.diplo.de/za-en/vertretungen/generalkonsulat-kapstadt'
         },
         {
-          name: 'Embassy of Spain in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://www.exteriores.gob.es/embajadas/pretoria'
+          name: 'French Consulate General Cape Town',
+          address: '2 Dean Street, Gardens, Cape Town 8001',
+          phone: '+27 21 423 1575',
+          link: 'https://za.ambafrance.org/-Consulat-general-du-Cap-'
         },
         {
-          name: 'Australian Embassy Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://za.embassy.gov.au/'
+          name: 'Spanish Honorary Consul Cape Town',
+          address: '37 Hout Street, Cape Town 8001',
+          phone: '+27 21 422 0380',
+          link: 'https://www.exteriores.gob.es/consulados/ciudaddelcabo'
         },
         {
-          name: 'Canadian Embassy Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://www.canadainternational.gc.ca/za-south-africa/'
+          name: 'Australian Consulate General Cape Town',
+          address: 'Reserve Bank Building, 14th Floor, 60 St Georges Mall, Cape Town 8001',
+          phone: '+27 21 419 5425',
+          link: 'https://southafrica.embassy.gov.au/ctow/home.html'
         },
         {
-          name: 'Embassy of the Netherlands in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
+          name: 'Canadian Honorary Consul Cape Town',
+          address: '19 Bree Street, Cape Town 8001',
+          phone: '+27 21 423 5240',
+          link: 'https://www.canadainternational.gc.ca/south_africa-afrique_du_sud/'
+        },
+        {
+          name: 'Netherlands Consulate General Cape Town',
+          address: '100 Strand Street, Cape Town 8001',
+          phone: '+27 21 421 5660',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/south-africa'
         },
         {
-          name: 'Embassy of Denmark in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://za.um.dk/en'
+          name: 'Danish Honorary Consul Cape Town',
+          address: '34 Bree Street, Cape Town 8001',
+          phone: '+27 21 419 3039',
+          link: 'https://sydafrika.um.dk/'
         },
         {
-          name: 'Embassy of Switzerland in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
+          name: 'Swiss Honorary Consul Cape Town',
+          address: '1 Thibault Square, Cape Town 8001',
+          phone: '+27 21 418 3665',
           link: 'https://www.eda.admin.ch/pretoria'
         },
         {
-          name: 'Embassy of India in Cape-town',
-          address: '255 Hill Street, Arcadia, Pretoria',
-          phone: '+27 12 431 4000',
-          link: 'https://www.indianembassyza.gov.in/'
+          name: 'Indian Consulate General Cape Town',
+          address: '4th Floor, Southern Life Centre, 8 Riebeek Street, Cape Town 8001',
+          phone: '+27 21 421 4000',
+          link: 'https://www.cgicapetown.gov.in/'
         }
       ],
       womensRights: [
