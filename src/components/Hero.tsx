@@ -78,20 +78,9 @@ const Hero: React.FC = () => {
         <div className="flex-1 flex flex-col justify-center text-left h-full items-center md:items-start">
           {/* Product Hunt Badge */}
           <div className="mb-6 flex justify-center md:justify-start">
-            <a 
-              href="https://www.producthunt.com/products/solo-travel-safety?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-solo&#0045;travel&#0045;safety" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block hover:scale-105 transition-transform duration-200"
-            >
-              <img 
-                src="/product-hunt-featured-badge.svg" 
-                alt="Solo Travel Safety - Safety platform for solo female travelers, by solo travelers | Product Hunt" 
-                style={{ width: '250px', height: '54px' }} 
-                width="250" 
-                height="54" 
-              />
-            </a>
+            <div className="inline-block hover:scale-105 transition-transform duration-200">
+              <a href="https://www.producthunt.com/products/solo-travel-safety?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-solo&#0045;travel&#0045;safety" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001050&theme=light&t=1754793591250" alt="Solo&#0032;Travel&#0032;Safety - Safety&#0032;platform&#0032;for&#0032;solo&#0032;female&#0032;travelers&#0044;&#0032;by&#0032;solo&#0032;travelers | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" /></a>
+            </div>
           </div>
           <h1 className="mb-6 text-5xl font-display tracking-tight text-gray-900 sm:text-6xl lg:text-7xl animate-fade-in-up text-left">
             Travel Smart, Not Scared.
