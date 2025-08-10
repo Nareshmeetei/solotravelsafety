@@ -5,6 +5,8 @@ const london: Destination = {
   city: 'London',
   country: 'United Kingdom',
   continent: 'Europe',
+
+  countryCode: 'gb',
   description: 'A global metropolis with excellent infrastructure and generally high safety standards for solo female travelers.',
   safetyScore: 4.6,
   scores: {

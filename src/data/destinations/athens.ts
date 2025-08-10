@@ -5,6 +5,7 @@ const athens: Destination = {
   city: 'Athens',
   country: 'Greece',
   continent: 'Europe',
+  countryCode: 'gr',
   description: 'The cradle of Western civilization offers ancient history and vibrant modern culture, with generally good safety for solo female travelers.',
   safetyScore: 4.0,
   scores: {

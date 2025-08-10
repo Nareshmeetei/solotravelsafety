@@ -20,6 +20,29 @@ const FlagImage: React.FC<FlagImageProps> = ({
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [workingUrl, setWorkingUrl] = useState<string | null>(null);
+
+  const getSizeClasses = () => {
+    switch (size) {
+      case 'sm':
+        return 'w-8 h-6';
+      case 'lg':
+        return 'w-20 h-12';
+      default:
+        return 'w-12 h-8';
+    }
+  };
+  
+  // Handle undefined countryCode
+  if (!countryCode) {
+    return (
+      <div className={`${getSizeClasses()} rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-200 flex items-center justify-center ${className}`}>
+        <div className="text-gray-500 text-xs font-medium">
+          N/A
+        </div>
+      </div>
+    );
+  }
+  
   const fallbackUrls = getFlagFallbackUrls(countryCode);
 
   // Preload and test URLs
@@ -64,17 +87,6 @@ const FlagImage: React.FC<FlagImageProps> = ({
     }
   };
 
-  const getSizeClasses = () => {
-    switch (size) {
-      case 'sm':
-        return 'w-8 h-6';
-      case 'lg':
-        return 'w-20 h-12';
-      default:
-        return 'w-12 h-8';
-    }
-  };
-
   if (isLoading) {
     return (
       <div className={`${getSizeClasses()} rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-100 animate-pulse ${className}`}>
@@ -88,7 +100,7 @@ const FlagImage: React.FC<FlagImageProps> = ({
       <div className={`${getSizeClasses()} rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-200 flex items-center justify-center ${className}`}>
         {fallbackIcon || (
           <div className="text-gray-500 text-xs font-medium">
-            {countryCode.toUpperCase()}
+            {countryCode ? countryCode.toUpperCase() : 'N/A'}
           </div>
         )}
       </div>

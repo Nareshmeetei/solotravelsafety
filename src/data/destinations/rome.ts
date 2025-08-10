@@ -5,6 +5,8 @@ const rome: Destination = {
   city: 'Rome',
   country: 'Italy',
   continent: 'Europe',
+
+  countryCode: 'it',
   description: 'The Eternal City combines ancient history with modern Italian culture, offering solo female travelers incredible experiences with reasonable safety precautions.',
   safetyScore: 4.1,
   scores: {

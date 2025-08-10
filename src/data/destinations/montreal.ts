@@ -5,6 +5,8 @@ const montreal: Destination = {
   city: 'Montreal',
   country: 'Canada',
   continent: 'North America',
+
+  countryCode: 'ca',
   description: 'A vibrant bilingual city combining European charm with North American amenities, offering excellent safety and solo travel opportunities.',
   safetyScore: 4.6,
   scores: {

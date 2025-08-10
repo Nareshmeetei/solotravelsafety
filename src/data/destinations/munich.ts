@@ -14,7 +14,7 @@ const munich: Destination = {
     bgColor: 'bg-green-25',
     reviewCount: 423,
     lastUpdated: 'Just updated - Enhanced Safety Data',
-    harassmentRisk: 'very-low',
+    harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
         score: 8.7,

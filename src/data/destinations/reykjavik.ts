@@ -13,7 +13,7 @@ const reykjavik: Destination = {
     bgColor: 'bg-green-25',
     reviewCount: 287,
     lastUpdated: '2025-01-25',
-    harassmentRisk: 'very-low',
+    harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
         score: 9.4,

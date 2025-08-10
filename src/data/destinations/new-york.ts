@@ -5,6 +5,8 @@ const newYork: Destination = {
   city: 'New York',
   country: 'United States',
   continent: 'North America',
+
+  countryCode: 'us',
   description: 'The Big Apple offers incredible opportunities for solo female travelers, with excellent public transport and vibrant neighborhoods to explore.',
   safetyScore: 4.2,
   scores: {

@@ -5,6 +5,8 @@ const losAngeles: Destination = {
   city: 'Los Angeles',
   country: 'United States',
   continent: 'North America',
+
+  countryCode: 'us',
   description: 'The City of Angels offers diverse neighborhoods, entertainment, and beaches, though solo female travelers should be aware of area-specific safety considerations.',
   safetyScore: 3.8,
   scores: {

@@ -5,6 +5,8 @@ const saoPaulo: Destination = {
   city: 'São Paulo',
   country: 'Brazil',
   continent: 'South America',
+
+  countryCode: 'br',
   description: 'Brazil\'s largest metropolis offers incredible culture, food, and nightlife, but solo female travelers should be very cautious about safety.',
   safetyScore: 3.2,
   scores: {

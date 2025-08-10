@@ -14,7 +14,7 @@ const nagano: Destination = {
     bgColor: 'bg-green-25',
     reviewCount: 287,
     lastUpdated: 'Just updated - Enhanced Safety Data',
-    harassmentRisk: 'very-low',
+    harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
         score: 9.6,

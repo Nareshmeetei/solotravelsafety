@@ -5,6 +5,8 @@ const berlin: Destination = {
   city: 'Berlin',
   country: 'Germany',
   continent: 'Europe',
+
+  countryCode: 'de',
   description: 'Germany\'s vibrant capital offering rich history, diverse neighborhoods, and excellent safety standards for solo female travelers.',
   safetyScore: 4.5,
   scores: {

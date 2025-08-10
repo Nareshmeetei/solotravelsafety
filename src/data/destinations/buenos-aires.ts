@@ -5,6 +5,8 @@ const buenosAires: Destination = {
   city: 'Buenos Aires',
   country: 'Argentina',
   continent: 'South America',
+
+  countryCode: 'ar',
   description: 'The Paris of South America offers rich culture, tango, and European architecture, though solo female travelers should take extra precautions.',
   safetyScore: 3.6,
   scores: {

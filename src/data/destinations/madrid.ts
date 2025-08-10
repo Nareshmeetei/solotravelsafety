@@ -5,6 +5,8 @@ const madrid: Destination = {
   city: 'Madrid',
   country: 'Spain',
   continent: 'Europe',
+
+  countryCode: 'es',
   description: 'Spain\'s vibrant capital offers excellent museums, parks, and nightlife with good safety standards for solo female travelers.',
   safetyScore: 4.3,
   scores: {

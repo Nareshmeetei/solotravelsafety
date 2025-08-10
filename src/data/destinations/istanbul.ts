@@ -5,6 +5,8 @@ const istanbul: Destination = {
   city: 'Istanbul',
   country: 'Turkey',
   continent: 'Asia',
+
+  countryCode: 'tr',
   description: 'A transcontinental city bridging Europe and Asia, offering rich history and culture, though solo female travelers should be aware of cultural norms and take extra precautions.',
   safetyScore: 3.7,
   scores: {
