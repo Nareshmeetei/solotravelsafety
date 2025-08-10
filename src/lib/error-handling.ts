@@ -86,6 +86,11 @@ export const getAuthErrorMessage = (error: any, context: 'signUp' | 'signIn' | '
     }
   }
   
+  // Check for database/auth specific errors first
+  if (lowerMessage.includes('database error') || error.code === 'unexpected_failure') {
+    return 'We\'re experiencing technical difficulties with user registration. Please try again later or contact support.';
+  }
+
   // Check for common HTTP status codes
   if (error.status) {
     switch (error.status) {
@@ -100,7 +105,7 @@ export const getAuthErrorMessage = (error: any, context: 'signUp' | 'signIn' | '
       case 429:
         return 'Too many requests. Please wait a moment before trying again.';
       case 500:
-        return 'Our servers are temporarily unavailable. Please try again in a few minutes.';
+        return 'We\'re experiencing technical difficulties. Please try again later or contact support.';
       case 502:
       case 503:
       case 504:

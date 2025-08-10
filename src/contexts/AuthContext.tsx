@@ -16,26 +16,23 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   }
 })
 
-// Import ensureProfileExists separately
+// Simplified profile creation that doesn't fail signup
 const ensureProfileExists = async (userId: string, user: any) => {
   try {
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('id', userId)
-      .single()
-
-    if (!profile) {
-      await supabase.from('profiles').insert([{
-        id: userId,
-        full_name: user.user_metadata?.full_name || '',
-        email: user.email,
-        avatar_url: user.user_metadata?.avatar_url || null,
-        created_at: new Date().toISOString()
-      }])
-    }
+    // Only try to create profile, don't block signup if it fails
+    await supabase.from('profiles').upsert([{
+      id: userId,
+      full_name: user.user_metadata?.full_name || '',
+      email: user.email,
+      avatar_url: user.user_metadata?.avatar_url || null,
+      updated_at: new Date().toISOString()
+    }], { 
+      onConflict: 'id',
+      ignoreDuplicates: true 
+    })
   } catch (error) {
-    console.error('Error ensuring profile exists:', error)
+    // Don't throw error - just log it so signup can continue
+    console.warn('Profile creation failed (non-blocking):', error)
   }
 }
 
