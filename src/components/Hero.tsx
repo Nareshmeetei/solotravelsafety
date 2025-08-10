@@ -46,6 +46,7 @@ const Hero: React.FC = () => {
       const { error } = await signUp(validation.data.email, validation.data.password);
       if (error) {
         logError(error, 'Hero SignUp');
+        console.error('SignUp error details:', error);
         setError(getAuthErrorMessage(error, 'signUp'));
       } else {
         setSuccess('Please check your email and click the confirmation link to complete your registration.');

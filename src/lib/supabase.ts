@@ -271,7 +271,7 @@ export const createComment = async (commentData: {
     }
 
     // Ensure profile exists
-    await secureEnsureProfileExists(user.id, user)
+    await ensureProfileExists(user.id, user)
 
     // Insert comment with user_id
     const { data, error } = await supabase

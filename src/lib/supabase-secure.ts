@@ -106,16 +106,13 @@ const checkRateLimit = (key: string, maxRequests = 60, windowMs = 60000): boolea
 }
 
 // Enhanced auth helper functions with validation
-export const signUp = async (email: string, password: string, fullName: string) => {
+export const signUp = async (email: string, password: string, fullName: string = '') => {
   try {
     // Validate inputs
     validateInput(email, validationSchemas.email, 'email')
     validateInput(password, validationSchemas.password, 'password')
     
     const sanitizedFullName = sanitizeInput.text(fullName, 100)
-    if (sanitizedFullName.length < 1) {
-      throw new Error('Full name is required')
-    }
     
     // Rate limiting
     const clientKey = `signup_${email}`
