@@ -1,7 +1,43 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { User, Session } from '@supabase/supabase-js'
-import { supabase, ensureProfileExists } from '../lib/supabase'
+import { User, Session, createClient } from '@supabase/supabase-js'
 import { setUserContext, clearUserContext, addBreadcrumb } from '../lib/sentry-utils'
+
+// Direct Supabase client to avoid conflicts with secure wrapper
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co'
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key'
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: true,
+    storage: typeof window !== 'undefined' ? window.localStorage : undefined,
+    flowType: 'pkce'
+  }
+})
+
+// Import ensureProfileExists separately
+const ensureProfileExists = async (userId: string, user: any) => {
+  try {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .single()
+
+    if (!profile) {
+      await supabase.from('profiles').insert([{
+        id: userId,
+        full_name: user.user_metadata?.full_name || '',
+        email: user.email,
+        avatar_url: user.user_metadata?.avatar_url || null,
+        created_at: new Date().toISOString()
+      }])
+    }
+  } catch (error) {
+    console.error('Error ensuring profile exists:', error)
+  }
+}
 
 interface AuthContextType {
   user: User | null
@@ -181,17 +217,33 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [])
 
   const signUp = async (email: string, password: string, fullName?: string) => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-        data: {
-          full_name: fullName || '',
+    try {
+      console.log('AuthContext signUp called with:', { email, hasPassword: !!password, fullName })
+      console.log('Supabase URL:', import.meta.env.VITE_SUPABASE_URL)
+      console.log('Has Supabase key:', !!import.meta.env.VITE_SUPABASE_ANON_KEY)
+      
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
+          data: {
+            full_name: fullName || '',
+          }
         }
+      })
+      
+      if (error) {
+        console.error('Supabase signUp error:', error)
+      } else {
+        console.log('Supabase signUp success:', data)
       }
-    })
-    return { data, error }
+      
+      return { data, error }
+    } catch (err) {
+      console.error('AuthContext signUp catch:', err)
+      return { data: null, error: err }
+    }
   }
 
   const signIn = async (email: string, password: string, rememberMe: boolean = true) => {
