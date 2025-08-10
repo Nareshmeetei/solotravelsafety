@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
               className="inline-block hover:scale-105 transition-transform duration-200"
             >
               <img 
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001050&theme=light&t=1754224930975" 
+                src="/product-hunt-featured-badge.svg" 
                 alt="Solo Travel Safety - Safety platform for solo female travelers, by solo travelers | Product Hunt" 
                 style={{ width: '250px', height: '54px' }} 
                 width="250" 
