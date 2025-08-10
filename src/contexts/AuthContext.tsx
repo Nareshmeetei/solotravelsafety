@@ -16,25 +16,10 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   }
 })
 
-// Simplified profile creation that doesn't fail signup
-const ensureProfileExists = async (userId: string, user: any) => {
-  try {
-    // Only try to create profile, don't block signup if it fails
-    await supabase.from('profiles').upsert([{
-      id: userId,
-      full_name: user.user_metadata?.full_name || '',
-      email: user.email,
-      avatar_url: user.user_metadata?.avatar_url || null,
-      updated_at: new Date().toISOString()
-    }], { 
-      onConflict: 'id',
-      ignoreDuplicates: true 
-    })
-  } catch (error) {
-    // Don't throw error - just log it so signup can continue
-    console.warn('Profile creation failed (non-blocking):', error)
-  }
-}
+// Remove profile creation entirely for now
+// const ensureProfileExists = async (userId: string, user: any) => {
+//   // Disabled - testing without profile creation
+// }
 
 interface AuthContextType {
   user: User | null
@@ -98,8 +83,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             username: session.user.user_metadata?.full_name || undefined,
           })
           addBreadcrumb('User authenticated', 'auth', { userId: session.user.id })
-          // Ensure profile exists for authenticated user (non-blocking)
-          ensureProfileExists(session.user.id, session.user).catch(console.error)
+          // Profile creation disabled for testing
         } else {
           setUser(null)
           setSession(null)
@@ -149,8 +133,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 username: session.user.user_metadata?.full_name || undefined,
               })
               addBreadcrumb('User signed in', 'auth', { userId: session.user.id })
-              // Ensure profile exists for newly signed in user (non-blocking)
-              ensureProfileExists(session.user.id, session.user).catch(console.error)
+              // Profile creation disabled for testing
             } else {
               setUser(null)
               setSession(null)
@@ -181,8 +164,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 email: session.user.email || undefined,
                 username: session.user.user_metadata?.username || session.user.user_metadata?.full_name || undefined,
               })
-              // Ensure profile exists when user gets updated (non-blocking)
-              ensureProfileExists(session.user.id, session.user).catch(console.error)
+              // Profile creation disabled for testing
             } else {
               setUser(null)
               setSession(null)
@@ -215,30 +197,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const signUp = async (email: string, password: string, fullName?: string) => {
     try {
-      console.log('AuthContext signUp called with:', { email, hasPassword: !!password, fullName })
-      console.log('Supabase URL:', import.meta.env.VITE_SUPABASE_URL)
-      console.log('Has Supabase key:', !!import.meta.env.VITE_SUPABASE_ANON_KEY)
-      
+      // Simplest possible signup - no profile creation, no extra options
       const { data, error } = await supabase.auth.signUp({
         email,
-        password,
-        options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
-          data: {
-            full_name: fullName || '',
-          }
-        }
+        password
       })
       
-      if (error) {
-        console.error('Supabase signUp error:', error)
-      } else {
-        console.log('Supabase signUp success:', data)
-      }
-      
+      console.log('Simple signup result:', { data, error })
       return { data, error }
     } catch (err) {
-      console.error('AuthContext signUp catch:', err)
+      console.error('Signup error:', err)
       return { data: null, error: err }
     }
   }
