@@ -85,11 +85,38 @@ const Hero: React.FC = () => {
               className="inline-block hover:scale-105 transition-transform duration-200"
             >
               <img 
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001050&theme=light&t=1754224930975" 
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001050&theme=light&t=1754224930976" 
                 alt="Solo Travel Safety - Safety platform for solo female travelers, by solo travelers | Product Hunt" 
                 style={{ width: '250px', height: '54px' }} 
                 width="250" 
-                height="54" 
+                height="54"
+                onError={(e) => {
+                  console.error('Product Hunt badge failed to load:', e);
+                  // Replace with a text fallback that still looks like a badge
+                  const target = e.currentTarget;
+                  target.style.display = 'none';
+                  const fallback = document.createElement('div');
+                  fallback.style.cssText = `
+                    width: 250px;
+                    height: 54px;
+                    background: linear-gradient(135deg, #ff6154 0%, #da552f 100%);
+                    border-radius: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-family: -apple-system, sans-serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-decoration: none;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  `;
+                  fallback.textContent = '🏆 FEATURED on Product Hunt';
+                  target.parentNode?.insertBefore(fallback, target);
+                }}
+                onLoad={() => {
+                  console.log('Product Hunt badge loaded successfully');
+                }}
               />
             </a>
           </div>

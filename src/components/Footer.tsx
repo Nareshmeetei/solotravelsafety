@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
               </button>
             </div>
             <p className="text-sm text-gray-500 transition-colors duration-300 hover:text-gray-600">
-              © 2025 SoloTravelSafety.com | Made with a lot of <span className="inline-block transition-all duration-500 transform hover:scale-110">{emojis[currentEmojiIndex]}</span> for fearless women travelers.
+              © 2025 SoloTravelSafety.com | Made with a lot of <span className="inline-block transition-all duration-500 transform scale-120 hover:scale-125">{emojis[currentEmojiIndex]}</span> for fearless women travelers.
             </p>
           </div>
         </div>
