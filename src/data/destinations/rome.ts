@@ -32,50 +32,92 @@ const rome: Destination = {
       safe: [
         {
           name: 'Vatican City',
-          description: 'Papal state with excellent security, Swiss Guard presence, and strict dress codes enforced. Generally safest area in Rome with minimal crime due to religious significance and heavy security. Tourist police patrol regularly and emergency response is immediate.'
+          description: 'Papal state with excellent security, Swiss Guard presence, and strict dress codes enforced. Generally safest area in Rome with minimal crime due to religious significance and heavy security. Tourist police patrol regularly and emergency response is immediate. Women report feeling very safe here day and night.'
+        },
+        {
+          name: 'Prati',
+          description: 'Located near the Vatican, this is one of the safest and cleanest neighborhoods in Rome. Residential area with elegant buildings, excellent restaurants, and minimal crime. Well-lit streets and good police presence. Popular with local families and considered ideal for solo female travelers.'
+        },
+        {
+          name: 'Monti',
+          description: 'A favorite neighborhood in the historic center, great for solo exploration. Hip area near Colosseum with excellent restaurants, boutique shops, and vibrant cultural scene. Well-patrolled and generally very safe, though pickpockets can target visitors walking to/from major attractions.'
         },
         {
           name: 'Trastevere (main areas)',
-          description: 'Charming neighborhood with good evening foot traffic and restaurant activity. Police presence adequate and locals generally helpful. Can get lively at night but serious crime rare. Cobblestone streets well-lit in main areas.'
+          description: 'Charming neighborhood with good evening foot traffic and restaurant activity. Popular with travelers for its charm and walkability. Can get lively at night but serious crime rare. Cobblestone streets well-lit in main areas. Stay on main streets after dark.'
         },
         {
           name: 'Spanish Steps Area',
-          description: 'Upscale shopping district with good police presence and security from luxury stores. High foot traffic during day and well-maintained streets. Tourist police patrol regularly due to high-value commercial activity.'
+          description: 'Upscale shopping district with good police presence and security from luxury stores. High foot traffic during day and well-maintained streets. Tourist police patrol regularly due to high-value commercial activity. One of the safest areas for evening dining and shopping.'
+        },
+        {
+          name: 'Centro Storico',
+          description: 'Historic center with major attractions like Pantheon and Piazza Navona. Draws massive crowds enabling pickpockets but has excellent tourist police presence. Well-lit and generally safe, but requires constant vigilance due to heavy tourist traffic.'
         }
       ],
       caution: [
-        'Monti: Hip area near Colosseum with increasing tourist activity. Generally safe but pickpockets target visitors walking to/from major attractions. Evening safety good but stay alert.',
-        'Campo de\' Fiori: Market area with active nightlife but can get rowdy late. Pickpockets common during market hours. Good police presence but harassment incidents reported.',
-        'Centro Storico: Historic center with major attractions draws massive crowds enabling pickpockets. Tourist police present but sheer volume of visitors makes vigilance essential.',
-        'Testaccio: Authentic neighborhood with great food scene but less tourist infrastructure. Generally safe but fewer police and less English spoken.'
+        'Campo de\' Fiori: Market area with active nightlife but can get rowdy late at night. Pickpockets common during market hours and harassment incidents reported in bars. Good police presence but avoid isolated areas after midnight.',
+        'Testaccio: Authentic neighborhood with great food scene but less tourist infrastructure. Generally safe but fewer police and less English spoken. Better during day than night for solo travelers.',
+        'Termini Station surroundings (day): While a major transit hub, pickpocketing is extremely common here. If staying near Termini, book well-reviewed hotels rather than cheapest options. Stay extra alert with belongings.',
+        'Trastevere (late night): Can become rowdy with drunk tourists late at night. Some harassment incidents reported in quieter side streets after midnight. Stick to main areas with good lighting.'
       ],
       avoid: [
-        'Termini Station surroundings at night: High crime area with drug activity, aggressive panhandlers, and frequent theft. Multiple safety warnings from local police.',
-        'Esquilino (some areas): Particularly around Via Giolitti and adjacent streets where petty crime and harassment more common, especially after dark.',
-        'Some peripheral areas: Outer districts with less security and police presence, particularly concerning for solo female travelers at night.'
+        'Termini Station surroundings at night: High crime area with drug activity, aggressive panhandlers, and frequent theft. Multiple safety warnings from local police. Not recommended for solo female travelers after 10 PM.',
+        'Esquilino district: Particularly around Via Giolitti and adjacent streets where petty crime and harassment more common, especially after dark. Higher crime rates compared to central areas.',
+        'San Basilio: Outer district with higher crime rates and less security. Not tourist-friendly and not recommended for visitors.',
+        'Corviale: Suburban area with social housing and higher crime rates. Avoid for safety reasons.',
+        'Tor Bella Monaca: Peripheral area with significant crime issues and drug activity. Stay away entirely.',
+        'Isolated areas of Villa Borghese at night: Large park that can be unsafe after dark in quieter sections.'
       ]
     },
     accommodations: [
       {
+        name: 'The Beehive',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Near Termini but safe area', 'Organized events', 'Signature aperitivos'],
+        rating: 9.1,
+        notes: 'Best hostel for female solo travelers, couples, and older travelers. Helps connect with fellow travelers and excellent safety record.',
+        link: 'https://the-beehive.com/'
+      },
+      {
+        name: 'The RomeHello Hostel',
+        type: 'hostel',
+        features: ['Women-only dorms', 'Near Piazza Barberini', 'Free WiFi', 'On-site bar', 'Private bathrooms'],
+        rating: 8.7,
+        notes: 'Highly rated for female solo travelers with excellent location and security measures.',
+        link: 'https://www.theromehello.com/'
+      },
+      {
+        name: 'Ostello Bello Roma Colosseo',
+        type: 'hostel',
+        features: ['Female dorms', 'Social atmosphere', 'Near Colosseum', 'Community events'],
+        rating: 8.9,
+        notes: 'Perfect for solo travelers eager to meet new friends. More than accommodation - it\'s an experience.',
+        link: 'https://www.ostellobello.com/'
+      },
+      {
+        name: 'MEININGER Roma Termini',
+        type: 'hostel',
+        features: ['Female-only rooms', 'Modern facilities', 'Central location', 'High security'],
+        rating: 8.5,
+        notes: 'Recommended for couples and solo travelers with modern amenities and safety features.',
+        link: 'https://www.meininger-hotels.com/'
+      },
+      {
+        name: 'JO&JOE Roma',
+        type: 'hostel',
+        features: ['Female dorms', 'Digital nomad friendly', 'Co-working spaces', 'Rooftop terrace'],
+        rating: 8.3,
+        notes: 'Good for digital nomads and solo travelers with excellent facilities and networking opportunities.',
+        link: 'https://www.joandjoe.com/'
+      },
+      {
         name: 'Hotel Artemide',
         type: 'hotel',
-        features: ['24-hour front desk security', 'Central location near Termini', 'Female-only floors available', 'Rooftop terrace with security'],
-        rating: 4.4,
-        notes: 'Upscale hotel with excellent security measures and female-friendly policies. Staff trained in solo female traveler safety.'
-      },
-      {
-        name: 'The RomeHello',
-        type: 'hostel',
-        features: ['Women-only dorms', 'Keycard access', '24-hour reception', 'Lockers in rooms', 'Female staff available'],
-        rating: 4.2,
-        notes: 'Popular female-friendly hostel with strong security measures and solo traveler community.'
-      },
-      {
-        name: 'Regulated Airbnb (Trastevere/Vatican areas)',
-        type: 'airbnb',
-        features: ['Tourist tax compliance', 'Secure building entry', 'Host verification required', 'Tourist registration mandatory'],
-        rating: 4.0,
-        notes: 'Choose apartments in tourist-registered buildings with secure access and verified hosts only.'
+        features: ['24-hour front desk security', 'Female-only floors available', 'Rooftop terrace', 'Central location'],
+        rating: 8.6,
+        notes: 'Upscale hotel with excellent security measures and female-friendly policies. Staff trained in solo female traveler safety.',
+        link: 'https://www.hotelartemide.it/'
       }
     ],
     alerts: [
@@ -421,11 +463,398 @@ const rome: Destination = {
       source: 'US State Department',
       lastUpdated: '2024-12-01',
       details: 'Exercise normal precautions in Italy. Some areas have increased risk due to terrorism and crime.',
+      reason: 'Petty theft and scams targeting tourists.',
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/italy-travel-advisory.html',
       soloTravelerAdvice: [
-        'Remain vigilant in tourist areas where pickpocketing is common',
-        'Avoid demonstrations and large gatherings',
-        'Be aware of your surroundings when using public transportation',
-        'Keep emergency contact information readily available'
+        'Safe for solo female travelers with proper precautions - excellent for first-time solo travelers',
+        'Stay in Prati, Monti, or Trastevere for best walkability and safety',
+        'Avoid Termini station area at night and peripheral neighborhoods',
+        'Use official transport apps and avoid unlicensed taxis',
+        'Carry anti-theft bags and be extra vigilant on metro and Bus 64'
+      ]
+    },
+    culturalDos: [
+      'Dress modestly for churches.',
+      'Learn basic Italian phrases.',
+      'Greet with "Buongiorno/Buonasera".',
+      'Tip 5-10% at restaurants.',
+      'Walk with confidence and purpose.'
+    ],
+    culturalDonts: [
+      "Don't wear revealing clothes near churches.",
+      "Don't drink cappuccino after 11 AM.",
+      "Don't ignore dress codes.",
+      "Don't show expensive jewelry.",
+      "Don't walk alone in isolated areas at night."
+    ],
+    womensConfidenceScore: {
+      score: 63.9,
+      source: "Safearound & Numbeo 2025",
+      sourceUrl: "https://www.numbeo.com/crime/in/Rome"
+    },
+    confidenceByActivity: [
+      { label: 'Sightseeing', confidence: 85, source: 'A Single Woman Traveling 2025', sourceUrl: 'https://asinglewomantraveling.com/is-rome-safe-for-solo-female-travelers/' },
+      { label: 'Nightlife', confidence: 45, source: 'Travel Ladies 2025', sourceUrl: 'https://travelladies.app/safety/italy/rome' },
+      { label: 'Public Transport', confidence: 35, source: 'Globe Gazers 2025', sourceUrl: 'https://www.globe-gazers.com/is-rome-safe/' },
+      { label: 'Dining Alone', confidence: 78, source: 'Roman Vacations 2025', sourceUrl: 'https://roman-vacations.com/a-solo-female-travellers-guide-to-staying-safe-in-rome/' }
+    ],
+    transportationSafety: {
+      safeOptions: [
+        {
+          type: 'Uber',
+          safety: 8.5,
+          recommendations: ['Use official app for booking', 'Check license plate', 'Share trip details'],
+          companies: ['Uber'],
+          link: 'https://www.uber.com/it/en/'
+        },
+        {
+          type: 'FreeNow (Taxi App)',
+          safety: 8.2,
+          recommendations: ['Official taxi booking app', 'Fixed pricing', 'Track your ride'],
+          companies: ['FreeNow'],
+          link: 'https://free-now.com/it/'
+        },
+        {
+          type: 'Official White Taxis',
+          safety: 7.8,
+          recommendations: ['Only use metered white taxis', 'Avoid street touts', 'Get receipt'],
+          companies: ['Rome Official Taxis'],
+          link: 'https://www.comune.roma.it/web/it/taxi.page'
+        },
+        {
+          type: 'ATAC (Public Transport)',
+          safety: 6.5,
+          recommendations: ['Validate tickets immediately', 'Avoid during rush hour', 'Stay alert for pickpockets'],
+          companies: ['ATAC'],
+          link: 'https://www.atac.roma.it/en'
+        }
+      ],
+      nightTravel: {
+        safety: 4.8,
+        warnings: [
+          'Avoid metro after 10 PM - harassment and theft increase',
+          'Termini station area dangerous at night',
+          'Use taxis instead of walking alone after midnight',
+          'Avoid isolated bus stops and metro stations'
+        ],
+        alternatives: [
+          'Night buses available but limited routes',
+          'Uber and taxi services available 24/7',
+          'Stay in well-lit tourist areas',
+          'Book accommodations near metro stations you\'ll use'
+        ]
+      },
+      verifiedProviders: [
+        {
+          name: 'Uber',
+          type: 'Ride-sharing',
+          contact: 'App-based',
+          safety: 8.5
+        },
+        {
+          name: 'FreeNow',
+          type: 'Taxi App',
+          contact: 'App-based',
+          safety: 8.2
+        },
+        {
+          name: 'Rome Official Taxis',
+          type: 'Traditional Taxi',
+          contact: '+39 06 3570',
+          safety: 7.8
+        },
+        {
+          name: 'ATAC',
+          type: 'Public Transport',
+          contact: '+39 06 57003',
+          safety: 6.5
+        }
+      ]
+    },
+    accommodationSafety: {
+      securityFeatures: [
+        '24/7 front desk reception',
+        'Electronic keycard access',
+        'CCTV surveillance in common areas',
+        'Secure luggage storage',
+        'In-room safes',
+        'Well-lit entrances and corridors'
+      ],
+      safeNeighborhoods: [
+        'Prati',
+        'Monti',
+        'Trastevere (main areas)',
+        'Vatican area',
+        'Spanish Steps area',
+        'Centro Storico'
+      ],
+      womensOnly: [
+        {
+          name: 'The Beehive',
+          type: 'Hostel',
+          features: ['Female-only dorms', 'Organized social events', 'Safe area', 'Experienced staff'],
+          rating: 4.8
+        },
+        {
+          name: 'The RomeHello Hostel',
+          type: 'Hostel',
+          features: ['Women-only dorms', 'Central location', 'Modern facilities', '24/7 security'],
+          rating: 4.6
+        }
+      ],
+      userReviews: [
+        {
+          rating: 4.5,
+          safety: 8.5,
+          comments: 'Felt safe as a solo female traveler. Staff was helpful and area was well-patrolled.',
+          date: '2025-01-15'
+        },
+        {
+          rating: 4.3,
+          safety: 8.2,
+          comments: 'Good security measures but be careful with belongings in common areas.',
+          date: '2025-01-10'
+        },
+        {
+          rating: 4.4,
+          safety: 8.3,
+          comments: 'Great location and female-friendly environment. Would recommend for solo travelers.',
+          date: '2025-01-08'
+        }
+      ]
+    },
+    cybersecurity: {
+      wifiSafety: [
+        'Use accommodation WiFi when possible',
+        'Avoid public WiFi for banking/personal accounts',
+        'Use VPN when connecting to public networks',
+        'Enable two-factor authentication',
+        'Keep devices updated with security patches'
+      ],
+      digitalScams: [
+        'Fake booking websites - verify hotel bookings directly',
+        'Phishing emails claiming to be from Italian authorities',
+        'Fake police emails requesting personal information',
+        'Social media scams offering free tours',
+        'Fake taxi booking apps'
+      ],
+      vpnRecommendations: [
+        'NordVPN - reliable for Italy',
+        'ExpressVPN - good for streaming',
+        'ProtonVPN - free tier available',
+        'Use VPN when accessing sensitive accounts'
+      ],
+      dataProtection: [
+        'GDPR compliance in Italy provides data protection',
+        'Avoid sharing personal info with strangers',
+        'Use credit cards over cash when possible',
+        'Keep document copies in secure cloud storage',
+        'Enable device tracking and remote wipe'
+      ]
+    },
+    communityReports: {
+      recentIncidents: [
+        {
+          type: 'Metro Pickpocketing',
+          location: 'Metro Line A, Termini Station',
+          date: '2025-01-20',
+          description: 'Organized pickpocket gangs targeting tourists during rush hour',
+          severity: 'high'
+        },
+        {
+          type: 'Bus 64 Theft',
+          location: 'Bus 64 to Vatican',
+          date: '2025-01-18',
+          description: 'Multiple reports of theft using distraction techniques',
+          severity: 'high'
+        },
+        {
+          type: 'Fake Petition Scam',
+          location: 'Colosseum, Trevi Fountain',
+          date: '2025-01-15',
+          description: 'Groups with clipboards distracting tourists while accomplices steal',
+          severity: 'medium'
+        }
+      ],
+      safetyTips: [
+        {
+          tip: 'Carry your bag in front on public transport and never put phone in back pockets',
+          author: 'Solo Female Traveler',
+          date: '2025-01-22',
+          upvotes: 67
+        },
+        {
+          tip: 'Avoid Metro Line A during rush hour - use surface transport when possible',
+          author: 'Local Resident',
+          date: '2025-01-21',
+          upvotes: 54
+        },
+        {
+          tip: 'Never sign petitions from strangers - it\'s always a pickpocket distraction',
+          author: 'Tourist Police',
+          date: '2025-01-20',
+          upvotes: 89
+        },
+        {
+          tip: 'Use official taxi stands or apps - avoid taxi touts near tourist sites',
+          author: 'Travel Guide',
+          date: '2025-01-19',
+          upvotes: 43
+        }
+      ]
+    },
+    personalSafetyTools: {
+      recommendedDevices: [
+        'Anti-theft crossbody bag with RFID blocking',
+        'Personal safety alarm',
+        'Door stop alarm for hotel rooms',
+        'Hidden money belt',
+        'Portable door lock',
+        'Emergency whistle'
+      ],
+      safetyApps: [
+        {
+          name: 'Roma Mobilità (ATAC)',
+          purpose: 'Official Rome transport app with safety features',
+          rating: 4.2
+        },
+        {
+          name: 'bSafe Personal Safety',
+          purpose: 'Emergency SOS and location sharing',
+          rating: 4.5
+        },
+        {
+          name: 'TripWhistle Global SOS',
+          purpose: 'Emergency services access with local numbers',
+          rating: 4.3
+        },
+        {
+          name: 'Citymapper Rome',
+          purpose: 'Navigation with safety route options',
+          rating: 4.6
+        },
+        {
+          name: 'Moovit',
+          purpose: 'Public transport with real-time updates',
+          rating: 4.4
+        }
+      ],
+      emergencyContacts: [
+        {
+          name: 'Emergency Services',
+          number: '112',
+          type: 'Police/Fire/Ambulance'
+        },
+        {
+          name: 'Police',
+          number: '113',
+          type: 'Police Only'
+        },
+        {
+          name: 'Tourist Police',
+          number: '+39 06 46862371',
+          type: 'Tourist Assistance'
+        },
+        {
+          name: 'Anti-Violence Helpline',
+          number: '1522',
+          type: 'Women\'s Support (24/7)'
+        },
+        {
+          name: 'US Embassy',
+          number: '+39 06 46741',
+          type: 'Consular Services'
+        }
+      ]
+    },
+    usefulTips: [
+      {
+        title: 'Master the Art of Pickpocket Prevention',
+        description: 'Pickpocketing is Rome\'s biggest safety concern. Use anti-theft bags, keep valuables in front pockets, and be extra cautious on Metro Line A and Bus 64. Never sign petitions from strangers - it\'s always a distraction technique.',
+        severity: 'high',
+        sourceName: 'A Single Woman Traveling',
+        sourceUrl: 'https://asinglewomantraveling.com/is-rome-safe-for-solo-female-travelers/'
+      },
+      {
+        title: 'Navigate Public Transport Safely',
+        description: 'Rome\'s metro and buses require constant vigilance. Avoid Metro after 10 PM, validate tickets immediately, and keep bags in front during rush hour. Consider surface transport when possible.',
+        severity: 'medium',
+        sourceName: 'Roman Vacations',
+        sourceUrl: 'https://roman-vacations.com/a-solo-female-travellers-guide-to-staying-safe-in-rome/'
+      },
+      {
+        title: 'Handle Street Harassment Confidently',
+        description: 'Italian "Ciao bella" catcalls are common but usually harmless. Ignore them completely and keep walking. Most interactions are respectful, but persistent attention is possible.',
+        severity: 'low',
+        sourceName: 'Travel Ladies',
+        sourceUrl: 'https://travelladies.app/safety/italy/rome'
+      },
+      {
+        title: 'Choose Safe Areas and Avoid Tourist Scams',
+        description: 'Stay in Prati, Monti, or Trastevere neighborhoods. Avoid Termini area at night and never engage with fake police, petition scammers, or street vendors forcing purchases.',
+        severity: 'medium',
+        sourceName: 'Globe Gazers',
+        sourceUrl: 'https://www.globe-gazers.com/is-rome-safe/'
+      }
+    ],
+    costAndComfort: {
+      dailyBudget: {
+        range: '$55 - $85 USD / day',
+        description: 'Covers safe accommodation, meals, transport, and attractions at a comfortable level.',
+        tip: 'Mid-range budget provides safer options and better locations for solo female travelers.'
+      },
+      accommodation: [
+        {
+          type: 'Women-only Hostel',
+          avgCost: '$25-35',
+          safetyNote: 'Best safety option on a budget',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Budget Hotel',
+          avgCost: '$45-65',
+          safetyNote: 'Good safety in central areas - avoid Termini budget options',
+          safetyLevel: 'medium'
+        },
+        {
+          type: 'Mid-range Hotel',
+          avgCost: '$70+',
+          safetyNote: 'Excellent safety with 24/7 staff and secure locations',
+          safetyLevel: 'high'
+        }
+      ],
+      transport: [
+        {
+          method: 'Public Transit',
+          cost: '$3-6/day',
+          safetyDescription: 'Requires constant vigilance. Pickpocketing common.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Uber/Taxi Apps',
+          cost: '$10-20/ride',
+          safetyDescription: 'Safest option, especially at night.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Official Taxis',
+          cost: '$15-30/ride',
+          safetyDescription: 'Safe but can be expensive. Use metered white taxis only.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Walking',
+          cost: 'Free',
+          safetyDescription: 'Safe in tourist areas during day | Caution at night',
+          safetyLevel: 'medium'
+        }
+      ],
+      budgetTips: [
+        'Spending more on central, safe neighborhoods is worth it',
+        'Choose accommodations with 24/7 reception',
+        'Budget for taxis at night instead of public transport',
+        'Anti-theft bags are a worthwhile investment',
+        'Travel insurance essential for peace of mind'
       ]
     }
 };
