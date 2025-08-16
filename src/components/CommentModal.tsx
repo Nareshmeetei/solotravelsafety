@@ -422,23 +422,36 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      style={{backgroundColor: 'rgba(40, 40, 40, 0.5)'}}
       onClick={handleBackdropClick}
     >
-      <div className="relative w-full max-w-2xl mx-4 bg-white rounded-2xl shadow-xl max-h-[80vh] flex flex-col">
+      <div 
+        className="relative w-full max-w-2xl rounded-3xl shadow-2xl max-h-[80vh] flex flex-col overflow-hidden"
+        style={{backgroundColor: '#EFEAFF'}}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <h2 className="text-xl font-display text-gray-900">Comments</h2>
+        <div className="relative px-6 pt-6 pb-4 bg-gradient-to-r from-primary-50 to-primary-100">
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-full hover:bg-white/20"
           >
-            <X className="h-5 w-5 text-gray-600" />
+            <X className="w-5 h-5" />
           </button>
+          
+          <div className="text-center">
+            <h2 className="text-2xl font-display font-normal text-gray-900 mb-2">
+              Comments
+            </h2>
+            <p className="text-sm text-gray-600">
+              Join the conversation and share your thoughts
+            </p>
+          </div>
         </div>
 
         {/* Chirp Preview */}
-        <div className="p-6 border-b border-gray-100 bg-gray-50">
+        <div className="px-6 pb-0 pt-4 border-b border-gray-100 bg-white/60">
           <div className="flex items-start space-x-3">
             <UserAvatar user={chirp.user} size="sm" />
             <div className="flex-1">
@@ -453,7 +466,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
         </div>
 
         {/* Comments List */}
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto px-6 py-4 bg-white/40">
           {isLoading ? (
             <div className="flex items-center justify-center py-8">
               <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
@@ -574,7 +587,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
                           <textarea
                             value={editCommentText}
                             onChange={(e) => setEditCommentText(e.target.value)}
-                            className="w-full p-2 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent text-sm"
+                            className="w-full p-3 border border-gray-300 rounded-full resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors text-sm"
                             rows={2}
                             maxLength={500}
                           />
@@ -586,7 +599,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
                               <button
                                 onClick={() => handleEditComment(comment.id)}
                                 disabled={isEditing || !editCommentText.trim()}
-                                className="flex items-center space-x-1 px-3 py-1 bg-blue-600 text-white rounded-lg text-xs font-medium hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="flex items-center space-x-1 px-3 py-1 bg-primary-400 text-white rounded-full text-xs font-medium hover:bg-primary-500 focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                               >
                                 {isEditing ? (
                                   <Loader2 className="h-3 w-3 animate-spin" />
@@ -598,7 +611,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
                               <button
                                 onClick={cancelEditing}
                                 disabled={isEditing}
-                                className="flex items-center space-x-1 px-3 py-1 bg-gray-500 text-white rounded-lg text-xs font-medium hover:bg-gray-600 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="flex items-center space-x-1 px-3 py-1 bg-gray-500 text-white rounded-full text-xs font-medium hover:bg-gray-600 focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                               >
                                 <XIcon className="h-3 w-3" />
                                 <span>Cancel</span>
@@ -624,7 +637,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
 
         {/* Comment Input */}
         {user && (
-          <div className="p-6 border-t border-gray-200">
+          <div className="px-6 pb-6 pt-4 border-t border-gray-200 bg-white/60">
             <div className="flex items-end space-x-3">
               <UserAvatar user={user} size="sm" />
               <div className="flex-1">
@@ -632,7 +645,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   placeholder="Write a comment..."
-                  className="w-full p-3 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-full resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
                   rows={2}
                   maxLength={500}
                 />
@@ -643,7 +656,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
                   <button
                     onClick={handlePostComment}
                     disabled={isPosting || !comment.trim()}
-                    className="flex items-center space-x-2 px-4 py-2 bg-primary-400 text-white rounded-full text-sm font-medium hover:bg-primary-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex items-center space-x-2 px-4 py-2 bg-primary-400 text-white rounded-full text-sm font-medium hover:bg-primary-500 focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isPosting ? (
                       <>
