@@ -1,14 +1,6 @@
-import React, { useState } from 'react'
-import { X, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { X, Eye, EyeOff, Loader2, Mail, ArrowLeft } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
-import { useNavigate } from 'react-router-dom'
-import { resendConfirmation } from '../lib/supabase'
-import { signUpSchema, signInSchema, validateAndSanitize } from '../lib/validation'
-import { sanitizeEmail, containsMaliciousContent } from '../lib/sanitize'
-import { useAuthRateLimit } from '../hooks/useRateLimit'
-import { AuthRateLimitStatus } from './RateLimitStatus'
-import { getAuthErrorMessage, getValidationErrorMessage, logError } from '../lib/error-handling'
-import PasswordStrengthIndicator from './PasswordStrengthIndicator'
 
 interface AuthModalProps {
   isOpen: boolean
@@ -16,414 +8,445 @@ interface AuthModalProps {
   initialMode?: 'signin' | 'signup'
 }
 
+type AuthMode = 'signin' | 'signup' | 'verify' | 'forgot'
+
 const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 'signin' }) => {
-  const [mode, setMode] = useState<'signin' | 'signup' | 'confirm-email'>(initialMode)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [mode, setMode] = useState<AuthMode>(initialMode)
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
-  const [success, setSuccess] = useState('')
-  const [resendingConfirmation, setResendingConfirmation] = useState(false)
-  const [rememberMe, setRememberMe] = useState(true) // Default to true for social media-style UX
-  const navigate = useNavigate()
+  const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
+  
+  // Form states
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [rememberMe, setRememberMe] = useState(false)
+  
+  const { signIn, signUp, signInWithGoogle, resendVerification } = useAuth()
 
-  const { signIn, signUp } = useAuth()
-  const { trackRequest } = useAuthRateLimit(() => {
-    setError('Too many authentication attempts. Please try again later.')
-  })
+  // Reset form when mode changes
+  const resetForm = () => {
+    setEmail('')
+    setPassword('')
+    setError(null)
+    setSuccess(null)
+    setShowPassword(false)
+  }
 
-  // Update mode when initialMode changes
-  React.useEffect(() => {
-    setMode(initialMode)
-  }, [initialMode])
+  // Update mode when initialMode prop changes
+  useEffect(() => {
+    if (isOpen && initialMode !== mode) {
+      setMode(initialMode)
+      resetForm()
+    }
+  }, [isOpen, initialMode, mode])
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    // Check rate limit before proceeding
-    if (!trackRequest()) {
-      setLoading(false)
-      return
+  const switchMode = (newMode: AuthMode) => {
+    resetForm()
+    setMode(newMode)
+  }
+
+  const handleClose = () => {
+    resetForm()
+    setLoading(false)
+    onClose()
+  }
+
+  const validateForm = () => {
+    if (!email.trim()) {
+      setError('Email address is required')
+      return false
     }
     
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email.trim())) {
+      setError('Please enter a valid email address')
+      return false
+    }
+
+
+    if ((mode === 'signin' || mode === 'signup') && !password) {
+      setError('Password is required')
+      return false
+    }
+
+    if (mode === 'signup' && password.length < 6) {
+      setError('Password must be at least 6 characters long')
+      return false
+    }
+
+    return true
+  }
+
+  const handleSignUp = async () => {
+    if (!validateForm()) return
+
     setLoading(true)
-    setError('')
-    setSuccess('')
+    setError(null)
 
     try {
-      if (mode === 'signup') {
-        // Validate and sanitize signup data
-        const signupData = {
-          email: sanitizeEmail(email),
-          password
-        }
-
-        // Check for malicious content
-        if (containsMaliciousContent(email)) {
-          setError('Invalid characters detected. Please use only letters, numbers, and common symbols.')
-          setLoading(false)
-          return
-        }
-
-        // Validate with Zod schema
-        const validation = validateAndSanitize(signUpSchema, signupData)
-        if (!validation.success) {
-          setError(getValidationErrorMessage(validation.errors))
-          setLoading(false)
-          return
-        }
-
-        const { error } = await signUp(validation.data.email, validation.data.password)
-        if (error) {
-          logError(error, 'AuthModal SignUp')
-          setError(getAuthErrorMessage(error, 'signUp'))
-        } else {
-          // Always show email confirmation screen after signup
-          setMode('confirm-email')
-          setSuccess('Please check your email and click the confirmation link to complete your registration.')
-        }
+      const result = await signUp(email.trim(), password, '')
+      
+      if (result.error) {
+        setError(result.error.message)
       } else {
-        // Validate and sanitize signin data
-        const signinData = {
-          email: sanitizeEmail(email),
-          password
-        }
-
-        // Check for malicious content
-        if (containsMaliciousContent(email)) {
-          setError('Invalid characters detected. Please use only letters, numbers, and common symbols.')
-          setLoading(false)
-          return
-        }
-
-        // Validate with Zod schema
-        const validation = validateAndSanitize(signInSchema, signinData)
-        if (!validation.success) {
-          setError(getValidationErrorMessage(validation.errors))
-          setLoading(false)
-          return
-        }
-
-        const { error } = await signIn(validation.data.email, validation.data.password, rememberMe)
-        if (error) {
-          logError(error, 'AuthModal SignIn')
-          const errorMessage = getAuthErrorMessage(error, 'signIn')
-          
-          // Handle email confirmation case
-          if (error.message.includes('Email not confirmed') || error.message.includes('confirm your email')) {
-            setMode('confirm-email')
-            setError(errorMessage)
-          } else {
-            setError(errorMessage)
-          }
-        } else {
-          onClose()
-          navigate('/destinations')
-        }
+        const successMessage = result.message || 'Account created successfully! Please check your email for a verification link.'
+        setSuccess(successMessage)
+        
+        // Always show verification screen after successful signup
+        setMode('verify')
       }
-    } catch (err) {
-      logError(err, 'AuthModal General')
-      setError('Something went wrong. Please try again.')
+    } catch (err: any) {
+      setError(err.message || 'An unexpected error occurred')
     } finally {
       setLoading(false)
     }
   }
 
-  const handleResendConfirmation = async () => {
-    if (!email) {
+  const handleSignIn = async () => {
+    if (!validateForm()) return
+
+    setLoading(true)
+    setError(null)
+
+    try {
+      const { data, error } = await signIn(email.trim(), password, rememberMe)
+      
+      if (error) {
+        if (error.status === 401 && error.message.includes('verify your email')) {
+          setMode('verify')
+          setSuccess('Please verify your email address before signing in.')
+        } else {
+          setError(error.message)
+        }
+      } else {
+        setSuccess('Welcome back! Signing you in...')
+        setTimeout(() => {
+          handleClose()
+        }, 1500)
+      }
+    } catch (err: any) {
+      setError(err.message || 'An unexpected error occurred')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleGoogleSignIn = async () => {
+    setLoading(true)
+    setError(null)
+
+    try {
+      const { data, error } = await signInWithGoogle()
+      
+      if (error) {
+        setError(error.message)
+      } else {
+        setSuccess('Redirecting to Google...')
+        // OAuth redirect will handle the rest
+      }
+    } catch (err: any) {
+      setError(err.message || 'An unexpected error occurred')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleResendVerification = async () => {
+    if (!email.trim()) {
       setError('Please enter your email address')
       return
     }
 
-    // Check rate limit before proceeding
-    if (!trackRequest()) {
-      return
-    }
-
-    // Sanitize email before sending
-    const sanitizedEmail = sanitizeEmail(email)
-    if (!sanitizedEmail) {
-      setError('Please enter a valid email address')
-      return
-    }
-
-    // Check for malicious content
-    if (containsMaliciousContent(email)) {
-      setError('Invalid email address detected.')
-      return
-    }
-
-    setResendingConfirmation(true)
-    setError('')
-    setSuccess('')
+    setLoading(true)
+    setError(null)
 
     try {
-      const { error } = await resendConfirmation(sanitizedEmail)
+      const { data, error } = await resendVerification(email.trim())
+      
       if (error) {
-        logError(error, 'AuthModal ResendConfirmation')
-        setError(getAuthErrorMessage(error, 'emailConfirmation'))
+        setError(error.message)
       } else {
-        setSuccess('Confirmation email sent! Please check your inbox.')
+        setSuccess('Verification email sent! Please check your inbox.')
       }
-    } catch (err) {
-      logError(err, 'AuthModal ResendConfirmation')
-      setError('Unable to send confirmation email. Please try again.')
+    } catch (err: any) {
+      setError(err.message || 'An unexpected error occurred')
     } finally {
-      setResendingConfirmation(false)
+      setLoading(false)
     }
   }
 
-  const resetForm = () => {
-            setEmail('')
-        setPassword('')
-    setError('')
-    setSuccess('')
-    setShowPassword(false)
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (loading) return
 
-  const switchMode = () => {
-    if (mode === 'confirm-email') {
-      setMode('signin')
-    } else {
-      setMode(mode === 'signin' ? 'signup' : 'signin')
+    switch (mode) {
+      case 'signin':
+        await handleSignIn()
+        break
+      case 'signup':
+        await handleSignUp()
+        break
+      case 'verify':
+        await handleResendVerification()
+        break
     }
-    resetForm()
   }
 
   if (!isOpen) return null
 
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose();
+  const getTitle = () => {
+    switch (mode) {
+      case 'signin':
+        return 'Welcome back'
+      case 'signup':
+        return 'Join Solo Travel Safety'
+      case 'verify':
+        return 'Verify your email'
+      case 'forgot':
+        return 'Reset password'
+      default:
+        return 'Authentication'
     }
-  };
+  }
+
+  const getSubtitle = () => {
+    switch (mode) {
+      case 'signin':
+        return 'Sign in to access your personalized safety insights'
+      case 'signup':
+        return 'Create your account to start sharing and discovering travel safety tips'
+      case 'verify':
+        return 'We sent a verification link to your email address'
+      case 'forgot':
+        return 'Enter your email to receive reset instructions'
+      default:
+        return ''
+    }
+  }
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
-      onClick={handleBackdropClick}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm" 
+      style={{backgroundColor: 'rgba(40, 40, 40, 0.5)'}}
+      onClick={handleClose}
     >
-      <div className="relative w-full max-w-md mx-4 bg-white rounded-2xl shadow-xl animate-fade-in">
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors duration-300 hover:scale-110"
-        >
-          <X className="h-5 w-5" />
-        </button>
-
+      <div 
+        className="w-full max-w-md rounded-3xl shadow-2xl overflow-hidden" 
+        style={{backgroundColor: '#EFEAFF'}}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
-        <div className="p-6 pb-4">
-          <h2 className="text-2xl font-black text-gray-900 mb-2">
-            {mode === 'signin' ? 'Welcome Back' : 
-             mode === 'signup' ? 'Join the Safety Squad' : 
-             'Check Your Email'}
-          </h2>
-          <p className="text-gray-600">
-            {mode === 'signin' 
-              ? 'Sign in to share your travel experiences' 
-              : mode === 'signup'
-              ? 'Yes, you belong here.'
-              : 'We sent you a confirmation link'
-            }
-          </p>
+        <div className="relative px-6 pt-6 pb-4 bg-gradient-to-r from-primary-50 to-primary-100">
+          <button
+            onClick={handleClose}
+            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-full hover:bg-white/20"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          
+          <div className="text-center">
+            <h2 className="text-2xl font-display font-normal text-gray-900 mb-2">
+              {getTitle()}
+            </h2>
+            <p className="text-sm text-gray-600">
+              {getSubtitle()}
+            </p>
+          </div>
         </div>
 
-        {/* Email Confirmation View */}
-        {mode === 'confirm-email' && (
-          <div className="px-6 pb-6">
-            <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-8 w-8 text-green-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Confirm Your Email</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                We sent a confirmation link to <strong>{email}</strong>. 
-                Click the link in your email to activate your account and start exploring safely.
-              </p>
+        <div className="px-6 pb-6">
+          {/* Error Message */}
+          {error && (
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-full text-sm">
+              {error}
             </div>
+          )}
 
-            {success && (
-              <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm flex items-center">
-                <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0" />
-                {success}
-              </div>
-            )}
+          {/* Success Message */}
+          {success && (
+            <div className="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-full text-sm">
+              {success}
+            </div>
+          )}
 
-            {error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm flex items-center">
-                <AlertCircle className="h-4 w-4 mr-2 flex-shrink-0" />
-                {error}
-              </div>
-            )}
-
+          {/* Email Verification Mode */}
+          {mode === 'verify' && (
             <div className="space-y-4">
-              <button
-                onClick={handleResendConfirmation}
-                disabled={resendingConfirmation}
-                className="w-full px-6 py-3 bg-primary-400 hover:bg-primary-500 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {resendingConfirmation ? 'Sending...' : 'Resend Confirmation Email'}
-              </button>
-
-              <button
-                onClick={switchMode}
-                className="w-full px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300"
-              >
-                Back to Sign In
-              </button>
-            </div>
-
-            <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              <h4 className="font-semibold text-blue-900 mb-2">Didn't receive the email?</h4>
-              <ul className="text-sm text-blue-800 space-y-1">
-                <li>• Check your spam/junk folder</li>
-                <li>• Make sure you entered the correct email address</li>
-                <li>• Wait a few minutes for the email to arrive</li>
-                <li>• Click "Resend" if you still don't see it</li>
-              </ul>
-            </div>
-          </div>
-        )}
-
-        {/* Sign In/Sign Up Form */}
-        {mode !== 'confirm-email' && (
-          <form onSubmit={handleSubmit} className="px-6 pb-6">
-            {error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm flex items-center">
-                <AlertCircle className="h-4 w-4 mr-2 flex-shrink-0" />
-                {error}
-                {/* Show sign in suggestion for existing users */}
-                {error.includes('account with this email already exists') && (
-                  <div className="mt-2 pt-2 border-t border-red-200">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setMode('signin')
-                        setError('')
-                      }}
-                      className="text-red-800 underline hover:text-red-900 font-medium"
-                    >
-                      Switch to Sign In
-                    </button>
-                  </div>
-                )}
+              <div className="text-center py-6">
+                <Mail className="w-16 h-16 text-primary-400 mx-auto mb-4" />
+                <p className="text-gray-600 mb-4">
+                  Check your inbox and click the verification link to activate your account.
+                </p>
+                <p className="text-sm text-gray-500 mb-6">
+                  Didn't receive the email? Check your spam folder or request a new one.
+                </p>
               </div>
-            )}
 
-            {success && (
-              <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm flex items-center">
-                <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0" />
-                {success}
-              </div>
-            )}
-
-            {/* Rate Limit Status */}
-            <AuthRateLimitStatus className="mb-4" />
-
-            <div className="space-y-4">
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
                   <input
                     type="email"
-                    id="email"
+                    placeholder="Your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300"
-                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
                     required
                   />
                 </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-primary-400 text-white py-3 px-4 rounded-full font-medium hover:bg-primary-500 focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                >
+                  {loading ? (
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                  ) : (
+                    'Resend verification email'
+                  )}
+                </button>
+              </form>
+
+              <div className="text-center pt-4 border-t border-gray-200">
+                <button
+                  onClick={() => switchMode('signin')}
+                  className="text-primary-400 hover:text-primary-500 font-medium text-sm inline-flex items-center"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-1" />
+                  Back to sign in
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Sign In/Sign Up Forms */}
+          {(mode === 'signin' || mode === 'signup') && (
+            <div className="space-y-6">
+              {/* Google Sign In */}
+              <button
+                onClick={handleGoogleSignIn}
+                disabled={loading}
+                className="w-full flex items-center justify-center px-4 py-3 bg-gray-50 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-transparent focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                Continue with Google
+              </button>
+
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 text-gray-500" style={{backgroundColor: '#EFEAFF'}}>Or continue with email</span>
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                  Password
-                </label>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
+                    required
+                  />
+                </div>
+
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                   <input
                     type={showPassword ? 'text' : 'password'}
-                    id="password"
+                    placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300"
-                    placeholder="Enter your password"
+                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors"
                     required
-                    minLength={6}
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-300"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                   >
-                    {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                    {showPassword ? (
+                      <EyeOff className="w-5 h-5" />
+                    ) : (
+                      <Eye className="w-5 h-5" />
+                    )}
                   </button>
                 </div>
-                {mode === 'signup' && password.length > 0 && (
-                  <PasswordStrengthIndicator 
-                    password={password} 
-                    className="mt-3" 
-                  />
+
+                {mode === 'signin' && (
+                  <div className="flex items-center justify-between">
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={rememberMe}
+                        onChange={(e) => setRememberMe(e.target.checked)}
+                        className="rounded border-gray-300 text-primary-400 focus:ring-primary-400"
+                      />
+                      <span className="ml-2 text-sm text-gray-600">Remember me</span>
+                    </label>
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-primary-400 text-white py-3 px-4 rounded-full font-medium hover:bg-primary-500 focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                >
+                  {loading ? (
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                  ) : mode === 'signin' ? (
+                    'Sign in'
+                  ) : (
+                    'Create account'
+                  )}
+                </button>
+              </form>
+
+              {/* Mode Switcher */}
+              <div className="text-center text-sm text-gray-600">
+                {mode === 'signin' ? (
+                  <>
+                    Don't have an account?{' '}
+                    <button
+                      onClick={() => switchMode('signup')}
+                      className="text-primary-400 hover:text-primary-500 font-medium"
+                    >
+                      Sign up
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    Already have an account?{' '}
+                    <button
+                      onClick={() => switchMode('signin')}
+                      className="text-primary-400 hover:text-primary-500 font-medium"
+                    >
+                      Sign in
+                    </button>
+                  </>
                 )}
               </div>
 
-              {/* Remember Me checkbox - only show for sign in */}
-              {mode === 'signin' && (
-                <div className="flex items-center justify-between">
-                  <label className="flex items-center space-x-2 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={rememberMe}
-                      onChange={(e) => setRememberMe(e.target.checked)}
-                      className="w-4 h-4 text-primary-400 border-gray-300 rounded focus:ring-primary-400 focus:ring-2"
-                    />
-                    <span className="text-sm text-gray-700">Keep me signed in</span>
-                  </label>
-                  <button
-                    type="button"
-                    className="text-sm text-primary-400 hover:text-primary-500 transition-colors duration-300"
-                    onClick={() => {
-                      // TODO: Implement forgot password functionality
-                      setError('Password reset functionality coming soon!')
-                    }}
-                  >
-                    Forgot password?
-                  </button>
+              {mode === 'signup' && (
+                <div className="text-xs text-gray-500 text-center leading-relaxed">
+                  By creating an account, you agree to our{' '}
+                  <a href="/terms" className="text-primary-400 hover:text-primary-500">Terms of Service</a>
+                  {' '}and{' '}
+                  <a href="/privacy" className="text-primary-400 hover:text-primary-500">Privacy Policy</a>
                 </div>
               )}
             </div>
-
-
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full mt-6 bg-primary-400 hover:bg-primary-500 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {loading ? 'Please wait...' : (mode === 'signin' ? 'Sign In' : 'Create Account')}
-            </button>
-
-            <div className="mt-4 text-center">
-              <button
-                type="button"
-                onClick={switchMode}
-                className="text-primary-400 hover:text-primary-500 font-medium transition-colors duration-300"
-              >
-                {mode === 'signin' 
-                  ? "Don't have an account? Sign up" 
-                  : 'Already have an account? Sign in'
-                }
-              </button>
-            </div>
-          </form>
-        )}
+          )}
+        </div>
       </div>
     </div>
   )

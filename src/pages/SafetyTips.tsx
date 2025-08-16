@@ -259,10 +259,10 @@ const SafetyTips: React.FC = () => {
               <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-primary-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-display text-gray-900 mb-3 sm:mb-4 animate-fade-in-up">
-              Safety Tips
+              Solo Female Travel Safety Tips
             </h1>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
-              Learn from the experiences of solo female travelers worldwide. Real tips from real women who've been there.
+              Expert solo travel safety tips and solo female travel advice from experienced women travelers. Learn how to stay safe traveling alone as a woman with our comprehensive solo travel safety guide and real-world experiences.
             </p>
           </div>
           
@@ -273,7 +273,7 @@ const SafetyTips: React.FC = () => {
               <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search safety tips..."
+                placeholder="Search solo female travel safety tips..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 sm:pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-gray-900 placeholder-gray-500 transition-all duration-300 text-sm sm:text-base"

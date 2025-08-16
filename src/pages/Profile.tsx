@@ -30,7 +30,7 @@ import {
   Train
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { supabase, uploadProfileImage, getUserDestinations, getUserReviews } from '../lib/supabase';
+import { supabase, uploadProfileImage, getUserDestinations, getUserReviews, isDevelopmentMode, ensureProfileExists } from '../lib/supabase';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -41,9 +41,12 @@ import UserAvatar from '../components/UserAvatar';
 import DMModal from '../components/DMModal';
 
 const Profile: React.FC = () => {
-  const { user, signOut } = useAuth();
+  const { user, signOut: authSignOut, profile, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  
+  // Development mode user support
+  const [developmentUser, setDevelopmentUser] = useState<any>(null);
   const [activeTab, setActiveTab] = useState('activity');
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showChirpModal, setShowChirpModal] = useState(false);
@@ -58,16 +61,44 @@ const Profile: React.FC = () => {
   const [showContributionsModal, setShowContributionsModal] = useState(false);
   const [alerts, setAlerts] = useState<any[]>([]);
   const [unreadAlertsCount, setUnreadAlertsCount] = useState(0);
+  const [authTimeout, setAuthTimeout] = useState(false);
+
+  // Add a timeout fallback for auth loading
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      console.warn('⚠️ Auth loading timeout in Profile component')
+      setAuthTimeout(true)
+    }, 8000) // 8 second timeout
+
+    return () => clearTimeout(timeoutId)
+  }, [])
+
+  // Load development user if in development mode
+  useEffect(() => {
+    if (isDevelopmentMode) {
+      const demoUser = localStorage.getItem('demo-user-session')
+      if (demoUser) {
+        try {
+          setDevelopmentUser(JSON.parse(demoUser))
+        } catch (e) {
+          console.warn('Invalid demo user session data')
+        }
+      }
+    }
+  }, [])
+
+  // Get current user (real or development)
+  const currentUser = user || developmentUser
 
   useEffect(() => {
-    if (user) {
+    if (currentUser) {
       loadUserData();
       loadUserProfile();
       loadAllPosts();
       loadUserChirps();
       loadAlerts();
     }
-  }, [user]);
+  }, [currentUser]);
 
   // Refresh profile data when navigating to this page
   useEffect(() => {
@@ -97,8 +128,23 @@ const Profile: React.FC = () => {
     const handleProfileUpdate = (event: CustomEvent) => {
       if (event.detail?.type === 'profile' && user) {
         console.log('Profile updated event received, refreshing profile data...');
-        loadUserProfile();
+        loadUserProfile(); // This will refresh the profile photo and other data
       }
+    };
+
+    const handleChirpPosted = (event: CustomEvent) => {
+      console.log('Chirp posted event received, refreshing chirps...');
+      loadUserChirps();
+    };
+
+    const handleChirpDeleted = (event: CustomEvent) => {
+      console.log('Chirp deleted event received, refreshing chirps...');
+      loadUserChirps();
+    };
+
+    const handleChirpEdited = (event: CustomEvent) => {
+      console.log('Chirp edited event received, refreshing chirps...');
+      loadUserChirps();
     };
 
     const handleFocus = () => {
@@ -110,6 +156,9 @@ const Profile: React.FC = () => {
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    window.addEventListener('chirpPosted', handleChirpPosted as EventListener);
+    window.addEventListener('chirpDeleted', handleChirpDeleted as EventListener);
+    window.addEventListener('chirpEdited', handleChirpEdited as EventListener);
     window.addEventListener('focus', handleFocus);
     
     // Also refresh profile data when user object changes (e.g., after refreshUser is called)
@@ -122,25 +171,44 @@ const Profile: React.FC = () => {
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('profileUpdated', handleProfileUpdate as EventListener);
+      window.removeEventListener('chirpPosted', handleChirpPosted as EventListener);
+      window.removeEventListener('chirpDeleted', handleChirpDeleted as EventListener);
+      window.removeEventListener('chirpEdited', handleChirpEdited as EventListener);
       window.removeEventListener('focus', handleFocus);
     };
   }, [user]);
 
   const loadUserProfile = async () => {
-    if (!user) return;
+    if (!currentUser) return;
     
     try {
-      const { data: profile } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', user.id)
-        .single();
-      
-      if (profile) {
+      // SIMPLE: Use the same approach as AccountSettings - load from localStorage first
+      const storedProfile = localStorage.getItem(`dev_profile_${currentUser.id}`);
+      if (storedProfile) {
+        const profile = JSON.parse(storedProfile);
+        console.log('📖 Profile loaded from localStorage:', profile);
         setUserProfile(profile);
+        return;
       }
+      
+      // Fallback to auth metadata if no localStorage data
+      const fallbackProfile = {
+        user_id: currentUser.id,
+        full_name: currentUser.user_metadata?.full_name || currentUser.email?.split('@')[0] || 'Solo Traveler',
+        username: currentUser.user_metadata?.username || currentUser.email?.split('@')[0] || 'user',
+        avatar_url: currentUser.user_metadata?.avatar_url || '',
+        bio: '',
+        location: '',
+        email: currentUser.email,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+      
+      console.log('📖 Profile loaded from auth metadata:', fallbackProfile);
+      setUserProfile(fallbackProfile);
+      
     } catch (error) {
-      console.error('Error loading profile:', error);
+      console.error('❌ Error loading profile:', error);
     }
   };
 
@@ -300,159 +368,40 @@ const Profile: React.FC = () => {
   };
 
   const loadUserChirps = async () => {
-    if (!user) return;
+    if (!user) {
+      console.log('❌ No user found');
+      return;
+    }
+    
+    console.log('📖 Loading chirps for user:', user.id);
+    setLoading(true);
     
     try {
-      // Try to load from database first
-      const { data: chirps, error } = await supabase
-        .from('chirps')
-        .select(`
-          *,
-          user:profiles!chirps_user_id_fkey(
-            id,
-            full_name,
-            avatar_url,
-            email
-          )
-        `)
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
-
-      if (error) {
-        console.warn('Database load failed, using demo mode:', error);
-        // Load from localStorage and sessionStorage
-        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        
-        // Merge and deduplicate chirps by ID
-        const allChirps = [...localChirps, ...sessionChirps];
-        const uniqueChirps = allChirps.filter((chirp: any, index: number, self: any[]) => 
-          index === self.findIndex((c: any) => c.id === chirp.id)
-        );
-        
-        const userChirps = uniqueChirps.filter((chirp: any) => chirp.user_id === user.id);
-        
-        // Sort by created_at (newest first)
-        userChirps.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-        
-        console.log('Loaded chirps from storage:', {
-          localChirps: localChirps.length,
-          sessionChirps: sessionChirps.length,
-          allChirps: allChirps.length,
-          uniqueChirps: uniqueChirps.length,
-          userChirps: userChirps.length,
-          userChirpsData: userChirps
-        });
-        
-        // Add demo chirps if no user chirps exist
-        if (userChirps.length === 0) {
-          const demoChirps = [
-            {
-              id: 'demo-1',
-              user_id: user.id,
-              content: 'Just arrived in Tokyo! The metro system is incredible and I feel so safe walking around. The locals are incredibly helpful when you look lost. 🌸 #SoloTravel #Tokyo',
-              images: ['https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400'],
-              likes_count: 12,
-              comments_count: 3,
-              rechirps_count: 2,
-              created_at: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
-              user: {
-                id: user.id,
-                full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-                avatar_url: user.user_metadata?.avatar_url,
-                email: user.email
-              }
-            },
-            {
-              id: 'demo-2',
-              user_id: user.id,
-              content: 'Pro tip: Always trust your gut when traveling solo. If a situation feels off, don\'t hesitate to leave. Your safety comes first! 💪 #SoloTravelTips #SafetyFirst',
-              images: [],
-              likes_count: 8,
-              comments_count: 1,
-              rechirps_count: 0,
-              created_at: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(), // 5 hours ago
-              user: {
-                id: user.id,
-                full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-                avatar_url: user.user_metadata?.avatar_url,
-                email: user.email
-              }
-            }
-          ];
-          setUserChirps(demoChirps);
-        } else {
-          setUserChirps(userChirps);
-        }
-      } else {
-        setUserChirps(chirps || []);
-      }
-    } catch (error) {
-      console.warn('Database error, using demo mode:', error);
-      // Load from localStorage and sessionStorage
+      // SIMPLE: Always load from localStorage (works in both dev and production)
       const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-      const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
+      console.log('📖 Found', localChirps.length, 'total chirps in localStorage');
       
-      // Merge and deduplicate chirps by ID
-      const allChirps = [...localChirps, ...sessionChirps];
-      const uniqueChirps = allChirps.filter((chirp: any, index: number, self: any[]) => 
-        index === self.findIndex((c: any) => c.id === chirp.id)
-      );
+      // Filter for current user's chirps
+      const userChirps = localChirps.filter((chirp: any) => chirp.user_id === user.id);
+      console.log('📖 Found', userChirps.length, 'chirps for current user');
       
-      const userChirps = uniqueChirps.filter((chirp: any) => chirp.user_id === user.id);
-      
-      // Sort by created_at (newest first)
+      // Sort by newest first
       userChirps.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
       
-      console.log('Loaded chirps from storage (catch block):', {
-        localChirps: localChirps.length,
-        sessionChirps: sessionChirps.length,
-        allChirps: allChirps.length,
-        uniqueChirps: uniqueChirps.length,
-        userChirps: userChirps.length,
-        userChirpsData: userChirps
-      });
-      
-      // Add demo chirps if no user chirps exist
-      if (userChirps.length === 0) {
-        const demoChirps = [
-          {
-            id: 'demo-1',
-            user_id: user.id,
-            content: 'Just arrived in Tokyo! The metro system is incredible and I feel so safe walking around. The locals are incredibly helpful when you look lost. 🌸 #SoloTravel #Tokyo',
-            images: ['https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400'],
-            likes_count: 12,
-            comments_count: 3,
-            rechirps_count: 2,
-            created_at: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
-            user: {
-              id: user.id,
-              full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-              avatar_url: user.user_metadata?.avatar_url,
-              email: user.email
-            }
-          },
-          {
-            id: 'demo-2',
-            user_id: user.id,
-            content: 'Pro tip: Always trust your gut when traveling solo. If a situation feels off, don\'t hesitate to leave. Your safety comes first! 💪 #SoloTravelTips #SafetyFirst',
-            images: [],
-            likes_count: 8,
-            comments_count: 1,
-            rechirps_count: 0,
-            created_at: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(), // 5 hours ago
-            user: {
-              id: user.id,
-              full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-              avatar_url: user.user_metadata?.avatar_url,
-              email: user.email
-            }
-          }
-        ];
-        setUserChirps(demoChirps);
-      } else {
+      if (userChirps.length > 0) {
+        console.log('✅ Setting user chirps:', userChirps);
         setUserChirps(userChirps);
+      } else {
+        console.log('ℹ️ No user chirps found, showing empty state');
+        setUserChirps([]);
       }
+      
+    } catch (error) {
+      console.error('❌ Error loading chirps:', error);
+      setUserChirps([]);
+    } finally {
+      setLoading(false);
+      console.log('✅ Chirp loading completed');
     }
   };
 
@@ -600,26 +549,76 @@ const Profile: React.FC = () => {
         throw new Error('Failed to get public URL for uploaded image');
       }
 
-      // Update profile with avatar URL
-      const { error: updateError } = await supabase
-        .from('profiles')
-        .upsert({
-          id: user.id,
-          avatar_url: publicUrl,
-          updated_at: new Date().toISOString()
-        });
-
-      if (updateError) {
-        throw updateError;
+      // Try to ensure profile exists, but don't fail if it can't be created
+      let profileExists = false;
+      try {
+        const { data: profile, error: ensureError } = await ensureProfileExists(user.id, user);
+        if (!ensureError && profile) {
+          profileExists = true;
+          console.log('Profile ensured successfully');
+        } else {
+          console.warn('Could not ensure profile exists:', ensureError);
+        }
+      } catch (ensureError) {
+        console.warn('Profile creation failed, will try to update user metadata instead:', ensureError);
       }
 
-      // Update auth metadata
-      const { error: authError } = await supabase.auth.updateUser({
-        data: { avatar_url: publicUrl }
-      });
+      // If profile exists in database, update it
+      if (profileExists) {
+        const { error: updateError } = await supabase
+          .from('profiles')
+          .update({
+            avatar_url: publicUrl,
+            updated_at: new Date().toISOString()
+          })
+          .eq('user_id', user.id);
 
-      if (authError) {
-        console.warn('Auth metadata update failed:', authError);
+        if (updateError) {
+          console.warn('Profile database update failed, falling back to user metadata:', updateError);
+          profileExists = false; // Fall back to metadata update
+        } else {
+          console.log('Profile avatar updated in database successfully');
+        }
+      }
+      
+      // If database update failed or profile doesn't exist, update user metadata
+      if (!profileExists) {
+        try {
+          const { error: authError } = await supabase.auth.updateUser({
+            data: {
+              avatar_url: publicUrl
+            }
+          });
+          
+          if (authError) {
+            console.warn('Auth metadata update failed:', authError);
+          } else {
+            console.log('Avatar URL updated in user metadata as fallback');
+          }
+        } catch (metadataError) {
+          console.warn('Metadata update failed:', metadataError);
+        }
+      }
+
+      // Update auth metadata if not in development mode
+      try {
+        if (!isDevelopmentMode) {
+          const { error: authError } = await supabase.auth.updateUser({
+            data: {
+              avatar_url: publicUrl
+            }
+          });
+          
+          if (authError) {
+            console.warn('Auth metadata update failed:', authError);
+          } else {
+            console.log('Auth metadata updated successfully');
+          }
+        } else {
+          console.log('🚧 Development mode: Skipping auth metadata update');
+        }
+      } catch (error) {
+        console.warn('Auth metadata update failed:', error);
       }
 
       // Refresh the profile data
@@ -636,7 +635,7 @@ const Profile: React.FC = () => {
 
   const handleSignOut = async () => {
     try {
-      await signOut();
+      await authSignOut();
       navigate('/');
     } catch (error) {
       console.error('Error signing out:', error);
@@ -707,7 +706,29 @@ const Profile: React.FC = () => {
     { id: 'alerts', label: 'Alerts', icon: AlertTriangle }
   ];
 
-  if (!user) {
+  // Show loading while auth is loading (with timeout fallback)
+  if (authLoading && !authTimeout) {
+    return (
+      <div className="min-h-screen bg-gray-50 font-sans">
+        <Navbar />
+        <div className="pt-24 px-4">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading your profile...</h2>
+            <p className="text-gray-600">Please wait while we verify your authentication</p>
+            {authTimeout && (
+              <div className="mt-4 p-3 bg-yellow-50 text-yellow-800 rounded-lg text-sm">
+                Taking longer than expected. If this continues, please refresh the page.
+              </div>
+            )}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (!currentUser) {
     return (
       <div className="min-h-screen bg-gray-50 font-sans">
         <Navbar />
@@ -724,6 +745,33 @@ const Profile: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       <Navbar />
+      
+      {/* Email Verification Banner */}
+      {currentUser && !currentUser.email_confirmed_at && (
+        <div className="bg-yellow-50 border-b border-yellow-200 px-4 py-3">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-yellow-600" />
+                <div>
+                  <p className="text-sm font-medium text-yellow-800">
+                    Please verify your email address
+                  </p>
+                  <p className="text-sm text-yellow-700">
+                    Check your inbox for a verification link to unlock all features.
+                  </p>
+                </div>
+              </div>
+              <Link 
+                to="/account-settings"
+                className="text-sm font-medium text-yellow-600 hover:text-yellow-700 underline"
+              >
+                Resend verification
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
       
       <div className="pt-24 px-4 pb-16">
         <div className="mx-auto max-w-6xl">
@@ -758,7 +806,7 @@ const Profile: React.FC = () => {
                         {userProfile?.full_name || user.user_metadata?.full_name || 'Solo Traveler'}
                       </h2>
                       <p className="text-gray-600 text-sm">
-                        @{user.user_metadata?.username || userProfile?.username || user.email?.split('@')[0]}
+                        @{userProfile?.username || user.user_metadata?.username || user.email?.split('@')[0]}
                       </p>
                     </div>
                   </div>
@@ -809,14 +857,14 @@ const Profile: React.FC = () => {
                 )}
 
                 {/* Profile Completion Progress */}
-                <div className="mt-4 p-4 bg-gradient-to-r from-red-50 to-pink-50 rounded-lg border border-red-100">
+                <div className="mt-4 p-4 bg-gradient-to-r from-red-50 to-red-100 rounded-lg border border-red-200">
                   <div className="mb-2">
-                    <h4 className="text-sm font-medium text-gray-700 mb-1">Your wings aren't fully open yet.</h4>
+                    <h4 className="text-sm font-medium text-red-700 mb-1">Your wings aren't fully open yet to fly.</h4>
                     <span className="text-sm font-bold text-red-600">{getProfileCompletionPercentage()}% completed</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
                     <div 
-                      className="bg-gradient-to-r from-red-400 to-pink-400 h-2 rounded-full transition-all duration-500 ease-out"
+                      className="bg-gradient-to-r from-red-400 to-red-500 h-2 rounded-full transition-all duration-500 ease-out"
                       style={{ width: `${getProfileCompletionPercentage()}%` }}
                     />
                   </div>
@@ -900,12 +948,12 @@ const Profile: React.FC = () => {
               {/* Tab Navigation */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 mb-6">
                 <div className="flex items-center justify-between px-6">
-                  <div className="flex space-x-8 overflow-x-auto">
+                  <div className="flex space-x-2 flex-1">
                     {tabs.map((tab) => (
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`flex items-center space-x-2 py-4 px-2 border-b-2 font-medium text-sm transition-all duration-300 whitespace-nowrap ${
+                        className={`flex items-center space-x-2 py-4 px-2 border-b-2 font-medium text-sm transition-all duration-300 whitespace-nowrap relative flex-1 justify-center ${
                           activeTab === tab.id
                             ? 'border-primary-400 text-primary-400'
                             : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
@@ -913,6 +961,11 @@ const Profile: React.FC = () => {
                       >
                         <tab.icon className="h-4 w-4" />
                         <span>{tab.label}</span>
+                        {tab.id === 'alerts' && unreadAlertsCount > 0 && (
+                          <span className="ml-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-bold leading-none">
+                            {unreadAlertsCount > 9 ? '9+' : unreadAlertsCount}
+                          </span>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -1178,6 +1231,85 @@ const Profile: React.FC = () => {
                   )}
                 </div>
               )}
+
+              {/* Alerts Tab */}
+              {activeTab === 'alerts' && (
+                <div className="space-y-4">
+                  <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-lg font-display text-gray-900">Safety Alerts & Notifications</h3>
+                      {unreadAlertsCount > 0 && (
+                        <button
+                          onClick={markAllAlertsAsRead}
+                          className="text-sm text-primary-400 hover:text-primary-500 font-medium transition-colors duration-300"
+                        >
+                          Mark all as read
+                        </button>
+                      )}
+                    </div>
+                    
+                    {alerts.length > 0 ? (
+                      <div className="space-y-4">
+                        {alerts.map((alert) => (
+                          <div 
+                            key={alert.id}
+                            className={`p-4 rounded-lg border transition-all duration-300 ${
+                              alert.is_read 
+                                ? 'bg-gray-50 border-gray-200' 
+                                : 'bg-blue-50 border-blue-200'
+                            }`}
+                          >
+                            <div className="flex items-start space-x-3">
+                              <div className="flex-shrink-0 mt-0.5">
+                                {getAlertIcon(alert.type)}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center justify-between mb-2">
+                                  <h4 className={`text-sm font-medium ${
+                                    alert.is_read ? 'text-gray-700' : 'text-gray-900'
+                                  }`}>
+                                    {alert.title}
+                                  </h4>
+                                  <div className="flex items-center space-x-2">
+                                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${getSeverityColor(alert.severity)}`}>
+                                      {alert.severity.toUpperCase()}
+                                    </span>
+                                    {!alert.is_read && (
+                                      <button
+                                        onClick={() => markAlertAsRead(alert.id)}
+                                        className="text-xs text-primary-400 hover:text-primary-500 font-medium"
+                                      >
+                                        Mark as read
+                                      </button>
+                                    )}
+                                  </div>
+                                </div>
+                                <p className={`text-sm mb-2 ${
+                                  alert.is_read ? 'text-gray-600' : 'text-gray-700'
+                                }`}>
+                                  {alert.message}
+                                </p>
+                                <div className="flex items-center justify-between text-xs text-gray-500">
+                                  <span>{alert.location}</span>
+                                  <span>{formatDate(alert.created_at)}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-center py-12">
+                        <AlertTriangle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                        <h3 className="text-lg font-display text-gray-900 mb-2">No Alerts Yet</h3>
+                        <p className="text-gray-600">
+                          You'll receive safety alerts, weather warnings, and important updates here.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -1270,8 +1402,9 @@ const Profile: React.FC = () => {
         isOpen={showChirpModal}
         onClose={() => setShowChirpModal(false)}
         onChirpPosted={() => {
-          console.log('onChirpPosted callback triggered');
+          console.log('onChirpPosted callback triggered in Profile');
           loadUserChirps();
+          console.log('loadUserChirps called after chirp posted');
         }}
       />
 

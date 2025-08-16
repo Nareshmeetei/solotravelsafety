@@ -22,6 +22,7 @@ interface EditChirpModalProps {
 }
 
 const EditChirpModal: React.FC<EditChirpModalProps> = ({ isOpen, onClose, chirp, onChirpEdited }) => {
+  // Get user from auth context
   const { user } = useAuth();
   const [content, setContent] = useState(chirp.content);
   const [images, setImages] = useState<string[]>(chirp.images || []);
@@ -175,6 +176,11 @@ const EditChirpModal: React.FC<EditChirpModalProps> = ({ isOpen, onClose, chirp,
       );
       sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
 
+      // Trigger event for other components to refresh
+      window.dispatchEvent(new CustomEvent('chirpEdited', { 
+        detail: { chirpId: chirp.id }
+      }));
+      
       onChirpEdited();
       onClose();
     } catch (error) {

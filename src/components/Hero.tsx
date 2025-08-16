@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { signUpSchema, validateAndSanitize } from '../lib/validation';
-import { sanitizeEmail, sanitizeName, containsMaliciousContent } from '../lib/sanitize';
-import { getAuthErrorMessage, getValidationErrorMessage, logError } from '../lib/error-handling';
 import PasswordStrengthIndicator from './PasswordStrengthIndicator';
 
 const Hero: React.FC = () => {
@@ -21,41 +18,45 @@ const Hero: React.FC = () => {
     setError('');
     setSuccess('');
 
+    // Basic validation
+    if (!email.trim()) {
+      setError('Please enter your email address');
+      setLoading(false);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      setError('Please enter a valid email address');
+      setLoading(false);
+      return;
+    }
+
+    if (!password) {
+      setError('Please enter a password');
+      setLoading(false);
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters long');
+      setLoading(false);
+      return;
+    }
+
     try {
-      // Validate and sanitize signup data
-      const signupData = {
-        email: sanitizeEmail(email),
-        password
-      };
-
-      // Check for malicious content
-      if (containsMaliciousContent(email)) {
-        setError('Invalid characters detected. Please use only letters, numbers, and common symbols.');
-        setLoading(false);
-        return;
-      }
-
-      // Validate with Zod schema
-      const validation = validateAndSanitize(signUpSchema, signupData);
-      if (!validation.success) {
-        setError(getValidationErrorMessage(validation.errors));
-        setLoading(false);
-        return;
-      }
-
-      const { error } = await signUp(validation.data.email, validation.data.password);
-      if (error) {
-        logError(error, 'Hero SignUp');
-        console.error('SignUp error details:', error);
-        setError(getAuthErrorMessage(error, 'signUp'));
+      const result = await signUp(email.trim(), password);
+      
+      if (result.error) {
+        setError(result.error.message);
       } else {
-        setSuccess('Please check your email and click the confirmation link to complete your registration.');
+        const successMessage = result.message || 'Account created successfully! Please check your email for a verification link.';
+        setSuccess(successMessage);
         setEmail('');
         setPassword('');
       }
-    } catch (err) {
-      logError(err, 'Hero General');
-      setError('Something went wrong. Please try again.');
+    } catch (err: any) {
+      setError(err.message || 'An unexpected error occurred. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -64,7 +65,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:pt-40 sm:pb-24">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-white">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50" style={{backgroundImage: 'linear-gradient(to bottom right, var(--tw-gradient-from), #EFEAFF)'}}>
         <div className="absolute inset-0 opacity-60">
           <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#9E7DFF]/20 to-transparent rounded-full blur-3xl animate-float-slow"></div>
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-bl from-[#FFBAD6]/25 to-transparent rounded-full blur-3xl animate-float-medium"></div>
@@ -77,24 +78,18 @@ const Hero: React.FC = () => {
       <div className="relative z-10 mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12 min-h-[500px] md:min-h-[500px]">
         {/* Left: Text */}
         <div className="flex-1 flex flex-col justify-center text-left h-full items-center md:items-start">
-          {/* Product Hunt Badge */}
-          <div className="mb-6 flex justify-center md:justify-start">
-            <div className="inline-block hover:scale-105 transition-transform duration-200">
-              <a href="https://www.producthunt.com/products/solo-travel-safety?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-solo&#0045;travel&#0045;safety" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1001050&theme=light&t=1754793591250" alt="Solo&#0032;Travel&#0032;Safety - Safety&#0032;platform&#0032;for&#0032;solo&#0032;female&#0032;travelers&#0044;&#0032;by&#0032;solo&#0032;travelers | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" /></a>
-            </div>
-          </div>
           <h1 className="mb-6 text-5xl font-display tracking-tight text-gray-900 sm:text-6xl lg:text-7xl animate-fade-in-up text-left">
-            Travel Smart, Not Scared.
+            Solo Female Travel Safety Made Simple
           </h1>
           <p className="mb-10 text-lg text-gray-600 sm:text-xl animate-fade-in-up animate-delay-200 text-left">
-            A safety platform for women traveling solo — with honest stories, safety tips, and feel-good places to help you explore more and stress less.
+            Get trusted solo travel safety tips, real solo female travel experiences, and safety reviews from women travelers. Find the safest countries for solo female travel with our comprehensive solo travel safety guide and community support.
           </p>
         </div>
         {/* Right: Signup Form */}
         <div className="flex-1 flex items-center justify-center w-full h-full">
           <form onSubmit={handleSubmit} className="w-full max-w-md rounded-3xl border border-gray-300 p-8 animate-fade-in-up hover:shadow-lg transition-shadow duration-300" style={{ backgroundColor: '#FFF1F6' }}>
-            <h2 className="text-2xl font-display text-gray-900 mb-2">Join the Safety Squad</h2>
-            <p className="text-gray-600 mb-6">Yes, you belong here.</p>
+            <h2 className="text-2xl font-display text-gray-900 mb-2">Join the Solo Female Travel Community</h2>
+            <p className="text-gray-600 mb-6">Get exclusive solo female travel safety tips and connect with women travelers worldwide.</p>
             {success && (
               <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm flex items-center">
                 <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0" />
@@ -156,7 +151,8 @@ const Hero: React.FC = () => {
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               ) : (
                 <>
-                  Sign Up <ArrowRight className="ml-2 h-5 w-5" />
+                  Sign Up
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </>
               )}
             </button>

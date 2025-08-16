@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
+
+// Import pages
 import HomePage from './pages/HomePage';
 import AllDestinations from './pages/AllDestinations';
 import DestinationDetail from './pages/DestinationDetail';
@@ -10,114 +11,85 @@ import AccountSettings from './pages/AccountSettings';
 import SafetyTips from './pages/SafetyTips';
 import Community from './pages/Community';
 import AuthCallback from './pages/AuthCallback';
+import AuthDebug from './pages/AuthDebug';
 
+// Import components
 import ScrollToTop from './components/ScrollToTop';
 import CookieConsent from './components/CookieConsent';
 import SentryErrorBoundary from './components/SentryErrorBoundary';
 import SentryTest from './components/SentryTest';
+import ProtectedRoute from './components/ProtectedRoute';
 
-
-// Protected Route component
-const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { user, loading } = useAuth();
-  
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
-      </div>
-    );
-  }
-  
-  return user ? <>{children}</> : <Navigate to="/" replace />;
-};
-
-// Redirect authenticated users to profile
-const PublicRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { user, loading } = useAuth();
-  
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
-      </div>
-    );
-  }
-  
-  return user ? <Navigate to="/profile" replace /> : <>{children}</>;
-};
-
-function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={
-        <PublicRoute>
-          <HomePage />
-        </PublicRoute>
-      } />
-      <Route path="/destinations" element={<AllDestinations />} />
-      <Route path="/destination/:city/:country" element={<DestinationDetail />} />
-      <Route path="/safety-tips" element={<SafetyTips />} />
-      <Route path="/community" element={<Community />} />
-      <Route path="/auth/callback" element={<AuthCallback />} />
-      <Route path="/sentry-test" element={<SentryTest />} />
-      <Route path="/profile" element={
-        <ProtectedRoute>
-          <Profile />
-        </ProtectedRoute>
-      } />
-      <Route path="/add-destination" element={
-        <ProtectedRoute>
-          <AddDestination />
-        </ProtectedRoute>
-      } />
-      <Route path="/account-settings" element={
-        <ProtectedRoute>
-          <AccountSettings />
-        </ProtectedRoute>
-      } />
-      {/* Redirect old dashboard route to profile */}
-      <Route path="/dashboard" element={<Navigate to="/profile" replace />} />
-    </Routes>
-  );
-}
+// Import auth context
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
-  const [, setCookiePreferences] = useState({
-    essential: true,
-    analytics: false,
-    functional: false
-  });
-
-  const handleCookieAccept = (preferences: { essential: boolean; analytics: boolean; functional: boolean }) => {
-    setCookiePreferences(preferences);
-    // Here you could also set up analytics or other services based on preferences
-    console.log('Cookie preferences:', preferences);
-  };
-
-  const handleCookieDecline = () => {
-    setCookiePreferences({
-      essential: true,
-      analytics: false,
-      functional: false
-    });
-    console.log('Cookies declined, only essential cookies enabled');
-  };
-
   return (
     <SentryErrorBoundary>
-    <AuthProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="min-h-screen bg-white font-sans">
-          <AppRoutes />
-          <CookieConsent 
-            onAccept={handleCookieAccept}
-            onDecline={handleCookieDecline}
-          />
-        </div>
-      </Router>
-    </AuthProvider>
+      <AuthProvider>
+        <Router
+          future={{ 
+            v7_startTransition: true,
+            v7_relativeSplatPath: true 
+          }}
+        >
+          <ScrollToTop />
+          <div className="App">
+            <SentryErrorBoundary>
+              <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/destinations" element={<AllDestinations />} />
+                <Route path="/destination/:city/:country" element={<DestinationDetail />} />
+                <Route path="/safety-tips" element={<SafetyTips />} />
+                <Route path="/community" element={<Community />} />
+                
+                {/* Auth Routes */}
+                <Route path="/auth/callback" element={<AuthCallback />} />
+                
+                {/* Protected Routes */}
+                <Route 
+                  path="/profile" 
+                  element={
+                    <ProtectedRoute requireEmailVerification={false}>
+                      <Profile />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/add-destination" 
+                  element={
+                    <ProtectedRoute requireEmailVerification={false}>
+                      <AddDestination />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/account-settings" 
+                  element={
+                    <ProtectedRoute requireEmailVerification={false}>
+                      <AccountSettings />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/settings" 
+                  element={<Navigate to="/account-settings" replace />}
+                />
+                
+                {/* Development/Testing Routes */}
+                <Route path="/sentry-test" element={<SentryTest />} />
+                <Route path="/auth-debug" element={<AuthDebug />} />
+                
+                {/* Catch-all redirect */}
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </SentryErrorBoundary>
+            
+            <CookieConsent />
+          </div>
+        </Router>
+      </AuthProvider>
     </SentryErrorBoundary>
   );
 }

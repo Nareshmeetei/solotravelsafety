@@ -76,6 +76,7 @@ interface TopLikedCommentsProps {
   setReplyText: (text: string) => void;
   isReplying: boolean;
   showCommentHugAnimation: string | null;
+  profileUpdateTrigger?: number;
 }
 
 const TopLikedComments: React.FC<TopLikedCommentsProps> = ({
@@ -99,7 +100,8 @@ const TopLikedComments: React.FC<TopLikedCommentsProps> = ({
   replyText,
   setReplyText,
   isReplying,
-  showCommentHugAnimation
+  showCommentHugAnimation,
+  profileUpdateTrigger
 }: TopLikedCommentsProps) => {
   // Helper function to format time
   const formatTime = (dateString: string) => {
@@ -132,14 +134,37 @@ const TopLikedComments: React.FC<TopLikedCommentsProps> = ({
           chirp.user.id === user.id      // Chirp author
         );
         
+        // Get updated user data for current user's comments
+        const getCommentUserData = (comment: Comment) => {
+          if (user && comment.user.id === user.id) {
+            try {
+              const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+              if (storedProfile) {
+                const profile = JSON.parse(storedProfile);
+                return {
+                  ...comment.user,
+                  full_name: profile.full_name || user.user_metadata?.full_name || comment.user.full_name,
+                  avatar_url: profile.avatar_url || user.user_metadata?.avatar_url || comment.user.avatar_url,
+                  username: profile.username || user.user_metadata?.username
+                };
+              }
+            } catch (error) {
+              console.error('Error loading profile for comment display:', error);
+            }
+          }
+          return comment.user;
+        };
+
+        const commentUserData = getCommentUserData(comment);
+
         return (
           <div key={comment.id} className="flex items-start space-x-2">
-            <UserAvatar user={comment.user} size="sm" />
+            <UserAvatar user={commentUserData} size="sm" />
             <div className="flex-1">
               <div className="flex items-center justify-between mb-1">
                 <div className="flex items-center space-x-2">
                   <span className="font-semibold text-gray-900 text-base">
-                    {comment.user.full_name || comment.user.email?.split('@')[0] || 'Solo Traveler'}
+                    {commentUserData.full_name || commentUserData.email?.split('@')[0] || 'Solo Traveler'}
                   </span>
                   <span className="text-sm text-gray-500">
                     {formatTime(comment.created_at)}
@@ -343,6 +368,12 @@ interface ChirpCardProps {
 }
 
 const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdited }) => {
+  // Get user from auth context
+  const { user } = useAuth();
+  
+  // State declarations first
+  const [profileUpdateTrigger, setProfileUpdateTrigger] = useState(0);
+  
   // Add custom CSS for enhanced animations
   React.useEffect(() => {
     const style = document.createElement('style');
@@ -377,12 +408,28 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
       }
     };
   }, []);
-  const { user } = useAuth();
   
   // Get the most up-to-date user data for display
   const getDisplayUser = () => {
-    // If this is the current user's chirp, use the latest auth metadata
+    // If this is the current user's chirp, use the latest profile data
     if (user && chirp.user.id === user.id) {
+      try {
+        const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+        if (storedProfile) {
+          const profile = JSON.parse(storedProfile);
+          return {
+            ...chirp.user,
+            full_name: profile.full_name || user.user_metadata?.full_name || chirp.user.full_name,
+            username: profile.username || user.user_metadata?.username,
+            avatar_url: profile.avatar_url || user.user_metadata?.avatar_url || chirp.user.avatar_url,
+            user_metadata: user.user_metadata
+          };
+        }
+      } catch (error) {
+        console.error('Error loading profile for display:', error);
+      }
+      
+      // Fallback to auth metadata
       return {
         ...chirp.user,
         full_name: user.user_metadata?.full_name || chirp.user.full_name,
@@ -395,11 +442,39 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
     return chirp.user;
   };
   
-  const displayUser = getDisplayUser();
+  // Recalculate displayUser when profile updates
+  const displayUser = React.useMemo(() => getDisplayUser(), [user, chirp.user.id, profileUpdateTrigger]);
   
   // Update chirp in localStorage with current user metadata if it's the current user's chirp
   useEffect(() => {
-    if (user && chirp.user.id === user.id) {
+    const updateChirpData = () => {
+      if (user && chirp.user.id === user.id) {
+      // Get updated profile data from localStorage
+      const getUpdatedUserData = () => {
+        try {
+          const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+          if (storedProfile) {
+            const profile = JSON.parse(storedProfile);
+            return {
+              full_name: profile.full_name || user.user_metadata?.full_name,
+              avatar_url: profile.avatar_url || user.user_metadata?.avatar_url,
+              username: profile.username || user.user_metadata?.username
+            };
+          }
+        } catch (error) {
+          console.error('Error loading profile for chirp update:', error);
+        }
+        
+        // Fallback to auth metadata
+        return {
+          full_name: user.user_metadata?.full_name,
+          avatar_url: user.user_metadata?.avatar_url,
+          username: user.user_metadata?.username
+        };
+      };
+
+      const updatedUserData = getUpdatedUserData();
+      
       const updateChirpInStorage = (storage: Storage, key: string) => {
         const chirps = JSON.parse(storage.getItem(key) || '[]');
         const updatedChirps = chirps.map((c: { id: string; user: ChirpUser }) => {
@@ -408,8 +483,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
               ...c,
               user: {
                 ...c.user,
-                full_name: user.user_metadata?.full_name || c.user.full_name,
-                avatar_url: user.user_metadata?.avatar_url || c.user.avatar_url,
+                ...updatedUserData,
                 user_metadata: user.user_metadata
               }
             };
@@ -419,9 +493,28 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
         storage.setItem(key, JSON.stringify(updatedChirps));
       };
       
-      updateChirpInStorage(localStorage, 'localChirps');
-      updateChirpInStorage(sessionStorage, 'sessionChirps');
-    }
+        updateChirpInStorage(localStorage, 'localChirps');
+      }
+    };
+
+    // Update immediately
+    updateChirpData();
+
+    // Listen for profile updates
+    const handleProfileUpdate = (event: CustomEvent) => {
+      if (event.detail?.type === 'profile') {
+        console.log('ChirpCard: Profile updated, refreshing chirp data');
+        updateChirpData();
+        // Force re-render by triggering state update
+        setProfileUpdateTrigger(prev => prev + 1);
+      }
+    };
+
+    window.addEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    
+    return () => {
+      window.removeEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    };
   }, [user, chirp.id, chirp.user.id]);
   
   // Debug: Log avatar URL for troubleshooting
@@ -537,91 +630,40 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
     setIsHugging(true);
     
     // Trigger animation
-    if (!isLiked) {
-      setShowHugAnimation(true);
-      setTimeout(() => setShowHugAnimation(false), 600);
-    } else {
-      // Subtle animation for unhugging
-      setShowHugAnimation(true);
-      setTimeout(() => setShowHugAnimation(false), 300);
-    }
+    setShowHugAnimation(true);
+    setTimeout(() => setShowHugAnimation(false), isLiked ? 300 : 600);
+    
     try {
-      if (isLiked) {
-        // Unlike
-        const { error } = await unlikeChirp(chirp.id);
-        if (error) {
-          console.warn('Database unlike failed, using local storage:', error);
-        }
-        
-        // Always update local state and storage
-        setIsLiked(false);
-        setLikesCount(prev => prev - 1);
-        
-        // Update in localStorage
-        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const updatedLocalChirps = localChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
-          c.id === chirp.id 
-            ? { 
-                ...c, 
-                likes_count: Math.max(0, (c.likes_count || 0) - 1),
-                userLikes: (c.userLikes || []).filter((userId: string) => userId !== user.id)
-              }
-            : c
-        );
-        localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
-        
-        // Update in sessionStorage
-        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const updatedSessionChirps = sessionChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
-          c.id === chirp.id 
-            ? { 
-                ...c, 
-                likes_count: Math.max(0, (c.likes_count || 0) - 1),
-                userLikes: (c.userLikes || []).filter((userId: string) => userId !== user.id)
-              }
-            : c
-        );
-        sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
-        
-      } else {
-        // Like
-        const { error } = await likeChirp(chirp.id);
-        if (error) {
-          console.warn('Database like failed, using local storage:', error);
-        }
-        
-        // Always update local state and storage
-        setIsLiked(true);
-        setLikesCount(prev => prev + 1);
-        
-        // Update in localStorage
-        const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        const updatedLocalChirps = localChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
-          c.id === chirp.id 
-            ? { 
-                ...c, 
-                likes_count: (c.likes_count || 0) + 1,
-                userLikes: [...(c.userLikes || []), user.id]
-              }
-            : c
-        );
-        localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
-        
-        // Update in sessionStorage
-        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const updatedSessionChirps = sessionChirps.map((c: { id: string; likes_count?: number; userLikes?: string[] }) => 
-          c.id === chirp.id 
-            ? { 
-                ...c, 
-                likes_count: (c.likes_count || 0) + 1,
-                userLikes: [...(c.userLikes || []), user.id]
-              }
-            : c
-        );
-        sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
-      }
+      // SIMPLE: Toggle like state
+      const newLikedState = !isLiked;
+      const newLikesCount = newLikedState ? likesCount + 1 : Math.max(0, likesCount - 1);
+      
+      // Update local state immediately
+      setIsLiked(newLikedState);
+      setLikesCount(newLikesCount);
+      
+      // Update in localStorage
+      const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      const updatedLocalChirps = localChirps.map((c: any) => 
+        c.id === chirp.id 
+          ? { 
+              ...c, 
+              likes_count: newLikesCount,
+              userLikes: newLikedState 
+                ? [...(c.userLikes || []), user.id]
+                : (c.userLikes || []).filter((userId: string) => userId !== user.id)
+            }
+          : c
+      );
+      localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
+      
+      console.log('✅ Hug toggled:', { isLiked: newLikedState, likesCount: newLikesCount });
+      
     } catch (error) {
-      console.error('Error toggling hug:', error);
+      console.error('❌ Error toggling hug:', error);
+      // Revert state on error
+      setIsLiked(!isLiked);
+      setLikesCount(likesCount);
     } finally {
       setIsHugging(false);
     }
@@ -663,31 +705,23 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
     
     if (confirm('Are you sure you want to delete this chirp?')) {
       try {
-        // Try to delete from database first
-        const { error } = await supabase
-          .from('chirps')
-          .delete()
-          .eq('id', chirp.id);
-
-        if (error) {
-          console.warn('Database delete failed, using local storage:', error);
-        }
-
-        // Remove from localStorage
+        // SIMPLE: Remove from localStorage only
         const localChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
         const updatedLocalChirps = localChirps.filter((c: { id: string }) => c.id !== chirp.id);
         localStorage.setItem('localChirps', JSON.stringify(updatedLocalChirps));
 
-        // Remove from sessionStorage
-        const sessionChirps = JSON.parse(sessionStorage.getItem('sessionChirps') || '[]');
-        const updatedSessionChirps = sessionChirps.filter((c: { id: string }) => c.id !== chirp.id);
-        sessionStorage.setItem('sessionChirps', JSON.stringify(updatedSessionChirps));
-
+        console.log('✅ Chirp deleted successfully');
+        
+        // Trigger event for other components to refresh
+        window.dispatchEvent(new CustomEvent('chirpDeleted', { 
+          detail: { chirpId: chirp.id }
+        }));
+        
         if (onChirpDeleted) {
           onChirpDeleted();
         }
       } catch (error) {
-        console.error('Error deleting chirp:', error);
+        console.error('❌ Error deleting chirp:', error);
         alert('Failed to delete chirp. Please try again.');
       }
     }
@@ -868,12 +902,30 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
       const replyComment = {
         id: `reply-${Date.now()}-${Math.random()}`,
         comment_text: replyText.trim(),
-        user: {
-          id: user.id,
-          full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-          email: user.email,
-          avatar_url: user.user_metadata?.avatar_url
-        },
+        user: (() => {
+          try {
+            const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+            if (storedProfile) {
+              const profile = JSON.parse(storedProfile);
+              return {
+                id: user.id,
+                full_name: profile.full_name || user.user_metadata?.full_name || user.email?.split('@')[0],
+                avatar_url: profile.avatar_url || user.user_metadata?.avatar_url,
+                email: user.email
+              };
+            }
+          } catch (error) {
+            console.error('Error loading profile for reply:', error);
+          }
+          
+          // Fallback to auth metadata
+          return {
+            id: user.id,
+            full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+            email: user.email,
+            avatar_url: user.user_metadata?.avatar_url
+          };
+        })(),
         created_at: new Date().toISOString(),
         likes_count: 0,
         userHugs: [],
@@ -940,7 +992,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
                   {displayUser.full_name || displayUser.email?.split('@')[0] || 'Solo Traveler'}
                 </span>
                 <span className="text-gray-600 ml-2">
-                  @{displayUser.user_metadata?.username || displayUser.username || displayUser.email?.split('@')[0]}
+                  @{displayUser.username || displayUser.user_metadata?.username || displayUser.email?.split('@')[0]}
                 </span>
                 <div className="text-sm text-gray-500 mt-1">{formatDate(chirp.created_at)}</div>
               </div>
@@ -1085,6 +1137,7 @@ const ChirpCard: React.FC<ChirpCardProps> = ({ chirp, onChirpDeleted, onChirpEdi
                     setReplyText={setReplyText}
                     isReplying={isReplying}
                     showCommentHugAnimation={showCommentHugAnimation}
+                    profileUpdateTrigger={profileUpdateTrigger}
                   />
                 )}
               </div>

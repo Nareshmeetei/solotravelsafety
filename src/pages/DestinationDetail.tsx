@@ -248,6 +248,7 @@ const DestinationDetail: React.FC = () => {
   console.log('DEBUG: URL params - city:', city, 'country:', country);
   const navigate = useNavigate();
   const { user } = useAuth();
+  console.log('DEBUG: User state:', user ? 'logged in' : 'not logged in');
   const [destination, setDestination] = useState<any>(null);
   const [reviews, setReviews] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -269,6 +270,48 @@ const DestinationDetail: React.FC = () => {
       console.log('DEBUG: Loaded destination object:', destination);
     }
   }, [destination]);
+
+  // Moved all computations to React.useMemo to ensure proper initialization order
+  const computedData = React.useMemo(() => {
+    console.log('DEBUG: Computing data, destination is:', destination ? 'loaded' : 'null');
+    
+    const dest = destination;
+    const safeArray = (arr: any) => Array.isArray(arr) ? arr : [];
+    
+    const safeNeighborhoods = dest?.neighborhoods ? (
+      dest.neighborhoods.safe ? dest.neighborhoods :
+      Array.isArray(dest.neighborhoods) ? {
+        safe: safeArray(dest.neighborhoods).filter((n: any) => (n.safetyScore || 0) >= 4),
+        caution: safeArray(dest.neighborhoods).filter((n: any) => (n.safetyScore || 0) >= 3 && (n.safetyScore || 0) < 4).map((n: any) => n.name),
+        avoid: safeArray(dest.neighborhoods).filter((n: any) => (n.safetyScore || 0) < 3).map((n: any) => n.name)
+      } : { safe: [], caution: [], avoid: [] }
+    ) : { safe: [], caution: [], avoid: [] };
+    
+    const embassyList = [
+      dest?.legalResources?.embassy,
+      ...(dest?.legalResources?.embassies || [])
+    ].filter(Boolean);
+    
+    const filteredEmbassies = embassyList.filter((embassy: any) =>
+      embassy?.name?.toLowerCase()?.includes(embassySearch.toLowerCase())
+    );
+    
+    return {
+      dest,
+      safeArray,
+      safeNeighborhoods,
+      embassyList,
+      filteredEmbassies,
+      safeTags: safeArray(dest?.tags),
+      safeAlerts: safeArray(dest?.alerts),
+      safeUsefulTips: safeArray(dest?.usefulTips),
+      safeScamWarnings: safeArray(dest?.scamWarnings),
+      safeCulturalDos: safeArray(dest?.culturalDos),
+      safeCulturalDonts: safeArray(dest?.culturalDonts),
+      safeAccommodations: safeArray(dest?.accommodations),
+      safeLanguages: safeArray(dest?.languages || ['Local language', 'English'])
+    };
+  }, [destination, embassySearch]);
 
   const loadDestinationData = async () => {
     try {
@@ -382,6 +425,21 @@ const DestinationDetail: React.FC = () => {
     );
   }
 
+  const { 
+    dest, 
+    safeNeighborhoods, 
+    embassyList, 
+    filteredEmbassies, 
+    safeLanguages,
+    safeTags,
+    safeAlerts,
+    safeUsefulTips,
+    safeScamWarnings,
+    safeCulturalDos,
+    safeCulturalDonts,
+    safeAccommodations
+  } = computedData;
+
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Info },
     { id: 'safety', label: 'Safety', icon: Shield },
@@ -390,16 +448,8 @@ const DestinationDetail: React.FC = () => {
     { id: 'reviews', label: `Reviews (${reviews.length})`, icon: MessageSquare }
   ];
 
-  const key = `${destination.city},${destination.country}`;
+  const key = `${destination?.city},${destination?.country}`;
   const confidenceData = womensConfidenceData[key] || { score: 65, source: 'Best Available Source', sourceUrl: undefined };
-
-  const embassyList = [
-    destination.legalResources?.embassy,
-    ...(destination.legalResources?.embassies || [])
-  ].filter(Boolean);
-  const filteredEmbassies = embassyList.filter((embassy: any) =>
-    embassy.name.toLowerCase().includes(embassySearch.toLowerCase())
-  );
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
@@ -421,14 +471,14 @@ const DestinationDetail: React.FC = () => {
           <div className="mb-8">
             <div className="flex items-center space-x-4 mb-4">
               <FlagImage 
-                countryCode={destination.countryCode}
-                alt={`${destination.country} flag`}
+                countryCode={dest.countryCode}
+                alt={`${dest.country} flag`}
                 size="lg"
                 className="rounded-xl"
               />
               <div>
-                <h1 className="text-4xl font-display text-gray-900">{destination.city}</h1>
-                <p className="text-xl text-gray-600">{destination.country}</p>
+                <h1 className="text-4xl font-display text-gray-900">{dest.city}</h1>
+                <p className="text-xl text-gray-600">{dest.country}</p>
               </div>
             </div>
             
@@ -437,16 +487,16 @@ const DestinationDetail: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <Shield className="h-6 w-6 text-primary-400" />
                 <span className="text-lg font-medium text-gray-700">Overall Safety:</span>
-                <div className={`rounded-full px-4 py-2 text-2xl font-extrabold ${getScoreColor(destination.overallScore)}`}>
-                  {destination.overallScore}/10
+                <div className={`rounded-full px-4 py-2 text-2xl font-extrabold ${getScoreColor(dest.overallScore || dest.safetyScore || dest.scores?.overall || 0)}`}>
+                  {dest.overallScore || dest.safetyScore || dest.scores?.overall || 'N/A'}/10
                 </div>
               </div>
             </div>
             {/* Harassment Risk Badge - now below and left-aligned */}
             <div className="mb-4 flex">
-              <div className={`px-4 py-2 min-h-[2.5rem] rounded-full text-xs sm:text-sm font-semibold max-w-full truncate flex items-center ${getHarassmentColor(destination.harassmentRisk)}`}
+              <div className={`px-4 py-2 min-h-[2.5rem] rounded-full text-xs sm:text-sm font-semibold max-w-full truncate flex items-center ${getHarassmentColor(dest?.harassmentRisk || 'medium')}`}
                 style={{lineHeight: '1.2'}}>
-                {destination.harassmentRisk.toUpperCase()} HARASSMENT RISK
+                {(dest?.harassmentRisk || 'MEDIUM').toUpperCase()} HARASSMENT RISK
               </div>
             </div>
 
@@ -474,34 +524,34 @@ const DestinationDetail: React.FC = () => {
               <div className="mt-6 p-6 bg-red-50 border border-red-200 rounded-2xl">
                 <h3 className="text-lg font-display text-red-900 mb-4 flex items-center">
                   <Phone className="h-5 w-5 mr-2" />
-                  Emergency Contacts - {destination.city}, {destination.country}
+                  Emergency Contacts - {dest.city}, {dest.country}
                 </h3>
                 {/* Emergency Numbers - now at the very top */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   <div className="bg-white p-4 rounded-lg border border-red-200">
                     <h4 className="font-display text-red-800 mb-2">Police</h4>
-                    <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.police}</p>
+                    <p className="text-2xl font-bold text-red-900">{dest.emergencyInfo?.police || dest.emergencyContacts?.police || 'N/A'}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-red-200">
                     <h4 className="font-display text-red-800 mb-2">Fire Service</h4>
-                    <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.fire}</p>
+                    <p className="text-2xl font-bold text-red-900">{dest.emergencyInfo?.fire || dest.emergencyContacts?.fire || 'N/A'}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-red-200">
                     <h4 className="font-display text-red-800 mb-2">Medical Emergency</h4>
-                    <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.medical}</p>
+                    <p className="text-2xl font-bold text-red-900">{dest.emergencyInfo?.medical || dest.emergencyContacts?.ambulance || 'N/A'}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-red-200">
                     <h4 className="font-display text-red-800 mb-2">General Emergency</h4>
-                    <p className="text-2xl font-bold text-red-900">{destination.emergencyInfo.general}</p>
+                    <p className="text-2xl font-bold text-red-900">{dest.emergencyInfo?.general || dest.emergencyContacts?.touristHelpline || 'N/A'}</p>
                   </div>
                 </div>
                 {/* Emergency Phrases - now second */}
-                {destination.safetyTips.emergencyPhrases && destination.safetyTips.emergencyPhrases.length > 0 && 
-                 !['Australia', 'Canada', 'Ireland', 'New Zealand', 'United Kingdom', 'United States'].includes(destination.country) && (
+                {dest.safetyTips?.emergencyPhrases && dest.safetyTips?.emergencyPhrases.length > 0 && 
+                 !['Australia', 'Canada', 'Ireland', 'New Zealand', 'United Kingdom', 'United States'].includes(dest.country) && (
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">Emergency Phrases</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {destination.safetyTips.emergencyPhrases.map((phrase: any, index: number) => (
+                      {dest.safetyTips?.emergencyPhrases?.map((phrase: any, index: number) => (
                         <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
                           <div className="flex items-center justify-between mb-1">
                             <p className="text-red-800 font-medium text-sm">{phrase.english}</p>
@@ -677,11 +727,11 @@ const DestinationDetail: React.FC = () => {
                   </div>
                 </div>
                 {/* Hospitals */}
-                {destination.healthSafety?.hospitals && destination.healthSafety.hospitals.length > 0 && (
+                {dest.healthSafety?.hospitals && Array.isArray(dest.healthSafety.hospitals) && dest.healthSafety.hospitals.length > 0 && (
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">Major Hospitals</h4>
                     <ul className="space-y-1">
-                      {destination.healthSafety.hospitals.map((h: any, i: number) => (
+                      {dest.healthSafety?.hospitals?.map((h: any, i: number) => (
                         <li key={i}>
                           {h.link ? (
                             <a href={h.link} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{h.name}</a>
@@ -695,11 +745,11 @@ const DestinationDetail: React.FC = () => {
                   </div>
                 )}
                 {/* Pharmacies */}
-                {destination.healthSafety?.pharmacies && destination.healthSafety.pharmacies.length > 0 && (
+                {dest.healthSafety?.pharmacies && Array.isArray(dest.healthSafety.pharmacies) && dest.healthSafety.pharmacies.length > 0 && (
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">24/7 Pharmacies</h4>
                     <ul className="space-y-1">
-                      {destination.healthSafety.pharmacies.map((p: any, i: number) => (
+                      {dest.healthSafety?.pharmacies?.map((p: any, i: number) => (
                         <li key={i}>
                           {p.link ? (
                             <a href={p.link} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{p.name}</a>
@@ -713,11 +763,11 @@ const DestinationDetail: React.FC = () => {
                   </div>
                 )}
                 {/* Support Resources */}
-                {destination.sexualHarassmentData?.supportResources && destination.sexualHarassmentData.supportResources.length > 0 && (
+                {dest.sexualHarassmentData?.supportResources && Array.isArray(dest.sexualHarassmentData.supportResources) && dest.sexualHarassmentData.supportResources.length > 0 && (
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">Support & Victim Resources</h4>
                     <ul className="space-y-1">
-                      {destination.sexualHarassmentData.supportResources.map((r: string, i: number) => {
+                      {dest.sexualHarassmentData?.supportResources?.map((r: string, i: number) => {
                         const match = r.match(/(https?:\/\/[^ ,]+)/);
                         return (
                           <li key={i}>
@@ -790,50 +840,50 @@ const DestinationDetail: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                           <Moon className="h-8 w-8 text-blue-500 mx-auto mb-2" />
-                          <div className="text-2xl font-bold text-gray-900 mb-1">{destination.nightSafety}/10</div>
+                          <div className="text-2xl font-bold text-gray-900 mb-1">{dest.nightSafety || dest.scores?.nightSafety || 'N/A'}/10</div>
                           <div className="text-sm text-gray-600">Night Safety</div>
-                          {renderScoreBar(destination.nightSafety)}
+                          {renderScoreBar(dest.nightSafety || dest.scores?.nightSafety || 0)}
                         </div>
                         <div className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                           <Bus className="h-8 w-8 text-green-500 mx-auto mb-2" />
-                          <div className="text-2xl font-bold text-gray-900 mb-1">{destination.publicTransit}/10</div>
+                          <div className="text-2xl font-bold text-gray-900 mb-1">{dest.publicTransit || dest.scores?.publicTransport || 'N/A'}/10</div>
                           <div className="text-sm text-gray-600">Public Transit</div>
-                          {renderScoreBar(destination.publicTransit)}
+                          {renderScoreBar(dest.publicTransit || dest.scores?.publicTransport || 0)}
                         </div>
                         <div className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                           <Users className="h-8 w-8 text-purple-500 mx-auto mb-2" />
-                          <div className="text-2xl font-bold text-gray-900 mb-1">{destination.walkingAlone}/10</div>
+                          <div className="text-2xl font-bold text-gray-900 mb-1">{dest.walkingAlone || dest.scores?.walkingAlone || dest.scores?.walkingAlone || 'N/A'}/10</div>
                           <div className="text-sm text-gray-600">Walking Alone</div>
-                          {renderScoreBar(destination.walkingAlone)}
+                          {renderScoreBar(dest.walkingAlone || dest.scores?.walkingAlone || 0)}
                         </div>
                       </div>
                     </div>
 
                     {/* --- NEW DATA SECTIONS --- */}
                     <SafetyByTimeOfDay
-                      daytimeSafetyPercent={destination.daytimeSafetyPercent}
-                      nighttimeSafetyPercent={destination.nighttimeSafetyPercent}
-                      safetySourceName={destination.safetySourceName}
-                      safetySourceUrl={destination.safetySourceUrl}
+                      daytimeSafetyPercent={dest.daytimeSafetyPercent}
+                      nighttimeSafetyPercent={dest.nighttimeSafetyPercent}
+                      safetySourceName={dest.safetySourceName}
+                      safetySourceUrl={dest.safetySourceUrl}
                     />
 
                     <WomensConfidenceScore
-                      city={destination.city}
-                      country={destination.country}
+                      city={dest.city}
+                      country={dest.country}
                       score={confidenceData.score}
                       source={confidenceData.source}
                       sourceUrl={confidenceData.sourceUrl}
                     />
 
                     {/* Alerts - moved up below SafetyByTimeOfDay */}
-                    {destination.alerts && destination.alerts.length > 0 && (
+                    {dest.alerts && Array.isArray(dest.alerts) && dest.alerts.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4 flex items-center">
                           <span>Current Safety Alerts</span>
                           <AlertTriangle className="h-5 w-5 ml-2 text-red-500" />
                         </h3>
                         <div className="space-y-3">
-                          {destination.alerts.map((alert: any, index: number) => (
+                          {safeAlerts.map((alert: any, index: number) => (
                             <div key={index} className={`p-4 rounded-lg border ${
                               alert.severity === 'high' ? 'bg-red-50 border-red-200' :
                               alert.severity === 'medium' ? 'bg-yellow-50 border-yellow-200' :
@@ -864,29 +914,31 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     <MostReportedRedFlags 
-                      redFlags={destination.redFlags}
-                      safetySourceName={destination.safetySourceName}
-                      safetySourceUrl={destination.safetySourceUrl}
+                      redFlags={dest.redFlags}
+                      safetySourceName={dest.safetySourceName}
+                      safetySourceUrl={dest.safetySourceUrl}
                     />
-                    <CulturalSensitivityTips dos={destination.culturalDos || []} donts={destination.culturalDonts || []} />
-                    <ConfidenceByActivity activities={destination.confidenceByActivity} />
-                    <LanguageAndHelp languages={destination.languages} />
+                    <CulturalSensitivityTips dos={dest.culturalDos || []} donts={dest.culturalDonts || []} />
+                    <ConfidenceByActivity activities={dest.confidenceByActivity} />
+                    <LanguageAndHelp languages={safeLanguages} />
                     {/* --- END NEW DATA SECTIONS --- */}
 
                     {/* Currency & Exchange */}
+                    {dest.currency && (
+                    <>
                     <h3 className="text-xl font-display text-gray-900 mb-4">Currency & Exchange</h3>
                     <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-6">
                       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                         <div>
                           <h4 className="font-bold text-blue-900 mb-1">Local Currency</h4>
-                          <div className="text-[12pt] text-blue-900">{destination.currency.name} ({destination.currency.code})</div>
+                          <div className="text-[12pt] text-blue-900">{dest.currency?.name || 'Local Currency'} ({dest.currency?.code || 'N/A'})</div>
                         </div>
                         <div>
-                          <h4 className="font-bold text-blue-900 mb-1">Exchange Rates (1 {destination.currency.code})</h4>
+                          <h4 className="font-bold text-blue-900 mb-1">Exchange Rates (1 {dest.currency?.code || 'Unit'})</h4>
                           <div className="text-[12pt] text-blue-900">
-                            USD: ${destination.currency.exchangeRate.usd.toFixed(2)}<br />
-                            EUR: €{destination.currency.exchangeRate.eur.toFixed(2)}<br />
-                            GBP: £{destination.currency.exchangeRate.gbp.toFixed(2)}
+                            USD: ${dest.currency?.exchangeRate?.usd?.toFixed(2) || 'N/A'}<br />
+                            EUR: €{dest.currency?.exchangeRate?.eur?.toFixed(2) || 'N/A'}<br />
+                            GBP: £{dest.currency?.exchangeRate?.gbp?.toFixed(2) || 'N/A'}
                           </div>
                         </div>
                       </div>
@@ -894,23 +946,39 @@ const DestinationDetail: React.FC = () => {
                         <h4 className="font-bold text-blue-900 mb-1">Exchange Tips</h4>
                         <div className="text-[10pt] text-blue-800">
                           {(() => {
-                            const tip = destination.usefulTips?.find((t: any) => t.title?.toLowerCase().includes('currency & exchange tips'));
+                            const tip = dest.usefulTips?.find((t: any) => t.title?.toLowerCase().includes('currency & exchange tips'));
                             if (tip) return tip.description;
-                            if (destination.currency.scamWarnings && destination.currency.scamWarnings.length > 0) return destination.currency.scamWarnings[0];
+                            if (dest.currency?.scamWarnings && dest.currency.scamWarnings.length > 0) return dest.currency.scamWarnings[0];
                             return null;
                           })()}
                         </div>
                       </div>
                     </div>
+                    </>
+                    )}
+                    
+                    {/* Basic Info for Old Format */}
+                    {!dest.currency && (
+                    <>
+                    <h3 className="text-xl font-display text-gray-900 mb-4">Basic Information</h3>
+                    <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-6">
+                      {dest.currency && <div className="text-[12pt] text-blue-900 mb-2">Currency: {dest.currency}</div>}
+                      {dest.language && <div className="text-[12pt] text-blue-900 mb-2">Language: {dest.language}</div>}
+                      {dest.climate && <div className="text-[12pt] text-blue-900 mb-2">Climate: {dest.climate}</div>}
+                      {dest.bestTimeToVisit && <div className="text-[12pt] text-blue-900 mb-2">Best Time to Visit: {dest.bestTimeToVisit}</div>}
+                      {dest.costLevel && <div className="text-[12pt] text-blue-900">Cost Level: {dest.costLevel}</div>}
+                    </div>
+                    </>
+                    )}
 
                     {/* Useful Tips - moved below Currency & Exchange */}
-                    {(destination.usefulTips && destination.usefulTips.length > 0) ? (
+                    {(dest.usefulTips && dest.usefulTips.length > 0) ? (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">
                           Useful Tips
                         </h3>
                         <div className="space-y-3">
-                          {destination.usefulTips.slice(0, 5).map((tip: any, index: number) => (
+                          {safeUsefulTips.slice(0, 5).map((tip: any, index: number) => (
                             <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
                               <div className="flex items-start justify-between">
                                 <div>
@@ -927,13 +995,13 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       </div>
                     ) : (
-                      destination.scamWarnings && destination.scamWarnings.length > 0 && (
+                      dest.scamWarnings && dest.scamWarnings.length > 0 && (
                         <div>
                           <h3 className="text-xl font-display text-gray-900 mb-4">
                             Useful Tips
                           </h3>
                           <div className="space-y-3">
-                            {destination.scamWarnings.slice(0, 5).map((scam: any, index: number) => (
+                            {safeScamWarnings.slice(0, 5).map((scam: any, index: number) => (
                               <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
                                 <div className="flex items-start justify-between">
                                   <div>
@@ -951,6 +1019,72 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       )
                     )}
+                    
+                    {/* Old format safety tips */}
+                    {!dest.usefulTips && dest.safetyTips && Array.isArray(dest.safetyTips) && dest.safetyTips.length > 0 && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">
+                          Safety Tips
+                        </h3>
+                        <div className="space-y-3">
+                          {dest.safetyTips.slice(0, 5).map((tip: string, index: number) => (
+                            <div key={index} className={`p-4 rounded-lg border bg-green-50 border-green-200`}>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <p className="text-[12pt] text-green-800">
+                                    {tip}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* Old format travel tips */}
+                    {dest.travelTips && Array.isArray(dest.travelTips) && dest.travelTips.length > 0 && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">
+                          Travel Tips
+                        </h3>
+                        <div className="space-y-3">
+                          {dest.travelTips.slice(0, 5).map((tip: string, index: number) => (
+                            <div key={index} className={`p-4 rounded-lg border bg-blue-50 border-blue-200`}>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <p className="text-[12pt] text-blue-800">
+                                    {tip}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* Old format red flags */}
+                    {dest.redFlags && Array.isArray(dest.redFlags) && dest.redFlags.length > 0 && !(dest.redFlags[0]?.label) && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">
+                          Safety Warnings
+                        </h3>
+                        <div className="space-y-3">
+                          {dest.redFlags.slice(0, 5).map((flag: string, index: number) => (
+                            <div key={index} className={`p-4 rounded-lg border bg-yellow-50 border-yellow-200`}>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <p className="text-[12pt] text-yellow-800">
+                                    {flag}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -963,35 +1097,41 @@ const DestinationDetail: React.FC = () => {
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2 flex items-center">
                             <Moon className="h-4 w-4 mr-2 text-blue-500" />
-                            Night Safety ({destination.nightSafety}/10)
+                            Night Safety ({dest.nightSafety || dest.scores?.nightSafety || 'N/A'}/10)
                           </h4>
-                          <p className="text-gray-700">{destination.safetyBreakdown.nightSafety.context}</p>
+                          <p className="text-gray-700">{dest.safetyBreakdown?.nightSafety?.context || 'Safety information not available for this destination.'}</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2 flex items-center">
                             <Bus className="h-4 w-4 mr-2 text-green-500" />
-                            Public Transit ({destination.publicTransit}/10)
+                            Public Transit ({dest.publicTransit || dest.scores?.publicTransport || 'N/A'}/10)
                           </h4>
-                          <p className="text-gray-700">{destination.safetyBreakdown.publicTransit.context}</p>
+                          <p className="text-gray-700">{dest.safetyBreakdown?.publicTransit?.context || 'Transportation safety information not available for this destination.'}</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2 flex items-center">
                             <Users className="h-4 w-4 mr-2 text-purple-500" />
-                            Walking Alone ({destination.walkingAlone}/10)
+                            Walking Alone ({dest.walkingAlone || dest.scores?.walkingAlone || 'N/A'}/10)
                           </h4>
-                          <p className="text-gray-700">{destination.safetyBreakdown.walkingAlone.context}</p>
+                          <p className="text-gray-700">{dest.safetyBreakdown?.walkingAlone?.context || 'Walking safety information not available for this destination.'}</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Neighborhoods */}
+                    {((safeNeighborhoods?.safe && Array.isArray(safeNeighborhoods.safe) && safeNeighborhoods.safe.length > 0) || 
+                      (safeNeighborhoods?.caution && Array.isArray(safeNeighborhoods.caution) && safeNeighborhoods.caution.length > 0) || 
+                      (safeNeighborhoods?.avoid && Array.isArray(safeNeighborhoods.avoid) && safeNeighborhoods.avoid.length > 0) ||
+                      (safeNeighborhoods && Array.isArray(safeNeighborhoods))) && (
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Neighborhood Safety</h3>
                       <div className="space-y-4">
+                        {/* Handle new format neighborhoods.safe */}
+                        {safeNeighborhoods?.safe && Array.isArray(safeNeighborhoods.safe) && safeNeighborhoods.safe.length > 0 && (
                         <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
                           <h4 className="font-display text-green-900 mb-2">Safe Areas</h4>
                           <ul className="text-[12pt] text-green-800 space-y-4">
-                            {destination.neighborhoods.safe.map((area: any, index: number) => (
+                            {safeNeighborhoods.safe.map((area: any, index: number) => (
                               typeof area === 'string' ? (
                                 <li key={index}><span className="font-bold">{area}</span></li>
                               ) : (
@@ -1003,60 +1143,109 @@ const DestinationDetail: React.FC = () => {
                             ))}
                           </ul>
                         </div>
+                        )}
+                        {safeNeighborhoods?.caution && Array.isArray(safeNeighborhoods.caution) && safeNeighborhoods.caution.length > 0 && (
                         <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                           <h4 className="font-display text-yellow-900 mb-2">Use Caution</h4>
                           <ul className="text-[12pt] text-yellow-800 space-y-2">
-                            {destination.neighborhoods.caution.map((area: string, idx: number) => (
+                            {safeNeighborhoods.caution.map((area: string, idx: number) => (
                               <li key={idx}>• {area}</li>
                             ))}
                           </ul>
                         </div>
+                        )}
+                        {safeNeighborhoods?.avoid && Array.isArray(safeNeighborhoods.avoid) && safeNeighborhoods.avoid.length > 0 && (
                         <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                           <h4 className="font-display text-red-900 mb-2">Avoid</h4>
                           <ul className="text-[12pt] text-red-800 space-y-2">
-                            {destination.neighborhoods.avoid.map((area: string, idx: number) => (
+                            {safeNeighborhoods.avoid.map((area: string, idx: number) => (
                               <li key={idx}>• {area}</li>
                             ))}
                           </ul>
                         </div>
+                        )}
+                        {/* Handle old format neighborhoods as array */}
+                        {safeNeighborhoods && Array.isArray(safeNeighborhoods) && safeNeighborhoods.length > 0 && (
+                        <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                          <h4 className="font-display text-blue-900 mb-2">Neighborhoods</h4>
+                          <ul className="text-[12pt] text-blue-800 space-y-2">
+                            {safeNeighborhoods.map((neighborhood: any, idx: number) => (
+                              <li key={idx}>
+                                <span className="font-bold">{neighborhood.name}</span>
+                                {neighborhood.description && <div className="mt-1">{neighborhood.description}</div>}
+                                {neighborhood.safetyScore && <div className="text-sm text-blue-600 mt-1">Safety Score: {neighborhood.safetyScore}/5</div>}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        )}
                       </div>
                     </div>
+                    )}
 
                     {/* Cultural Expectations */}
-                    {destination.culturalExpectations && (
+                    {(dest.culturalExpectations || dest.culturalConsiderations || dest.culturalNorms) && (
                       <div>
-                        <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Expectations</h3>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
                         <div className="space-y-4">
+                          {dest.culturalExpectations?.dressCode && (
                           <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                             <h4 className="font-display text-blue-900 mb-2">Dress Code</h4>
                             <div className="text-[12pt] text-blue-800 whitespace-pre-line">
-                              {destination.culturalExpectations.dressCode}
+                              {dest.culturalExpectations.dressCode}
                             </div>
                           </div>
+                          )}
+                          {dest.culturalExpectations?.behaviorNorms && Array.isArray(dest.culturalExpectations.behaviorNorms) && dest.culturalExpectations.behaviorNorms.length > 0 && (
                           <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                             <h4 className="font-display text-purple-900 mb-2">Behavior Norms</h4>
                             <ul className="text-[12pt] text-purple-800 space-y-1">
-                              {destination.culturalExpectations.behaviorNorms.map((norm: string, idx: number) => (
+                              {dest.culturalExpectations.behaviorNorms.map((norm: string, idx: number) => (
                                 <li key={idx}>• {norm}</li>
                               ))}
                             </ul>
                           </div>
+                          )}
+                          {dest.culturalExpectations?.perception && (
                           <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
                             <h4 className="font-display text-gray-900 mb-2">Local Perception</h4>
                             <div className="text-[12pt] text-gray-800 whitespace-pre-line">
-                              {destination.culturalExpectations.perception}
+                              {dest.culturalExpectations.perception}
                             </div>
                           </div>
+                          )}
+                          {/* Old format cultural considerations */}
+                          {dest.culturalConsiderations && Array.isArray(dest.culturalConsiderations) && dest.culturalConsiderations.length > 0 && (
+                          <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-lg">
+                            <h4 className="font-display text-indigo-900 mb-2">Cultural Considerations</h4>
+                            <ul className="text-[12pt] text-indigo-800 space-y-1">
+                              {dest.culturalConsiderations.map((consideration: string, idx: number) => (
+                                <li key={idx}>• {consideration}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          )}
+                          {/* Old format cultural norms */}
+                          {dest.culturalNorms && Array.isArray(dest.culturalNorms) && dest.culturalNorms.length > 0 && (
+                          <div className="p-4 bg-teal-50 border border-teal-200 rounded-lg">
+                            <h4 className="font-display text-teal-900 mb-2">Cultural Norms</h4>
+                            <ul className="text-[12pt] text-teal-800 space-y-1">
+                              {dest.culturalNorms.map((norm: string, idx: number) => (
+                                <li key={idx}>• {norm}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          )}
                         </div>
                       </div>
                     )}
 
                     {/* Scam Warnings */}
-                    {destination.scamWarnings && destination.scamWarnings.length > 0 && (
+                    {dest.scamWarnings && Array.isArray(dest.scamWarnings) && dest.scamWarnings.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Scam Warnings</h3>
                         <div className="space-y-3">
-                          {destination.scamWarnings.map((scam: any, index: number) => (
+                          {safeScamWarnings.map((scam: any, index: number) => (
                             <div key={index} className={`p-4 rounded-lg border ${
                               scam.severity === 'high' ? 'bg-red-50 border-red-200' : 
                               scam.severity === 'medium' ? 'bg-yellow-50 border-yellow-200' : 
@@ -1079,11 +1268,11 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     {/* Useful Tips */}
-                    {destination.usefulTips && destination.usefulTips.length > 0 && (
+                    {dest.usefulTips && Array.isArray(dest.usefulTips) && dest.usefulTips.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Useful Tips</h3>
                         <div className="space-y-3">
-                          {destination.usefulTips.map((tip: any, index: number) => (
+                          {safeUsefulTips.map((tip: any, index: number) => (
                             <div key={index} className={`p-4 rounded-lg border ${
                               tip.severity === 'high' ? 'bg-red-50 border-red-200' : 
                               tip.severity === 'medium' ? 'bg-yellow-50 border-yellow-200' : 
@@ -1111,12 +1300,12 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     {/* Cultural Sensitivity Tips */}
-                    {destination.culturalSensitivityTips && destination.culturalSensitivityTips.length > 0 && (
+                    {dest.culturalSensitivityTips && Array.isArray(dest.culturalSensitivityTips) && dest.culturalSensitivityTips.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Sensitivity Tips</h3>
                         <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-lg">
                           <ul className="text-[12pt] text-indigo-800 space-y-2">
-                            {destination.culturalSensitivityTips.map((tip: string, idx: number) => (
+                            {dest.culturalSensitivityTips?.map((tip: string, idx: number) => (
                               <li key={idx}>• {tip}</li>
                             ))}
                           </ul>
@@ -1125,25 +1314,25 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     {/* Cultural Dos and Don'ts */}
-                    {(destination.culturalDos && destination.culturalDos.length > 0) || (destination.culturalDonts && destination.culturalDonts.length > 0) && (
+                    {((dest.culturalDos && Array.isArray(dest.culturalDos) && dest.culturalDos.length > 0) || (dest.culturalDonts && Array.isArray(dest.culturalDonts) && dest.culturalDonts.length > 0)) && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Guidelines</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {destination.culturalDos && destination.culturalDos.length > 0 && (
+                          {dest.culturalDos && Array.isArray(dest.culturalDos) && dest.culturalDos.length > 0 && (
                             <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
                               <h4 className="font-display text-green-900 mb-2">Do's</h4>
                               <ul className="text-[12pt] text-green-800 space-y-1">
-                                {destination.culturalDos.map((doItem: string, idx: number) => (
+                                {safeCulturalDos.map((doItem: string, idx: number) => (
                                   <li key={idx}>• {doItem}</li>
                                 ))}
                               </ul>
                             </div>
                           )}
-                          {destination.culturalDonts && destination.culturalDonts.length > 0 && (
+                          {dest.culturalDonts && Array.isArray(dest.culturalDonts) && dest.culturalDonts.length > 0 && (
                             <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                               <h4 className="font-display text-red-900 mb-2">Don'ts</h4>
                               <ul className="text-[12pt] text-red-800 space-y-1">
-                                {destination.culturalDonts.map((dontItem: string, idx: number) => (
+                                {safeCulturalDonts.map((dontItem: string, idx: number) => (
                                   <li key={idx}>• {dontItem}</li>
                                 ))}
                               </ul>
@@ -1164,32 +1353,32 @@ const DestinationDetail: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                           <h4 className="font-display text-blue-900 mb-2">Clothing Recommendations</h4>
-                          {Array.isArray(destination.safetyTips.clothing) || (typeof destination.safetyTips.clothing === 'string' && destination.safetyTips.clothing.match(/[\n•]/)) ? (
+                          {Array.isArray(dest.safetyTips?.clothing) || (typeof dest.safetyTips?.clothing === 'string' && dest.safetyTips?.clothing.match(/[\n•]/)) ? (
                             <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
-                              {(Array.isArray(destination.safetyTips.clothing)
-                                ? destination.safetyTips.clothing
-                                : destination.safetyTips.clothing.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
+                              {(Array.isArray(dest.safetyTips?.clothing)
+                                ? dest.safetyTips?.clothing
+                                : dest.safetyTips?.clothing.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
                               ).map((item: string, idx: number) => (
                                 <li key={idx}>{item.trim()}</li>
                               ))}
                             </ul>
                           ) : (
-                            <p className="text-sm text-blue-800">{destination.safetyTips.clothing}</p>
+                            <p className="text-sm text-blue-800">{dest.safetyTips?.clothing}</p>
                           )}
                         </div>
                         <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                           <h4 className="font-display text-purple-900 mb-2">First-Timer Tips</h4>
-                          {Array.isArray(destination.safetyTips.firstTimers) || (typeof destination.safetyTips.firstTimers === 'string' && destination.safetyTips.firstTimers.match(/[\n•]/)) ? (
+                          {Array.isArray(dest.safetyTips?.firstTimers) || (typeof dest.safetyTips?.firstTimers === 'string' && dest.safetyTips?.firstTimers.match(/[\n•]/)) ? (
                             <ul className="text-sm text-purple-800 list-disc list-inside space-y-1">
-                              {(Array.isArray(destination.safetyTips.firstTimers)
-                                ? destination.safetyTips.firstTimers
-                                : destination.safetyTips.firstTimers.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
+                              {(Array.isArray(dest.safetyTips?.firstTimers)
+                                ? dest.safetyTips?.firstTimers
+                                : dest.safetyTips?.firstTimers.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
                               ).map((item: string, idx: number) => (
                                 <li key={idx}>{item.trim()}</li>
                               ))}
                             </ul>
                           ) : (
-                            <p className="text-sm text-purple-800">{destination.safetyTips.firstTimers}</p>
+                            <p className="text-sm text-purple-800">{dest.safetyTips?.firstTimers}</p>
                           )}
                         </div>
                       </div>
@@ -1199,8 +1388,8 @@ const DestinationDetail: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Useful Apps</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {destination.safetyTips.apps.map((app: string, index: number) => {
-                          const appLinkObj = destination.safetyTips.appLinks?.find((a: any) => a.name === app);
+                        {dest.safetyTips?.apps?.map((app: string, index: number) => {
+                          const appLinkObj = dest.safetyTips?.appLinks?.find((a: any) => a.name === app);
                           let url = '';
                           switch (app) {
                             case 'GVB':
@@ -1255,9 +1444,9 @@ const DestinationDetail: React.FC = () => {
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2">Dress Code</h4>
                           <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                            {(Array.isArray(destination.culturalExpectations.dressCode)
-                              ? destination.culturalExpectations.dressCode
-                              : destination.culturalExpectations.dressCode.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
+                            {(Array.isArray(dest.culturalExpectations.dressCode)
+                              ? dest.culturalExpectations.dressCode
+                              : dest.culturalExpectations.dressCode.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
                             ).map((item: string, idx: number) => (
                               <li key={idx}>{item.trim()}</li>
                             ))}
@@ -1266,9 +1455,9 @@ const DestinationDetail: React.FC = () => {
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
                           <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                            {(Array.isArray(destination.culturalExpectations.behaviorNorms)
-                              ? destination.culturalExpectations.behaviorNorms
-                              : destination.culturalExpectations.behaviorNorms.split(/\n|,|•/).filter(Boolean)
+                            {(Array.isArray(dest.culturalExpectations.behaviorNorms)
+                              ? dest.culturalExpectations.behaviorNorms
+                              : dest.culturalExpectations.behaviorNorms.split(/\n|,|•/).filter(Boolean)
                             ).map((norm: string, index: number) => (
                               <li key={index}>{norm.trim()}</li>
                             ))}
@@ -1278,9 +1467,9 @@ const DestinationDetail: React.FC = () => {
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-display text-gray-900 mb-2">Solo Women Perception</h4>
                           <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                            {(Array.isArray(destination.culturalExpectations.perception)
-                              ? destination.culturalExpectations.perception
-                              : destination.culturalExpectations.perception.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
+                            {(Array.isArray(dest.culturalExpectations.perception)
+                              ? dest.culturalExpectations.perception
+                              : dest.culturalExpectations.perception.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
                             ).map((item: string, idx: number) => (
                               <li key={idx}>{item.trim()}</li>
                             ))}
@@ -1292,7 +1481,7 @@ const DestinationDetail: React.FC = () => {
                 )}
 
                 {/* Cost & Comfort Tab */}
-                {activeTab === 'cost' && destination.costAndComfort && (
+                {activeTab === 'cost' && dest.costAndComfort && (
                   <div className="space-y-6">
                     {/* Daily Budget Range */}
                     <div>
@@ -1300,11 +1489,11 @@ const DestinationDetail: React.FC = () => {
                       <div className="p-6 bg-green-50 border border-green-200 rounded-2xl">
                         <div className="text-center mb-4">
                           <div className="text-3xl font-bold text-green-900 mb-2">
-                            {destination.costAndComfort.dailyBudget.range}
+                            {dest.costAndComfort.dailyBudget.range}
                           </div>
-                          <p className="text-green-800 mb-3">{destination.costAndComfort.dailyBudget.description}</p>
+                          <p className="text-green-800 mb-3">{dest.costAndComfort.dailyBudget.description}</p>
                           <div className="bg-green-100 border border-green-300 rounded-lg p-3">
-                            <p className="text-sm text-green-900 font-medium">{destination.costAndComfort.dailyBudget.tip}</p>
+                            <p className="text-sm text-green-900 font-medium">{dest.costAndComfort.dailyBudget.tip}</p>
                           </div>
                         </div>
                       </div>
@@ -1314,7 +1503,7 @@ const DestinationDetail: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Where to Stay - Cost vs Safety</h3>
                       <div className="space-y-4">
-                        {destination.costAndComfort.accommodation.map((acc: any, index: number) => (
+                        {dest.costAndComfort.accommodation?.map((acc: any, index: number) => (
                           <div key={index} className="p-4 border rounded-lg bg-white">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center space-x-3">
@@ -1342,7 +1531,7 @@ const DestinationDetail: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Transport Options</h3>
                       <div className="space-y-4">
-                        {destination.costAndComfort.transport.map((trans: any, index: number) => (
+                        {dest.costAndComfort.transport?.map((trans: any, index: number) => (
                           <div key={index} className="p-4 border rounded-lg bg-white">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center space-x-3">
@@ -1371,7 +1560,7 @@ const DestinationDetail: React.FC = () => {
                       <h3 className="text-xl font-display text-gray-900 mb-4">Smart Budgeting = Safer Travel</h3>
                       <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                         <ul className="space-y-2">
-                          {destination.costAndComfort.budgetTips.map((tip: string, index: number) => (
+                          {dest.costAndComfort.budgetTips?.map((tip: string, index: number) => (
                             <li key={index} className="flex items-start space-x-2">
                               <span className="text-green-600 font-bold mt-0.5">✓</span>
                               <span className="text-blue-900">{tip}</span>
@@ -1434,7 +1623,7 @@ const DestinationDetail: React.FC = () => {
                       <div className="text-center py-12">
                         <MessageSquare className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                         <h3 className="text-lg font-display text-gray-900 mb-2">No reviews yet</h3>
-                        <p className="text-gray-600 mb-6">Be the first to share your safety experience in {destination.city}!</p>
+                        <p className="text-gray-600 mb-6">Be the first to share your safety experience in {dest.city}!</p>
                         <button 
                           onClick={() => setShowReviewModal(true)}
                           className="px-6 py-3 bg-primary-400 text-white rounded-xl font-semibold hover:bg-primary-500 transition-colors duration-300"
@@ -1457,21 +1646,21 @@ const DestinationDetail: React.FC = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Reviews</span>
-                    <span className="font-semibold">{destination.reviewCount}</span>
+                    <span className="font-semibold">{dest.reviewCount || reviews.length || 0}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Last Updated</span>
-                    <span className="font-semibold">{destination.lastUpdated}</span>
+                    <span className="font-semibold">{dest.lastUpdated || 'Recently updated'}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Continent</span>
-                    <span className="font-semibold">{destination.continent}</span>
+                    <span className="font-semibold">{dest.continent || 'Europe'}</span>
                   </div>
                 </div>
               </div>
 
               {/* Travel Advisory */}
-              {destination.governmentAdvisory && (
+              {dest.governmentAdvisory && (
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                   <h3 className="text-lg font-display text-gray-900 mb-4">
                     Travel Advisory
@@ -1479,34 +1668,34 @@ const DestinationDetail: React.FC = () => {
                   
                   {/* Section 1: Advisory Status */}
                   <div className={`p-4 rounded-lg mb-4 ${
-                    destination.governmentAdvisory.level === 'Exercise Normal Precautions' ? 'bg-green-50 border border-green-200' :
-                    destination.governmentAdvisory.level === 'Exercise Increased Caution' ? 'bg-yellow-50 border border-yellow-200' :
-                    destination.governmentAdvisory.level === 'Reconsider Travel' ? 'bg-orange-50 border border-orange-200' :
+                    dest.governmentAdvisory.level === 'Exercise Normal Precautions' ? 'bg-green-50 border border-green-200' :
+                    dest.governmentAdvisory.level === 'Exercise Increased Caution' ? 'bg-yellow-50 border border-yellow-200' :
+                    dest.governmentAdvisory.level === 'Reconsider Travel' ? 'bg-orange-50 border border-orange-200' :
                     'bg-red-50 border border-red-200'
                   }`}>
                     <div className="text-center">
                       <div className={`text-lg font-bold mb-1 ${
-                        destination.governmentAdvisory.level === 'Exercise Normal Precautions' ? 'text-green-900' :
-                        destination.governmentAdvisory.level === 'Exercise Increased Caution' ? 'text-yellow-900' :
-                        destination.governmentAdvisory.level === 'Reconsider Travel' ? 'text-orange-900' :
+                        dest.governmentAdvisory.level === 'Exercise Normal Precautions' ? 'text-green-900' :
+                        dest.governmentAdvisory.level === 'Exercise Increased Caution' ? 'text-yellow-900' :
+                        dest.governmentAdvisory.level === 'Reconsider Travel' ? 'text-orange-900' :
                         'text-red-900'
                       }`}>
-                        Level {destination.governmentAdvisory.levelNumber}: {destination.governmentAdvisory.level}
+                        Level {dest.governmentAdvisory.levelNumber}: {dest.governmentAdvisory.level}
                       </div>
                       <div className="text-xs text-gray-500">
-                        Issued by: {destination.governmentAdvisory.source}
+                        Issued by: {dest.governmentAdvisory.source}
                       </div>
                       <div className="text-xs text-gray-500">
-                        Updated: {destination.governmentAdvisory.lastUpdated}
+                        Updated: {dest.governmentAdvisory.lastUpdated}
                       </div>
                     </div>
                   </div>
 
                   {/* Section 2: Summary */}
-                  {destination.governmentAdvisory.reason && (
+                  {dest.governmentAdvisory.reason && (
                     <div className="mb-4">
                       <p className="text-sm text-gray-700 leading-relaxed">
-                        {destination.governmentAdvisory.reason}
+                        {dest.governmentAdvisory.reason}
                       </p>
                     </div>
                   )}
@@ -1515,8 +1704,8 @@ const DestinationDetail: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="font-display text-gray-900 mb-2 text-sm">What this means for solo travelers</h4>
                     <ul className="space-y-1 text-sm text-gray-700">
-                      {destination.governmentAdvisory.soloTravelerAdvice && destination.governmentAdvisory.soloTravelerAdvice.length > 0 ? (
-                        destination.governmentAdvisory.soloTravelerAdvice.map((advice, index) => (
+                      {dest.governmentAdvisory.soloTravelerAdvice && dest.governmentAdvisory.soloTravelerAdvice.length > 0 ? (
+                        dest.governmentAdvisory?.soloTravelerAdvice?.map((advice, index) => (
                           <li key={index} className="flex items-start">
                             <span className="text-red-600 mr-2 mt-0.5">•</span>
                             {advice}
@@ -1548,10 +1737,10 @@ const DestinationDetail: React.FC = () => {
                   </div>
 
                   {/* Section 5: CTA Link */}
-                  {destination.governmentAdvisory.link && (
+                  {dest.governmentAdvisory.link && (
                     <div>
                       <a
-                        href={destination.governmentAdvisory.link}
+                        href={dest.governmentAdvisory.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary-400 hover:text-primary-500 font-medium transition-colors text-sm"
@@ -1573,7 +1762,7 @@ const DestinationDetail: React.FC = () => {
                   <div>
                     <h4 className="font-display text-gray-900 mb-1">Safest Months</h4>
                     <div className="flex flex-wrap gap-2">
-                      {destination.bestTimeToVisit.safestMonths.map((month: string, index: number) => (
+                      {dest.bestTimeToVisit?.safestMonths?.map((month: string, index: number) => (
                         <span key={index} className="px-2 py-1 bg-green-100 text-green-800 rounded text-sm">
                           {month}
                         </span>
@@ -1582,18 +1771,18 @@ const DestinationDetail: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-display text-gray-900 mb-1">Events & Notes</h4>
-                    <p className="text-sm text-gray-700">{destination.bestTimeToVisit.events}</p>
+                    <p className="text-sm text-gray-700">{dest.bestTimeToVisit.events}</p>
                   </div>
                 </div>
               </div>
 
               {/* Recommended Accommodations */}
-              {destination.accommodations && destination.accommodations.length > 0 && (
+              {dest.accommodations && Array.isArray(dest.accommodations) && dest.accommodations.length > 0 && (
                 <div className="sticky top-0 z-30">
                   <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                     <h3 className="text-lg font-display text-gray-900 mb-4">Recommended Stays</h3>
                     <div className="space-y-4">
-                      {destination.accommodations.map((accommodation: any, index: number) => (
+                      {safeAccommodations.map((accommodation: any, index: number) => (
                         <div key={index} className="p-4 bg-gray-50 rounded-lg">
                           <div className="flex items-center justify-between mb-2">
                             {accommodation.link ? (
@@ -1619,7 +1808,7 @@ const DestinationDetail: React.FC = () => {
                           </div>
                           <p className="text-sm text-gray-600 mb-2">{accommodation.notes}</p>
                           <div className="flex flex-wrap gap-1">
-                            {accommodation.features.map((feature: string, featureIndex: number) => (
+                            {accommodation.features?.map((feature: string, featureIndex: number) => (
                               <span key={featureIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
                                 {feature}
                               </span>
@@ -1640,8 +1829,8 @@ const DestinationDetail: React.FC = () => {
       <ReviewModal 
         isOpen={showReviewModal}
         onClose={() => setShowReviewModal(false)}
-        destinationCity={destination.city}
-        destinationCountry={destination.country}
+        destinationCity={dest.city}
+        destinationCountry={dest.country}
         onReviewSubmitted={handleReviewSubmitted}
       />
 

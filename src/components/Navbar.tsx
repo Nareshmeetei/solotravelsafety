@@ -3,17 +3,18 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { User, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
-import UserAvatar from './UserAvatar';
 import NotificationBell from './NotificationBell';
+import UserAvatar from './UserAvatar';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showAuthModal, setShowAuthModal] = useState(false);
-  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const { user, signOut } = useAuth();
+  const [profileData, setProfileData] = useState<any>(null);
 
   // Check if current page is a destination detail page, profile page, add destination page, or account settings page
   const isDestinationDetailPage = location.pathname.startsWith('/destination/');
@@ -36,6 +37,50 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
+
+  // Load profile data from localStorage
+  useEffect(() => {
+    const loadProfileData = () => {
+      if (!user) {
+        setProfileData(null);
+        return;
+      }
+
+      try {
+        const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+        if (storedProfile) {
+          const profile = JSON.parse(storedProfile);
+          setProfileData(profile);
+          console.log('📖 Navbar: Profile loaded from localStorage');
+        } else {
+          // Use auth metadata as fallback
+          setProfileData({
+            full_name: user.user_metadata?.full_name,
+            username: user.user_metadata?.username,
+            avatar_url: user.user_metadata?.avatar_url
+          });
+          console.log('📖 Navbar: Using auth metadata');
+        }
+      } catch (error) {
+        console.error('Error loading profile data in navbar:', error);
+        setProfileData(null);
+      }
+    };
+
+    loadProfileData();
+
+    // Listen for profile updates
+    const handleProfileUpdate = (event: CustomEvent) => {
+      console.log('📢 Navbar: Profile update received');
+      loadProfileData();
+    };
+
+    window.addEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    
+    return () => {
+      window.removeEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    };
+  }, [user]);
 
   const handleSignIn = () => {
     setAuthMode('signin');
@@ -118,8 +163,8 @@ const Navbar: React.FC = () => {
                   onClick={handleProfileClick}
                   className="flex items-center space-x-2 text-gray-700 hover:text-primary-400 font-medium text-sm transition-all duration-300 hover:scale-105 focus-smooth"
                 >
-                  <UserAvatar user={user} size="sm" />
-                  <span className="hidden xl:inline">{user.user_metadata?.full_name || 'User'}</span>
+                  <UserAvatar user={{ ...user, ...profileData }} size="sm" />
+                  <span className="hidden xl:inline">{user?.user_metadata?.full_name || 'User'}</span>
                 </button>
               </>
             ) : (
@@ -154,9 +199,9 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden absolute top-full left-4 right-4 bg-white/95 backdrop-blur-md border border-gray-200 rounded-lg shadow-lg transition-all duration-300 ${
+        <div className={`lg:hidden absolute top-full left-4 right-4 backdrop-blur-md border border-gray-200 rounded-lg shadow-lg transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}>
+        }`} style={{backgroundColor: 'rgba(239, 234, 255, 0.95)'}}>
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link 
@@ -184,8 +229,8 @@ const Navbar: React.FC = () => {
                     onClick={handleProfileClick}
                     className="flex items-center space-x-3 w-full text-left text-gray-700 hover:text-primary-400 font-medium text-base py-2 transition-all duration-300"
                   >
-                    <UserAvatar user={user} size="sm" />
-                    <span>{user.user_metadata?.full_name || 'User'}</span>
+                    <UserAvatar user={{ ...user, ...profileData }} size="sm" />
+                    <span>{user?.user_metadata?.full_name || 'User'}</span>
                   </button>
                 </>
               ) : (
@@ -217,7 +262,7 @@ const Navbar: React.FC = () => {
             : '-translate-y-full opacity-0'
         }`}>
           <div className="flex justify-center mt-2 sm:mt-4 px-4 animate-slide-down">
-            <div className="w-full max-w-4xl bg-white/80 backdrop-blur-[100px] shadow-sm border border-white/30 px-4 sm:px-6 py-3 sm:py-4 transition-all duration-300 hover:shadow-md" style={{ borderRadius: '30px' }}>
+            <div className="w-full max-w-4xl backdrop-blur-[100px] shadow-sm border border-gray-200 px-4 sm:px-6 py-3 sm:py-4 transition-all duration-300 hover:shadow-md" style={{ borderRadius: '30px', backgroundColor: 'rgba(239, 234, 255, 0.8)' }}>
               <div className="flex items-center justify-between">
                 {/* Logo */}
                 <Link 
@@ -256,8 +301,8 @@ const Navbar: React.FC = () => {
                         onClick={handleProfileClick}
                         className="flex items-center space-x-2 text-gray-600 hover:text-primary-400 font-medium text-sm transition-all duration-300 hover:scale-105 focus-smooth"
                       >
-                        <UserAvatar user={user} size="sm" />
-                        <span className="hidden xl:inline">{user.user_metadata?.full_name || 'User'}</span>
+                        <UserAvatar user={{ ...user, ...profileData }} size="sm" />
+                        <span className="hidden xl:inline">{user?.user_metadata?.full_name || 'User'}</span>
                       </button>
                     </>
                   ) : (
@@ -315,8 +360,8 @@ const Navbar: React.FC = () => {
                         onClick={handleProfileClick}
                         className="flex items-center space-x-2 w-full text-left text-gray-600 hover:text-primary-400 font-medium text-sm py-2 transition-all duration-300"
                       >
-                        <UserAvatar user={user} size="sm" />
-                        <span>{user.user_metadata?.full_name || 'User'}</span>
+                        <UserAvatar user={{ ...user, ...profileData }} size="sm" />
+                        <span>{user?.user_metadata?.full_name || 'User'}</span>
                       </button>
                     ) : (
                       <>
@@ -343,7 +388,7 @@ const Navbar: React.FC = () => {
       )}
 
       {/* Auth Modal */}
-      <AuthModal 
+      <AuthModal
         isOpen={showAuthModal}
         onClose={() => setShowAuthModal(false)}
         initialMode={authMode}

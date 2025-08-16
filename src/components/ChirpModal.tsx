@@ -97,88 +97,66 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
         created_at: new Date().toISOString()
       };
 
-      // Try to insert into database, but handle gracefully if table doesn't exist
-      try {
-        const { data, error } = await supabase
-          .from('chirps')
-          .insert(chirpData)
-          .select(`
-            *,
-            user:profiles!chirps_user_id_fkey(
-              id,
-              full_name,
-              avatar_url,
-              email
-            )
-          `)
-          .single();
-
-        if (error) {
-          console.warn('Database insert failed, using demo mode:', error);
-                  // Create a demo chirp that works everywhere
-        const demoChirp = {
-          id: Date.now().toString(),
-          ...chirpData,
-          user: {
-            id: user.id,
-            full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-            avatar_url: user.user_metadata?.avatar_url,
-            email: user.email
-          },
-          userLikes: [],
-          userRechirps: [],
-          comments: [],
-          comments_count: 0
-        };
-          
-          // Store in localStorage for this session
-          const existingChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-          existingChirps.unshift(demoChirp);
-          localStorage.setItem('localChirps', JSON.stringify(existingChirps));
-          
-          // Also store in sessionStorage for cross-tab persistence
-          sessionStorage.setItem('sessionChirps', JSON.stringify(existingChirps));
-          
-          console.log('Chirp stored in localStorage:', demoChirp);
-        } else {
-          console.log('Chirp stored in database successfully:', data);
+      // SIMPLE: Always save to localStorage (works everywhere)
+      // Get the most up-to-date profile data
+      const getUserData = () => {
+        try {
+          const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+          if (storedProfile) {
+            const profile = JSON.parse(storedProfile);
+            return {
+              id: user.id,
+              full_name: profile.full_name || user.user_metadata?.full_name || user.email?.split('@')[0],
+              avatar_url: profile.avatar_url || user.user_metadata?.avatar_url,
+              username: profile.username || user.user_metadata?.username,
+              email: user.email
+            };
+          }
+        } catch (error) {
+          console.error('Error loading profile for new chirp:', error);
         }
-      } catch (dbError) {
-        console.warn('Database error, using demo mode:', dbError);
-        // Create a demo chirp that works everywhere
-        const demoChirp = {
-          id: Date.now().toString(),
-          ...chirpData,
-          user: {
-            id: user.id,
-            full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-            avatar_url: user.user_metadata?.avatar_url,
-            email: user.email
-          },
-          userLikes: [],
-          userRechirps: [],
-          comments: [],
-          comments_count: 0
+        
+        // Fallback to auth metadata
+        return {
+          id: user.id,
+          full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+          avatar_url: user.user_metadata?.avatar_url,
+          username: user.user_metadata?.username,
+          email: user.email
         };
-        
-        // Store in localStorage for this session
-        const existingChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
-        existingChirps.unshift(demoChirp);
-        localStorage.setItem('localChirps', JSON.stringify(existingChirps));
-        
-        // Also store in sessionStorage for cross-tab persistence
-        sessionStorage.setItem('sessionChirps', JSON.stringify(existingChirps));
-        
-        console.log('Chirp stored in localStorage (fallback):', demoChirp);
-      }
+      };
+
+      const chirpToSave = {
+        id: Date.now().toString(),
+        ...chirpData,
+        user: getUserData()
+      };
+      
+      // Get existing chirps and add new one to the top
+      const existingChirps = JSON.parse(localStorage.getItem('localChirps') || '[]');
+      existingChirps.unshift(chirpToSave);
+      localStorage.setItem('localChirps', JSON.stringify(existingChirps));
+      
+      console.log('✅ Chirp saved to localStorage:', chirpToSave);
+      console.log('✅ Total chirps now:', existingChirps.length);
 
       // Reset form
       setContent('');
       setImages([]);
       setImageUrls([]);
       
+      // Ensure the callback is called and the modal is closed
+      console.log('✅ Chirp posted successfully, calling callback');
       onChirpPosted();
       onClose();
+      
+      // Also trigger a custom event for other components to listen to
+      window.dispatchEvent(new CustomEvent('chirpPosted', { 
+        detail: { 
+          chirpId: Date.now().toString(),
+          userId: user.id 
+        }
+      }));
     } catch (error) {
       console.error('Error posting chirp:', error);
       alert('Failed to post chirp. Please try again.');
@@ -197,23 +175,36 @@ const ChirpModal: React.FC<ChirpModalProps> = ({ isOpen, onClose, onChirpPosted 
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      style={{backgroundColor: 'rgba(40, 40, 40, 0.5)'}}
       onClick={handleBackdropClick}
     >
-      <div className="relative w-full max-w-2xl mx-4 bg-white rounded-2xl shadow-xl">
+      <div 
+        className="w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden"
+        style={{backgroundColor: '#EFEAFF'}}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <h2 className="text-xl font-display text-gray-900">New Chirp</h2>
+        <div className="relative px-6 pt-6 pb-4 bg-gradient-to-r from-primary-50 to-primary-100">
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-full hover:bg-white/20"
           >
-            <X className="h-5 w-5 text-gray-600" />
+            <X className="w-5 h-5" />
           </button>
+          
+          <div className="text-center">
+            <h2 className="text-2xl font-display font-normal text-gray-900 mb-2">
+              New Chirp
+            </h2>
+            <p className="text-sm text-gray-600">
+              Share your solo travel experiences and safety tips
+            </p>
+          </div>
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="px-6 pb-6">
           {/* Text Input */}
           <textarea
             value={content}

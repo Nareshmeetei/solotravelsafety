@@ -31,22 +31,15 @@ const FlagImage: React.FC<FlagImageProps> = ({
         return 'w-12 h-8';
     }
   };
-  
-  // Handle undefined countryCode
-  if (!countryCode) {
-    return (
-      <div className={`${getSizeClasses()} rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-200 flex items-center justify-center ${className}`}>
-        <div className="text-gray-500 text-xs font-medium">
-          N/A
-        </div>
-      </div>
-    );
-  }
-  
-  const fallbackUrls = getFlagFallbackUrls(countryCode);
+
+  const fallbackUrls = countryCode ? getFlagFallbackUrls(countryCode) : [];
 
   // Preload and test URLs
   useEffect(() => {
+    if (!countryCode) {
+      setIsLoading(false);
+      return;
+    }
     const testUrls = async () => {
       for (let i = 0; i < fallbackUrls.length; i++) {
         try {
@@ -86,6 +79,17 @@ const FlagImage: React.FC<FlagImageProps> = ({
       setImageError(true);
     }
   };
+
+  // Handle undefined countryCode
+  if (!countryCode) {
+    return (
+      <div className={`${getSizeClasses()} rounded-md overflow-hidden shadow-sm border border-gray-200 bg-gray-200 flex items-center justify-center ${className}`}>
+        <div className="text-gray-500 text-xs font-medium">
+          N/A
+        </div>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (

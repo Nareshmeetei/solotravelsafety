@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Download, Trash2, Eye, Settings, AlertTriangle, CheckCircle, X } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+// TODO: Import auth when rebuilding
+// import { useAuth } from '../contexts/AuthContext';
 import { 
   exportUserData, 
   deleteUserData, 
@@ -16,7 +17,9 @@ interface DataManagementProps {
 }
 
 const DataManagement: React.FC<DataManagementProps> = ({ isOpen, onClose }) => {
-  const { user, signOut } = useAuth();
+  // TODO: Get user from auth context when rebuilding
+  const user = null; // TODO: Get user from auth context
+  const signOut = async () => {}; // TODO: Get signOut from auth context
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);

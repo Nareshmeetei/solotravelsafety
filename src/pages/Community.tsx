@@ -20,7 +20,7 @@ const Community: React.FC = () => {
             
             {/* Floating Elements */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 sm:-translate-y-4">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-secondary-pink-300 rounded-full flex items-center justify-center animate-float-slow">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary-300 rounded-full flex items-center justify-center animate-float-slow">
                 <Heart className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
               </div>
             </div>
@@ -63,8 +63,8 @@ const Community: React.FC = () => {
             </div>
             
             <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary-pink-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <MessageSquare className="h-5 w-5 sm:h-6 sm:w-6 text-secondary-pink-600" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <MessageSquare className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600" />
               </div>
               <h3 className="font-display text-gray-900 mb-2 text-sm sm:text-base">Discussion Forums</h3>
               <p className="text-gray-600 text-xs sm:text-sm">Ask questions, share tips, and get advice from experienced travelers.</p>

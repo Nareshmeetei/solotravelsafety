@@ -1,7 +1,7 @@
 {
-  "name": "Solo Travel Safety",
+  "name": "Solo Female Travel Safety - #1 Safety Reviews & Tips for Women Travelers",
   "short_name": "Solo Travel Safety",
-  "description": "Plan safer solo trips with real safety reviews, practical tips, and insights from solo female travelers.",
+  "description": "Solo female travel safety made simple. Get trusted safety reviews, solo travel safety tips, and real solo female travel experiences from women travelers. Find the safest countries for solo female travel.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -15,7 +15,7 @@
     }
   ],
   "theme_color": "#9E7DFF",
-  "background_color": "#ffffff",
+  "background_color": "#EFEFEF",
   "display": "standalone",
   "start_url": "/"
 } 

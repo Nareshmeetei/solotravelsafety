@@ -4,11 +4,13 @@ import { AlertCircle, CheckCircle } from 'lucide-react';
 interface PasswordStrengthIndicatorProps {
   password: string;
   showIndicator?: boolean;
+  className?: string;
 }
 
 const PasswordStrengthIndicator: React.FC<PasswordStrengthIndicatorProps> = ({ 
   password, 
-  showIndicator = true 
+  showIndicator = true,
+  className = ""
 }) => {
   if (!showIndicator || !password) return null;
 
@@ -78,7 +80,7 @@ const PasswordStrengthIndicator: React.FC<PasswordStrengthIndicatorProps> = ({
   };
 
   return (
-    <div className="mt-2">
+    <div className={`mt-2 ${className}`}>
       {/* Strength Bar */}
       <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
         <div 

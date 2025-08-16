@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Bell, X, Heart, MessageSquare, UserPlus, Star } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+// TODO: Import auth when rebuilding
+// import { useAuth } from '../contexts/AuthContext';
 
 interface Notification {
   id: string;
@@ -23,7 +24,8 @@ interface NotificationBellProps {
 }
 
 const NotificationBell: React.FC<NotificationBellProps> = ({ className = '' }) => {
-  const { user } = useAuth();
+  // TODO: Get user from auth context when rebuilding
+  const user = null; // TODO: Get user from auth context
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);

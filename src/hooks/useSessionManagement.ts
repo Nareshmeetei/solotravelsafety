@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
-import { useAuth } from '../contexts/AuthContext'
-import { supabase } from '../lib/supabase'
+import { useState, useEffect } from 'react'
+import { supabase, isDevelopmentMode } from '../lib/supabase'
 
 interface SessionInfo {
   isPersistent: boolean
@@ -9,121 +8,240 @@ interface SessionInfo {
   sessionAge: number | null
 }
 
+interface SessionStats {
+  totalSessions: number
+  activeSessions: number
+  lastLoginTime: Date | null
+}
+
 export const useSessionManagement = () => {
-  const { user, session, isSessionPersistent } = useAuth()
   const [sessionInfo, setSessionInfo] = useState<SessionInfo>({
     isPersistent: false,
-    lastActivity: null,
-    deviceInfo: '',
+    lastActivity: new Date(),
+    deviceInfo: 'Loading...',
     sessionAge: null
   })
 
-  // Track user activity for session management
-  useEffect(() => {
-    if (!user) return
+  const [sessionStats, setSessionStats] = useState<SessionStats>({
+    totalSessions: 1,
+    activeSessions: 1,
+    lastLoginTime: new Date()
+  })
 
-    const updateLastActivity = () => {
-      setSessionInfo(prev => ({
-        ...prev,
-        lastActivity: new Date()
-      }))
+  // Update session info periodically
+  useEffect(() => {
+    const updateSessionInfo = () => {
+      try {
+        setSessionInfo(prev => ({
+          ...prev,
+          lastActivity: new Date(),
+          sessionAge: getSessionAge(),
+          isPersistent: checkIfSessionPersistent(),
+          deviceInfo: prev.deviceInfo === 'Loading...' ? getBrowserInfo() : prev.deviceInfo
+        }))
+      } catch (error) {
+        console.error('Error updating session info:', error)
+        setSessionInfo(prev => ({
+          ...prev,
+          lastActivity: new Date(),
+          deviceInfo: 'Unknown Device'
+        }))
+      }
     }
 
-    // Update activity on user interactions
-    const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click']
-    events.forEach(event => {
-      document.addEventListener(event, updateLastActivity, { passive: true })
-    })
+    // Initial update
+    updateSessionInfo()
+    
+    // Update session info every minute
+    const interval = setInterval(updateSessionInfo, 60000)
 
-    // Set initial activity
-    updateLastActivity()
+    return () => clearInterval(interval)
+  }, [])
 
-    return () => {
-      events.forEach(event => {
-        document.removeEventListener(event, updateLastActivity)
-      })
+  const getSessionStatus = (): string => {
+    if (isDevelopmentMode) {
+      return 'Development Mode - Active Session'
     }
-  }, [user])
 
-  // Calculate session age
-  useEffect(() => {
-    if (session?.access_token) {
-      // Use current time as session start since we don't have exact creation time
-      // In a real app, you'd store session creation time in your database
-      const now = new Date()
-      const ageInMinutes = 0 // For now, we'll set this to 0 since we don't track exact start time
-      
-      setSessionInfo(prev => ({
-        ...prev,
-        sessionAge: ageInMinutes
-      }))
-    }
-  }, [session])
-
-  // Get device information
-  useEffect(() => {
-    const deviceInfo = `${navigator.platform} - ${navigator.userAgent.split(' ').pop()}`
-    setSessionInfo(prev => ({
-      ...prev,
-      deviceInfo,
-      isPersistent: isSessionPersistent
-    }))
-  }, [isSessionPersistent])
-
-  // Check for unusual activity (basic implementation)
-  const checkForUnusualActivity = () => {
-    if (!sessionInfo.lastActivity) return false
-    
-    const now = new Date()
-    const timeSinceLastActivity = now.getTime() - sessionInfo.lastActivity.getTime()
-    const hoursSinceLastActivity = timeSinceLastActivity / (1000 * 60 * 60)
-    
-    // Consider unusual if no activity for more than 24 hours
-    return hoursSinceLastActivity > 24
-  }
-
-  // Get session status message
-  const getSessionStatus = () => {
-    if (!user) return 'Not signed in'
-    
-    if (sessionInfo.isPersistent) {
-      return 'Signed in (persistent session)'
+    const age = sessionInfo.sessionAge || 0
+    if (age < 30) {
+      return 'Active - Just started'
+    } else if (age < 120) {
+      return `Active - ${age} minutes`
     } else {
-      return 'Signed in (session only)'
+      const hours = Math.floor(age / 60)
+      return `Active - ${hours} hour${hours > 1 ? 's' : ''}`
     }
   }
 
-  // Force logout from all sessions (for security)
-  const forceLogoutFromAllSessions = async () => {
+  const getSessionStats = (): SessionStats => {
+    return sessionStats
+  }
+
+  const forceLogoutFromAllSessions = async (): Promise<{ success: boolean; message?: string }> => {
     try {
-      // This would typically call a backend endpoint to invalidate all sessions
-      // For now, we'll just sign out the current session
-      await supabase.auth.signOut()
-      return { success: true }
-    } catch (error) {
-      console.error('Error forcing logout from all sessions:', error)
-      return { success: false, error }
+      if (isDevelopmentMode) {
+        console.log('🚧 Development mode: Simulating logout from all sessions')
+        return {
+          success: true,
+          message: 'Successfully logged out from all sessions (development mode)'
+        }
+      }
+
+      // Sign out from current session
+      const { error } = await supabase.auth.signOut()
+      
+      if (error) {
+        console.error('Error during logout:', error)
+        return {
+          success: false,
+          message: `Failed to logout: ${error.message}`
+        }
+      }
+
+      return {
+        success: true,
+        message: 'Successfully logged out from all sessions'
+      }
+    } catch (error: any) {
+      console.error('Error in forceLogoutFromAllSessions:', error)
+      return {
+        success: false,
+        message: `Logout failed: ${error.message || 'Unknown error'}`
+      }
     }
   }
 
-  // Get session statistics
-  const getSessionStats = () => {
-    if (!session) return null
+  const refreshSession = async () => {
+    try {
+      if (isDevelopmentMode) {
+        console.log('🚧 Development mode: Simulating session refresh')
+        return true
+      }
 
-    return {
-      sessionAge: sessionInfo.sessionAge,
-      isPersistent: sessionInfo.isPersistent,
-      deviceInfo: sessionInfo.deviceInfo,
-      lastActivity: sessionInfo.lastActivity,
-      unusualActivity: checkForUnusualActivity()
+      const { data, error } = await supabase.auth.refreshSession()
+      
+      if (error) {
+        console.error('Session refresh error:', error)
+        return false
+      }
+
+      return !!data.session
+    } catch (error) {
+      console.error('Error refreshing session:', error)
+      return false
     }
+  }
+
+  const isSessionExpiringSoon = (): boolean => {
+    if (isDevelopmentMode) {
+      return false
+    }
+
+    // Check if session expires within next 5 minutes
+    const age = sessionInfo.sessionAge || 0
+    return age > 115 // Session typically expires after 120 minutes
+  }
+
+  const extendSession = async () => {
+    console.log('🚧 extendSession placeholder')
+    return await refreshSession()
+  }
+
+  const endSession = async () => {
+    console.log('🚧 endSession placeholder')
+    const result = await forceLogoutFromAllSessions()
+    return result.success
   }
 
   return {
     sessionInfo,
-    checkForUnusualActivity,
+    sessionStats,
     getSessionStatus,
+    getSessionStats,
     forceLogoutFromAllSessions,
-    getSessionStats
+    refreshSession,
+    isSessionExpiringSoon,
+    extendSession,
+    endSession
   }
-} 
+}
+
+// Helper functions
+function getBrowserInfo(): string {
+  try {
+    if (typeof navigator === 'undefined' || !navigator.userAgent) {
+      return 'Unknown Device'
+    }
+    
+    const ua = navigator.userAgent
+    let browser = 'Unknown Browser'
+    let os = 'Unknown OS'
+
+    // Detect browser
+    if (ua.includes('Chrome') && !ua.includes('Edg')) {
+      browser = 'Chrome'
+    } else if (ua.includes('Firefox')) {
+      browser = 'Firefox'
+    } else if (ua.includes('Safari') && !ua.includes('Chrome')) {
+      browser = 'Safari'
+    } else if (ua.includes('Edg')) {
+      browser = 'Edge'
+    }
+
+    // Detect OS
+    if (ua.includes('Windows')) {
+      os = 'Windows'
+    } else if (ua.includes('Mac')) {
+      os = 'macOS'
+    } else if (ua.includes('Linux')) {
+      os = 'Linux'
+    } else if (ua.includes('Android')) {
+      os = 'Android'
+    } else if (ua.includes('iOS')) {
+      os = 'iOS'
+    }
+
+    return `${browser} on ${os}`
+  } catch (error) {
+    console.error('Error detecting browser info:', error)
+    return 'Unknown Device'
+  }
+}
+
+function getSessionAge(): number {
+  try {
+    if (typeof localStorage === 'undefined') {
+      return 0
+    }
+    
+    // Get session start time from localStorage or estimate
+    const sessionStart = localStorage.getItem('sts-session-start')
+    if (sessionStart) {
+      const startTime = new Date(sessionStart)
+      const now = new Date()
+      return Math.floor((now.getTime() - startTime.getTime()) / (1000 * 60)) // minutes
+    } else {
+      // Set session start time if not exists
+      const now = new Date()
+      localStorage.setItem('sts-session-start', now.toISOString())
+      return 0
+    }
+  } catch (error) {
+    console.error('Error calculating session age:', error)
+    return 0
+  }
+}
+
+function checkIfSessionPersistent(): boolean {
+  try {
+    if (typeof localStorage === 'undefined') {
+      return false
+    }
+    // Check if session is persistent (stored in localStorage vs sessionStorage)
+    return !!localStorage.getItem('sts-auth-token')
+  } catch (error) {
+    console.error('Error checking session persistence:', error)
+    return false
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AlertTriangle, RefreshCw, X } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+// TODO: Import auth when rebuilding
+// import { useAuth } from '../contexts/AuthContext';
 import { isSessionExpiringSoon, refreshSession } from '../lib/supabase';
 
 interface SessionExpiryWarningProps {
@@ -12,7 +13,8 @@ const SessionExpiryWarning: React.FC<SessionExpiryWarningProps> = ({
   warningThresholdMinutes = 5,
   onSessionRefreshed
 }) => {
-  const { user } = useAuth();
+  // TODO: Get user from auth context when rebuilding
+  const user = null; // TODO: Get user from auth context
   const [showWarning, setShowWarning] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState<number>(0);

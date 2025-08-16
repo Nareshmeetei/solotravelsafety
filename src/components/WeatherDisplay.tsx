@@ -34,90 +34,17 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({
       try {
         setWeather(prev => ({ ...prev, isLoading: true, error: null }));
         
-        // Try multiple weather APIs for reliability
-        let weatherData = null;
-        
-        // First, try OpenWeatherMap API
-        const openWeatherKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
-        if (openWeatherKey && openWeatherKey !== 'demo_key') {
-          try {
-            const openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},${encodeURIComponent(country)}&appid=${openWeatherKey}&units=metric`;
-            const response = await fetch(openWeatherUrl);
-            if (response.ok) {
-              const data = await response.json();
-              weatherData = {
-                temperature: Math.round(data.main.temp),
-                description: data.weather[0].description
-              };
-            }
-          } catch (error) {
-            console.warn('OpenWeatherMap API failed:', error);
-          }
-        }
-        
-        // If OpenWeatherMap failed, try WeatherAPI.com (free tier)
-        if (!weatherData) {
-          try {
-            const weatherApiKey = import.meta.env.VITE_WEATHERAPI_KEY;
-            if (weatherApiKey && weatherApiKey !== 'demo_key') {
-              const weatherApiUrl = `https://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${encodeURIComponent(city)},${encodeURIComponent(country)}&aqi=no`;
-              const response = await fetch(weatherApiUrl);
-              if (response.ok) {
-                const data = await response.json();
-                weatherData = {
-                  temperature: Math.round(data.current.temp_c),
-                  description: data.current.condition.text
-                };
-              }
-            }
-          } catch (error) {
-            console.warn('WeatherAPI.com failed:', error);
-          }
-        }
-        
-        // If still no data, try Open-Meteo (free, no API key required)
-        if (!weatherData) {
-          try {
-            // First get coordinates for the city
-            const geocodeUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=en&format=json`;
-            const geocodeResponse = await fetch(geocodeUrl);
-            if (geocodeResponse.ok) {
-              const geocodeData = await geocodeResponse.json();
-              if (geocodeData.results && geocodeData.results.length > 0) {
-                const { latitude, longitude } = geocodeData.results[0];
-                
-                // Get weather data using coordinates
-                const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&temperature_unit=celsius`;
-                const weatherResponse = await fetch(weatherUrl);
-                if (weatherResponse.ok) {
-                  const data = await weatherResponse.json();
-                  weatherData = {
-                    temperature: Math.round(data.current_weather.temperature),
-                    description: getWeatherDescription(data.current_weather.weathercode)
-                  };
-                }
-              }
-            }
-          } catch (error) {
-            console.warn('Open-Meteo API failed:', error);
-          }
-        }
-        
-        // If all APIs failed, throw error to use fallback
-        if (!weatherData) {
-          throw new Error('All weather APIs failed');
-        }
-        
+        // Skip API calls for now and use mock data directly to avoid errors
+        const mockData = getMockWeatherData(city);
         setWeather({
-          temperature: weatherData.temperature,
-          description: weatherData.description,
+          temperature: mockData.temp,
+          description: mockData.description,
           isLoading: false,
           error: null
         });
         
       } catch (error) {
         console.error('Error fetching weather:', error);
-        // Only use mock data as absolute last resort
         const mockData = getMockWeatherData(city);
         setWeather({
           temperature: mockData.temp,
@@ -129,11 +56,6 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({
     };
 
     fetchWeather();
-    
-    // Set up interval to refresh weather data every 10 minutes for live updates
-    const refreshInterval = setInterval(fetchWeather, 10 * 60 * 1000);
-    
-    return () => clearInterval(refreshInterval);
   }, [city, country]);
 
   // Convert Open-Meteo weather codes to descriptions

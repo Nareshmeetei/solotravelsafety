@@ -14,8 +14,8 @@ const Benefits: React.FC = () => {
       icon: Flag,
       title: 'Flag sketchy places for others',
       description: 'Scams, creeps, weird vibes? Our community flags them fast, so you don\'t walk in blind.',
-      color: 'bg-secondary-pink-100 text-secondary-pink-600',
-      bgColor: 'bg-secondary-pink-50',
+      color: 'bg-primary-100 text-primary-600',
+      bgColor: 'bg-primary-50',
     },
     {
       icon: Users,

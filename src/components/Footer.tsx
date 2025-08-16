@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           <p className="text-sm text-gray-600 max-w-md mx-auto transition-colors duration-300 hover:text-gray-700">
-            Real safety info, from real women, for solo female travelers.
+            Your trusted source for solo female travel safety tips, reviews, and community support.
           </p>
         </div>
         
@@ -49,21 +49,21 @@ const Footer: React.FC = () => {
               onClick={handleNavClick}
               className="text-sm text-gray-600 transition-all duration-300 hover:text-primary-400 hover:scale-105 focus-smooth"
             >
-              Destinations
+              Safe Solo Travel Destinations
             </Link>
             <Link 
               to="/safety-tips"
               onClick={handleNavClick}
               className="text-sm text-gray-600 transition-all duration-300 hover:text-primary-400 hover:scale-105 focus-smooth"
             >
-              Safety Tips
+              Solo Female Travel Safety Tips
             </Link>
             <Link 
               to="/community"
               onClick={handleNavClick}
               className="text-sm text-gray-600 transition-all duration-300 hover:text-primary-400 hover:scale-105 focus-smooth"
             >
-              Community
+              Women Solo Travelers Community
             </Link>
           </div>
           

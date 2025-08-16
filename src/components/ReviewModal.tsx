@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { X, Star, Calendar, Search } from 'lucide-react'
-import { useAuth } from '../contexts/AuthContext'
+// TODO: Import auth when rebuilding
+// import { useAuth } from '../contexts/AuthContext'
 import { createReview } from '../lib/supabase'
 
 interface ReviewModalProps {
@@ -18,7 +19,8 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
   destinationCountry = '',
   onReviewSubmitted 
 }) => {
-  const { user } = useAuth()
+  // TODO: Get user from auth context when rebuilding
+  const user = null; // TODO: Get user from auth context
   const modalRef = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')

@@ -129,6 +129,7 @@ interface Comment {
 }
 
 const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onCommentAdded }) => {
+  // TODO: Get user from auth context when rebuilding
   const { user } = useAuth();
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState<Comment[]>([]);
@@ -139,6 +140,7 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
   const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
   const [editCommentText, setEditCommentText] = useState('');
   const [isEditing, setIsEditing] = useState(false);
+  const [profileUpdateTrigger, setProfileUpdateTrigger] = useState(0);
 
   const loadComments = useCallback(async () => {
     setIsLoading(true);
@@ -185,6 +187,22 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
     }
   }, [isOpen, loadComments]);
 
+  // Listen for profile updates
+  useEffect(() => {
+    const handleProfileUpdate = (event: CustomEvent) => {
+      if (event.detail?.type === 'profile') {
+        console.log('CommentModal: Profile updated, refreshing display');
+        setProfileUpdateTrigger(prev => prev + 1);
+      }
+    };
+
+    window.addEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    
+    return () => {
+      window.removeEventListener('profileUpdated', handleProfileUpdate as EventListener);
+    };
+  }, []);
+
   // Handle clicks outside dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -215,12 +233,30 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
         created_at: new Date().toISOString(),
         likes_count: 0,
         userLikes: [],
-        user: {
-          id: user.id,
-          full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
-          avatar_url: user.user_metadata?.avatar_url,
-          email: user.email
-        }
+        user: (() => {
+          try {
+            const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+            if (storedProfile) {
+              const profile = JSON.parse(storedProfile);
+              return {
+                id: user.id,
+                full_name: profile.full_name || user.user_metadata?.full_name || user.email?.split('@')[0],
+                avatar_url: profile.avatar_url || user.user_metadata?.avatar_url,
+                email: user.email
+              };
+            }
+          } catch (error) {
+            console.error('Error loading profile for comment:', error);
+          }
+          
+          // Fallback to auth metadata
+          return {
+            id: user.id,
+            full_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+            avatar_url: user.user_metadata?.avatar_url,
+            email: user.email
+          };
+        })()
       };
 
       // Try to save to database first
@@ -444,14 +480,37 @@ const CommentModal: React.FC<CommentModalProps> = ({ isOpen, onClose, chirp, onC
                   canDelete
                 });
                 
+                // Get updated user data for current user's comments (triggered by profileUpdateTrigger)
+                const getCommentUserData = (comment: Comment) => {
+                  if (user && comment.user.id === user.id) {
+                    try {
+                      const storedProfile = localStorage.getItem(`dev_profile_${user.id}`);
+                      if (storedProfile) {
+                        const profile = JSON.parse(storedProfile);
+                        return {
+                          ...comment.user,
+                          full_name: profile.full_name || user.user_metadata?.full_name || comment.user.full_name,
+                          avatar_url: profile.avatar_url || user.user_metadata?.avatar_url || comment.user.avatar_url,
+                          username: profile.username || user.user_metadata?.username
+                        };
+                      }
+                    } catch (error) {
+                      console.error('Error loading profile for comment display:', error);
+                    }
+                  }
+                  return comment.user;
+                };
+
+                const commentUserData = getCommentUserData(comment);
+
                 return (
                   <div key={comment.id} className="flex items-start space-x-3">
-                    <UserAvatar user={comment.user} size="sm" />
+                    <UserAvatar user={commentUserData} size="sm" />
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center space-x-2">
                           <span className="font-semibold text-gray-900">
-                            {comment.user.full_name || comment.user.email?.split('@')[0] || 'Solo Traveler'}
+                            {commentUserData.full_name || commentUserData.email?.split('@')[0] || 'Solo Traveler'}
                           </span>
                           <span className="text-xs text-gray-500">
                             {formatDate(comment.created_at)}

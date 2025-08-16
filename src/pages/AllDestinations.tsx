@@ -141,29 +141,29 @@ const AllDestinations: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen font-sans" style={{backgroundColor: '#EFEAFF'}}>
       <Navbar />
       
       {/* Header */}
-      <section className="bg-white pt-24 pb-12 px-4">
+      <section className="pt-24 pb-12 px-4" style={{backgroundColor: '#EFEAFF'}}>
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-display text-gray-900 mb-4 animate-fade-in-up">
-              All Destinations
+              Solo Female Travel Safety Destinations
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
-              Explore safety insights for destinations worldwide, shared by solo female travelers like you.
+              Browse comprehensive solo female travel safety reviews and ratings for destinations worldwide. Get trusted solo travel safety tips and real experiences from our women solo travelers community.
             </p>
           </div>
           
           {/* Search and Filters */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+          <div className="rounded-2xl shadow-sm border border-gray-200 p-6" style={{backgroundColor: '#EFEAFF'}}>
             {/* Search Bar */}
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 transition-colors duration-300" />
               <input
                 type="text"
-                placeholder="Search destinations..."
+                placeholder="Search safe solo travel destinations..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-gray-900 placeholder-gray-500 transition-all duration-300 focus:scale-[1.02] focus-smooth"
@@ -267,7 +267,7 @@ const AllDestinations: React.FC = () => {
               <p className="text-gray-600">Try adjusting your search or filters to find more destinations.</p>
             </div>
           ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredAndSortedDestinations.map((destination, index) => (
                 <div
                   key={index}
@@ -319,43 +319,43 @@ const AllDestinations: React.FC = () => {
                   </div>
                   
                   {/* Safety Indicators - Default View */}
-                  <div className="space-y-3 mb-4 md:group-hover:opacity-0 transition-opacity duration-300">
-                    <div className="flex items-center justify-between group/item">
-                      <div className="flex items-center space-x-2">
-                        <Moon className="h-4 w-4 text-gray-500 transition-all duration-300" />
-                        <span className="text-sm text-gray-700 transition-colors duration-300">Night Safety</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-xs font-medium text-gray-600 transition-colors duration-300">
-                          {destination.nightSafety}
-                        </span>
-                        {renderScoreBar(destination.nightSafety)}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between group/item">
-                      <div className="flex items-center space-x-2">
-                        <Bus className="h-4 w-4 text-gray-500 transition-all duration-300" />
-                        <span className="text-sm text-gray-700 transition-colors duration-300">Public Transit</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-xs font-medium text-gray-600 transition-colors duration-300">
-                          {destination.publicTransit}
-                        </span>
-                        {renderScoreBar(destination.publicTransit)}
+                  <div className="space-y-3 md:group-hover:opacity-0 transition-opacity duration-300">
+                    <div className="flex items-center space-x-3">
+                      <Moon className="h-4 w-4 text-gray-600 transition-colors duration-300" />
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-700 transition-colors duration-300">Night Safety</span>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.nightSafety}/10</span>
+                            {renderScoreBar(destination.nightSafety)}
+                          </div>
+                        </div>
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between group/item">
-                      <div className="flex items-center space-x-2">
-                        <Users className="h-4 w-4 text-gray-500 transition-all duration-300" />
-                        <span className="text-sm text-gray-700 transition-colors duration-300">Walking Alone</span>
+                    <div className="flex items-center space-x-3">
+                      <Bus className="h-4 w-4 text-gray-600 transition-colors duration-300" />
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-700 transition-colors duration-300">Public Transit</span>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.publicTransit}/10</span>
+                            {renderScoreBar(destination.publicTransit)}
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-xs font-medium text-gray-600 transition-colors duration-300">
-                          {destination.walkingAlone}
-                        </span>
-                        {renderScoreBar(destination.walkingAlone)}
+                    </div>
+                    
+                    <div className="flex items-center space-x-3">
+                      <Users className="h-4 w-4 text-gray-600 transition-colors duration-300" />
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-700 transition-colors duration-300">Walking Alone</span>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium text-gray-900 transition-colors duration-300">{destination.walkingAlone}/10</span>
+                            {renderScoreBar(destination.walkingAlone)}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -456,16 +456,16 @@ const AllDestinations: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Meta Info with Mobile Button */}
+                  {/* Meta Info */}
                   <div className="flex items-center justify-between mt-5">
-                  <div className="text-xs text-gray-500 space-y-1 transition-colors duration-300">
-                    <div>{destination.reviewCount} reviews</div>
-                    <div>Updated {destination.lastUpdated}</div>
+                    <div className="text-xs text-gray-500 space-y-1">
+                      <div>{destination.reviewCount} reviews</div>
+                      <div>Updated {destination.lastUpdated}</div>
                     </div>
                   </div>
                 </Link>
                 
-                {/* Mobile Quick View Button - Bottom Right */}
+                {/* Mobile Quick View Button - Outside Link */}
                 <button
                   onClick={(e) => {
                     e.preventDefault();

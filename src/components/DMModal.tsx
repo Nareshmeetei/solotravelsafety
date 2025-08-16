@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Send, Search, MoreHorizontal, User, Check, CheckCheck, MessageSquare } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+// TODO: Import auth when rebuilding
+// import { useAuth } from '../contexts/AuthContext';
 import UserAvatar from './UserAvatar';
 
 interface Message {
@@ -30,7 +31,8 @@ interface DMModalProps {
 }
 
 const DMModal: React.FC<DMModalProps> = ({ isOpen, onClose }) => {
-  const { user } = useAuth();
+  // TODO: Get user from auth context when rebuilding
+  const user = null; // TODO: Get user from auth context
   const [activeView, setActiveView] = useState<'conversations' | 'chat'>('conversations');
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [selectedConversation, setSelectedConversation] = useState<Conversation | null>(null);
@@ -177,32 +179,42 @@ const DMModal: React.FC<DMModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      style={{backgroundColor: 'rgba(40, 40, 40, 0.5)'}}
       onClick={handleBackdropClick}
     >
-      <div className="relative w-full max-w-md mx-4 bg-white rounded-2xl shadow-xl">
+      <div 
+        className="w-full max-w-md rounded-3xl shadow-2xl overflow-hidden"
+        style={{backgroundColor: '#EFEAFF'}}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <h2 className="text-xl font-display text-gray-900">Messages</h2>
+        <div className="relative px-6 pt-6 pb-4 bg-gradient-to-r from-primary-50 to-primary-100">
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-full hover:bg-white/20"
           >
-            <X className="h-5 w-5 text-gray-600" />
+            <X className="w-5 h-5" />
           </button>
+          
+          <div className="text-center">
+            <h2 className="text-2xl font-display font-normal text-gray-900 mb-2">
+              Messages
+            </h2>
+            <p className="text-sm text-gray-600">
+              Connect with fellow solo female travelers
+            </p>
+          </div>
         </div>
 
         {/* Coming Soon Content */}
-        <div className="p-8 text-center">
+        <div className="px-6 pb-6 pt-4 text-center">
           <MessageSquare className="h-16 w-16 text-primary-400 mx-auto mb-4" />
           <h3 className="text-2xl font-display text-gray-900 mb-3">Coming Soon!</h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600">
             We're working hard to bring you direct messaging with other solo female travelers. 
             Stay tuned for this exciting feature!
           </p>
-          <div className="bg-gradient-to-r from-primary-400 to-secondary-teal-400 text-white px-6 py-3 rounded-xl font-semibold">
-            Connect with fellow travelers soon!
-          </div>
         </div>
       </div>
     </div>

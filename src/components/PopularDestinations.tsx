@@ -100,10 +100,10 @@ const PopularDestinations: React.FC = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-display text-gray-900 sm:text-4xl animate-fade-in-up">
-            Popular Destinations
+            Safe Solo Travel Destinations for Women
           </h2>
           <p className="text-lg text-gray-600 animate-fade-in-up animate-delay-200">
-            See safety scores and insights from our community of solo female travelers
+            Discover the safest places for women to travel alone with verified solo female travel safety ratings and real experiences from our solo female travel community
           </p>
         </div>
         

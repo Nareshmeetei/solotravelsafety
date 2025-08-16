@@ -619,6 +619,16 @@ const bangkok: Destination = {
         sourceUrl: 'https://www.bts.co.th/'
       }
     ],
+    culturalSensitivityTips: [
+      'Always remove shoes when entering temples and traditional homes',
+      'Dress modestly and cover shoulders/knees at religious sites',
+      'The royal family is deeply revered - never criticize or joke about monarchy',
+      'Monks are highly respected - women should not touch or hand objects directly to monks',
+      'Wai greeting (hands together, slight bow) shows respect and is appreciated',
+      'Head is considered sacred - never touch someone\'s head, even children',
+      'Feet are considered dirty - don\'t point feet at people or Buddha images',
+      'Bargaining is expected at markets but remain polite and good-natured'
+    ],
     costAndComfort: {
       dailyBudget: {
         range: '$25 - $60 USD / day',
@@ -637,6 +647,12 @@ const bangkok: Destination = {
           avgCost: '$30-60',
           safetyNote: 'Excellent security and amenities',
           safetyLevel: 'high'
+        },
+        {
+          type: 'Luxury Hotel',
+          avgCost: '$80+',
+          safetyNote: 'World-class security and service',
+          safetyLevel: 'high'
         }
       ],
       transport: [
@@ -651,13 +667,28 @@ const bangkok: Destination = {
           cost: '$2-8/ride',
           safetyDescription: 'Safe with transparent pricing',
           safetyLevel: 'high'
+        },
+        {
+          method: 'Tuk-tuk',
+          cost: '$3-10/ride',
+          safetyDescription: 'Negotiate price beforehand, fun but watch for overcharging',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Walking',
+          cost: 'Free',
+          safetyDescription: 'Generally safe during day, use skywalks when available',
+          safetyLevel: 'medium-high'
         }
       ],
       budgetTips: [
         'Use BTS/MRT day passes for transport savings',
-        'Eat at street food stalls and local restaurants',
-        'Shop at weekend markets for bargains',
-        'Many temples and attractions are free or low-cost'
+        'Eat at street food stalls and local restaurants for authentic experience',
+        'Shop at weekend markets like Chatuchak for bargains',
+        'Many temples and attractions are free or very low-cost',
+        'Stay in areas like Sukhumvit or Silom for better value and safety',
+        'Use Grab instead of taxis to avoid overcharging',
+        'Visit during shoulder season (March-May) for better accommodation deals'
       ]
     }
 };

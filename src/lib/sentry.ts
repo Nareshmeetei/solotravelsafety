@@ -1,12 +1,54 @@
 import * as Sentry from '@sentry/react';
-import { 
-  sanitizeObject, 
-  sanitizeUrl, 
-  sanitizeHeaders, 
-  sanitizeBreadcrumb, 
-  sanitizeUserContext, 
-  shouldFilterBreadcrumb 
-} from './security-utils';
+// Security utilities - implementing inline for now
+const sanitizeHeaders = (headers: any) => {
+  if (!headers) return headers;
+  const sanitized = { ...headers };
+  // Remove authorization and sensitive headers
+  delete sanitized.authorization;
+  delete sanitized.cookie;
+  delete sanitized['x-api-key'];
+  return sanitized;
+};
+
+const sanitizeUrl = (url: string) => {
+  try {
+    const urlObj = new URL(url);
+    // Remove sensitive query parameters
+    urlObj.searchParams.delete('token');
+    urlObj.searchParams.delete('password');
+    urlObj.searchParams.delete('api_key');
+    return urlObj.toString();
+  } catch {
+    return url;
+  }
+};
+
+const sanitizeUserContext = (user: any) => {
+  if (!user) return user;
+  const sanitized = { ...user };
+  // Remove sensitive user data
+  delete sanitized.password;
+  delete sanitized.token;
+  return sanitized;
+};
+
+const sanitizeBreadcrumb = (breadcrumb: any) => {
+  if (!breadcrumb) return breadcrumb;
+  const sanitized = { ...breadcrumb };
+  if (sanitized.data) {
+    delete sanitized.data.password;
+    delete sanitized.data.token;
+  }
+  return sanitized;
+};
+
+const shouldFilterBreadcrumb = (breadcrumb: any) => {
+  if (!breadcrumb) return false;
+  // Filter out breadcrumbs with sensitive data
+  return breadcrumb.category === 'auth' || 
+         breadcrumb.message?.includes('password') ||
+         breadcrumb.message?.includes('token');
+};
 
 // Initialize Sentry
 Sentry.init({
@@ -15,14 +57,21 @@ Sentry.init({
   // Performance monitoring (disabled in development for faster loading)
   integrations: import.meta.env.DEV ? [] : [
     Sentry.browserTracingIntegration(),
+    Sentry.replayIntegration({
+      // Session replay configuration
+      maskAllText: true,
+      blockAllMedia: true,
+    }),
   ],
   
   // Set sampling rate for performance monitoring
   tracesSampleRate: import.meta.env.DEV ? 0.0 : 0.1, // Disabled in dev
   
-  // Set sampling rate for error monitoring
-  replaysSessionSampleRate: import.meta.env.DEV ? 0.0 : 0.1, // Disabled in dev
-  replaysOnErrorSampleRate: import.meta.env.DEV ? 0.0 : 1.0, // Disabled in dev
+  // Set sampling rate for session replay (only when integration is present)
+  ...(import.meta.env.DEV ? {} : {
+    replaysSessionSampleRate: 0.1, // 10% of sessions
+    replaysOnErrorSampleRate: 1.0, // 100% of error sessions
+  }),
   
   // Environment configuration
   environment: import.meta.env.MODE || 'development',
