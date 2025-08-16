@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { X, Eye, EyeOff, Loader2, Mail, ArrowLeft } from 'lucide-react'
+import { X, Eye, EyeOff, Loader2, Mail, ArrowLeft, CheckCircle } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 
 interface AuthModalProps {
@@ -93,8 +93,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
         const successMessage = result.message || 'Account created successfully! Please check your email for a verification link.'
         setSuccess(successMessage)
         
-        // Always show verification screen after successful signup
-        setMode('verify')
+        // Show success message for 2 seconds before switching to verify mode
+        setTimeout(() => {
+          setMode('verify')
+        }, 2000)
       }
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred')
@@ -266,7 +268,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
 
           {/* Success Message */}
           {success && (
-            <div className="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-full text-sm">
+            <div className="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-full text-sm flex items-center">
+              <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0" />
               {success}
             </div>
           )}
@@ -274,13 +277,24 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
           {/* Email Verification Mode */}
           {mode === 'verify' && (
             <div className="space-y-4">
-              <div className="text-center py-6">
-                <Mail className="w-16 h-16 text-primary-400 mx-auto mb-4" />
-                <p className="text-gray-600 mb-4">
-                  Check your inbox and click the verification link to activate your account.
+              {/* Verification Success Banner */}
+              <div className="mb-4 p-4 bg-green-50 border border-green-200 text-green-700 rounded-2xl text-sm">
+                <div className="flex items-center mb-2">
+                  <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="font-medium">Verification email sent!</span>
+                </div>
+                <p className="text-green-600 text-xs">
+                  We've sent a verification link to your email. Click the link to activate your account and you'll be redirected to your profile page.
                 </p>
-                <p className="text-sm text-gray-500 mb-6">
-                  Didn't receive the email? Check your spam folder or request a new one.
+              </div>
+
+              <div className="text-center py-4">
+                <Mail className="w-12 h-12 text-primary-400 mx-auto mb-3" />
+                <p className="text-gray-600 mb-3 text-sm">
+                  Check your inbox and click the verification link to complete your registration.
+                </p>
+                <p className="text-xs text-gray-500 mb-4">
+                  Didn't receive the email? Check your spam folder or request a new one below.
                 </p>
               </div>
 
