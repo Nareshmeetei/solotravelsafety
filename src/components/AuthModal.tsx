@@ -90,13 +90,14 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
       if (result.error) {
         setError(result.error.message)
       } else {
-        const successMessage = result.message || 'Account created successfully! Please check your email for a verification link.'
+        const successMessage = result.message || 'Account created successfully! Verification email sent to your inbox.'
         setSuccess(successMessage)
         
-        // Show success message for 2 seconds before switching to verify mode
+        // Show success message for 3 seconds before switching to verify mode
         setTimeout(() => {
+          // Keep the success message when switching to verify mode
           setMode('verify')
-        }, 2000)
+        }, 3000)
       }
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred')
@@ -266,8 +267,21 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode = 's
             </div>
           )}
 
-          {/* Success Message */}
-          {success && (
+          {/* Success Message - Only show in signup mode */}
+          {success && mode === 'signup' && (
+            <div className="mb-4 p-4 bg-green-50 border border-green-200 text-green-700 rounded-2xl text-sm flex items-center animate-pulse">
+              <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0 text-green-500" />
+              <div>
+                <div className="font-medium">{success}</div>
+                <div className="text-xs text-green-600 mt-1">
+                  Switching to email verification in a moment...
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Success Message for other modes */}
+          {success && mode !== 'signup' && mode !== 'verify' && (
             <div className="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-full text-sm flex items-center">
               <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0" />
               {success}
