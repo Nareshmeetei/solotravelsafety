@@ -97,13 +97,13 @@ const AuthCallback: React.FC = () => {
               console.log('✅ Email confirmation successful and session established')
               
               setStatus('success')
-              setMessage('Email verified successfully! Redirecting to destinations...')
+              setMessage('Email verified successfully! Redirecting to your profile...')
               
               // Force AuthContext to refresh by triggering auth state change
               await supabase.auth.refreshSession()
               
-              // Redirect to destinations page
-              setTimeout(() => navigate('/destinations', { replace: true }), 1500)
+              // Redirect to profile page
+              setTimeout(() => navigate('/profile', { replace: true }), 1500)
               return
             } else if (confirmationSession && confirmationSession.user) {
               // User exists but email not confirmed yet - this shouldn't happen but handle it
@@ -132,12 +132,12 @@ const AuthCallback: React.FC = () => {
                 if (tokenData.session && tokenData.user) {
                   console.log('✅ Session established from tokens')
                   setStatus('success')
-                  setMessage('Email verified successfully! Redirecting...')
+                  setMessage('Email verified successfully! Redirecting to your profile...')
                   
                   // Trigger auth state change
                   await supabase.auth.refreshSession()
                   
-                  setTimeout(() => navigate('/destinations', { replace: true }), 1500)
+                  setTimeout(() => navigate('/profile', { replace: true }), 1500)
                   return
                 } else {
                   throw new Error('Failed to establish session from tokens')
@@ -146,7 +146,7 @@ const AuthCallback: React.FC = () => {
                 console.error('Failed to establish session from tokens:', tokenError)
                 setStatus('success')  // Still show success since email was confirmed
                 setMessage('Email confirmed! Please sign in to complete the process.')
-                setTimeout(() => navigate('/destinations', { replace: true }), 3000)
+                setTimeout(() => navigate('/profile', { replace: true }), 3000)
               }
             }
           } catch (confirmationError: any) {
@@ -174,8 +174,8 @@ const AuthCallback: React.FC = () => {
             if (existingSession && existingSession.user) {
               console.log('✅ Existing session found')
               setStatus('success')
-              setMessage('Authentication successful! Redirecting to destinations...')
-              setTimeout(() => navigate('/destinations', { replace: true }), 2000)
+              setMessage('Authentication successful! Redirecting to your profile...')
+              setTimeout(() => navigate('/profile', { replace: true }), 2000)
             } else {
               console.log('❌ No valid session or confirmation tokens found')
               setStatus('error')
