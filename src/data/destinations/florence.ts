@@ -364,14 +364,6 @@ const florence: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Consulate General Florence',
-        address: 'Lungarno Vespucci 38, 50123 Firenze',
-        phone: '+39 055 266951',
-        email: 'florenceacs@state.gov',
-        emergency: '+39 055 266951',
-        link: 'https://it.usembassy.gov/embassy-consulates/florence/'
-      },
       embassies: [
         {
           name: 'British Consulate Florence',

@@ -441,15 +441,13 @@ const brussels: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Brussels',
-        address: 'Regentlaan 27 Boulevard du Régent, B-1000 Brussels',
-        phone: '+32 2 811 4000',
-        email: 'USCitizenBrussels@state.gov',
-        emergency: '+32 2 811 4000',
-        link: 'https://be.usembassy.gov/'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Brussels',
+          address: 'Regentlaan 27 Boulevard du Régent, B-1000 Brussels',
+          phone: '+32 2 811 4000',
+          link: 'https://be.usembassy.gov/'
+        },
         {
           name: 'British Embassy Brussels',
           address: 'Avenue d\'Auderghem 10, 1040 Brussels',

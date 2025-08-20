@@ -525,15 +525,13 @@ const mexicocity: Destination = {
     },
 
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Mexico City',
-        address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, 06500 CDMX',
-        phone: '+52 55 5080 2000',
-        email: 'Mexico.ACS@gdit-gss.com',
-        emergency: '+52 55 5080 2000',
-        link: 'https://mx.usembassy.gov/'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Mexico City',
+          address: 'Paseo de la Reforma 305, Colonia Cuauhtémoc, 06500 CDMX',
+          phone: '+52 55 5080 2000',
+          link: 'https://mx.usembassy.gov/'
+        },
         {
           name: 'British Embassy Mexico City',
           address: 'Río Lerma 71, Colonia Cuauhtémoc, 06500 Mexico City',

@@ -1,0 +1,10 @@
+Fix broken Product Hunt badge with local SVG solution
+
+- Replace external API call with local SVG badge that matches original design
+- Create product-hunt-featured-badge.svg with identical styling and branding
+- Ensure badge works consistently across localhost and live deployment
+- Resolve deployment environment blocking external Product Hunt API
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>

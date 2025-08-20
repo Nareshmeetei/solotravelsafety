@@ -342,14 +342,6 @@ const vienna: Destination = {
   },
   scamWarnings: [],
   legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Vienna',
-        address: 'Boltzmanngasse 16, 1090 Vienna',
-        phone: '+43 1 313 39 0',
-        email: 'viennaACS@state.gov',
-        emergency: '+43 1 313 39 0',
-        link: 'https://at.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Vienna',

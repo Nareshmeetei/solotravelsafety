@@ -383,15 +383,13 @@ const munich: Destination = {
       }
     ],
   legalResources: {
-      embassy: {
-        name: 'U.S. Consulate General Munich',
-        address: 'Königinstrasse 5, 80539 Munich',
-        phone: '+49-89-2888-0',
-        email: 'MunichConsular@state.gov',
-        emergency: '+49-89-2888-0',
-        link: 'https://de.usembassy.gov/embassy-consulates/munich/'
-      },
       embassies: [
+        {
+          name: 'U.S. Consulate General Munich',
+          address: 'Königinstrasse 5, 80539 Munich',
+          phone: '+49-89-2888-0',
+          link: 'https://de.usembassy.gov/embassy-consulates/munich/'
+        },
         {
           name: 'British Consulate General Munich',
           address: 'Möhlstrasse 5, 81675 Munich',

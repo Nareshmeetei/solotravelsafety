@@ -147,7 +147,93 @@ const london: Destination = {
   internetReliability: 4.9,
   plugType: 'Type G (three-pin)',
   timeZone: 'GMT/BST',
-  accessibility: 4.5
+  accessibility: 4.5,
+  legalResources: {
+    embassies: [
+      {
+        name: 'U.S. Embassy London',
+        address: '33 Nine Elms Lane, London SW11 7US',
+        phone: '+44 20 7499 9000',
+        link: 'https://uk.usembassy.gov/'
+      },
+      {
+        name: 'British Government Services',
+        address: 'Multiple locations throughout London',
+        phone: '+44 300 200 3500',
+        link: 'https://www.gov.uk/'
+      },
+      {
+        name: 'German Embassy London',
+        address: '23 Belgrave Square, London SW1X 8PZ',
+        phone: '+44 20 7824 1300',
+        link: 'https://london.diplo.de/'
+      },
+      {
+        name: 'French Embassy London',
+        address: '58 Knightsbridge, London SW1X 7JT',
+        phone: '+44 20 7073 1000',
+        link: 'https://uk.ambafrance.org/'
+      },
+      {
+        name: 'Spanish Embassy London',
+        address: '39 Chesham Place, London SW1X 8SB',
+        phone: '+44 20 7235 5555',
+        link: 'https://www.exteriores.gob.es/embajadas/londres'
+      },
+      {
+        name: 'Australian High Commission London',
+        address: 'Strand, London WC2B 4LA',
+        phone: '+44 20 7379 4334',
+        link: 'https://uk.embassy.gov.au/'
+      },
+      {
+        name: 'Canadian High Commission London',
+        address: 'Canada House, Trafalgar Square, London SW1Y 5BJ',
+        phone: '+44 20 7004 6000',
+        link: 'https://www.canadainternational.gc.ca/united_kingdom-royaume_uni/'
+      },
+      {
+        name: 'Netherlands Embassy London',
+        address: '38 Hyde Park Gate, London SW7 5DP',
+        phone: '+44 20 7590 3200',
+        link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/united-kingdom'
+      },
+      {
+        name: 'Danish Embassy London',
+        address: '55 Sloane Street, London SW1X 9SR',
+        phone: '+44 20 7333 0200',
+        link: 'https://storbritannien.um.dk/'
+      },
+      {
+        name: 'Swiss Embassy London',
+        address: '16-18 Montagu Place, London W1H 2BQ',
+        phone: '+44 20 7616 6000',
+        link: 'https://www.eda.admin.ch/london'
+      },
+      {
+        name: 'Indian High Commission London',
+        address: 'India House, Aldwych, London WC2B 4NA',
+        phone: '+44 20 7836 8484',
+        link: 'https://www.hcilondon.gov.in/'
+      }
+    ],
+    womensRights: [
+      'Legal framework for women\'s rights varies by country',
+      'Contact local embassy for specific information',
+      'International women\'s rights organizations available'
+    ],
+    legalSupport: [
+      'Contact local embassy for legal assistance',
+      'International legal aid organizations available',
+      'English-speaking lawyers available through embassy referrals'
+    ],
+    reportingProcedures: [
+      'Report crimes to local police immediately',
+      'Contact embassy for consular assistance',
+      'Document all incidents with photos and details',
+      'Keep copies of all police reports'
+    ]
+  }
 };
 
 export default london;

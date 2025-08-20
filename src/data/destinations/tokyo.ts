@@ -1,6 +1,7 @@
 import { Destination } from './types';
 
 const tokyo: Destination = {
+  id: 'tokyo-japan',
   city: 'Tokyo',
   country: 'Japan',
   continent: 'Asia',
@@ -14,6 +15,7 @@ const tokyo: Destination = {
   reviewCount: 1200,
   lastUpdated: '1 day ago',
   harassmentRisk: 'low',
+  description: 'Is Tokyo safe for solo female travellers? Tokyo is ranked as the world\'s safest city and #7 globally for solo female travelers. With Japan\'s respectful culture, exceptional safety infrastructure, and extremely low crime rates, Tokyo offers unparalleled security for women traveling alone. The city combines traditional Japanese hospitality with modern safety technology, making it ideal for both first-time and experienced solo female travelers.',
   safetyBreakdown: {
     nightSafety: {
       score: 9.5,
@@ -307,73 +309,71 @@ const tokyo: Destination = {
     }
   ],
   legalResources: {
-    embassy: {
-      name: 'U.S. Embassy Tokyo',
-      address: '1-10-5 Akasaka, Minato-ku, Tokyo 107-8420',
-      phone: '+81 3-3224-5000',
-      email: 'tokyoacs@state.gov',
-      emergency: '+81 3-3224-5000',
-      link: 'https://jp.usembassy.gov/embassy-consulates/tokyo/'
-    },
     embassies: [
         {
+          name: 'U.S. Embassy Tokyo',
+          address: '1-10-5 Akasaka, Minato-ku, Tokyo 107-8420',
+          phone: '+81 3-3224-5000',
+          link: 'https://jp.usembassy.gov/embassy-consulates/tokyo/'
+        },
+        {
           name: 'British Embassy Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '1 Ichibancho, Chiyoda-ku, Tokyo 102-8381',
+          phone: '+81 3 5211 1100',
           link: 'https://www.gov.uk/world/organisations/british-embassy-tokyo'
         },
         {
           name: 'Embassy of Germany in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '4-5-10 Minami-Azabu, Minato-ku, Tokyo 106-0047',
+          phone: '+81 3 5791 7700',
           link: 'https://jp.diplo.de/'
         },
         {
           name: 'Embassy of France in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '4-11-44 Minami-Azabu, Minato-ku, Tokyo 106-8514',
+          phone: '+81 3 5798 6000',
           link: 'https://jp.ambafrance.org/'
         },
         {
           name: 'Embassy of Spain in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '1-3-29 Roppongi, Minato-ku, Tokyo 106-0032',
+          phone: '+81 3 3583 8531',
           link: 'https://www.exteriores.gob.es/embajadas/tokyo'
         },
         {
           name: 'Australian Embassy Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '2-1-14 Mita, Minato-ku, Tokyo 108-8361',
+          phone: '+81 3 5232 4111',
           link: 'https://jp.embassy.gov.au/'
         },
         {
           name: 'Canadian Embassy Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '7-3-38 Akasaka, Minato-ku, Tokyo 107-8503',
+          phone: '+81 3 5412 6200',
           link: 'https://www.canadainternational.gc.ca/jp-japan/'
         },
         {
           name: 'Embassy of the Netherlands in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '3-6-3 Shibakoen, Minato-ku, Tokyo 105-0011',
+          phone: '+81 3 5401 0411',
           link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/japan'
         },
         {
           name: 'Embassy of Denmark in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '29-6 Sarugaku-cho, Shibuya-ku, Tokyo 150-0033',
+          phone: '+81 3 3496 3001',
           link: 'https://jp.um.dk/en'
         },
         {
           name: 'Embassy of Switzerland in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '5-9-12 Minami-Azabu, Minato-ku, Tokyo 106-8589',
+          phone: '+81 3 5449 8400',
           link: 'https://www.eda.admin.ch/tokyo'
         },
         {
           name: 'Embassy of India in Tokyo',
-          address: '1-1-1 Azabudai, Minato-ku, Tokyo',
-          phone: '+81 3 3224 5000',
+          address: '2-2-11 Kudan-Minami, Chiyoda-ku, Tokyo 102-0074',
+          phone: '+81 3 3262 2391',
           link: 'https://www.indianembassyjp.gov.in/'
         }
       ],

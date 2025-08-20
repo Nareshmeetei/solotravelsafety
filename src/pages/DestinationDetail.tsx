@@ -1771,7 +1771,7 @@ const DestinationDetail: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-display text-gray-900 mb-1">Events & Notes</h4>
-                    <p className="text-sm text-gray-700">{dest.bestTimeToVisit.events}</p>
+                    <p className="text-sm text-gray-700">{dest.bestTimeToVisit?.events}</p>
                   </div>
                 </div>
               </div>

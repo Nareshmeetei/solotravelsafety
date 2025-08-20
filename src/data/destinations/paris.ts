@@ -402,14 +402,6 @@ const paris: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Paris',
-        address: '2 Avenue Gabriel, 75008 Paris',
-        phone: '+33 1 43 12 22 22',
-        email: 'citizeninfo@state.gov',
-        emergency: '+33 1 43 12 22 22',
-        link: 'https://fr.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Paris',

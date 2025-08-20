@@ -376,16 +376,13 @@ const portAuPrince: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Port-au-Prince',
-        address: 'Tabarre 41, Boulevard 15 Octobre, Port-au-Prince, Haiti',
-        phone: '+509-2229-8000',
-        email: 'acspap@state.gov',
-        emergency: '+509-2229-8000',
-        link: 'https://ht.usembassy.gov/',
-        notes: 'CRITICAL: Embassy on limited staffing since July 2023. Consular services severely restricted. Contact immediately if in Haiti.'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Port-au-Prince',
+          address: 'Tabarre 41, Boulevard 15 Octobre, Port-au-Prince, Haiti',
+          phone: '+509-2229-8000',
+          link: 'https://ht.usembassy.gov/'
+        },
         {
           name: 'Canadian Embassy Haiti',
           address: 'Route de Delmas, Delmas 75, Port-au-Prince',

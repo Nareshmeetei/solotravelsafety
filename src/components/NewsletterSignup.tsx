@@ -14,15 +14,24 @@ const NewsletterSignup: React.FC = () => {
     setSubmitMessage('');
 
     try {
-      const { error } = await addNewsletterEmail(email);
+      const { data, error } = await addNewsletterEmail(email);
       if (error) {
-        setSubmitMessage('Something went wrong. Please try again.');
+        console.error('Newsletter subscription error:', error);
+        if (error.includes('Newsletter system not yet set up')) {
+          setSubmitMessage('Newsletter system is being set up. Please try again in a few minutes.');
+        } else if (error.includes('already subscribed')) {
+          setSubmitMessage('You are already subscribed to our newsletter! 😊');
+        } else {
+          setSubmitMessage('Something went wrong. Please try again.');
+        }
       } else {
+        console.log('Newsletter subscription successful:', data);
         setSubmitMessage("Thanks! You're in the safe loop 🎉");
         setEmail('');
         setTimeout(() => setSubmitMessage(''), 3000);
       }
     } catch (error) {
+      console.error('Newsletter submission error:', error);
       setSubmitMessage('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);

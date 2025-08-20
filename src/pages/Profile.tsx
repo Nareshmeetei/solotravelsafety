@@ -39,6 +39,7 @@ import ChirpModal from '../components/ChirpModal';
 import ChirpCard from '../components/ChirpCard';
 import UserAvatar from '../components/UserAvatar';
 import DMModal from '../components/DMModal';
+import PostCommentModal from '../components/PostCommentModal';
 
 const Profile: React.FC = () => {
   const { user, signOut: authSignOut, profile, loading: authLoading } = useAuth();
@@ -62,6 +63,16 @@ const Profile: React.FC = () => {
   const [alerts, setAlerts] = useState<any[]>([]);
   const [unreadAlertsCount, setUnreadAlertsCount] = useState(0);
   const [authTimeout, setAuthTimeout] = useState(false);
+  
+  // Interactive functionality state
+  const [helpfulVotes, setHelpfulVotes] = useState<{ [postId: string]: boolean }>({});
+  const [savedPosts, setSavedPosts] = useState<{ [postId: string]: boolean }>({});
+  const [showCommentModal, setShowCommentModal] = useState(false);
+  const [selectedPost, setSelectedPost] = useState<any>(null);
+  const [postComments, setPostComments] = useState<{ [postId: string]: any[] }>({});
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [currentPostsPage, setCurrentPostsPage] = useState(1);
+  const [hasMorePosts, setHasMorePosts] = useState(true);
 
   // Add a timeout fallback for auth loading
   useEffect(() => {
@@ -365,6 +376,157 @@ const Profile: React.FC = () => {
     } catch (error) {
       console.error('Error loading posts:', error);
     }
+  };
+
+  // Load saved user interactions from localStorage
+  useEffect(() => {
+    if (currentUser) {
+      const savedHelpfulVotes = localStorage.getItem(`helpful_votes_${currentUser.id}`);
+      const savedBookmarks = localStorage.getItem(`saved_posts_${currentUser.id}`);
+      const savedComments = localStorage.getItem(`post_comments_${currentUser.id}`);
+      
+      if (savedHelpfulVotes) {
+        try {
+          setHelpfulVotes(JSON.parse(savedHelpfulVotes));
+        } catch (e) {
+          console.warn('Error loading helpful votes:', e);
+        }
+      }
+      
+      if (savedBookmarks) {
+        try {
+          setSavedPosts(JSON.parse(savedBookmarks));
+        } catch (e) {
+          console.warn('Error loading saved posts:', e);
+        }
+      }
+      
+      if (savedComments) {
+        try {
+          setPostComments(JSON.parse(savedComments));
+        } catch (e) {
+          console.warn('Error loading comments:', e);
+        }
+      }
+    }
+  }, [currentUser]);
+
+  // Handle helpful vote toggle
+  const handleHelpfulClick = (postId: string) => {
+    if (!currentUser) return;
+    
+    const isCurrentlyHelpful = helpfulVotes[postId];
+    const newHelpfulVotes = {
+      ...helpfulVotes,
+      [postId]: !isCurrentlyHelpful
+    };
+    
+    setHelpfulVotes(newHelpfulVotes);
+    localStorage.setItem(`helpful_votes_${currentUser.id}`, JSON.stringify(newHelpfulVotes));
+    
+    // Update the helpful count in the posts
+    setAllPosts(prevPosts => 
+      prevPosts.map(post => {
+        if (post.id === postId) {
+          return {
+            ...post,
+            helpful_count: isCurrentlyHelpful 
+              ? post.helpful_count - 1 
+              : post.helpful_count + 1
+          };
+        }
+        return post;
+      })
+    );
+  };
+
+  // Handle save/bookmark toggle
+  const handleSaveClick = (postId: string) => {
+    if (!currentUser) return;
+    
+    const newSavedPosts = {
+      ...savedPosts,
+      [postId]: !savedPosts[postId]
+    };
+    
+    setSavedPosts(newSavedPosts);
+    localStorage.setItem(`saved_posts_${currentUser.id}`, JSON.stringify(newSavedPosts));
+  };
+
+  // Handle comment modal
+  const handleCommentClick = (post: any) => {
+    setSelectedPost(post);
+    setShowCommentModal(true);
+  };
+
+  // Handle share functionality
+  const handleShareClick = async (post: any) => {
+    const shareData = {
+      title: `${post.destination_city}, ${post.destination_country} - Solo Female Travel Review`,
+      text: `Check out this safety review from ${post.user.name}: "${post.review_text.substring(0, 100)}..."`,
+      url: window.location.href
+    };
+
+    try {
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback to clipboard
+        await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${shareData.url}`);
+        alert('Post link copied to clipboard!');
+      }
+    } catch (error) {
+      console.log('Error sharing:', error);
+      // Fallback: copy to clipboard
+      try {
+        await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${shareData.url}`);
+        alert('Post link copied to clipboard!');
+      } catch (clipboardError) {
+        console.error('Failed to copy to clipboard:', clipboardError);
+      }
+    }
+  };
+
+  // Handle load more posts
+  const handleLoadMorePosts = () => {
+    setLoadingMore(true);
+    
+    // Simulate loading more posts
+    setTimeout(() => {
+      const additionalPosts = [
+        {
+          id: `additional-${currentPostsPage + 1}`,
+          user: {
+            name: 'Lisa Park',
+            avatar: null,
+            initials: 'LP',
+            location: 'Seoul, South Korea'
+          },
+          destination_city: 'Tokyo',
+          destination_country: 'Japan',
+          overall_rating: 5,
+          night_safety_rating: 5,
+          public_transit_rating: 5,
+          walking_alone_rating: 5,
+          harassment_level: 'low',
+          review_text: 'Tokyo is incredible for solo female travelers! I felt completely safe walking around Shibuya and Shinjuku even late at night. The trains run perfectly on time, and people are so respectful. Stayed in a female-only capsule hotel which was such a cool experience. Language barrier wasn\'t an issue with translation apps.',
+          visited_date: 'December 2024',
+          created_at: `${currentPostsPage} week${currentPostsPage > 1 ? 's' : ''} ago`,
+          tags: ['felt safe', 'great transport', 'respectful people', 'language barrier ok'],
+          helpful_count: 23,
+          photos: ['https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&w=400']
+        }
+      ];
+      
+      setAllPosts(prevPosts => [...prevPosts, ...additionalPosts]);
+      setCurrentPostsPage(prev => prev + 1);
+      setLoadingMore(false);
+      
+      // Stop loading more after 3 pages for demo
+      if (currentPostsPage >= 3) {
+        setHasMorePosts(false);
+      }
+    }, 1500);
   };
 
   const loadUserChirps = async () => {
@@ -1132,19 +1294,39 @@ const Profile: React.FC = () => {
                           {/* Actions */}
                           <div className="flex items-center justify-between">
                             <div className="flex items-center space-x-6 text-sm text-gray-600">
-                              <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
-                                <ThumbsUp className="h-4 w-4" />
+                              <button 
+                                onClick={() => handleHelpfulClick(post.id)}
+                                className={`flex items-center space-x-2 transition-colors duration-300 ${
+                                  helpfulVotes[post.id] 
+                                    ? 'text-primary-500 font-semibold' 
+                                    : 'hover:text-primary-400'
+                                }`}
+                              >
+                                <ThumbsUp className={`h-4 w-4 ${helpfulVotes[post.id] ? 'fill-current' : ''}`} />
                                 <span>Helpful ({post.helpful_count})</span>
                               </button>
-                              <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
+                              <button 
+                                onClick={() => handleCommentClick(post)}
+                                className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300"
+                              >
                                 <MessageSquare className="h-4 w-4" />
                                 <span>Comment</span>
                               </button>
-                              <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
-                                <Bookmark className="h-4 w-4" />
-                                <span>Save</span>
+                              <button 
+                                onClick={() => handleSaveClick(post.id)}
+                                className={`flex items-center space-x-2 transition-colors duration-300 ${
+                                  savedPosts[post.id] 
+                                    ? 'text-primary-500 font-semibold' 
+                                    : 'hover:text-primary-400'
+                                }`}
+                              >
+                                <Bookmark className={`h-4 w-4 ${savedPosts[post.id] ? 'fill-current' : ''}`} />
+                                <span>{savedPosts[post.id] ? 'Saved' : 'Save'}</span>
                               </button>
-                              <button className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300">
+                              <button 
+                                onClick={() => handleShareClick(post)}
+                                className="flex items-center space-x-2 hover:text-primary-400 transition-colors duration-300"
+                              >
                                 <Share className="h-4 w-4" />
                                 <span>Share</span>
                               </button>
@@ -1159,11 +1341,24 @@ const Profile: React.FC = () => {
                   ))}
 
                   {/* Load More */}
-                  <div className="text-center">
-                    <button className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl font-medium transition-colors duration-300">
-                      Load More Posts
-                    </button>
-                  </div>
+                  {hasMorePosts && (
+                    <div className="text-center">
+                      <button 
+                        onClick={handleLoadMorePosts}
+                        disabled={loadingMore}
+                        className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl font-medium transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 mx-auto"
+                      >
+                        {loadingMore ? (
+                          <>
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-600"></div>
+                            <span>Loading...</span>
+                          </>
+                        ) : (
+                          <span>Load More Posts</span>
+                        )}
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -1412,6 +1607,17 @@ const Profile: React.FC = () => {
       <DMModal
         isOpen={showDMModal}
         onClose={() => setShowDMModal(false)}
+      />
+
+      {/* Post Comment Modal */}
+      <PostCommentModal
+        isOpen={showCommentModal}
+        onClose={() => setShowCommentModal(false)}
+        post={selectedPost}
+        onCommentAdded={() => {
+          // Optionally refresh posts or update comment counts
+          console.log('Comment added to post');
+        }}
       />
 
       <Footer />

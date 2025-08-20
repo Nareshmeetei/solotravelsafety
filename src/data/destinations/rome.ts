@@ -409,15 +409,13 @@ const rome: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'US Embassy Rome',
-        address: 'Via Vittorio Veneto, 121',
-        phone: '+39 06 46741',
-        email: 'ACSRome@state.gov',
-        emergency: '+39 06 46741',
-        link: 'https://it.usembassy.gov'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Rome',
+          address: 'Via Vittorio Veneto, 121',
+          phone: '+39 06 46741',
+          link: 'https://it.usembassy.gov'
+        },
         {
           name: 'UK Embassy',
           address: 'Via XX Settembre, 80/a',

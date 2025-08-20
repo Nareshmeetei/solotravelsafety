@@ -147,7 +147,93 @@ const berlin: Destination = {
   internetReliability: 4.7,
   plugType: 'Type C/F (two-pin)',
   timeZone: 'CET/CEST',
-  accessibility: 4.4
+  accessibility: 4.4,
+  legalResources: {
+    embassies: [
+      {
+        name: 'U.S. Embassy Berlin',
+        address: 'Clayallee 170, 14195 Berlin',
+        phone: '+49 30 8305 0',
+        link: 'https://de.usembassy.gov/'
+      },
+      {
+        name: 'British Embassy Berlin',
+        address: 'Wilhelmstraße 70, 10117 Berlin',
+        phone: '+49 30 204 570',
+        link: 'https://www.gov.uk/world/organisations/british-embassy-berlin'
+      },
+      {
+        name: 'German Government Services',
+        address: 'Multiple locations throughout Berlin',
+        phone: '+49 115',
+        link: 'https://www.buergerservice.de/'
+      },
+      {
+        name: 'French Embassy Berlin',
+        address: 'Pariser Platz 5, 10117 Berlin',
+        phone: '+49 30 590 039 000',
+        link: 'https://de.ambafrance.org/'
+      },
+      {
+        name: 'Spanish Embassy Berlin',
+        address: 'Lichtensteinallee 1, 10787 Berlin',
+        phone: '+49 30 254 007 0',
+        link: 'https://www.exteriores.gob.es/embajadas/berlin'
+      },
+      {
+        name: 'Australian Embassy Berlin',
+        address: 'Wallstraße 76-79, 10179 Berlin',
+        phone: '+49 30 880 088 0',
+        link: 'https://germany.embassy.gov.au/'
+      },
+      {
+        name: 'Canadian Embassy Berlin',
+        address: 'Leipziger Platz 17, 10117 Berlin',
+        phone: '+49 30 203 120',
+        link: 'https://www.canadainternational.gc.ca/germany-allemagne/'
+      },
+      {
+        name: 'Netherlands Embassy Berlin',
+        address: 'Klosterstraße 50, 10179 Berlin',
+        phone: '+49 30 209 560',
+        link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/germany'
+      },
+      {
+        name: 'Danish Embassy Berlin',
+        address: 'Rauchstraße 1, 10787 Berlin',
+        phone: '+49 30 505 050',
+        link: 'https://tyskland.um.dk/'
+      },
+      {
+        name: 'Swiss Embassy Berlin',
+        address: 'Otto-von-Bismarck-Allee 4A, 10557 Berlin',
+        phone: '+49 30 390 40 0',
+        link: 'https://www.eda.admin.ch/berlin'
+      },
+      {
+        name: 'Indian Embassy Berlin',
+        address: 'Tiergartenstraße 17, 10785 Berlin',
+        phone: '+49 30 257 950',
+        link: 'https://www.indianembassyberlin.gov.in/'
+      }
+    ],
+    womensRights: [
+      'Legal framework for women\'s rights varies by country',
+      'Contact local embassy for specific information',
+      'International women\'s rights organizations available'
+    ],
+    legalSupport: [
+      'Contact local embassy for legal assistance',
+      'International legal aid organizations available',
+      'English-speaking lawyers available through embassy referrals'
+    ],
+    reportingProcedures: [
+      'Report crimes to local police immediately',
+      'Contact embassy for consular assistance',
+      'Document all incidents with photos and details',
+      'Keep copies of all police reports'
+    ]
+  }
 };
 
 export default berlin;

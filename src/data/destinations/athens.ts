@@ -393,14 +393,6 @@ const athens: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Athens',
-        address: '91 Vasilisis Sofias Avenue, Athens 10160',
-        phone: '+30 210 721 2951',
-        email: 'athenscons@state.gov',
-        emergency: '+30 210 721 2951',
-        link: 'https://gr.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Athens',
@@ -427,16 +419,46 @@ const athens: Destination = {
           link: 'https://gr.ambafrance.org/'
         },
         {
-          name: 'Canadian Embassy Athens',
-          address: '4 Ioannou Gennadiou Street, Athens 10675',
-          phone: '+30 210 727 3400',
-          link: 'https://www.canadainternational.gc.ca/greece-grece/'
+          name: 'Spanish Embassy Athens',
+          address: '29 Vasileos Konstantinou Avenue, Athens 11635',
+          phone: '+30 210 721 4885',
+          link: 'https://www.exteriores.gob.es/embajadas/atenas'
         },
         {
           name: 'Australian Embassy Athens',
           address: 'Level 6, Thon Building, Kifissias Avenue & Alexandras Avenue, Athens 11523',
           phone: '+30 210 870 4000',
           link: 'https://greece.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Embassy Athens',
+          address: '4 Ioannou Gennadiou Street, Athens 10675',
+          phone: '+30 210 727 3400',
+          link: 'https://www.canadainternational.gc.ca/greece-grece/'
+        },
+        {
+          name: 'Netherlands Embassy Athens',
+          address: '5-7 Vasileos Konstantinou Avenue, Athens 11635',
+          phone: '+30 210 725 4900',
+          link: 'https://www.netherlandsembassy.gr/'
+        },
+        {
+          name: 'Danish Embassy Athens',
+          address: '11 Vasilissis Sofias Avenue, Athens 10674',
+          phone: '+30 210 725 7400',
+          link: 'https://graekenland.um.dk/'
+        },
+        {
+          name: 'Swiss Embassy Athens',
+          address: '2 Iasiou Street, Athens 11521',
+          phone: '+30 210 723 0364',
+          link: 'https://www.eda.admin.ch/athens'
+        },
+        {
+          name: 'Indian Embassy Athens',
+          address: '3-5 Kleanthous Street, Athens 10672',
+          phone: '+30 210 721 6227',
+          link: 'https://www.indianembassyathens.gov.in/'
         }
       ],
       womensRights: [

@@ -433,16 +433,13 @@ const reykjavik: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Reykjavik',
-        address: 'Laufásvegur 21, 101 Reykjavík',
-        phone: '+354 595 2200',
-        email: 'ReykjavikACS@state.gov',
-        emergency: '+354 595 2200',
-        link: 'https://is.usembassy.gov/',
-        notes: 'Full-service embassy with American Citizen Services, emergency assistance, and consular support.'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Reykjavik',
+          address: 'Laufásvegur 21, 101 Reykjavík',
+          phone: '+354 595 2200',
+          link: 'https://is.usembassy.gov/'
+        },
         {
           name: 'British Embassy Reykjavik',
           address: 'Laufásvegur 31, 101 Reykjavík',

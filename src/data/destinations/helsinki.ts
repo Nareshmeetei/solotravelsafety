@@ -347,15 +347,6 @@ const helsinki: Destination = {
     },
 
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Helsinki',
-        address: 'Itäinen Puistotie 14A, 00140 Helsinki',
-        phone: '+358 9 616 250',
-        email: 'HelsinkiACS@state.gov',
-        emergency: '+358 9 616 250',
-        link: 'https://fi.usembassy.gov/',
-        hours: 'Monday-Friday 08:30-17:00 (by appointment)'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Helsinki',

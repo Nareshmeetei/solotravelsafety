@@ -384,14 +384,6 @@ const lagos: Destination = {
     },
 
     legalResources: {
-      embassy: {
-        name: 'U.S. Consulate General Lagos',
-        address: '2 Walter Carrington Crescent Victoria Island, Lagos',
-        phone: '+234 1 460 3400',
-        email: 'ACSLagos@state.gov',
-        emergency: '+234 209 461 4000',
-        link: 'https://ng.usembassy.gov/consulate-lagos/'
-      },
       embassies: [
         {
           name: 'U.S. Consulate General Lagos',

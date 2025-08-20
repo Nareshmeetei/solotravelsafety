@@ -389,18 +389,10 @@ const manila: Destination = {
     },
 
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Manila',
-        address: '1201 Roxas Boulevard, Manila 1000, Philippines',
-        phone: '+63 2 5301 2000',
-        email: 'ACSInfoManila@state.gov',
-        emergency: '+63 2 5301 2000',
-        link: 'https://ph.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Manila',
-          address: '1201 Roxas Boulevard, Manila 1000',
+          address: '1201 Roxas Boulevard, Manila 1000, Philippines',
           phone: '+63 2 5301 2000',
           link: 'https://ph.usembassy.gov/'
         },

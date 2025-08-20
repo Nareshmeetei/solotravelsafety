@@ -272,14 +272,6 @@ const oslo: Destination = {
     ]
   },
   legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Oslo',
-        address: 'Morgedalsvegen 36, 0378 Oslo',
-        phone: '+47 21 30 85 40',
-        email: 'osloACS@state.gov',
-        emergency: '+47 21 30 85 40',
-        link: 'https://no.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Oslo',

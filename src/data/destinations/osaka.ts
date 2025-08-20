@@ -470,14 +470,6 @@ const osaka: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Consulate General Osaka-Kobe',
-        address: '2-11-5 Nishitenma, Kita-ku, Osaka 530-8543',
-        phone: '+81 6 6315 5900',
-        email: 'OsakaACS@state.gov',
-        emergency: '+81 6 6315 5900',
-        link: 'https://jp.usembassy.gov/embassy-consulates/osaka/'
-      },
       embassies: [
         {
           name: 'U.S. Consulate General Osaka-Kobe',

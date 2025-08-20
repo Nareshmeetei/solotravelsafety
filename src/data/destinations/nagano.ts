@@ -379,15 +379,13 @@ const nagano: Destination = {
       }
     ],
   legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Tokyo',
-        address: '1-10-5 Akasaka, Minato-ku, Tokyo 107-8420',
-        phone: '+81-3-3224-5000',
-        email: 'TokyoACS@state.gov',
-        emergency: '+81-3-3224-5000',
-        link: 'https://jp.usembassy.gov/'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Tokyo',
+          address: '1-10-5 Akasaka, Minato-ku, Tokyo 107-8420',
+          phone: '+81-3-3224-5000',
+          link: 'https://jp.usembassy.gov/'
+        },
         {
           name: 'British Embassy Tokyo',
           address: '1 Ichiban-cho, Chiyoda-ku, Tokyo 102-8381',

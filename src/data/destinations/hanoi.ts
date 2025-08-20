@@ -387,14 +387,6 @@ const hanoi: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Hanoi',
-        address: '7 Lang Ha Street, Dong Da District',
-        phone: '+84 24 3850 5000',
-        email: 'HanoiACS@state.gov',
-        emergency: '+84 24 3850 5000',
-        link: 'https://vn.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Hanoi',

@@ -266,15 +266,13 @@ const sansalvador: Destination = {
       }
     ],
   legalResources: {
-      embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy San Salvador',
+          address: 'Final Boulevard Santa Elena, Antiguo Cuscatlán, La Libertad',
+          phone: '+503 2501-2999',
+          link: 'https://sv.usembassy.gov/'
+        },
         {
           name: 'British Embassy San-salvador',
           address: 'Boulevard Santa Elena, Antiguo Cuscatlán, San Salvador',
@@ -651,17 +649,6 @@ const sansalvador: Destination = {
       "Don't wear revealing clothing.",
       "Don't ignore local customs.",
       "Don't refuse offered hospitality rudely."
-    ],
-    womensConfidenceScore: {
-      score: 72.3,
-      source: "Travel Ladies & Solo Female Travel Reports 2025",
-      sourceUrl: "https://travelladies.app/safety/el-salvador/san-salvador"
-    },
-    confidenceByActivity: [
-      { label: 'Sightseeing', confidence: 82, source: 'Cat is Out of the Office 2025', sourceUrl: 'https://catisoutoftheoffice.com/el-salvador-solo-travel/' },
-      { label: 'Nightlife', confidence: 55, source: 'Travel Safe Abroad 2025', sourceUrl: 'https://www.travelsafe-abroad.com/el-salvador/san-salvador/' },
-      { label: 'Public Transport', confidence: 65, source: 'Bon Voyage Jackie 2025', sourceUrl: 'https://www.bonvoyagejackie.com/2023/05/04/solo-travel-in-el-salvador/' },
-      { label: 'Dining Alone', confidence: 78, source: 'Women on the Road 2025', sourceUrl: 'https://www.women-on-the-road.com/el-salvador-travel-guide.html' }
     ],
     personalSafetyTools: {
       recommendedDevices: [

@@ -164,14 +164,6 @@ const johannesburg: Destination = {
     ],
 
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'British Embassy Johannesburg',

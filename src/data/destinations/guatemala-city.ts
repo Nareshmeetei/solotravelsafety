@@ -363,14 +363,6 @@ const guatemalacity: Destination = {
     },
     
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Guatemala',
-        address: 'Boulevard Austriaco 11-51, Zone 16, Guatemala City 01016',
-        phone: '+502 2354 0000',
-        email: 'consularcguatemala@state.gov',
-        emergency: '+502 2354 0000',
-        link: 'https://gt.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Guatemala',

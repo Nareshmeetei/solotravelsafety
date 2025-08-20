@@ -330,15 +330,13 @@ const zurich: Destination = {
       }
     ],
   legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Bern',
-        address: 'Sulgeneckstrasse 19, 3007 Bern',
-        phone: '+41 31 357 7011',
-        email: 'consularbern@state.gov',
-        emergency: '+41 31 357 7011',
-        link: 'https://ch.usembassy.gov/'
-      },
       embassies: [
+        {
+          name: 'U.S. Embassy Bern',
+          address: 'Sulgeneckstrasse 19, 3007 Bern',
+          phone: '+41 31 357 7011',
+          link: 'https://ch.usembassy.gov/'
+        },
         {
           name: 'U.S. Consulate General Zurich',
           address: 'Dufourstrasse 101, 8008 Zurich',

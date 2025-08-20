@@ -1,5 +1,79 @@
 ---
-description:
-globs:
 alwaysApply: false
+description: >
+  Apply this rule to all writing and editing tasks for Solo Travel Safety (STS), including copy, prompts, UI text, documentation, SEO, and user content. This rule defines the brand’s voice, audience, product purpose, and boundaries.
+
+brand:
+  name: Solo Travel Safety (STS)
+  mission: Help women travel smarter, safer, and with more confidence — through real safety insights shared by solo female travelers.
+
+voiceAndTone:
+  - Supportive, like a streetwise, well-traveled friend
+  - Calm and clear, never fear-mongering or fluffy
+  - Data-backed, but written in a human tone (6th–8th grade level)
+  - Witty when it adds clarity or connection
+  - Empowering, not patronizing
+  - Positive framing: show caution, not alarm
+  - No emojis — ever
+
+examples:
+  - "Use rideshare apps at night — most solo women reported feeling safer."
+  - "Public transport is reliable during the day. Late night? Go with what feels safest."
+  - "You don’t have to be fearless. You just need to be informed. We’ve got you."
+
+product:
+  summary: >
+    STS is a women-focused travel safety platform offering real-time safety insights, destination scores, red flags, and local tips. Content is based on reviews from solo female travelers, supported by public data and government advisories.
+  features:
+    - Safety scores (e.g. night safety, public transit, walking alone)
+    - Travel advisories with red flag highlights
+    - Safe neighborhood suggestions
+    - Daily budget estimates
+    - Community safety reviews
+    - Filters by safety, cost, and comfort
+    - Travel tips from real solo women
+  toneByContext:
+    safetyTips: calm, clear, street-smart
+    cityDescriptions: honest, balanced, data-informed
+    onboarding: warm, supportive, low-pressure
+    reviews: respectful, concise, lived-experience-first
+    marketing: aspirational, confident, grounded in real insight
+
+idealCustomer:
+  - Women aged 20–45
+  - Solo travelers (current or aspiring)
+  - Planners who search online for women-focused safety info
+  - Anxious about navigating safety in unfamiliar countries or cities
+  - Prefer local tips, data-backed tools, and community insights
+  - Want to travel smart, not scared
+
+nonIdealCustomer:
+  - Male travelers looking for general travel recs
+  - Group travelers not focused on solo safety
+  - Backpackers focused solely on cost
+  - Party/club-centric tourists
+  - Influencers or creators not aligned with women’s safety
+
+seoKeywords:
+  - solo travel
+  - solo travel safety
+  - women solo travel
+  - solo trips for women
+  - solo travel safe
+  - women travel safe
+  - solo female travel
+  - solo camping
+  - solo trips for women in us
+
+writingStyle:
+  - Direct, plain language (no corporate jargon)
+  - Short paragraphs and bullets when possible
+  - Accessible tone (6th–8th grade reading level)
+  - Focused on clarity, confidence, and real-world usefulness
+
+brandingGuidelines:
+  - Never use emojis
+  - Never minimize safety concerns
+  - Always speak with empathy, not authority
+  - Build trust through transparency and clarity
 ---

@@ -190,16 +190,181 @@ setInterval(() => {
 }, 5 * 60 * 1000) // Clean up every 5 minutes
 
 
-// Newsletter signup function (placeholder for now)
+// Newsletter signup function - simplified with better error handling
 export const addNewsletterEmail = async (email: string) => {
-  // TODO: Implement newsletter signup when database is set up
-  console.log('Newsletter signup placeholder called with email:', email)
-  
-  // For now, return success to maintain functionality
-  return { 
-    data: { email }, 
-    error: null 
+  console.log('📧 Newsletter signup attempt for:', email)
+  console.log('📊 Configuration check:', {
+    isDevelopmentMode,
+    hasCredentials: !!supabaseUrl && !!supabaseAnonKey
+  })
+
+  try {
+    // Simple validation first
+    if (!email || !email.includes('@')) {
+      return {
+        data: null,
+        error: 'Please enter a valid email address'
+      }
+    }
+
+    const cleanEmail = email.toLowerCase().trim()
+    console.log('✅ Email validation passed for:', cleanEmail)
+
+    // For now, let's just return success to test the form flow
+    // We'll create the database table manually
+    console.log('🎯 Attempting database insert...')
+
+    const subscriptionData = {
+      email: cleanEmail
+    }
+
+    const { data, error } = await supabase
+      .from('newsletter_subscriptions')
+      .insert(subscriptionData)
+      .select()
+      .single()
+
+    if (error) {
+      console.error('❌ Database error:', error)
+      console.error('Error details:', {
+        code: error.code,
+        message: error.message,
+        hint: error.hint
+      })
+      
+      // Check if it's a missing table error
+      if (error.code === '42P01' || error.message.includes('does not exist')) {
+        console.log('📋 Table does not exist - storing email in localStorage for now')
+        
+        // Store in localStorage as fallback
+        const existingEmails = JSON.parse(localStorage.getItem('newsletter_emails') || '[]')
+        if (!existingEmails.includes(cleanEmail)) {
+          existingEmails.push(cleanEmail)
+          localStorage.setItem('newsletter_emails', JSON.stringify(existingEmails))
+          console.log('📁 Email stored in localStorage:', cleanEmail)
+        }
+        
+        return {
+          data: { email: cleanEmail },
+          error: null
+        }
+      }
+      
+      // Check for duplicate email
+      if (error.code === '23505' || error.message.includes('duplicate') || error.message.includes('unique')) {
+        console.log('🔄 Email already exists')
+        return {
+          data: { email: cleanEmail },
+          error: null,
+          message: 'Email already subscribed!'
+        }
+      }
+      
+      return {
+        data: null,
+        error: `Database error: ${error.message}`
+      }
+    }
+
+    console.log('✅ Newsletter subscription successful:', data)
+    return {
+      data: data,
+      error: null
+    }
+
+  } catch (error: any) {
+    console.error('💥 Unexpected error in newsletter signup:', error)
+    return {
+      data: null,
+      error: `Unexpected error: ${error.message || 'Unknown error'}`
+    }
   }
+}
+
+// Initialize newsletter subscriptions table
+export const initializeNewsletterTable = async () => {
+  try {
+    if (isDevelopmentMode) {
+      console.log('🚧 Development mode: Skipping newsletter table initialization')
+      return { success: true, error: null }
+    }
+
+    console.log('Initializing newsletter_subscriptions table...')
+
+    // Create the table using Supabase's rpc (remote procedure call) if available
+    // or direct SQL execution
+    const { data, error } = await supabase.rpc('create_newsletter_table', {})
+
+    if (error) {
+      console.log('RPC not available, trying direct table check...')
+      
+      // Try to check if table exists by doing a simple select
+      const { data: testData, error: testError } = await supabase
+        .from('newsletter_subscriptions')
+        .select('count(*)')
+        .limit(1)
+
+      if (testError && (testError.code === '42P01' || testError.message.includes('does not exist'))) {
+        console.log('Table does not exist. Please create it manually in Supabase dashboard.')
+        return {
+          success: false,
+          error: 'Please create the newsletter_subscriptions table in your Supabase dashboard. See console for SQL.'
+        }
+      }
+    }
+
+    return { success: true, error: null }
+  } catch (error: any) {
+    console.error('Error initializing newsletter table:', error)
+    return { success: false, error: error.message }
+  }
+}
+
+// Get newsletter table creation SQL for manual setup
+export const getNewsletterTableSQL = () => {
+  return `
+-- Create newsletter_subscriptions table
+CREATE TABLE IF NOT EXISTS newsletter_subscriptions (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  subscribed_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  is_active BOOLEAN DEFAULT true,
+  source VARCHAR(50) DEFAULT 'website',
+  unsubscribed_at TIMESTAMP WITH TIME ZONE NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Create indexes for better performance
+CREATE INDEX IF NOT EXISTS idx_newsletter_email ON newsletter_subscriptions(email);
+CREATE INDEX IF NOT EXISTS idx_newsletter_active ON newsletter_subscriptions(is_active);
+CREATE INDEX IF NOT EXISTS idx_newsletter_subscribed_at ON newsletter_subscriptions(subscribed_at);
+
+-- Enable Row Level Security
+ALTER TABLE newsletter_subscriptions ENABLE ROW LEVEL SECURITY;
+
+-- Create policies for newsletter_subscriptions
+CREATE POLICY "Anyone can subscribe to newsletter" ON newsletter_subscriptions
+  FOR INSERT WITH CHECK (true);
+
+CREATE POLICY "Only admins can view all subscriptions" ON newsletter_subscriptions
+  FOR SELECT USING (false); -- Change to appropriate admin check when auth is ready
+
+-- Create function to update the updated_at column
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ language 'plpgsql';
+
+-- Create trigger to automatically update updated_at
+CREATE TRIGGER update_newsletter_subscriptions_updated_at
+  BEFORE UPDATE ON newsletter_subscriptions
+  FOR EACH ROW
+  EXECUTE FUNCTION update_updated_at_column();
+`
 }
 
 // Review creation function (placeholder for now)

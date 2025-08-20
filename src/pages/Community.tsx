@@ -2,6 +2,7 @@ import React from 'react';
 import { Users, Heart, MessageSquare, Calendar, Bell } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CommunityNewsletterForm from '../components/CommunityNewsletterForm';
 
 const Community: React.FC = () => {
   return (
@@ -79,25 +80,16 @@ const Community: React.FC = () => {
             </div>
           </div>
 
-          {/* Notification Signup */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 max-w-md mx-auto animate-fade-in-up animate-delay-800">
+          {/* Community Newsletter Signup */}
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 max-w-lg mx-auto animate-fade-in-up animate-delay-800">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
               <Bell className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
             </div>
             <h3 className="text-lg sm:text-xl font-display text-gray-900 mb-2 sm:mb-3">Get Notified</h3>
             <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-              Be the first to know when our community features launch!
+              Be the first to know when our community features launch! Plus get safety tips, scam alerts, and solo travel secrets.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-3 sm:px-4 py-2.5 sm:py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none text-sm sm:text-base"
-              />
-              <button className="px-4 sm:px-4 py-2.5 sm:py-2 bg-primary-400 text-white rounded-lg font-medium hover:bg-primary-500 transition-colors duration-300 text-sm sm:text-base whitespace-nowrap">
-                Notify Me
-              </button>
-            </div>
+            <CommunityNewsletterForm />
           </div>
         </div>
       </section>

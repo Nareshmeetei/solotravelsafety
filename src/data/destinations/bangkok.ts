@@ -325,14 +325,6 @@ const bangkok: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Bangkok',
-        address: '95 Wireless Road, Bangkok 10330',
-        phone: '+66 2 205 4000',
-        email: 'acsbkk@state.gov',
-        emergency: '+66 2 205 4000',
-        link: 'https://th.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Bangkok',

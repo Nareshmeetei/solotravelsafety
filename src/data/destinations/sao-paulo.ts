@@ -38,18 +38,19 @@ const saoPaulo: Destination = {
     'Portuguese is the primary language, Spanish partially understood',
     'Strong coffee culture and late dining times'
   ],
-  safetyTips: [
-    'Never display expensive items like phones, jewelry, or cameras',
-    'Use only authorized taxis or Uber/99 rideshare apps',
-    'Avoid walking alone at night in any area',
-    'Be extremely cautious of your surroundings at all times',
-    'Keep minimal cash and copies of documents, not originals'
-  ],
+  emergencyInfo: {
+    police: '190',
+    fire: '193',
+    medical: '192',
+    general: '190'
+  },
   emergencyContacts: {
     police: '190',
     fire: '193',
     ambulance: '192',
-    touristHelpline: '+55 11 2171-2827'
+    touristHelpline: '+55 11 2171-2827',
+    womensHelpline: '180',
+    touristPolice: '+55 11 2171-2827'
   },
   healthcareInfo: {
     qualityOfCare: 4.1,
@@ -119,13 +120,6 @@ const saoPaulo: Destination = {
     'Lunch is main meal, dinner can be late (8-10 PM)',
     'Dress well - appearance matters in Brazilian culture',
     'Football (soccer) is extremely important culturally'
-  ],
-  redFlags: [
-    'Very high crime rate including armed robbery',
-    'Express kidnapping targeting anyone appearing wealthy',
-    'Pickpocketing extremely common on public transport',
-    'Fake police asking for documents or bribes',
-    'Phone snatching is epidemic, especially iPhone theft'
   ],
   attractions: [
     {
@@ -208,10 +202,84 @@ const saoPaulo: Destination = {
       }
     ],
     safetyTips: {
-      clothing: 'Dress well as appearance matters in Brazilian culture, but avoid flashy jewelry or expensive items. Carry bags in front of body in crowded areas.',
-      firstTimers: 'São Paulo recommended only for experienced solo travelers. Not suitable for first-time solo female travelers due to elevated crime rates.',
-      apps: ['Uber', '99 (local rideshare)', 'Google Translate', 'WhatsApp'],
-      emergencyPhrases: ['Socorro!', 'Chama a polícia!', 'Preciso de ajuda!']
+      clothing: `• Dress well but avoid expensive items - appearance matters in Brazilian culture
+• Never wear jewelry, watches, or designer clothing that attracts thieves
+• Carry bags close to front of body in crowded areas
+• Wear closed-toe shoes for safety and to blend in
+• Keep phones and cameras completely hidden when not in use
+• Dress conservatively to avoid unwanted attention`,
+      firstTimers: `• São Paulo recommended ONLY for experienced solo travelers
+• NOT suitable for first-time solo female travelers due to high crime rates
+• Consider group tours or guided experiences for major attractions
+• Stay only in safe neighborhoods (Vila Madalena, Jardins)
+• Never walk alone anywhere, especially after sunset
+• Use only Uber/99 - never public transport alone`,
+      apps: [
+        'Uber',
+        '99 (Brazilian rideshare)',
+        'Google Translate',
+        'WhatsApp',
+        'Maps.me (offline maps)'
+      ],
+      appLinks: [
+        { name: 'Uber', link: 'https://www.uber.com/br/pt-br/', description: 'International rideshare - safest transport option' },
+        { name: '99', link: 'https://99app.com/', description: 'Local Brazilian rideshare app' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Portuguese communication' },
+        { name: 'WhatsApp', link: 'https://www.whatsapp.com/', description: 'Primary communication app in Brazil' },
+        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps to avoid using phone on street' }
+      ],
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: 'Socorro!',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'Call the police!',
+          local: 'Chama a polícia!',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'I need help.',
+          local: 'Preciso de ajuda.',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'Where is the nearest hospital?',
+          local: 'Onde fica o hospital mais próximo?',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'I am lost.',
+          local: 'Estou perdida.',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'Please leave me alone.',
+          local: 'Por favor, me deixe em paz.',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'I feel unsafe.',
+          local: 'Não me sinto segura.',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'Can you help me?',
+          local: 'Pode me ajudar?',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'I don\'t speak Portuguese.',
+          local: 'Não falo português.',
+          localLanguage: 'Portuguese'
+        },
+        {
+          english: 'I am a tourist.',
+          local: 'Sou turista.',
+          localLanguage: 'Portuguese'
+        }
+      ]
     },
     sexualHarassmentData: {
       prevalence: 'medium-high',
@@ -230,6 +298,74 @@ const saoPaulo: Destination = {
         'Casa da Mulher Brasileira São Paulo: +55 11 2797-4000',
         'Centro de Referência da Mulher: +55 11 3224-4906',
         'US Consulate São Paulo: +55 11 5186-7000'
+      ]
+    },
+    legalResources: {
+      embassies: [
+        {
+          name: 'U.S. Consulate General São Paulo',
+          address: 'Rua Henri Dunant, 500, Chácara Santo Antônio, São Paulo, SP 04709-110',
+          phone: '+55 11 5186-7000',
+          link: 'https://br.usembassy.gov/embassy-consulates/sao-paulo/'
+        },
+        {
+          name: 'British Consulate General São Paulo',
+          address: 'Rua Ferreira de Araújo, 741, Pinheiros',
+          phone: '+55 11 3094-2700',
+          link: 'https://www.gov.uk/world/organisations/british-consulate-general-sao-paulo'
+        },
+        {
+          name: 'German Consulate General São Paulo',
+          address: 'Av. Brigadeiro Faria Lima, 2092, Jardim Paulistano',
+          phone: '+55 11 3097-5800',
+          link: 'https://sao-paulo.diplo.de/'
+        },
+        {
+          name: 'French Consulate General São Paulo',
+          address: 'Av. Paulista, 1842, Bela Vista',
+          phone: '+55 11 3371-4200',
+          link: 'https://br.consulfrance.org/Consulado-Geral-da-Franca-em-Sao-Paulo'
+        },
+        {
+          name: 'Spanish Consulate General São Paulo',
+          address: 'Av. Paulista, 2073, Bela Vista',
+          phone: '+55 11 3371-2230',
+          link: 'https://www.exteriores.gob.es/consulados/saopaulo/'
+        },
+        {
+          name: 'Australian Consulate General São Paulo',
+          address: 'Alameda Santos, 700, Cerqueira César',
+          phone: '+55 11 2112-6200',
+          link: 'https://brazil.embassy.gov.au/'
+        },
+        {
+          name: 'Canadian Consulate General São Paulo',
+          address: 'Av. das Nações Unidas, 12901, Brooklin Novo',
+          phone: '+55 11 5509-4321',
+          link: 'https://www.canadainternational.gc.ca/brazil-bresil/'
+        }
+      ],
+      womensRights: [
+        'Lei Maria da Penha (2006) - Comprehensive law protecting women from domestic violence',
+        'Sexual Harassment Law (2018) - Makes sexual harassment a criminal offense',
+        'Women have equal rights under Brazilian Constitution',
+        'Right to report crimes at specialized Women\'s Police Stations (DEAMs)',
+        'Access to legal aid through Defensoria Pública'
+      ],
+      legalSupport: [
+        'Defensoria Pública de São Paulo: +55 11 3106-2015 (Free legal aid)',
+        'OAB São Paulo (Bar Association): +55 11 3291-8100',
+        'Centro de Referência da Mulher: +55 11 3224-4906',
+        'DEAM (Women\'s Police Station): 190 or +55 11 3976-3382',
+        'Embassy/Consulate assistance for foreign nationals'
+      ],
+      reportingProcedures: [
+        'Report crimes immediately to 190 (police emergency)',
+        'For sexual harassment/assault: go to DEAM (Women\'s Police Station)',
+        'Contact embassy/consulate immediately for serious crimes',
+        'Keep copies of all police reports and medical records',
+        'Request English interpreter if needed',
+        'Document everything with photos and written records'
       ]
     },
     healthSafety: {
@@ -685,7 +821,77 @@ const saoPaulo: Destination = {
         'Use hotel safes religiously - carry minimal valuables',
         'Consider travel insurance with comprehensive coverage'
       ]
+    },
+  bestTimeToVisit: {
+    safestMonths: ['April-September'],
+    events: 'Autumn/winter months (April-September) offer cooler weather, less rain, and better visibility for safety. Summer (Dec-Mar) brings heavy rains and higher crime rates. Winter provides clearest skies and safest conditions for solo female travelers.'
+  },
+  currency: {
+    name: 'Brazilian Real',
+    code: 'BRL',
+    exchangeRate: {
+      usd: 0.17,
+      eur: 0.16,
+      gbp: 0.14
+    },
+    scamWarnings: [
+      'Use official exchange houses or banks - avoid street money changers',
+      'ATMs inside banks/shopping centers are safest - avoid street ATMs',
+      'Credit cards widely accepted in safe neighborhoods',
+      'Keep cash hidden in money belts - never show large amounts'
+    ]
+  },
+  scamWarnings: [
+    {
+      title: 'Fake Police Officers',
+      description: 'Criminals dress as police and ask to see documents or search bags. Real police will show ID and never ask for bribes. Ask to go to nearest police station if uncertain.',
+      severity: 'high'
+    },
+    {
+      title: 'Express Kidnapping (Sequestro Relâmpago)',
+      description: 'Victims forced to withdraw money from ATMs or make purchases. Avoid isolated ATMs, use machines inside banks/malls, and never resist if targeted.',
+      severity: 'high'
+    },
+    {
+      title: 'Phone/Camera Snatching',
+      description: 'Motorcycle thieves grab phones/cameras from pedestrians. Never use phone on street, avoid taking photos in public, keep devices completely hidden.',
+      severity: 'high'
+    },
+    {
+      title: 'Fake Tour Guides',
+      description: 'Unofficial guides approach tourists offering cheaper tours but lead to robbery setups. Use only verified tour companies with proper credentials.',
+      severity: 'medium'
     }
+  ],
+  languages: ['Portuguese', 'English (limited - mainly in upscale areas)'],
+  daytimeSafetyPercent: 61.8,
+  nighttimeSafetyPercent: 31.4,
+  safetySourceName: 'Numbeo 2025',
+  safetySourceUrl: 'https://www.numbeo.com/crime/in/Sao-Paulo',
+  redFlags: [
+    { label: 'Phone/Camera Theft', frequency: 'Extremely Common', icon: 'Smartphone' },
+    { label: 'Armed Robbery', frequency: 'Very Common', icon: 'Zap' },
+    { label: 'Express Kidnapping', frequency: 'Common', icon: 'AlertTriangle' },
+    { label: 'Pickpocketing (Metro/Buses)', frequency: 'Very Common', icon: 'Hand' },
+    { label: 'Sexual Harassment', frequency: 'Common', icon: 'UserX' },
+    { label: 'Fake Police Scams', frequency: 'Occasional', icon: 'Shield' }
+  ],
+  culturalExpectations: {
+    dressCode: 'São Paulo is fashion-conscious - dress well to blend in and stay safe. Appearance matters greatly in Brazilian culture. Avoid displaying expensive items, jewelry, or designer clothing that attracts thieves. Dress conservatively for safety: covered shoulders, no short shorts. Business casual appropriate for upscale areas. Comfortable, closed-toe shoes essential for walking on uneven streets.',
+    behaviorNorms: [
+      'Brazilians are warm and physical - expect cheek kisses as greetings (usually one kiss in São Paulo).',
+      'Be friendly and social - Brazilians appreciate warmth and conversation.',
+      'Learn basic Portuguese phrases - effort is highly appreciated and improves safety.',
+      'Tipping is expected: 10% service charge often included, additional tip appreciated.',
+      'Lunch is the main meal (12-2 PM), dinner is late (8-10 PM).',
+      'Football (soccer) is extremely important culturally - show interest and respect.',
+      'Be patient with "Brazilian time" - punctuality is flexible.',
+      'Maintain eye contact during conversations - shows respect and sincerity.',
+      'Use hand gestures sparingly - some may be offensive.',
+      'Always greet people when entering shops or restaurants.'
+    ],
+    perception: 'Solo female travelers are still relatively uncommon in São Paulo and may attract attention. Brazilian culture is social and family-oriented, so traveling alone may seem unusual to locals. While Brazilians are generally friendly and helpful, solo women face higher risks due to crime rates. Conservative behavior and appearance are recommended for safety. Foreign women may experience catcalling and unwanted attention, especially if appearing wealthy or tourist-like.'
+  },
 };
 
 export default saoPaulo;

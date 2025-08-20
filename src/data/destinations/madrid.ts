@@ -148,7 +148,93 @@ const madrid: Destination = {
   internetReliability: 4.5,
   plugType: 'Type C/F (two-pin)',
   timeZone: 'CET/CEST',
-  accessibility: 4.2
+  accessibility: 4.2,
+  legalResources: {
+    embassies: [
+      {
+        name: 'U.S. Embassy Madrid',
+        address: 'Calle de Serrano, 75, 28006 Madrid',
+        phone: '+34 91 587 2200',
+        link: 'https://es.usembassy.gov/'
+      },
+      {
+        name: 'British Embassy Madrid',
+        address: 'Paseo de la Castellana, 259D, 28046 Madrid',
+        phone: '+34 91 714 6300',
+        link: 'https://www.gov.uk/world/organisations/british-embassy-madrid'
+      },
+      {
+        name: 'German Embassy Madrid',
+        address: 'Calle de Fortuny, 8, 28010 Madrid',
+        phone: '+34 91 557 9000',
+        link: 'https://madrid.diplo.de/'
+      },
+      {
+        name: 'French Embassy Madrid',
+        address: 'Calle de Salustiano Olózaga, 9, 28001 Madrid',
+        phone: '+34 91 423 8900',
+        link: 'https://es.ambafrance.org/'
+      },
+      {
+        name: 'Spanish Government Services',
+        address: 'Multiple locations throughout Madrid',
+        phone: '+34 060',
+        link: 'https://www.madrid.es/'
+      },
+      {
+        name: 'Australian Embassy Madrid',
+        address: 'Paseo de la Castellana, 259D, 28046 Madrid',
+        phone: '+34 91 353 6600',
+        link: 'https://spain.embassy.gov.au/'
+      },
+      {
+        name: 'Canadian Embassy Madrid',
+        address: 'Paseo de la Castellana, 259D, 28046 Madrid',
+        phone: '+34 91 382 8400',
+        link: 'https://www.canadainternational.gc.ca/spain-espagne/'
+      },
+      {
+        name: 'Netherlands Embassy Madrid',
+        address: 'Avenida del General Perón, 27, 28020 Madrid',
+        phone: '+34 91 353 7500',
+        link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/spain'
+      },
+      {
+        name: 'Danish Embassy Madrid',
+        address: 'Claudio Coello, 91, 28006 Madrid',
+        phone: '+34 91 431 8445',
+        link: 'https://spanien.um.dk/'
+      },
+      {
+        name: 'Swiss Embassy Madrid',
+        address: 'Núñez de Balboa, 35A, 28001 Madrid',
+        phone: '+34 91 436 3960',
+        link: 'https://www.eda.admin.ch/madrid'
+      },
+      {
+        name: 'Indian Embassy Madrid',
+        address: 'Avenida de Pío XII, 30-32, 28016 Madrid',
+        phone: '+34 91 346 0806',
+        link: 'https://www.eoispain.gov.in/'
+      }
+    ],
+    womensRights: [
+      'Legal framework for women\'s rights varies by country',
+      'Contact local embassy for specific information',
+      'International women\'s rights organizations available'
+    ],
+    legalSupport: [
+      'Contact local embassy for legal assistance',
+      'International legal aid organizations available',
+      'English-speaking lawyers available through embassy referrals'
+    ],
+    reportingProcedures: [
+      'Report crimes to local police immediately',
+      'Contact embassy for consular assistance',
+      'Document all incidents with photos and details',
+      'Keep copies of all police reports'
+    ]
+  }
 };
 
 export default madrid;

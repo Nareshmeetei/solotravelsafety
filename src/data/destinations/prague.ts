@@ -356,14 +356,6 @@ const prague: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Prague',
-        address: 'Tržiště 15, 118 01 Praha 1',
-        phone: '+420 257 022 000',
-        email: 'PragueACS@state.gov',
-        emergency: '+420 257 022 000',
-        link: 'https://cz.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Prague',

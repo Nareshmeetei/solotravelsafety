@@ -381,14 +381,6 @@ const karachi: Destination = {
     },
   
     legalResources: {
-      embassy: {
-        name: 'U.S. Consulate General Karachi',
-        address: 'Clifton, Karachi',
-        phone: '+92 21 3527 5000',
-        email: 'ACSKarachi@state.gov',
-        emergency: '+92 51 201 4000',
-        link: 'https://pk.usembassy.gov/embassy-consulates/karachi/'
-      },
       embassies: [
         {
           name: 'U.S. Consulate General Karachi',
