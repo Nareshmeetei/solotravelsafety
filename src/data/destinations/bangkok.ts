@@ -116,16 +116,22 @@ const bangkok: Destination = {
       apps: [
         'Grab',
         'BTS SkyTrain',
-        'Google Translate',
         'Travel Ladies',
-        'My Safetipin'
+        'My Safetipin',
+        'SkyAlert',
+        'HappyCow',
+        'TrueCaller',
+        'Citymapper'
       ],
       appLinks: [
-        { name: 'Grab', link: 'https://www.grab.com/', description: 'Essential ride-sharing and delivery app for Bangkok' },
-        { name: 'BTS SkyTrain', link: 'https://www.bts.co.th/', description: 'Official Bangkok BTS train app with routes and times' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Thai language translation' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' }
+        { name: 'Grab', link: 'https://www.grab.com/', description: 'Essential ride-sharing, delivery, and payment app for Bangkok - safer than street taxis' },
+        { name: 'BTS SkyTrain', link: 'https://www.bts.co.th/', description: 'Official Bangkok BTS train app with routes, times, and women-only car locations' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Bangkok-specific safety tips and meetups' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Bangkok neighborhoods with women-specific reviews' },
+        { name: 'SkyAlert', link: 'https://play.google.com/store/apps/details?id=com.skyalert', description: 'Real-time safety alerts and emergency notifications for Bangkok areas' },
+        { name: 'HappyCow', link: 'https://www.happycow.net/', description: 'Find vegetarian/vegan restaurants - perfect for dietary restrictions and safer food options' },
+        { name: 'TrueCaller', link: 'https://www.truecaller.com/', description: 'Identify unknown calls and block spam - essential for avoiding scam calls targeting tourists' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Bangkok public transport with real-time updates and safest route options' }
       ],
       emergencyPhrases: [
         {
@@ -604,11 +610,46 @@ const bangkok: Destination = {
     },
     usefulTips: [
       {
-        title: 'Master Bangkok Transport',
-        description: 'Use BTS/MRT for efficient travel and Grab for taxis. Avoid street taxis that refuse to use meters. Download offline maps as backup.',
-        severity: 'medium',
-        sourceName: 'Bangkok Transport Authority',
+        title: 'Use Women-Only Train Cars During Rush Hour',
+        description: 'BTS and MRT offer women-only carriages during peak hours (7-9 AM, 5-8 PM). Look for pink signs and female security guards at designated areas. This provides extra comfort and safety during crowded commutes.',
+        severity: 'high',
+        sourceName: 'Bangkok Mass Transit System',
         sourceUrl: 'https://www.bts.co.th/'
+      },
+      {
+        title: 'Download Offline Temple Etiquette Guide',
+        description: 'Save offline guides showing proper temple dress codes and behavior. Many solo travelers get turned away from sacred sites for improper attire. Carry a sarong or scarf to cover shoulders/legs when needed.',
+        severity: 'high',
+        sourceName: 'Tourism Authority of Thailand',
+        sourceUrl: 'https://www.tourismthailand.org/'
+      },
+      {
+        title: 'Master the Art of "Kreng Jai" (Considerate Behavior)',
+        description: 'Thai culture values indirect communication and avoiding confrontation. If feeling uncomfortable, smile politely and move to a busier area rather than direct confrontation. This cultural awareness keeps you safer.',
+        severity: 'medium',
+        sourceName: 'Thai Cultural Center',
+        sourceUrl: 'https://www.thaiembassy.sg/'
+      },
+      {
+        title: 'Use 7-Eleven as Your Safety Net',
+        description: 'With over 10,000 locations, 7-Elevens are everywhere and open 24/7. Use them as safe meeting points, for emergencies, ATM access, and bathroom breaks. Staff often speak basic English and can help in emergencies.',
+        severity: 'medium',
+        sourceName: 'CP All Company',
+        sourceUrl: 'https://www.cpall.co.th/'
+      },
+      {
+        title: 'Learn the "Royal Anthem" Timing',
+        description: 'At 8 AM and 6 PM daily, everything stops for the royal anthem (2 minutes). Be prepared to stand respectfully wherever you are. This cultural knowledge prevents awkward situations and shows respect.',
+        severity: 'low',
+        sourceName: 'Thai Government',
+        sourceUrl: 'https://www.thaigov.go.th/'
+      },
+      {
+        title: 'Trust Your Instincts with Street Food',
+        description: 'Choose street food stalls with high turnover (busy with locals), visible cooking, and proper food storage. Watch for ice quality and avoid pre-cut fruits. Your stomach safety is crucial for solo travel enjoyment.',
+        severity: 'medium',
+        sourceName: 'Bangkok Street Food Guide 2025',
+        sourceUrl: 'https://www.bangkokstreetfood.guide/'
       }
     ],
     culturalSensitivityTips: [

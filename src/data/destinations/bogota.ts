@@ -146,22 +146,26 @@ const bogota: Destination = {
 • Download essential safety apps and keep them updated
 • Acclimatize to the altitude (2,640m) - take it easy for the first few days`,
       apps: [
+        'WhatsApp Business',
         'Uber',
         'Beat',
-        'Tourlina',
-        'Travel Ladies',
-        'My Safetipin',
-        'Maps.me',
-        'Cabify'
+        'Taxis Libres',
+        'Nequi',
+        'Rappi',
+        'Moovit',
+        'First Aid by Red Cross',
+        'Waze'
       ],
       appLinks: [
-        { name: 'Uber', link: 'https://www.uber.com/co/en/', description: 'Safe ride-sharing service' },
-        { name: 'Beat', link: 'https://thebeat.co/', description: 'Local ride-sharing app' },
-        { name: 'Cabify', link: 'https://cabify.com/', description: 'Premium ride-sharing service' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+        { name: 'WhatsApp Business', link: 'https://www.whatsapp.com/business/', description: 'Essential for emergency communication and business contacts in Colombia - all services use WhatsApp' },
+        { name: 'Uber', link: 'https://www.uber.com/co/en/', description: 'Primary safe transportation option - technically illegal but universally recommended by solo female travelers' },
+        { name: 'Beat', link: 'https://thebeat.co/', description: 'Local ride-sharing alternative with strong safety features, popular among Colombian solo travelers' },
+        { name: 'Taxis Libres', link: 'https://www.taxislibres.com.co/', description: 'Only legal taxi booking app in Colombia with registered drivers and real-time tracking' },
+        { name: 'Nequi', link: 'https://www.nequi.com.co/', description: 'Colombia\'s leading digital wallet with 20M+ users - QR payments reduce cash carrying risks' },
+        { name: 'Rappi', link: 'https://www.rappi.com/', description: 'Colombian on-demand delivery for food, medicine, and essentials - reduces need to venture out alone' },
+        { name: 'Moovit', link: 'https://moovitapp.com/', description: 'Essential for navigating Bogotá\'s TransMilenio system with 8,000+ mapped stops and real-time updates' },
+        { name: 'First Aid by Red Cross', link: 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps', description: 'Crucial for Bogotá\'s 2,600m altitude - provides offline medical guidance for altitude sickness' },
+        { name: 'Waze', link: 'https://www.waze.com/', description: 'Top navigation app in Colombia with community safety alerts and real-time hazard reporting' }
       ],
       emergencyPhrases: [
         {
@@ -735,11 +739,12 @@ const bogota: Destination = {
       reason: 'High crime rates, organized criminal groups, and security concerns.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/colombia-travel-advisory.html',
       soloTravelerAdvice: [
-        'Higher risk city - never walk alone at night, use Uber/official taxis only',
-        'Stay in safe neighborhoods: Zona Rosa, Chapinero, or Usaquén',
-        'Phone theft is extremely common - keep devices hidden or use inside only', 
-        'Avoid La Candelaria after dark despite tourist attractions there',
-        'Join group tours and stick to busy areas - safety in numbers essential'
+        'Higher risk city - never walk alone at night, use ride-sharing apps (Uber/Beat) despite technical illegality',
+        'Stay in safe neighborhoods: Zona Rosa, Chapinero, or Usaquén only',
+        'Phone theft is extremely common - use digital payment apps (Nequi) to reduce cash carrying', 
+        'Download WhatsApp Business - essential for all service communication in Colombia',
+        'Use Rappi for deliveries to avoid unnecessary street exposure',
+        'Install altitude sickness apps - Bogotá\'s 2,600m elevation affects most travelers'
       ]
     },
     crimeStatistics: {
@@ -765,39 +770,49 @@ const bogota: Destination = {
       ],
       safetyApps: [
         {
+          name: 'WhatsApp Business',
+          purpose: 'Essential communication and emergency contact tool for Colombia',
+          rating: 4.4
+        },
+        {
           name: 'Uber',
-          purpose: 'Safe ride-sharing service',
-          rating: 4.5
-        },
-        {
-          name: 'Beat',
-          purpose: 'Local ride-sharing app',
-          rating: 4.3
-        },
-        {
-          name: 'Cabify',
-          purpose: 'Premium ride-sharing service',
-          rating: 4.4
-        },
-        {
-          name: 'Tourlina',
-          purpose: 'AI travel companion for solo women',
-          rating: 4.4
-        },
-        {
-          name: 'Travel Ladies',
-          purpose: 'Female travel community and safety tips',
+          purpose: 'Primary safe transportation despite technical illegality',
           rating: 4.2
         },
         {
-          name: 'My Safetipin',
-          purpose: 'Safety ratings for neighborhoods and routes',
-          rating: 4.1
+          name: 'Beat',
+          purpose: 'Local ride-sharing alternative with safety tracking',
+          rating: 4.3
         },
         {
-          name: 'Maps.me',
-          purpose: 'Offline maps with safety features',
+          name: 'Taxis Libres',
+          purpose: 'Only legal taxi service with registered drivers and tracking',
+          rating: 4.0
+        },
+        {
+          name: 'Nequi',
+          purpose: 'Digital payments to reduce cash carrying risks',
+          rating: 4.2
+        },
+        {
+          name: 'Rappi',
+          purpose: 'On-demand delivery reducing need to venture out alone',
+          rating: 4.2
+        },
+        {
+          name: 'Moovit',
+          purpose: 'Safe navigation of complex TransMilenio public transport system',
+          rating: 4.5
+        },
+        {
+          name: 'First Aid by Red Cross',
+          purpose: 'Medical emergency guidance including altitude sickness management',
           rating: 4.6
+        },
+        {
+          name: 'Waze',
+          purpose: 'Navigation with community-reported safety alerts and hazards',
+          rating: 4.4
         }
       ],
       emergencyContacts: [
@@ -882,9 +897,11 @@ const bogota: Destination = {
       budgetTips: [
         'Bogotá is affordable but safety should be your top priority over budget',
         'Spend more on accommodation in safe neighborhoods like Zona Rosa or Chapinero',
-        'Use rideshare services instead of public transport, especially at night',
-        'Avoid walking alone - the cost savings aren\'t worth the safety risks',
-        'Budget for private transportation to and from the airport'
+        'Download Nequi for digital payments - reduces cash carrying and target risk',
+        'Use Rappi for food/essential deliveries instead of venturing out alone',
+        'Install Moovit for safe TransMilenio navigation with women-only carriages',
+        'Budget for private transportation via Uber/Beat despite legal ambiguity',
+        'Use Taxis Libres as the only legal taxi option with verified drivers'
       ]
     }
 };

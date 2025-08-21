@@ -1504,7 +1504,7 @@ const DestinationDetail: React.FC = () => {
                       <h3 className="text-xl font-display text-gray-900 mb-4">Where to Stay - Cost vs Safety</h3>
                       <div className="space-y-4">
                         {dest.costAndComfort.accommodation?.map((acc: any, index: number) => (
-                          <div key={index} className="p-4 border rounded-lg bg-white">
+                          <div key={index} className="p-4 border rounded-lg bg-gray-50">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center space-x-3">
                                 <div className={`w-3 h-3 rounded-full ${
@@ -1532,7 +1532,7 @@ const DestinationDetail: React.FC = () => {
                       <h3 className="text-xl font-display text-gray-900 mb-4">Transport Options</h3>
                       <div className="space-y-4">
                         {dest.costAndComfort.transport?.map((trans: any, index: number) => (
-                          <div key={index} className="p-4 border rounded-lg bg-white">
+                          <div key={index} className="p-4 border rounded-lg bg-gray-50">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center space-x-3">
                                 <div className={`w-3 h-3 rounded-full ${
