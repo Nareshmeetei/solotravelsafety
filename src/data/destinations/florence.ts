@@ -12,7 +12,7 @@ const florence: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 623,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '3 hours ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {

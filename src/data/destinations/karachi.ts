@@ -13,7 +13,7 @@ const karachi: Destination = {
     tags: ['warning-flags', 'high-risk', 'harassment-concerns'],
     bgColor: 'bg-red-75',
     reviewCount: 487,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '3 days ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 

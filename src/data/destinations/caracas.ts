@@ -13,7 +13,7 @@ const caracas: Destination = {
     tags: ['warning-flags', 'extreme-risk'],
     bgColor: 'bg-red-100',
     reviewCount: 542,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '2 hours ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 

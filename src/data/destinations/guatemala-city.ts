@@ -13,7 +13,7 @@ const guatemalacity: Destination = {
     tags: ['warning-flags', 'high-risk'],
     bgColor: 'bg-red-75',
     reviewCount: 298,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '45 minutes ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 

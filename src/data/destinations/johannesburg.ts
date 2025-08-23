@@ -15,7 +15,7 @@ const johannesburg: Destination = {
     tags: ['warning-flags', 'high-crime'],
     bgColor: 'bg-red-75',
     reviewCount: 327,
-    lastUpdated: 'Just updated - Comprehensively Enhanced Safety Data',
+    lastUpdated: 'Just now',
     harassmentRisk: 'very high',
     safetyBreakdown: {
       nightSafety: { 
@@ -622,6 +622,44 @@ const johannesburg: Destination = {
           safetyLevel: 'low'
         }
       ],
+      transport: [
+        {
+          method: 'Uber/Bolt (Women Only Service)',
+          cost: '$5-15/ride',
+          safetyDescription: 'Safest option with female drivers and SOS button. Essential for solo female travelers.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Uber/Bolt (Regular Service)',
+          cost: '$3-12/ride',
+          safetyDescription: 'Generally safe but less secure than women-only service. Use tracking features.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Gautrain',
+          cost: '$8-15/trip',
+          safetyDescription: 'Airport-city train service, relatively safe but expensive. Use during daylight.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Hotel/Private Transfers',
+          cost: '$20-40/trip',
+          safetyDescription: 'Most secure option with pre-arranged, vetted drivers. Recommended for airport transfers.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Public Minibus Taxis',
+          cost: '$1-3/ride',
+          safetyDescription: 'AVOID - High risk of harassment, violence, and accidents. Not recommended for tourists.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Walking',
+          cost: 'Free',
+          safetyDescription: 'STRONGLY DISCOURAGED - Even short distances pose significant safety risks.',
+          safetyLevel: 'low'
+        }
+      ],
       seasonalCosts: {
         peak: {
           season: 'December-February (Summer)',
@@ -647,7 +685,16 @@ const johannesburg: Destination = {
         accommodation: 'Safe neighborhood accommodation non-negotiable - budget minimum $60/night',
         dining: 'Stick to hotel restaurants and malls in safe areas for comfort and safety',
         activities: 'Guided tours recommended for safety - budget extra for proper guides'
-      }
+      },
+      budgetTips: [
+        'Higher spending directly correlates to better safety for solo female travelers in Johannesburg',
+        'Budget minimum $135/day for basic safety measures - anything less poses significant risks',
+        'Luxury hotels ($200-600/night) provide maximum security with 24/7 staff and gated properties',
+        'Private transport ($20-40/trip) is essential - never compromise on transportation safety',
+        'Safe neighborhoods cost more but are non-negotiable for solo female travelers',
+        'Emergency fund essential - keep extra money for safety situations and quick escapes',
+        'What you spend on security and safe areas can literally save your life'
+      ]
     },
 
     weatherAndBestTime: {

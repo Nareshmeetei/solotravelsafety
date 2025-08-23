@@ -12,7 +12,7 @@ const edinburgh: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 298,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { 

@@ -12,7 +12,7 @@ const copenhagen: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 456,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '5 minutes ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { 

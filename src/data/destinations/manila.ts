@@ -13,7 +13,7 @@ const manila: Destination = {
     tags: ['warning-flags', 'mixed-safety'],
     bgColor: 'bg-yellow-50',
     reviewCount: 756,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '1 day ago',
     harassmentRisk: 'medium',
     safetyBreakdown: {
       nightSafety: { 

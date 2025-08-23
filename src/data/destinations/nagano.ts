@@ -13,7 +13,7 @@ const nagano: Destination = {
     tags: ['insider-tips', 'extremely-safe', 'cultural-immersion'],
     bgColor: 'bg-green-25',
     reviewCount: 287,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '5 days ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {

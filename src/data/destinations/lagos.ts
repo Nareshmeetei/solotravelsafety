@@ -13,7 +13,7 @@ const lagos: Destination = {
     tags: ['warning-flags', 'high-crime', 'kidnapping-risk'],
     bgColor: 'bg-red-75',
     reviewCount: 623,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '12 hours ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: { 

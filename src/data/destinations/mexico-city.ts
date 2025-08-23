@@ -13,7 +13,7 @@ const mexicocity: Destination = {
     tags: ['warning-flags', 'cultural-immersion'],
     bgColor: 'bg-orange-50',
     reviewCount: 847,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '2 hours ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
       nightSafety: {

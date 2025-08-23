@@ -12,7 +12,7 @@ const melbourne: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 186,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '4 days ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: { 

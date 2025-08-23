@@ -13,7 +13,7 @@ const istanbul: Destination = {
     tags: ['cultural-immersion', 'moderate-safety'],
     bgColor: 'bg-yellow-25',
     reviewCount: 342,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '30 minutes ago',
     harassmentRisk: 'medium',
     safetyBreakdown: {
       nightSafety: { 

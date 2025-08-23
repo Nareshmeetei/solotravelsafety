@@ -13,7 +13,7 @@ const paris: Destination = {
     tags: ['insider-tips', 'caution-required', 'cultural-immersion'],
     bgColor: 'bg-yellow-25',
     reviewCount: 1289,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '1 hour ago',
     harassmentRisk: 'moderate-high',
     safetyBreakdown: {
       nightSafety: {

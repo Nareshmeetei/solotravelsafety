@@ -13,7 +13,7 @@ const kamakura: Destination = {
     tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-green-25',
     reviewCount: 1847,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '8 hours ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {

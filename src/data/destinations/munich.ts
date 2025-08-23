@@ -13,7 +13,7 @@ const munich: Destination = {
     tags: ['insider-tips', 'extremely-safe', 'first-timers'],
     bgColor: 'bg-green-25',
     reviewCount: 423,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '7 hours ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {

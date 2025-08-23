@@ -12,7 +12,7 @@ const hanoi: Destination = {
     tags: ['cultural', 'historic'],
     bgColor: 'bg-yellow-25',
     reviewCount: 429,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '6 hours ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {

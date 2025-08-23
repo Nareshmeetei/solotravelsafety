@@ -12,7 +12,7 @@ const kyoto: Destination = {
     tags: ['insider-tips'],
     bgColor: 'bg-purple-50',
     reviewCount: 1247,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '4 hours ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {

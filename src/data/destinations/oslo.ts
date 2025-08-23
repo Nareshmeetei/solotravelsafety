@@ -13,7 +13,7 @@ const oslo: Destination = {
     tags: ['insider-tips', 'extremely-safe', 'first-timers'],
     bgColor: 'bg-green-25',
     reviewCount: 358,
-    lastUpdated: 'Just updated - Enhanced Safety Data',
+    lastUpdated: '15 minutes ago',
     harassmentRisk: 'low',
     safetyBreakdown: {
       nightSafety: {
