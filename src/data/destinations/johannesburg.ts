@@ -86,6 +86,48 @@ const johannesburg: Destination = {
         'Use only Uber or Bolt for all transportation - avoid minibus taxis completely',
         'Download Namola emergency app and iFearLess safety app before arrival'
       ],
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: 'Help!',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'Call the police!',
+          local: 'Roep die polisie!',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'I need a doctor.',
+          local: 'Ek het \'n dokter nodig.',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'Where is the hospital?',
+          local: 'Waar is die hospitaal?',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'I am lost.',
+          local: 'Ek is verlore.',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'Leave me alone!',
+          local: 'Los my uit!',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'I need help.',
+          local: 'Ek het hulp nodig.',
+          localLanguage: 'Afrikaans'
+        },
+        {
+          english: 'Emergency!',
+          local: 'Noodgeval!',
+          localLanguage: 'Afrikaans'
+        }
+      ],
       apps: ['Namola', 'iFearLess', 'SafeUp', 'Bolt', 'Travel Ladies', 'NomadHer', 'Maps.me', 'Life360', 'WhatsApp'],
       appLinks: [
         { name: 'Namola', link: 'https://www.namola.com/', description: 'South Africa\'s leading emergency response app - 24/7 dispatch with 10-minute response times for police, ambulance, fire' },
@@ -254,6 +296,12 @@ const johannesburg: Destination = {
 
     legalResources: {
       embassies: [
+        {
+          name: 'U.S. Embassy in South Africa',
+          address: '877 Pretorius Street, Arcadia, Pretoria',
+          phone: '+27 12 431 4000',
+          link: 'https://za.usembassy.gov/'
+        },
         {
           name: 'British Embassy Johannesburg',
           address: '255 Hill Street, Arcadia, Pretoria',
