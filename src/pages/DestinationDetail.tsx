@@ -1370,7 +1370,7 @@ const DestinationDetail: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                           <h4 className="font-display text-blue-900 mb-2">Clothing Recommendations</h4>
-                          {Array.isArray(dest.safetyTips?.clothing) || (typeof dest.safetyTips?.clothing === 'string' && dest.safetyTips?.clothing.match(/[\n•]/)) ? (
+                          {Array.isArray(dest.safetyTips?.clothing) || (typeof dest.safetyTips?.clothing === 'string' && dest.safetyTips?.clothing.match && dest.safetyTips?.clothing.match(/[\n•]/)) ? (
                             <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
                               {(Array.isArray(dest.safetyTips?.clothing)
                                 ? dest.safetyTips?.clothing
@@ -1385,7 +1385,7 @@ const DestinationDetail: React.FC = () => {
                         </div>
                         <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                           <h4 className="font-display text-purple-900 mb-2">First-Timer Tips</h4>
-                          {Array.isArray(dest.safetyTips?.firstTimers) || (typeof dest.safetyTips?.firstTimers === 'string' && dest.safetyTips?.firstTimers.match(/[\n•]/)) ? (
+                          {Array.isArray(dest.safetyTips?.firstTimers) || (typeof dest.safetyTips?.firstTimers === 'string' && dest.safetyTips?.firstTimers.match && dest.safetyTips?.firstTimers.match(/[\n•]/)) ? (
                             <ul className="text-sm text-purple-800 list-disc list-inside space-y-1">
                               {(Array.isArray(dest.safetyTips?.firstTimers)
                                 ? dest.safetyTips?.firstTimers
