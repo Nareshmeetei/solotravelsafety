@@ -25,7 +25,7 @@ const hanoi: Destination = {
       },
       walkingAlone: {
         score: 7.6,
-        context: 'Walking alone very safe for women - "catcalling and street harassment almost nonexistent" (Travel Ladies 2025). Crime index only 38.02, safety index 61.98. Main concerns: chaotic motorbike traffic and sidewalks occupied by parked vehicles forcing pedestrians into roads.'
+        context: 'Walking alone very safe for solo female travelers - "catcalling and street harassment almost nonexistent" (Travel Ladies 2025). Crime index only 38.02, safety index 61.98. Main concerns: chaotic motorbike traffic and sidewalks occupied by parked vehicles forcing pedestrians into roads.'
       }
     },
     neighborhoods: {
@@ -94,6 +94,22 @@ const hanoi: Destination = {
         rating: 9.1,
         notes: 'Luxury boutique hotel in heart of Old Quarter with exceptional safety standards, English-speaking staff trained in solo female traveler assistance, and prime location for safe walking access to attractions.',
         link: 'https://www.essencepalacehotel.com/'
+      },
+      {
+        name: 'Old Quarter View Hanoi Hostel',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Free daily beer', '24/7 reception', 'Heart of Old Quarter', 'Social atmosphere'],
+        rating: 9.3,
+        notes: 'Best-rated hostel in Hanoi for female solo travelers. Perfect for meeting other backpackers with free beer at 18:30 daily. Female-only and mixed dorms available. Walking distance to Hoan Kiem Lake and street food.',
+        link: 'https://www.booking.com/hotel/vn/old-quarter-view-hanoi-hostel.html'
+      },
+      {
+        name: 'Bông Hà Nội Hostel',
+        type: 'hostel',
+        features: ['Female-friendly environment', 'Old Quarter location', 'Budget-friendly', 'Social meetups', 'Safe atmosphere'],
+        rating: 9.0,
+        notes: 'Fantastic choice for female solo travelers with exceptionally friendly community. Located in Old Quarter heart with dorm beds from $5/night. Known for welcoming atmosphere and helping solo women connect safely.',
+        link: 'https://www.hostelworld.com/hostel/Bong-Ha-Noi-Hostel/Hanoi/297849'
       }
     ],
     alerts: [
@@ -128,20 +144,34 @@ const hanoi: Destination = {
 • Avoid revealing clothing to reduce attention
 • Bring layers for air-conditioned spaces
 • Comfortable walking shoes for uneven sidewalks`,
-      firstTimers: `• Download Grab app for safe transportation
+      firstTimers: `• Essential solo female travel safety tips: Download Grab app for safe transportation
 • Cross streets carefully - traffic doesn't stop for pedestrians
 • Eat street food from busy stalls with high turnover
 • Keep passport copy - originals required for hotel check-in
-• Learn basic Vietnamese phrases for emergencies`,
+• Learn basic Vietnamese phrases for emergencies - crucial solo travel safety precautions`,
       apps: [
-        'Grab - Safe ride-hailing with driver verification and GPS tracking - Essential for solo female travelers (4.6★)',
-        'Google Translate - Download Vietnamese offline package for emergencies and communication (4.5★)',
-        'bSafe - Personal safety app with GPS tracking, emergency alerts, and fake call features (4.2★)',
-        'Foody - Restaurant reviews, food safety ratings, and local recommendations with photos (4.3★)',
-        'Tourlina - Connect with verified female travel companions and safety network (4.1★)',
-        'Maps.me - Offline maps work without internet, essential for navigation in Vietnamese (4.4★)',
-        'Zalo - Vietnam\'s WhatsApp for local communication and emergency contacts (4.0★)',
-        'Vietnam Travel - Emergency contacts, hospital locations, embassy info in English (4.2★)'
+        'GeoSure',
+        'NomadHer',
+        'bSafe',
+        'SafeUp',
+        'Tourlina',
+        'Rescuer',
+        'TravelSafe',
+        'Noonlight',
+        'Travel Ladies',
+        'Grab Vietnam'
+      ],
+      appLinks: [
+        { name: 'GeoSure', description: 'Women & LGBTQ+ safety scores for 65,000+ neighborhoods worldwide, essential solo female travel safety gear (4.3★)', link: 'https://geosure.com/' },
+        { name: 'NomadHer', description: '#1 solo female travel community app with 30,000+ verified women from 180+ countries for safe connections (4.2★)', link: 'https://www.nomadher.com/' },
+        { name: 'bSafe', description: 'Personal safety app with voice-activated SOS, live GPS tracking, and fake call features for emergencies (4.1★)', link: 'https://getbsafe.com/' },
+        { name: 'SafeUp', description: 'Crowdsourced safety network connecting you to nearby female "guardians" via call/video in 39 countries (4.4★)', link: 'https://safeupapp.com/' },
+        { name: 'Tourlina', description: 'Verified female travel buddy app screening all users for safe solo female travel companions (4.0★)', link: 'https://tourlina.com/' },
+        { name: 'Rescuer', description: 'Hands-free safety alert using voice commands to send location, photos, audio to emergency contacts (4.3★)', link: 'https://rescuerapp.com/' },
+        { name: 'TravelSafe', description: 'Comprehensive emergency services database with safety tips for nearly every country worldwide (4.2★)', link: 'https://travelsafe-app.com/' },
+        { name: 'Noonlight', description: 'America\'s leading safety app with panic button connecting directly to local emergency services (4.5★)', link: 'https://noonlight.com/' },
+        { name: 'Travel Ladies', description: 'Community app connecting solo female travelers with local women for hospitality and meetups (4.1★)', link: 'https://travelladies.app/' },
+        { name: 'Grab Vietnam', description: 'Safe ride-hailing with driver verification, GPS tracking, essential for solo women in Hanoi traffic (4.6★)', link: 'https://www.grab.com/vn/en/' }
       ],
       emergencyPhrases: [
         {
@@ -200,7 +230,7 @@ const hanoi: Destination = {
         'Public displays of affection are generally discouraged.',
         'Be patient with service - punctuality may be flexible.'
       ],
-      perception: 'Solo female travelers are generally safe in Hanoi, though you may attract curious looks and questions about being alone. Vietnamese people are typically helpful and protective of foreign women. Some men may be overly helpful, but harassment is uncommon. Local women often approach solo travelers to offer assistance.',
+      perception: 'Solo female travelers are generally safe in Hanoi - one of the safest places for women to travel alone in Asia. Though you may attract curious looks and questions about being alone, Vietnamese people are typically helpful and protective of foreign women. Some men may be overly helpful, but harassment is uncommon. Local women often approach solo travelers to offer assistance.'
     },
     bestTimeToVisit: {
       safestMonths: ['October-April'],
@@ -278,9 +308,9 @@ const hanoi: Destination = {
     ],
     sexualHarassmentData: {
       prevalence: 'low',
-      commonLocations: ['Street harassment almost nonexistent - Vietnamese culture is respectful', 'Reports of groping/sexual assault rising in crowded buses, tourist bars, beach trips', 'Drink spiking incidents in tourist-frequented venues', 'Some unwanted attention on motorbike taxi rides'],
+      commonLocations: ['Street harassment almost nonexistent for solo female travelers - Vietnamese culture is respectful', 'Reports of groping/sexual assault rising in crowded buses, tourist bars, beach trips affecting women traveling alone safety', 'Drink spiking incidents in tourist-frequented venues - major concern for solo female travel safety', 'Some unwanted attention on motorbike taxi rides'],
       reportingRate: 28, // Low reporting rate due to language barriers and victim-blaming
-      legalProtection: 'Vietnam has anti-harassment laws but enforcement varies significantly. Vietnamese authorities not known for helping sexual assault victims seek justice. Often victim-blaming, especially if alcohol involved. Tourist police more responsive than regular police.',
+      legalProtection: 'Vietnam has anti-harassment laws but enforcement varies significantly for solo female travelers. Vietnamese authorities not known for helping sexual assault victims seek justice. Often victim-blaming, especially if alcohol involved. Tourist police more responsive than regular police for women traveling alone safety issues.',
       supportResources: [
         'Tourist Police Hanoi: +84 24 3825 2885',
         'Vietnam Women\'s Union: +84 24 3943 3033',
@@ -678,11 +708,11 @@ const hanoi: Destination = {
       reason: 'Standard precautions due to traffic safety and occasional petty crime.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/vietnam-travel-advisory.html',
       soloTravelerAdvice: [
-        'Generally safe for solo female travelers with proper precautions',
-        'Stay in central areas like Old Quarter or French Quarter',
-        'Use Grab for transportation instead of motorbike taxis',
-        'Be extremely careful when crossing streets',
-        'Learn basic Vietnamese phrases for better interactions'
+        'Generally one of the safest countries for solo female travel with proper solo travel safety precautions',
+        'Stay in central areas like Old Quarter or French Quarter - trusted solo female travel safety tips',
+        'Use Grab for transportation instead of motorbike taxis - essential solo female travel advice',
+        'Be extremely careful when crossing streets - key solo travel safety for women beginners', 
+        'Learn basic Vietnamese phrases for better interactions - solo female travel essentials'
       ]
     },
     crimeStatistics: {
@@ -694,7 +724,7 @@ const hanoi: Destination = {
       safetyIndex: 61.98, // Numbeo 2025
       source: 'Vietnam Ministry of Public Security & Travel Ladies Safety Index 2025',
       year: 2025,
-      context: 'Hanoi ranked #16 safest in Vietnam for women. Main dangers: traffic accidents, petty theft. Violent crime extremely rare.'
+      context: 'Hanoi ranked #16 safest destination for solo female travelers in Vietnam. Main dangers: traffic accidents, petty theft. Violent crime extremely rare - making it one of the safest places for women to travel alone in Asia.'
     },
     personalSafetyTools: {
       recommendedDevices: [
@@ -747,15 +777,15 @@ const hanoi: Destination = {
     },
     usefulTips: [
       {
-        title: 'Master Traffic Safety - Your #1 Risk in Hanoi',
-        description: 'Scooter accidents are the most dangerous aspect of Hanoi. Walk slowly and predictably across streets - motorbikes flow around you. Never run or stop suddenly. The biggest danger is traffic, not crime.',
+        title: 'Master Traffic Safety - Your #1 Solo Female Travel Risk in Hanoi',
+        description: 'Scooter accidents are the most dangerous aspect for solo female travelers in Hanoi. Walk slowly and predictably across streets - motorbikes flow around you. Never run or stop suddenly. For women traveling alone, the biggest danger is traffic, not crime.',
         severity: 'high',
         sourceName: 'Vietnam Safety Statistics 2025',
         sourceUrl: 'https://travelsafe-abroad.com/vietnam/'
       },
       {
-        title: 'Protect Against Rising Sexual Assault and Drink Spiking',
-        description: 'Reports of groping and sexual assault increasing on crowded transport and in tourist bars. Drink spiking documented in tourist venues. Never leave drinks unattended, travel with trusted people at night, use reputable transport.',
+        title: 'Solo Female Travel Safety: Protect Against Rising Sexual Assault and Drink Spiking',
+        description: 'Reports of groping and sexual assault increasing on crowded transport and in tourist bars, affecting women traveling alone safety. Drink spiking documented in tourist venues. Essential solo female travel safety precautions: Never leave drinks unattended, travel with trusted people at night, use reputable transport.',
         severity: 'high',
         sourceName: 'Vietnam Travel Safety Warnings 2025',
         sourceUrl: 'https://primetravelvietnam.com/sexual-assault-in-vietnam-safety-tips/'
@@ -803,8 +833,8 @@ const hanoi: Destination = {
         sourceUrl: 'https://www.vietnameseprivatetours.com/is-vietnam-safe-for-solo-female-travelers'
       },
       {
-        title: 'Stay in Central Areas for Maximum Safety and Convenience',
-        description: 'Old Quarter and French Quarter have heavy police presence, constant foot traffic, and are safest for solo women. Avoid remote suburban areas. Central locations offer walkability and emergency services access.',
+        title: 'Solo Female Travel Advice: Stay in Central Areas for Maximum Safety',
+        description: 'Old Quarter and French Quarter have heavy police presence, constant foot traffic, and are among the safest places for women to travel alone. Avoid remote suburban areas. Central locations offer walkability and emergency services access - crucial for solo female travel safety.',
         severity: 'low',
         sourceName: 'Hanoi Accommodation Safety Guide 2025',
         sourceUrl: 'https://www.apieceoftravel.com/is-hanoi-safe/'

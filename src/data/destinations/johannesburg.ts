@@ -45,7 +45,12 @@ const johannesburg: Destination = {
     safetyTips: {
       clothing: 'Dress modestly and avoid flashy jewelry. Keep valuables hidden.',
       firstTimers: 'Arrange airport transfers in advance. Avoid public transport after dark.',
-      apps: ['Gautrain', 'Uber', 'Google Maps']
+      apps: ['Gautrain', 'Uber', 'Google Maps'],
+      appLinks: [
+        { name: 'Gautrain', link: 'https://www.gautrain.co.za/', description: 'Official Gautrain app for safe airport and city travel with real-time schedules' },
+        { name: 'Uber', link: 'https://www.uber.com/za/en/', description: 'Safer than public transport - use for secure rides with driver tracking' },
+        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Essential for navigation and finding safe routes in Johannesburg' }
+      ]
     },
     culturalExpectations: {
       dressCode: 'Modest dress recommended. Avoid drawing attention.',

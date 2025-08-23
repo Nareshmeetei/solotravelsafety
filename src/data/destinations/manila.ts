@@ -136,7 +136,12 @@ const manila: Destination = {
     safetyTips: {
       clothing: 'Dress modestly especially when visiting religious sites. Cover shoulders and knees. Avoid flashy jewelry and designer items that attract attention.',
       firstTimers: 'Stay in BGC, Makati, or Ortigas areas. Use Grab instead of street taxis. Avoid walking alone at night even in safer areas. Register with Tourist Assistance Call Center.',
-      apps: ['Grab (primary transport)', 'Google Maps', 'Tourist Assistance PH'],
+      apps: ['Grab', 'Google Maps', 'Tourist Assistance PH'],
+      appLinks: [
+        { name: 'Grab', link: 'https://www.grab.com/ph/', description: 'Primary transport app - safer than jeepneys and taxis with GPS tracking and cashless payment' },
+        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Essential for navigation and avoiding unsafe areas in Manila' },
+        { name: 'Tourist Assistance PH', link: 'https://www.tourism.gov.ph/', description: 'Official Philippine tourism app with emergency contacts and safety resources' }
+      ],
       emergencyPhrases: [
         {
           english: 'Help!',

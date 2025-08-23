@@ -48,8 +48,62 @@ const dublin: Destination = {
       ]
     },
     accommodations: [
-      { name: 'Generator Dublin', type: 'hostel', features: ['Female dorms', 'Central location', 'Friendly staff'], rating: 4.3, notes: 'Popular with solo travelers, safe and clean.' },
-      { name: 'The Shelbourne Dublin', type: 'hotel', features: ['Luxury', 'Safe area', 'Security'], rating: 4.7, notes: 'High security and professional staff.' }
+      {
+        name: 'Latroupe Jacobs Inn',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Mixed dorms', 'City center heart', 'Highly rated', 'Solo traveler focused'],
+        rating: 8.8,
+        notes: '#1 coolest hostel in Dublin especially for solo travelers! Spacious, bright accommodation with ★8.82/10 rating on Hostelworld. Choice of private, female-only and mixed dorms.',
+        link: 'https://www.jacobsinn.com/'
+      },
+      {
+        name: 'The Dawson Hostel',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Grafton Street proximity', 'Trinity College nearby', 'Quiet atmosphere', 'Safe location'],
+        rating: 8.5,
+        notes: 'Located off Dawson Street near Grafton Street and Trinity College. Cosy, relaxed atmosphere perfect for solo travelers seeking quiet comfort with easy access to attractions.',
+        link: 'https://www.thedawsonhostel.com/'
+      },
+      {
+        name: 'Abigails Hostel',
+        type: 'hostel',
+        features: ['Most central location', 'Female dorms', 'Trinity College proximity', "O'Connell Street access", 'Dublin Castle nearby'],
+        rating: 8.6,
+        notes: 'Highly recommended for solo travelers claiming to be the most central hostel in Dublin. Minutes from Trinity College, Dublin Castle, and major attractions.',
+        link: 'https://www.abigailshostel.ie/'
+      },
+      {
+        name: 'Ashfield Hostel',
+        type: 'hostel',
+        features: ["D'Olier Street location", 'Unmatched vibes', 'Trinity College proximity', 'Female-friendly', 'Social atmosphere'],
+        rating: 8.7,
+        notes: "Located on D'Olier Street, minutes from Trinity College and Christ Church Cathedral. Favorite for solo travelers with unmatched vibes and welcoming atmosphere.",
+        link: 'https://www.ashfieldhostel.ie/'
+      },
+      {
+        name: 'The Shelbourne Dublin',
+        type: 'hotel',
+        features: ['Luxury heritage hotel', "St. Stephen's Green location", '24/7 security', 'Concierge service', 'Female-friendly'],
+        rating: 8.9,
+        notes: 'Historic luxury hotel on St. Stephens Green with world-class security, professional staff, and prime location. Excellent choice for solo female travelers seeking luxury.',
+        link: 'https://www.marriott.com/hotels/travel/dubsh-the-shelbourne-dublin-a-renaissance-hotel/'
+      },
+      {
+        name: 'Brooks Hotel Dublin',
+        type: 'hotel',
+        features: ['Boutique luxury', 'City center location', '24/7 front desk', 'Keycard access', 'Professional security'],
+        rating: 8.4,
+        notes: 'Boutique luxury hotel in safe city center with comprehensive security features including CCTV, secure elevator access, and concierge services for solo female travelers.',
+        link: 'https://www.brookshotel.ie/'
+      },
+      {
+        name: 'Trinity College Dublin Summer Accommodation',
+        type: 'hotel',
+        features: ['University campus', '24-hour security', 'Central location', 'Peaceful setting', 'Budget-friendly'],
+        rating: 8.2,
+        notes: 'Unique summer accommodation on Trinity College campus with 24-hour security, unbeatable central location, and peaceful leafy campus. Most affordable rates in Dublin city center.',
+        link: 'https://www.visittrinity.ie/stay/'
+      }
     ],
     alerts: [],
     safetyTips: {
@@ -109,7 +163,26 @@ const dublin: Destination = {
           localLanguage: 'Irish'
         }
       ],
-      apps: ['Citymapper Dublin - Essential public transport navigation', 'TFI Go - Official Irish transport app', 'Dublin Bus - Real-time bus information', 'Garda SíochÁna App - Report crimes and find police stations', 'bSafe - Personal safety app with GPS tracking', 'Weather Ireland - Accurate local forecasts', 'Find My - Share location with trusted contacts', 'Revolut - Multi-currency card with great rates']
+      apps: [
+        'Citymapper Dublin',
+        'TFI Go',
+        'Dublin Bus',
+        'Garda SíochÁna App',
+        'bSafe',
+        'Weather Ireland',
+        'Find My',
+        'Revolut'
+      ],
+      appLinks: [
+        { name: 'Citymapper Dublin', link: 'https://citymapper.com/', description: 'Essential public transport navigation with real-time Dublin bus, tram, and train info' },
+        { name: 'TFI Go', link: 'https://www.transportforireland.ie/tfi-go/', description: 'Official Irish transport app for journey planning and mobile tickets' },
+        { name: 'Dublin Bus', link: 'https://www.dublinbus.ie/', description: 'Real-time bus information and route planning for Dublin city buses' },
+        { name: 'Garda SíochÁna App', link: 'https://www.garda.ie/', description: 'Report crimes, find police stations, and access emergency services in Ireland' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with GPS tracking, SOS alerts, and emergency contacts' },
+        { name: 'Weather Ireland', link: 'https://www.met.ie/', description: 'Accurate local forecasts from Met Éireann - essential for Dublin\'s unpredictable weather' },
+        { name: 'Find My', link: 'https://www.apple.com/icloud/find-my/', description: 'Share location with trusted contacts and track devices for safety' },
+        { name: 'Revolut', link: 'https://www.revolut.com/', description: 'Multi-currency card with great exchange rates and spending controls for travelers' }
+      ]
     },
     culturalExpectations: {
       dressCode: 'Irish culture values practicality over formality. Dress casually but neatly - jeans and comfortable layers work perfectly. Dublin is style-conscious but not pretentious. Avoid flashy designer items that might attract pickpockets. Weather-appropriate clothing is essential - always carry rain protection. Smart-casual attire works for pubs, restaurants, and cultural venues. Dark colors hide rain spots well.',
@@ -394,16 +467,16 @@ const dublin: Destination = {
         sourceUrl: "https://blog.onevasco.com/safe-to-visit/ireland"
       }
     ], // Tips sourced from Go-to-Ireland.com, OneVasco, 2025
-  culturalSensitivityTips: [
-    'DO: Greet with a friendly hello and make eye contact - Irish people value direct, warm interaction',
-    'DO: Join in local conversation and humor - Irish are naturally chatty and welcoming to visitors',
-    'DO: Queue patiently and respect personal space - orderly behavior is highly valued',
-    'DO: Thank bus drivers when boarding and exiting - it\'s considered basic courtesy',
-    "DON'T: Joke about Irish history, religion, accents, or stereotypes - these topics are sensitive",
-    "DON'T: Speak loudly or draw attention in public - moderate volume is preferred",
-    "DON'T: Refuse hospitality abruptly - decline politely with appreciation",
-    "DON'T: Discuss money, religion, politics, or Northern Ireland unless invited"
-  ],
+    culturalSensitivityTips: [
+      'DO: Greet with a friendly hello and make eye contact - Irish people value direct, warm interaction',
+      'DO: Join in local conversation and humor - Irish are naturally chatty and welcoming to visitors',
+      'DO: Queue patiently and respect personal space - orderly behavior is highly valued',
+      'DO: Thank bus drivers when boarding and exiting - it\'s considered basic courtesy',
+      "DON'T: Joke about Irish history, religion, accents, or stereotypes - these topics are sensitive",
+      "DON'T: Speak loudly or draw attention in public - moderate volume is preferred",
+      "DON'T: Refuse hospitality abruptly - decline politely with appreciation",
+      "DON'T: Discuss money, religion, politics, or Northern Ireland unless invited"
+    ],
     womensConfidenceScore: {
       score: 47.0, // Numbeo 2025 Safety Index for Dublin
       source: "Numbeo 2025",
