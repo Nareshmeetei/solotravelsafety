@@ -73,14 +73,18 @@ const johannesburg: Destination = {
     ],
     safetyTips: {
       clothing: [
-        '• Dress modestly and conservatively to avoid unwanted attention',
-        '• Never wear flashy jewelry, expensive watches, or designer items',
-        '• Keep valuables completely hidden - use money belts or hidden pockets'
+        'Dress modestly and conservatively to avoid unwanted attention',
+        'Never wear flashy jewelry, expensive watches, or designer items',
+        'Keep valuables completely hidden - use money belts or hidden pockets',
+        'Avoid carrying purses; use cross-body bags with zippers facing your body',
+        'Dress down to blend in with locals rather than looking obviously like a tourist'
       ],
       firstTimers: [
-        '• NOT recommended for first-time solo female travelers - requires extensive experience',
-        '• Stay only in Sandton, Rosebank, or Melrose Arch areas regardless of cost',
-        '• Return to accommodation before sunset - never go out alone after dark'
+        'NOT recommended for first-time solo female travelers - requires extensive experience',
+        'Stay only in Sandton, Rosebank, or Melrose Arch areas regardless of cost',
+        'Return to accommodation before sunset - never go out alone after dark',
+        'Use only Uber or Bolt for all transportation - avoid minibus taxis completely',
+        'Download Namola emergency app and iFearLess safety app before arrival'
       ],
       apps: ['Namola', 'iFearLess', 'SafeUp', 'Bolt', 'Travel Ladies', 'NomadHer', 'Maps.me', 'Life360', 'WhatsApp'],
       appLinks: [
