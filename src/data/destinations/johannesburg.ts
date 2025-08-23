@@ -547,6 +547,11 @@ const johannesburg: Destination = {
     },
 
     costAndComfort: {
+      dailyBudget: {
+        range: '$135 - $290 USD / day',
+        description: 'Mid-range budget recommended minimum for safe solo female travel with proper security measures.',
+        tip: 'Budget travel strongly NOT recommended for solo females due to safety concerns. Luxury range ($400-1000/day) provides maximum security and peace of mind.'
+      },
       budgetBreakdown: {
         budget: {
           accommodation: '$15-30/night (hostel dorms with security)',
@@ -591,6 +596,32 @@ const johannesburg: Destination = {
           'Use contactless payments when possible to avoid displaying cash or cards'
         ]
       },
+      accommodation: [
+        {
+          type: 'Luxury Hotels (Sandton/Melrose Arch)',
+          avgCost: '$200-600/night',
+          safetyNote: 'Safest option with maximum security, 24/7 staff, and gated properties',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Mid-range Hotels (Safe Areas)',
+          avgCost: '$60-150/night',
+          safetyNote: 'Recommended minimum for solo females - secure neighborhoods with good amenities',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Female-only Hostels',
+          avgCost: '$15-30/night',
+          safetyNote: 'Budget option with female dorms and security, but requires extra vigilance',
+          safetyLevel: 'medium'
+        },
+        {
+          type: 'Budget Accommodations',
+          avgCost: '$10-25/night',
+          safetyNote: 'NOT recommended for solo female travelers due to safety concerns',
+          safetyLevel: 'low'
+        }
+      ],
       seasonalCosts: {
         peak: {
           season: 'December-February (Summer)',
