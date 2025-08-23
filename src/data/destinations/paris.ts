@@ -150,18 +150,28 @@ const paris: Destination = {
 • Use official taxis or Uber for late-night transport
 • Stay in central arrondissements (1st-8th) for best safety`,
       apps: [
-        'Citymapper',
-        'Uber',
-        'RATP',
+        'NomadHer',
+        'Tourlina',
         'Travel Ladies',
-        'My Safetipin'
+        'Citymapper',
+        'bSafe',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'Rome2Rio'
       ],
       appLinks: [
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for Paris public transport navigation' },
-        { name: 'Uber', link: 'https://www.uber.com/fr/en/', description: 'Safe ride-sharing throughout Paris' },
-        { name: 'RATP', link: 'https://www.ratp.fr/en', description: 'Official Paris public transport app' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for Paris public transport with real-time updates' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and guardian network' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely in France' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live EUR exchange rates and offline currency converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Paris weather and activities' },
+        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Paris' }
       ],
       emergencyPhrases: [
         {

@@ -123,20 +123,28 @@ const tokyo: Destination = {
 • Trust your instincts—if you feel unsafe, seek help in a shop, cafe, or hotel
 • Download essential apps for navigation and transport`,
     apps: [
-      'Hyperdia',
-      'Japan Travel',
+      'NomadHer',
       'Tourlina',
       'Travel Ladies',
-      'My Safetipin',
-      'Maps.me'
+      'Hyperdia',
+      'Japan Travel',
+      'TripIt',
+      'Airalo',
+      'XE Currency',
+      'PackPoint',
+      'bSafe'
     ],
     appLinks: [
-      { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Train and subway navigation' },
-      { name: 'Japan Travel', link: 'https://www.japan.travel/en/', description: 'Official Japan tourism app' },
-      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
-      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-      { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-      { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+      { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Essential train and subway navigation for Tokyo metro system' },
+      { name: 'Japan Travel', link: 'https://www.japan.travel/en/', description: 'Official Japan tourism app with cultural insights and safety tips' },
+      { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+      { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without expensive roaming' },
+      { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live JPY exchange rates and offline currency converter' },
+      { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Tokyo weather and activities' },
+      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live location sharing' }
     ],
     emergencyPhrases: [
       'Help! (Tasukete!)',

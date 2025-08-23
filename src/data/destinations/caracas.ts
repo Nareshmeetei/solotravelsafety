@@ -69,26 +69,58 @@ const caracas: Destination = {
       { 
         name: 'JW Marriott Hotel Caracas', 
         type: 'hotel', 
-        features: ['Luxury', 'Safe area', 'Security', '24/7 security', 'Female-friendly', 'Professional staff', 'Secure transport'], 
-        rating: 4.5, 
-        notes: 'High-end security and location in Las Mercedes. Professional staff trained in safety protocols.',
+        features: ['Ultra-luxury', 'Las Mercedes location', 'Armed security', '24/7 security', 'Embassy connections', 'Professional staff', 'Secure transport', 'Female-friendly'], 
+        rating: 4.6, 
+        notes: 'Premier choice for solo female travelers. Located in diplomatic Las Mercedes district with world-class security protocols and staff trained specifically for high-risk environments.',
         link: 'https://www.marriott.com/hotels/travel/ccsjw-jw-marriott-hotel-caracas/'
+      },
+      { 
+        name: 'Renaissance Caracas La Castellana Hotel', 
+        type: 'hotel', 
+        features: ['Luxury Marriott brand', 'La Castellana safe zone', 'Professional security', '24/7 staff', 'Business district location', 'Secure parking', 'Mountain views'], 
+        rating: 4.4, 
+        notes: 'Highly rated luxury hotel (8.2/10 on Booking.com) in safest Chacao neighborhood. 212 rooms including suites, excellent for solo female business travelers.',
+        link: 'https://www.marriott.com/en-us/hotels/ccsbr-renaissance-caracas-la-castellana-hotel/'
       },
       { 
         name: 'Hotel Tamanaco InterContinental Caracas', 
         type: 'hotel', 
-        features: ['Luxury', 'Historic', 'Security', '24/7 security', 'Safe location', 'Professional staff'], 
+        features: ['Historic luxury', 'El Rosal diplomatic area', '24/7 security', 'International standards', 'Embassy proximity', 'Professional staff'], 
         rating: 4.3, 
-        notes: 'Historic luxury hotel with established security protocols. Located in safer El Rosal area.',
+        notes: 'Established luxury hotel with decades of security experience. Historic property with proven track record for VIP and diplomatic guests.',
         link: 'https://www.ihg.com/intercontinental/hotels/us/en/caracas/ccshb/hoteldetail'
       },
       {
-        name: 'Four Points by Sheraton Caracas',
+        name: 'Pestana Caracas Premium City & Conference Hotel',
         type: 'hotel',
-        features: ['International chain', 'Security', 'Safe area', 'Professional staff', '24/7 support'],
+        features: ['Portuguese luxury chain', 'Los Palos Grandes safe area', 'Rooftop pool', '24/7 security', 'Residential location', 'Conference facilities', 'Premium service'],
+        rating: 4.2,
+        notes: 'Located in one of Caracas\'s quietest and safest residential areas. Recent 2025 reviews praise exceptional staff support and security in challenging city environment.',
+        link: 'https://www.pestana.com/en/hotel/pestana-caracas'
+      },
+      {
+        name: 'Eurobuilding Hotel & Suites Caracas',
+        type: 'hotel',
+        features: ['Financial district location', 'Corporate preferred', 'Swimming pool', 'Fitness center', 'Sauna', '24/7 security', 'Business facilities'],
+        rating: 4.1,
+        notes: 'Consistently rated as safest hotel option by corporate travelers and embassies. Located in financial district with excellent security infrastructure and emergency protocols.',
+        link: 'https://www.eurobuilding.com.ve/'
+      },
+      {
+        name: 'Meliá Caracas Hotel',
+        type: 'hotel',
+        features: ['Spanish luxury chain', 'Sabana Grande area', 'Outdoor pool with hydromassage', 'Sauna', 'Spa services', '24/7 reception', 'Valet parking', 'Air conditioning'],
         rating: 4.0,
-        notes: 'Reliable international brand with security standards. Good for business travelers.',
-        link: 'https://www.marriott.com/hotels/travel/ccsfs-four-points-caracas/'
+        notes: '5-star luxury hotel offering European-style elegance with comprehensive security. Features spa services and 3 world-class restaurants, preferred by international business travelers.',
+        link: 'https://www.melia.com/en/hotels/venezuela/caracas/melia-caracas'
+      },
+      {
+        name: 'Cayena-Caracas Hotel',
+        type: 'hotel',
+        features: ['Boutique luxury', 'Modern design', 'State-of-the-art facilities', 'High security', 'Innovative engineering', 'Premium comfort', 'Professional service'],
+        rating: 4.0,
+        notes: 'Ranked #5 of 78 hotels in Caracas. Recent 2025 reviews highlight cutting-edge security technology and luxury amenities designed specifically for high-risk environment safety.',
+        link: 'https://www.cayenacaracas.com/'
       }
     ],
     alerts: [
@@ -130,19 +162,27 @@ const caracas: Destination = {
 • Trust NO strangers offering help or directions - express kidnapping setups are common
 • Carry emergency cash in multiple currencies hidden in different locations on your body`,
       apps: [
-        'Ridery',
-        'Yummy Rides', 
+        'bSafe',
+        'NomadHer',
+        'Tourlina',
         'Travel Ladies',
         'GeoSure',
-        'My Safetipin',
+        'Ridery',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
         'PedidosYa'
       ],
       appLinks: [
-        { name: 'Ridery', link: 'https://ridery.co/', description: 'Venezuelan ride-sharing with GPS tracking - safest transport option' },
-        { name: 'Yummy Rides', link: 'https://yummyrides.com/', description: 'Local ride-sharing app with driver verification and route tracking' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female traveler community - CRITICAL safety network for Venezuela' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming - critical for Caracas' },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community - CRITICAL safety network for Venezuela' },
         { name: 'GeoSure', link: 'https://geosure.ai/', description: 'Real-time safety ratings by neighborhood - essential for Venezuela' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety reports and crowd-sourced danger alerts' },
+        { name: 'Ridery', link: 'https://ridery.co/', description: 'Venezuelan ride-sharing with GPS tracking - safest transport option' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Venezuelan bolívar and offline converter' },
         { name: 'PedidosYa', link: 'https://www.pedidosya.com.ve/', description: 'Food delivery to avoid leaving hotel - safer than going to restaurants' }
       ],
       emergencyPhrases: [

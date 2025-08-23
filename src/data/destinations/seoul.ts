@@ -117,18 +117,28 @@ const seoul: Destination = {
 • Use 1330 tourist hotline for 24/7 English assistance
 • Learn basic Korean phrases - locals appreciate the effort`,
     apps: [
-      'KakaoMap',
+      'NomadHer',
+      'Tourlina',
+      'Travel Ladies',
+      'bSafe',
       'Subway Korea',
-      'Citymapper',
-      'Emergency Ready App',
-      'T-money'
+      'TripIt',
+      'Airalo',
+      'XE Currency',
+      'PackPoint',
+      'KakaoMap'
     ],
     appLinks: [
-      { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Essential navigation app for Seoul' },
-      { name: 'Subway Korea', link: 'https://subwaykorea.com/', description: 'Real-time subway information' },
-      { name: 'Citymapper', link: 'https://citymapper.com/', description: 'International transit app with Seoul coverage' },
-      { name: 'Emergency Ready App', link: 'https://www.safekorea.go.kr/', description: 'Government emergency alerts in English' },
-      { name: 'T-money', link: 'https://www.t-money.co.kr/', description: 'Official transport card app' }
+      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+      { name: 'Subway Korea', link: 'https://subwaykorea.com/', description: 'Real-time subway information and route planning for Seoul' },
+      { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+      { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+      { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Korean won and offline converter' },
+      { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+      { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Essential navigation app for Seoul with real-time traffic' }
     ],
     emergencyPhrases: [
       {

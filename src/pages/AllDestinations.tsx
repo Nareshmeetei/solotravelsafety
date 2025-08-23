@@ -157,7 +157,7 @@ const AllDestinations: React.FC = () => {
           </div>
           
           {/* Search and Filters */}
-          <div className="rounded-2xl shadow-sm border border-gray-200 p-6" style={{backgroundColor: '#EFEAFF'}}>
+          <div className="rounded-2xl shadow-sm border border-gray-200 p-6" style={{backgroundColor: '#F6F3FF'}}>
             {/* Search Bar */}
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 transition-colors duration-300" />
@@ -174,7 +174,7 @@ const AllDestinations: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 mb-4">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 font-medium transition-all duration-300 hover:scale-105 focus-smooth"
+                className="inline-flex items-center px-4 py-3 bg-white border border-gray-200 hover:bg-primary-25 hover:border-primary-200 focus:ring-2 focus:ring-primary-400 focus:border-primary-400 focus:bg-primary-50 rounded-xl text-gray-700 font-medium transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md focus:shadow-lg focus-smooth"
               >
                 <SlidersHorizontal className="h-4 w-4 mr-2 transition-transform duration-300" />
                 Filters
@@ -182,25 +182,31 @@ const AllDestinations: React.FC = () => {
               </button>
               
               <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-600">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300 hover:border-gray-300 focus-smooth"
-                >
-                  <option value="overall-score">Overall Safety</option>
-                  <option value="night-safety">Night Safety</option>
-                  <option value="public-transit">Public Transit</option>
-                  <option value="walking-alone">Walking Alone</option>
-                  <option value="alphabetical">Alphabetical</option>
-                  <option value="reviews">Review Count</option>
-                </select>
+                <span className="text-sm text-gray-600 font-medium">Sort by:</span>
+                <div className="relative">
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="px-4 py-3 pr-10 border border-gray-200 rounded-xl text-sm bg-white hover:border-primary-200 hover:bg-primary-25 focus:ring-2 focus:ring-primary-400 focus:border-primary-400 focus:bg-primary-50 outline-none transition-all duration-300 appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg focus-smooth min-w-[160px]"
+                  >
+                    <option value="overall-score">Overall Safety</option>
+                    <option value="night-safety">Night Safety</option>
+                    <option value="public-transit">Public Transit</option>
+                    <option value="walking-alone">Walking Alone</option>
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="reviews">Review Count</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <ChevronDown className="h-4 w-4 text-gray-400 transition-colors duration-300" />
+                  </div>
+                </div>
                 
                 <button
                   onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                  className="px-3 py-2 border border-gray-200 rounded-lg text-sm hover:bg-gray-50 transition-all duration-300 hover:scale-105 focus-smooth"
+                  className="px-4 py-3 border border-gray-200 rounded-xl text-sm bg-white hover:bg-primary-25 hover:border-primary-200 focus:ring-2 focus:ring-primary-400 focus:border-primary-400 focus:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md focus:shadow-lg focus-smooth min-w-[44px] flex items-center justify-center"
+                  title={`Sort ${sortOrder === 'asc' ? 'descending' : 'ascending'}`}
                 >
-                  {sortOrder === 'asc' ? '↑' : '↓'}
+                  <span className="text-base font-medium">{sortOrder === 'asc' ? '↑' : '↓'}</span>
                 </button>
               </div>
               
@@ -211,7 +217,7 @@ const AllDestinations: React.FC = () => {
               {(searchQuery || selectedContinent !== 'all' || selectedSafetyLevel !== 'all') && (
                 <button
                   onClick={clearFilters}
-                  className="inline-flex items-center px-3 py-2 text-sm text-red-600 hover:text-red-700 transition-all duration-300 hover:scale-105 focus-smooth"
+                  className="inline-flex items-center px-4 py-3 bg-white border border-red-200 hover:bg-red-25 hover:border-red-300 focus:ring-2 focus:ring-red-400 focus:border-red-400 focus:bg-red-50 rounded-xl text-sm text-red-600 hover:text-red-700 font-medium transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md focus:shadow-lg focus-smooth"
                 >
                   <X className="h-4 w-4 mr-1 transition-transform duration-300 hover:rotate-90" />
                   Clear Filters
@@ -221,35 +227,45 @@ const AllDestinations: React.FC = () => {
             
             {/* Advanced Filters */}
             {showFilters && (
-              <div className="border-t border-gray-100 pt-4 grid grid-cols-1 md:grid-cols-2 gap-4 animate-slide-down">
+              <div className="border-t border-gray-100 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-down">
                 <div className="animate-fade-in-left">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Continent</label>
-                  <select
-                    value={selectedContinent}
-                    onChange={(e) => setSelectedContinent(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300 hover:border-gray-300 focus-smooth"
-                  >
-                    {continents.map(continent => (
-                      <option key={continent} value={continent}>
-                        {continent === 'all' ? 'All Continents' : continent}
-                      </option>
-                    ))}
-                  </select>
+                  <label className="block text-sm font-semibold text-gray-800 mb-3">Continent</label>
+                  <div className="relative">
+                    <select
+                      value={selectedContinent}
+                      onChange={(e) => setSelectedContinent(e.target.value)}
+                      className="w-full px-4 py-3 pr-10 border border-gray-200 rounded-xl text-sm bg-white hover:border-primary-200 hover:bg-primary-25 focus:ring-2 focus:ring-primary-400 focus:border-primary-400 focus:bg-primary-50 outline-none transition-all duration-300 appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg focus-smooth"
+                    >
+                      {continents.map(continent => (
+                        <option key={continent} value={continent}>
+                          {continent === 'all' ? 'All Continents' : continent}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <ChevronDown className="h-4 w-4 text-gray-400 transition-colors duration-300" />
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="animate-fade-in animate-delay-100">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Safety Level</label>
-                  <select
-                    value={selectedSafetyLevel}
-                    onChange={(e) => setSelectedSafetyLevel(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all duration-300 hover:border-gray-300 focus-smooth"
-                  >
-                    {safetyLevels.map(level => (
-                      <option key={level.value} value={level.value}>
-                        {level.label}
-                      </option>
-                    ))}
-                  </select>
+                  <label className="block text-sm font-semibold text-gray-800 mb-3">Safety Level</label>
+                  <div className="relative">
+                    <select
+                      value={selectedSafetyLevel}
+                      onChange={(e) => setSelectedSafetyLevel(e.target.value)}
+                      className="w-full px-4 py-3 pr-10 border border-gray-200 rounded-xl text-sm bg-white hover:border-primary-200 hover:bg-primary-25 focus:ring-2 focus:ring-primary-400 focus:border-primary-400 focus:bg-primary-50 outline-none transition-all duration-300 appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg focus-smooth"
+                    >
+                      {safetyLevels.map(level => (
+                        <option key={level.value} value={level.value}>
+                          {level.label}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <ChevronDown className="h-4 w-4 text-gray-400 transition-colors duration-300" />
+                    </div>
+                  </div>
                 </div>
               </div>
             )}

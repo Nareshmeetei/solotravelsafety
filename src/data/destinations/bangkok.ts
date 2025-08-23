@@ -90,6 +90,22 @@ const bangkok: Destination = {
         rating: 8.9,
         notes: 'Elegant boutique hotel with traditional Thai design in secure central location.',
         link: 'https://www.thesiamheritage.com/'
+      },
+      {
+        name: 'Revolution Hostel Asoke',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Asoke heart location', '4-story modern building', 'BTS access', 'Grand Palace proximity'],
+        rating: 8.5,
+        notes: 'Newest highly-rated hostel in central Asoke area. 8-10 minute walk to BTS SkyTrain, perfect for exploring famous sights including Grand Palace.',
+        link: 'https://www.revolutionhostelasoke.com/'
+      },
+      {
+        name: 'iSanook Female Hostel',
+        type: 'hostel',
+        features: ['Women-only hostel', 'Silom district', 'Chong Nonsi BTS proximity', 'Shopping mall access', 'Cultural attractions nearby'],
+        rating: 8.7,
+        notes: 'Exclusively for women travelers in vibrant Silom district. Safe and welcoming space with easy access to BTS, shopping, and street food.',
+        link: 'https://www.isanookfemale.com/'
       }
     ],
     alerts: [

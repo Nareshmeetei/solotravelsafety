@@ -149,23 +149,29 @@ const rome: Destination = {
     safetyTips: {
       clothing: 'Dress modestly when visiting churches (covered shoulders/knees required). Italians dress well - avoid overly casual tourist clothing which marks you as target. Comfortable walking shoes essential for cobblestones.',
       firstTimers: 'Rome has Italy\'s 2nd highest crime rate (6,074 felonies per 100,000). Carry only copies of documents, keep valuables in hotel safe. Learn basic Italian phrases - locals appreciate effort and more likely to help. Book skip-the-line tickets to avoid crowds where pickpockets operate. Validate all public transport tickets immediately to avoid fines.',
-      apps: ['Citymapper Rome', 'Roma Mobilità', 'Moovit', 'bSafe', 'TripWhistle Global SOS'],
+      apps: [
+        'NomadHer',
+        'Tourlina',
+        'Travel Ladies',
+        'bSafe',
+        'Citymapper',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'Roma Mobilità'
+      ],
       appLinks: [
-        {
-          name: 'Roma Mobilità (ATAC)',
-          link: 'https://www.atac.roma.it/en',
-          description: 'Official Rome public transport app with real-time updates and safety features'
-        },
-        {
-          name: 'bSafe Personal Safety',
-          link: 'https://getbsafe.com',
-          description: 'Personal safety app with SOS features and location sharing'
-        },
-        {
-          name: 'TripWhistle Global SOS',
-          link: 'https://www.tripwhistle.com',
-          description: 'Emergency services access app with local emergency numbers'
-        }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Real-time transit info for Rome with accessibility routes' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Euro and offline currency converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+        { name: 'Roma Mobilità', link: 'https://www.atac.roma.it/en', description: 'Official Rome public transport app with real-time updates and safety features' }
       ],
       emergencyPhrases: [
         {

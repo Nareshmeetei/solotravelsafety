@@ -17,26 +17,26 @@ const florence: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 8.0,
-        context: 'Florence very safe at night in historic center (Travel Ladies 2025). Women report feeling completely safe walking alone at night around Duomo, Ponte Vecchio. 3.5/5 safety rating from female residents. Avoid Santa Maria Novella station area and Cascine Park late night.'
+        context: 'Florence very safe at night in historic center for solo female travel (Travel Ladies 2025). Women consistently report feeling completely secure walking alone at night around Duomo, Ponte Vecchio. 3.5/5 safety rating from female residents. Avoid Santa Maria Novella station area and Cascine Park late night - important solo female travel safety tip.'
       },
       publicTransit: {
         score: 8.2,
-        context: 'Efficient ATAF buses and trams, generally safe but pickpocket risk "very high level" in crowded transport (Travel Safe Abroad 2025). Be mindful of groping on public transport. Single journey €1-2, but historic center very walkable.'
+        context: 'Efficient ATAF buses and trams, generally safe for women traveling alone but pickpocket risk "very high level" in crowded transport (Travel Safe Abroad 2025). Be mindful of groping on public transport - key solo female travel safety concern. Single journey €1-2, but historic center very walkable for solo travelers.'
       },
       walkingAlone: {
         score: 8.6,
-        context: 'Excellent for solo women - "I felt completely safe walking around" (2025 traveler report). Compact 15-minute walkable center. Italian catcalling much reduced in metropolitan areas. Respectful locals, no reports of female tourists being sexually assaulted.'
+        context: 'Excellent for solo female travelers - "I felt completely safe walking around" (2025 traveler report). Compact 15-minute walkable center perfect for women traveling alone. Italian catcalling much reduced in metropolitan areas. Respectful locals, no reports of female tourists being sexually assaulted - making it one of the safest places for women to travel alone.'
       }
     },
     neighborhoods: {
       safe: [
         {
           name: 'Historic Center (Centro Storico)',
-          description: 'UNESCO World Heritage area with major attractions like Duomo, Uffizi, and Ponte Vecchio. Very safe with heavy foot traffic, good lighting, and regular police patrols. Perfect for solo travelers.'
+          description: 'UNESCO World Heritage area with major attractions like Duomo, Uffizi, and Ponte Vecchio. Very safe with heavy foot traffic, good lighting, and regular police patrols. Perfect for solo female travelers seeking secure accommodation and sightseeing.'
         },
         {
           name: 'Santo Spirito',
-          description: 'Charming Oltrarno neighborhood with artisan workshops, local restaurants, and beautiful Santo Spirito church. Safe and authentic, popular with locals and discerning tourists.'
+          description: 'Charming Oltrarno neighborhood with artisan workshops, local restaurants, and beautiful Santo Spirito church. Safe and authentic area for women traveling alone, popular with locals and discerning solo female travelers.'
         },
         {
           name: 'San Lorenzo',
@@ -48,7 +48,7 @@ const florence: Destination = {
         },
         {
           name: 'Piazza della Signoria Area',
-          description: 'Heart of Renaissance Florence with Palazzo Vecchio and Uffizi Gallery. Very safe with constant tourist presence and security. Well-lit and patrolled.'
+          description: 'Heart of Renaissance Florence with Palazzo Vecchio and Uffizi Gallery. Very safe for solo female travel with constant tourist presence and security. Well-lit and patrolled - ideal for women traveling alone.'
         }
       ],
       caution: ['Santa Maria Novella train station area late at night', 'Parts of Oltrarno after midnight', 'Crowded tourist areas for pickpockets'],
@@ -120,30 +120,34 @@ const florence: Destination = {
 • Stylish but not flashy - Florentines appreciate good style
 • Light layers for variable weather
 • Avoid obvious tourist gear to blend in better`,
-      firstTimers: `• Florence is very safe for solo women travelers
-• Learn basic Italian phrases - locals appreciate the effort
-• Book museum tickets in advance to avoid long queues
-• Be aware of pickpockets in crowded tourist areas
-• Respect church dress codes and photography rules`,
+      firstTimers: `• Florence is extremely safe for solo female travelers - one of Italy's safest destinations for women traveling alone
+• Learn basic Italian phrases - locals appreciate the effort and it enhances solo travel safety
+• Book museum tickets in advance to avoid long queues - essential solo female travel tip
+• Be aware of "very high level" pickpocket risk in crowded tourist areas - key women solo travel safety concern
+• Respect church dress codes and photography rules - important for solo female travel etiquette`,
       apps: [
-        'Citymapper',
-        'Rick Steves Audio Europe', 
-        'Google Translate',
-        'Travel Ladies',
+        'NomadHer - Solo Female Travel',
+        'GeoSure Global',
         'bSafe Personal Safety',
-        'Firenze Card',
-        'TripIt',
-        'XE Currency'
+        'Noonlight Safety',
+        'Travel Ladies Community',
+        'Tourlina - Women Travel',
+        'Smart Traveler STEP',
+        'Rescuer Alert',
+        'Firenze Card Official',
+        'Rick Steves Audio Europe'
       ],
       appLinks: [
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Essential for navigating Florence public transport and walking routes with real-time updates - 4.7★ rating' },
-        { name: 'Rick Steves Audio Europe', link: 'https://www.ricksteves.com/audio-europe', description: 'Free professional audio guides for Uffizi, Duomo, and major Florence attractions - perfect for solo exploration' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Italian conversation, menu translation, and emergency phrases - works offline with downloaded Italian' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Active female travel community with Florence-specific safety tips, meetups, and solo women connections' },
-        { name: 'bSafe Personal Safety', link: 'https://getbsafe.com/', description: 'GPS tracking, emergency alerts, fake call feature, and SOS button - essential solo female travel safety app' },
-        { name: 'Firenze Card', link: 'https://www.firenzecard.it/', description: 'Official Florence museum pass app - skip lines at 72+ attractions, valid 72 hours, includes public transport' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize all travel confirmations in one place - essential for solo travelers to stay organized and share itineraries' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Real-time EUR exchange rates with offline calculator - essential for budget tracking and avoiding tourist price traps' }
+        { name: 'NomadHer - Solo Female Travel', link: 'https://www.nomadher.com/', description: 'Women-only community app for solo female travelers - find travel buddies, meetups, and female-friendly accommodations. 4.6★ rating with verified women-only space' },
+        { name: 'GeoSure Global', link: 'https://geosure.com/', description: 'Advanced safety scoring app with women & LGBTQ-specific ratings using AI and big data. Provides granular neighborhood safety scores worldwide - 4.4★ rating' },
+        { name: 'bSafe Personal Safety', link: 'https://getbsafe.com/', description: 'Comprehensive safety app with GPS tracking, voice activation SOS, fake calls, and live video recording. Essential for solo female travel safety - 4.1★ rating' },
+        { name: 'Noonlight Safety', link: 'https://www.noonlight.com/', description: 'Emergency response app - hold button when unsafe, release with PIN if safe, otherwise authorities are notified with location. 4.5★ rating' },
+        { name: 'Travel Ladies Community', link: 'https://travelladies.app/', description: 'Active female travel community with Florence-specific safety tips, real reviews, and solo women connections. Highly trusted by solo female travelers' },
+        { name: 'Tourlina - Women Travel', link: 'https://www.tourlina.com/', description: 'Women-only travel companion app - matches female travelers by dates, destinations, and interests. Each user screened for safety - 4.3★ rating' },
+        { name: 'Smart Traveler STEP', link: 'https://step.state.gov/', description: 'Official US government app for travel safety alerts, embassy info, and emergency contact. Free registration for safety updates and location sharing' },
+        { name: 'Rescuer Alert', link: 'https://www.rescuer.org/', description: 'Hands-free safety app - voice activation sends location, photos, and audio to emergency contacts. Designed specifically for women travelers - 4.2★ rating' },
+        { name: 'Firenze Card Official', link: 'https://www.firenzecard.it/', description: 'Official Florence museum pass app - skip lines at 72+ attractions, valid 72 hours, includes public transport. Essential for solo female travelers' },
+        { name: 'Rick Steves Audio Europe', link: 'https://www.ricksteves.com/audio-europe', description: 'Free professional audio guides for Uffizi, Duomo, and major Florence attractions - perfect for solo exploration. Trusted by millions of travelers' }
       ],
       emergencyPhrases: [
         {
@@ -202,7 +206,7 @@ const florence: Destination = {
         'Don\'t eat or drink near monuments and churches.',
         'Show appreciation for Renaissance art and history.'
       ],
-      perception: 'Solo women travelers are very welcome in Florence. Italian culture is warm and hospitable, and Florentines are generally helpful to tourists. The city is progressive and women can dine alone, visit museums, and explore safely. Street harassment is rare.',
+      perception: 'Solo female travelers are very welcome in Florence - making it one of the safest places for women to travel alone. Italian culture is warm and hospitable, and Florentines are generally helpful to solo female travelers. The city is progressive and women can dine alone, visit museums, and explore safely. Street harassment is rare, creating excellent conditions for women solo travel safety.',
     },
     bestTimeToVisit: {
       safestMonths: ['April-June, September-October'],
@@ -249,8 +253,11 @@ const florence: Destination = {
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Florence',
     redFlags: [
       { label: 'Tourist Area Overpricing', frequency: 'Most common', icon: 'DollarSign' },
-      { label: 'Pickpocketing Near Attractions', frequency: 'Occasional', icon: 'Hand' },
-      { label: 'Train Station Area at Night', frequency: 'Rare', icon: 'MapPin' }
+      { label: 'Pickpocketing Near Attractions', frequency: 'Very High Level', icon: 'Hand' },
+      { label: 'Train Station Area at Night', frequency: 'Frequent', icon: 'MapPin' },
+      { label: 'Fake Museum Ticket Websites', frequency: 'Increasing', icon: 'Globe' },
+      { label: 'Restaurant Tourist Menu Scams', frequency: 'Common', icon: 'UtensilsCrossed' },
+      { label: 'Aggressive Street Vendors', frequency: 'Daily', icon: 'Users' }
     ],
     culturalDos: [
       'Learn basic Italian greetings.',
@@ -585,10 +592,11 @@ const florence: Destination = {
       reason: 'Generally safe with standard tourist precautions needed.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/italy-travel-advisory.html',
       soloTravelerAdvice: [
-        'Excellent destination for solo female travelers',
-        'Very safe with rich cultural experiences',
-        'Historic center is perfect for walking alone',
-        'Locals are generally helpful and friendly'
+        'Excellent destination for solo female travel - ranked among safest European cities for women traveling alone',
+        'Very safe with rich cultural experiences and women-friendly atmosphere',
+        'Historic center perfect for solo female travel safety - walkable and well-patrolled',
+        'Locals are generally helpful and friendly to solo female travelers',
+        'Strong women solo travel safety network with excellent healthcare and support resources'
       ]
     },
     crimeStatistics: {
@@ -735,8 +743,8 @@ const florence: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$180-210 USD / day (€70-150)',
-        description: 'Updated 2025 costs: typical tourists spend $210/day. Budget travelers can manage $40-60/day with hostels and self-catering. Florence expensive but exceptional cultural value with excellent safety.',
-        tip: 'Stay outside historic center (Santa Croce, San Frediano) for better value. Book early for prime locations. High season April-June, Sept-Oct most expensive.'
+        description: 'Updated 2025 costs for solo female travelers: typical tourists spend $210/day. Budget-conscious solo female travelers can manage $40-60/day with hostels and self-catering. Florence expensive but exceptional cultural value with excellent solo travel safety standards.',
+        tip: 'Stay outside historic center (Santa Croce, San Frediano) for better value while maintaining solo female travel safety. Book early for prime locations. High season April-June, Sept-Oct most expensive for solo travelers.'
       },
       accommodation: [
         {

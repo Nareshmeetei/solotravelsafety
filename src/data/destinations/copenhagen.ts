@@ -162,40 +162,28 @@ const copenhagen: Destination = {
 • Trust your instincts and seek help in shops or cafes if you ever feel uncomfortable
 • Join local Facebook groups or use women-only travel apps to connect with other female travelers`,
       apps: [
-        'DOT Tickets',
-        'Rejseplanen',
-        'Travel Ladies',
-        'GeoSure Global',
-        'Google Maps',
-        'Citymapper',
+        'NomadHer',
         'Tourlina',
-        'bSafe Personal Safety'
+        'Travel Ladies',
+        'bSafe',
+        'DOT Tickets',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'Rejseplanen'
       ],
       appLinks: [
-        {
-          name: 'DOT Tickets',
-          link: 'https://play.google.com/store/apps/details?id=com.cellpointmobile.mticket.travelcard.dsb',
-          ios: 'https://apps.apple.com/app/dot-tickets/id1234567890',
-          description: 'Official Copenhagen public transport tickets and journey planning'
-        },
-        {
-          name: 'Rejseplanen',
-          link: 'https://www.rejseplanen.dk/en/rejsekort_app',
-          ios: 'https://apps.apple.com/app/rejseplanen/id567890123',
-          description: 'Comprehensive Denmark public transport planning and tickets'
-        },
-        {
-          name: 'Travel Ladies',
-          link: 'https://travelladies.app/',
-          ios: 'https://apps.apple.com/app/travel-ladies/id1234567890',
-          description: 'Connect with verified female travelers worldwide - highest rated women-only travel community'
-        },
-        {
-          name: 'GeoSure Global',
-          link: 'https://geosure.ai/individuals',
-          ios: 'https://apps.apple.com/app/geosure/id1234567890',
-          description: 'Real-time neighborhood safety scores and personalized safety alerts for women travelers'
-        },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+        { name: 'DOT Tickets', link: 'https://play.google.com/store/apps/details?id=com.cellpointmobile.mticket.travelcard.dsb', description: 'Official Copenhagen public transport tickets and journey planning' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Danish krone and offline converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+        { name: 'Rejseplanen', link: 'https://www.rejseplanen.dk/en/rejsekort_app', description: 'Comprehensive Denmark public transport planning and tickets' },
         {
           name: 'Google Maps',
           link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.maps',

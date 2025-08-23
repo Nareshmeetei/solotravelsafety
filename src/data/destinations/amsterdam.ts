@@ -102,6 +102,14 @@ const amsterdam: Destination = {
         rating: 9.2,
         notes: 'Popular with solo travelers, female dorms, safe location, and great staff.',
         link: 'https://www.stayokay.com/en/hostel/amsterdam-vondelpark'
+      },
+      {
+        name: 'Hotel V Fizeaustraat',
+        type: 'hotel',
+        features: ['Boutique hotel', 'Female-friendly', 'Museum Quarter location', 'Design-focused', '24/7 security'],
+        rating: 8.8,
+        notes: 'Stylish boutique hotel in safe Museum Quarter area. Modern design, excellent security, and popular with solo female travelers for its welcoming atmosphere.',
+        link: 'https://www.hotelv.nl/amsterdam/fizeaustraat/'
       }
     ],
     alerts: [],
@@ -117,18 +125,28 @@ const amsterdam: Destination = {
 • Avoid walking alone in deserted or poorly lit areas
 • Trust your instincts—if you feel unsafe, seek help in a shop or cafe`,
       apps: [
-        'GuruWalk',
+        'NomadHer',
         'Tourlina',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me'
+        'bSafe',
+        'Citymapper',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'Rome2Rio'
       ],
       appLinks: [
-        { name: 'GuruWalk', link: 'https://guruwalk.com/', description: 'Free walking tours with local guides' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Real-time transit info for Amsterdam with accessibility routes' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates and offline currency converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Amsterdam' }
       ],
       emergencyPhrases: [
         {

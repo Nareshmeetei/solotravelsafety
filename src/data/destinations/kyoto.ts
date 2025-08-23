@@ -124,14 +124,28 @@ const kyoto: Destination = {
 • Cash-based society - carry yen, use 7-Eleven ATMs for withdrawals
 • Purchase JR Pass if traveling beyond Kyoto for significant savings`,
       apps: [
-        'Google Maps - Download offline maps for Kyoto temples and districts (4.5★)',
-        'Hyperdia - Essential for train schedules and route planning across Japan (4.3★)',
-        'JNTO Safety Tips - Official Japan emergency alerts and disaster information (4.4★)',
-        'Google Translate - Camera translation for menus and signs, works offline (4.5★)',
-        'Tabelog - Restaurant reviews and ratings by locals, essential for dining (4.2★)',
-        'Japan Travel by NAVITIME - Comprehensive transport and tourist information (4.1★)',
-        'Emergency SOS - Built-in iPhone feature for quick emergency contact (N/A)',
-        'Yurekuru Call - Earthquake early warning system with English support (4.0★)'
+        'NomadHer',
+        'Tourlina',
+        'Travel Ladies',
+        'bSafe',
+        'Japan Travel',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'Hyperdia'
+      ],
+      appLinks: [
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+        { name: 'Japan Travel', link: 'https://japantravel.navitime.com/', description: 'Comprehensive guide to Japan transport and tourist information' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Japanese yen and offline converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+        { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Essential train schedules and route planning across Japan' }
       ],
       emergencyPhrases: [
         {

@@ -17,7 +17,7 @@ const cairo: Destination = {
     safetyBreakdown: {
       nightSafety: { 
         score: 2.8, 
-        context: 'Cairo becomes significantly more dangerous for women after dark. Sexual harassment, catcalling, and following are extremely common, especially in downtown areas, Khan el-Khalili, and around tourist sites. Violent incidents and sexual assault risks increase dramatically at night. Solo women should avoid walking alone after sunset and use hotel transport or verified ride-hailing apps. Even in groups, women report feeling unsafe due to aggressive behavior from men. Tourist police presence decreases significantly after 9 PM.' 
+        context: 'Is Cairo safe for solo female travellers at night? Absolutely not without extreme precautions. Cairo has 99.3% harassment rate (UN Women 2024) with risks exponentially higher after dark. Sexual harassment, aggressive following, and assault attempts become frequent after sunset. Women-only transport apps like Wasaleeny essential for any movement. Even luxury hotel areas experience persistent harassment. Tourist police response averages 15-20 minutes. Embassy contact strongly recommended over local authorities.' 
       },
       publicTransit: { 
         score: 4.9, 
@@ -147,9 +147,45 @@ const cairo: Destination = {
       }
     ],
     safetyTips: {
-      clothing: 'Extremely conservative dress is essential - long sleeves, long pants/skirts covering ankles, loose-fitting clothes. Cover hair in religious areas. Avoid any tight or form-fitting clothing. Dark colors recommended to avoid attention.',
-      firstTimers: 'Never travel alone. Book reputable tours with guides. Stay in high-end hotels with security. Arrange airport transfers in advance. Have emergency contacts ready. Consider travel insurance with evacuation coverage.',
-      apps: ['Uber', 'Careem', 'Emergency SOS', 'Google Translate', 'TripIt'],
+      clothing: `• Extremely conservative dress mandatory - "No shoulders, no cleavage, no midriff, no knees" rule
+• Long, loose, flowing clothes in natural fabrics (cotton, linen) for 96-105°F temperatures
+• Light colors preferred to reflect heat while remaining modest
+• Midi and maxi dresses most recommended by recent female travelers
+• Short sleeves acceptable if shoulders covered - sleeveless never appropriate
+• Head covering required for mosque entry, optional elsewhere
+• Ankle-covering pants/skirts essential - no skin exposure below neck`,
+      firstTimers: `• Is Cairo safe for solo female travellers? Only with extreme precautions and cultural awareness
+• Book international hotels with 24/7 security and female staff assistance
+• Arrange all transportation through hotel - never use street taxis or walk alone
+• Download women-only ride apps (Wasaleeny, Pink Taxi) before arrival
+• Book female tour guides through reputable companies like EMO Tours
+• Have embassy contact readily available - US Embassy: +20 2 2797 3300
+• Consider travel insurance with evacuation coverage - harassment incidents common
+• Carry whistle and personal alarm - loud noises deter harassers effectively`,
+      apps: [
+        'bSafe',
+        'NomadHer',
+        'Tourlina',
+        'Travel Ladies',
+        'Wasaleeny',
+        'DARE App',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'Careem'
+      ],
+      appLinks: [
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming - critical for Cairo' },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'Wasaleeny', link: 'https://wasaleeny.com/', description: 'Women-only rideshare with female drivers - essential for safe transport in Cairo' },
+        { name: 'DARE App', link: 'https://dareapp.org/', description: 'Sexual harassment reporting app developed specifically for Egypt' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Egyptian pound and offline converter' },
+        { name: 'Careem', link: 'https://www.careem.com/', description: 'Rideshare with female driver option - safer than street taxis' }
+      ],
       emergencyPhrases: [
         {
           english: 'Help me!',
@@ -295,28 +331,51 @@ const cairo: Destination = {
       }
     ],
     culturalSensitivityTips: [
-      'Dress extremely conservatively - any exposed skin invites harassment',
-      'Avoid physical contact with men completely - no handshakes or casual touch',
-      'Be very firm but not aggressive when declining offers or advances',
-      'Understand that harassment is unfortunately normalized in Egyptian culture',
-      'Respect Islamic customs especially during prayer times and Ramadan',
-      'Learn basic Arabic phrases for emergencies and boundaries'
+      '• Dress extremely conservatively - any exposed skin invites immediate harassment and targeting',
+      '• Never make physical contact with men - no handshakes, high-fives, or casual touch of any kind',
+      '• Be assertively firm when declining offers or advances - politeness is often misinterpreted as interest',
+      '• Understand that sexual harassment is unfortunately normalized in Egyptian culture (99.3% prevalence)',
+      '• Respect Islamic customs especially during prayer times and Ramadan - shows cultural awareness',
+      '• Learn basic Arabic phrases for setting boundaries - "LA!" (No!) and "Ib\'ad \'anni!" (Get away from me!)',
+      '• Avoid eye contact with men as it can be interpreted as flirtation or invitation',
+      '• Never accept invitations to "traditional" tea or meals from strangers - common harassment tactic',
+      '• Understand that solo female travel is extremely unusual and seen as provocative in conservative areas',
+      '• Carry yourself with confident, purposeful body language - avoid appearing lost or vulnerable',
+      '• Is Cairo safe for solo female travellers culturally? Only with extreme cultural sensitivity and adaptation',
+      '• Religious sites require even more conservative behavior - complete silence and deference expected',
+      '• Tipping (baksheesh) culture is mandatory - refusing tips can escalate harassment situations'
     ],
     culturalDos: [
-      'Cover your entire body in loose-fitting, dark clothing',
-      'Use your right hand for eating and greeting',
-      'Remove shoes when entering mosques',
-      'Show respect for religious customs and prayer times',
-      'Tip service providers as it\'s culturally expected',
-      'Ask permission before photographing people'
+      '• Cover your entire body in loose-fitting, modest clothing - arms, legs, chest, midriff completely covered',
+      '• Use your right hand exclusively for eating, greeting, and giving/receiving items',
+      '• Remove shoes when entering mosques and some traditional homes',
+      '• Show profound respect for Islamic prayer times (5 times daily) - avoid interruptions',
+      '• Tip generously and immediately - service providers depend on baksheesh for livelihood',
+      '• Ask explicit permission before photographing people, especially women',
+      '• Greet women first before acknowledging men in mixed groups',
+      '• Learn basic Islamic greetings like "As-salamu alaykum" to show respect',
+      '• Carry modest head covering for mosque visits and conservative areas',
+      '• Respect Ramadan fasting by not eating/drinking publicly during daylight hours',
+      '• Show extra reverence at religious sites - maintain quiet, respectful demeanor',
+      '• Stand and dress appropriately when hearing call to prayer (Adhan)',
+      '• Accept offered hospitality graciously - refusing tea/coffee can be offensive'
     ],
     culturalDonts: [
-      'Never wear revealing clothing - includes sleeveless tops, shorts, tight clothing',
-      'Don\'t shake hands with men or make physical contact',
-      'Don\'t show public displays of affection',
-      'Don\'t point with your finger - use open hand',
-      'Don\'t show soles of feet when sitting',
-      'Don\'t refuse hospitality rudely when offered tea/coffee'
+      '• Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
+      '• Don\'t shake hands with men or initiate any physical contact whatsoever',
+      '• Don\'t show public displays of affection - even holding hands draws negative attention',
+      '• Don\'t point with your finger - use open hand gesture to indicate direction',
+      '• Don\'t show soles of feet when sitting - keep feet flat on floor or crossed ankles only',
+      '• Don\'t refuse hospitality rudely when offered tea/coffee - polite acceptance shows respect',
+      '• Don\'t enter mosques during prayer times unless invited by worshippers',
+      '• Don\'t photograph women without explicit permission - extremely sensitive cultural issue',
+      '• Don\'t drink alcohol publicly or appear intoxicated - deeply offensive in Islamic culture',
+      '• Don\'t use your left hand for eating, greeting, or handling items - considered unclean',
+      '• Don\'t wear shoes inside mosques, homes, or prayer areas',
+      '• Don\'t ignore or dismiss cultural warnings from locals - they understand the risks',
+      '• Don\'t assume Western feminist ideals apply - adaptation is essential for safety',
+      '• Don\'t argue with men publicly - can escalate harassment situations dangerously',
+      '• Don\'t travel alone to conservative areas outside Cairo - extremely high risk'
     ],
     womensConfidenceScore: {
       score: 18,

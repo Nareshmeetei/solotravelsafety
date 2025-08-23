@@ -105,18 +105,28 @@ const lisbon: Destination = {
 • Save emergency number 112 and tourist police contacts
 • Stay hydrated when walking the hills - carry water`,
       apps: [
-        'Moovit',
-        'Uber',
+        'NomadHer',
+        'Tourlina',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me'
+        'bSafe',
+        'Moovit',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'Rome2Rio'
       ],
       appLinks: [
-        { name: 'Moovit', link: 'https://moovitapp.com/', description: 'Public transport navigation for Lisbon' },
-        { name: 'Uber', link: 'https://www.uber.com/pt/en/', description: 'Safe ride-sharing service in Lisbon' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+        { name: 'Moovit', link: 'https://moovitapp.com/', description: 'Real-time transit info for Lisbon with accessibility routes' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates and offline currency converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Lisbon' }
       ],
       emergencyPhrases: [
         {

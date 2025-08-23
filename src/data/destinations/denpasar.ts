@@ -56,35 +56,59 @@ const denpasar: Destination = {
     },
     accommodations: [
       {
-        name: 'Poppies Cottages Bali',
+        name: 'Puri Garden Hotel & Hostel Ubud',
         type: 'hotel',
-        features: ['Safe location', 'Female-friendly', '24/7 security'],
-        rating: 8.2,
-        notes: 'Well-established accommodation in Kuta with good security measures and female-friendly atmosphere.',
-        link: 'https://www.poppiesbali.com/'
+        features: ['Award-winning for solo travelers', 'Garden setting', 'Sacred Monkey Forest proximity', 'Female-friendly', '24/7 staff'],
+        rating: 8.6,
+        notes: 'Award-winning hostel perfect for solo travelers looking to make friends. 9-minute walk to Sacred Monkey Forest and Yoga Barn. Excellent breakfast service.',
+        link: 'https://www.purigardenubud.com/'
+      },
+      {
+        name: 'White Penny Hostel Canggu',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Boutique design', 'Air conditioning', 'Solo traveler focused', 'Clean facilities'],
+        rating: 8.4,
+        notes: 'Clean boutique hostel with "family to all travelers" motto. Private AC rooms and female dorms available. Perfect for solo female travelers.',
+        link: 'https://www.whitepennyhostel.com/'
+      },
+      {
+        name: 'Pudak Sari Unizou Hostel Kuta',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Monitored entrance', 'Guest-only access', 'Near Kuta Beach', 'Garden area'],
+        rating: 8.3,
+        notes: 'Hidden gem near Kuta Beach with female-only dorms. Staff-monitored entrance ensures guest-only access. Garden area for socializing.',
+        link: 'https://www.unizouhotel.com/'
+      },
+      {
+        name: 'The Sanctoo Villa Sanur',
+        type: 'hotel',
+        features: ['Boutique hotel', 'Sanur safe location', 'Pool area', 'Modern facilities', 'Female-friendly staff'],
+        rating: 8.4,
+        notes: 'Boutique hotel in safest Sanur area with excellent reviews from solo female travelers. Modern amenities and beachside location.',
+        link: 'https://www.sanctoovilla.com/'
       },
       {
         name: 'Mad Monkey Hostel Canggu',
         type: 'hostel',
-        features: ['Female dorms', 'Social atmosphere', 'Safe area'],
-        rating: 8.0,
-        notes: 'Popular backpacker hostel with female dorms, social environment, and good security in Canggu.',
+        features: ['Female dorms', 'Social atmosphere', 'Digital nomad hub', 'Security features', 'Rooftop area'],
+        rating: 8.2,
+        notes: 'Popular backpacker hostel in trendy Canggu area. Female dorms, excellent social environment, and rooftop for sunset viewing.',
         link: 'https://www.madmonkeyhostels.com/hostels/indonesia/canggu/'
       },
       {
-        name: 'The Sanctoo Villa',
-        type: 'hotel',
-        features: ['Women-friendly', 'Pool area', 'Central Sanur'],
-        rating: 8.4,
-        notes: 'Boutique hotel in safe Sanur area with excellent reviews from solo female travelers.',
-        link: 'https://www.sanctoovilla.com/'
+        name: 'Lokal Bali Hostel',
+        type: 'hostel',
+        features: ['Luxury hostel amenities', 'Solo traveler friendly', 'Clean facilities', 'Youth hostel certification', 'Safe location'],
+        rating: 8.1,
+        notes: 'Appears luxurious but affordable hostel with youth hostel amenities. Specifically designed for solo travelers with excellent safety record.',
+        link: 'https://www.lokalbali.com/'
       },
       {
         name: 'Zostel Bali',
         type: 'hostel',
-        features: ['Female dorms', 'Modern facilities', 'Safe location'],
-        rating: 8.1,
-        notes: 'Modern hostel chain with dedicated female dorms, good security, and central location.',
+        features: ['Female dorms', 'Modern chain', 'Security systems', 'Central location', 'International standards'],
+        rating: 8.0,
+        notes: 'Modern international hostel chain with dedicated female dorms, comprehensive security, and central location for easy access.',
         link: 'https://zostel.com/zostel/bali/'
       }
     ],
@@ -101,18 +125,28 @@ const denpasar: Destination = {
 • Be respectful of Hindu customs and ceremonies
 • Learn basic Bahasa Indonesian phrases`,
       apps: [
-        'Grab',
-        'GoJek',
+        'NomadHer',
         'Tourlina',
         'Travel Ladies',
-        'Maps.me'
+        'bSafe',
+        'Grab',
+        'TripIt',
+        'Airalo',
+        'XE Currency',
+        'PackPoint',
+        'GoJek'
       ],
       appLinks: [
-        { name: 'Grab', link: 'https://www.grab.com/', description: 'Safe ride-hailing and food delivery' },
-        { name: 'GoJek', link: 'https://www.gojek.com/', description: 'Multi-service app including rides and food' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Female travel companion app' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with points of interest' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
+        { name: 'Grab', link: 'https://www.grab.com/', description: 'Safe ride-hailing and food delivery throughout Bali' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Indonesian rupiah and offline converter' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
+        { name: 'GoJek', link: 'https://www.gojek.com/', description: 'Multi-service app for rides, food delivery, and local services' }
       ],
       emergencyPhrases: [
         {
