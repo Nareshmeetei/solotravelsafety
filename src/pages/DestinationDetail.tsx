@@ -767,18 +767,35 @@ const DestinationDetail: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">Support & Victim Resources</h4>
                     <ul className="space-y-1">
-                      {dest.sexualHarassmentData?.supportResources?.map((r: string, i: number) => {
-                        const match = r.match(/(https?:\/\/[^ ,]+)/);
-                        return (
-                          <li key={i}>
-                            {match ? (
-                              <a href={match[1]} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{r.split(':')[0]}</a>
-                            ) : (
-                              <span className="font-medium">{r}</span>
-                            )}
-                            <span className="text-gray-700 text-sm"> {r.replace(/.*https?:\/\/[^ ,]+/, '')}</span>
-                          </li>
-                        );
+                      {dest.sexualHarassmentData?.supportResources?.map((r: any, i: number) => {
+                        // Handle both string and object formats
+                        if (typeof r === 'object' && r.name && r.contact) {
+                          return (
+                            <li key={i} className="mb-2">
+                              <div className="font-bold text-gray-900">{r.name}</div>
+                              <div className="text-sm text-gray-700">Contact: {r.contact}</div>
+                              <div className="text-sm text-gray-600">{r.description}</div>
+                              {r.link && (
+                                <a href={r.link} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
+                                  Visit website
+                                </a>
+                              )}
+                            </li>
+                          );
+                        } else if (typeof r === 'string') {
+                          const match = r.match(/(https?:\/\/[^ ,]+)/);
+                          return (
+                            <li key={i}>
+                              {match ? (
+                                <a href={match[1]} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-800 hover:underline">{r.split(':')[0]}</a>
+                              ) : (
+                                <span className="font-medium">{r}</span>
+                              )}
+                              <span className="text-gray-700 text-sm"> {r.replace(/.*https?:\/\/[^ ,]+/, '')}</span>
+                            </li>
+                          );
+                        }
+                        return null;
                       })}
                     </ul>
                   </div>
