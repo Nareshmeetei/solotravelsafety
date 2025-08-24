@@ -162,59 +162,162 @@ const paris: Destination = {
         'Rome2Rio'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for Paris public transport with real-time updates' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and guardian network' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely in France' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live EUR exchange rates and offline currency converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Paris weather and activities' },
-        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Paris' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for Paris public transport with real-time updates', hoverColor: 'hover:text-purple-600' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and guardian network', hoverColor: 'hover:text-purple-600' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely in France', hoverColor: 'hover:text-purple-600' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live EUR exchange rates and offline currency converter', hoverColor: 'hover:text-purple-600' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Paris weather and activities', hoverColor: 'hover:text-purple-600' },
+        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Paris', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {
           english: 'Help!',
           local: 'Au secours!',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'oh suh-KOOR',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Au%20secours',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Au%20secours',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Au%20secours&client=tw-ob'
+          ],
+          phonetic: 'Au secours!',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'Call the police!',
           local: 'Appelez la police!',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'ah-play lah po-LEES',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Appelez%20la%20police',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Appelez%20la%20police',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Appelez%20la%20police&client=tw-ob'
+          ],
+          phonetic: 'Appelez la police!',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'I need a doctor.',
           local: 'J\'ai besoin d\'un médecin.',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'zhay buh-ZWAN dun may-duh-SAN',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=J%27ai%20besoin%20d%27un%20médecin',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=J%27ai%20besoin%20d%27un%20médecin',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=J%27ai%20besoin%20d%27un%20médecin&client=tw-ob'
+          ],
+          phonetic: 'J\'ai besoin d\'un médecin.',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'Where is the nearest hospital?',
           local: 'Où est l\'hôpital le plus proche?',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'oo ay lo-pee-TAHL luh ploo PROHSH',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Où%20est%20l%27hôpital%20le%20plus%20proche',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Où%20est%20l%27hôpital%20le%20plus%20proche',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Où%20est%20l%27hôpital%20le%20plus%20proche&client=tw-ob'
+          ],
+          phonetic: 'Où est l\'hôpital le plus proche?',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'I am lost.',
           local: 'Je suis perdue.',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'zhuh swee pair-DUE',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Je%20suis%20perdue',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Je%20suis%20perdue',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Je%20suis%20perdue&client=tw-ob'
+          ],
+          phonetic: 'Je suis perdue.',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'Please leave me alone.',
           local: 'Laissez-moi tranquille, s\'il vous plaît.',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'lay-say-MWAH trahn-KEEL seel voo PLAY',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Laissez-moi%20tranquille%2C%20s%27il%20vous%20plaît',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Laissez-moi%20tranquille%2C%20s%27il%20vous%20plaît',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Laissez-moi%20tranquille%2C%20s%27il%20vous%20plaît&client=tw-ob'
+          ],
+          phonetic: 'Laissez-moi tranquille, s\'il vous plaît.',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'I feel unsafe.',
           local: 'Je ne me sens pas en sécurité.',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'zhuh nuh muh sahn pah ahn say-koo-ree-TAY',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Je%20ne%20me%20sens%20pas%20en%20sécurité',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Je%20ne%20me%20sens%20pas%20en%20sécurité',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Je%20ne%20me%20sens%20pas%20en%20sécurité&client=tw-ob'
+          ],
+          phonetic: 'Je ne me sens pas en sécurité.',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         },
         {
           english: 'Can you help me?',
           local: 'Pouvez-vous m\'aider?',
-          localLanguage: 'French'
+          localLanguage: 'French',
+          pronunciation: 'poo-vay VOO mah-DAY',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Pouvez-vous%20m%27aider',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=fr-FR-DeniseNeural&text=Pouvez-vous%20m%27aider',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=fr&q=Pouvez-vous%20m%27aider&client=tw-ob'
+          ],
+          phonetic: 'Pouvez-vous m\'aider?',
+          voiceInfo: {
+            voiceName: 'fr-FR-DeniseNeural',
+            gender: 'Female',
+            displayName: 'Denise (French Female)'
+          }
         }
-      ]
+      ],
+      pronunciationFeature: {
+        useWebSpeechAPI: true,
+        fallbackToEdgeTTS: true,
+        supportedLanguages: ['fr-FR'],
+        instructions: 'Click the speaker icon to hear high-quality female voice pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+        femaleVoicePreferred: true
+      }
     },
     culturalExpectations: {
       dressCode: 'Parisians dress elegantly and stylishly. Business casual to smart casual is appropriate. Avoid overly casual clothing like flip-flops, shorts, or athletic wear in restaurants and cultural sites. Quality over quantity is valued.',

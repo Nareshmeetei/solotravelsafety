@@ -135,27 +135,162 @@ const tokyo: Destination = {
       'bSafe'
     ],
     appLinks: [
-      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-      { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Essential train and subway navigation for Tokyo metro system' },
-      { name: 'Japan Travel', link: 'https://www.japan.travel/en/', description: 'Official Japan tourism app with cultural insights and safety tips' },
-      { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-      { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without expensive roaming' },
-      { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live JPY exchange rates and offline currency converter' },
-      { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Tokyo weather and activities' },
-      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live location sharing' }
+      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
+      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
+      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
+      { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Essential train and subway navigation for Tokyo metro system', hoverColor: 'hover:text-purple-600' },
+      { name: 'Japan Travel', link: 'https://www.japan.travel/en/', description: 'Official Japan tourism app with cultural insights and safety tips', hoverColor: 'hover:text-purple-600' },
+      { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
+      { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without expensive roaming', hoverColor: 'hover:text-purple-600' },
+      { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live JPY exchange rates and offline currency converter', hoverColor: 'hover:text-purple-600' },
+      { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Tokyo weather and activities', hoverColor: 'hover:text-purple-600' },
+      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live location sharing', hoverColor: 'hover:text-purple-600' }
     ],
     emergencyPhrases: [
-      'Help! (Tasukete!)',
-      'Call the police! (Keisatsu o yonde kudasai!)',
-      'I need a doctor. (Isha ga hitsuyō desu.)',
-      'Where is the nearest hospital? (Ichiban chikai byōin wa doko desu ka?)',
-      'I am lost. (Michini mayotte imasu.)',
-      'Please leave me alone. (Watashi o hōtte kudasai.)',
-      'I feel unsafe. (Anzen ja arimasen.)',
-      'Can you help me? (Tetsudatte kuremasu ka?)'
-    ]
+      {
+        english: 'Help!',
+        local: 'Tasukete!',
+        localLanguage: 'Japanese',
+        pronunciation: 'tah-soo-KEH-teh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=助けて',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=助けて',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=助けて&client=tw-ob'
+        ],
+        phonetic: '助けて',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'Call the police!',
+        local: 'Keisatsu o yonde kudasai!',
+        localLanguage: 'Japanese',
+        pronunciation: 'KAY-saht-soo oh YON-deh koo-dah-SAH-ee',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=警察を呼んでください',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=警察を呼んでください',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=警察を呼んでください&client=tw-ob'
+        ],
+        phonetic: '警察を呼んでください',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'I need a doctor.',
+        local: 'Isha ga hitsuyō desu.',
+        localLanguage: 'Japanese',
+        pronunciation: 'EE-shah gah hit-soo-YOH deh-soo',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=医者が必要です',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=医者が必要です',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=医者が必要です&client=tw-ob'
+        ],
+        phonetic: '医者が必要です',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'Where is the nearest hospital?',
+        local: 'Ichiban chikai byōin wa doko desu ka?',
+        localLanguage: 'Japanese',
+        pronunciation: 'EE-chee-bahn CHEE-kah-ee byoh-EEN wah DOH-koh deh-soo kah',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=一番近い病院はどこですか',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=一番近い病院はどこですか',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=一番近い病院はどこですか&client=tw-ob'
+        ],
+        phonetic: '一番近い病院はどこですか',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'I am lost.',
+        local: 'Michini mayotte imasu.',
+        localLanguage: 'Japanese',
+        pronunciation: 'MEE-chee-nee mah-YOH-teh ee-mah-soo',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=道に迷っています',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=道に迷っています',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=道に迷っています&client=tw-ob'
+        ],
+        phonetic: '道に迷っています',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'Please leave me alone.',
+        local: 'Watashi o hōtte kudasai.',
+        localLanguage: 'Japanese',
+        pronunciation: 'wah-tah-SHEE oh HOH-teh koo-dah-SAH-ee',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=私をほっておいてください',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=私をほっておいてください',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=私をほっておいてください&client=tw-ob'
+        ],
+        phonetic: '私をほっておいてください',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'I feel unsafe.',
+        local: 'Anzen ja arimasen.',
+        localLanguage: 'Japanese',
+        pronunciation: 'AHN-zen jah ah-ree-mah-sen',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=安全じゃありません',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=安全じゃありません',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=安全じゃありません&client=tw-ob'
+        ],
+        phonetic: '安全じゃありません',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      },
+      {
+        english: 'Can you help me?',
+        local: 'Tetsudatte kuremasu ka?',
+        localLanguage: 'Japanese',
+        pronunciation: 'teh-tsoo-DAH-teh koo-reh-mah-soo kah',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=手伝ってくれますか',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ja-JP-NanamiNeural&text=手伝ってくれますか',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&q=手伝ってくれますか&client=tw-ob'
+        ],
+        phonetic: '手伝ってくれますか',
+        voiceInfo: {
+          voiceName: 'ja-JP-NanamiNeural',
+          gender: 'Female',
+          displayName: 'Nanami (Japanese Female)'
+        }
+      }
+    ],
+    pronunciationFeature: {
+      useWebSpeechAPI: true,
+      fallbackToEdgeTTS: true,
+      supportedLanguages: ['ja-JP'],
+      instructions: 'Click the speaker icon to hear high-quality female voice pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+      femaleVoicePreferred: true
+    }
   },
   culturalExpectations: {
     dressCode: 'Dress is generally neat and modest. Cover shoulders and knees when visiting temples and shrines. Trendy, casual wear is common in the city. Avoid overly revealing clothing in traditional areas. Swimwear is only for pools and beaches. The Japanese value cleanliness and neatness in appearance.',

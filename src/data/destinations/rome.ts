@@ -177,29 +177,96 @@ const rome: Destination = {
         {
           english: 'Help me!',
           local: 'Aiutami!',
-          localLanguage: 'Italian'
+          localLanguage: 'Italian',
+          pronunciation: 'ah-YOO-tah-mee',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Aiutami',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Aiutami',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Aiutami&client=tw-ob'
+          ],
+          phonetic: 'Aiutami!',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
         },
         {
           english: 'Call the police!',
           local: 'Chiamate la polizia!',
-          localLanguage: 'Italian'
+          localLanguage: 'Italian',
+          pronunciation: 'kee-ah-MAH-teh lah po-lee-TSEE-ah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Chiamate%20la%20polizia',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Chiamate%20la%20polizia',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Chiamate%20la%20polizia&client=tw-ob'
+          ],
+          phonetic: 'Chiamate la polizia!',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
         },
         {
           english: 'I need a doctor',
           local: 'Ho bisogno di un dottore',
-          localLanguage: 'Italian'
+          localLanguage: 'Italian',
+          pronunciation: 'oh bee-ZOHN-yo dee oon dot-TOH-reh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Ho%20bisogno%20di%20un%20dottore',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Ho%20bisogno%20di%20un%20dottore',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Ho%20bisogno%20di%20un%20dottore&client=tw-ob'
+          ],
+          phonetic: 'Ho bisogno di un dottore',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
         },
         {
           english: 'Leave me alone!',
           local: 'Lasciami in pace!',
-          localLanguage: 'Italian'
+          localLanguage: 'Italian',
+          pronunciation: 'lah-SHAH-mee een PAH-cheh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Lasciami%20in%20pace',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Lasciami%20in%20pace',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Lasciami%20in%20pace&client=tw-ob'
+          ],
+          phonetic: 'Lasciami in pace!',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
         },
         {
           english: 'Where is the nearest police station?',
           local: 'Dove si trova la questura più vicina?',
-          localLanguage: 'Italian'
+          localLanguage: 'Italian',
+          pronunciation: 'DOH-veh see TROH-vah lah kwe-STOO-rah pee-OO vee-CHEE-nah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Dove%20si%20trova%20la%20questura%20più%20vicina',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Dove%20si%20trova%20la%20questura%20più%20vicina',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Dove%20si%20trova%20la%20questura%20più%20vicina&client=tw-ob'
+          ],
+          phonetic: 'Dove si trova la questura più vicina?',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
         }
-      ]
+      ],
+      pronunciationFeature: {
+        useWebSpeechAPI: true,
+        fallbackToEdgeTTS: true,
+        supportedLanguages: ['it-IT'],
+        instructions: 'Click the speaker icon to hear high-quality female voice pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+        femaleVoicePreferred: true
+      }
     },
     culturalExpectations: {
       dressCode: 'Italians dress elegantly - avoid shorts/flip-flops outside beach areas. Churches require covered shoulders/knees (bring shawl). Designer clothes common but not required. Avoid overly revealing clothing which attracts unwanted attention.',

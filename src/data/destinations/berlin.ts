@@ -140,57 +140,160 @@ const berlin: Destination = {
         'EchoSOS'
       ],
       appLinks: [
-        { name: 'BVG App', link: 'https://www.bvg.de/en/connections/bvg-app', description: 'Essential Berlin public transport app with real-time schedules and ticket purchasing' },
-        { name: 'DB Navigator', link: 'https://www.bahn.de/service/mobile/db-navigator', description: 'Official German train app for seamless regional and long-distance travel' },
-        { name: 'Jelbi', link: 'https://www.jelbi.de/', description: 'Berlin\'s unified transport app accessing 60,000+ vehicles including bikes, scooters, and cars' },
-        { name: 'TripWhistle Global SOS', link: 'https://tripwhistle.com/', description: 'One-touch emergency services for 196 countries with GPS location sharing' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency calls with live video/audio feed to trusted contacts' },
-        { name: 'GeoSure', link: 'https://www.geosure.com/', description: 'City safety ratings with women-specific safety assessments for Berlin neighborhoods' },
-        { name: 'Haven', link: 'https://guardianproject.info/apps/haven/', description: 'Phone-based personal security system using sensors for room monitoring' },
-        { name: 'EchoSOS', link: 'https://www.echoSOS.com/', description: 'GPS-enabled emergency contacts for 128+ countries with offline capability' }
+        { name: 'BVG App', link: 'https://www.bvg.de/en/connections/bvg-app', description: 'Essential Berlin public transport app with real-time schedules and ticket purchasing', hoverColor: 'hover:text-purple-600' },
+        { name: 'DB Navigator', link: 'https://www.bahn.de/service/mobile/db-navigator', description: 'Official German train app for seamless regional and long-distance travel', hoverColor: 'hover:text-purple-600' },
+        { name: 'Jelbi', link: 'https://www.jelbi.de/', description: 'Berlin\'s unified transport app accessing 60,000+ vehicles including bikes, scooters, and cars', hoverColor: 'hover:text-purple-600' },
+        { name: 'TripWhistle Global SOS', link: 'https://tripwhistle.com/', description: 'One-touch emergency services for 196 countries with GPS location sharing', hoverColor: 'hover:text-purple-600' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency calls with live video/audio feed to trusted contacts', hoverColor: 'hover:text-purple-600' },
+        { name: 'GeoSure', link: 'https://www.geosure.com/', description: 'City safety ratings with women-specific safety assessments for Berlin neighborhoods', hoverColor: 'hover:text-purple-600' },
+        { name: 'Haven', link: 'https://guardianproject.info/apps/haven/', description: 'Phone-based personal security system using sensors for room monitoring', hoverColor: 'hover:text-purple-600' },
+        { name: 'EchoSOS', link: 'https://www.echoSOS.com/', description: 'GPS-enabled emergency contacts for 128+ countries with offline capability', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {
           english: 'Help!',
           local: 'Hilfe!',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'HIL-feh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Hilfe',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Hilfe',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Hilfe&client=tw-ob'
+          ],
+          phonetic: 'Hilfe!',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'Call the police!',
           local: 'Rufen Sie die Polizei!',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'ROO-fen zee dee po-li-TSAI',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Rufen%20Sie%20die%20Polizei',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Rufen%20Sie%20die%20Polizei',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Rufen%20Sie%20die%20Polizei&client=tw-ob'
+          ],
+          phonetic: 'Rufen Sie die Polizei!',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'I need a doctor.',
           local: 'Ich brauche einen Arzt.',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'ikh BROW-kheh I-nen ARTST',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Ich%20brauche%20einen%20Arzt',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Ich%20brauche%20einen%20Arzt',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Ich%20brauche%20einen%20Arzt&client=tw-ob'
+          ],
+          phonetic: 'Ich brauche einen Arzt.',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'Where is the nearest hospital?',
           local: 'Wo ist das nächste Krankenhaus?',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'vo ist das NAYKH-steh KRANK-en-hows',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Wo%20ist%20das%20nächste%20Krankenhaus',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Wo%20ist%20das%20nächste%20Krankenhaus',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Wo%20ist%20das%20nächste%20Krankenhaus&client=tw-ob'
+          ],
+          phonetic: 'Wo ist das nächste Krankenhaus?',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'I am lost.',
           local: 'Ich habe mich verirrt.',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'ikh HAH-beh mikh fer-EERT',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Ich%20habe%20mich%20verirrt',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Ich%20habe%20mich%20verirrt',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Ich%20habe%20mich%20verirrt&client=tw-ob'
+          ],
+          phonetic: 'Ich habe mich verirrt.',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'Please leave me alone.',
           local: 'Lassen Sie mich bitte in Ruhe.',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'LAS-sen zee mikh BI-teh in ROO-heh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Lassen%20Sie%20mich%20bitte%20in%20Ruhe',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Lassen%20Sie%20mich%20bitte%20in%20Ruhe',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Lassen%20Sie%20mich%20bitte%20in%20Ruhe&client=tw-ob'
+          ],
+          phonetic: 'Lassen Sie mich bitte in Ruhe.',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'I feel unsafe.',
           local: 'Ich fühle mich unsicher.',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'ikh FYOO-leh mikh OON-zi-kher',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Ich%20fühle%20mich%20unsicher',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Ich%20fühle%20mich%20unsicher',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Ich%20fühle%20mich%20unsicher&client=tw-ob'
+          ],
+          phonetic: 'Ich fühle mich unsicher.',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         },
         {
           english: 'Can you help me?',
           local: 'Können Sie mir helfen?',
-          localLanguage: 'German'
+          localLanguage: 'German',
+          pronunciation: 'KYER-nen zee meer HEL-fen',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Können%20Sie%20mir%20helfen',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=de-DE-KatjaNeural&text=Können%20Sie%20mir%20helfen',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=de&q=Können%20Sie%20mir%20helfen&client=tw-ob'
+          ],
+          phonetic: 'Können Sie mir helfen?',
+          voiceInfo: {
+            voiceName: 'de-DE-KatjaNeural',
+            gender: 'Female',
+            displayName: 'Katja (German Female)'
+          }
         }
-      ]
+      ],
+      pronunciationFeature: {
+        useWebSpeechAPI: true,
+        fallbackToEdgeTTS: true,
+        supportedLanguages: ['de-DE'],
+        instructions: 'Click the speaker icon to hear high-quality female voice pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+        femaleVoicePreferred: true
+      }
     },
     culturalExpectations: {
       dressCode: 'Berlin is casual and accepting of diverse styles. Dress warmly in winter, comfortably in summer. Business casual appropriate for upscale restaurants. Modest dress appreciated at religious sites and formal venues.',

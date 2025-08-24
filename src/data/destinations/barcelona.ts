@@ -131,14 +131,14 @@ const barcelona: Destination = {
         'TripIt'
       ],
       appLinks: [
-        { name: 'TMB App', link: 'https://www.tmb.cat/en/barcelona/discover-tmb/tmb-app', description: 'Official Barcelona public transport app with real-time updates and route planning' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Essential transport app with offline maps and real-time Barcelona transport data' },
-        { name: 'FreeNow', link: 'https://free-now.com/', description: 'Most reliable ride-sharing app in Barcelona, connects with licensed taxis and private drivers' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Barcelona-specific safety tips and meetups' },
-        { name: 'NomadHer', link: 'https://nomadher.com/', description: 'Top-rated app specifically for solo female travelers with women-only validation and Barcelona guides' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal security app with SOS alerts, GPS tracking, and voice-activated emergency calls' },
-        { name: 'Cabify', link: 'https://cabify.com/', description: 'Premium ride-sharing with professional drivers, GPS tracking, and higher safety standards' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Essential travel organizer for solo travelers managing complex itineraries and bookings' }
+        { name: 'TMB App', link: 'https://www.tmb.cat/en/barcelona/discover-tmb/tmb-app', description: 'Official Barcelona public transport app with real-time updates and route planning', hoverColor: 'hover:text-purple-600' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Essential transport app with offline maps and real-time Barcelona transport data', hoverColor: 'hover:text-purple-600' },
+        { name: 'FreeNow', link: 'https://free-now.com/', description: 'Most reliable ride-sharing app in Barcelona, connects with licensed taxis and private drivers', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Barcelona-specific safety tips and meetups', hoverColor: 'hover:text-purple-600' },
+        { name: 'NomadHer', link: 'https://nomadher.com/', description: 'Top-rated app specifically for solo female travelers with women-only validation and Barcelona guides', hoverColor: 'hover:text-purple-600' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal security app with SOS alerts, GPS tracking, and voice-activated emergency calls', hoverColor: 'hover:text-purple-600' },
+        { name: 'Cabify', link: 'https://cabify.com/', description: 'Premium ride-sharing with professional drivers, GPS tracking, and higher safety standards', hoverColor: 'hover:text-purple-600' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Essential travel organizer for solo travelers managing complex itineraries and bookings', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {

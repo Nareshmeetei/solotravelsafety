@@ -142,16 +142,16 @@ const buenosAires: Destination = {
         'Western Union'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'BA Cómo Llego', link: 'https://play.google.com/store/apps/details?id=ar.gob.buenosaires.ba', description: 'Official Buenos Aires transport app with optimal routes for Subte and buses' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Argentine peso and offline converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'Western Union', link: 'https://www.westernunion.com/ar/en', description: 'Safest money exchange option in Buenos Aires with secure locations' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming', hoverColor: 'hover:text-purple-600' },
+        { name: 'BA Cómo Llego', link: 'https://play.google.com/store/apps/details?id=ar.gob.buenosaires.ba', description: 'Official Buenos Aires transport app with optimal routes for Subte and buses', hoverColor: 'hover:text-purple-600' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees', hoverColor: 'hover:text-purple-600' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Argentine peso and offline converter', hoverColor: 'hover:text-purple-600' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities', hoverColor: 'hover:text-purple-600' },
+        { name: 'Western Union', link: 'https://www.westernunion.com/ar/en', description: 'Safest money exchange option in Buenos Aires with secure locations', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {

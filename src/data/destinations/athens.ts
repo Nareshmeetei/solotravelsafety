@@ -142,55 +142,158 @@ const athens: Destination = {
         'Google Translate'
       ],
       appLinks: [
-        { name: 'Athens Metro', link: 'https://www.stasy.gr/', description: 'Official Athens metro app with routes and schedules' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Comprehensive public transport navigation' },
-        { name: 'Beat', link: 'https://thebeat.co/', description: 'Local ride-sharing app popular in Athens' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Greek language translation' }
+        { name: 'Athens Metro', link: 'https://www.stasy.gr/', description: 'Official Athens metro app with routes and schedules', hoverColor: 'hover:text-purple-600' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Comprehensive public transport navigation', hoverColor: 'hover:text-purple-600' },
+        { name: 'Beat', link: 'https://thebeat.co/', description: 'Local ride-sharing app popular in Athens', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Greek language translation', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {
           english: 'Help!',
-          local: 'Βοήθεια! (Voithia!)',
-          localLanguage: 'Greek'
+          local: 'Βοήθεια!',
+          localLanguage: 'Greek',
+          pronunciation: 'vo-EE-thya',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Βοήθεια',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Βοήθεια',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Βοήθεια&client=tw-ob'
+          ],
+          phonetic: 'Βοήθεια',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'Call the police!',
-          local: 'Καλέστε την αστυνομία! (Kaleste tin astinomia!)',
-          localLanguage: 'Greek'
+          local: 'Καλέστε την αστυνομία!',
+          localLanguage: 'Greek',
+          pronunciation: 'ka-LEH-steh teen ah-stee-no-MEE-ah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Καλέστε%20την%20αστυνομία',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Καλέστε%20την%20αστυνομία',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Καλέστε%20την%20αστυνομία&client=tw-ob'
+          ],
+          phonetic: 'Καλέστε την αστυνομία',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'I need a doctor.',
-          local: 'Χρειάζομαι έναν γιατρό. (Hriazomai enan yiatro.)',
-          localLanguage: 'Greek'
+          local: 'Χρειάζομαι έναν γιατρό.',
+          localLanguage: 'Greek',
+          pronunciation: 'hree-AH-zo-meh EH-nahn yah-TROW',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Χρειάζομαι%20έναν%20γιατρό',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Χρειάζομαι%20έναν%20γιατρό',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Χρειάζομαι%20έναν%20γιατρό&client=tw-ob'
+          ],
+          phonetic: 'Χρειάζομαι έναν γιατρό',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'Where is the nearest hospital?',
-          local: 'Πού είναι το πλησιέστερο νοσοκομείο? (Pou einai to plisiestero nosokomeio?)',
-          localLanguage: 'Greek'
+          local: 'Πού είναι το πλησιέστερο νοσοκομείο?',
+          localLanguage: 'Greek',
+          pronunciation: 'POO EE-neh toh plee-see-EH-steh-ro no-so-ko-MEE-o',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Πού%20είναι%20το%20πλησιέστερο%20νοσοκομείο',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Πού%20είναι%20το%20πλησιέστερο%20νοσοκομείο',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Πού%20είναι%20το%20πλησιέστερο%20νοσοκομείο&client=tw-ob'
+          ],
+          phonetic: 'Πού είναι το πλησιέστερο νοσοκομείο',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'I am lost.',
-          local: 'Έχω χαθεί. (Eho hathi.)',
-          localLanguage: 'Greek'
+          local: 'Έχω χαθεί.',
+          localLanguage: 'Greek',
+          pronunciation: 'EH-ho ha-THEE',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Έχω%20χαθεί',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Έχω%20χαθεί',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Έχω%20χαθεί&client=tw-ob'
+          ],
+          phonetic: 'Έχω χαθεί',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'Please leave me alone.',
-          local: 'Παρακαλώ αφήστε με ήσυχη. (Parakalo afiste me isihi.)',
-          localLanguage: 'Greek'
+          local: 'Παρακαλώ αφήστε με ήσυχη.',
+          localLanguage: 'Greek',
+          pronunciation: 'pa-ra-ka-LOW ah-FEE-steh meh EE-see-hee',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Παρακαλώ%20αφήστε%20με%20ήσυχη',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Παρακαλώ%20αφήστε%20με%20ήσυχη',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Παρακαλώ%20αφήστε%20με%20ήσυχη&client=tw-ob'
+          ],
+          phonetic: 'Παρακαλώ αφήστε με ήσυχη',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'I feel unsafe.',
-          local: 'Νιώθω ανασφάλεια. (Niotho anasfalia.)',
-          localLanguage: 'Greek'
+          local: 'Νιώθω ανασφάλεια.',
+          localLanguage: 'Greek',
+          pronunciation: 'nee-OH-tho ah-nah-SFAH-lee-ah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Νιώθω%20ανασφάλεια',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Νιώθω%20ανασφάλεια',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Νιώθω%20ανασφάλεια&client=tw-ob'
+          ],
+          phonetic: 'Νιώθω ανασφάλεια',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         },
         {
           english: 'Can you help me?',
-          local: 'Μπορείτε να με βοηθήσετε? (Boreite na me voithisete?)',
-          localLanguage: 'Greek'
+          local: 'Μπορείτε να με βοηθήσετε?',
+          localLanguage: 'Greek',
+          pronunciation: 'bo-REE-teh nah meh vo-ee-THEE-seh-teh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Μπορείτε%20να%20με%20βοηθήσετε',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=el-GR-AthinaNeural&text=Μπορείτε%20να%20με%20βοηθήσετε',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=el&q=Μπορείτε%20να%20με%20βοηθήσετε&client=tw-ob'
+          ],
+          phonetic: 'Μπορείτε να με βοηθήσετε',
+          voiceInfo: {
+            voiceName: 'el-GR-AthinaNeural',
+            gender: 'Female',
+            displayName: 'Athina (Greek Female)'
+          }
         }
-      ]
+      ],
+      pronunciationFeature: {
+        useWebSpeechAPI: true,
+        fallbackToEdgeTTS: true,
+        supportedLanguages: ['el-GR'],
+        instructions: 'Click the speaker icon to hear high-quality female voice pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+        femaleVoicePreferred: true
+      }
     },
     culturalExpectations: {
       dressCode: 'Generally casual and relaxed. Modest dress required for Orthodox churches and monasteries - cover shoulders, arms, and legs. Many religious sites provide cover-ups. Beachwear only for beaches and pools. Greeks dress up for evening dining and nightlife.',

@@ -149,13 +149,13 @@ const brisbane: Destination = {
         'Maps.me'
       ],
       appLinks: [
-        { name: 'TransLink', link: 'https://translink.com.au/', description: 'Public transport navigation' },
-        { name: 'Uber', link: 'https://www.uber.com/au/en/', description: 'Ride-sharing service' },
-        { name: 'Ola', link: 'https://www.olacabs.com/', description: 'Alternative ride-sharing service' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+        { name: 'TransLink', link: 'https://translink.com.au/', description: 'Public transport navigation', hoverColor: 'hover:text-purple-600' },
+        { name: 'Uber', link: 'https://www.uber.com/au/en/', description: 'Ride-sharing service', hoverColor: 'hover:text-purple-600' },
+        { name: 'Ola', link: 'https://www.olacabs.com/', description: 'Alternative ride-sharing service', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
+        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features', hoverColor: 'hover:text-purple-600' }
       ]
     },
     culturalExpectations: {

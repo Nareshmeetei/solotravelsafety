@@ -159,12 +159,12 @@ const brussels: Destination = {
         'Maps.me'
       ],
       appLinks: [
-        { name: 'STIB-MIVB', link: 'https://www.stib-mivb.be/', description: 'Official Brussels public transport app with journey planning and real-time updates' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Smart urban transport navigation for Brussels with live transit data' },
-        { name: 'Uber', link: 'https://www.uber.com/be/en/', description: 'Ride-sharing service available in Brussels - safer than unlicensed taxis' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community with Brussels safety tips and women\'s experiences' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Brussels neighborhoods and streets' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features and local points of interest' }
+        { name: 'STIB-MIVB', link: 'https://www.stib-mivb.be/', description: 'Official Brussels public transport app with journey planning and real-time updates', hoverColor: 'hover:text-purple-600' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Smart urban transport navigation for Brussels with live transit data', hoverColor: 'hover:text-purple-600' },
+        { name: 'Uber', link: 'https://www.uber.com/be/en/', description: 'Ride-sharing service available in Brussels - safer than unlicensed taxis', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community with Brussels safety tips and women\'s experiences', hoverColor: 'hover:text-purple-600' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Brussels neighborhoods and streets', hoverColor: 'hover:text-purple-600' },
+        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features and local points of interest', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {

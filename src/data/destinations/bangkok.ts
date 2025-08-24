@@ -140,14 +140,14 @@ const bangkok: Destination = {
         'Citymapper'
       ],
       appLinks: [
-        { name: 'Grab', link: 'https://www.grab.com/', description: 'Essential ride-sharing, delivery, and payment app for Bangkok - safer than street taxis' },
-        { name: 'BTS SkyTrain', link: 'https://www.bts.co.th/', description: 'Official Bangkok BTS train app with routes, times, and women-only car locations' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Bangkok-specific safety tips and meetups' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Bangkok neighborhoods with women-specific reviews' },
-        { name: 'SkyAlert', link: 'https://play.google.com/store/apps/details?id=com.skyalert', description: 'Real-time safety alerts and emergency notifications for Bangkok areas' },
-        { name: 'HappyCow', link: 'https://www.happycow.net/', description: 'Find vegetarian/vegan restaurants - perfect for dietary restrictions and safer food options' },
-        { name: 'TrueCaller', link: 'https://www.truecaller.com/', description: 'Identify unknown calls and block spam - essential for avoiding scam calls targeting tourists' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Bangkok public transport with real-time updates and safest route options' }
+        { name: 'Grab', link: 'https://www.grab.com/', description: 'Essential ride-sharing, delivery, and payment app for Bangkok - safer than street taxis', hoverColor: 'hover:text-purple-600' },
+        { name: 'BTS SkyTrain', link: 'https://www.bts.co.th/', description: 'Official Bangkok BTS train app with routes, times, and women-only car locations', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Bangkok-specific safety tips and meetups', hoverColor: 'hover:text-purple-600' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Bangkok neighborhoods with women-specific reviews', hoverColor: 'hover:text-purple-600' },
+        { name: 'SkyAlert', link: 'https://play.google.com/store/apps/details?id=com.skyalert', description: 'Real-time safety alerts and emergency notifications for Bangkok areas', hoverColor: 'hover:text-purple-600' },
+        { name: 'HappyCow', link: 'https://www.happycow.net/', description: 'Find vegetarian/vegan restaurants - perfect for dietary restrictions and safer food options', hoverColor: 'hover:text-purple-600' },
+        { name: 'TrueCaller', link: 'https://www.truecaller.com/', description: 'Identify unknown calls and block spam - essential for avoiding scam calls targeting tourists', hoverColor: 'hover:text-purple-600' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Bangkok public transport with real-time updates and safest route options', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {

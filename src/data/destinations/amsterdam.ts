@@ -137,59 +137,162 @@ const amsterdam: Destination = {
         'Rome2Rio'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Real-time transit info for Amsterdam with accessibility routes' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates and offline currency converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Amsterdam' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming', hoverColor: 'hover:text-purple-600' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Real-time transit info for Amsterdam with accessibility routes', hoverColor: 'hover:text-purple-600' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees', hoverColor: 'hover:text-purple-600' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates and offline currency converter', hoverColor: 'hover:text-purple-600' },
+        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities', hoverColor: 'hover:text-purple-600' },
+        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Amsterdam', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {
           english: 'Help!',
           local: 'Help!',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'help',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Help',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Help',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Help&client=tw-ob'
+          ],
+          phonetic: 'Help',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'Call the police!',
           local: 'Bel de politie!',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'BEL duh po-LI-tsee',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Bel%20de%20politie',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Bel%20de%20politie',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Bel%20de%20politie&client=tw-ob'
+          ],
+          phonetic: 'Bel de politie!',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'I need a doctor.',
           local: 'Ik heb een dokter nodig.',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'ik HEB un DOK-tur NO-dikh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Ik%20heb%20een%20dokter%20nodig',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Ik%20heb%20een%20dokter%20nodig',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Ik%20heb%20een%20dokter%20nodig&client=tw-ob'
+          ],
+          phonetic: 'Ik heb een dokter nodig.',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'Where is the nearest hospital?',
           local: 'Waar is het dichtstbijzijnde ziekenhuis?',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'VAHR is het DIKHT-st-bye-zyn-duh ZEE-kun-hoys',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Waar%20is%20het%20dichtstbijzijnde%20ziekenhuis',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Waar%20is%20het%20dichtstbijzijnde%20ziekenhuis',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Waar%20is%20het%20dichtstbijzijnde%20ziekenhuis&client=tw-ob'
+          ],
+          phonetic: 'Waar is het dichtstbijzijnde ziekenhuis?',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'I am lost.',
           local: 'Ik ben verdwaald.',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'ik ben fur-VAHLT',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Ik%20ben%20verdwaald',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Ik%20ben%20verdwaald',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Ik%20ben%20verdwaald&client=tw-ob'
+          ],
+          phonetic: 'Ik ben verdwaald.',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'Please leave me alone.',
           local: 'Laat me met rust.',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'LAHT muh met RUST',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Laat%20me%20met%20rust',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Laat%20me%20met%20rust',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Laat%20me%20met%20rust&client=tw-ob'
+          ],
+          phonetic: 'Laat me met rust.',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'I feel unsafe.',
           local: 'Ik voel me onveilig.',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'ik FOOL muh ON-vye-likh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Ik%20voel%20me%20onveilig',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Ik%20voel%20me%20onveilig',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Ik%20voel%20me%20onveilig&client=tw-ob'
+          ],
+          phonetic: 'Ik voel me onveilig.',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         },
         {
           english: 'Can you help me?',
           local: 'Kunt u mij helpen?',
-          localLanguage: 'Dutch'
+          localLanguage: 'Dutch',
+          pronunciation: 'KUNT oo mye HEL-pun',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Kunt%20u%20mij%20helpen',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=nl-NL-ColetteNeural&text=Kunt%20u%20mij%20helpen',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&q=Kunt%20u%20mij%20helpen&client=tw-ob'
+          ],
+          phonetic: 'Kunt u mij helpen?',
+          voiceInfo: {
+            voiceName: 'nl-NL-ColetteNeural',
+            gender: 'Female',
+            displayName: 'Colette (Dutch Female)'
+          }
         }
-      ]
+      ],
+      pronunciationFeature: {
+        useWebSpeechAPI: true,
+        fallbackToEdgeTTS: true,
+        supportedLanguages: ['nl-NL'],
+        instructions: 'Click the speaker icon to hear high-quality female voice pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+        femaleVoicePreferred: true
+      }
     },
     culturalExpectations: {
       dressCode: 'Dress is generally casual and practical, but neat. Jeans, t-shirts, and sneakers are fine in most settings. For business or upscale restaurants, smart-casual is expected. Rain gear is essential year-round. Swimwear is only for pools and beaches. Topless sunbathing is accepted in some parks and beaches, but nudity is only allowed in designated areas.',

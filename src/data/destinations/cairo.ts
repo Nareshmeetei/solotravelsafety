@@ -175,16 +175,16 @@ const cairo: Destination = {
         'Careem'
       ],
       appLinks: [
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming - critical for Cairo' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'Wasaleeny', link: 'https://wasaleeny.com/', description: 'Women-only rideshare with female drivers - essential for safe transport in Cairo' },
-        { name: 'DARE App', link: 'https://dareapp.org/', description: 'Sexual harassment reporting app developed specifically for Egypt' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Egyptian pound and offline converter' },
-        { name: 'Careem', link: 'https://www.careem.com/', description: 'Rideshare with female driver option - safer than street taxis' }
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming - critical for Cairo', hoverColor: 'hover:text-purple-600' },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
+        { name: 'Wasaleeny', link: 'https://wasaleeny.com/', description: 'Women-only rideshare with female drivers - essential for safe transport in Cairo', hoverColor: 'hover:text-purple-600' },
+        { name: 'DARE App', link: 'https://dareapp.org/', description: 'Sexual harassment reporting app developed specifically for Egypt', hoverColor: 'hover:text-purple-600' },
+        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
+        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees', hoverColor: 'hover:text-purple-600' },
+        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Egyptian pound and offline converter', hoverColor: 'hover:text-purple-600' },
+        { name: 'Careem', link: 'https://www.careem.com/', description: 'Rideshare with female driver option - safer than street taxis', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {

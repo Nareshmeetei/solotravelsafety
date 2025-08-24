@@ -141,14 +141,14 @@ const busan: Destination = {
         'Maps.me'
       ],
       appLinks: [
-        { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Korean navigation app' },
-        { name: 'Subway Korea', link: 'https://www.smrt.co.kr/', description: 'Public transport navigation' },
-        { name: 'KakaoTaxi', link: 'https://taxi.kakao.com/', description: 'Ride-sharing service' },
-        { name: 'KakaoTalk', link: 'https://www.kakaocorp.com/service/KakaoTalk', description: 'Korean messaging app' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+        { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Korean navigation app', hoverColor: 'hover:text-purple-600' },
+        { name: 'Subway Korea', link: 'https://www.smrt.co.kr/', description: 'Public transport navigation', hoverColor: 'hover:text-purple-600' },
+        { name: 'KakaoTaxi', link: 'https://taxi.kakao.com/', description: 'Ride-sharing service', hoverColor: 'hover:text-purple-600' },
+        { name: 'KakaoTalk', link: 'https://www.kakaocorp.com/service/KakaoTalk', description: 'Korean messaging app', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
+        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {

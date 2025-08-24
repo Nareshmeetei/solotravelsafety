@@ -140,12 +140,12 @@ const auckland: Destination = {
         'Maps.me'
       ],
       appLinks: [
-        { name: 'AT Mobile', link: 'https://at.govt.nz/bus-train-ferry/', description: 'Public transport navigation' },
-        { name: 'Uber', link: 'https://www.uber.com/nz/en/', description: 'Ride-sharing service' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features' }
+        { name: 'AT Mobile', link: 'https://at.govt.nz/bus-train-ferry/', description: 'Public transport navigation', hoverColor: 'hover:text-purple-600' },
+        { name: 'Uber', link: 'https://www.uber.com/nz/en/', description: 'Ride-sharing service', hoverColor: 'hover:text-purple-600' },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women', hoverColor: 'hover:text-purple-600' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
+        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
+        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features', hoverColor: 'hover:text-purple-600' }
       ],
       emergencyPhrases: [
         {
