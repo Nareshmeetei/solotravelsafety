@@ -34,6 +34,7 @@ import ReviewModal from '../components/ReviewModal';
 import { getDestinationBySlug } from '../data/destinations';
 import { getReviewsForDestination } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
+import AuthModal from '../components/AuthModal';
 import FlagImage from '../components/FlagImage';
 import SafetyByTimeOfDay from '../components/SafetyByTimeOfDay';
 import MostReportedRedFlags from '../components/MostReportedRedFlags';
@@ -259,8 +260,33 @@ const DestinationDetail: React.FC = () => {
   const [embassySearch, setEmbassySearch] = useState('');
   const [selectedEmbassy, setSelectedEmbassy] = useState<any>(null);
   
+  // Auth modal state
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  
+  // Safety info modal state (for mobile)
+  const [showSafetyInfoModal, setShowSafetyInfoModal] = useState(false);
+  
   // Tooltip state management
   const [openTooltip, setOpenTooltip] = useState<string | null>(null);
+  
+  // Check if device is mobile
+  const isMobile = () => {
+    return window.innerWidth < 768;
+  };
+
+  const handleInfoClick = () => {
+    if (isMobile()) {
+      setShowSafetyInfoModal(true);
+    } else {
+      setOpenTooltip(openTooltip === 'overall' ? null : 'overall');
+    }
+  };
+
+  const handleInfoMouseEnter = () => {
+    if (!isMobile()) {
+      setOpenTooltip('overall');
+    }
+  };
   
   // Close tooltip when clicking outside
   useEffect(() => {
@@ -509,11 +535,12 @@ const DestinationDetail: React.FC = () => {
                 </div>
                 <div className="relative tooltip-container">
                   <Info 
-                    className="h-5 w-5 text-gray-400 hover:text-gray-600 cursor-help" 
-                    onMouseEnter={() => setOpenTooltip('overall')}
+                    className="h-5 w-5 text-gray-400 hover:text-gray-600 cursor-pointer" 
+                    onMouseEnter={handleInfoMouseEnter}
+                    onClick={handleInfoClick}
                   />
                   {openTooltip === 'overall' && (
-                    <div className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-96 bg-gray-900 text-white text-sm rounded-lg p-4 z-10 shadow-xl">
+                    <div className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-96 bg-gray-900 text-white text-sm rounded-lg p-4 z-10 shadow-xl hidden md:block">
                       <div className="flex justify-between items-start mb-2">
                         <div className="font-semibold">How Safety Scores Are Calculated</div>
                         <button 
@@ -535,7 +562,12 @@ const DestinationDetail: React.FC = () => {
                         </div>
                         <div>
                           <strong>Help Fellow Travelers:</strong> Your experiences matter! By contributing your travel stories, you're helping create the most trusted safety resource for women worldwide. 
-                          <Link to="/signup" className="text-blue-300 hover:text-blue-200 underline ml-1">Join our community →</Link>
+                          <button 
+                            onClick={() => setShowAuthModal(true)}
+                            className="text-blue-300 hover:text-blue-200 underline ml-1 bg-transparent border-none cursor-pointer"
+                          >
+                            Join the solo trvelers gang →
+                          </button>
                         </div>
                         <div className="text-gray-300 mt-2">
                           <strong>Updates:</strong> Scores updated monthly. Last updated: {dest.lastUpdated || 'Recently'}.
@@ -1554,22 +1586,54 @@ const DestinationDetail: React.FC = () => {
                             default:
                               url = appLinkObj?.link || appLinkObj?.ios;
                           }
-                          return (
-                            <div key={index} className="p-3 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors">
-                              <div className="flex items-center justify-between mb-2">
-                                {url ? (
+                          return url ? (
                             <a
+                              key={index}
                               href={url}
                               target="_blank"
                               rel="noopener noreferrer"
-                                    className="font-semibold text-gray-900 hover:text-blue-700 transition-colors flex items-center"
+                              className="block p-3 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-all duration-300 cursor-pointer"
+                              onMouseEnter={(e) => {
+                                const appName = e.currentTarget.querySelector('.app-name');
+                                const appIcon = e.currentTarget.querySelector('.app-icon');
+                                if (appName) {
+                                  appName.style.color = '#8342FA';
+                                  appName.style.setProperty('color', '#8342FA', 'important');
+                                }
+                                if (appIcon) {
+                                  appIcon.style.color = '#8342FA';
+                                  appIcon.style.setProperty('color', '#8342FA', 'important');
+                                }
+                                e.currentTarget.style.borderColor = 'rgba(158, 125, 255, 0.3)';
+                              }}
+                              onMouseLeave={(e) => {
+                                const appName = e.currentTarget.querySelector('.app-name');
+                                const appIcon = e.currentTarget.querySelector('.app-icon');
+                                if (appName) {
+                                  appName.style.color = '#111827';
+                                  appName.style.setProperty('color', '#111827', 'important');
+                                }
+                                if (appIcon) {
+                                  appIcon.style.color = '#111827';
+                                  appIcon.style.setProperty('color', '#111827', 'important');
+                                }
+                                e.currentTarget.style.borderColor = '#e5e7eb';
+                              }}
                             >
-                              {app}
-                                    <ExternalLink className="h-3 w-3 ml-1" />
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="font-display font-normal text-gray-900 transition-all duration-300 flex items-center app-name">
+                                  {app}
+                                  <ExternalLink className="h-3 w-3 ml-1 transition-all duration-300 app-icon" />
+                                </span>
+                              </div>
+                              {appLinkObj?.description && (
+                                <p className="text-sm text-gray-600">{appLinkObj.description}</p>
+                              )}
                             </a>
                           ) : (
-                                  <span className="font-semibold text-gray-900">{app}</span>
-                                )}
+                            <div key={index} className="p-3 bg-gray-50 border border-gray-200 rounded-lg opacity-75">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="font-semibold text-gray-900">{app}</span>
                               </div>
                               {appLinkObj?.description && (
                                 <p className="text-sm text-gray-600">{appLinkObj.description}</p>
@@ -1585,40 +1649,46 @@ const DestinationDetail: React.FC = () => {
                       <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
                       <div className="space-y-4">
                         {/* Dress Code */}
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-display text-gray-900 mb-2">Dress Code</h4>
-                          <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                            {(Array.isArray(dest.culturalExpectations.dressCode)
-                              ? dest.culturalExpectations.dressCode
-                              : dest.culturalExpectations.dressCode.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
-                            ).map((item: string, idx: number) => (
-                              <li key={idx}>{item.trim()}</li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
-                          <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                            {(Array.isArray(dest.culturalExpectations.behaviorNorms)
-                              ? dest.culturalExpectations.behaviorNorms
-                              : dest.culturalExpectations.behaviorNorms.split(/\n|,|•/).filter(Boolean)
-                            ).map((norm: string, index: number) => (
-                              <li key={index}>{norm.trim()}</li>
-                            ))}
-                          </ul>
-                        </div>
+                        {dest.culturalExpectations?.dressCode && (
+                          <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-display text-gray-900 mb-2">Dress Code</h4>
+                            <ul className="text-gray-700 space-y-1 list-disc list-inside">
+                              {(Array.isArray(dest.culturalExpectations.dressCode)
+                                ? dest.culturalExpectations.dressCode
+                                : dest.culturalExpectations.dressCode.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
+                              ).map((item: string, idx: number) => (
+                                <li key={idx}>{item.trim()}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {dest.culturalExpectations?.behaviorNorms && (
+                          <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
+                            <ul className="text-gray-700 space-y-1 list-disc list-inside">
+                              {(Array.isArray(dest.culturalExpectations.behaviorNorms)
+                                ? dest.culturalExpectations.behaviorNorms
+                                : dest.culturalExpectations.behaviorNorms.split(/\n|,|•/).filter(Boolean)
+                              ).map((norm: string, index: number) => (
+                                <li key={index}>{norm.trim()}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                         {/* Solo Women Perception */}
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                          <h4 className="font-display text-gray-900 mb-2">Solo Women Perception</h4>
-                          <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                            {(Array.isArray(dest.culturalExpectations.perception)
-                              ? dest.culturalExpectations.perception
-                              : dest.culturalExpectations.perception.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
-                            ).map((item: string, idx: number) => (
-                              <li key={idx}>{item.trim()}</li>
-                            ))}
-                          </ul>
-                        </div>
+                        {dest.culturalExpectations?.perception && (
+                          <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-display text-gray-900 mb-2">Solo Women Perception</h4>
+                            <ul className="text-gray-700 space-y-1 list-disc list-inside">
+                              {(Array.isArray(dest.culturalExpectations.perception)
+                                ? dest.culturalExpectations.perception
+                                : dest.culturalExpectations.perception.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
+                              ).map((item: string, idx: number) => (
+                                <li key={idx}>{item.trim()}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -1991,6 +2061,73 @@ const DestinationDetail: React.FC = () => {
         destinationCountry={dest.country}
         onReviewSubmitted={handleReviewSubmitted}
       />
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        initialMode="signup"
+      />
+
+      {/* Safety Info Modal for Mobile */}
+      {showSafetyInfoModal && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm" 
+          style={{backgroundColor: 'rgba(40, 40, 40, 0.5)'}}
+          onClick={() => setShowSafetyInfoModal(false)}
+        >
+          <div 
+            className="w-full max-w-md max-h-[80vh] overflow-y-auto rounded-3xl shadow-2xl" 
+            style={{backgroundColor: '#FFFFFF'}}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="sticky top-0 px-6 pt-6 pb-4 bg-gradient-to-r from-primary-50 to-primary-100 rounded-t-3xl">
+              <div className="flex justify-between items-start">
+                <h2 className="text-xl font-display font-semibold text-gray-900">
+                  How Safety Scores Are Calculated
+                </h2>
+                <button
+                  onClick={() => setShowSafetyInfoModal(false)}
+                  className="p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-full hover:bg-white/20"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="px-6 pb-6">
+              <div className="space-y-4 text-sm text-gray-700">
+                <div>
+                  <strong className="text-gray-900">Current Sources:</strong> Government travel advisories (US State Dept, UK FCDO, Canadian Govt), crime statistics (Numbeo, local police data), embassy security alerts, and NGO safety assessments.
+                </div>
+                <div>
+                  <strong className="text-gray-900">Scoring Method:</strong> Weighted average of Night Safety (25%), Public Transit Safety (25%), Walking Alone Safety (30%), and General Crime Risk (20%). All scores validated against multiple independent sources.
+                </div>
+                <div>
+                  <strong className="text-gray-900">Community-Powered Future:</strong> As more solo female travelers join our community and share their real experiences, these scores will increasingly reflect authentic, first-hand safety insights from women who've actually been there.
+                </div>
+                <div>
+                  <strong className="text-gray-900">Help Fellow Travelers:</strong> Your experiences matter! By contributing your travel stories, you're helping create the most trusted safety resource for women worldwide. 
+                  <button 
+                    onClick={() => {
+                      setShowSafetyInfoModal(false);
+                      setShowAuthModal(true);
+                    }}
+                    className="text-primary-500 hover:text-primary-600 underline ml-1 bg-transparent border-none cursor-pointer font-medium"
+                  >
+                    Join the solo trvelers gang →
+                  </button>
+                </div>
+                <div className="text-gray-500 text-xs border-t pt-3 mt-4">
+                  <strong>Updates:</strong> Scores updated monthly. Last updated: {dest.lastUpdated || 'Recently'}.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
