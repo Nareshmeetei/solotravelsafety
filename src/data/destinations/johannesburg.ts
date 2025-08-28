@@ -779,6 +779,40 @@ const johannesburg: Destination = {
         summer: 'Light breathable fabrics, sun hat, high SPF sunscreen, light rain jacket for storms',
         winter: 'Warm layers for cold mornings/nights, light clothing for warm midday, sun protection still essential'
       }
+    },
+
+    governmentAdvisory: {
+      level: 'Exercise Increased Caution - Level 2',
+      levelNumber: 2,
+      source: 'U.S. Department of State',
+      lastUpdated: 'January 2025',
+      details: 'Exercise increased caution in South Africa due to crime and civil unrest. Some areas have increased risk including violent crime such as armed robbery, carjacking, mugging, and "smash-and-grab" attacks on vehicles.',
+      reason: 'High crime levels throughout South Africa, particularly in major cities like Johannesburg. Violent crimes including armed robbery, rape, and carjacking occur frequently, especially targeting tourists and foreigners.',
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-africa-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Solo female travelers should exercise extreme caution and avoid certain areas entirely',
+        'Stay only in secure accommodations in Sandton, Rosebank, or other well-monitored areas',
+        'Never walk alone day or night - use only registered taxis or ride-sharing services',
+        'Book organized tours through reputable operators rather than exploring independently',
+        'Keep valuable items and electronics out of sight to avoid "grab and run" incidents',
+        'Avoid displaying cash, jewelry, or expensive accessories in public areas',
+        'Register with your embassy and maintain regular contact during your stay',
+        'Have comprehensive travel insurance and emergency evacuation coverage'
+      ],
+      additionalConsiderations: [
+        'High violent crime rates: Armed robbery, carjacking, and assault particularly targeting tourists',
+        'Civil unrest: Protests and strikes can occur suddenly and escalate quickly',
+        'Gender-based violence: High rates of sexual assault and harassment of women',
+        'Economic inequality: Visible wealth disparity can make tourists targets for crime',
+        'Infrastructure issues: Load-shedding (power outages) can affect security systems',
+        'Health concerns: HIV/AIDS prevalence, malaria in some regions, water quality issues'
+      ],
+      embassyContact: {
+        name: 'U.S. Consulate General Johannesburg',
+        phone: '+27 11 290 3000',
+        emergency: '+27 11 290 3000',
+        address: '1 Sandton Drive, Sandton 2196, Johannesburg'
+      }
     }
 };
 

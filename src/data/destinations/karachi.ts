@@ -911,6 +911,40 @@ const karachi: Destination = {
         'Book accommodation with 24/7 security and international standards',
         'Budget for premium airport transfer services through hotel'
       ]
+    },
+
+    governmentAdvisory: {
+      level: 'Reconsider Travel - Level 3',
+      levelNumber: 3,
+      source: 'U.S. Department of State',
+      lastUpdated: 'January 2025',
+      details: 'Reconsider travel to Pakistan due to terrorism and civil unrest. Some areas have increased risk. Exercise increased caution due to lawlessness in some areas.',
+      reason: 'Terrorist attacks, sectarian violence, and targeted killings occur throughout Pakistan. Karachi experiences high crime rates including armed robbery, carjacking, kidnapping, and assault.',
+      link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/pakistan-travel-advisory.html',
+      soloTravelerAdvice: [
+        'Solo female travel to Karachi requires extreme security precautions and local guidance',
+        'Book only international hotels with comprehensive security in Clifton or Defence areas',
+        'Arrange private security escort through hotel for ALL movements outside accommodation',
+        'Dress extremely conservatively following local cultural norms to avoid unwanted attention',
+        'Register with embassy immediately and maintain regular contact with consular services',
+        'Have emergency evacuation plan and comprehensive insurance with medical evacuation',
+        'Never use public transportation or walk alone anywhere in the city',
+        'Maintain constant communication with trusted contacts and share detailed itinerary'
+      ],
+      additionalConsiderations: [
+        'Terrorism threat: Active terrorist groups with history of attacks on civilians and foreigners',
+        'Sectarian violence: Religious and ethnic tensions can escalate quickly into violence',
+        'High crime rates: Armed robbery, carjacking, kidnapping, and sexual assault common',
+        'Limited emergency services: Police and medical response may be inadequate or delayed',
+        'Infrastructure challenges: Power outages and communication disruptions frequent',
+        'Cultural restrictions: Conservative society with strict expectations for women\'s behavior'
+      ],
+      embassyContact: {
+        name: 'U.S. Consulate General Karachi',
+        phone: '+92 21 3527 5000',
+        emergency: '+92 21 3527 5000',
+        address: 'Plot 4-A, Block 2, Boat Club Road, West Wharf, Karachi'
+      }
     }
 };
 
