@@ -113,18 +113,16 @@ const singapore: Destination = {
 • Use Grab for reliable, safe transportation
 • Follow strict local laws - Singapore has zero tolerance for rule-breaking`,
       apps: [
-        'SMRT Connect',
-        'Grab',
-        'CitySG',
-        'Visit Singapore',
-        'Google Maps'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'SMRT Connect', link: 'https://www.smrt.com.sg/', description: 'Official MRT and bus information app' },
-        { name: 'Grab', link: 'https://www.grab.com/sg/', description: 'Reliable ride-hailing and food delivery' },
-        { name: 'CitySG', link: 'https://www.citysg.sg/', description: 'Official Singapore government services app' },
-        { name: 'Visit Singapore', link: 'https://www.visitsingapore.com/', description: 'Official tourism app with attractions and events' },
-        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Navigation with real-time transport information' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
       ],
       emergencyPhrases: [
         {
@@ -808,7 +806,10 @@ const singapore: Destination = {
         'Document all incidents with photos and details',
         'Keep copies of all police reports'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default singapore;

@@ -130,24 +130,24 @@ const bangkok: Destination = {
 • Respect Buddhist culture and dress modestly at temples
 • Stay hydrated and take breaks from the heat and crowds`,
       apps: [
-        'Grab',
-        'BTS SkyTrain',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'My Safetipin',
-        'SkyAlert',
-        'HappyCow',
-        'TrueCaller',
-        'Citymapper'
+        'Grab Thailand',
+        'BTS SkyTrain',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'Grab', link: 'https://www.grab.com/', description: 'Essential ride-sharing, delivery, and payment app for Bangkok - safer than street taxis', hoverColor: 'hover:text-purple-600' },
-        { name: 'BTS SkyTrain', link: 'https://www.bts.co.th/', description: 'Official Bangkok BTS train app with routes, times, and women-only car locations', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Bangkok-specific safety tips and meetups', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Bangkok neighborhoods with women-specific reviews', hoverColor: 'hover:text-purple-600' },
-        { name: 'SkyAlert', link: 'https://play.google.com/store/apps/details?id=com.skyalert', description: 'Real-time safety alerts and emergency notifications for Bangkok areas', hoverColor: 'hover:text-purple-600' },
-        { name: 'HappyCow', link: 'https://www.happycow.net/', description: 'Find vegetarian/vegan restaurants - perfect for dietary restrictions and safer food options', hoverColor: 'hover:text-purple-600' },
-        { name: 'TrueCaller', link: 'https://www.truecaller.com/', description: 'Identify unknown calls and block spam - essential for avoiding scam calls targeting tourists', hoverColor: 'hover:text-purple-600' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Bangkok public transport with real-time updates and safest route options', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Bangkok', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for solo women in Southeast Asia', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Bangkok safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Thailand safety insights', rating: 4.0 },
+        { name: 'Grab Thailand', link: 'https://www.grab.com/th/', description: 'Essential rideshare app in Bangkok - much safer than tuk-tuks and street taxis', rating: 4.4 },
+        { name: 'BTS SkyTrain', link: 'https://www.bts.co.th/', description: 'Official Bangkok SkyTrain app for safe elevated train travel with real-time info', rating: 4.3 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Thai communication and emergency situations', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -739,7 +739,10 @@ const bangkok: Destination = {
         'Use Grab instead of taxis to avoid overcharging',
         'Visit during shoulder season (March-May) for better accommodation deals'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default bangkok;

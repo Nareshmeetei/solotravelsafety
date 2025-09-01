@@ -114,18 +114,16 @@ const vancouver: Destination = {
 • Emergency number 911 works for all services (police, fire, medical)
 • Canadians are known for politeness and helpfulness - don't hesitate to ask for directions`,
       apps: [
-        'TransLink',
-        'Uber',
-        'Compass Card',
-        'Vancouver Tourism',
-        'Weather Network'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'TransLink', link: 'https://www.translink.ca/', description: 'Official Vancouver public transit app with real-time information' },
-        { name: 'Uber', link: 'https://www.uber.com/ca/en/', description: 'Reliable ride-hailing service with excellent Vancouver coverage' },
-        { name: 'Compass Card', link: 'https://www.compasscard.ca/', description: 'Vancouver transit payment system and trip planning' },
-        { name: 'Vancouver Tourism', link: 'https://www.vancouvertourism.com/', description: 'Official tourism app with attractions and safety information' },
-        { name: 'Weather Network', link: 'https://www.theweathernetwork.com/', description: 'Essential for Vancouver\'s changeable weather patterns' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
       ],
       emergencyPhrases: [
         {
@@ -807,7 +805,10 @@ const vancouver: Destination = {
         'Happy hour and lunch specials help manage dining costs',
         'Safety investment pays off in stress-free travel experience'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default vancouver;

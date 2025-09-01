@@ -143,23 +143,23 @@ const losAngeles: Destination = {
 • Trust your instincts - if an area feels unsafe, leave immediately and find a public place`,
       apps: [
         'NomadHer',
-        'Tourlina',
         'Travel Ladies',
-        'BSafe',
-        'GeoSure',
-        'My Safetipin',
+        'bSafe',
         'Noonlight',
-        'Companion'
+        'Life360',
+        'Uber',
+        'AllTrails',
+        'Citizen'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with LA safety tips and local meetups', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies in Los Angeles with safety screening', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Active LA community with real safety experiences from female travelers', hoverColor: 'hover:text-purple-600' },
-        { name: 'BSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS, fake call, and live streaming features', hoverColor: 'hover:text-purple-600' },
-        { name: 'GeoSure', link: 'https://geosure.com/', description: 'Neighborhood-specific safety scores using AI and local data', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://safetipin.com/', description: 'Community-driven safety app with LA area ratings and safe route suggestions', hoverColor: 'hover:text-purple-600' },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'Emergency response app that works with local LA emergency services', hoverColor: 'hover:text-purple-600' },
-        { name: 'Companion', link: 'https://companionapp.io/', description: 'Virtual escort app that tracks your location and alerts contacts if needed', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe LA exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with LA safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for solo women in large cities', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially important in sprawling LA', rating: 4.1 },
+        { name: 'Uber', link: 'https://www.uber.com/', description: 'Essential ride-hailing in car-dependent LA with driver verification', rating: 4.4 },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Best app for safe hiking in Griffith Park, Hollywood Hills and Malibu', rating: 4.7 },
+        { name: 'Citizen', link: 'https://citizen.com/', description: 'Real-time crime and safety alerts for LA neighborhoods', rating: 4.2 }
       ],
       emergencyPhrases: [
         {
@@ -1021,7 +1021,10 @@ const losAngeles: Destination = {
         'DASH buses ($0.50) are the cheapest and safest public transit option',
         'Metro Bike Share ($1.75/30min) affordable for short trips in safe areas'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default losAngeles;

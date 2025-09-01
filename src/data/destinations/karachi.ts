@@ -195,16 +195,25 @@ const karachi: Destination = {
           womensHelpline: '1043'
         }
       },
-      apps: ['Iyzil', 'My SOS Family', 'Punjab Women Safety App', 'BSafe', 'InDrive', 'TripWhistle Global SOS', 'Sitata Travel Safety', 'Life360'],
+      apps: [
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Careem',
+        'My SOS Family',
+        'Google Translate'
+      ],
       appLinks: [
-        { name: 'Iyzil', link: 'https://iyzil.com/', description: 'Pakistan\'s smart women safety service with 24/7 monitoring, auto deviation alerts, and local emergency response network with Urdu support', hoverColor: 'hover:text-purple-600' },
-        { name: 'My SOS Family', link: 'https://www.mysosfamily.com/', description: 'Hands-free Siri/Alexa emergency alerts to trusted contacts, works without data, privacy-focused tracking only during emergencies', hoverColor: 'hover:text-purple-600' },
-        { name: 'Punjab Women Safety App', link: 'https://play.google.com/store/apps/details?id=com.punjabpolice.womensafety', description: 'Official Pakistan police emergency response with geotagged alerts and live chat for discrete help requests', hoverColor: 'hover:text-purple-600' },
-        { name: 'BSafe', link: 'https://apps.apple.com/app/bsafe/id533889171', description: 'Voice-activated emergency with scream detection, live-streaming evidence, fake call exit strategy for uncomfortable situations', hoverColor: 'hover:text-purple-600' },
-        { name: 'InDrive', link: 'https://indrive.com/', description: 'Top ride-hailing app in Pakistan with fare negotiation, comprehensive driver vetting, and real-time location sharing capabilities', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripWhistle Global SOS', link: 'https://apps.apple.com/app/tripwhistle-global-sos/id506148792', description: 'One-button SOS for 196 countries with multilingual emergency scripts and GPS coordinate sharing with first responders', hoverColor: 'hover:text-purple-600' },
-        { name: 'Sitata Travel Safety', link: 'https://www.sitata.com/', description: 'Real-time safety monitoring for Pakistan with customizable alerts, scam warnings, and hospital finder with cultural context', hoverColor: 'hover:text-purple-600' },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing with SOS alerts, crash detection, and international coverage including Pakistan for family back home', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Karachi', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button and GPS tracking for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response critical for solo women in Pakistan', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Real-time location sharing absolutely essential for safety in Karachi', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Pakistan safety warnings and tips', rating: 4.0 },
+        { name: 'Careem', link: 'https://www.careem.com/', description: 'Middle East ride-hailing safer than local taxis with captain verification', rating: 4.2 },
+        { name: 'My SOS Family', link: 'https://www.mysosfamily.com/', description: 'Emergency alert app for family with GPS location - crucial for Pakistan', rating: 4.3 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Urdu communication and emergency situations', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -945,7 +954,10 @@ const karachi: Destination = {
         emergency: '+92 21 3527 5000',
         address: 'Plot 4-A, Block 2, Boat Club Road, West Wharf, Karachi'
       }
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default karachi;

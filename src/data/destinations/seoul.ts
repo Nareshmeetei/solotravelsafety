@@ -15,7 +15,7 @@ const seoul: Destination = {
   reviewCount: 412,
   lastUpdated: '1 day ago',
   harassmentRisk: 'medium',
-  description: 'Is Seoul safe for solo female travellers? South Korea\'s dynamic capital is one of the world\'s safest cities for women traveling alone. Seoul combines cutting-edge technology, rich culture, and exceptional safety infrastructure, making it an ideal destination for solo female travelers seeking both adventure and security.',
+  description: 'Is Seoul safe for solo female travelers? South Korea\'s dynamic capital is one of the world\'s safest cities for women traveling alone. Seoul combines cutting-edge technology, rich culture, and exceptional safety infrastructure, making it an ideal destination for solo female travelers seeking both adventure and security.',
   safetyBreakdown: {
     nightSafety: {
       score: 8.4,
@@ -117,69 +117,161 @@ const seoul: Destination = {
 • Use 1330 tourist hotline for 24/7 English assistance
 • Learn basic Korean phrases - locals appreciate the effort`,
     apps: [
+      'KakaoTaxi',
+      'Naver Map',
+      'Seoul Subway',
+      'Papago',
+      'Emergency Ready App',
+      'Trazy',
       'NomadHer',
-      'Tourlina',
-      'Travel Ladies',
-      'bSafe',
-      'Subway Korea',
-      'TripIt',
-      'Airalo',
-      'XE Currency',
-      'PackPoint',
-      'KakaoMap'
+      'KakaoTalk'
     ],
     appLinks: [
-      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-      { name: 'Subway Korea', link: 'https://subwaykorea.com/', description: 'Real-time subway information and route planning for Seoul' },
-      { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-      { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-      { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Korean won and offline converter' },
-      { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-      { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Essential navigation app for Seoul with real-time traffic' }
+      { name: 'KakaoTaxi', link: 'https://www.kakaocorp.com/service/KakaoTaxi', description: 'Korea\'s most popular ride-hailing app with GPS tracking and driver verification for solo female safety', rating: 4.6 },
+      { name: 'Naver Map', link: 'https://map.naver.com/', description: 'Essential navigation app for Seoul - better than Google Maps in Korea with real-time transit info', rating: 4.8 },
+      { name: 'Seoul Subway', link: 'http://www.seoulmetro.co.kr/en/', description: 'Official Seoul Metro app designed for tourists with route maps and women-only car information', rating: 4.7 },
+      { name: 'Papago', link: 'https://papago.naver.com/', description: 'Korea\'s #1 translation app - better than Google Translate for Korean language and slang', rating: 4.8 },
+      { name: 'Emergency Ready App', link: 'https://www.safekorea.go.kr/', description: 'Government emergency alerts app with English support for disasters and safety warnings', rating: 4.5 },
+      { name: 'Trazy', link: 'https://www.trazy.com/', description: 'K-pop concert tickets and cultural experiences - perfect for solo K-pop fans visiting Seoul', rating: 4.7 },
+      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting verified women travelers safely in Seoul', rating: 4.8 },
+      { name: 'KakaoTalk', link: 'https://www.kakaocorp.com/service/KakaoTalk', description: 'Essential messaging app used by everyone in Korea - needed for bookings and local communication', rating: 5.0 }
     ],
     emergencyPhrases: [
       {
         english: 'Help!',
-        local: '도와주세요!',
-        localLanguage: 'Korean'
+        local: 'Do-wa-ju-se-yo!',
+        localLanguage: 'Korean',
+        pronunciation: 'doh-wah-joo-say-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=도와주세요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=도와주세요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=도와주세요&client=tw-ob'
+        ],
+        phonetic: 'Do-wa-ju-se-yo!',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'Call the police!',
-        local: '경찰을 불러주세요!',
-        localLanguage: 'Korean'
+        local: 'Gyeong-chal-eul bul-leo-ju-se-yo!',
+        localLanguage: 'Korean',
+        pronunciation: 'gyuhng-chahl-eul bool-luh-joo-say-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=경찰을%20불러주세요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=경찰을%20불러주세요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=경찰을%20불러주세요&client=tw-ob'
+        ],
+        phonetic: 'Gyeong-chal-eul bul-leo-ju-se-yo!',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'I need a doctor.',
-        local: '의사가 필요해요.',
-        localLanguage: 'Korean'
+        local: 'Ui-sa-ga pil-yo-hae-yo.',
+        localLanguage: 'Korean',
+        pronunciation: 'ee-sah-gah peel-yoh-hay-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=의사가%20필요해요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=의사가%20필요해요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=의사가%20필요해요&client=tw-ob'
+        ],
+        phonetic: 'Ui-sa-ga pil-yo-hae-yo.',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'Where is the nearest hospital?',
-        local: '가장 가까운 병원이 어디예요?',
-        localLanguage: 'Korean'
+        local: 'Ga-jang ga-gga-un byeong-won-i eo-di-ye-yo?',
+        localLanguage: 'Korean',
+        pronunciation: 'gah-jahng gah-ggah-oon byuhng-wahn-ee uh-dee-yeh-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=가장%20가까운%20병원이%20어디예요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=가장%20가까운%20병원이%20어디예요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=가장%20가까운%20병원이%20어디예요&client=tw-ob'
+        ],
+        phonetic: 'Ga-jang ga-gga-un byeong-won-i eo-di-ye-yo?',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'I am lost.',
-        local: '길을 잃었어요.',
-        localLanguage: 'Korean'
+        local: 'Gil-eul il-eo-sseo-yo.',
+        localLanguage: 'Korean',
+        pronunciation: 'geel-eul eel-uh-ssuh-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=길을%20잃었어요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=길을%20잃었어요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=길을%20잃었어요&client=tw-ob'
+        ],
+        phonetic: 'Gil-eul il-eo-sseo-yo.',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'Please leave me alone.',
-        local: '혼자 있게 해주세요.',
-        localLanguage: 'Korean'
+        local: 'Hon-ja it-ge hae-ju-se-yo.',
+        localLanguage: 'Korean',
+        pronunciation: 'hohn-jah eet-geh hay-joo-say-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=혼자%20있게%20해주세요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=혼자%20있게%20해주세요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=혼자%20있게%20해주세요&client=tw-ob'
+        ],
+        phonetic: 'Hon-ja it-ge hae-ju-se-yo.',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'I feel unsafe.',
-        local: '안전하지 않다고 느껴요.',
-        localLanguage: 'Korean'
+        local: 'An-jeon-ha-ji an-ta-go neu-ggyeo-yo.',
+        localLanguage: 'Korean',
+        pronunciation: 'ahn-juhn-hah-jee ahn-tah-goh neu-gyuh-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=안전하지%20않다고%20느껴요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=안전하지%20않다고%20느껴요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=안전하지%20않다고%20느껴요&client=tw-ob'
+        ],
+        phonetic: 'An-jeon-ha-ji an-ta-go neu-ggyeo-yo.',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       },
       {
         english: 'Can you help me?',
-        local: '도와주실 수 있나요?',
-        localLanguage: 'Korean'
+        local: 'Do-wa-ju-sil su it-na-yo?',
+        localLanguage: 'Korean',
+        pronunciation: 'doh-wah-joo-sheel soo eet-nah-yoh',
+        audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=도와주실%20수%20있나요',
+        fallbackUrls: [
+          'https://api.streamelements.com/kappa/v2/speech?voice=ko-KR-SunHiNeural&text=도와주실%20수%20있나요',
+          'https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&q=도와주실%20수%20있나요&client=tw-ob'
+        ],
+        phonetic: 'Do-wa-ju-sil su it-na-yo?',
+        voiceInfo: {
+          voiceName: 'ko-KR-SunHiNeural',
+          gender: 'Female',
+          displayName: 'SunHi (Korean Female)'
+        }
       }
     ]
   },
@@ -199,6 +291,18 @@ const seoul: Destination = {
     ],
     perception: 'Solo female travelers are increasingly common and generally well-respected in Seoul. Korean culture values safety and helping others, so locals are often helpful to solo travelers. Some staring may occur due to curiosity rather than judgment, especially in non-tourist areas. The city has strong social norms that contribute to overall safety for women.'
   },
+  culturalSensitivityTips: [
+    'Learn basic Korean greetings like "Annyeonghaseyo" (hello) and "Gamsahamnida" (thank you) - locals deeply appreciate language effort from solo female travelers',
+    'Master the Korean age hierarchy system - always address older people formally until invited otherwise, crucial for respectful interactions',
+    'Understand Confucian respect culture - bowing depth indicates respect level, essential for temple visits and elder interactions',
+    'Respect Korean dining etiquette - wait for eldest to start eating, pour drinks for others, never pour your own drink',
+    'Be aware of Korean beauty standards - Seoul is fashion-conscious, dressing well helps solo women feel confident and blend in',
+    'Understand Korean work culture - many locals work late, so evening social activities are common and safe for solo travelers',
+    'Respect Korean personal space - avoid unnecessary physical contact, keep conversations quiet on public transport',
+    'Learn about Korean gift-giving culture - always receive gifts with both hands and show appreciation',
+    'Understand Korean drinking culture - it\'s social bonding, politely participate even if you don\'t drink alcohol',
+    'Be mindful of Korean technology etiquette - many activities require apps like KakaoTalk, embrace digital integration'
+  ],
   bestTimeToVisit: {
     safestMonths: ['April-June', 'September-November'],
     events: 'Cherry blossom season (April), autumn foliage (October-November). Safe year-round.'
@@ -217,6 +321,17 @@ const seoul: Destination = {
       eur: 0.0006,
       gbp: 0.0005
     },
+    exchangeTips: [
+      'ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates',
+      'Avoid currency exchange at Incheon Airport - rates 3-5% worse than city banks and authorized exchange booths',
+      'Use authorized money changers in Myeongdong, Itaewon, Hongdae - better rates than banks with competitive fees',
+      'Banks open limited hours (9 AM - 4 PM weekdays) - plan currency exchange accordingly or use 24/7 ATMs',
+      'Bring US Dollars or Euros for best exchange rates - other currencies have poor exchange rates in Korea',
+      'Download currency exchange rate apps like KEB Hana Bank or Shinhan Bank for real-time rates before exchanging',
+      'Keep exchange receipts - required for reconverting Won back to foreign currency when leaving Korea',
+      'Major department stores (Lotte, Shinsegae) have currency exchange counters with reasonable rates during shopping',
+      'Avoid street money changers completely - illegal in Korea and may involve counterfeit currency scams'
+    ],
     scamWarnings: []
   },
   scamWarnings: [],
@@ -255,6 +370,13 @@ const seoul: Destination = {
       severity: 'low',
       sourceName: 'Visit Korea',
       sourceUrl: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=198570'
+    },
+    {
+      title: 'Currency & Exchange Tips',
+      description: '• ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates\n• Avoid currency exchange at Incheon Airport - rates are 3-5% worse than city banks and authorized exchange booths\n• Use authorized money changers in Myeongdong, Itaewon, Hongdae districts for better rates than banks\n• Banks open limited hours (9 AM - 4 PM weekdays) so plan accordingly or use 24/7 ATMs\n• Bring US Dollars or Euros for best exchange rates - other currencies have poor rates\n• Download KEB Hana Bank or Shinhan Bank apps for real-time rates before exchanging\n• Keep all exchange receipts - legally required for reconverting Korean Won when leaving Korea\n• Major department stores (Lotte, Shinsegae) have currency exchange counters with reasonable rates\n• Avoid street money changers completely - illegal in Korea and may involve counterfeit currency scams',
+      severity: 'low',
+      sourceName: 'Korea Tourism Organization',
+      sourceUrl: 'https://english.visitkorea.or.kr/'
     }
   ],
   languages: ['Korean', 'English (major tourist areas)'],
@@ -323,18 +445,26 @@ const seoul: Destination = {
   ],
   culturalSensitivity: {
     culturalDos: [
-    'Greet elders with a slight bow and use polite language.',
-    'Dress modestly, especially in temples and palaces.',
-    'Remove shoes when entering homes and some restaurants.',
-    'Use quiet voices in public and on transport.',
-    'Accept and give items with both hands.'
-  ],
-  culturalDonts: [
-    "Don't point with your finger—gesture with your whole hand.",
-    "Don't speak loudly or make phone calls on public transport.",
-    "Don't stick chopsticks upright in rice.",
-    "Don't touch people unnecessarily or show public affection.",
-    "Don't take photos in temples without permission."
+      'Master the Korean bow - slight nod for peers, deeper bow for elders, 90-degree bow for formal situations like temples',
+      'Dress impeccably and fashionably - Seoul is Asia\'s fashion capital, appearance directly impacts how you\'re treated and perceived',
+      'Use both hands religiously when giving/receiving anything - business cards, money, gifts, even casual items show respect',
+      'Learn age hierarchy respect - address older people formally until invited otherwise, crucial for solo female safety and acceptance',
+      'Remove shoes properly in homes, traditional restaurants, and some guesthouses - look for shoe racks at entrances',
+      'Practice chopstick etiquette - never leave them standing in rice, don\'t point with them, place them parallel when finished',
+      'Show genuine interest in Korean culture - ask about history, traditions, K-pop, local food recommendations for instant connection',
+      'Use KakaoTalk for all communication - every Korean uses it, essential for bookings, directions, and meeting locals safely',
+      'Respect personal space on public transport - avoid unnecessary contact, keep conversations quiet, offer seats to elderly'
+    ],
+    culturalDonts: [
+      "Don't refuse Korean hospitality abruptly - always try offered food/drink politely, refusal can be seen as disrespectful",
+      "Don't write anyone's name in red ink - associated with death in Korean culture, extremely offensive mistake",
+      "Don't tip in restaurants or taxis - not customary and can cause confusion or embarrassment for service workers",
+      "Don't blow your nose in public - extremely rude, excuse yourself to bathroom or turn away discreetly",
+      "Don't touch Korean people casually - physical contact limited to handshakes and bows, personal space is highly valued",
+      "Don't wear shoes on heated floors (ondol) - traditional Korean heating system, shoes will damage floors and show disrespect",
+      "Don't refuse soju when offered by elders - politely accept even if you don't drink, shows respect for Korean drinking culture",
+      "Don't use one hand for important transactions - always use both hands for payments, receiving change, business cards",
+      "Don't point with index finger - use open hand gesture or subtle head nod, pointing considered very rude"
     ]
   },
   legalResources: {
@@ -700,7 +830,7 @@ const seoul: Destination = {
       reason: 'Political tensions following presidential impeachment and potential demonstrations.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-korea-travel-advisory.html',
       soloTravelerAdvice: [
-        'Excellent choice for first-time solo female travelers',
+        'Seoul is safe for female solo travelers - excellent choice for first-time women traveling alone in Asia',
         'Stay in Myeongdong or Gangnam for best safety and convenience',
         'Download KakaoTaxi and subway apps',
         'Use 1330 tourist hotline for 24/7 English assistance',
@@ -772,8 +902,8 @@ const seoul: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$35 - $60 USD / day',
-        description: 'Covers accommodation, meals, transport, and activities at a comfortable level.',
-        tip: 'Seoul offers excellent value with high safety standards. Mid-range budget provides premium safety and comfort.'
+        description: 'Covers accommodation, meals, transport, and activities at a comfortable level for women traveling alone in Seoul.',
+        tip: 'Seoul offers excellent value with high safety standards for solo female travelers. Mid-range budget provides premium safety and comfort.'
       },
       accommodation: [
         {
@@ -827,7 +957,10 @@ const seoul: Destination = {
         'Convenience stores (7-Eleven, GS25) provide 24/7 safe spaces',
         'Free WiFi and helpful infrastructure reduce costs'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "yNVhlO88_LY"
+  }
 };
 
 export default seoul; 

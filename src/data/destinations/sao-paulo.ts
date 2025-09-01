@@ -15,7 +15,7 @@ const saoPaulo: Destination = {
   reviewCount: 285,
   lastUpdated: '2025-01-25',
   harassmentRisk: 'medium-high',
-  description: 'Is São Paulo safe for solo female travellers? Brazil\'s largest metropolis offers incredible culture, food, and nightlife. While São Paulo presents genuine safety challenges for women traveling alone, experienced solo female travelers can enjoy this vibrant city with proper precautions in safe neighborhoods like Vila Madalena and Jardins.',
+  description: 'Is São Paulo safe for solo female travelers? Brazil\'s largest metropolis offers incredible culture, food, and nightlife. While São Paulo presents genuine safety challenges for women traveling alone, experienced solo female travelers can enjoy this vibrant city with proper precautions in safe neighborhoods like Vila Madalena and Jardins.',
   safetyBreakdown: {
     nightSafety: {
       score: 4.2,
@@ -215,18 +215,24 @@ const saoPaulo: Destination = {
 • Never walk alone anywhere, especially after sunset
 • Use only Uber/99 - never public transport alone`,
       apps: [
-        'Uber',
-        '99 (Brazilian rideshare)',
+        'LadyDriver',
+        'bSafe',
+        '99',
+        'iFood',
+        'NomadHer',
+        'Citymapper',
         'Google Translate',
-        'WhatsApp',
-        'Maps.me (offline maps)'
+        'Blablacar'
       ],
       appLinks: [
-        { name: 'Uber', link: 'https://www.uber.com/br/pt-br/', description: 'International rideshare - safest transport option' },
-        { name: '99', link: 'https://99app.com/', description: 'Local Brazilian rideshare app' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Portuguese communication' },
-        { name: 'WhatsApp', link: 'https://www.whatsapp.com/', description: 'Primary communication app in Brazil' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps to avoid using phone on street' }
+        { name: 'LadyDriver', link: 'https://play.google.com/store/apps/details?id=br.com.ladydriver.passenger', description: 'Female-only rideshare service in São Paulo with women drivers for enhanced safety', rating: 4.5 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family/friends', rating: 4.5 },
+        { name: '99', link: 'https://99app.com/', description: 'Brazil\'s top rideshare app, often cheaper than Uber with local driver knowledge', rating: 4.6 },
+        { name: 'iFood', link: 'https://www.ifood.com.br/', description: 'Brazil\'s #1 food delivery app - avoid walking alone at night by ordering to accommodation', rating: 4.7 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting verified women travelers safely in São Paulo', rating: 4.8 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'São Paulo metro navigation with real-time safety updates and crowding information', rating: 4.8 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential Portuguese translation with camera feature for menus and signs', rating: 5.0 },
+        { name: 'Blablacar', link: 'https://www.blablacar.com.br/', description: 'Intercity ride sharing between São Paulo and other Brazilian cities with verified drivers', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -343,6 +349,30 @@ const saoPaulo: Destination = {
           address: 'Av. das Nações Unidas, 12901, Brooklin Novo',
           phone: '+55 11 5509-4321',
           link: 'https://www.canadainternational.gc.ca/brazil-bresil/'
+        },
+        {
+          name: 'Netherlands Consulate General São Paulo',
+          address: 'Av. Brigadeiro Faria Lima, 2092, Jardim Paulistano',
+          phone: '+55 11 3243-9922',
+          link: 'https://www.netherlandsandyou.nl/countries/brazil'
+        },
+        {
+          name: 'Danish Consulate São Paulo',
+          address: 'Rua Oscar Freire, 379, Jardins',
+          phone: '+55 11 3064-2600',
+          link: 'https://brasilien.um.dk/'
+        },
+        {
+          name: 'Swiss Consulate General São Paulo',
+          address: 'Av. Paulista, 1754, Bela Vista',
+          phone: '+55 11 3372-8200',
+          link: 'https://www.eda.admin.ch/countries/brazil/en/home/representations/consulate-general-sao-paulo.html'
+        },
+        {
+          name: 'Indian Consulate General São Paulo',
+          address: 'Rua Lisboa, 94, Pinheiros',
+          phone: '+55 11 3819-1414',
+          link: 'https://www.indianconsulatesaopaulo.gov.in/'
         }
       ],
       womensRights: [
@@ -699,7 +729,7 @@ const saoPaulo: Destination = {
       reason: 'High crime rates, including violent crimes targeting tourists.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html',
       soloTravelerAdvice: [
-        'Not recommended for first-time solo female travelers',
+        'São Paulo is safe for solo female travelers with extensive precautions - not recommended for first-time women traveling alone',
         'Intermediate to advanced solo travelers only',
         'Stay only in safe neighborhoods (Vila Madalena, Jardins)',
         'Never walk alone at night anywhere in the city',
@@ -708,18 +738,26 @@ const saoPaulo: Destination = {
       ]
     },
     culturalDos: [
-      'Dress well - appearance matters in Brazilian culture.',
-      'Learn basic Portuguese phrases.',
-      'Greet with warmth and friendliness.',
-      'Respect personal space during conversations.',
-      'Be patient with Brazilian time (often running late).'
+      'Dress fashionably and well-groomed - São Paulo is fashion capital of Latin America, appearance crucial for safety and social acceptance',
+      'Master basic Portuguese phrases beyond tourist basics - locals deeply appreciate language effort and it significantly improves safety interactions',
+      'Greet with appropriate physical contact - one cheek kiss standard in São Paulo (not two like Rio), handshakes for business settings',
+      'Embrace Brazilian warmth and expressiveness - maintain eye contact, smile genuinely, engage in small talk before business discussions',
+      'Respect meal timing culture - lunch is sacred 12-2 PM, dinner never before 8 PM, rushing meals is seen as rude and suspicious',
+      'Show genuine interest in football culture - asking about local teams Corinthians, Palmeiras, São Paulo FC creates instant connections',
+      'Practice "jeitinho brasileiro" appreciation - understand creative problem-solving approach and don\'t show frustration with flexibility',
+      'Learn about regional pride - São Paulo residents (Paulistanos) are proud of city being Brazil\'s economic powerhouse, acknowledge this',
+      'Use proper titles and formality initially - "Senhor/Senhora" until invited to use first names, especially important for solo female safety'
     ],
     culturalDonts: [
-      "Don't display expensive items or technology.",
-      "Don't walk alone at night anywhere.",
-      "Don't refuse Brazilian hospitality.",
-      "Don't touch people without permission.",
-      "Don't criticize Brazil or compare to other countries."
+      "Don't display any expensive items, technology, or jewelry - robbery target #1, especially iPhones which are stolen every 2 minutes in São Paulo",
+      "Don't walk alone at night anywhere in the city - even safe neighborhoods become dangerous after dark for solo female travelers",
+      "Don't refuse Brazilian hospitality abruptly - politely explain allergies/restrictions, outright refusal is deeply offensive and creates social tension",
+      "Don't use Spanish assuming it's understood - Portuguese is distinct language, Spanish attempts can be seen as cultural insensitivity",
+      "Don't compare São Paulo negatively to Rio or other cities - intense regional rivalry, criticism creates hostility and potential safety risks",
+      "Don't ignore football culture - dismissing or showing ignorance about soccer is social mistake that marks you as disconnected tourist",
+      "Don't photograph favelas or poverty - exploitative and potentially dangerous, residents may react aggressively to tourist photography",
+      "Don't expect punctuality rigidity - 15-30 minute delays are normal 'Brazilian time,' showing impatience is culturally offensive",
+      "Don't dress too casually in upscale areas - underdressing in Jardins or business districts marks you as target and shows disrespect"
     ],
     womensConfidenceScore: {
       score: 58.2,
@@ -765,7 +803,7 @@ const saoPaulo: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$40 - $90 USD / day',
-        description: 'Budget varies greatly with exchange rate. Higher budget recommended for safety (better accommodations, transportation).',
+        description: 'Budget varies greatly with exchange rate. Higher budget recommended for solo female travel safety in São Paulo (better accommodations, secure transportation).',
         tip: 'Invest in safer accommodation and transportation - false economy to go budget on safety essentials.'
       },
       accommodation: [
@@ -892,6 +930,9 @@ const saoPaulo: Destination = {
     ],
     perception: 'Solo female travelers are still relatively uncommon in São Paulo and may attract attention. Brazilian culture is social and family-oriented, so traveling alone may seem unusual to locals. While Brazilians are generally friendly and helpful, solo women face higher risks due to crime rates. Conservative behavior and appearance are recommended for safety. Foreign women may experience catcalling and unwanted attention, especially if appearing wealthy or tourist-like.'
   },
+  youtubeVideo: {
+    videoId: "tvaXa7HS7ow"
+  }
 };
 
 export default saoPaulo;

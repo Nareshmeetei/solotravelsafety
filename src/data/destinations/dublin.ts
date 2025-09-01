@@ -164,24 +164,24 @@ const dublin: Destination = {
         }
       ],
       apps: [
-        'Citymapper Dublin',
-        'TFI Go',
-        'Dublin Bus',
-        'Garda SíochÁna App',
+        'NomadHer',
         'bSafe',
-        'Weather Ireland',
-        'Find My',
-        'Revolut'
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'TFI Go',
+        'FreeNow',
+        'Dublin Bus'
       ],
       appLinks: [
-        { name: 'Citymapper Dublin', link: 'https://citymapper.com/', description: 'Essential public transport navigation with real-time Dublin bus, tram, and train info' },
-        { name: 'TFI Go', link: 'https://www.transportforireland.ie/tfi-go/', description: 'Official Irish transport app for journey planning and mobile tickets' },
-        { name: 'Dublin Bus', link: 'https://www.dublinbus.ie/', description: 'Real-time bus information and route planning for Dublin city buses' },
-        { name: 'Garda SíochÁna App', link: 'https://www.garda.ie/', description: 'Report crimes, find police stations, and access emergency services in Ireland' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with GPS tracking, SOS alerts, and emergency contacts' },
-        { name: 'Weather Ireland', link: 'https://www.met.ie/', description: 'Accurate local forecasts from Met Éireann - essential for Dublin\'s unpredictable weather' },
-        { name: 'Find My', link: 'https://www.apple.com/icloud/find-my/', description: 'Share location with trusted contacts and track devices for safety' },
-        { name: 'Revolut', link: 'https://www.revolut.com/', description: 'Multi-currency card with great exchange rates and spending controls for travelers' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Dublin exploration', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Ireland safety insights', rating: 4.0 },
+        { name: 'TFI Go', link: 'https://www.transportforireland.ie/', description: 'Official Irish public transport app for Dublin buses, DART, Luas with real-time info', rating: 4.3 },
+        { name: 'FreeNow', link: 'https://www.free-now.com/', description: 'Popular European taxi app with verified drivers available in Dublin', rating: 4.4 },
+        { name: 'Dublin Bus', link: 'https://www.dublinbus.ie/', description: 'Official Dublin Bus app with real-time arrivals and route planning', rating: 4.2 }
       ]
     },
     culturalExpectations: {
@@ -617,7 +617,10 @@ const dublin: Destination = {
       source: 'Central Statistics Office Ireland & Travel Ladies Safety Index 2025',
       year: 2025,
       context: 'Dublin ranked #80 safest for women globally, with 28% experiencing harassment in past year vs 13% men'
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default dublin;

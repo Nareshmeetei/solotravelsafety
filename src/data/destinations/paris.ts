@@ -72,36 +72,52 @@ const paris: Destination = {
     },
     accommodations: [
       {
-        name: 'Hotel des Grands Boulevards',
+        name: 'Les Tournelles',
         type: 'hotel',
-        features: ['Boutique hotel', 'Central location', '24/7 security', 'Female-friendly'],
-        rating: 8.9,
-        notes: 'Stylish hotel in safe 2nd arrondissement with excellent security and concierge services.',
-        link: 'https://www.hoteldesgrandsboulevards.com/'
+        features: ['Boutique charm', 'Marais location', 'Solo female friendly', '24/7 reception', 'Recently renovated'],
+        rating: 4.8,
+        notes: 'Top-rated 24-room boutique hotel near Place des Vosges. Perfect for solo female travelers with excellent safety, walkable location, and cozy atmosphere. Ranked #286/1,870 Paris hotels with 8.8/10 on Booking.com.',
+        link: 'https://www.lestournelles.com/'
       },
       {
-        name: 'MIJE Hostels',
+        name: 'Grands Boulevards Experimental',
+        type: 'hotel',
+        features: ['Michelin Key 2024', 'Rooftop bar', 'Secret entrance', 'Solo traveler recommended', 'Central location'],
+        rating: 4.6,
+        notes: 'Michelin Key awarded hotel with rooftop bar and unique entrance through secret passageway. Highly recommended by solo travelers for thoughtful service and excellent breakfast. 4/5 stars on TripAdvisor.',
+        link: 'https://www.grandsboulevardshotel.com/'
+      },
+      {
+        name: 'MIJE Fourcy Hostel',
         type: 'hostel',
-        features: ['Female dorms', 'Historic locations', 'Central Paris', 'Security'],
-        rating: 8.2,
-        notes: 'Network of hostels in historic buildings in Marais with female-only rooms and good security.',
+        features: ['Female-only dorms', 'Historic 17th century building', 'Marais location', 'Budget-friendly', 'Central Paris'],
+        rating: 4.5,
+        notes: '17th-century mansion converted to hostel in prime Marais location. Female-only dorms available, walking distance to Notre Dame. Ranked #19/369 specialty lodging with 4/5 TripAdvisor rating.',
         link: 'https://www.mije.com/'
       },
       {
-        name: 'Hotel Malte Opera',
-        type: 'hotel',
-        features: ['Central location', '24/7 reception', 'Safe neighborhood', 'Budget-friendly'],
-        rating: 8.4,
-        notes: 'Comfortable hotel near Opera in safe area with good transport connections.',
-        link: 'https://www.hotel-malte-opera.com/'
+        name: 'The People Hostel - Belleville',
+        type: 'hostel',
+        features: ['Female solo traveler focused', 'High ratings 8.5+', 'Digital nomad friendly', 'Trendy neighborhood'],
+        rating: 4.7,
+        notes: 'One of Paris\'s best-rated hostels specifically for female solo travelers and digital nomads. Located in trendy Belleville with excellent safety standards and vibrant community atmosphere.',
+        link: 'https://www.thepeoplehotels.com/'
       },
       {
-        name: '3 Ducks Hostel',
+        name: 'Caulaincourt Montmartre by Hiphophostels',
         type: 'hostel',
-        features: ['Female dorms', 'Eiffel Tower area', 'Social atmosphere'],
-        rating: 8.0,
-        notes: 'Popular hostel with female-only accommodations near safe 15th arrondissement.',
-        link: 'https://www.3ducks.fr/'
+        features: ['Top-rated hostel', 'Swanky and clean', 'Professional service', 'Montmartre location', 'Hotel-like quality'],
+        rating: 4.6,
+        notes: 'Incredibly swanky, clean and professional hostel that feels like a hotel. Located in Montmartre with excellent reviews from solo travelers. Premium hostel experience with outstanding service.',
+        link: 'https://hiphophostels.com/'
+      },
+      {
+        name: 'St Christopher\'s Inn Paris - Canal',
+        type: 'hostel',
+        features: ['Female-only floors', 'Social atmosphere', 'On-site bar', 'Solo traveler community', 'Canal location'],
+        rating: 4.5,
+        notes: 'Popular with solo female travelers offering female-only floors and vibrant social scene. Features Belushi\'s Bar and regular events perfect for meeting other travelers. Great for social solo travelers.',
+        link: 'https://www.st-christophers.co.uk/'
       }
     ],
     alerts: [
@@ -151,27 +167,23 @@ const paris: Destination = {
 • Stay in central arrondissements (1st-8th) for best safety`,
       apps: [
         'NomadHer',
-        'Tourlina',
-        'Travel Ladies',
-        'Citymapper',
         'bSafe',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Rome2Rio'
+        'SOS 114',
+        'Life360',
+        'Citymapper',
+        'Bonjour RATP',
+        'Flush Toilet Finder',
+        'DeepL'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for Paris public transport with real-time updates', hoverColor: 'hover:text-purple-600' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and guardian network', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely in France', hoverColor: 'hover:text-purple-600' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live EUR exchange rates and offline currency converter', hoverColor: 'hover:text-purple-600' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Paris weather and activities', hoverColor: 'hover:text-purple-600' },
-        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Paris', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Women-only verified community - connect with female travelers and get safety tips for Paris', rating: 4.6 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency app with live video alerts - crucial for Paris safety concerns', rating: 4.5 },
+        { name: 'SOS 114', link: 'https://www.urgence114.fr/', description: 'French emergency services app - direct GPS connection to police, fire, and medical', rating: 4.7 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Location sharing for family peace of mind during solo adventures in Paris', rating: 4.6 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Paris navigation master - safest routes, metro car positions, real-time updates, 10/10 rated', rating: 5.0 },
+        { name: 'Bonjour RATP', link: 'https://www.ratp.fr/apps', description: 'Official Paris metro app - real-time schedules, disruptions, ticket purchasing', rating: 4.5 },
+        { name: 'Flush Toilet Finder', link: 'https://www.flushapp.com/', description: 'Essential for solo travelers - comprehensive database of Paris public restrooms and accessibility', rating: 4.8 },
+        { name: 'DeepL', link: 'https://www.deepl.com/', description: 'Superior translation app for French - much more accurate than Google Translate for complex phrases', rating: 4.7 }
       ],
       emergencyPhrases: [
         {
@@ -868,7 +880,10 @@ const paris: Destination = {
         'Grocery shop at Monoprix/Franprix for budget meals',
         'Free walking tours available during safe daytime hours'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default paris;

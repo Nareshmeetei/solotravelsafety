@@ -124,27 +124,15 @@ const tokyo: Destination = {
 • Download essential apps for navigation and transport`,
     apps: [
       'NomadHer',
-      'Tourlina',
       'Travel Ladies',
-      'Hyperdia',
-      'Japan Travel',
-      'TripIt',
-      'Airalo',
-      'XE Currency',
-      'PackPoint',
-      'bSafe'
+      'bSafe',
+      'Google Translate'
     ],
     appLinks: [
-      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
-      { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
-      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
-      { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Essential train and subway navigation for Tokyo metro system', hoverColor: 'hover:text-purple-600' },
-      { name: 'Japan Travel', link: 'https://www.japan.travel/en/', description: 'Official Japan tourism app with cultural insights and safety tips', hoverColor: 'hover:text-purple-600' },
-      { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
-      { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without expensive roaming', hoverColor: 'hover:text-purple-600' },
-      { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live JPY exchange rates and offline currency converter', hoverColor: 'hover:text-purple-600' },
-      { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on Tokyo weather and activities', hoverColor: 'hover:text-purple-600' },
-      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live location sharing', hoverColor: 'hover:text-purple-600' }
+      { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+      { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Community app for female travelers to connect and share safety tips' },
+      { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with emergency features and location sharing' },
+      { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Translation app for communicating in Japanese' }
     ],
     emergencyPhrases: [
       {
@@ -867,6 +855,9 @@ const tokyo: Destination = {
         type: 'Support Services'
       }
     ]
+  },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }
 };
 

@@ -113,14 +113,16 @@ const wellington: Destination = {
 • Emergency number 111 works for all services (police, fire, medical)
 • Kiwis are known for being helpful and down-to-earth - don't hesitate to ask for help`,
       apps: [
-        'Metlink',
-        'Uber',
-        'Snapper',
-        'WellingtonNZ',
-        'MetService'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'Metlink', link: 'https://www.metlink.org.nz/', description: 'Official Wellington public transport app with real-time information' },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' },
         { name: 'Uber', link: 'https://www.uber.com/nz/en/', description: 'Reliable ride-hailing service in Wellington' },
         { name: 'Snapper', link: 'https://www.snapper.co.nz/', description: 'Wellington transport payment card and mobile app' },
         { name: 'WellingtonNZ', link: 'https://wellingtonnz.com/', description: 'Official Wellington tourism app with events and attractions' },
@@ -821,7 +823,10 @@ const wellington: Destination = {
         'Wellington food scene offers great lunch deals',
         'Safety investment pays off in stress-free travel experience'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default wellington;

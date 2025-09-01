@@ -129,21 +129,24 @@ const montreal: Destination = {
         'Quebec has strong healthcare system - visitors can access emergency care'
       ],
       apps: [
-        'STM',
-        'Transit',
-        'Uber',
-        'Montreal.com',
-        'Allo MTL 311',
-        'Weather Network',
-        'Zomato',
-        'Maps.me Offline'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'STM Montreal',
+        'BIXI Montreal',
+        'WeatherNetwork'
       ],
       appLinks: [
-        { name: 'STM', link: 'https://www.stm.info/', description: 'Official Montreal transit app with real-time updates, route planning, and mobile tickets', hoverColor: 'hover:text-primary-600', rating: 4.5, specialFeature: 'Real-time metro and bus tracking' },
-        { name: 'Transit', link: 'https://transitapp.com/', description: 'User-friendly transit app with arrival predictions and service alerts for Montreal public transport', hoverColor: 'hover:text-primary-600', rating: 4.6, specialFeature: 'Crowdsourced real-time data' },
-        { name: 'Uber', link: 'https://www.uber.com/ca/en/city/montreal/', description: 'Safe ride-sharing with driver verification and GPS tracking. Available throughout Montreal', hoverColor: 'hover:text-primary-600', rating: 4.4, specialFeature: 'Trip sharing and safety features' },
-        { name: 'Montreal.com', link: 'https://montreal.com/', description: 'Comprehensive city guide with events, attractions, and safety information for tourists', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'Local events and safety tips' },
-        { name: 'Allo MTL 311', link: 'https://montreal.ca/en/311', description: 'Official city services app for reporting issues, getting city information, and emergency contacts', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Direct city services access' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Montreal exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Canada safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel', rating: 4.1 },
+        { name: 'STM Montreal', link: 'https://www.stm.info/', description: 'Official Montreal public transport app with real-time metro and bus info', rating: 4.4 },
+        { name: 'BIXI Montreal', link: 'https://montreal.bixi.com/', description: 'Montreal bike sharing system perfect for safe city exploration', rating: 4.2 },
+        { name: 'WeatherNetwork', link: 'https://www.theweathernetwork.com/', description: 'Essential for Montreal weather planning - conditions change quickly', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -799,7 +802,10 @@ const montreal: Destination = {
         'Free WiFi widely available reducing mobile data costs',
         'Many summer festivals offer free outdoor entertainment'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default montreal;

@@ -115,18 +115,16 @@ const stockholm: Destination = {
 • Emergency number 112 works for all services (police, fire, medical)
 • Trust your instincts - Swedes are reserved but helpful when approached`,
       apps: [
-        'SL (Stockholm Public Transport)',
-        'Res i Sthlm',
-        'Swish (Mobile payments)',
-        'Visit Stockholm',
-        'Google Maps'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'SL', link: 'https://sl.se/', description: 'Official Stockholm public transport app with real-time information' },
-        { name: 'Res i Sthlm', link: 'https://visitstockholm.com/', description: 'Stockholm travel guide and navigation' },
-        { name: 'Swish', link: 'https://www.swish.nu/', description: 'Popular Swedish mobile payment app' },
-        { name: 'Visit Stockholm', link: 'https://visitstockholm.com/', description: 'Official tourism app with attractions and events' },
-        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Navigation with public transport integration' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
       ],
       emergencyPhrases: [
         {
@@ -820,7 +818,10 @@ const stockholm: Destination = {
         'Document all incidents with photos and details',
         'Keep copies of all police reports'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default stockholm;

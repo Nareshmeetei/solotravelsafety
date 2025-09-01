@@ -115,18 +115,16 @@ const toronto: Destination = {
 • Emergency services use 911 for all emergencies
 • Canadians are known for politeness and helpfulness`,
       apps: [
-        'TTC (Toronto Transit)',
-        'PRESTO',
-        'Uber',
-        'ParkWhiz',
-        'Google Maps'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'TTC', link: 'https://www.ttc.ca/', description: 'Official Toronto Transit Commission app with real-time info' },
-        { name: 'PRESTO', link: 'https://www.prestocard.ca/', description: 'Payment card app for all public transit' },
-        { name: 'Uber', link: 'https://www.uber.com/ca/en/', description: 'Reliable ride-hailing service with excellent coverage' },
-        { name: 'ParkWhiz', link: 'https://www.parkwhiz.com/', description: 'Find and reserve parking spots in advance' },
-        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Navigation with Toronto transit integration' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
       ],
       emergencyPhrases: [
         {
@@ -825,7 +823,10 @@ const toronto: Destination = {
         'Document all incidents with photos and details',
         'Keep copies of all police reports'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default toronto; 

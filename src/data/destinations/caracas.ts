@@ -162,28 +162,24 @@ const caracas: Destination = {
 • Trust NO strangers offering help or directions - express kidnapping setups are common
 • Carry emergency cash in multiple currencies hidden in different locations on your body`,
       apps: [
-        'bSafe',
         'NomadHer',
-        'Tourlina',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'GeoSure',
         'Ridery',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
+        'Emergency SOS',
         'PedidosYa'
       ],
       appLinks: [
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming - critical for Caracas' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community - CRITICAL safety network for Venezuela' },
-        { name: 'GeoSure', link: 'https://geosure.ai/', description: 'Real-time safety ratings by neighborhood - essential for Venezuela' },
-        { name: 'Ridery', link: 'https://ridery.co/', description: 'Venezuelan ride-sharing with GPS tracking - safest transport option' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Venezuelan bolívar and offline converter' },
-        { name: 'PedidosYa', link: 'https://www.pedidosya.com.ve/', description: 'Food delivery to avoid leaving hotel - safer than going to restaurants' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for extreme-risk destinations like Caracas', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button absolutely critical for Caracas dangers', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for extreme-risk areas', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Caracas safety monitoring', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Venezuela safety warnings', rating: 4.0 },
+        { name: 'Ridery', link: 'https://ridery.co/', description: 'Venezuelan ride-hailing app - only safe transport option with GPS tracking', rating: 4.3 },
+        { name: 'Emergency SOS', link: 'https://support.apple.com/', description: 'Built-in smartphone emergency feature for immediate local emergency services', rating: 4.8 },
+        { name: 'PedidosYa', link: 'https://www.pedidosya.com.ve/', description: 'Venezuelan food delivery to avoid leaving hotel - safer than going to restaurants', rating: 4.4 }
       ],
       emergencyPhrases: [
         {
@@ -984,7 +980,10 @@ const caracas: Destination = {
         'Food costs $100-150/month if ordering hotel delivery only - never eat at local restaurants',
         'Medical emergency fund $5,000+ - Venezuela\'s healthcare system has collapsed and private treatment is expensive'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default caracas;

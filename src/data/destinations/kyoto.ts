@@ -125,27 +125,23 @@ const kyoto: Destination = {
 • Purchase JR Pass if traveling beyond Kyoto for significant savings`,
       apps: [
         'NomadHer',
-        'Tourlina',
         'Travel Ladies',
         'bSafe',
-        'Japan Travel',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Hyperdia'
+        'Noonlight',
+        'Life360',
+        'Hyperdia',
+        'ICOCA',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'Japan Travel', link: 'https://japantravel.navitime.com/', description: 'Comprehensive guide to Japan transport and tourist information' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Japanese yen and offline converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Essential train schedules and route planning across Japan' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Japan temple exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Kyoto temple safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while temple hopping', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo temple visits', rating: 4.1 },
+        { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Best Japan transit app for planning Kyoto temple routes and connections', rating: 4.6 },
+        { name: 'ICOCA', link: 'https://www.jr-odekake.net/icoca/', description: 'JR West IC card app for seamless Kyoto public transport payments', rating: 4.4 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Japanese temple etiquette and emergency communication', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -677,7 +673,10 @@ const kyoto: Destination = {
       'DON\'T: Touch religious objects, statues, or artifacts in temples and shrines',
       'DON\'T: Ignore cultural dress codes at religious sites - cover shoulders and knees',
       'DON\'T: Tip service staff - tipping is not customary and can cause confusion'
-    ]
+    ],
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default kyoto;

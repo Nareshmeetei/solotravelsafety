@@ -121,24 +121,24 @@ const barcelona: Destination = {
 • Use official taxis or metro for transport
 • Beach areas are safe during day but use caution at night`,
       apps: [
-        'TMB App',
-        'Citymapper',
-        'FreeNow',
-        'Travel Ladies',
         'NomadHer',
         'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'TMB App',
         'Cabify',
-        'TripIt'
+        'Citymapper'
       ],
       appLinks: [
-        { name: 'TMB App', link: 'https://www.tmb.cat/en/barcelona/discover-tmb/tmb-app', description: 'Official Barcelona public transport app with real-time updates and route planning', hoverColor: 'hover:text-purple-600' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Essential transport app with offline maps and real-time Barcelona transport data', hoverColor: 'hover:text-purple-600' },
-        { name: 'FreeNow', link: 'https://free-now.com/', description: 'Most reliable ride-sharing app in Barcelona, connects with licensed taxis and private drivers', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Global female travel community with Barcelona-specific safety tips and meetups', hoverColor: 'hover:text-purple-600' },
-        { name: 'NomadHer', link: 'https://nomadher.com/', description: 'Top-rated app specifically for solo female travelers with women-only validation and Barcelona guides', hoverColor: 'hover:text-purple-600' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal security app with SOS alerts, GPS tracking, and voice-activated emergency calls', hoverColor: 'hover:text-purple-600' },
-        { name: 'Cabify', link: 'https://cabify.com/', description: 'Premium ride-sharing with professional drivers, GPS tracking, and higher safety standards', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Essential travel organizer for solo travelers managing complex itineraries and bookings', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Barcelona', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Spain safety insights', rating: 4.0 },
+        { name: 'TMB App', link: 'https://www.tmb.cat/en/', description: 'Official Barcelona public transport app for metro, bus, tram with real-time info', rating: 4.2 },
+        { name: 'Cabify', link: 'https://cabify.com/', description: 'Popular Spanish ride-hailing app with verified drivers and safety features', rating: 4.4 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best navigation app for Barcelona with public transport and walking routes', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -762,7 +762,10 @@ const barcelona: Destination = {
         'Shop at local markets like Boqueria for affordable authentic food',
         'Visit during shoulder season (April-May, September-October) for better accommodation deals'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default barcelona;

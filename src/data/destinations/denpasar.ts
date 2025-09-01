@@ -126,27 +126,23 @@ const denpasar: Destination = {
 • Learn basic Bahasa Indonesian phrases`,
       apps: [
         'NomadHer',
-        'Tourlina',
-        'Travel Ladies',
         'bSafe',
-        'Grab',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'GoJek'
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Grab Indonesia',
+        'GoJek',
+        'Maps.Me'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'Grab', link: 'https://www.grab.com/', description: 'Safe ride-hailing and food delivery throughout Bali' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Indonesian rupiah and offline converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'GoJek', link: 'https://www.gojek.com/', description: 'Multi-service app for rides, food delivery, and local services' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Bali exploration', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Indonesia safety insights', rating: 4.0 },
+        { name: 'Grab Indonesia', link: 'https://www.grab.com/id/', description: 'Essential Indonesian ride-hailing and delivery app - safest transport in Bali', rating: 4.7 },
+        { name: 'GoJek', link: 'https://www.gojek.com/', description: 'Popular Indonesian super-app for transport, food delivery, and services', rating: 4.6 },
+        { name: 'Maps.Me', link: 'https://maps.me/', description: 'Offline navigation essential for Bali - works without internet in remote areas', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -808,7 +804,10 @@ const denpasar: Destination = {
         'Budget extra for international medical insurance',
         'Eat at busy warungs (local eateries) for authentic, safe food'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default denpasar;

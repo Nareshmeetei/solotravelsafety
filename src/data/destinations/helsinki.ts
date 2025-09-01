@@ -174,28 +174,24 @@ const helsinki: Destination = {
 • Banking almost entirely contactless, reducing cash handling needs and safety risks
 • Download offline maps and emergency contacts before arrival for added security`,
       apps: [
-        'HSL',
-        'GeoSure',
         'NomadHer',
-        'bSafe',
-        'SafeUp',
-        'Noonlight',
-        'Citymapper',
-        'Reittiopas',
         'Travel Ladies',
-        'MobilePay'
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'HSL Helsinki',
+        'VR Matkalla',
+        'Foreca Weather'
       ],
       appLinks: [
-        { name: 'HSL', description: 'Official Helsinki public transport app with real-time info, tickets, and route planning (4.7★)', link: 'https://www.hsl.fi/en/hsl-app' },
-        { name: 'GeoSure', description: 'Women & LGBTQ+ safety scores for neighborhoods worldwide, essential for solo female travel planning (4.3★)', link: 'https://geosure.com/' },
-        { name: 'NomadHer', description: '#1 solo female travel community app connecting verified women from 180+ countries safely (4.2★)', link: 'https://www.nomadher.com/' },
-        { name: 'bSafe', description: 'Personal safety app with voice-activated SOS, GPS tracking, and emergency features for solo travelers (4.1★)', link: 'https://getbsafe.com/' },
-        { name: 'SafeUp', description: 'Crowdsourced safety network connecting to nearby female "guardians" in 39 countries including Finland (4.4★)', link: 'https://safeupapp.com/' },
-        { name: 'Noonlight', description: 'Leading safety app with panic button connecting directly to local emergency services (4.5★)', link: 'https://noonlight.com/' },
-        { name: 'Citymapper', description: 'Advanced public transport navigation with real-time updates for Helsinki trams, buses, metro (4.6★)', link: 'https://citymapper.com/' },
-        { name: 'Reittiopas', description: 'Finnish route planner integrating all transport modes with offline functionality (4.2★)', link: 'https://reittiopas.hsl.fi/' },
-        { name: 'Travel Ladies', description: 'Community app for connecting with local Finnish women for meetups and safety support (4.1★)', link: 'https://travelladies.app/' },
-        { name: 'MobilePay', description: 'Finnish contactless payment app for seamless transactions (requires local bank account) (4.3★)', link: 'https://mobilepay.fi/' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Helsinki exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Finland safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful in Nordic countries', rating: 4.1 },
+        { name: 'HSL Helsinki', link: 'https://www.hsl.fi/en/', description: 'Official Helsinki transport app for trams, buses, metro with real-time info', rating: 4.6 },
+        { name: 'VR Matkalla', link: 'https://www.vr.fi/en', description: 'Finnish railway app for safe train travel to Turku, Tampere and across Finland', rating: 4.3 },
+        { name: 'Foreca Weather', link: 'https://www.foreca.com/', description: 'Finnish weather app with precise Nordic forecasts - essential for winter planning', rating: 4.7 }
       ],
       emergencyPhrases: ['Apu (Help)', 'Soita poliisille (Call the police)']
     },
@@ -596,7 +592,10 @@ const helsinki: Destination = {
         'Use contactless payment everywhere - cash rarely needed',
         'Budget for winter clothing if visiting in cold months'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default helsinki;

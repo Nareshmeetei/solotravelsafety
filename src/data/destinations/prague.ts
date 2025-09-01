@@ -56,36 +56,52 @@ const prague: Destination = {
     },
     accommodations: [
       {
-        name: 'Golden Well Hotel',
-        type: 'hotel',
-        features: ['Luxury hotel', 'Lesser Town location', 'Excellent security', 'Castle views'],
-        rating: 9.1,
-        notes: 'Luxury boutique hotel in safe Lesser Town with stunning views and top security.',
-        link: 'https://www.goldenwell.cz/'
-      },
-      {
-        name: 'Hostel One Home',
+        name: 'Women\'s Only Hostel Prague (WOH!)',
         type: 'hostel',
-        features: ['Female dorms', 'Central location', 'Great atmosphere', 'Security'],
-        rating: 8.8,
-        notes: 'Top-rated hostel with women-only rooms and excellent social atmosphere.',
-        link: 'https://hostelone.com/prague/'
+        features: ['100% Female-Only', 'Old Town Square location', 'Free breakfast', '24/7 reception', 'Safety lockers'],
+        rating: 4.6,
+        notes: 'Exclusively for women, 100m from Old Town Square. Excellent reviews: "Best hostel I\'ve stayed at! Comfortable beds, spacious bathrooms, free towels, hairdryers, toiletries." Ranked #172/839 Prague lodging.',
+        link: 'https://wohprague.cz/'
       },
       {
         name: 'Czech Inn',
         type: 'hostel',
-        features: ['Modern design', 'Women-only floors', 'Great location', 'Safety features'],
-        rating: 8.6,
-        notes: 'Modern hostel with female-only accommodations and contemporary design.',
-        link: 'https://www.czech-inn.com/'
+        features: ['Female-only dorms', 'Modern design', 'Free breakfast', 'Hybrid hotel-hostel', 'Social atmosphere'],
+        rating: 4.6,
+        notes: 'Pioneer of modern hybrid accommodation. Ranked #21/839 Prague lodging with 4/5 TripAdvisor rating. "Super friendly staff, great location near Old Town. Easy to meet people!"',
+        link: 'https://czechinn.com/'
       },
       {
-        name: 'Hotel Metamorphis',
+        name: 'Sir Toby\'s Hostel',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Art district location', 'Cozy atmosphere', 'Social spaces', 'Secure storage'],
+        rating: 4.5,
+        notes: 'Authentic home-away-from-home in trendy Holesovice art district. Ranked #18/840 Prague lodging, 8.3/10 Booking.com. "Spacious 6-bed dorm, clean, beautiful property with great vibe."',
+        link: 'https://www.hostelworld.com/hostels/p/425/sir-toby-s-hostel/'
+      },
+      {
+        name: 'Stellar Female Hostel',
+        type: 'hostel',
+        features: ['Exclusively for women', 'Celestial theme', 'Prime location', 'Security focused', 'Solo traveler community'],
+        rating: 4.5,
+        notes: 'Designed exclusively for female travelers seeking comfort and security with celestial charm. Perfect for solo women wanting a safe, social environment in great Prague location.',
+        link: 'https://www.hostelworld.com/hostels/europe/czech-republic/prague/f/solo-travel/'
+      },
+      {
+        name: 'Onefam Home by Hostel One',
+        type: 'hostel',
+        features: ['Female-only dorms available', 'Backpacker friendly', 'Cozy atmosphere', 'Budget-friendly', 'Social environment'],
+        rating: 4.5,
+        notes: 'True backpacker hostel that\'s so cozy, people don\'t want to leave. Dedicated staff creating stress-free, friendly environment. Female-only dorms available alongside mixed options.',
+        link: 'https://hostelone.com/prague/'
+      },
+      {
+        name: 'Golden Well Hotel',
         type: 'hotel',
-        features: ['Old Town location', 'Historic charm', '24/7 security', 'Solo traveler friendly'],
-        rating: 8.7,
-        notes: 'Charming hotel in historic building with excellent Old Town location.',
-        link: 'https://www.metamorphis.cz/'
+        features: ['Luxury boutique', 'Lesser Town location', 'Castle views', '24/7 security', 'Solo female welcoming'],
+        rating: 4.8,
+        notes: 'Luxury boutique hotel in safe Lesser Town with stunning Prague Castle views. Exceptional security and service, highly recommended for solo female travelers seeking premium accommodation.',
+        link: 'https://www.goldenwell.cz/'
       }
     ],
     alerts: [],
@@ -101,18 +117,24 @@ const prague: Destination = {
 • Tipping 10% is standard in restaurants
 • Many people speak English, especially in tourist areas`,
       apps: [
+        'NomadHer',
+        'bSafe',
+        'Záchranka',
+        'Life360',
         'PID Lítačka',
-        'Uber',
-        'Google Translate',
-        'Travel Ladies',
-        'My Safetipin'
+        'IDOS',
+        'Bolt',
+        'Revolut'
       ],
       appLinks: [
-        { name: 'PID Lítačka', link: 'https://app.pidlitacka.cz/', description: 'Official Prague public transport app' },
-        { name: 'Uber', link: 'https://www.uber.com/cz/en/', description: 'Ride-sharing service in Prague' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Czech language translation help' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Women-only verified community - connect with female travelers and get Prague safety insights', rating: 4.6 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency app with live video alerts - essential for solo travel safety', rating: 4.5 },
+        { name: 'Záchranka', link: 'https://www.zachrankaapp.cz/en', description: 'Czech emergency app - direct connection to rescue services with precise GPS location', rating: 4.8 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Location sharing for family peace of mind during Prague adventures', rating: 4.6 },
+        { name: 'PID Lítačka', link: 'https://pid.cz/en/', description: 'Official Prague transport app - buy tickets, route planning, real-time departures', rating: 4.7 },
+        { name: 'IDOS', link: 'https://jizdnirady.idnes.cz/pid/spojeni/', description: 'Comprehensive Czech transport planner - user-friendly routes for entire Czech Republic', rating: 4.6 },
+        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Female driver option available - safe rideshare with transparent pricing for night travel', rating: 4.5 },
+        { name: 'Revolut', link: 'https://www.revolut.com/', description: 'International payments and currency exchange - perfect for Czech Koruna transactions', rating: 4.7 }
       ],
       emergencyPhrases: [
         {
@@ -696,7 +718,10 @@ const prague: Destination = {
         'Excellent and affordable Czech beer and food',
         'Walking tours are often tip-based and informative'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default prague;

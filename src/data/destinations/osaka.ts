@@ -129,20 +129,24 @@ const osaka: Destination = {
 • Convenience stores (konbini) are everywhere and have clean bathrooms and good food
 • Bowing is appreciated when greeting or thanking people`,
       apps: [
-        'Google Translate (with camera feature)',
-        'Google Maps',
-        'Hyperdia (train schedules)',
-        'NAVITIME (navigation)',
-        'Tabelog (restaurant reviews)',
-        'PayPay (mobile payments)'
+        'NomadHer',
+        'bSafe',
+        'TripWhistle Global SOS',
+        'Life360',
+        'NAVITIME',
+        'Tabelog',
+        'AllTrails',
+        'YAMAP'
       ],
       appLinks: [
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for communication and menu translation' },
-        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Most reliable navigation app in Japan' },
-        { name: 'Hyperdia', link: 'https://www.hyperdia.com/en/', description: 'Comprehensive train schedule and route planner' },
-        { name: 'NAVITIME', link: 'https://www.navitime.co.jp/en/', description: 'Detailed navigation including train and walking routes' },
-        { name: 'Tabelog', link: 'https://tabelog.com/en/', description: 'Local restaurant reviews and ratings' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Women-only verified travel community - essential for connecting with female travelers in Japan', rating: 4.6 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency app with live video alerts to contacts - perfect safety companion', rating: 4.5 },
+        { name: 'TripWhistle Global SOS', link: 'https://www.tripwhistle.com/', description: 'One-touch connection to local emergency services in 196 countries including Japan', rating: 4.7 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Location sharing with family for peace of mind while solo traveling', rating: 4.5 },
+        { name: 'NAVITIME', link: 'https://www.navitime.com/', description: 'Japan\'s most comprehensive navigation app - essential for train routes and walking directions', rating: 4.8 },
+        { name: 'Tabelog', link: 'https://tabelog.com/', description: 'Japan\'s trusted restaurant review platform used by locals - discover authentic dining spots', rating: 4.6 },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Hiking trail maps and guides for exploring nature around Osaka - perfect for solo adventure', rating: 4.8 },
+        { name: 'YAMAP', link: 'https://yamap.com/', description: 'Japan\'s premier hiking app with offline maps and safety features for mountain adventures', rating: 4.7 }
       ],
       emergencyPhrases: [
         {
@@ -918,7 +922,10 @@ const osaka: Destination = {
         'Many temples and parks are free to visit',
         'Department store basement food courts offer quality meals at reasonable prices'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default osaka;

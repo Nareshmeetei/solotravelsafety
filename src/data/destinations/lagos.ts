@@ -196,25 +196,21 @@ const lagos: Destination = {
         'NomadHer',
         'bSafe',
         'Noonlight',
-        'GeoSure',
         'Life360',
-        'TripIt',
-        'Smart Traveler',
-        'Citymapper',
-        'Airalo',
-        'PackPoint'
+        'Travel Ladies',
+        'Uber Lagos',
+        'OPay',
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community with verified safety features and local women guides in Lagos. Connect with other solo female travelers and get real safety advice.', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'Lagos female guides available' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with voice-activated SOS, live location sharing, and video recording. Critical for Lagos with instant emergency alerts to contacts.', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Voice-activated SOS' },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'Press and hold when unsafe, release if in danger. Automatically alerts authorities with location. Essential backup safety system for Lagos travel.', hoverColor: 'hover:text-primary-600', rating: 4.1, specialFeature: 'Police auto-dispatch' },
-        { name: 'GeoSure', link: 'https://geosure.com/', description: 'Real-time safety scores for Lagos neighborhoods with women-specific risk assessment. Updates continuously with local crime data and safety conditions.', hoverColor: 'hover:text-primary-600', rating: 4.0, specialFeature: 'Women-specific safety scores' },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Share real-time location with trusted contacts. Essential for Lagos - family can track your movements and know if you\'re safe at all times.', hoverColor: 'hover:text-primary-600', rating: 4.4, specialFeature: 'Family location tracking' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and automatically share itinerary with emergency contacts. Keep trusted people informed of your Lagos movements and schedule.', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Auto itinerary sharing' },
-        { name: 'Smart Traveler', link: 'https://travel.state.gov/content/travel/en/traveladvisories/ea/smart-traveler-app.html', description: 'U.S. State Department official app with real-time travel advisories, safety alerts, and embassy contact info for Nigeria. Critical for Lagos travel.', hoverColor: 'hover:text-primary-600', rating: 4.0, specialFeature: 'Official U.S. government alerts' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'While limited in Lagos, provides what public transport info is available. Shows safest routes and real-time updates when data is available.', hoverColor: 'hover:text-primary-600', rating: 3.5, specialFeature: 'Available Lagos data limited' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans for Nigeria. Stay connected for emergency calls and apps without expensive roaming. Critical for maintaining communication in Lagos.', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'Nigeria eSIM available' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing lists based on Lagos weather and safety requirements. Includes security item recommendations for female travelers.', hoverColor: 'hover:text-primary-600', rating: 4.1, specialFeature: 'Security items included' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Lagos', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button and GPS tracking critical in Lagos', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in Nigeria', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for safety in Lagos', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Nigeria safety warnings', rating: 4.0 },
+        { name: 'Uber Lagos', link: 'https://www.uber.com/ng/', description: 'Safest transport option in Lagos with driver verification and GPS tracking', rating: 4.2 },
+        { name: 'OPay', link: 'https://opayweb.com/', description: 'Nigerian ride-hailing and mobile payment app - local alternative to Uber', rating: 4.0 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Yoruba communication and emergency situations', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -847,7 +843,10 @@ const lagos: Destination = {
         emergency: '+234 1 460 3400',
         address: '2 Walter Carrington Crescent, Victoria Island, Lagos'
       }
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default lagos;

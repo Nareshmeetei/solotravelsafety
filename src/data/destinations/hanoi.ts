@@ -150,28 +150,24 @@ const hanoi: Destination = {
 • Keep passport copy - originals required for hotel check-in
 • Learn basic Vietnamese phrases for emergencies - crucial solo travel safety precautions`,
       apps: [
-        'GeoSure',
         'NomadHer',
-        'bSafe',
-        'SafeUp',
-        'Tourlina',
-        'Rescuer',
-        'TravelSafe',
-        'Noonlight',
         'Travel Ladies',
-        'Grab Vietnam'
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Grab Vietnam',
+        'Vietnam Railway',
+        'Foody Vietnam'
       ],
       appLinks: [
-        { name: 'GeoSure', description: 'Women & LGBTQ+ safety scores for 65,000+ neighborhoods worldwide, essential solo female travel safety gear (4.3★)', link: 'https://geosure.com/' },
-        { name: 'NomadHer', description: '#1 solo female travel community app with 30,000+ verified women from 180+ countries for safe connections (4.2★)', link: 'https://www.nomadher.com/' },
-        { name: 'bSafe', description: 'Personal safety app with voice-activated SOS, live GPS tracking, and fake call features for emergencies (4.1★)', link: 'https://getbsafe.com/' },
-        { name: 'SafeUp', description: 'Crowdsourced safety network connecting you to nearby female "guardians" via call/video in 39 countries (4.4★)', link: 'https://safeupapp.com/' },
-        { name: 'Tourlina', description: 'Verified female travel buddy app screening all users for safe solo female travel companions (4.0★)', link: 'https://tourlina.com/' },
-        { name: 'Rescuer', description: 'Hands-free safety alert using voice commands to send location, photos, audio to emergency contacts (4.3★)', link: 'https://rescuerapp.com/' },
-        { name: 'TravelSafe', description: 'Comprehensive emergency services database with safety tips for nearly every country worldwide (4.2★)', link: 'https://travelsafe-app.com/' },
-        { name: 'Noonlight', description: 'America\'s leading safety app with panic button connecting directly to local emergency services (4.5★)', link: 'https://noonlight.com/' },
-        { name: 'Travel Ladies', description: 'Community app connecting solo female travelers with local women for hospitality and meetups (4.1★)', link: 'https://travelladies.app/' },
-        { name: 'Grab Vietnam', description: 'Safe ride-hailing with driver verification, GPS tracking, essential for solo women in Hanoi traffic (4.6★)', link: 'https://www.grab.com/vn/en/' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app with Vietnam safety tips', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and GPS sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police notification', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel in Vietnam', rating: 4.1 },
+        { name: 'Grab Vietnam', link: 'https://www.grab.com/vn/', description: 'Safest transport in Hanoi with driver verification and GPS tracking', rating: 4.4 },
+        { name: 'Vietnam Railway', link: 'https://dsvn.vn/', description: 'Official app for safe train travel booking to Ho Chi Minh City and other destinations', rating: 4.2 },
+        { name: 'Foody Vietnam', link: 'https://www.foody.vn/', description: 'Trusted restaurant reviews and food delivery - helps find safe dining for solo travelers', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -909,7 +905,10 @@ const hanoi: Destination = {
         'ATMs widespread but carry cash for rural areas and street vendors',
         'Budget extra for international medical insurance and Grab transport for safety'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default hanoi;

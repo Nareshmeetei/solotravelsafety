@@ -120,32 +120,35 @@ const auckland: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Auckland weather is changeable—layer up, carry a rain jacket, and wear comfortable shoes.
-• In city areas, casual attire is fine, but cover up when visiting marae or religious sites.
-• For nightlife, dress smart-casual, but avoid flashy jewelry and keep your bag zipped.
-• Always carry a charged phone and emergency contacts.
-• Consider carrying a personal safety alarm.`,
-      firstTimers: `• Auckland has become less safe for solo women in recent years—stay alert, especially at night.
-• Save emergency numbers (111 for police, fire, ambulance) and local support hotlines.
-• Use official taxis or rideshares after dark—avoid walking alone.
-• Avoid walking alone in deserted or poorly lit areas.
-• Trust your instincts—if you feel unsafe, seek help in a shop or cafe immediately.
-• Consider staying in safer neighborhoods like Ponsonby or Devonport.`,
+      clothing: `• Auckland weather is changeable—layer up, carry a rain jacket, and wear comfortable shoes
+• In city areas, casual attire is fine, but cover up when visiting marae or religious sites
+• For nightlife, dress smart-casual, but avoid flashy jewelry and keep your bag zipped
+• Carry a small crossbody bag or secure backpack to deter pickpockets
+• Dress warmly in winter (June-August) with layers for temperature changes`,
+      firstTimers: `• Auckland has become less safe for solo women in recent years—stay alert, especially at night
+• Save emergency numbers (111 for police, fire, ambulance) and local support hotlines
+• Use official taxis or rideshares after dark—avoid walking alone
+• Avoid walking alone in deserted or poorly lit areas
+• Trust your instincts—if you feel unsafe, seek help in a shop or cafe immediately`,
       apps: [
-        'AT Mobile',
-        'Uber',
-        'Tourlina',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me'
+        'AT Mobile',
+        'Emergency Plus',
+        'AllTrails'
       ],
       appLinks: [
-        { name: 'AT Mobile', link: 'https://at.govt.nz/bus-train-ferry/', description: 'Public transport navigation', hoverColor: 'hover:text-purple-600' },
-        { name: 'Uber', link: 'https://www.uber.com/nz/en/', description: 'Ride-sharing service', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers with New Zealand safety insights', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response app with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety in Auckland', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Auckland-specific safety warnings', rating: 4.0 },
+        { name: 'AT Mobile', link: 'https://at.govt.nz/bus-train-ferry/', description: 'Official Auckland Transport app with real-time bus, train, ferry info', rating: 4.2 },
+        { name: 'Emergency Plus', link: 'https://emergencyplus.com.au/', description: 'Official Australian/NZ emergency app with GPS coordinates for 111 calls', rating: 4.6 },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Essential for safe hiking around Auckland - Waitakere Ranges, Rangitoto Island', rating: 4.7 }
       ],
       emergencyPhrases: [
         {
@@ -870,7 +873,10 @@ const auckland: Destination = {
         'South Auckland areas are cheaper but have higher crime rates - prioritize safety over savings',
         'Hostels in Ponsonby and Parnell are safer but more expensive than CBD options'
       ]
-    }
-  };
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
+};
 
 export default auckland;

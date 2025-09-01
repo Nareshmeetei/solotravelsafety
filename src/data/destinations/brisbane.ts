@@ -140,22 +140,24 @@ const brisbane: Destination = {
 • Download the TransLink app for public transport navigation and safety
 • Stay hydrated and use sunscreen—Brisbane can be very hot and humid`,
       apps: [
-        'TransLink',
-        'Uber',
-        'Ola',
-        'Tourlina',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me'
+        'MyTransLink',
+        'Emergency Plus',
+        'AllTrails'
       ],
       appLinks: [
-        { name: 'TransLink', link: 'https://translink.com.au/', description: 'Public transport navigation', hoverColor: 'hover:text-purple-600' },
-        { name: 'Uber', link: 'https://www.uber.com/au/en/', description: 'Ride-sharing service', hoverColor: 'hover:text-purple-600' },
-        { name: 'Ola', link: 'https://www.olacabs.com/', description: 'Alternative ride-sharing service', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Brisbane', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Australia safety insights', rating: 4.0 },
+        { name: 'MyTransLink', link: 'https://translink.com.au/', description: 'Official Brisbane public transport app for buses, trains, ferries with real-time info', rating: 4.2 },
+        { name: 'Emergency Plus', link: 'https://emergencyplus.com.au/', description: 'Official Australian emergency app with GPS coordinates for 000 calls', rating: 4.6 },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Perfect for safe hiking in Brisbane surrounds - Gold Coast Hinterland, Sunshine Coast', rating: 4.7 }
       ]
     },
     culturalExpectations: {
@@ -832,7 +834,10 @@ const brisbane: Destination = {
         'Walking is safe and free - take advantage of Brisbane\'s pedestrian-friendly areas',
         'Australian hospitality industry has strict safety regulations'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default brisbane;

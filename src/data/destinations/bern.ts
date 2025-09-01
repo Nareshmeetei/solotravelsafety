@@ -112,7 +112,26 @@ const bern: Destination = {
     safetyTips: {
       clothing: 'Dress warmly in winter. Layering is key.',
       firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['Ruter', 'Google Maps'],
+      apps: [
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'SBB Mobile',
+        'SwissEID',
+        'MeteoSwiss'
+      ],
+      appLinks: [
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Switzerland', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Switzerland safety insights', rating: 4.0 },
+        { name: 'SBB Mobile', link: 'https://www.sbb.ch/en/', description: 'Official Swiss Federal Railways app for trains, buses, trams with real-time info', rating: 4.4 },
+        { name: 'SwissEID', link: 'https://www.eid.admin.ch/', description: 'Official Swiss digital identity app for secure authentication and emergency ID', rating: 4.2 },
+        { name: 'MeteoSwiss', link: 'https://www.meteoswiss.admin.ch/', description: 'Official Swiss weather app essential for Alpine weather changes and safety', rating: 4.5 }
+      ],
       emergencyPhrases: [
         {
           english: 'Help!',
@@ -827,7 +846,10 @@ const bern: Destination = {
         'Walking is safe and free - take advantage of Switzerland\'s pedestrian-friendly cities',
         'Swiss hospitality industry has strict safety regulations'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default bern;

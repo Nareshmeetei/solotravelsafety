@@ -127,27 +127,32 @@ const athens: Destination = {
 • Light, breathable clothing for hot Mediterranean summers
 • Comfortable walking shoes essential for ancient sites with uneven surfaces
 • Avoid flashy jewelry and keep bags zipped and secure
-• Layer for spring/fall weather variations`,
+• Layer for spring/fall weather variations
+• Carry a small crossbody bag or secure backpack to deter pickpockets`,
       firstTimers: `• Athens is generally safe for solo women with basic urban precautions
 • Learn a few Greek phrases - locals greatly appreciate the effort
 • Carry cash as many traditional tavernas don't accept cards
 • Save emergency numbers and keep copies of passport separately
 • Stay aware of surroundings, especially in crowded tourist areas`,
       apps: [
-        'Athens Metro',
-        'Citymapper',
-        'Beat (ride-sharing)',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'My Safetipin',
-        'Google Translate'
+        'FreeNow',
+        'Athens Transport',
+        'Viator'
       ],
       appLinks: [
-        { name: 'Athens Metro', link: 'https://www.stasy.gr/', description: 'Official Athens metro app with routes and schedules', hoverColor: 'hover:text-purple-600' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Comprehensive public transport navigation', hoverColor: 'hover:text-purple-600' },
-        { name: 'Beat', link: 'https://thebeat.co/', description: 'Local ride-sharing app popular in Athens', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for Greek language translation', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Athens', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Greece safety insights', rating: 4.0 },
+        { name: 'FreeNow', link: 'https://www.free-now.com/gr-en/', description: 'Popular European taxi app with verified drivers available in Athens', rating: 4.3 },
+        { name: 'Athens Transport', link: 'https://oasa.gr/', description: 'Official Athens public transport app for metro, buses, trams with real-time info', rating: 4.2 },
+        { name: 'Viator', link: 'https://www.viator.com/', description: 'Trusted tours and activities platform for safe group experiences in Athens', rating: 4.4 }
       ],
       emergencyPhrases: [
         {
@@ -891,7 +896,10 @@ const athens: Destination = {
         'Visit free sites like Changing of Guard, National Garden',
         'Shop at local markets for fresh food and souvenirs'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default athens;

@@ -128,17 +128,25 @@ const johannesburg: Destination = {
           localLanguage: 'Afrikaans'
         }
       ],
-      apps: ['Namola', 'iFearLess', 'SafeUp', 'Bolt', 'Travel Ladies', 'NomadHer', 'Maps.me', 'Life360', 'WhatsApp'],
+      apps: [
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Namola',
+        'Bolt',
+        'SAPS'
+      ],
       appLinks: [
-        { name: 'Namola', link: 'https://www.namola.com/', description: 'South Africa\'s leading emergency response app - 24/7 dispatch with 10-minute response times for police, ambulance, fire' },
-        { name: 'iFearLess', link: 'https://ifearless.co.za/', description: 'Safety app designed for women in South Africa - one-tap emergency alerts to trusted contacts and armed response' },
-        { name: 'SafeUp', link: 'https://apps.apple.com/app/safeup/id1439742413', description: 'Connect with trained volunteer "guardians" for phone/video support and walking buddies in 39 countries' },
-        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Ride-sharing with Women Only service - women passengers connect only with women drivers, includes SOS button' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo Female Travel Safety Index with destination ratings and community reviews from real women travelers' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Solo female travel community for connecting with local women, accommodation recommendations, and safety tips' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline navigation essential for South Africa - detailed offline maps with safe route optimization for pedestrians' },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family safety app with real-time location sharing, SOS alerts, and 24/7 emergency dispatch for trusted contacts' },
-        { name: 'WhatsApp', link: 'https://www.whatsapp.com/', description: 'Essential in South Africa - live location sharing feature allows real-time tracking by trusted contacts during travel' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community critical for high-risk destinations like Johannesburg', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency alerts and GPS tracking for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for solo travel in high-crime areas', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely critical for safety in Johannesburg', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with South Africa safety warnings', rating: 4.0 },
+        { name: 'Namola', link: 'https://www.namola.com/', description: 'South African emergency response app with panic button and local police', rating: 4.4 },
+        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Safer ride-hailing option in South Africa with driver verification', rating: 4.3 },
+        { name: 'SAPS', link: 'https://www.saps.gov.za/', description: 'South African Police Service app for crime reporting and safety alerts', rating: 3.8 }
       ]
     },
     culturalExpectations: {
@@ -813,7 +821,10 @@ const johannesburg: Destination = {
         emergency: '+27 11 290 3000',
         address: '1 Sandton Drive, Sandton 2196, Johannesburg'
       }
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default johannesburg;

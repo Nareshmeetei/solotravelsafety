@@ -141,24 +141,24 @@ const madrid: Destination = {
 • Use the metro system confidently - it's safe, efficient, and covers the entire city
 • Siesta time (2-5 PM) affects shop hours, plan accordingly for a more relaxed pace`,
       apps: [
-        'BSafe',
-        'GeoSure',
-        'Noonlight',
-        'My Safetipin',
-        'Tourlina',
         'NomadHer',
-        'SafeUp',
-        'Smart Traveler'
+        'Travel Ladies', 
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'EMT Madrid',
+        'Citymapper',
+        'FreeNow'
       ],
       appLinks: [
-        { name: 'BSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features, voice activation, and live location sharing' },
-        { name: 'GeoSure', link: 'https://geosure.com/', description: 'Neighborhood safety scores with women and LGBTQ+ specific insights for Madrid areas' },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'Emergency response app that alerts authorities with location when unsafe' },
-        { name: 'My Safetipin', link: 'https://safetipin.com/', description: 'Safety app with route suggestions and community-driven safety ratings' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Women-only app for finding verified female travel companions in Madrid' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community with Madrid safety tips and local meetups' },
-        { name: 'SafeUp', link: 'https://safeup.com/', description: 'Connects women with nearby guardians who can provide assistance when walking alone' },
-        { name: 'Smart Traveler', link: 'https://travel.state.gov/content/travel/en/traveladvisories/ea/smart-traveler-enrollment-act.html', description: 'US government app with updated Spain safety information and embassy contacts' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Madrid exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Spain safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel in Europe', rating: 4.1 },
+        { name: 'EMT Madrid', link: 'https://www.emtmadrid.es/', description: 'Official Madrid public transport app with real-time bus and metro updates', rating: 4.4 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for navigating Madrid metro, buses and walking routes', rating: 4.6 },
+        { name: 'FreeNow', link: 'https://www.free-now.com/', description: 'Popular European taxi app with verified drivers in Madrid', rating: 4.3 }
       ],
       emergencyPhrases: [
         {
@@ -764,7 +764,10 @@ const madrid: Destination = {
         'Food markets like Mercado San Miguel offer safe, affordable dining perfect for solo female travelers',
         'Museum passes provide both savings and structured, safe cultural activities ideal for solo exploration'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default madrid;

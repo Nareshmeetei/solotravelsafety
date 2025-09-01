@@ -68,8 +68,8 @@ const reykjavik: Destination = {
         name: 'Kex Hostel',
         type: 'hostel',
         features: ['Mixed and female dorms', 'Central location', 'Social atmosphere', '24/7 reception'],
-        rating: 4.5,
-        notes: 'Converted biscuit factory with unique industrial design, excellent security, and vibrant social scene. Very popular with solo female travelers.',
+        rating: 5.0,
+        notes: 'The ONLY 5-star hostel in Iceland! Converted biscuit factory with unique industrial design, reopening summer 2025. Perfect social scene for solo female travelers.',
         link: 'https://www.kexhostel.is/'
       },
       {
@@ -103,6 +103,30 @@ const reykjavik: Destination = {
         rating: 4.4,
         notes: 'Futuristic pod hostel with advanced security features, female-specific pods, and prime central location.',
         link: 'https://www.galaxypod.com/'
+      },
+      {
+        name: 'Nordic Hostel Reykjavik',
+        type: 'hostel',
+        features: ['Quiet atmosphere', 'Female dorms available', 'Pod-style beds', 'Central location'],
+        rating: 4.7,
+        notes: 'Highly-rated quiet hostel with blackout curtains, soft bedding, perfect for solo travelers seeking restful nights.',
+        link: 'https://nordichostel.is/'
+      },
+      {
+        name: 'Bus Hostel Reykjavik',
+        type: 'hostel',
+        features: ['Modern facilities', 'Social bar', 'Female dorms', 'Above bus terminal'],
+        rating: 4.5,
+        notes: 'Newly renovated (2023) hostel with welcoming atmosphere, perfect for meeting fellow travelers above Reykjavik Terminal.',
+        link: 'https://www.bushostel.is/'
+      },
+      {
+        name: 'Hotel Frón',
+        type: 'hotel',
+        features: ['Boutique hotel', 'Central location', 'Modern design', '24/7 reception'],
+        rating: 4.6,
+        notes: 'Stylish boutique hotel in downtown Reykjavik with excellent security and solo-female-friendly atmosphere.',
+        link: 'https://hotelfron.is/'
       }
     ],
     alerts: [
@@ -142,20 +166,24 @@ const reykjavik: Destination = {
 • No tipping culture - prices are fixed and final
 • Cash rarely needed - card payments universal`,
       apps: [
-        '112 Iceland (Emergency GPS)',
-        'Vedur (Official Weather)',
-        'Straeto (Public Transport)', 
+        '112 Iceland Emergency',
         'SafeTravel Iceland',
-        'Road.is (Road Conditions)',
-        'Aurora Forecast'
+        'Vedur Weather',
+        'NomadHer',
+        'Wikiloc Hiking',
+        'PhotoPills',
+        'AllTrails',
+        'Road.is'
       ],
       appLinks: [
-        { name: '112 Iceland', link: 'https://www.112.is/en/112-iceland-app/', description: 'Official emergency app with GPS location sharing - essential for safety' },
-        { name: 'Vedur - Weather', link: 'https://en.vedur.is/', description: 'Icelandic Met Office - critical for weather updates' },
-        { name: 'Straeto', link: 'https://www.straeto.is/en', description: 'Reykjavik public transport schedules and routes' },
-        { name: 'SafeTravel Iceland', link: 'https://safetravel.is/', description: 'Official travel safety information and travel plans' },
-        { name: 'Road.is', link: 'https://www.road.is/travel-info/road-conditions-and-weather/', description: 'Real-time road conditions for day trips' },
-        { name: 'Aurora Forecast', link: 'https://en.vedur.is/weather/forecasts/aurora/', description: 'Northern Lights visibility predictions' }
+        { name: '112 Iceland Emergency', link: 'https://www.112.is/en/112-iceland-app/', description: 'ESSENTIAL: Official Iceland emergency app with GPS location sharing for rescue services', rating: 4.7 },
+        { name: 'SafeTravel Iceland', link: 'https://safetravel.is/safetravel-app/', description: 'Official travel safety app with road conditions, weather warnings, and trip registration', rating: 4.6 },
+        { name: 'Vedur Weather', link: 'https://en.vedur.is/', description: 'Official Icelandic Met Office weather app - critical for safety planning in Iceland', rating: 4.8 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Top-rated female-only travel community for meeting other women travelers worldwide', rating: 4.8 },
+        { name: 'Wikiloc Hiking', link: 'https://www.wikiloc.com/', description: 'Essential hiking app with offline maps and detailed trail information for Iceland adventures', rating: 4.5 },
+        { name: 'PhotoPills', link: 'https://www.photopills.com/', description: 'Essential photography planning app perfect for Northern Lights and landscape photography in Iceland', rating: 4.8 },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Highly-rated hiking app perfect for discovering Iceland\'s beautiful trails and nature spots', rating: 4.8 },
+        { name: 'Road.is', link: 'https://www.road.is/', description: 'Real-time road and weather conditions throughout Iceland for safe travel planning', rating: 4.7 }
       ],
       emergencyPhrases: [
         {
@@ -838,6 +866,9 @@ const reykjavik: Destination = {
         sourceUrl: 'https://is.usembassy.gov/'
       }
     ],
+    youtubeVideo: {
+      videoId: "j80T3sbTePM"
+    },
     costAndComfort: {
       dailyBudget: {
         range: '$150 - $300+ USD / day',

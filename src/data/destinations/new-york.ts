@@ -153,21 +153,24 @@ const newYork: Destination = {
         'Keep copies of ID and emergency contacts easily accessible'
       ],
       apps: [
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Citymapper',
-        'NYC Subway (MTA)',
-        'Uber',
-        'Lyft',
-        'NYC 311',
-        'Foursquare City Guide',
-        'OpenTable',
-        'Google Maps Offline'
+        'Citizen',
+        'Uber'
       ],
       appLinks: [
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best NYC transit app with real-time updates, route optimization, and service disruption alerts', hoverColor: 'hover:text-primary-600', rating: 4.8, specialFeature: 'Real-time subway delays and alternative routes' },
-        { name: 'NYC Subway (MTA)', link: 'https://new.mta.info/', description: 'Official MTA app with subway maps, service alerts, and trip planning for all NYC transit', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'Official MTA information and accessibility features' },
-        { name: 'Uber', link: 'https://www.uber.com/us/en/city/new-york/', description: 'Safe ride-sharing with driver verification, GPS tracking, and emergency assistance features', hoverColor: 'hover:text-primary-600', rating: 4.5, specialFeature: 'Trip sharing and safety toolkit' },
-        { name: 'NYC 311', link: 'https://portal.311.nyc.gov/', description: 'Official city services app for reporting issues, finding city information, and accessing emergency contacts', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Direct city services and non-emergency reporting' },
-        { name: 'Foursquare City Guide', link: 'https://foursquare.com/', description: 'Discover safe, highly-rated restaurants, bars, and attractions with user reviews and recommendations', hoverColor: 'hover:text-primary-600', rating: 4.4, specialFeature: 'Personalized recommendations and venue safety ratings' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe NYC exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with NYC safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for solo women in large cities', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially important in NYC', rating: 4.1 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best NYC transport app with real-time subway, bus and walking routes', rating: 4.7 },
+        { name: 'Citizen', link: 'https://citizen.com/', description: 'Real-time crime and safety alerts for NYC neighborhoods', rating: 4.2 },
+        { name: 'Uber', link: 'https://www.uber.com/', description: 'Essential ride-hailing for safe late-night transport in NYC', rating: 4.4 }
       ],
       emergencyPhrases: [
         {
@@ -838,7 +841,10 @@ const newYork: Destination = {
         'Broadway lottery tickets offer chance at discounted shows',
         'Grocery stores like Whole Foods have prepared foods cheaper than restaurants'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default newYork;

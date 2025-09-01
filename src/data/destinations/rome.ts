@@ -17,7 +17,7 @@ const rome: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 3.1,
-        context: 'MODERATE RISK: Rome\'s nighttime safety rating drops to 45.24/100 (Numbeo 2025). While generally safer than many major cities, women face increased harassment risk after dark, especially around nightlife areas and train stations. Street harassment in form of "Ciao bella!" catcalls is common. Isolated incidents of groping reported on public transport. Avoid walking alone in less touristy areas after 10 PM. Tourist areas well-lit but remain vigilant around Termini Station at night.'
+        context: 'MODERATE RISK: Rome\'s nighttime safety rating drops to 45.24/100 (Numbeo 2025). For solo female travelers wondering "is Rome safe for women traveling alone," nighttime requires extra caution. While generally safer than many major cities, women face increased harassment risk after dark, especially around nightlife areas and train stations. Street harassment in form of "Ciao bella!" catcalls is common. Isolated incidents of groping reported on public transport. Avoid walking alone in less touristy areas after 10 PM. Tourist areas well-lit but remain vigilant around Termini Station at night.'
       },
       publicTransit: {
         score: 2.8,
@@ -147,31 +147,40 @@ const rome: Destination = {
       }
     ],
     safetyTips: {
-      clothing: 'Dress modestly when visiting churches (covered shoulders/knees required). Italians dress well - avoid overly casual tourist clothing which marks you as target. Comfortable walking shoes essential for cobblestones.',
-      firstTimers: 'Rome has Italy\'s 2nd highest crime rate (6,074 felonies per 100,000). Carry only copies of documents, keep valuables in hotel safe. Learn basic Italian phrases - locals appreciate effort and more likely to help. Book skip-the-line tickets to avoid crowds where pickpockets operate. Validate all public transport tickets immediately to avoid fines.',
+      clothing: `• Dress modestly when visiting churches (covered shoulders/knees required)
+• Italians dress well - avoid overly casual tourist clothing which marks you as target
+• Comfortable walking shoes essential for cobblestones and uneven streets
+• Avoid flashy jewelry and designer bags that attract thieves
+• Keep bags zipped and carry crossbody style to prevent pickpocketing
+• Wear layers as Rome weather can change throughout the day`,
+      firstTimers: `• Rome has Italy's 2nd highest crime rate - extra vigilance essential for women solo travelers
+• Carry only copies of documents, keep valuables in hotel safe at all times
+• Learn basic Italian phrases - locals appreciate effort and more likely to help
+• Book skip-the-line tickets to avoid crowds where pickpockets operate
+• Validate all public transport tickets immediately to avoid hefty fines
+• Stay in central, well-lit areas - Prati, Monti, or Trastevere are safest
+• Use official taxi stands or ride-hailing apps, never street taxis
+• Trust your instincts - if situation feels unsafe, leave immediately
+• Keep emergency numbers saved and share location with someone back home`,
       apps: [
-        'NomadHer',
-        'Tourlina',
-        'Travel Ladies',
+        'GeoSure',
         'bSafe',
+        'NomadHer',
+        '112 Where Are U',
         'Citymapper',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Roma Mobilità'
+        'WeTap',
+        'FREE NOW',
+        'Rick Steves Audio Europe'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Real-time transit info for Rome with accessibility routes' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Euro and offline currency converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'Roma Mobilità', link: 'https://www.atac.roma.it/en', description: 'Official Rome public transport app with real-time updates and safety features' }
+        { name: 'GeoSure', link: 'https://www.geosure.com/', description: 'Women-specific safety ratings for Rome neighborhoods with real-time risk assessment', rating: 4.8 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with SOS alerts and live location tracking for emergency contacts', rating: 4.5 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only verified travel community for meeting other women travelers safely in Rome', rating: 4.8 },
+        { name: '112 Where Are U', link: 'https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/112+Where+Are+U', description: 'Official Italian emergency app - instantly contact services and share location', rating: 4.6 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best Rome navigation app with metro, bus routes and real-time safety features', rating: 4.7 },
+        { name: 'WeTap', link: 'https://www.wetap.org/', description: 'Find Rome\'s 2,500+ free water fountains - stay hydrated and save money', rating: 4.5 },
+        { name: 'FREE NOW', link: 'https://free-now.com/', description: 'Most popular taxi app in Rome with verified drivers and digital payments', rating: 4.6 },
+        { name: 'Rick Steves Audio Europe', link: 'https://www.ricksteves.com/audio-europe', description: 'Self-guided audio tours for Vatican, Forum, and major Rome attractions', rating: 5.0 }
       ],
       emergencyPhrases: [
         {
@@ -258,6 +267,57 @@ const rome: Destination = {
             gender: 'Female',
             displayName: 'Elsa (Italian Female)'
           }
+        },
+        {
+          english: 'I am lost.',
+          local: 'Mi sono persa.',
+          localLanguage: 'Italian',
+          pronunciation: 'mee SO-no PAIR-sa',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Mi%20sono%20persa',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Mi%20sono%20persa',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Mi%20sono%20persa&client=tw-ob'
+          ],
+          phonetic: 'Mi sono persa.',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
+        },
+        {
+          english: 'I feel unsafe.',
+          local: 'Mi sento in pericolo.',
+          localLanguage: 'Italian',
+          pronunciation: 'mee SEN-to een peh-REE-ko-lo',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Mi%20sento%20in%20pericolo',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Mi%20sento%20in%20pericolo',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Mi%20sento%20in%20pericolo&client=tw-ob'
+          ],
+          phonetic: 'Mi sento in pericolo.',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
+        },
+        {
+          english: 'Can you help me?',
+          local: 'Puoi aiutarmi?',
+          localLanguage: 'Italian',
+          pronunciation: 'poo-OY ah-you-TAR-mee',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Puoi%20aiutarmi',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=it-IT-ElsaNeural&text=Puoi%20aiutarmi',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=it&q=Puoi%20aiutarmi&client=tw-ob'
+          ],
+          phonetic: 'Puoi aiutarmi?',
+          voiceInfo: {
+            voiceName: 'it-IT-ElsaNeural',
+            gender: 'Female',
+            displayName: 'Elsa (Italian Female)'
+          }
         }
       ],
       pronunciationFeature: {
@@ -279,11 +339,31 @@ const rome: Destination = {
         'Personal space smaller than Northern European/American standards',
         'Loud conversation normal - not considered rude behavior'
       ],
-      perception: 'Italian men may be more forward in romantic interest compared to other cultures. "Ciao bella" catcalls very common but usually harmless. Ignore and continue walking. Most interactions respectful but persistent attention possible. Women traveling alone may receive more attention than desired.'
+      perception: 'Italian men may be more forward in romantic interest compared to other cultures. "Ciao bella" catcalls very common but usually harmless. Ignore and continue walking. Most interactions respectful but persistent attention possible. Solo female travelers may receive more attention than desired, but Rome is generally safe for women traveling alone.',
+      context: 'Rome combines ancient history with modern Italian culture. Romans are passionate about food, family, and football. The city has a relaxed Mediterranean pace, especially during afternoon siesta hours (2-4 PM). Understanding local customs helps solo female travelers navigate social interactions confidently.'
     },
     bestTimeToVisit: {
+      overall: 'April-May and September-October (Shoulder Seasons)',
+      weather: 'Rome has a Mediterranean climate with hot summers and mild winters. Spring (Mar-May) and autumn (Sep-Nov) offer pleasant temperatures 15-25°C. Summer (Jun-Aug) can be scorching 30-35°C with high humidity. Winter (Dec-Feb) is mild 8-15°C but can be rainy.',
+      safety: 'Shoulder seasons provide optimal safety conditions with fewer crowds reducing pickpocketing opportunities. Summer brings peak tourist crowds creating more crime opportunities. Winter has fewer tourists but shorter daylight hours.',
+      costs: 'Peak summer (Jun-Aug) and Christmas/Easter periods have highest accommodation prices. Shoulder seasons offer 30-40% savings on hotels. January-February are cheapest but many attractions have reduced hours.',
+      crowding: 'Summer brings overwhelming crowds at major attractions. April-May and September-October offer manageable crowds with pleasant weather. Winter has minimal crowds but some seasonal closures.',
       safestMonths: ['April', 'May', 'September', 'October'],
-      events: 'Avoid major Catholic holidays (Easter, Christmas) when crowds peak and pickpocketing increases. Summer months (June-August) bring extreme heat and larger tourist crowds creating more opportunities for crime.'
+      events: 'AVOID: Easter week - extreme crowds and pickpocketing, August - hottest month with locals on vacation, Christmas/New Year - crowded and expensive. BEST: Late April-early June, September-early November for ideal conditions.',
+      monthlyBreakdown: {
+        january: { weather: 'Cool, occasional rain (8-13°C)', safety: 'High', crowds: 'Low', notes: 'Cheapest time, some closures, short daylight' },
+        february: { weather: 'Cool, some rain (9-15°C)', safety: 'High', crowds: 'Low', notes: 'Good value, fewer tourists, mild weather improving' },
+        march: { weather: 'Mild, spring begins (11-18°C)', safety: 'High', crowds: 'Medium', notes: 'Weather improves, Easter crowds possible late month' },
+        april: { weather: 'Pleasant, warm (13-21°C)', safety: 'High', crowds: 'Medium-High', notes: 'Ideal weather begins, manageable crowds early month' },
+        may: { weather: 'Warm, sunny (17-26°C)', safety: 'High', crowds: 'High', notes: 'Perfect weather, busy but not overwhelming' },
+        june: { weather: 'Hot, dry (21-30°C)', safety: 'Medium', crowds: 'Very High', notes: 'Summer crowds arrive, getting very hot' },
+        july: { weather: 'Very hot (24-33°C)', safety: 'Medium', crowds: 'Extreme', notes: 'Peak summer heat and crowds, pickpocketing high' },
+        august: { weather: 'Scorching hot (24-35°C)', safety: 'Low', crowds: 'High', notes: 'Hottest month, many locals away, tourist-focused crime' },
+        september: { weather: 'Warm, comfortable (20-28°C)', safety: 'High', crowds: 'High', notes: 'Excellent weather returns, crowds manageable' },
+        october: { weather: 'Mild, pleasant (15-23°C)', safety: 'High', crowds: 'Medium', notes: 'Perfect conditions, fewer crowds than summer' },
+        november: { weather: 'Cool, some rain (11-18°C)', safety: 'High', crowds: 'Low-Medium', notes: 'Quieter season, occasional rain, good value' },
+        december: { weather: 'Cool, rainy periods (8-14°C)', safety: 'Medium-High', crowds: 'Medium-High', notes: 'Christmas crowds and higher prices' }
+      }
     },
     emergencyInfo: {
       police: '113',
@@ -300,9 +380,15 @@ const rome: Destination = {
         gbp: 0.85
       },
       exchangeTips: [
-        'Use bank ATMs rather than exchange bureaus for better rates',
-        'Notify your bank before traveling to avoid card blocks',
-        'Many establishments still prefer cash over cards'
+        'Use bank ATMs (called "bancomat" in Italy) attached to banks for best rates and security',
+        'ATMs inside bank vestibules are safest - avoid outdoor street ATMs completely',
+        'Italian banks don\'t charge ATM withdrawal fees, but your home bank may charge 2-3% foreign transaction fees',
+        'Avoid currency exchange kiosks at airports, ports, and tourist areas - rates are exorbitant (5-12% markup)',
+        'Never use Euronet ATMs or fake ATMs near tourist sites - they have inflated fees',
+        'Notify your bank before traveling to avoid fraud alerts blocking your cards',
+        'Many Roman restaurants and shops still prefer cash, especially smaller establishments',
+        'Withdraw larger amounts less frequently to minimize foreign transaction fees',
+        'Keep receipts from ATM withdrawals for expense tracking and potential disputes'
       ],
       scamWarnings: [
         'ATM skimming devices at tourist area machines',
@@ -351,34 +437,34 @@ const rome: Destination = {
     safetySourceUrl: 'https://numbeo.com/crime/in/Rome',
     redFlags: [
       {
-        label: 'Pickpocketing on metro/buses',
+        label: 'Pickpocketing & Metro/Bus Theft',
         frequency: 'Most common',
-        icon: 'alert-triangle'
+        icon: 'Hand'
       },
       {
-        label: 'Street harassment (catcalling)',
+        label: 'Street Harassment & Catcalling',
         frequency: 'Most common',
-        icon: 'user-x'
+        icon: 'AlertTriangle'
       },
       {
-        label: 'Tourist area overcharging',
+        label: 'Tourist Area Overcharging',
         frequency: 'Frequent',
-        icon: 'dollar-sign'
+        icon: 'CreditCard'
       },
       {
-        label: 'Fake petition/document scams',
+        label: 'Fake Petition & Document Scams',
         frequency: 'Frequent',
-        icon: 'file-text'
+        icon: 'Shield'
       },
       {
-        label: 'Distraction theft techniques',
+        label: 'Distraction Theft Techniques',
         frequency: 'Frequent',
-        icon: 'eye-off'
+        icon: 'EyeOff'
       },
       {
-        label: 'GHB drink spiking in bars',
+        label: 'GHB Drink Spiking in Bars',
         frequency: 'Occasional',
-        icon: 'alert-circle'
+        icon: 'Syringe'
       }
     ],
     crimeStatistics: {
@@ -506,6 +592,48 @@ const rome: Destination = {
           address: 'Via Antonio Bosio, 5',
           phone: '+39 06 852721',
           link: 'https://italy.embassy.gov.au'
+        },
+        {
+          name: 'German Embassy',
+          address: 'Via San Martino della Battaglia, 4',
+          phone: '+39 06 49213-1',
+          link: 'https://www.rom.diplo.de'
+        },
+        {
+          name: 'French Embassy',
+          address: 'Piazza Farnese, 67',
+          phone: '+39 06 686011',
+          link: 'https://www.ambafrance-it.org'
+        },
+        {
+          name: 'Spanish Embassy',
+          address: 'Largo Fontanella Borghese, 19',
+          phone: '+39 06 6840401',
+          link: 'https://www.exteriores.gob.es/embajadas/roma'
+        },
+        {
+          name: 'Netherlands Embassy',
+          address: 'Via Michele Mercati, 8',
+          phone: '+39 06 3228001',
+          link: 'https://www.netherlandsandyou.nl/countries/italy'
+        },
+        {
+          name: 'Danish Embassy',
+          address: 'Via dei Monti Parioli, 50',
+          phone: '+39 06 9774831',
+          link: 'https://italien.um.dk'
+        },
+        {
+          name: 'Swiss Embassy',
+          address: 'Via Barnaba Oriani, 61',
+          phone: '+39 06 809571',
+          link: 'https://www.eda.admin.ch/roma'
+        },
+        {
+          name: 'Indian Embassy',
+          address: 'Via XX Settembre, 5',
+          phone: '+39 06 4884642',
+          link: 'https://www.indianembassyrome.gov.in'
         }
       ],
       womensRights: [
@@ -537,7 +665,7 @@ const rome: Destination = {
       reason: 'Petty theft and scams targeting tourists.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/italy-travel-advisory.html',
       soloTravelerAdvice: [
-        'Safe for solo female travelers with proper precautions - excellent for first-time solo travelers',
+        'Rome is safe for solo female travelers with proper precautions - excellent destination for first-time women solo travelers',
         'Stay in Prati, Monti, or Trastevere for best walkability and safety',
         'Avoid Termini station area at night and peripheral neighborhoods',
         'Use official transport apps and avoid unlicensed taxis',
@@ -871,8 +999,8 @@ const rome: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$55 - $85 USD / day',
-        description: 'Covers safe accommodation, meals, transport, and attractions at a comfortable level.',
-        tip: 'Mid-range budget provides safer options and better locations for solo female travelers.'
+        description: 'Covers safe accommodation, meals, transport, and attractions at a comfortable level for women traveling alone in Rome.',
+        tip: 'Mid-range budget provides safer options and better locations - essential for solo female travel safety in Rome.'
       },
       accommodation: [
         {
@@ -927,7 +1055,10 @@ const rome: Destination = {
         'Anti-theft bags are a worthwhile investment',
         'Travel insurance essential for peace of mind'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "ciol29dxYeU"
+  }
 };
 
 export default rome;

@@ -163,24 +163,24 @@ const manila: Destination = {
         'Always have peso cash as some places don\'t accept cards'
       ],
       apps: [
-        'Grab',
-        'GeoSure',
-        'Travel Ladies',
         'NomadHer',
-        'TripWhistle Global SOS',
         'bSafe',
-        'Sitata',
-        'Maps.me Offline'
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Grab Philippines', 
+        'Sakay.ph',
+        'Waze'
       ],
       appLinks: [
-        { name: 'Grab', link: 'https://www.grab.com/ph/', description: 'Essential ride-hailing app for safe transportation in Manila. GPS tracking, driver verification, and cashless payment. "Never had a problem with Grab over countless rides."', hoverColor: 'hover:text-primary-600', rating: 4.8, specialFeature: 'Same-gender driver option available for solo women' },
-        { name: 'GeoSure', link: 'https://www.geosure.io/', description: 'Personalized safety awareness app providing neighborhood safety scores for Manila. Specializes in women\'s safety ratings using AI and real-time data. Essential for solo female travelers.', hoverColor: 'hover:text-primary-600', rating: 4.6, specialFeature: 'Women-specific safety scores and LGBTQIA+ safety ratings' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app to meet other women travelers, find travel buddies, and connect with local women in Manila through safe hospitality exchange.', hoverColor: 'hover:text-primary-600', rating: 4.7, specialFeature: 'Female-only travel community and buddy finder' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Women-only travel app providing female-friendly accommodation info, safety tips, and connecting solo female travelers in Manila and Philippines.', hoverColor: 'hover:text-primary-600', rating: 4.5, specialFeature: 'Women-only platform with verified female accommodations' },
-        { name: 'TripWhistle Global SOS', link: 'https://tripwhistle.com/', description: 'Emergency app connecting directly to local emergency services in Philippines. One-touch access to police (117), fire (160), and ambulance services.', hoverColor: 'hover:text-primary-600', rating: 4.4, specialFeature: 'Direct connection to local emergency services in 196 countries' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal security app with SOS alerts, live tracking, voice-activated emergency calls, and fake call feature to escape uncomfortable situations in Manila.', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'Voice activation and fake call simulation for safety' },
-        { name: 'Sitata', link: 'https://www.sitata.com/', description: 'Travel health and safety app providing real-time alerts about disease outbreaks, safety issues, and disruptions in Philippines. Combines health info with travel planning.', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Health concerns and safety alerts based on Manila itinerary' },
-        { name: 'Maps.me Offline', link: 'https://maps.me/', description: 'Essential offline maps for Manila areas with poor internet connectivity. Download before arrival to navigate safely without data connection.', hoverColor: 'hover:text-primary-600', rating: 4.6, specialFeature: 'Full offline functionality without internet connection' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for navigating Manila safely', rating: 4.3 },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with panic button crucial for Manila solo travel', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for high-risk areas like Manila', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely critical for Manila safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Philippines safety warnings', rating: 4.0 },
+        { name: 'Grab Philippines', link: 'https://www.grab.com/ph/', description: 'Safest transport in Manila with verified drivers - never use jeepneys', rating: 4.4 },
+        { name: 'Sakay.ph', link: 'https://sakay.ph/', description: 'Philippine transport app for safe route planning around Metro Manila', rating: 4.0 },
+        { name: 'Waze', link: 'https://www.waze.com/', description: 'Essential for Manila traffic navigation and real-time safety alerts', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -780,7 +780,10 @@ const manila: Destination = {
         'Air conditioning costs increase significantly during hot season (March-May)',
         'Rainy season actually safer for some crimes but creates new risks from flooding and transportation issues'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default manila;

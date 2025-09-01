@@ -118,7 +118,7 @@ const amsterdam: Destination = {
 • Bring a rain jacket—rain is common year-round
 • Avoid flashy jewelry and keep your bag zipped
 • Wear comfortable shoes for walking on cobblestones
-• Always carry a charged phone and emergency contacts`,
+• Carry a small crossbody bag or secure backpack to deter pickpockets`,
       firstTimers: `• Amsterdam is easy for solo women, but stay alert, especially at night
 • Save emergency numbers (112 for police, fire, ambulance) and local support hotlines
 • Use official taxis or rideshares after dark
@@ -126,27 +126,23 @@ const amsterdam: Destination = {
 • Trust your instincts—if you feel unsafe, seek help in a shop or cafe`,
       apps: [
         'NomadHer',
-        'Tourlina',
-        'Travel Ladies',
         'bSafe',
-        'Citymapper',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Rome2Rio'
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'GVB Amsterdam',
+        'Bolt',
+        'Citymapper'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming', hoverColor: 'hover:text-purple-600' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Real-time transit info for Amsterdam with accessibility routes', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees', hoverColor: 'hover:text-purple-600' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates and offline currency converter', hoverColor: 'hover:text-purple-600' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities', hoverColor: 'hover:text-purple-600' },
-        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Amsterdam', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Amsterdam', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Amsterdam safety insights', rating: 4.0 },
+        { name: 'GVB Amsterdam', link: 'https://www.gvb.nl/', description: 'Official Amsterdam public transport app for trams, buses, metro with real-time info', rating: 4.3 },
+        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Popular European ride-hailing app with driver verification in Amsterdam', rating: 4.3 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best navigation app for Amsterdam with bike routes and public transport', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -967,7 +963,10 @@ const amsterdam: Destination = {
         'Trusted rides over random taxis',
         'What you spend can directly affect how safe you feel'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "EtxCpMzu1GY"
+  }
 };
 
 export default amsterdam;

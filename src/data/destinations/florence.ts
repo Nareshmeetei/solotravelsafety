@@ -126,28 +126,24 @@ const florence: Destination = {
 • Be aware of "very high level" pickpocket risk in crowded tourist areas - key women solo travel safety concern
 • Respect church dress codes and photography rules - important for solo female travel etiquette`,
       apps: [
-        'NomadHer - Solo Female Travel',
-        'GeoSure Global',
-        'bSafe Personal Safety',
-        'Noonlight Safety',
-        'Travel Ladies Community',
-        'Tourlina - Women Travel',
-        'Smart Traveler STEP',
-        'Rescuer Alert',
-        'Firenze Card Official',
-        'Rick Steves Audio Europe'
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Moovit',
+        'Trenitalia',
+        'GetYourGuide'
       ],
       appLinks: [
-        { name: 'NomadHer - Solo Female Travel', link: 'https://www.nomadher.com/', description: 'Women-only community app for solo female travelers - find travel buddies, meetups, and female-friendly accommodations. 4.6★ rating with verified women-only space' },
-        { name: 'GeoSure Global', link: 'https://geosure.com/', description: 'Advanced safety scoring app with women & LGBTQ-specific ratings using AI and big data. Provides granular neighborhood safety scores worldwide - 4.4★ rating' },
-        { name: 'bSafe Personal Safety', link: 'https://getbsafe.com/', description: 'Comprehensive safety app with GPS tracking, voice activation SOS, fake calls, and live video recording. Essential for solo female travel safety - 4.1★ rating' },
-        { name: 'Noonlight Safety', link: 'https://www.noonlight.com/', description: 'Emergency response app - hold button when unsafe, release with PIN if safe, otherwise authorities are notified with location. 4.5★ rating' },
-        { name: 'Travel Ladies Community', link: 'https://travelladies.app/', description: 'Active female travel community with Florence-specific safety tips, real reviews, and solo women connections. Highly trusted by solo female travelers' },
-        { name: 'Tourlina - Women Travel', link: 'https://www.tourlina.com/', description: 'Women-only travel companion app - matches female travelers by dates, destinations, and interests. Each user screened for safety - 4.3★ rating' },
-        { name: 'Smart Traveler STEP', link: 'https://step.state.gov/', description: 'Official US government app for travel safety alerts, embassy info, and emergency contact. Free registration for safety updates and location sharing' },
-        { name: 'Rescuer Alert', link: 'https://www.rescuer.org/', description: 'Hands-free safety app - voice activation sends location, photos, and audio to emergency contacts. Designed specifically for women travelers - 4.2★ rating' },
-        { name: 'Firenze Card Official', link: 'https://www.firenzecard.it/', description: 'Official Florence museum pass app - skip lines at 72+ attractions, valid 72 hours, includes public transport. Essential for solo female travelers' },
-        { name: 'Rick Steves Audio Europe', link: 'https://www.ricksteves.com/audio-europe', description: 'Free professional audio guides for Uffizi, Duomo, and major Florence attractions - perfect for solo exploration. Trusted by millions of travelers' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Florence exploration', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Italy safety insights', rating: 4.0 },
+        { name: 'Moovit', link: 'https://moovitapp.com/', description: 'Florence public transport app for ATAF buses and trams with real-time updates', rating: 4.4 },
+        { name: 'Trenitalia', link: 'https://www.trenitalia.com/', description: 'Official Italian railway app for safe travel to Rome, Venice, Milan from Florence', rating: 4.3 },
+        { name: 'GetYourGuide', link: 'https://www.getyourguide.com/', description: 'Book verified museum tickets and tours - safer than street vendors in Florence', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -798,7 +794,10 @@ const florence: Destination = {
         'Avoid coperto (cover charge) restaurants - look for locals eating there',
         'Travel shoulder season (March, November) for 30-40% accommodation savings'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default florence;

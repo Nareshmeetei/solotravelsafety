@@ -271,6 +271,9 @@ export interface Destination {
       type: string;
     }[];
   };
+  youtubeVideo?: {
+    videoId: string;
+  };
   costAndComfort?: {
     dailyBudget: {
       range: string;

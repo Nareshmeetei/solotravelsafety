@@ -166,24 +166,24 @@ const istanbul: Destination = {
 • Register with your embassy and share itinerary with trusted contacts for safety
 • Carry cash as cards aren't accepted everywhere, but keep money secured in multiple locations`,
       apps: [
-        'BiTaksi',
-        'GeoSure',
-        'NomadHer', 
+        'NomadHer',
+        'Travel Ladies',
         'bSafe',
         'Noonlight',
-        'Istanbul Metro',
-        'Citymapper',
-        'Travel Ladies'
+        'Life360',
+        'BiTaksi',
+        'Getir Istanbul',
+        'Turkish Airlines'
       ],
       appLinks: [
-        { name: 'BiTaksi', link: 'https://www.bitaksi.com/', description: 'Turkey\'s most reliable taxi app - safer than street taxis with GPS tracking and driver verification (4.2★)' },
-        { name: 'GeoSure', link: 'https://geosure.com/', description: 'Women & LGBTQ+ safety scores for Istanbul neighborhoods - essential for solo female travel planning (4.3★)' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: '#1 solo female travel community app with verified women travelers in Istanbul (4.2★)' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live location sharing - crucial for solo women in Istanbul (4.1★)' },
-        { name: 'Noonlight', link: 'https://noonlight.com/', description: 'Emergency safety app with panic button - works internationally including Turkey (4.5★)' },
-        { name: 'Istanbul Metro', link: 'https://metro.istanbul/', description: 'Official Istanbul metro app with routes, schedules, and women-only car information (4.0★)' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Comprehensive Istanbul public transport with real-time updates and safest route options (4.6★)' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community with Istanbul-specific safety tips and local women connections (4.1★)' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for navigating Turkey safely', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Turkey-specific safety advice', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency alerts and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in Istanbul', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel in Turkey', rating: 4.1 },
+        { name: 'BiTaksi', link: 'https://www.bitaksi.com/', description: 'Turkish taxi app much safer than street taxis with GPS tracking', rating: 4.3 },
+        { name: 'Getir Istanbul', link: 'https://getir.com/', description: 'Turkish delivery app for safe food and essentials delivery to your accommodation', rating: 4.5 },
+        { name: 'Turkish Airlines', link: 'https://www.turkishairlines.com/', description: 'Official app for domestic flights within Turkey and international connections', rating: 4.4 }
       ],
       emergencyPhrases: [
         {
@@ -703,7 +703,10 @@ const istanbul: Destination = {
       source: 'Numbeo Crime Statistics 2024 & Turkish National Police',
       lastUpdated: 'December 2024',
       soloFemaleIncidents: 'Moderate - primarily verbal harassment and persistent attention rather than violent crime'
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default istanbul;

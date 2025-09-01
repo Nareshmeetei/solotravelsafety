@@ -151,27 +151,23 @@ const lisbon: Destination = {
 • Stay hydrated when walking the hills - carry water`,
       apps: [
         'NomadHer',
-        'Tourlina',
         'Travel Ladies',
         'bSafe',
-        'Moovit',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Rome2Rio'
+        'Noonlight',
+        'Life360',
+        'CP Urban',
+        'Bolt',
+        'Citymapper'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'Moovit', link: 'https://moovitapp.com/', description: 'Real-time transit info for Lisbon with accessibility routes' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates and offline currency converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'Rome2Rio', link: 'https://www.rome2rio.com/', description: 'Multi-modal transport options for day trips from Lisbon' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Lisbon exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Portugal safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing useful for solo travel in Europe', rating: 4.1 },
+        { name: 'CP Urban', link: 'https://www.cp.pt/passageiros/en', description: 'Official Portuguese rail app for trains to Sintra, Porto and beyond', rating: 4.4 },
+        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Popular European ride-hailing app with driver verification in Lisbon', rating: 4.3 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best app for navigating Lisbon trams, metros and buses safely', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -852,7 +848,10 @@ const lisbon: Destination = {
         'Stay in neighborhoods with 24/7 activity (Bairro Alto, Chiado) - vibrant areas cost similar but offer natural safety',
         'Pack comfortable walking shoes - saves money on transport while keeping you safe on Lisbon\'s steep cobblestone hills'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default lisbon;

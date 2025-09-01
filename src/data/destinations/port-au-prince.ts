@@ -41,28 +41,52 @@ const portAuPrince: Destination = {
     },
     accommodations: [
       {
-        name: 'Hotel Montana',
-        type: 'hotel',
-        features: ['High security', 'Embassy-approved', 'Evacuation plans'],
+        name: 'EMERGENCY ACCOMMODATION NOTICE',
+        type: 'critical-notice',
+        features: ['Level 4 Do Not Travel Advisory', 'Gang control 80-90% of city', 'No safe accommodations', 'Embassy restrictions'],
+        rating: 0.0,
+        notes: 'CRITICAL SAFETY NOTICE: Standard accommodation recommendations cannot be provided due to Level 4 Do Not Travel advisory. Gang control of 80-90% of Port-au-Prince means NO accommodations can guarantee safety. Multiple hotel attacks, guest kidnappings, and staff threats reported. Any accommodation requires embassy coordination and professional security assessment.',
+        link: 'https://ht.usembassy.gov/'
+      },
+      {
+        name: 'Embassy-Coordinated Secure Facilities',
+        type: 'diplomatic-only',
+        features: ['Embassy coordination required', 'Armed security essential', 'Evacuation capability', 'Limited availability'],
+        rating: 2.5,
+        notes: 'DIPLOMATIC/EMERGENCY ONLY: Extremely limited secure facilities available only through embassy coordination for official business or family emergencies. Requires professional security assessment, armed escort capability, and multiple evacuation plans. Not accessible to general travelers.',
+        link: 'Contact U.S. Embassy: +509-2229-8000'
+      },
+      {
+        name: 'International Organization Compounds',
+        type: 'humanitarian-only',
+        features: ['NGO/UN coordination required', 'Fortified compounds', 'Medical evacuation capability', 'Restricted access'],
+        rating: 3.0,
+        notes: 'HUMANITARIAN WORKERS ONLY: Limited access through international organizations like UN, MSF, or major NGOs. Requires official humanitarian worker status, security clearance, and organizational evacuation protocols. Not available for tourism or general business travel.',
+        link: 'Contact relevant international organization'
+      },
+      {
+        name: 'Embassy Safe Houses',
+        type: 'emergency-diplomatic',
+        features: ['U.S. Embassy coordination', 'Maximum security protocols', 'Emergency evacuation ready', 'Diplomatic personnel only'],
         rating: 3.5,
-        notes: 'CRITICAL: Even luxury hotels face security threats. Multiple hotel attacks reported. Enhanced security essential but does not guarantee safety.',
-        link: 'Verify current security status before any booking'
+        notes: 'DIPLOMATIC EMERGENCIES ONLY: Extremely limited capacity for U.S. citizens in life-threatening emergencies requiring immediate embassy protection. Access only through official embassy determination of imminent threat to life. Requires State Department authorization.',
+        link: 'U.S. Embassy Emergency Line: +509-2229-8000'
       },
       {
-        name: 'NH Haiti El Rancho',
-        type: 'hotel',
-        features: ['Business hotel', 'Security measures', 'International standards'],
-        rating: 3.8,
-        notes: 'CRITICAL: Business hotels targeted for kidnapping attempts. Guests followed and attacked. Current safety status must be verified.',
-        link: 'Contact embassy for current security assessment'
+        name: 'Medical Evacuation Staging Areas',
+        type: 'medical-emergency',
+        features: ['Medical evacuation companies', 'Temporary staging only', 'Airport proximity when safe', 'International coordination'],
+        rating: 2.8,
+        notes: 'MEDICAL EVACUATION ONLY: Temporary staging areas used by medical evacuation companies like International SOS for emergency medical extraction. Not accommodations but emergency medical stabilization points. Requires active medical evacuation insurance and coordination.',
+        link: 'International SOS: +1-215-942-8226'
       },
       {
-        name: 'Karibe Hotel',
-        type: 'hotel',
-        features: ['Convention center', 'Security staff', 'Pétion-Ville area'],
+        name: 'Private Security Company Safe Houses',
+        type: 'corporate-security',
+        features: ['Corporate security firms', 'Executive protection', 'Fortified facilities', 'Extreme cost'],
         rating: 3.2,
-        notes: 'CRITICAL: Located in area with increased gang activity. Hotel security cannot guarantee guest safety outside premises.',
-        link: 'Embassy coordination required for any stay'
+        notes: 'HIGH-RISK CORPORATE TRAVEL ONLY: Private security companies provide fortified safe houses for essential corporate travel at extreme cost ($1000+ USD per night). Requires corporate security contract, threat assessment, and armored transport capability. Used by mining, oil, and diplomatic security firms.',
+        link: 'Contact through corporate security providers only'
       }
     ],
     alerts: [
@@ -106,17 +130,24 @@ const portAuPrince: Destination = {
 • Maintain 24/7 communication schedule with family/employer
 • Prepare for immediate evacuation if situation deteriorates`,
       apps: [
-        'U.S. Embassy Haiti Alerts',
-        'SkyAlert (Emergency notifications)',
-        'Emergency SOS',
-        'Offline Maps (GPS unreliable)',
-        'Secure Communications'
+        'STEP Enrollment',
+        'Garmin inReach',
+        'Embassy Alerts',
+        'Life360',
+        'SaferWatch',
+        'FEMA',
+        'Google SOS',
+        'International SOS'
       ],
       appLinks: [
-        { name: 'U.S. Embassy Haiti', link: 'https://ht.usembassy.gov/', description: 'Critical security updates and emergency contact' },
-        { name: 'Smart Traveler Enrollment', link: 'https://step.state.gov/', description: 'Register with U.S. government for emergency assistance' },
-        { name: 'Emergency SOS', link: 'Built-in iOS/Android', description: 'Satellite emergency communication when cellular down' },
-        { name: 'Offline Maps', link: 'https://maps.me/', description: 'Critical when GPS/cellular networks fail' }
+        { name: 'STEP Enrollment', link: 'https://travel.state.gov/content/travel/en/international-travel/before-you-go/step.html', description: 'CRITICAL: U.S. State Department emergency alert system - mandatory enrollment for embassy communication', rating: 5.0 },
+        { name: 'Garmin inReach', link: 'https://www.garmin.com/en-US/c/outdoor-recreation/satellite-communicators/', description: 'ESSENTIAL: Satellite SOS communication when cellular fails - 24/7 emergency response coordination', rating: 4.9 },
+        { name: 'Embassy Alerts', link: 'https://ht.usembassy.gov/', description: 'CRITICAL: Real-time security updates from U.S. Embassy Haiti - life-saving information', rating: 5.0 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'ESSENTIAL: Continuous location sharing with family/employer - automatic crash detection and SOS', rating: 4.6 },
+        { name: 'SaferWatch', link: 'https://www.saferwatchapp.com/', description: 'CRITICAL: Discrete panic button connecting directly to law enforcement and security teams', rating: 4.8 },
+        { name: 'FEMA', link: 'https://www.fema.gov/about/news-multimedia/mobile-products', description: 'Emergency weather alerts and shelter locations - critical for natural disaster response', rating: 4.7 },
+        { name: 'Google SOS', link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.safetyhub', description: 'ESSENTIAL: Personal safety hub with emergency location sharing and crisis alerts', rating: 4.5 },
+        { name: 'International SOS', link: 'https://www.internationalsos.com/', description: 'CRITICAL: Medical and security evacuation services - essential for emergency extraction', rating: 4.8 }
       ],
       emergencyPhrases: [
         {
@@ -725,7 +756,10 @@ const portAuPrince: Destination = {
         'Security costs minimum $500+ USD per day if travel unavoidable',
         'Insurance may not cover claims due to Level 4 travel advisory'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default portAuPrince;

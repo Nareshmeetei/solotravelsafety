@@ -132,27 +132,23 @@ const london: Destination = {
       ],
       apps: [
         'NomadHer',
+        'Travel Ladies',
         'bSafe',
         'Noonlight',
-        'GeoSure',
-        'My Safetipin',
-        'Tourlina',
-        'TravelSafe',
-        'Flush',
-        'Smart Traveler',
-        'Hollaback!'
+        'Life360',
+        'Citymapper',
+        'TfL Go',
+        'National Rail'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community with London-specific groups. Connect with other solo female travelers, find local female guides, and get real safety advice from women who know the city.', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'London female guides available' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with voice-activated SOS, live GPS tracking, and automatic emergency alerts. Essential for London with instant alerts to trusted contacts when feeling unsafe.', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Voice-activated emergency' },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'Hold button when walking alone, release if danger occurs. Automatically contacts emergency services with location if you don\'t check in. Perfect safety backup for London nights.', hoverColor: 'hover:text-primary-600', rating: 4.1, specialFeature: 'Auto emergency dispatch' },
-        { name: 'GeoSure', link: 'https://geosure.com/', description: 'Real-time safety scores for London boroughs with women-specific and LGBTQ+ ratings. Get detailed safety information for every area you plan to visit in London.', hoverColor: 'hover:text-primary-600', rating: 4.2, specialFeature: 'Women-specific London ratings' },
-        { name: 'My Safetipin', link: 'https://safetipin.com/', description: 'Crowdsourced safety app with route suggestions for safest paths. London users contribute real-time safety updates for streets, transport, and neighborhoods.', hoverColor: 'hover:text-primary-600', rating: 4.0, specialFeature: 'Safest route suggestions' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Women-only travel companion app to find female travel buddies in London. Connect with verified women travelers for shared activities, sightseeing, and safety in numbers.', hoverColor: 'hover:text-primary-600', rating: 4.3, specialFeature: 'Verified women travelers only' },
-        { name: 'TravelSafe', link: 'https://www.travelsafe-app.com/', description: 'Comprehensive emergency contacts database for UK services. Includes NHS helplines, police stations, embassy contacts, and London-specific emergency information.', hoverColor: 'hover:text-primary-600', rating: 4.1, specialFeature: 'Complete UK emergency contacts' },
-        { name: 'Flush', link: 'https://www.flush.com/', description: 'Find clean, safe public toilets throughout London with accessibility info and user ratings. Essential for solo female travelers exploring the city all day.', hoverColor: 'hover:text-primary-600', rating: 4.4, specialFeature: 'London toilet safety ratings' },
-        { name: 'Smart Traveler', link: 'https://travel.state.gov/content/travel/en/traveladvisories/ea/smart-traveler-app.html', description: 'Official US State Department travel app with real-time UK travel advisories, embassy contacts, and emergency assistance for American travelers in London.', hoverColor: 'hover:text-primary-600', rating: 4.0, specialFeature: 'Official US government info' },
-        { name: 'Hollaback!', link: 'https://www.ihollaback.org/', description: 'Report and track street harassment incidents in London. Community-driven app helping women identify problematic areas and support each other against harassment.', hoverColor: 'hover:text-primary-600', rating: 3.9, specialFeature: 'London harassment reporting' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe London exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with UK safety insights and tips', rating: 4.0 },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel', rating: 4.1 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best London transport app with real-time tube, bus and rail updates', rating: 4.7 },
+        { name: 'TfL Go', link: 'https://tfl.gov.uk/', description: 'Official Transport for London app with live departure times', rating: 4.5 },
+        { name: 'National Rail', link: 'https://www.nationalrail.co.uk/', description: 'Essential for UK train travel to Edinburgh, Bath, and other destinations', rating: 4.4 }
       ],
       emergencyPhrases: [
         {
@@ -344,6 +340,12 @@ const london: Destination = {
         'Offer your seat to elderly, pregnant, or disabled passengers on public transport',
         'Respect personal space - avoid standing too close in conversations'
       ]
+    },
+    emergencyInfo: {
+      police: '999',
+      fire: '999',
+      medical: '999',
+      general: '999'
     },
     sexualHarassmentData: {
       prevalence: 'low',
@@ -857,7 +859,10 @@ const london: Destination = {
         'Major events like Carnival and Pride require advance planning but offer incredible cultural experiences safely',
         'Christmas season (November-January) creates magical atmosphere but brings crowds to shopping areas requiring extra vigilance'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default london;

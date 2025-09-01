@@ -134,29 +134,148 @@ const oslo: Destination = {
       }
     ],
     safetyTips: {
-      clothing: 'Dress warmly in winter. Layering is key.',
-      firstTimers: 'Very easy for beginners. English widely spoken.',
-      apps: ['Ruter', 'Google Maps'],
-      emergencyPhrases: ['Hjelp (Help)', 'Ring politiet (Call the police)']
+      clothing: `• Layer clothing year-round - Norwegian weather changes quickly and unpredictably
+• Essential winter gear (November-March): thermal underwear, waterproof insulated jacket, wool sweater, warm hat covering ears, insulated waterproof boots with good grip for ice
+• Summer clothing (June-August): light layers, waterproof rain jacket (Oslo gets 200+ rainy days annually), comfortable walking shoes, light sweater for cool evenings
+• Waterproof and windproof outer layer mandatory - Oslo's coastal location means sudden weather changes
+• Avoid cotton in winter - choose wool or synthetic materials that retain warmth when wet
+• Quality footwear essential for cobblestones and potential ice - Norwegians invest in good boots
+• Dress stylishly but practically - Norwegians appreciate quality, minimalist fashion over flashy clothing
+• Neutral colors (black, navy, grey, beige) blend with local fashion and are practical for unpredictable weather`,
+      firstTimers: `• Oslo ranks #9 safest city globally for women - extremely beginner-friendly for solo female travelers
+• English proficiency exceptional - 90%+ of Norwegians speak fluent English, especially younger generations
+• Download essential apps before arrival: Ruter (transport), Ut.no (hiking), Yr (weather), 112 Norway (emergency)
+• Norway is cashless society - ensure you have contactless payment cards; many places don't accept cash
+• Expensive city - budget $150-300+ daily; prioritize experiences over material purchases
+• Tap water excellent and free - bring reusable bottle; restaurants provide free water
+• Public transport punctual and efficient - purchase Ruter passes for unlimited metro, tram, bus, ferry
+• Grocery shop at budget chains (Rema 1000, Kiwi, Extra) rather than expensive convenience stores
+• Free activities abundant: hiking trails, parks, waterfront walks, many museums free certain days
+• Tipping not expected - service charge included, but rounding up appreciated for exceptional service
+• Alcohol extremely expensive - pre-drink at accommodation if planning nightlife, or enjoy alcohol-free social scenes
+• Midnight sun in summer, polar night in winter - prepare for extreme daylight variations affecting sleep patterns`,
+      apps: [
+        'NomadHer',
+        'bSafe',
+        '112 Norway',
+        'Life360',
+        'Ruter',
+        'Ut.no',
+        'Yr',
+        'Aurora Fcst'
+      ],
+      appLinks: [
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Women-only verified community - perfect for connecting with female travelers in Norway', rating: 4.6 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency alerts with live video - essential safety companion', rating: 4.5 },
+        { name: '112 Norway', link: 'https://www.112.no/', description: 'Official Norwegian emergency app - automatically sends GPS location to emergency services', rating: 4.8 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Location sharing with family for peace of mind during solo adventures', rating: 4.5 },
+        { name: 'Ruter', link: 'https://ruter.no/', description: 'Oslo\'s essential public transport app - real-time info and ticket booking', rating: 4.7 },
+        { name: 'Ut.no', link: 'https://ut.no/', description: 'Norwegian Trekking Association app - 7,000+ curated hikes perfect for solo outdoor adventures', rating: 4.6 },
+        { name: 'Yr', link: 'https://www.yr.no/', description: 'Norway\'s most accurate weather app - essential for outdoor planning and hiking safety', rating: 4.8 },
+        { name: 'Aurora Fcst', link: 'https://apps.apple.com/app/aurora-fcst/id1073082439', description: 'Northern lights forecasting - track aurora activity for magical solo experiences', rating: 4.7 }
+      ],
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: 'Hjelp!',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'Call the police!',
+          local: 'Ring politiet!',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'I need a doctor.',
+          local: 'Jeg trenger en lege.',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'Where is the hospital?',
+          local: 'Hvor er sykehuset?',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'I am lost.',
+          local: 'Jeg har gått meg vill.',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'Please leave me alone.',
+          local: 'Vær så snill og la meg være i fred.',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'I feel unsafe.',
+          local: 'Jeg føler meg utrygg.',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'Can you help me?',
+          local: 'Kan du hjelpe meg?',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'I don\'t speak Norwegian.',
+          local: 'Jeg snakker ikke norsk.',
+          localLanguage: 'Norwegian'
+        },
+        {
+          english: 'Do you speak English?',
+          local: 'Snakker du engelsk?',
+          localLanguage: 'Norwegian'
+        }
+      ]
     },
     culturalExpectations: {
-      dressCode: 'Practical, warm clothing. No specific restrictions.',
-      behaviorNorms: ['Quiet in public transport', 'Respect personal space'],
-      perception: 'Solo female travelers are common and completely accepted.'
+      dressCode: 'Norwegian fashion emphasizes quality, functionality, and minimalism. Dress warmly and practically with layers. Invest in good outerwear - Norwegians judge by the quality of your jacket and boots, not designer labels. Neutral colors (black, navy, grey) are preferred. Avoid flashy jewelry or obviously expensive items. For restaurants and cultural venues, smart casual is appropriate. Religious sites require modest dress (covered shoulders/knees). Winter requires serious gear - thermal layers, waterproof boots, insulated jacket. Outdoorsy aesthetic widely appreciated - hiking boots and outdoor jackets are fashionable in Norway.',
+      behaviorNorms: [
+        'Respect Norwegian concept of "personal space" - maintain arm\'s length distance in casual interactions',
+        'Keep voices low on public transport and in restaurants - Norwegians value quiet, peaceful environments',
+        'Be punctual always - lateness considered very rude and disrespectful in Norwegian culture',
+        'Remove shoes when entering homes - even some offices and yoga studios require shoe removal',
+        'Don\'t make small talk with strangers - Norwegians prefer direct, purposeful conversation',
+        'Respect "allemannsretten" (right to roam) when hiking - leave no trace, don\'t disturb nature',
+        'Wait for walk signals even when no traffic - Norwegians follow rules meticulously',
+        'Don\'t cut in lines or push - orderly queuing is sacred in Norwegian culture',
+        'Avoid discussing personal finances, salaries, or asking about income - considered private',
+        'Don\'t expect excessive friendliness from service workers - efficiency preferred over warmth',
+        'Respect environmental consciousness - recycle properly, use public transport, avoid waste',
+        'In restaurants, wait to be seated and don\'t rush meals - Norwegians take time with dining'
+      ],
+      perception: 'Solo female travelers are extremely common and completely normalized in Norwegian society. Norway consistently ranks #1-3 globally for gender equality, making it incredibly welcoming for independent women. Local women frequently travel solo domestically and internationally, so you\'ll blend in seamlessly. Norwegians are respectful of personal space and boundaries - harassment is extremely rare. The culture values independence and self-sufficiency, making solo travel not just accepted but admired. Norwegian men are generally respectful and unlikely to approach women aggressively. However, Norwegians can seem reserved initially - this isn\'t unfriendliness but cultural preference for privacy. Once engaged in conversation, they\'re helpful and knowledgeable. Women dining alone, hiking alone, or exploring cultural sites alone is completely normal and draws no attention.'
     },
     bestTimeToVisit: {
-      safestMonths: ['June-August'],
-      events: 'Summer is best for weather. Winter is safe but cold and dark.'
+      safestMonths: ['May-September (optimal for solo female travelers)'],
+      events: 'Summer (June-August): Midnight sun, warmest weather, all hiking trails accessible, outdoor festivals, but most expensive and crowded. Spring (April-May): Fewer tourists, moderate prices, pleasant weather, longer daylight returning. Early Fall (September-October): Beautiful autumn colors, comfortable temperatures, Northern Lights season begins. Winter (November-March): Polar night, extremely cold, but Northern Lights, Christmas markets, winter sports. Note: Winter requires serious cold-weather gear and affects mental health due to limited daylight (4-6 hours daily).'
     },
     emergencyInfo: {
       police: '112', fire: '110', medical: '113', general: '112'
     },
     currency: {
-      name: 'Norwegian Krone', code: 'NOK', exchangeRate: {
-      usd: 0.0984,
-      eur: 0.0839,
-      gbp: 0.0732
-    }, scamWarnings: []
+      name: 'Norwegian Krone', 
+      code: 'NOK', 
+      exchangeRate: {
+        usd: 0.0984,
+        eur: 0.0839,
+        gbp: 0.0732
+      },
+      exchangeTips: [
+        'Norway is essentially cashless - most places don\'t accept cash, even for small purchases',
+        'Contactless payment (tap cards, mobile pay) used everywhere including public transport and street vendors',
+        'Ensure your cards work internationally and notify banks before travel to avoid blocks',
+        'ATMs available but rarely needed - most locals haven\'t used cash in years',
+        'Mobile payment apps like Vipps popular locally but require Norwegian bank account',
+        'Credit cards accepted universally with no minimum purchase amounts',
+        'Tipping not expected as service charges included - round up only for exceptional service',
+        'Budget significantly more than other European capitals - Oslo among world\'s most expensive cities'
+      ],
+      scamWarnings: [
+        'Very few financial scams due to cashless society and strong consumer protections',
+        'Fake charity collectors occasionally approach tourists - legitimate charities use digital donations',
+        'Overcharging rare due to regulated pricing and cultural honesty values',
+        'ATM skimming extremely rare but use bank-affiliated ATMs when needed'
+      ]
     },
     scamWarnings: [],
     usefulTips: [
@@ -792,7 +911,10 @@ const oslo: Destination = {
         'Stay in hostels or budget hotels outside peak summer season',
         'Use city bikes for cheap transportation in good weather'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default oslo;

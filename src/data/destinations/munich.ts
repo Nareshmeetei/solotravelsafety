@@ -138,22 +138,24 @@ const munich: Destination = {
 • Cash is still preferred in many places - keep euros handy alongside cards
 • Sunday closures are common for shops - plan accordingly for groceries and shopping`,
       apps: [
-        'MVV (Munich Public Transport)',
-        'DB Navigator',
-        'Google Maps',
+        'NomadHer',
         'Travel Ladies',
-        'TripAdvisor',
-        'Uber',
-        'N26 (Banking)'
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'MVV Munich',
+        'Komoot',
+        'FreeNow'
       ],
       appLinks: [
-        { name: 'MVV', link: 'https://www.mvv-muenchen.de/en/', description: 'Official Munich public transport app with tickets and journey planning' },
-        { name: 'DB Navigator', link: 'https://www.bahn.com/en/', description: 'German Railway app for longer distance travel and connections' },
-        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Excellent for navigation and local business information in Munich' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female traveler community - great for Munich safety updates and tips' },
-        { name: 'TripAdvisor', link: 'https://www.tripadvisor.com/', description: 'Restaurant and attraction reviews with good Munich coverage' },
-        { name: 'Uber', link: 'https://www.uber.com/', description: 'Available in Munich for convenient and safe transportation' },
-        { name: 'N26', link: 'https://n26.com/', description: 'Digital bank popular in Germany for easy Euro transactions' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Munich exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Germany safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel in Europe', rating: 4.1 },
+        { name: 'MVV Munich', link: 'https://www.mvv-muenchen.de/', description: 'Official Munich public transport app with real-time U-Bahn, S-Bahn info', rating: 4.5 },
+        { name: 'Komoot', link: 'https://www.komoot.com/', description: 'Perfect for safe hiking in Bavarian Alps and cycling around Munich', rating: 4.6 },
+        { name: 'FreeNow', link: 'https://www.free-now.com/', description: 'Popular European taxi app with verified drivers in Munich', rating: 4.3 }
       ],
       emergencyPhrases: [
         {
@@ -901,7 +903,10 @@ const munich: Destination = {
         'Student discounts available with ISIC card at many attractions',
         'Christmas markets and summer festivals offer free entertainment'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default munich;

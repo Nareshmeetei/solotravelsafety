@@ -142,22 +142,24 @@ const nagano: Destination = {
 • Bow slightly when greeting people and saying thank you - shows respect for local customs
 • Learn basic Japanese etiquette - it\'s greatly appreciated and improves interactions`,
       apps: [
-        'Google Translate',
-        'Hyperdia',
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'JR East Train Info',
-        'Japan Travel',
-        'Tenki.jp (Weather)',
-        'Maps.me',
-        'Travel Ladies'
+        'YamaChai',
+        'Snow Forecast'
       ],
       appLinks: [
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for reading Japanese signs, menus, and basic communication' },
-        { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Comprehensive train schedule and route planning for Japan' },
-        { name: 'JR East Train Info', link: 'https://www.jreast-app.com/', description: 'Real-time train information and delays for JR East lines' },
-        { name: 'Japan Travel', link: 'https://www.japan.travel/', description: 'Official tourism app with attractions and local information' },
-        { name: 'Tenki.jp', link: 'https://tenki.jp/', description: 'Accurate weather forecasts essential for mountain activities' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps useful in remote mountain areas' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female traveler community with Japan-specific safety tips' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Japan exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Japan safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for mountain travel', rating: 4.1 },
+        { name: 'JR East Train Info', link: 'https://www.jreast.co.jp/e/', description: 'Official JR East app essential for Nagano train connections and delays', rating: 4.5 },
+        { name: 'YamaChai', link: 'https://yamacha.com/', description: 'Japanese mountain weather and hiking app for safe Alps exploration', rating: 4.4 },
+        { name: 'Snow Forecast', link: 'https://www.snow-forecast.com/', description: 'Essential for Nagano ski resort conditions and avalanche warnings', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -902,7 +904,10 @@ const nagano: Destination = {
         'Shop at 100-yen stores for travel supplies and souvenirs',
         'Use IC cards for public transport discounts and convenience'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default nagano;

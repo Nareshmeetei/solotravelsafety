@@ -151,20 +151,24 @@ const brussels: Destination = {
 • Trust your instincts - if you feel unsafe, seek help in shops, hotels, or contact authorities
 • Stay in recommended safe neighborhoods like Uccle, Ixelles, or central Brussels`,
       apps: [
-        'STIB-MIVB',
-        'Citymapper',
-        'Uber',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me'
+        'STIB MIVB',
+        'Uber Belgium',
+        'BE-Alert'
       ],
       appLinks: [
-        { name: 'STIB-MIVB', link: 'https://www.stib-mivb.be/', description: 'Official Brussels public transport app with journey planning and real-time updates', hoverColor: 'hover:text-purple-600' },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Smart urban transport navigation for Brussels with live transit data', hoverColor: 'hover:text-purple-600' },
-        { name: 'Uber', link: 'https://www.uber.com/be/en/', description: 'Ride-sharing service available in Brussels - safer than unlicensed taxis', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community with Brussels safety tips and women\'s experiences', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Brussels neighborhoods and streets', hoverColor: 'hover:text-purple-600' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features and local points of interest', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Brussels', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Belgium safety insights', rating: 4.0 },
+        { name: 'STIB MIVB', link: 'https://www.stib-mivb.be/', description: 'Official Brussels public transport app for metro, trams, buses with real-time info', rating: 4.2 },
+        { name: 'Uber Belgium', link: 'https://www.uber.com/be/', description: 'Ride-hailing app available in Brussels with driver verification and GPS tracking', rating: 4.3 },
+        { name: 'BE-Alert', link: 'https://www.be-alert.be/', description: 'Official Belgian emergency alert system for security threats and emergencies', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -946,7 +950,10 @@ const brussels: Destination = {
         'Dining alone is completely normal - Brussels has excellent cafe culture for solo travelers',
         'Many attractions are free or low-cost, allowing budget allocation toward safe accommodation and transport'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default brussels;

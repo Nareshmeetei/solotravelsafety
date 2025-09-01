@@ -127,27 +127,28 @@ const berlin: Destination = {
       firstTimers: `• Berlin is generally safe for solo women with cultural awareness
 • Learn basic German phrases - locals appreciate the effort
 • Keep cash handy - many places still don't accept cards
-• Download BVG and DB Navigator apps for seamless transport
-• Join free walking tours to learn the city safely while meeting others`,
+• Download safety apps before arrival - Noonlight works with German emergency services
+• Join free walking tours to learn the city safely while meeting others
+• Use Citymapper and BVG app for seamless transport`,
       apps: [
-        'BVG App',
-        'DB Navigator',
-        'Jelbi',
-        'TripWhistle Global SOS',
+        'NomadHer',
         'bSafe',
-        'GeoSure',
-        'Haven',
-        'EchoSOS'
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'BVG',
+        'FreeNow',
+        'Katwarn'
       ],
       appLinks: [
-        { name: 'BVG App', link: 'https://www.bvg.de/en/connections/bvg-app', description: 'Essential Berlin public transport app with real-time schedules and ticket purchasing', hoverColor: 'hover:text-purple-600' },
-        { name: 'DB Navigator', link: 'https://www.bahn.de/service/mobile/db-navigator', description: 'Official German train app for seamless regional and long-distance travel', hoverColor: 'hover:text-purple-600' },
-        { name: 'Jelbi', link: 'https://www.jelbi.de/', description: 'Berlin\'s unified transport app accessing 60,000+ vehicles including bikes, scooters, and cars', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripWhistle Global SOS', link: 'https://tripwhistle.com/', description: 'One-touch emergency services for 196 countries with GPS location sharing', hoverColor: 'hover:text-purple-600' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Voice-activated emergency calls with live video/audio feed to trusted contacts', hoverColor: 'hover:text-purple-600' },
-        { name: 'GeoSure', link: 'https://www.geosure.com/', description: 'City safety ratings with women-specific safety assessments for Berlin neighborhoods', hoverColor: 'hover:text-purple-600' },
-        { name: 'Haven', link: 'https://guardianproject.info/apps/haven/', description: 'Phone-based personal security system using sensors for room monitoring', hoverColor: 'hover:text-purple-600' },
-        { name: 'EchoSOS', link: 'https://www.echoSOS.com/', description: 'GPS-enabled emergency contacts for 128+ countries with offline capability', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Berlin', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety in Berlin', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Germany safety insights', rating: 4.0 },
+        { name: 'BVG', link: 'https://www.bvg.de/en/', description: 'Official Berlin public transport app for U-Bahn, S-Bahn, buses, trams', rating: 4.2 },
+        { name: 'FreeNow', link: 'https://www.free-now.com/', description: 'Popular German taxi app with verified drivers and safety features', rating: 4.3 },
+        { name: 'Katwarn', link: 'https://www.katwarn.de/', description: 'Official German emergency warning app for disasters and safety alerts', rating: 4.4 }
       ],
       emergencyPhrases: [
         {
@@ -907,7 +908,10 @@ const berlin: Destination = {
         'Use Jelbi app for affordable bike and scooter sharing',
         'Visit during shoulder season for accommodation savings'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default berlin;

@@ -131,27 +131,23 @@ const buenosAires: Destination = {
 • Experience nightlife in Palermo/Recoleta - it's actually safer than staying in`,
       apps: [
         'NomadHer',
-        'Tourlina',
-        'Travel Ladies',
         'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
         'BA Cómo Llego',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Western Union'
+        'Cabify Argentina',
+        'Alerta Buenos Aires'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming', hoverColor: 'hover:text-purple-600' },
-        { name: 'BA Cómo Llego', link: 'https://play.google.com/store/apps/details?id=ar.gob.buenosaires.ba', description: 'Official Buenos Aires transport app with optimal routes for Subte and buses', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees', hoverColor: 'hover:text-purple-600' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Argentine peso and offline converter', hoverColor: 'hover:text-purple-600' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities', hoverColor: 'hover:text-purple-600' },
-        { name: 'Western Union', link: 'https://www.westernunion.com/ar/en', description: 'Safest money exchange option in Buenos Aires with secure locations', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Buenos Aires', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety in South America', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Argentina safety insights', rating: 4.0 },
+        { name: 'BA Cómo Llego', link: 'https://www.buenosaires.gob.ar/', description: 'Official Buenos Aires transport app for buses, subte, trains with real-time info', rating: 4.2 },
+        { name: 'Cabify Argentina', link: 'https://cabify.com/ar', description: 'Popular Argentine ride-hailing app with verified drivers and safety features', rating: 4.4 },
+        { name: 'Alerta Buenos Aires', link: 'https://www.buenosaires.gob.ar/aplicacionesmoviles', description: 'Official Buenos Aires emergency and safety alert app from city government', rating: 4.6 }
       ],
       emergencyPhrases: [
         {
@@ -824,7 +820,10 @@ const buenosAires: Destination = {
         'Use Uber for safety rather than trying to save money with risky transport',
         'Stay in Palermo or Recoleta for best safety-to-value ratio'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default buenosAires;

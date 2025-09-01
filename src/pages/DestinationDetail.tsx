@@ -36,6 +36,7 @@ import { getReviewsForDestination } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from '../components/AuthModal';
 import FlagImage from '../components/FlagImage';
+import { StarRating } from '../components/StarRating';
 import SafetyByTimeOfDay from '../components/SafetyByTimeOfDay';
 import MostReportedRedFlags from '../components/MostReportedRedFlags';
 import CulturalSensitivityTips from '../components/CulturalSensitivityTips';
@@ -1261,6 +1262,25 @@ const DestinationDetail: React.FC = () => {
                         </div>
                       </div>
                     )}
+
+                    {/* YouTube Video Section */}
+                    {dest.youtubeVideo && dest.youtubeVideo.videoId && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">
+                          See How It's Like
+                        </h3>
+                        <div className="relative w-full" style={{ paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+                          <iframe
+                            src={`https://www.youtube.com/embed/${dest.youtubeVideo.videoId}`}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="absolute top-0 left-0 w-full h-full rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -1625,6 +1645,9 @@ const DestinationDetail: React.FC = () => {
                                   {app}
                                   <ExternalLink className="h-3 w-3 ml-1 transition-all duration-300 app-icon" />
                                 </span>
+                                {appLinkObj?.rating && (
+                                  <StarRating rating={appLinkObj.rating} size="sm" />
+                                )}
                               </div>
                               {appLinkObj?.description && (
                                 <p className="text-sm text-gray-600">{appLinkObj.description}</p>
@@ -1634,6 +1657,9 @@ const DestinationDetail: React.FC = () => {
                             <div key={index} className="p-3 bg-gray-50 border border-gray-200 rounded-lg opacity-75">
                               <div className="flex items-center justify-between mb-2">
                                 <span className="font-semibold text-gray-900">{app}</span>
+                                {appLinkObj?.rating && (
+                                  <StarRating rating={appLinkObj.rating} size="sm" />
+                                )}
                               </div>
                               {appLinkObj?.description && (
                                 <p className="text-sm text-gray-600">{appLinkObj.description}</p>
@@ -2011,27 +2037,56 @@ const DestinationDetail: React.FC = () => {
                     <h3 className="text-lg font-display text-gray-900 mb-4">Recommended Stays</h3>
                     <div className="space-y-4">
                       {safeAccommodations.map((accommodation: any, index: number) => (
-                        <div key={index} className="p-4 bg-gray-50 rounded-lg">
-                          <div className="flex items-center justify-between mb-2">
-                            {accommodation.link ? (
-                              <a
-                                href={accommodation.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-display text-gray-900 hover:underline hover:text-blue-700 transition-colors"
-                              >
-                                <h4>{accommodation.name}</h4>
-                              </a>
-                            ) : (
-                              <h4 className="font-display text-gray-900">{accommodation.name}</h4>
-                            )}
-                            <div className="flex items-center space-x-1">
-                              {[1,2,3,4,5].map((star) => (
-                                <Star 
-                                  key={star} 
-                                  className={`h-3 w-3 ${star <= accommodation.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
-                                />
-                              ))}
+                        <div 
+                          key={index} 
+                          className="p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-all duration-300 cursor-pointer"
+                          onMouseEnter={(e) => {
+                            const accommodationName = e.currentTarget.querySelector('.accommodation-name');
+                            const accommodationIcon = e.currentTarget.querySelector('.lucide-external-link');
+                            if (accommodationName) {
+                              accommodationName.style.color = '#8342FA';
+                              accommodationName.style.setProperty('color', '#8342FA', 'important');
+                            }
+                            if (accommodationIcon) {
+                              accommodationIcon.style.color = '#8342FA';
+                              accommodationIcon.style.setProperty('color', '#8342FA', 'important');
+                            }
+                            e.currentTarget.style.borderColor = 'rgba(158, 125, 255, 0.3)';
+                          }}
+                          onMouseLeave={(e) => {
+                            const accommodationName = e.currentTarget.querySelector('.accommodation-name');
+                            const accommodationIcon = e.currentTarget.querySelector('.lucide-external-link');
+                            if (accommodationName) {
+                              accommodationName.style.color = '#111827';
+                              accommodationName.style.setProperty('color', '#111827', 'important');
+                            }
+                            if (accommodationIcon) {
+                              accommodationIcon.style.color = '#9CA3AF';
+                              accommodationIcon.style.setProperty('color', '#9CA3AF', 'important');
+                            }
+                            e.currentTarget.style.borderColor = '#e5e7eb';
+                          }}
+                        >
+                          <div className="mb-2">
+                            <div className="flex items-center justify-between mb-1">
+                              {accommodation.link ? (
+                                <a
+                                  href={accommodation.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="font-display text-gray-900 hover:text-gray-700 transition-colors"
+                                >
+                                  <h4 className="accommodation-name">{accommodation.name}</h4>
+                                </a>
+                              ) : (
+                                <h4 className="font-display text-gray-900 accommodation-name">{accommodation.name}</h4>
+                              )}
+                              {accommodation.link && (
+                                <ExternalLink className="h-4 w-4 transition-all duration-300 text-gray-400 ml-2" />
+                              )}
+                            </div>
+                            <div>
+                              <StarRating rating={accommodation.rating} size="sm" />
                             </div>
                           </div>
                           <p className="text-sm text-gray-600 mb-2">{accommodation.notes}</p>

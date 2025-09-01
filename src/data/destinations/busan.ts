@@ -121,8 +121,7 @@ const busan: Destination = {
 • Bring layers for unpredictable weather
 • Avoid flashy jewelry and keep your bag zipped
 • Wear comfortable shoes for walking
-• Always carry a charged phone and emergency contacts
-• Consider a cross-body bag with secure zippers for better safety`,
+• Carry a small crossbody bag or secure backpack to deter pickpockets`,
       firstTimers: `• Busan is very easy for solo women, but stay alert, especially at night
 • Save emergency numbers (112 for police, 119 for medical) and local support hotlines
 • Use official taxis or ride-sharing apps after dark (KakaoTaxi, Uber)
@@ -131,24 +130,24 @@ const busan: Destination = {
 • Download essential apps: KakaoMap, Subway Korea, KakaoTalk
 • Learn basic Korean phrases for better communication`,
       apps: [
-        'KakaoMap',
-        'Subway Korea',
-        'KakaoTaxi',
-        'KakaoTalk',
-        'Tourlina',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me'
+        'KakaoMap',
+        'Busan Metro',
+        'KakaoTaxi'
       ],
       appLinks: [
-        { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Korean navigation app', hoverColor: 'hover:text-purple-600' },
-        { name: 'Subway Korea', link: 'https://www.smrt.co.kr/', description: 'Public transport navigation', hoverColor: 'hover:text-purple-600' },
-        { name: 'KakaoTaxi', link: 'https://taxi.kakao.com/', description: 'Ride-sharing service', hoverColor: 'hover:text-purple-600' },
-        { name: 'KakaoTalk', link: 'https://www.kakaocorp.com/service/KakaoTalk', description: 'Korean messaging app', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion for solo women', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips', hoverColor: 'hover:text-purple-600' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for areas', hoverColor: 'hover:text-purple-600' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Busan', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with South Korea safety insights', rating: 4.0 },
+        { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Essential Korean navigation app with detailed local info for Busan exploration', rating: 4.7 },
+        { name: 'Busan Metro', link: 'https://www.humetro.busan.kr/', description: 'Official Busan subway app with real-time info and women-only car locations', rating: 4.6 },
+        { name: 'KakaoTaxi', link: 'https://www.kakaocorp.com/page/service/service/KakaoTaxi', description: 'Korea\'s most popular taxi app with verified drivers and GPS tracking', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -881,7 +880,10 @@ const busan: Destination = {
         'Walking is safe and free - take advantage of Busan\'s pedestrian-friendly areas',
         'Korean hospitality industry has strict safety regulations'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default busan;

@@ -163,22 +163,24 @@ const edinburgh: Destination = {
 • Scottish people extremely friendly and helpful - don\'t hesitate to ask for directions when traveling alone
 • Apply for UK Electronic Travel Authorization (ETA) at least 3 days before arrival (£10 fee)`,
       apps: [
-        'Transport for Edinburgh',
-        'ScotRail',
-        'Google Maps Offline',
-        'bSafe Personal Safety',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
-        'CitizenAID',
-        'What3Words'
+        'Lothian Buses',
+        'ScotRail',
+        'OS Maps'
       ],
       appLinks: [
-        { name: 'Transport for Edinburgh', link: 'https://www.lothianbuses.com/', description: 'Official app for buses and trams - contactless payment, no exact change needed' },
-        { name: 'ScotRail', link: 'https://www.scotrail.co.uk/', description: 'Train services throughout Scotland with mobile tickets and journey planning' },
-        { name: 'Google Maps Offline', link: 'https://maps.google.com/', description: 'Download Edinburgh offline maps - essential for navigation without internet' },
-        { name: 'bSafe Personal Safety', link: 'https://getbsafe.com/', description: 'GPS tracking, emergency alerts, and fake call features for solo travelers' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community with Edinburgh-specific safety tips and connections' },
-        { name: 'CitizenAID', link: 'https://www.citizenaid.org/', description: 'Emergency first aid app with step-by-step guidance for medical situations' },
-        { name: 'What3Words', link: 'https://what3words.com/', description: 'Precise location sharing for emergency services - every 3x3m square has unique address' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Edinburgh exploration', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Scotland safety insights', rating: 4.0 },
+        { name: 'Lothian Buses', link: 'https://www.lothianbuses.com/', description: 'Official Edinburgh bus and tram app with real-time arrivals', rating: 4.5 },
+        { name: 'ScotRail', link: 'https://www.scotrail.co.uk/', description: 'Official Scottish train app for travel to Highlands, Glasgow, and across Scotland', rating: 4.4 },
+        { name: 'OS Maps', link: 'https://www.ordnancesurvey.co.uk/', description: 'Official UK mapping app perfect for Edinburgh hills and Scottish countryside hiking', rating: 4.7 }
       ],
       emergencyPhrases: [
         {
@@ -919,7 +921,10 @@ const edinburgh: Destination = {
           type: 'Emotional support (24/7 free)'
         }
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default edinburgh;

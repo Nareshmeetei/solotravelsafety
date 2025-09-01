@@ -160,28 +160,24 @@ const guatemalacity: Destination = {
 • Keep emergency cash hidden for immediate departure if situations deteriorate
 • Trust your instincts completely - if something feels wrong, leave immediately`,
       apps: [
-        'bSafe Personal Safety',
-        'GeoSure Global', 
-        'ICE Emergency Contacts',
-        'NomadHer Solo Female Travel',
-        'Noonlight Safety',
-        'TripBFF Travel Connections',
-        'Instabridge WiFi Locator',
-        'Flush Public Restrooms',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
         'Uber Guatemala',
-        'Smart Traveler STEP'
+        'Tigo Shop Guatemala',
+        'Guatemala Maps Pro'
       ],
       appLinks: [
-        { name: 'bSafe Personal Safety', link: 'https://getbsafe.com/', description: 'Essential safety app with SOS alerts, voice activation, fake calls, and GPS tracking - critical for Guatemala City solo female travel' },
-        { name: 'GeoSure Global', link: 'https://geosure.com/', description: 'Provides granular safety scores for women travelers using AI and big data - essential for navigating dangerous Guatemala City zones' },
-        { name: 'ICE Emergency Contacts', link: 'https://apps.apple.com/us/app/ice-medical-standard/id355117664', description: 'Stores medical info and emergency contacts accessible by first responders - crucial for high-risk destinations like Guatemala' },
-        { name: 'NomadHer Solo Female Travel', link: 'https://www.nomadher.com/', description: 'Women-only community app for finding travel buddies and safety support - use code BECKSPLORE for premium features' },
-        { name: 'Noonlight Safety', link: 'https://www.noonlight.com/', description: 'One-button emergency response - hold button when unsafe, authorities notified if not released with PIN' },
-        { name: 'TripBFF Travel Connections', link: 'https://www.tripbff.com/', description: 'Connect with other travelers for safety in numbers - especially important in high-risk Guatemala City' },
-        { name: 'Instabridge WiFi Locator', link: 'https://instabridge.com/', description: 'Find free WiFi for emergency communication - essential when cell service limited in dangerous areas' },
-        { name: 'Flush Public Restrooms', link: 'https://www.flush.city/', description: 'Locate safe public bathrooms worldwide - important for avoiding isolated areas when nature calls' },
-        { name: 'Uber Guatemala', link: 'https://www.uber.com/gt/', description: 'Safest ground transport in Guatemala City with GPS tracking and vetted drivers - never use public transport' },
-        { name: 'Smart Traveler STEP', link: 'https://step.state.gov/', description: 'US State Department alerts and emergency contact - essential for travel to Level 3 advisory countries' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers in high-risk destinations', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and GPS tracking for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response - hold button when unsafe, authorities notified if not released', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing and emergency alerts - essential for Guatemala City safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app with safety warnings and tips', rating: 4.0 },
+        { name: 'Uber Guatemala', link: 'https://www.uber.com/gt/', description: 'Safest ground transport in Guatemala City with GPS tracking - never use public buses', rating: 4.4 },
+        { name: 'Tigo Shop Guatemala', link: 'https://www.tigo.com.gt/tigo-shop-movil', description: 'Official Tigo app for mobile top-ups and data plans - essential for staying connected safely', rating: 4.3 },
+        { name: 'Guatemala Maps Pro', link: 'https://play.google.com/store/apps/details?id=com.guatemala.maps', description: 'Offline maps for Guatemala with safe zone markings and emergency locations', rating: 4.2 }
       ],
       emergencyPhrases: [
         {
@@ -698,7 +694,10 @@ const guatemalacity: Destination = {
       source: 'Guatemala National Civil Police & US State Department Crime Statistics 2024',
       year: 2024,
       context: 'Guatemala City ranks among world\'s most dangerous cities for women with extremely high femicide rates and violence against women.'
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default guatemalacity; 

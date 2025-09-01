@@ -127,22 +127,16 @@ const vienna: Destination = {
 • Stay in central districts (1st-9th) for best safety and accessibility
 • Is Vienna safe for solo female travellers? Absolutely - it's one of Europe's safest capitals`,
       apps: [
-        'WienMobil',
-        'Qando Vienna',
-        'Tourlina',
+        'NomadHer',
         'Travel Ladies',
-        'My Safetipin',
-        'Maps.me',
-        'Citymapper Vienna'
+        'bSafe', 
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'WienMobil', link: 'https://www.wienerlinien.at/wienmobil-app', description: 'Official Vienna public transport app with real-time updates' },
-        { name: 'Qando Vienna', link: 'https://www.qando.at/', description: 'Comprehensive Vienna transport and city information' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI travel companion specifically for solo women travelers' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community with Vienna-specific safety tips' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings for Vienna neighborhoods' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features for Vienna' },
-        { name: 'Citymapper Vienna', link: 'https://citymapper.com/', description: 'Smart urban navigation for Vienna\'s transport system' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
       ],
       emergencyPhrases: [
         {
@@ -936,7 +930,10 @@ const vienna: Destination = {
         'Walking tours are often free and provide safe group exploration opportunities',
         'Vienna Card offers transport + attraction discounts for budget-conscious travelers'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default vienna;

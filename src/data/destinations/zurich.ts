@@ -123,18 +123,16 @@ const zurich: Destination = {
 • Emergency number 112 works for all services (police 117, medical 144, fire 118)
 • Swiss are helpful but respect personal space - don't hesitate to ask for directions or help`,
       apps: [
-        'SBB Mobile',
-        'ZVV',
-        'Uber',
-        'Zürich Card',
-        'MeteoSwiss'
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe', 
+        'Google Translate'
       ],
       appLinks: [
-        { name: 'SBB Mobile', link: 'https://www.sbb.ch/en/timetable/mobile-apps/sbb-mobile.html', description: 'Official Swiss public transport app with real-time information' },
-        { name: 'ZVV', link: 'https://www.zvv.ch/zvv/en/timetable-and-maps/zvv-app.html', description: 'Zurich public transport with tickets and real-time updates' },
-        { name: 'Uber', link: 'https://www.uber.com/ch/en/', description: 'Reliable ride-hailing service in Zurich' },
-        { name: 'Zürich Card', link: 'https://www.zuerich.com/en/visit/zurich-card', description: 'Tourist card with transport and attraction discounts' },
-        { name: 'MeteoSwiss', link: 'https://www.meteoswiss.admin.ch/', description: 'Essential weather app for Swiss mountain weather changes' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
       ],
       emergencyPhrases: [
         {
@@ -834,7 +832,10 @@ const zurich: Destination = {
         'Lake Zurich and parks provide free recreation',
         'Safety investment pays off in completely stress-free travel experience'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default zurich;

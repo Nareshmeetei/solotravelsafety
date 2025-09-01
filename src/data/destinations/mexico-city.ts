@@ -157,22 +157,24 @@ const mexicocity: Destination = {
 • Set up emergency communication protocol with family - regular check-ins to prevent virtual kidnapping scams
 • Bring multiple bank cards and distribute cash in hidden locations throughout your belongings`,
       apps: [
-        'Uber',
-        'Didi',
+        'NomadHer',
+        'bSafe',
+        'Noonlight', 
+        'Life360',
         'Travel Ladies',
-        'My Safetipin', 
-        'GeoSure',
-        'Google Translate',
-        'Maps.me'
+        'Uber Mexico',
+        'Didi',
+        'AllTrails'
       ],
       appLinks: [
-        { name: 'Uber', link: 'https://www.uber.com/mx/es/', description: 'Safest ground transport option with GPS tracking and driver verification' },
-        { name: 'Didi', link: 'https://www.didiglobal.com/mx/', description: 'Local ride-sharing alternative to Uber with good safety features' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Essential female traveler community with Mexico City safety updates' },
-        { name: 'My Safetipin', link: 'https://www.safetipin.com/', description: 'Community safety ratings crucial for neighborhood assessment' },
-        { name: 'GeoSure', link: 'https://geosure.ai/', description: 'Real-time safety ratings by location - essential for Mexico City' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Offline Spanish translation for emergency communication' },
-        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps with safety features and neighborhood boundaries' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Mexico City', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button critical for Mexico City safety', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in Mexico', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Mexico City safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Mexico safety warnings and tips', rating: 4.0 },
+        { name: 'Uber Mexico', link: 'https://www.uber.com/mx/', description: 'Safest transport in Mexico City - never use street taxis or public transport', rating: 4.4 },
+        { name: 'Didi', link: 'https://www.didiglobal.com/', description: 'Alternative ride-hailing app popular in Mexico City with driver verification', rating: 4.2 },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Discover hiking trails around Mexico City including Desierto de los Leones and Xochimilco - perfect for solo adventure travelers', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -997,7 +999,10 @@ const mexicocity: Destination = {
           type: 'Consular emergency services'
         }
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default mexicocity;

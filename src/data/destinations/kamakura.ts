@@ -129,7 +129,26 @@ const kamakura: Destination = {
       firstTimers: 'Kamakura is extremely safe for solo female travelers. Purchase JR Pass or IC card for easy transport. Carry cash as many places don\'t accept cards. Stay aware of temple closing times (usually 4:30 PM). Trust your instincts - though crime is virtually non-existent, maintain general travel awareness. Women-only train carriages available during peak hours.',
       harassment: 'Street harassment is almost non-existent in Kamakura and Japan. No catcalling culture exists. Solo female travelers report feeling completely secure walking alone day and night. Respectful Japanese culture means unwanted attention is extremely rare. Only occasional curious staring may occur due to foreign appearance.',
       personalSafety: 'Solo female travel safety in Kamakura is exceptional with 9.6/10 night safety rating. Crime rates are among world\'s lowest. Share your itinerary with someone at home. Use official transport and accommodations. Emergency services respond quickly and efficiently. Local police are helpful and professional.',
-      apps: ['NomadHer - Solo female travel community & safety', 'bSafe - Personal security with SOS alerts', 'GeoSure - Neighborhood safety ratings', 'Noonlight - Emergency alert system', 'Japan Official Travel App - Real-time disaster alerts', 'Safety Tips - Natural disaster updates', 'GetYourGuide - Verified tours and activities', 'Tourlina - Female travel companion finder'],
+      apps: [
+        'NomadHer',
+        'Travel Ladies',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'JR East Train Info',
+        'Hyperdia',
+        'Weather Underground'
+      ],
+      appLinks: [
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Japan exploration', rating: 4.3 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Japan safety insights', rating: 4.0 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for day trips from Tokyo', rating: 4.1 },
+        { name: 'JR East Train Info', link: 'https://www.jreast.co.jp/e/', description: 'Official JR East app for Tokaido Line schedules and delays to Kamakura', rating: 4.5 },
+        { name: 'Hyperdia', link: 'https://www.hyperdia.com/', description: 'Best Japan transit app for planning complex train routes and connections', rating: 4.6 },
+        { name: 'Weather Underground', link: 'https://www.wunderground.com/', description: 'Essential for temple visiting and beach trips - weather changes quickly', rating: 4.4 }
+      ],
       emergencyPhrases: [
         {
           english: 'Help!',
@@ -568,7 +587,10 @@ const kamakura: Destination = {
         'Visit free attractions: beach walks, shrine grounds, traditional neighborhoods',
         'Shop at 100-yen stores for souvenirs and travel essentials'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default kamakura;

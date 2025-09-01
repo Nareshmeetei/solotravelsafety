@@ -146,26 +146,24 @@ const bogota: Destination = {
 • Download essential safety apps and keep them updated
 • Acclimatize to the altitude (2,640m) - take it easy for the first few days`,
       apps: [
-        'WhatsApp Business',
-        'Uber',
-        'Beat',
-        'Taxis Libres',
-        'Nequi',
-        'Rappi',
+        'NomadHer',
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Uber Colombia',
         'Moovit',
-        'First Aid by Red Cross',
-        'Waze'
+        'Smart Citizen'
       ],
       appLinks: [
-        { name: 'WhatsApp Business', link: 'https://www.whatsapp.com/business/', description: 'Essential for emergency communication and business contacts in Colombia - all services use WhatsApp' },
-        { name: 'Uber', link: 'https://www.uber.com/co/en/', description: 'Primary safe transportation option - technically illegal but universally recommended by solo female travelers' },
-        { name: 'Beat', link: 'https://thebeat.co/', description: 'Local ride-sharing alternative with strong safety features, popular among Colombian solo travelers' },
-        { name: 'Taxis Libres', link: 'https://www.taxislibres.com.co/', description: 'Only legal taxi booking app in Colombia with registered drivers and real-time tracking' },
-        { name: 'Nequi', link: 'https://www.nequi.com.co/', description: 'Colombia\'s leading digital wallet with 20M+ users - QR payments reduce cash carrying risks' },
-        { name: 'Rappi', link: 'https://www.rappi.com/', description: 'Colombian on-demand delivery for food, medicine, and essentials - reduces need to venture out alone' },
-        { name: 'Moovit', link: 'https://moovitapp.com/', description: 'Essential for navigating Bogotá\'s TransMilenio system with 8,000+ mapped stops and real-time updates' },
-        { name: 'First Aid by Red Cross', link: 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps', description: 'Crucial for Bogotá\'s 2,600m altitude - provides offline medical guidance for altitude sickness' },
-        { name: 'Waze', link: 'https://www.waze.com/', description: 'Top navigation app in Colombia with community safety alerts and real-time hazard reporting' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Bogotá', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button absolutely critical for Bogotá safety', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in high-crime areas', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Bogotá safety monitoring', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Colombia safety warnings and tips', rating: 4.0 },
+        { name: 'Uber Colombia', link: 'https://www.uber.com/co/', description: 'Essential rideshare in Bogotá - much safer than street taxis with GPS tracking', rating: 4.2 },
+        { name: 'Moovit', link: 'https://moovit.com/', description: 'Public transport app for Bogotá TransMilenio with safety features and route planning', rating: 4.3 },
+        { name: 'Smart Citizen', link: 'https://smartcitizen.cc/', description: 'Citizen reporting app for crime and safety alerts in Colombian cities', rating: 4.0 }
       ],
       emergencyPhrases: [
         {
@@ -903,7 +901,10 @@ const bogota: Destination = {
         'Budget for private transportation via Uber/Beat despite legal ambiguity',
         'Use Taxis Libres as the only legal taxi option with verified drivers'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default bogota; 

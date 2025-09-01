@@ -163,28 +163,24 @@ const cairo: Destination = {
 • Consider travel insurance with evacuation coverage - harassment incidents common
 • Carry whistle and personal alarm - loud noises deter harassers effectively`,
       apps: [
-        'bSafe',
         'NomadHer',
-        'Tourlina',
+        'bSafe',
+        'Noonlight',
+        'Life360',
         'Travel Ladies',
+        'Careem',
         'Wasaleeny',
-        'DARE App',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'Careem'
+        'Maps.Me'
       ],
       appLinks: [
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming - critical for Cairo', hoverColor: 'hover:text-purple-600' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features', hoverColor: 'hover:text-purple-600' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening', hoverColor: 'hover:text-purple-600' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers', hoverColor: 'hover:text-purple-600' },
-        { name: 'Wasaleeny', link: 'https://wasaleeny.com/', description: 'Women-only rideshare with female drivers - essential for safe transport in Cairo', hoverColor: 'hover:text-purple-600' },
-        { name: 'DARE App', link: 'https://dareapp.org/', description: 'Sexual harassment reporting app developed specifically for Egypt', hoverColor: 'hover:text-purple-600' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts', hoverColor: 'hover:text-purple-600' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees', hoverColor: 'hover:text-purple-600' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Egyptian pound and offline converter', hoverColor: 'hover:text-purple-600' },
-        { name: 'Careem', link: 'https://www.careem.com/', description: 'Rideshare with female driver option - safer than street taxis', hoverColor: 'hover:text-purple-600' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Cairo', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button absolutely critical for Cairo harassment', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in high-risk areas', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Cairo safety monitoring', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Egypt safety warnings and support', rating: 4.0 },
+        { name: 'Careem', link: 'https://www.careem.com/', description: 'Essential Middle East rideshare - only safe transport option in Cairo', rating: 4.6 },
+        { name: 'Wasaleeny', link: 'https://wasaleeny.com/', description: 'Women-only taxi service in Egypt - specifically designed for female passenger safety', rating: 4.3 },
+        { name: 'Maps.Me', link: 'https://maps.me/', description: 'Offline navigation essential for Cairo - works without internet and includes safety landmarks', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -955,7 +951,10 @@ const cairo: Destination = {
         'Consider travel insurance with evacuation coverage',
         'Budget extra for tips as security staff and helpful service providers expect compensation'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default cairo;

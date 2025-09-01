@@ -17,7 +17,7 @@ const sansalvador: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 4.1,
-        context: 'SIGNIFICANT IMPROVEMENT: Night safety dramatically improved since 2022 State of Exception. Murder rate dropped 95% to historic low of 1.89 per 100,000 in 2024. However, women should still avoid walking alone after dark, especially outside well-lit areas in Zona Rosa and Escalón. Use trusted transportation and stay alert to surroundings.'
+        context: 'SIGNIFICANT IMPROVEMENT: Night safety dramatically improved since 2022 State of Exception. Murder rate dropped 95% to historic low of 1.89 per 100,000 in 2024. For solo female travelers wondering "is San Salvador safe for women traveling alone," night safety requires extra caution. Women should still avoid walking alone after dark, especially outside well-lit areas in Zona Rosa and Escalón. Use trusted transportation and stay alert to surroundings.'
       },
       publicTransit: {
         score: 5.0,
@@ -122,15 +122,192 @@ const sansalvador: Destination = {
       }
     ],
     safetyTips: {
-      clothing: 'Dress modestly and avoid flashy jewelry. Keep valuables hidden.',
-      firstTimers: 'Arrange airport transfers in advance. Avoid public transport after dark.',
-      apps: ['Uber', 'Waze', 'Google Maps'],
-      emergencyPhrases: ['¡Ayuda!', '¡Llama a la policía!']
+      clothing: `• Dress conservatively to blend in with local women - traditional culture expects modest appearance
+• Avoid revealing clothing like short shorts, crop tops, or low-cut tops to reduce unwanted attention
+• Wear closed-toe shoes for safety and cultural respect - flip-flops only appropriate at beach areas
+• Keep expensive jewelry and designer items hidden to avoid attracting thieves
+• Carry a light shawl or scarf to cover shoulders when entering churches or formal buildings
+• Choose muted colors over bright, flashy clothing that marks you as a tourist target`,
+      firstTimers: `• Arrange private airport transfers in advance - public transport from airport increases risk exposure
+• Stay in safe neighborhoods only: Zona Rosa, Escalón, San Benito, Santa Tecla for best solo female traveler security
+• Download Uber app immediately - much safer than street taxis, especially for solo women at night
+• Learn key Spanish safety phrases before arrival - locals appreciate effort and more likely to help
+• Keep emergency numbers saved in phone including Women's Crisis Hotline 126 (24/7)
+• Use hotel safes religiously for documents and valuables - petty theft still common despite improvements
+• Never walk alone after 7 PM anywhere in San Salvador, even in safe neighborhoods
+• Research cultural norms around machismo - street harassment still prevalent despite security improvements`,
+      apps: [
+        'bSafe',
+        'NomadHer', 
+        'iTranslate',
+        'Uber',
+        'Maps.me',
+        'SpanishDict',
+        'Life360',
+        'Google Maps'
+      ],
+      appLinks: [
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking, emergency alerts, and family location sharing', rating: 4.5 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting verified women travelers safely in Central America', rating: 4.8 },
+        { name: 'iTranslate', link: 'https://www.itranslate.com/', description: 'Top-rated Spanish translator with 4.7/5 stars - essential for El Salvador communication', rating: 4.7 },
+        { name: 'Uber', link: 'https://www.uber.com/', description: 'Safest transportation in El Salvador with driver verification and trip tracking', rating: 4.6 },
+        { name: 'Maps.me', link: 'https://maps.me/', description: 'Offline maps for El Salvador with detailed San Salvador navigation without internet', rating: 4.5 },
+        { name: 'SpanishDict', link: 'https://www.spanishdict.com/', description: 'Best Spanish-English dictionary with pronunciation and context for solo travelers', rating: 4.8 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Location sharing with emergency contacts - critical for solo female travel safety', rating: 4.6 },
+        { name: 'Google Maps', link: 'https://maps.google.com/', description: 'Most accurate navigation in El Salvador with real-time traffic and safety updates', rating: 5.0 }
+      ],
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: '¡Ayuda!',
+          localLanguage: 'Spanish',
+          pronunciation: 'ah-YOO-dah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¡Ayuda!',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¡Ayuda!',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=¡Ayuda!&client=tw-ob'
+          ],
+          phonetic: '¡Ayuda!',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'Call the police!',
+          local: '¡Llama a la policía!',
+          localLanguage: 'Spanish',
+          pronunciation: 'YAH-mah ah lah po-lee-SEE-ah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¡Llama%20a%20la%20policía!',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¡Llama%20a%20la%20policía!',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=¡Llama%20a%20la%20policía!&client=tw-ob'
+          ],
+          phonetic: '¡Llama a la policía!',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'I need a doctor.',
+          local: 'Necesito un médico.',
+          localLanguage: 'Spanish',
+          pronunciation: 'neh-seh-SEE-toh oon MEH-dee-koh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=Necesito%20un%20médico',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=Necesito%20un%20médico',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=Necesito%20un%20médico&client=tw-ob'
+          ],
+          phonetic: 'Necesito un médico.',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'Leave me alone!',
+          local: '¡Déjame en paz!',
+          localLanguage: 'Spanish',
+          pronunciation: 'DEH-hah-meh en pahs',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¡Déjame%20en%20paz!',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¡Déjame%20en%20paz!',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=¡Déjame%20en%20paz!&client=tw-ob'
+          ],
+          phonetic: '¡Déjame en paz!',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'Where is the nearest police station?',
+          local: '¿Dónde está la estación de policía más cercana?',
+          localLanguage: 'Spanish',
+          pronunciation: 'DOHN-deh eh-STAH lah eh-stah-see-OHN deh po-lee-SEE-ah mahs ser-KAH-nah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¿Dónde%20está%20la%20estación%20de%20policía%20más%20cercana?',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¿Dónde%20está%20la%20estación%20de%20policía%20más%20cercana?',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=¿Dónde%20está%20la%20estación%20de%20policía%20más%20cercana?&client=tw-ob'
+          ],
+          phonetic: '¿Dónde está la estación de policía más cercana?',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'I am lost.',
+          local: 'Estoy perdida.',
+          localLanguage: 'Spanish',
+          pronunciation: 'eh-STOY per-DEE-dah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=Estoy%20perdida',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=Estoy%20perdida',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=Estoy%20perdida&client=tw-ob'
+          ],
+          phonetic: 'Estoy perdida.',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'I feel unsafe.',
+          local: 'Me siento insegura.',
+          localLanguage: 'Spanish',
+          pronunciation: 'meh see-EN-toh een-seh-GOO-rah',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=Me%20siento%20insegura',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=Me%20siento%20insegura',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=Me%20siento%20insegura&client=tw-ob'
+          ],
+          phonetic: 'Me siento insegura.',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        },
+        {
+          english: 'Can you help me?',
+          local: '¿Puedes ayudarme?',
+          localLanguage: 'Spanish',
+          pronunciation: 'PWEH-dehs ah-yoo-DAHR-meh',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¿Puedes%20ayudarme?',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=es-ES-ElviraNeural&text=¿Puedes%20ayudarme?',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=es&q=¿Puedes%20ayudarme?&client=tw-ob'
+          ],
+          phonetic: '¿Puedes ayudarme?',
+          voiceInfo: {
+            voiceName: 'es-ES-ElviraNeural',
+            gender: 'Female',
+            displayName: 'Elvira (Spanish Female)'
+          }
+        }
+      ]
     },
     culturalExpectations: {
-      dressCode: 'Modest dress recommended. Avoid drawing attention.',
-      behaviorNorms: ['Be cautious with strangers', 'Avoid political discussions'],
-      perception: 'Solo female travelers are rare and may attract attention.'
+      dressCode: 'Conservative dress essential in traditional Catholic culture. Women expected to wear modest clothing covering shoulders and knees. Colorful traditional "traje de mestiza" dresses reflect local culture but tourists should opt for simple, conservative Western clothing. Avoid tight-fitting, revealing, or flashy clothing which attracts unwanted attention. Closed-toe shoes preferred for respect and safety.',
+      behaviorNorms: [
+        'El Salvador is high-context culture emphasizing formality and politeness above all',
+        'Greet with polite "Buenos días" (morning) or "Buenas tardes" (afternoon) - essential for respect',
+        'Maintain respectful distance in conversations - personal space important in formal culture',
+        'Show deference to elders and authority figures - hierarchical society with strong respect for age',
+        'Accept hospitality gracefully but can politely decline if uncomfortable - refusing rudely is offensive',
+        'Avoid discussing politics, gangs, or recent violence - extremely sensitive topics that can create danger',
+        'Learn basic Spanish phrases - locals greatly appreciate effort and more likely to help solo travelers',
+        'Be patient with slower pace of life - "mañana" attitude is cultural norm, not disrespect'
+      ],
+      perception: 'Solo female travelers extremely rare and draw significant attention. For women asking "is San Salvador safe for female solo travelers," the answer requires understanding that machismo culture means men may be very forward with comments, whistling, and persistent romantic interest. Traditional gender roles mean women expected to be accompanied. Solo women may be seen as unusually independent, leading to both curiosity and unwanted attention.'
     },
     bestTimeToVisit: {
       safestMonths: ['November-April'],
@@ -144,10 +321,35 @@ const sansalvador: Destination = {
       usd: 1.0000,
       eur: 0.8520,
       gbp: 0.7440
-    }, scamWarnings: ['Taxi scams', 'Pickpocketing', 'Fake police officers']
+    }, 
+    exchangeTips: [
+      'No currency exchange needed - El Salvador officially adopted US Dollar (USD) in 2001',
+      'Bring clean, undamaged US bills - damaged or very old bills may be rejected by businesses',
+      'Currency exchange services only needed for non-USD currencies - limited locations available',
+      'Airport currency exchange booths have poor rates - exchange before arrival if coming from non-USD country',
+      'Banks like Banco Agrícola and Scotiabank offer currency exchange for EUR, CAD at better rates than airport',
+      'Exchange rates for non-USD currencies: EUR typically 0.85-0.90, GBP around 0.74-0.78 to USD',
+      'Avoid street money changers completely - illegal and dangerous, especially for solo female travelers',
+      'Hotel currency exchange available but rates 5-10% worse than banks - use only for emergencies',
+      'Keep exchange receipts for tax purposes and proof of legitimate currency conversion'
+    ],
+    scamWarnings: [
+      'Counterfeit currency scams - fake US bills circulated especially in markets and tourist areas, always check bills carefully',
+      'Fake police checkpoints targeting tourists - always ask for proper identification and remain in vehicle',
+      'ATM skimming devices especially at tourist areas - cover PIN and check for loose card readers',
+      'Street vendor overcharging - quote prices 3-4x higher for obvious tourists, negotiate firmly',
+      'Hotel booking scams - fake reservation confirmations leading to unsafe accommodations',
+      'Romance scams targeting solo female travelers through social media and dating apps',
+      'Charity scams using children or disabled individuals to solicit money from sympathetic travelers',
+      'Fake emergency calls claiming family member needs money - verify independently before sending funds'
+    ]
     },
     scamWarnings: [
-      { title: 'Taxi Scams', description: 'Drivers refusing to use meters or taking longer routes.', severity: 'high' }
+      { title: 'Unlicensed Taxi Scams', description: 'Drivers without meters charging inflated rates, taking dangerous detours, or working with criminals to rob passengers. Use only Uber or hotel-arranged transport.', severity: 'high' },
+      { title: 'Fake Police Checkpoints', description: 'Criminals posing as police to extort money or steal belongings. Always ask for proper identification and never hand over documents or money.', severity: 'high' },
+      { title: 'ATM Skimming Devices', description: 'Card readers placed over legitimate ATM slots to steal card information. Check for loose or suspicious attachments, cover PIN entry.', severity: 'medium' },
+      { title: 'Tourist Overcharging', description: 'Street vendors, taxi drivers, and some businesses quote prices 2-3x higher for obvious tourists. Research normal prices and negotiate firmly.', severity: 'medium' },
+      { title: 'Romance Scams', description: 'Targeting solo female travelers through social media, dating apps, or in-person meetings. Goal is to build trust then request money for emergencies.', severity: 'medium' }
     ],
     languages: ['Spanish'],
     daytimeSafetyPercent: 55.1, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/San-Salvador)
@@ -629,7 +831,7 @@ const sansalvador: Destination = {
       reason: 'Improved security situation with 95% reduction in homicides.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/el-salvador-travel-advisory.html',
       soloTravelerAdvice: [
-        'Much safer than previous years - good for first-time Central America travelers',
+        'San Salvador is safe for solo female travelers with proper precautions - excellent for first-time Central America solo travel',
         'Stay in safe neighborhoods: Zona Rosa, Escalón, San Benito',
         'Use Uber or hotel-arranged transport rather than public buses',
         'Exercise normal travel precautions regarding valuables and night activities',
@@ -707,8 +909,8 @@ const sansalvador: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$30 - $50 USD / day',
-        description: 'Covers safe accommodation, meals, transport, and activities at a comfortable level.',
-        tip: 'Budget includes staying in safe neighborhoods which is essential for solo female travelers.'
+        description: 'Covers safe accommodation, meals, transport, and activities at a comfortable level for women traveling alone in San Salvador.',
+        tip: 'Budget includes staying in safe neighborhoods which is essential for solo female travel safety in El Salvador.'
       },
       accommodation: [
         {
@@ -763,7 +965,10 @@ const sansalvador: Destination = {
         'Budget for airport transfers rather than public buses',
         'Safety improvements make El Salvador good value for cautious travelers'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "a5AssOYJ47U"
+  }
 };
 
 export default sansalvador;

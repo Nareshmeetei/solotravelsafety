@@ -160,28 +160,24 @@ const capetown: Destination = {
 • Carry emergency whistle and personal alarm at all times
 • Have comprehensive travel insurance with medical evacuation coverage - healthcare system is strained`,
       apps: [
-        'bSafe',
-        'Sitata',
-        'SafeUp',
         'NomadHer',
-        'TripIt',
-        'Uber',
-        'WhatsApp',
-        'XE Currency',
-        'Emergency SOS',
-        'Bolt'
+        'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
+        'Namola',
+        'Bolt',
+        'Emergency SOS'
       ],
       appLinks: [
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Essential personal safety app with SOS, fake call, and live streaming to guardians' },
-        { name: 'Sitata', link: 'https://www.sitata.com/', description: 'Comprehensive travel safety intelligence with Cape Town crime alerts and hospital locations' },
-        { name: 'SafeUp', link: 'https://safeupapp.com/', description: 'Real-time female guardian network connecting solo women travelers with local helpers' },
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community for safety tips and travel buddies in Cape Town' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Essential for sharing detailed itinerary with trusted contacts for safety tracking' },
-        { name: 'Uber', link: 'https://www.uber.com/za/en/', description: 'Safest transport option with GPS tracking - verify driver details before entering' },
-        { name: 'WhatsApp', link: 'https://www.whatsapp.com/', description: 'Essential for communication and live location sharing with emergency contacts' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Offline currency converter to avoid unsafe money exchange locations' },
-        { name: 'Emergency SOS', link: 'https://support.apple.com/en-us/HT208076', description: 'Built-in smartphone emergency feature - automatically alerts local emergency services' },
-        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Alternative ride-hailing with safety features and driver verification system' }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Cape Town', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button absolutely critical for Cape Town safety', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in high-crime areas', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Cape Town safety monitoring', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with South Africa safety warnings', rating: 4.0 },
+        { name: 'Namola', link: 'https://www.namola.com/', description: 'South African emergency app with panic button and direct police connection', rating: 4.7 },
+        { name: 'Bolt', link: 'https://bolt.eu/', description: 'Safer ride-hailing option in South Africa with driver verification', rating: 4.4 },
+        { name: 'Emergency SOS', link: 'https://support.apple.com/', description: 'Built-in smartphone emergency feature for immediate local emergency services', rating: 4.8 }
       ],
       emergencyPhrases: [
         {
@@ -936,7 +932,10 @@ const capetown: Destination = {
         'Consider cutting trip duration rather than compromising on safety',
         'Private security tours are worth the premium for safe sightseeing'
       ]
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default capetown;

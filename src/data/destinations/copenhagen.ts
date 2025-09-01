@@ -163,39 +163,25 @@ const copenhagen: Destination = {
 • Join local Facebook groups or use women-only travel apps to connect with other female travelers`,
       apps: [
         'NomadHer',
-        'Tourlina',
-        'Travel Ladies',
         'bSafe',
+        'Noonlight',
+        'Life360',
+        'Travel Ladies',
         'DOT Tickets',
-        'TripIt',
-        'Airalo',
-        'XE Currency',
-        'PackPoint',
-        'Rejseplanen'
+        'Copenhagen Bikes',
+        'MobilePay'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Verified female-only travel community with safety features' },
-        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'Find verified female travel buddies with safety screening' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Female travel community & safety tips from real travelers' },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with SOS features and live streaming' },
-        { name: 'DOT Tickets', link: 'https://play.google.com/store/apps/details?id=com.cellpointmobile.mticket.travelcard.dsb', description: 'Official Copenhagen public transport tickets and journey planning' },
-        { name: 'TripIt', link: 'https://www.tripit.com/', description: 'Organize travel plans and share itinerary with trusted contacts' },
-        { name: 'Airalo', link: 'https://www.airalo.com/', description: 'eSIM data plans to stay connected safely without roaming fees' },
-        { name: 'XE Currency', link: 'https://www.xe.com/apps/', description: 'Live exchange rates for Danish krone and offline converter' },
-        { name: 'PackPoint', link: 'https://packpnt.com/', description: 'Smart packing checklist based on weather and activities' },
-        { name: 'Rejseplanen', link: 'https://www.rejseplanen.dk/en/rejsekort_app', description: 'Comprehensive Denmark public transport planning and tickets' },
-        {
-          name: 'Google Maps',
-          link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.maps',
-          ios: 'https://apps.apple.com/app/google-maps/id585027354',
-          description: 'Essential offline maps, real-time navigation, and local business information'
-        },
-        {
-          name: 'Citymapper',
-          link: 'https://citymapper.com/',
-          ios: 'https://apps.apple.com/app/citymapper/id469463298',
-          description: 'Real-time public transport with step-by-step navigation perfect for Copenhagen metro and buses'
-        },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Copenhagen exploration', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel safety', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Denmark safety insights', rating: 4.0 },
+        { name: 'DOT Tickets', link: 'https://dinoffentligetransport.dk/', description: 'Official Danish public transport app for buses, trains, metro with real-time info', rating: 4.6 },
+        { name: 'Copenhagen Bikes', link: 'https://bycyklen.dk/', description: 'Official Copenhagen city bike sharing system perfect for exploring safely', rating: 4.4 },
+        { name: 'MobilePay', link: 'https://www.mobilepay.dk/', description: 'Essential Danish payment app - Denmark is 99% cashless society', rating: 4.7 }
+      ],
+      oldAppLinks: [
         {
           name: 'Tourlina',
           link: 'https://www.tourlina.com/',
@@ -989,7 +975,10 @@ const copenhagen: Destination = {
         cons: ['Increasing rain', 'Shorter days', 'Weather becoming unpredictable'],
         packingEssentials: ['Layered clothing', 'Waterproof jacket', 'Warm accessories']
       }
-    }
+    },
+  youtubeVideo: {
+    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  }
 };
 
 export default copenhagen;
