@@ -22,9 +22,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
   autoplay = false,
   privacyMode = true
 }) => {
-  const [currentMethod, setCurrentMethod] = useState<EmbedMethod>(
-    window.location.hostname === 'localhost' ? 'iframe' : 'thumbnail-click'
-  );
+  const [currentMethod, setCurrentMethod] = useState<EmbedMethod>('iframe');
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [userInitiated, setUserInitiated] = useState(false);
