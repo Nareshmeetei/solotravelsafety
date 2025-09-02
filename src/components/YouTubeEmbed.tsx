@@ -22,7 +22,9 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
   autoplay = false,
   privacyMode = true
 }) => {
-  const [currentMethod, setCurrentMethod] = useState<EmbedMethod>('iframe');
+  const [currentMethod, setCurrentMethod] = useState<EmbedMethod>(
+    window.location.hostname === 'localhost' ? 'iframe' : 'thumbnail-click'
+  );
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [userInitiated, setUserInitiated] = useState(false);
@@ -45,7 +47,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
           setHasError(true);
           setCurrentMethod('thumbnail-click');
         }
-      }, 10000); // 10 seconds timeout
+      }, 5000); // 5 seconds timeout
     }
 
     return () => {
