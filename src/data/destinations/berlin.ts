@@ -324,7 +324,19 @@ const berlin: Destination = {
       usd: 1.1737,
       eur: 1.0000,
       gbp: 0.8732
-    }, scamWarnings: [
+    },
+    exchangeTips: [
+      'Use Deutsche Bank, Commerzbank, or Sparkasse ATMs for best rates and security',
+      'Cards accepted widely but cash still king - many restaurants and cafes cash-only',
+      'Always carry €20-50 cash for small venues, markets, and public transport day tickets',
+      'Avoid Reisebank and airport exchanges - rates up to 15% worse than bank ATMs',
+      'Banking hours: 9 AM-4 PM Monday-Friday, some branches open Saturday mornings',
+      'Use ATMs inside banks with security cameras to prevent card skimming',
+      'Tipping culture: Round up or 5-10% for restaurants, €1-2 for drinks',
+      'BVG transport accepts cards but cash often preferred for single tickets',
+      'Keep receipts for VAT refunds on purchases over €25 for non-EU visitors'
+    ],
+    scamWarnings: [
         'Use official bank ATMs inside banks with security cameras to avoid card skimming.',
         'Many smaller venues still prefer cash - keep euros handy.'
       ]

@@ -211,7 +211,19 @@ const barcelona: Destination = {
       usd: 1.1737,
       eur: 1.0000,
       gbp: 0.8732
-    }, scamWarnings: [
+    },
+    exchangeTips: [
+      'Use CaixaBank, BBVA, or Santander ATMs for best rates and no extra fees',
+      'Cards widely accepted - Visa, Mastercard, and contactless payments preferred',
+      'Carry small amounts of cash for tapas bars, markets, and street vendors',
+      'Avoid currency exchange on Las Ramblas and near tourist sites - rates up to 12% worse',
+      'Banking hours: 8:30 AM-2 PM Monday-Friday, some branches open Saturday mornings',
+      'Airport exchanges charge high fees - use city ATMs after arrival',
+      'Tipping culture: Round up bills or leave 5-10% for good service',
+      'Metro tickets and many small purchases require cash or specific cards',
+      'Keep receipts for tax-free shopping on purchases over €90.15 for non-EU visitors'
+    ],
+    scamWarnings: [
         'Use official ATMs and avoid tourist area currency exchanges for better rates.'
       ]
     },

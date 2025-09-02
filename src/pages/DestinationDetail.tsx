@@ -1095,7 +1095,7 @@ const DestinationDetail: React.FC = () => {
                       safetySourceName={dest.safetySourceName}
                       safetySourceUrl={dest.safetySourceUrl}
                     />
-                    <CulturalSensitivityTips dos={dest.culturalDos || []} donts={dest.culturalDonts || []} />
+                    <CulturalSensitivityTips dos={dest.culturalSensitivity?.culturalDos || []} donts={dest.culturalSensitivity?.culturalDonts || []} />
                     <ConfidenceByActivity activities={dest.confidenceByActivity} />
                     <LanguageAndHelp languages={safeLanguages} />
                     {/* --- END NEW DATA SECTIONS --- */}
@@ -1809,6 +1809,53 @@ const DestinationDetail: React.FC = () => {
                         </ul>
                       </div>
                     </div>
+
+                    {/* Currency Exchange Tips */}
+                    {dest.currency && dest.currency.exchangeTips && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Currency Exchange Tips</h3>
+                        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <ul className="space-y-3">
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Avoid currency exchange at Incheon Airport - rates are 3-5% worse than city banks and authorized exchange booths</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Use authorized money changers in Myeongdong, Itaewon, Hongdae districts for better rates than banks</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Banks open limited hours (9 AM - 4 PM weekdays) so plan accordingly or use 24/7 ATMs</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Bring US Dollars or Euros for best exchange rates - other currencies have poor rates</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Download KEB Hana Bank or Shinhan Bank apps for real-time rates before exchanging</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Keep all exchange receipts - legally required for reconverting Korean Won when leaving Korea</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Major department stores (Lotte, Shinsegae) have currency exchange counters with reasonable rates</span>
+                            </li>
+                            <li className="flex items-start space-x-2">
+                              <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                              <span className="text-yellow-900">Avoid street money changers completely - illegal in Korea and may involve counterfeit currency scams</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 

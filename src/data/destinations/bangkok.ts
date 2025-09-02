@@ -220,7 +220,19 @@ const bangkok: Destination = {
       usd: 0.029,
       eur: 0.025,
       gbp: 0.022
-    }, scamWarnings: [
+    },
+    exchangeTips: [
+      'Use Bangkok Bank, Kasikorn, or Siam Commercial Bank ATMs for best rates',
+      'Cards accepted at malls, hotels, restaurants - Visa and Mastercard preferred',
+      'Carry cash for street food, markets, tuk-tuks, and small shops',
+      'Airport exchange counters charge high fees - use city bank branches instead',
+      'Banking hours: 8:30 AM-3:30 PM Monday-Friday, some branches open weekends',
+      'SuperRich (orange and green) money changers offer better rates than banks',
+      'Tipping culture: Not required but 10-20 baht appreciated for good service',
+      'Many temples and local transport require cash - keep small bills handy',
+      'Notify your bank before travel to avoid card blocks in Thailand'
+    ],
+    scamWarnings: [
         'Exchange money at banks or authorized money changers for best rates and avoid counterfeits.'
       ]
     },

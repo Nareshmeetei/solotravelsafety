@@ -319,7 +319,19 @@ const amsterdam: Destination = {
       usd: 1.1737,
       eur: 1.0000,
       gbp: 0.8732
-    }, scamWarnings: [
+    }, 
+    exchangeTips: [
+      'Use Geldmaat ATMs (yellow machines) for best rates - they are fee-free for most international cards',
+      'Cards are widely accepted everywhere - Visa, Mastercard, and contactless payments preferred',
+      'Avoid currency exchange at Schiphol Airport - rates are 10-15% worse than banks',
+      'GWK Travelex offices in city center offer decent rates but charge €3-5 commission',
+      'Many shops accept card payments under €1 - cash becoming less necessary',
+      'Banking hours: Most banks open 9 AM-5 PM Monday-Friday, limited weekend hours',
+      'No need to declare amounts under €10,000 when entering Netherlands',
+      'Tipping culture: Round up bills or add 5-10% for good service, never mandatory',
+      'Save receipts for VAT refunds on purchases over €50 if leaving EU within 3 months'
+    ],
+    scamWarnings: [
         'Always use official ATMs (Geldmaat, the yellow machines) or pay by card, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
       ]
     },

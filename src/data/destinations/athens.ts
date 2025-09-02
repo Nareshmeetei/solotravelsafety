@@ -335,6 +335,17 @@ const athens: Destination = {
         eur: 1.0000,
         gbp: 0.8521
       },
+      exchangeTips: [
+        'Use major bank ATMs (Alpha Bank, National Bank, Eurobank) for best rates and security',
+        'Cards widely accepted at hotels, restaurants, and shops - Visa and Mastercard preferred',
+        'Carry cash for traditional tavernas, street food, and small shops in Plaka',
+        'Avoid exchange kiosks near tourist sites - rates are typically 5-8% worse',
+        'Banking hours: 8 AM-2:30 PM Monday-Thursday, 8 AM-2 PM Friday, closed weekends',
+        'Airport exchange offices charge high fees - use city ATMs instead',
+        'Tipping culture: 5-10% in restaurants, round up taxi fares, cash preferred',
+        'Many archaeological sites and museums require cash for tickets under €20',
+        'Keep receipts for tax-free shopping on purchases over €50 for non-EU visitors'
+      ],
       scamWarnings: [
         'Use bank ATMs for best exchange rates - avoid street exchange kiosks',
         'Many traditional tavernas are cash-only, especially in Plaka',

@@ -224,6 +224,17 @@ const auckland: Destination = {
       eur: 0.5133,
       gbp: 0.4482
     },
+    exchangeTips: [
+      'Use ANZ, ASB, Westpac, or BNZ ATMs for best rates - most charge no foreign transaction fees',
+      'Cards accepted almost everywhere - EFTPOS, Visa, and Mastercard widely used',
+      'Carry small amounts of cash for farmers markets and some food trucks',
+      'Avoid currency exchange at Auckland Airport - rates up to 10% worse than banks',
+      'Banking hours: 9:30 AM-4:30 PM Monday-Friday, limited Saturday hours',
+      'No need to declare amounts under NZ$10,000 when entering New Zealand',
+      'Tipping culture: Not expected or required - round up for exceptional service only',
+      'Many places are cashless - some vendors don\'t accept cash at all',
+      'Use contactless payment (tap and go) for purchases under NZ$200'
+    ],
       scamWarnings: [
         'New Zealand is highly card-friendly—use your debit or credit card for most purchases, and only withdraw small amounts of cash from major bank ATMs (ANZ, ASB, Westpac, BNZ, TSB). Avoid exchanging money at airports or street kiosks, as rates and fees are much worse than at banks or ATMs.'
       ]

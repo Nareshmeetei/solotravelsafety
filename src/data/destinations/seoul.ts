@@ -322,15 +322,7 @@ const seoul: Destination = {
       gbp: 0.0005
     },
     exchangeTips: [
-      'ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates',
-      'Avoid currency exchange at Incheon Airport - rates 3-5% worse than city banks and authorized exchange booths',
-      'Use authorized money changers in Myeongdong, Itaewon, Hongdae - better rates than banks with competitive fees',
-      'Banks open limited hours (9 AM - 4 PM weekdays) - plan currency exchange accordingly or use 24/7 ATMs',
-      'Bring US Dollars or Euros for best exchange rates - other currencies have poor exchange rates in Korea',
-      'Download currency exchange rate apps like KEB Hana Bank or Shinhan Bank for real-time rates before exchanging',
-      'Keep exchange receipts - required for reconverting Won back to foreign currency when leaving Korea',
-      'Major department stores (Lotte, Shinsegae) have currency exchange counters with reasonable rates during shopping',
-      'Avoid street money changers completely - illegal in Korea and may involve counterfeit currency scams'
+      'ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates and avoid airport exchanges which charge 3-5% more'
     ],
     scamWarnings: []
   },
@@ -373,7 +365,7 @@ const seoul: Destination = {
     },
     {
       title: 'Currency & Exchange Tips',
-      description: '• ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates\n• Avoid currency exchange at Incheon Airport - rates are 3-5% worse than city banks and authorized exchange booths\n• Use authorized money changers in Myeongdong, Itaewon, Hongdae districts for better rates than banks\n• Banks open limited hours (9 AM - 4 PM weekdays) so plan accordingly or use 24/7 ATMs\n• Bring US Dollars or Euros for best exchange rates - other currencies have poor rates\n• Download KEB Hana Bank or Shinhan Bank apps for real-time rates before exchanging\n• Keep all exchange receipts - legally required for reconverting Korean Won when leaving Korea\n• Major department stores (Lotte, Shinsegae) have currency exchange counters with reasonable rates\n• Avoid street money changers completely - illegal in Korea and may involve counterfeit currency scams',
+      description: 'ATMs widely available throughout Seoul - use bank ATMs (KB, Shinhan, Woori) for best exchange rates and avoid airport exchanges which charge 3-5% more',
       severity: 'low',
       sourceName: 'Korea Tourism Organization',
       sourceUrl: 'https://english.visitkorea.or.kr/'
@@ -449,22 +441,14 @@ const seoul: Destination = {
       'Dress impeccably and fashionably - Seoul is Asia\'s fashion capital, appearance directly impacts how you\'re treated and perceived',
       'Use both hands religiously when giving/receiving anything - business cards, money, gifts, even casual items show respect',
       'Learn age hierarchy respect - address older people formally until invited otherwise, crucial for solo female safety and acceptance',
-      'Remove shoes properly in homes, traditional restaurants, and some guesthouses - look for shoe racks at entrances',
-      'Practice chopstick etiquette - never leave them standing in rice, don\'t point with them, place them parallel when finished',
-      'Show genuine interest in Korean culture - ask about history, traditions, K-pop, local food recommendations for instant connection',
-      'Use KakaoTalk for all communication - every Korean uses it, essential for bookings, directions, and meeting locals safely',
-      'Respect personal space on public transport - avoid unnecessary contact, keep conversations quiet, offer seats to elderly'
+      'Remove shoes properly in homes, traditional restaurants, and some guesthouses - look for shoe racks at entrances'
     ],
     culturalDonts: [
       "Don't refuse Korean hospitality abruptly - always try offered food/drink politely, refusal can be seen as disrespectful",
       "Don't write anyone's name in red ink - associated with death in Korean culture, extremely offensive mistake",
       "Don't tip in restaurants or taxis - not customary and can cause confusion or embarrassment for service workers",
       "Don't blow your nose in public - extremely rude, excuse yourself to bathroom or turn away discreetly",
-      "Don't touch Korean people casually - physical contact limited to handshakes and bows, personal space is highly valued",
-      "Don't wear shoes on heated floors (ondol) - traditional Korean heating system, shoes will damage floors and show disrespect",
-      "Don't refuse soju when offered by elders - politely accept even if you don't drink, shows respect for Korean drinking culture",
-      "Don't use one hand for important transactions - always use both hands for payments, receiving change, business cards",
-      "Don't point with index finger - use open hand gesture or subtle head nod, pointing considered very rude"
+      "Don't touch Korean people casually - physical contact limited to handshakes and bows, personal space is highly valued"
     ]
   },
   legalResources: {
