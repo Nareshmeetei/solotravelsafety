@@ -37,7 +37,7 @@ import { useAuth } from '../contexts/AuthContext';
 import AuthModal from '../components/AuthModal';
 import FlagImage from '../components/FlagImage';
 import { StarRating } from '../components/StarRating';
-import YouTubeEmbed from '../components/YouTubeEmbed';
+import SimpleVideoEmbed from '../components/SimpleVideoEmbed';
 import SafetyByTimeOfDay from '../components/SafetyByTimeOfDay';
 import MostReportedRedFlags from '../components/MostReportedRedFlags';
 import CulturalSensitivityTips from '../components/CulturalSensitivityTips';
@@ -1270,10 +1270,9 @@ const DestinationDetail: React.FC = () => {
                         <h3 className="text-xl font-display text-gray-900 mb-4">
                           See How It's Like
                         </h3>
-                        <YouTubeEmbed
+                        <SimpleVideoEmbed
                           videoId={dest.youtubeVideo.videoId}
                           title={`${dest.city} travel video`}
-                          privacyMode={true}
                         />
                       </div>
                     )}

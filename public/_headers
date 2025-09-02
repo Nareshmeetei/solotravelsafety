@@ -26,17 +26,15 @@
   # Forces HTTPS connections
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-  # Cross-Origin Embedder Policy
-  # Prevents cross-origin data leaks
-  Cross-Origin-Embedder-Policy: require-corp
+  # Cross-Origin Embedder Policy - REMOVED to allow YouTube iframes
+  # Cross-Origin-Embedder-Policy: require-corp
 
-  # Cross-Origin Opener Policy
-  # Prevents cross-origin window manipulation
-  Cross-Origin-Opener-Policy: same-origin
+  # Cross-Origin Opener Policy - Relaxed to allow YouTube embeds
+  # Prevents cross-origin window manipulation while allowing iframes
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
 
-  # Cross-Origin Resource Policy
-  # Prevents cross-origin resource access
-  Cross-Origin-Resource-Policy: same-origin
+  # Cross-Origin Resource Policy - Relaxed to allow YouTube resources
+  # Cross-Origin-Resource-Policy: cross-origin
 
 # Specific paths that need different CSP rules
 /api/*
