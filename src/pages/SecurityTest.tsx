@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SecurityHeaders from '../components/SecurityHeaders';
 import RateLimitTest from '../components/RateLimitTest';
+import CSPDebugger from '../components/CSPDebugger';
 
 const SecurityTest: React.FC = () => {
   const [securityChecks, setSecurityChecks] = useState<Record<string, boolean>>({});
@@ -204,6 +205,11 @@ const SecurityTest: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CSP Debugger */}
+          <div className="mt-8">
+            <CSPDebugger />
           </div>
 
           {/* Security Headers Component */}

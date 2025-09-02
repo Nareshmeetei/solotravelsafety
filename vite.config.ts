@@ -10,11 +10,7 @@ export default defineConfig({
   server: {
     port: 5173, // Use standard Vite port
     strictPort: true, // Fail if port is not available
-    // Add development-friendly headers
-    headers: {
-      'X-Frame-Options': 'SAMEORIGIN',
-      'X-Content-Type-Options': 'nosniff'
-    }
+    // Headers removed - managed by _headers files for consistency
   },
   // Enable better error handling
   define: {
