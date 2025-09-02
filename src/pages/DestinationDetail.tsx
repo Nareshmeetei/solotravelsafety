@@ -1495,7 +1495,7 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     {/* Cultural Sensitivity Tips */}
-                    {dest.culturalSensitivityTips && Array.isArray(dest.culturalSensitivityTips) && dest.culturalSensitivityTips.length > 0 && (
+                    {dest.culturalSensitivityTips && dest.culturalSensitivityTips.length > 0 && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Sensitivity Tips</h3>
                         <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-lg">

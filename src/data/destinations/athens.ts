@@ -908,6 +908,17 @@ const athens: Destination = {
         'Shop at local markets for fresh food and souvenirs'
       ]
     },
+  culturalSensitivityTips: [
+    'Learn basic Greek greetings like "Yasou" (hello) and "Efharisto" (thank you) - Greeks are very welcoming to those who try',
+    'Dress modestly when visiting churches and monasteries - cover shoulders, arms, and knees (women should wear long pants/skirts)',
+    'Respect Orthodox Christian traditions - don\'t point feet toward altars, remove hats, and speak quietly in religious sites',
+    'Greeks eat dinner very late (9-11pm) - don\'t be surprised if restaurants are empty at 7pm',
+    'Tipping 5-10% is customary in restaurants and appreciated by service staff',
+    'Never refuse Greek hospitality gracefully - if offered coffee or food, it\'s polite to accept at least a little',
+    'Avoid sensitive political topics unless you know someone well - Greeks are passionate about politics',
+    'Don\'t wave with an open palm (moutza gesture) - it\'s considered offensive in Greek culture',
+    'Respect the afternoon siesta time (2-5pm) - many shops close and noise should be kept to minimum'
+  ],
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

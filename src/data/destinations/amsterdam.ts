@@ -976,6 +976,17 @@ const amsterdam: Destination = {
         'What you spend can directly affect how safe you feel'
       ]
     },
+  culturalSensitivityTips: [
+    'Learn basic Dutch greetings like "Hallo" (hello) and "Dank je wel" (thank you) - locals appreciate the effort',
+    'Be punctual for appointments - Dutch culture values timeliness and being late is considered disrespectful',
+    'Never walk or stand in bicycle lanes (red pavement) - cyclists have right of way and will ring their bells',
+    'Direct communication is normal - Dutch people are straightforward and this isn\'t meant to be rude',
+    'Respect coffee shop rules - these are for cannabis, not just coffee. Don\'t take photos inside',
+    'Dress modestly when visiting churches or religious sites - cover shoulders and knees',
+    'Don\'t take photos of people in the Red Light District - it\'s disrespectful and sometimes illegal',
+    'Tipping 5-10% is appreciated in restaurants but not mandatory like in some countries',
+    'Join the Dutch concept of "gezelligheid" (coziness/togetherness) - embrace the friendly social atmosphere'
+  ],
   youtubeVideo: {
     videoId: "EtxCpMzu1GY"
   }

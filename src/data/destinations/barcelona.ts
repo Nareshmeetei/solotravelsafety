@@ -775,6 +775,17 @@ const barcelona: Destination = {
         'Visit during shoulder season (April-May, September-October) for better accommodation deals'
       ]
     },
+  culturalSensitivityTips: [
+    'Learn basic Spanish/Catalan greetings like "Hola" and "Gràcies" (thank you in Catalan) - locals appreciate both languages',
+    'Respect Catalan culture and language - Barcelona is proudly Catalan, not just Spanish',
+    'Dress appropriately for churches (Sagrada Família, Gothic Quarter) - cover shoulders and knees',
+    'Embrace late dining culture - lunch is 2-4pm, dinner starts after 9pm, restaurants may be empty before then',
+    'Siesta time (2-5pm) is still observed - many smaller shops close, plan accordingly',
+    'Tipping 5-10% in restaurants is appreciated but not mandatory like in other countries',
+    'Don\'t wear revealing clothing when visiting religious sites or traditional neighborhoods',
+    'Avoid discussing Franco era or Catalan independence politics unless you know someone well',
+    'Respect personal space on crowded metro and beaches - Catalans can be more reserved than other Spanish regions'
+  ],
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }
