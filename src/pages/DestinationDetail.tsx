@@ -1274,8 +1274,9 @@ const DestinationDetail: React.FC = () => {
                             src={`https://www.youtube-nocookie.com/embed/${dest.youtubeVideo.videoId}`}
                             title="YouTube video player"
                             frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                             allowFullScreen
+                            loading="lazy"
                             className="absolute top-0 left-0 w-full h-full rounded-lg"
                           />
                         </div>
