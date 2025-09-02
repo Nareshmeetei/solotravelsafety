@@ -1,92 +1,35 @@
-# Security Headers for Solo Travel Safety App
-# These headers protect against XSS, clickjacking, MIME sniffing, and other attacks
+# Security Headers - YouTube iframe compatible
+# Allows inline video playback while maintaining security
 
 /*
-  # Content Security Policy (CSP) - Updated for YouTube 2025 requirements
-  # Prevents XSS attacks by controlling which resources can be loaded
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.supabase.co https://www.youtube.com https://*.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.perplexity.ai data:; img-src 'self' data: https: blob: https://*.ytimg.com https://i.ytimg.com https://*.youtube.com; connect-src 'self' https://*.supabase.co https://api.netlify.com https://*.sentry.io https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com; media-src 'self' https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com blob:; frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; child-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; worker-src 'self' blob: https://*.youtube.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  # Content Security Policy - YouTube iframe enabled
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.supabase.co https://www.youtube.com https://*.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob: https://*.ytimg.com https://i.ytimg.com https://*.youtube.com; connect-src 'self' https://*.supabase.co https://api.netlify.com https://*.sentry.io https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com; media-src 'self' https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com blob:; frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; child-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; worker-src 'self' blob: https://*.youtube.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
-  # X-Content-Type-Options
-  # Prevents MIME sniffing attacks
+  # Security headers that DON'T interfere with YouTube iframes
   X-Content-Type-Options: nosniff
-
-  # Referrer Policy
-  # Controls how much referrer information is sent with requests
   Referrer-Policy: strict-origin-when-cross-origin
-
-  # Permissions Policy
-  # Controls which browser features can be used - Updated for YouTube iframe support
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(self "https://www.youtube.com" "https://www.youtube-nocookie.com" "https://*.youtube.com"), accelerometer=(self "https://www.youtube.com" "https://www.youtube-nocookie.com" "https://*.youtube.com")
-
-  # X-XSS-Protection (legacy, but still useful)
-  # Enables browser's built-in XSS protection
   X-XSS-Protection: 1; mode=block
-
-  # Strict-Transport-Security (HSTS)
-  # Forces HTTPS connections
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-  # Cross-Origin Embedder Policy - REMOVED to allow YouTube iframes
-  # Cross-Origin-Embedder-Policy: require-corp
+  # CRITICAL: These headers REMOVED to allow YouTube iframes:
+  # Cross-Origin-Embedder-Policy: require-corp  <- BLOCKS IFRAMES
+  # Cross-Origin-Resource-Policy: same-origin   <- BLOCKS RESOURCES
 
-  # Cross-Origin Opener Policy - Relaxed to allow YouTube embeds
-  # Prevents cross-origin window manipulation while allowing iframes
-  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  # Permissions Policy - Allow YouTube features
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(self "https://www.youtube.com" "https://www.youtube-nocookie.com" "https://*.youtube.com"), accelerometer=(self "https://www.youtube.com" "https://www.youtube-nocookie.com" "https://*.youtube.com")
 
-  # Cross-Origin Resource Policy - Relaxed to allow YouTube resources
-  # Cross-Origin-Resource-Policy: cross-origin
-
-# Specific paths that need different CSP rules
-/api/*
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'
-
-/netlify/functions/*
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'
-
-# Allow Supabase auth callback to work properly
-/auth/callback
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://*.supabase.co; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'
-
-# Static assets (images, fonts, etc.)
-*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
-
-*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-*.gif
-  Cache-Control: public, max-age=31536000, immutable
-
-*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
-*.ico
-  Cache-Control: public, max-age=31536000, immutable
-
-*.woff
-  Cache-Control: public, max-age=31536000, immutable
-
-*.woff2
-  Cache-Control: public, max-age=31536000, immutable
-
-*.ttf
-  Cache-Control: public, max-age=31536000, immutable
-
-*.eot
-  Cache-Control: public, max-age=31536000, immutable
-
-# JavaScript and CSS files
+# Static assets
 *.js
   Cache-Control: public, max-age=31536000, immutable
 
 *.css
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML files (no caching to ensure fresh content)
-*.html
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0 
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
