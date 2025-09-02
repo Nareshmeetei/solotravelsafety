@@ -1096,7 +1096,10 @@ const DestinationDetail: React.FC = () => {
                       safetySourceName={dest.safetySourceName}
                       safetySourceUrl={dest.safetySourceUrl}
                     />
-                    <CulturalSensitivityTips dos={dest.culturalSensitivity?.culturalDos || []} donts={dest.culturalSensitivity?.culturalDonts || []} />
+{/* Only show new format if it exists, otherwise fall back to old format later */}
+                    {dest.culturalSensitivity?.culturalDos && dest.culturalSensitivity?.culturalDonts && (
+                      <CulturalSensitivityTips dos={dest.culturalSensitivity.culturalDos} donts={dest.culturalSensitivity.culturalDonts} />
+                    )}
                     <ConfidenceByActivity activities={dest.confidenceByActivity} />
                     <LanguageAndHelp languages={safeLanguages} />
                     {/* --- END NEW DATA SECTIONS --- */}
