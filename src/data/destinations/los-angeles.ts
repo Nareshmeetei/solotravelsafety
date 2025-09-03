@@ -1022,6 +1022,22 @@ const losAngeles: Destination = {
         'Metro Bike Share ($1.75/30min) affordable for short trips in safe areas'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Embrace LA\'s incredible diversity with cultural curiosity and respect - 69.7% ethnic diversity requires sensitive interactions',
+      'Follow locals\' lead in dining, entertainment, and social settings - observe and adapt to different neighborhood cultures',
+      'Dress appropriately for various activities and venues - LA has diverse dress codes from beach casual to upscale dining',
+      'Show respect at cultural and religious sites by following guidelines - many communities maintain important traditions',
+      'Tip generously (18-22%) as expected in restaurants and services - standard American hospitality culture'
+    ],
+    culturalDonts: [
+      'Don\'t make assumptions about people based on appearances - LA\'s diversity means avoiding stereotypes is crucial',
+      'Don\'t wear red or blue clothing in South LA areas - gang color associations can create safety issues',
+      'Don\'t discuss controversial topics like immigration or politics casually - sensitive subjects in diverse communities',
+      'Don\'t expect walkable neighborhoods everywhere - car culture dominates and public transport has limitations',
+      'Don\'t underestimate distances and traffic - LA sprawls massively and travel times can be unpredictable'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

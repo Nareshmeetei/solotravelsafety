@@ -680,16 +680,22 @@ const bangkok: Destination = {
         sourceUrl: 'https://www.bangkokstreetfood.guide/'
       }
     ],
-    culturalSensitivityTips: [
-      'Always remove shoes when entering temples and traditional homes',
-      'Dress modestly and cover shoulders/knees at religious sites',
-      'The royal family is deeply revered - never criticize or joke about monarchy',
-      'Monks are highly respected - women should not touch or hand objects directly to monks',
-      'Wai greeting (hands together, slight bow) shows respect and is appreciated',
-      'Head is considered sacred - never touch someone\'s head, even children',
-      'Feet are considered dirty - don\'t point feet at people or Buddha images',
-      'Bargaining is expected at markets but remain polite and good-natured'
-    ],
+    culturalSensitivity: {
+      culturalDos: [
+        'Always remove shoes when entering temples and traditional homes - this is fundamental respect',
+        'Dress modestly and cover shoulders/knees at religious sites - bring a sarong for coverage',
+        'Use the Wai greeting (hands together, slight bow) - it shows respect and is deeply appreciated',
+        'Show reverence for monks and Buddha images - they are central to Thai culture',
+        'Respect the King and royal family - they are deeply beloved and revered in Thai society'
+      ],
+      culturalDonts: [
+        'Don\'t touch someone\'s head, even children - the head is considered sacred in Thai culture',
+        'Don\'t point feet at people or Buddha images - feet are considered the dirtiest part of the body',
+        'Don\'t criticize or joke about the monarchy - it\'s illegal and deeply offensive to Thai people',
+        'Don\'t touch or hand objects directly to monks if you\'re a woman - use a cloth or have a man do it',
+        'Don\'t raise your voice or show anger publicly - Thais value calm, controlled behavior'
+      ]
+    },
     costAndComfort: {
       dailyBudget: {
         range: '$25 - $60 USD / day',

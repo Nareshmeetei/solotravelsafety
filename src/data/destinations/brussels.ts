@@ -951,6 +951,22 @@ const brussels: Destination = {
         'Many attractions are free or low-cost, allowing budget allocation toward safe accommodation and transport'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Greet with "Bonjour" in French or "Goedemorgen" in Dutch - Brussels is bilingual and locals appreciate language effort',
+      'Respect personal space and maintain formal politeness - Belgians value proper etiquette and measured interactions',
+      'Try authentic waffles from street vendors without excessive toppings - locals prefer simple, traditional preparation',
+      'Learn basic phrases in both French and Dutch - Brussels officially uses both languages throughout the city',
+      'Appreciate Belgian beer culture but drink responsibly - Belgian beers are stronger than many visitors expect'
+    ],
+    culturalDonts: [
+      'Don\'t assume everyone speaks English first - start conversations in French or Dutch before switching languages',
+      'Don\'t order heavily topped tourist waffles - authentic Belgian waffles are enjoyed simply with minimal additions',
+      'Don\'t be overly familiar or loud in public - Belgians prefer reserved, polite social interactions',
+      'Don\'t ignore the linguistic divide - be sensitive to French/Dutch language preferences depending on the area',
+      'Don\'t underestimate Belgian beer strength - pace yourself as these traditional brews are much stronger than expected'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

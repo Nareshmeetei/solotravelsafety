@@ -781,6 +781,22 @@ const manila: Destination = {
         'Rainy season actually safer for some crimes but creates new risks from flooding and transportation issues'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Use "po" and "opo" when speaking to elders and authorities - these respect words are fundamental to Filipino politeness',
+      'Remove shoes before entering homes and accept offered refreshments gracefully - refusing hospitality is considered rude',
+      'Show respect to elders with traditional "mano po" gesture - taking their hand to your forehead demonstrates proper reverence',
+      'Embrace "pakikisama" (getting along) by avoiding confrontation and maintaining harmony in social interactions',
+      'Accept gifts with both hands and express deep gratitude - wait until later to open them privately'
+    ],
+    culturalDonts: [
+      'Don\'t be directly confrontational or say "no" bluntly - Filipinos prefer indirect communication to save face',
+      'Don\'t call a host\'s wife "hostess" - this term has offensive alternative meanings in Philippine context',
+      'Don\'t address elders by first names without permission - use "Sir," "Ma\'am," or family titles respectfully',
+      'Don\'t criticize local food or customs even if unfamiliar - show openness and respect for cultural practices',
+      'Don\'t ignore "hiya" (shame) concept - avoid actions that might embarrass others or cause loss of social face'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

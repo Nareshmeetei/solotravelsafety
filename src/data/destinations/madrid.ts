@@ -765,6 +765,22 @@ const madrid: Destination = {
         'Museum passes provide both savings and structured, safe cultural activities ideal for solo exploration'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Greet with "dos besos" (two cheek kisses) and use "Buenos días/tardes" - warm greetings are fundamental to Spanish social interaction',
+      'Adapt to Spanish meal times - lunch around 2pm, dinner after 9pm, and embrace the leisurely dining pace',
+      'Learn key Spanish phrases like "por favor" and "gracias" - locals greatly appreciate language efforts even if basic',
+      'Respect siesta time (2-5pm) when shops close - plan activities around this important cultural break period',
+      'Be patient with relaxed timekeeping - events often start 30+ minutes late and this is culturally normal'
+    ],
+    culturalDonts: [
+      'Don\'t be offended by Spanish directness - blunt communication is cultural norm, not rudeness or intrusion',
+      'Don\'t expect shops and businesses to be open during siesta hours - respect this sacred midday rest tradition',
+      'Don\'t arrive exactly on time to social events - showing up 30 minutes late is actually expected and appropriate',
+      'Don\'t wear beach attire in city areas - cover up with proper clothing when transitioning from beach to urban areas',
+      'Don\'t mistake Spanish male flirtation for harassment - most interactions are playful cultural behavior, not aggression'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

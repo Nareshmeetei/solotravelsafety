@@ -902,6 +902,22 @@ const bogota: Destination = {
         'Use Taxis Libres as the only legal taxi option with verified drivers'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Use proper greetings for time of day - "Buenos días," "Buenas tardes," or "Buenas noches" with direct eye contact',
+      'Show deep respect for family and elders - Colombians value family highly and appreciate when visitors honor this',
+      'Dress neatly and stylishly even in casual settings - appearance is important and helps you blend in safely',
+      'Practice proper table manners - keep hands visible, use cutlery always, wait for "Buen provecho" before eating',
+      'Learn basic Spanish phrases - locals appreciate the effort and it increases your safety as a solo female traveler'
+    ],
+    culturalDonts: [
+      'Don\'t make jokes about drugs or drug trafficking - Colombians find these stereotypes offensive and tiresome',
+      'Don\'t wear overly casual clothes like shorts and flip-flops in urban areas - this makes you stand out as a tourist',
+      'Don\'t ask broad questions about violence in Colombia - locals are open to specific questions but find generalizations annoying',
+      'Don\'t give yellow flowers like marigolds or lilies - these are associated with funerals in Colombian culture',
+      'Don\'t expect strict punctuality - "tiempo colombiano" allows for lateness up to an hour for social events'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

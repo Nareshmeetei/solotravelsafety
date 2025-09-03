@@ -885,6 +885,22 @@ const auckland: Destination = {
         'Hostels in Ponsonby and Parnell are safer but more expensive than CBD options'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Learn basic Māori greetings like "Kia ora" (hello/thank you) - showing respect for indigenous culture is deeply appreciated',
+      'Respect Māori sacred sites (tapu) and never touch cultural objects without permission - spirituality is central to culture',
+      'Wait for formal welcome (pōwhiri) before entering marae (meeting places) - cultural protocols are strictly observed',
+      'Treat all people as equals regardless of background - New Zealand values egalitarian social interactions',
+      'Learn about Treaty of Waitangi and colonial history - understanding past helps navigate cultural sensitivity appropriately'
+    ],
+    culturalDonts: [
+      'Don\'t touch someone\'s head without permission - it\'s considered the most sacred part of the body in Māori culture',
+      'Don\'t sit on tables or pillows where food is served - mixing sacred (tapu) and ordinary (noa) is culturally inappropriate',
+      'Don\'t turn your back when receiving gifts or during cultural ceremonies - it\'s considered highly disrespectful',
+      'Don\'t enter restricted areas marked as tapu (sacred) - these spiritual sites require absolute respect and distance',
+      'Don\'t interrupt or talk during pōwhiri (welcome ceremonies) - these formal traditions demand complete attention and silence'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

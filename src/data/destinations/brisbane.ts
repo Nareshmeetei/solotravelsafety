@@ -835,6 +835,22 @@ const brisbane: Destination = {
         'Australian hospitality industry has strict safety regulations'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Acknowledge Aboriginal and Torres Strait Islander peoples as Traditional Owners - this shows cultural respect and awareness',
+      'Embrace the "fair go" culture by treating everyone equally regardless of background - egalitarianism is core to Australian values',
+      'Use shortened words and informal language - Australians abbreviate everything and prefer casual communication styles',
+      'Be punctual for appointments and social gatherings - Australians value timeliness in both business and personal settings',
+      'Show respect when visiting Aboriginal cultural sites - seek permission from Traditional Owners when appropriate'
+    ],
+    culturalDonts: [
+      'Don\'t boast or act superior - Australians find ostentatious behavior contrived and will quickly distance themselves',
+      'Don\'t use terms like "myth" or "folklore" for Aboriginal beliefs - these are sacred stories and living cultural practices',
+      'Don\'t assume all Aboriginal communities are the same - there are hundreds of distinct cultural groups across Australia',
+      'Don\'t discuss divisive topics like refugee policies without sensitivity - approach controversial subjects respectfully',
+      'Don\'t interrupt or rush conversations with Aboriginal people - they often take thoughtful pauses and speak quietly'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

@@ -803,6 +803,22 @@ const montreal: Destination = {
         'Many summer festivals offer free outdoor entertainment'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Greet with "Bonjour" in French and attempt basic French phrases - Quebec culture values French language and heritage',
+      'Follow Quebecois custom of greeting with two kisses on cheeks - different from English Canadian handshake tradition',
+      'Stand right on escalators leaving left side clear for walking - Canadian etiquette emphasizes consideration for others',
+      'Show respect for diverse cultural communities - Canada prides itself on multiculturalism and inclusion',
+      'Embrace hockey culture and show interest in local teams - hockey is synonymous with Canadian identity'
+    ],
+    culturalDonts: [
+      'Don\'t ignore French language preference in Quebec - always try French first before switching to English',
+      'Don\'t block escalator left lanes or ignore pedestrian etiquette - Canadians have low tolerance for poor manners',
+      'Don\'t confuse Quebec culture with general Canadian culture - Quebecois have distinct French-influenced traditions',
+      'Don\'t be surprised by passionate discussions about cultural identity - Quebec has strong cultural pride',
+      'Don\'t miss trying poutine and maple syrup - refusing iconic Canadian foods shows cultural insensitivity'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

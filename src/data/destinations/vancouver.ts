@@ -806,6 +806,22 @@ const vancouver: Destination = {
         'Safety investment pays off in stress-free travel experience'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Use "please," "thank you," and "sorry" frequently - Canadian politeness is fundamental to social interactions',
+      'Stand right on escalators and wait your turn in lines - orderly queuing is essential Canadian cultural etiquette',
+      'Greet with handshakes rather than hugs or kisses - first meetings maintain respectful physical distance',
+      'Tip 15-20% at restaurants - customary practice showing appreciation for service',
+      'Show respect for Indigenous traditions and Pacific Coast salmon culture - honor First Nations heritage and local customs'
+    ],
+    culturalDonts: [
+      'Don\'t cut in lines or "budge" - this is enormous social taboo and highly offensive to Canadians',
+      'Don\'t brag or be boastful about accomplishments - Canadians value modesty and find arrogance conceited',
+      'Don\'t make insensitive comments about cultures - multiculturalism requires respect for all traditions and backgrounds',
+      'Don\'t litter or ignore environmental conservation - Canadians highly value environmental responsibility',
+      'Don\'t stand too close in social interactions - Canadians maintain arm\'s length personal space boundaries'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

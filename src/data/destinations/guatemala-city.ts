@@ -695,6 +695,22 @@ const guatemalacity: Destination = {
       year: 2024,
       context: 'Guatemala City ranks among world\'s most dangerous cities for women with extremely high femicide rates and violence against women.'
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Greet with "Mucho gusto" when meeting for first time - "Hola" alone is considered too casual for formal interactions',
+      'Dress modestly and conservatively especially in religious sites - appearance is important in this class-conscious society',
+      'Ask permission before photographing people especially Indigenous women and children - consent is crucial for cultural respect',
+      'Use both hands when giving or receiving gifts - shows proper respect and gratitude in Guatemalan culture',
+      'Wait for your host to begin eating before starting meals - dining etiquette demonstrates cultural awareness and politeness'
+    ],
+    culturalDonts: [
+      'Don\'t touch someone\'s head - it\'s considered sacred and disrespectful in Mayan cultural beliefs',
+      'Don\'t use your left hand to give or receive objects - it\'s considered impolite in traditional Guatemalan culture',
+      'Don\'t point with a single finger - use an open hand which is more polite and respectful',
+      'Don\'t photograph without permission especially in Indigenous communities - it can be deeply offensive and disrespectful',
+      'Don\'t interrupt religious ceremonies or rituals - show reverence for both Catholic and Mayan spiritual practices'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

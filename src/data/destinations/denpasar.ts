@@ -805,6 +805,22 @@ const denpasar: Destination = {
         'Eat at busy warungs (local eateries) for authentic, safe food'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Dress modestly covering shoulders and knees especially in temples - sarong and sash required for sacred sites',
+      'Remove shoes before entering homes and some traditional establishments - show respect for sacred boundaries',
+      'Greet with a friendly smile or traditional Sembah salute (palms together at chest) - warmth is valued in Balinese culture',
+      'Step carefully around canang sari offerings on sidewalks - these flower offerings are sacred Hindu daily rituals',
+      'Stay calm and polite in all interactions - losing temper or shouting is considered deeply shameful'
+    ],
+    culturalDonts: [
+      'Don\'t touch anyone\'s head even children - it\'s considered the most sacred part of the body in Hindu belief',
+      'Don\'t point your feet at people or sacred objects - feet are considered unclean and this is insulting',
+      'Don\'t step on flower offerings (canang sari) on ground - these are daily religious offerings and sacred',
+      'Don\'t show public displays of affection beyond hand-holding - intimate gestures are kept private in Balinese culture',
+      'Don\'t climb sacred trees wrapped in colorful fabrics - they are holy sites and tampering is deeply offensive'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

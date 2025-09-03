@@ -976,17 +976,22 @@ const amsterdam: Destination = {
         'What you spend can directly affect how safe you feel'
       ]
     },
-  culturalSensitivityTips: [
-    'Learn basic Dutch greetings like "Hallo" (hello) and "Dank je wel" (thank you) - locals appreciate the effort',
-    'Be punctual for appointments - Dutch culture values timeliness and being late is considered disrespectful',
-    'Never walk or stand in bicycle lanes (red pavement) - cyclists have right of way and will ring their bells',
-    'Direct communication is normal - Dutch people are straightforward and this isn\'t meant to be rude',
-    'Respect coffee shop rules - these are for cannabis, not just coffee. Don\'t take photos inside',
-    'Dress modestly when visiting churches or religious sites - cover shoulders and knees',
-    'Don\'t take photos of people in the Red Light District - it\'s disrespectful and sometimes illegal',
-    'Tipping 5-10% is appreciated in restaurants but not mandatory like in some countries',
-    'Join the Dutch concept of "gezelligheid" (coziness/togetherness) - embrace the friendly social atmosphere'
-  ],
+  culturalSensitivity: {
+    culturalDos: [
+      'Learn basic Dutch greetings like "Hallo" (hello) and "Dank je wel" (thank you) - locals appreciate the effort',
+      'Be punctual for appointments - Dutch culture values timeliness and being late is considered disrespectful',
+      'Embrace direct communication - Dutch people are straightforward and this isn\'t meant to be rude',
+      'Dress modestly when visiting churches or religious sites - cover shoulders and knees',
+      'Join the Dutch concept of "gezelligheid" (coziness/togetherness) - embrace the friendly social atmosphere'
+    ],
+    culturalDonts: [
+      'Don\'t walk or stand in bicycle lanes (red pavement) - cyclists have right of way and will ring their bells aggressively',
+      'Don\'t take photos of people in the Red Light District - it\'s disrespectful and sometimes illegal',
+      'Don\'t take photos inside coffee shops - these establishments have strict privacy rules',
+      'Don\'t expect excessive politeness or small talk - Dutch directness can seem blunt to foreigners',
+      'Don\'t assume all coffee shops serve regular coffee - many are cannabis dispensaries with specific rules'
+    ]
+  },
   youtubeVideo: {
     videoId: "EtxCpMzu1GY"
   }

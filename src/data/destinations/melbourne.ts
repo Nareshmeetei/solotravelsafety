@@ -641,6 +641,22 @@ const melbourne: Destination = {
         'Myki card (transport card) available at all stations and convenience stores for easy travel'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Acknowledge Aboriginal and Torres Strait Islander peoples as Traditional Owners - show respect for indigenous heritage and land connection',
+      'Be punctual for appointments and greet with firm handshakes - Australians value timeliness and direct eye contact',
+      'Use first names and casual "mate" greetings - Australian culture is informal and egalitarian in social interactions',
+      'Show humility and authenticity in conversations - Australians value down-to-earth, unpretentious behavior',
+      'Bring gifts when invited to homes like wine or chocolates - small tokens of appreciation are customary'
+    ],
+    culturalDonts: [
+      'Don\'t boast or act superior to others - Australians find ostentatious behavior contrived and offensive',
+      'Don\'t discuss divisive topics like refugees or Indigenous affairs casually - approach sensitive subjects with care',
+      'Don\'t make generalizations about Aboriginal cultures - recognize diversity within Indigenous communities and show respect',
+      'Don\'t be overly formal or pretentious - Australians prefer authentic, relaxed social interactions',
+      'Don\'t ignore cultural protocols at Indigenous sites - respect sacred places and traditional customs appropriately'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

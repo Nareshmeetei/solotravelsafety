@@ -922,6 +922,22 @@ const edinburgh: Destination = {
         }
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Recognize Scotland as distinct from England - Scottish identity is important and confusing the two can be offensive',
+      'Use polite phrases like "please," "thank you," and "excuse me" - courteous behavior is highly valued in Scottish culture',
+      'Try traditional experiences like Ceilidh dancing or whisky tasting - locals appreciate interest in Scottish heritage',
+      'Experience pub culture respectfully - pubs are social centers where you can meet locals and fellow travelers safely',
+      'Wait for the host to begin eating before starting your meal - dining etiquette shows respect for Scottish customs'
+    ],
+    culturalDonts: [
+      'Don\'t call Scots "English" or assume Scotland is part of England - this ignores Scottish independence and cultural identity',
+      'Don\'t discuss sensitive political topics like independence unless invited - these conversations can become heated',
+      'Don\'t refuse to try traditional foods like haggis - showing interest in local cuisine demonstrates cultural respect',
+      'Don\'t be overly loud or disruptive in traditional venues - Scots appreciate measured, respectful social behavior',
+      'Don\'t make jokes about Scottish stereotypes or accents - this can be perceived as disrespectful and ignorant'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

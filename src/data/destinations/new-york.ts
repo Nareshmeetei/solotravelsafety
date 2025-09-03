@@ -842,6 +842,22 @@ const newYork: Destination = {
         'Grocery stores like Whole Foods have prepared foods cheaper than restaurants'
       ]
     },
+    culturalSensitivity: {
+      culturalDos: [
+        'Walk with purpose and stay to the right - sidewalks function like highways with New Yorkers moving efficiently',
+        'Wait for subway passengers to exit before boarding - rushing on will earn you colorful language from locals',
+        'Stand right on escalators to let people pass on the left - essential for smooth transit flow',
+        'Tip generously - 18-22% at restaurants, $1-2 per drink at bars, this is expected not optional',
+        'Use "please," "thank you," and "excuse me" - politeness brings out the kindness in tough New Yorkers'
+      ],
+      culturalDonts: [
+        'Don\'t walk slowly or stop suddenly on sidewalks - you\'ll block the flow of fast-moving pedestrians',
+        'Don\'t lean on or hug subway poles - they\'re for holding, not lounging, and others need to grip them',
+        'Don\'t play music without headphones in public - forcing others to listen is universally hated',
+        'Don\'t block subway maps or doorways - always stay aware of people needing to pass or check directions',
+        'Don\'t eat at Times Square tourist restaurants - they\'re overpriced with poor food, locals avoid them'
+      ]
+    },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

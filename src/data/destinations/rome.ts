@@ -1056,6 +1056,22 @@ const rome: Destination = {
         'Travel insurance essential for peace of mind'
       ]
     },
+    culturalSensitivity: {
+      culturalDos: [
+        'Master "bella figura" - dress elegantly and stylishly as appearance is highly valued in Italian culture',
+        'Use formal titles like "Signore/Signora" and professional titles - respect for titles is important socially',
+        'Cover shoulders and knees in churches and religious sites - modest dress is strictly required in sacred spaces',
+        'Enjoy coffee culture properly - cappuccinos only in morning, espresso after meals, never drink while walking',
+        'Slow down for "Pausa di Pranzo" - take time to sit and properly enjoy meals, eating while walking is uncommon'
+      ],
+      culturalDonts: [
+        'Don\'t eat or drink while walking - Romans take time to sit and properly savor their food and beverages',
+        'Don\'t order cappuccino after lunch or dinner - it\'s considered a morning drink only in Italian culture',
+        'Don\'t speak loudly in churches or religious sites - maintain quiet, respectful behavior in sacred spaces',
+        'Don\'t rush through meals or grab food "to-go" - dining is a social experience to be savored slowly',
+        'Don\'t give knives or wrap gifts in black/purple - these are considered bad luck in Italian culture'
+      ]
+    },
   youtubeVideo: {
     videoId: "ciol29dxYeU"
   }

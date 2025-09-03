@@ -923,7 +923,23 @@ const reykjavik: Destination = {
         'Free walking tours available and completely safe to join alone',
         'Thermal pools affordable luxury with excellent safety standards'
       ]
-    }
+    },
+  culturalSensitivity: {
+    culturalDos: [
+      'Greet with simple handshake and use first names - Icelanders avoid formal titles and prefer direct, friendly approach',
+      'Learn basic Icelandic phrases like "Hæ" (hello) and "Takk" (thank you) - effort is appreciated despite fluent English',
+      'Respect environmental conservation deeply - Icelanders care passionately for their land and expect eco-friendly behavior',
+      'Dress in layers following the three-layer principle - weather changes every 5 minutes and preparation is essential',
+      'Show genuine interest in Icelandic culture and folklore - locals take their traditions seriously and love sharing stories'
+    ],
+    culturalDonts: [
+      'Don\'t expect or offer tips - service charges included and tipping isn\'t part of Icelandic culture',
+      'Don\'t litter or damage natural environments - environmental protection is sacred to Icelandic cultural identity',
+      'Don\'t make assumptions about Nordic socialism or politics - approach sensitive topics with tact and neutrality',
+      'Don\'t underestimate Icelandic dry humor - sarcasm and irony may be lost in translation until you understand their wit',
+      'Don\'t ignore weather warnings or go unprepared - nature is powerful and demands respect for safety'
+    ]
+  }
 };
 
 export default reykjavik;

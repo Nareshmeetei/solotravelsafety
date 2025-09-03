@@ -844,6 +844,22 @@ const lagos: Destination = {
         address: '2 Walter Carrington Crescent, Victoria Island, Lagos'
       }
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Dress modestly covering arms and legs especially outside urban areas - revealing clothing offends conservative values',
+      'Greet people politely and respectfully - Nigerians are known for warmth and hospitality toward foreigners',
+      'Learn basic Pidgin English phrases - it\'s widely understood and helps build rapport with locals',
+      'Show respect for religious customs and elders - Nigeria has strong Christian and Muslim communities',
+      'Connect with reputable tour guides or travel companies - local guidance is essential for safe cultural navigation'
+    ],
+    culturalDonts: [
+      'Don\'t show public displays of affection including hand-holding - it\'s socially unacceptable in Nigerian culture',
+      'Don\'t wear short skirts, shorts, or low-cut tops - conservative dress standards are strictly observed',
+      'Don\'t ignore religious sensitivities - respect both Christian and Islamic practices throughout the country',
+      'Don\'t travel alone at night especially as a woman - cultural norms and safety require group travel after dark',
+      'Don\'t be overly familiar with strangers - maintain polite distance until trust is established through proper introductions'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

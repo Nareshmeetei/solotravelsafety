@@ -26,7 +26,9 @@ import {
   EyeOff,
   Volume2,
   Wallet,
-  X
+  X,
+  CheckCircle,
+  XCircle
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -1100,6 +1102,51 @@ const DestinationDetail: React.FC = () => {
                     {dest.culturalSensitivity?.culturalDos && dest.culturalSensitivity?.culturalDonts && (
                       <CulturalSensitivityTips dos={dest.culturalSensitivity.culturalDos} donts={dest.culturalSensitivity.culturalDonts} />
                     )}
+                    
+                    {/* Show old format Cultural Sensitivity Tips if new format doesn't exist */}
+                    {!dest.culturalSensitivity?.culturalDos && dest.culturalSensitivityTips && dest.culturalSensitivityTips.length > 0 && (() => {
+                      // Split tips into DOS (positive) and DON'TS (negative) based on content
+                      const dos = dest.culturalSensitivityTips.filter(tip => 
+                        !tip.toLowerCase().includes("don't") && 
+                        !tip.toLowerCase().includes("avoid") && 
+                        !tip.toLowerCase().includes("never") &&
+                        !tip.toLowerCase().includes("not recommended") &&
+                        !tip.toLowerCase().includes("be careful")
+                      );
+                      const donts = dest.culturalSensitivityTips.filter(tip => 
+                        tip.toLowerCase().includes("don't") || 
+                        tip.toLowerCase().includes("avoid") || 
+                        tip.toLowerCase().includes("never") ||
+                        tip.toLowerCase().includes("not recommended") ||
+                        tip.toLowerCase().includes("be careful")
+                      );
+                      
+                      return (
+                        <div className="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
+                          <h4 className="text-lg font-display mb-2">Cultural Sensitivity Tips</h4>
+                          {dos.length > 0 && (
+                            <ul className="space-y-2 mb-4">
+                              {dos.map((tip, index) => (
+                                <li key={index} className="flex items-center">
+                                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                                  <span className="text-gray-800">{tip}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                          {donts.length > 0 && (
+                            <ul className="space-y-2">
+                              {donts.map((tip, index) => (
+                                <li key={index} className="flex items-center">
+                                  <XCircle className="h-5 w-5 text-red-400 mr-2" />
+                                  <span className="text-gray-800">{tip}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      );
+                    })()}
                     <ConfidenceByActivity activities={dest.confidenceByActivity} />
                     <LanguageAndHelp languages={safeLanguages} />
                     {/* --- END NEW DATA SECTIONS --- */}

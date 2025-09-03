@@ -881,6 +881,22 @@ const busan: Destination = {
         'Korean hospitality industry has strict safety regulations'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Use both hands when giving or receiving items and bow slightly - this shows proper respect in Korean culture',
+      'Remove shoes when entering homes, traditional restaurants, and some shops - indoor/outdoor boundaries are strictly observed',
+      'Dress conservatively covering shoulders and knees - revealing clothing is inappropriate and draws unwanted attention',
+      'Learn age-appropriate greetings and honorifics - Korean society is hierarchical and age determines social interactions',
+      'Ask permission before taking photos of people - privacy and personal space are highly valued in Korean culture'
+    ],
+    culturalDonts: [
+      'Don\'t touch people casually or pat backs/shoulders - physical contact outside family is considered inappropriate',
+      'Don\'t eat or drink on public transportation - it\'s considered rude and messy behavior',
+      'Don\'t use your left hand for important exchanges - it\'s traditionally considered unclean for formal interactions',
+      'Don\'t speak loudly in public spaces - Koreans value quiet, respectful behavior in shared environments',
+      'Don\'t wear tight or revealing clothing - conservative dress shows cultural respect and helps solo women blend in safely'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

@@ -849,6 +849,22 @@ const lisbon: Destination = {
         'Pack comfortable walking shoes - saves money on transport while keeping you safe on Lisbon\'s steep cobblestone hills'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Greet with handshake and eye contact or cheek kisses among friends - Portuguese value warm, respectful personal interactions',
+      'Say "Obrigada" (women) or "Obrigado" (men) for thank you - using correct gender form shows cultural awareness',
+      'Dress smartly in neat, casual clothing - avoid overly casual beach wear in city areas, Portuguese appreciate good appearance',
+      'Tip about 10% in restaurants and leave it on the table - standard practice showing appreciation for service',
+      'Learn basic Portuguese phrases - even simple efforts are appreciated and help build rapport with locals'
+    ],
+    culturalDonts: [
+      'Don\'t expect strict punctuality in social settings - Portuguese often arrive 15-30 minutes late and this is normal',
+      'Don\'t start eating before everyone is served - wait for the group and always use proper utensils',
+      'Don\'t wear revealing clothing in churches or historical sites - cover shoulders and knees out of respect',
+      'Don\'t be loud on public transport - maintain quiet, respectful behavior and offer seats to elderly passengers',
+      'Don\'t be surprised by relaxed pace of life - embrace Portuguese "slow living" culture rather than rushing'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

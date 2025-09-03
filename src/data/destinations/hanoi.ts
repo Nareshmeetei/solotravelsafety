@@ -906,6 +906,22 @@ const hanoi: Destination = {
         'Budget extra for international medical insurance and Grab transport for safety'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Use both hands when giving or receiving items including money - shows deep respect in Vietnamese culture',
+      'Remove shoes before entering homes and temples - fundamental sign of respect for sacred and private spaces',
+      'Dress modestly covering shoulders and knees especially in religious sites - modesty is key in Vietnamese culture',
+      'Learn basic greetings like "Xin chào" (hello) and "Cảm ơn" (thank you) - locals appreciate language effort greatly',
+      'Bow your head respectfully when entering temples and before Buddha statues - shows proper religious reverence'
+    ],
+    culturalDonts: [
+      'Don\'t touch anyone\'s head or shoulders - extremely offensive even with children as head is most sacred body part',
+      'Don\'t point feet toward people or sacred objects - feet are considered unclean in Vietnamese Buddhist culture',
+      'Don\'t pass items over someone\'s head - this is incredibly disrespectful and offensive behavior',
+      'Don\'t crumple or mishandle Vietnamese dong currency - money should be treated with respect using both hands',
+      'Don\'t interrupt religious ceremonies or speak loudly in temples - maintain quiet reverence during spiritual practices'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

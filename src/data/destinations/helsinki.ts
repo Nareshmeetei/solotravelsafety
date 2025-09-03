@@ -593,6 +593,22 @@ const helsinki: Destination = {
         'Budget for winter clothing if visiting in cold months'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Respect personal space and keep conversations quiet in public - Finns value privacy and reserved behavior',
+      'Ask "Puhutko Englantia?" (Do you speak English?) before switching languages - shows respect for Finnish language',
+      'Call ahead when visiting someone\'s home even by 30 minutes - hosts appreciate time to prepare coffee and tidy up',
+      'Stay on the right side of pavements and paths - left side reserved for cyclists, joggers, and mopeds',
+      'Show modesty about accomplishments and downplay achievements - humility is highly valued in Finnish culture'
+    ],
+    culturalDonts: [
+      'Don\'t be loud or attention-seeking in public spaces - Finns prefer quiet, courteous behavior and moderate voices',
+      'Don\'t expect extensive small talk or social chatter - Finns are naturally reserved and prefer meaningful conversations',
+      'Don\'t tip service staff - service fees included in prices and tipping isn\'t culturally expected',
+      'Don\'t drink alcohol in public places - it\'s generally prohibited and strictly regulated in Finland',
+      'Don\'t expect spontaneous social invitations - Finns prefer planned interactions and value personal space highly'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

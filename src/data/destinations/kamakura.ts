@@ -588,6 +588,22 @@ const kamakura: Destination = {
         'Shop at 100-yen stores for souvenirs and travel essentials'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Remove shoes when entering temples and traditional establishments - fundamental respect for sacred spaces',
+      'Bow slightly before entering torii gates and temple grounds - shows respect to guardian deities and Buddha',
+      'Perform purification ritual at shrine entrances by washing hands and rinsing mouth - essential spiritual cleansing practice',
+      'Buy and burn incense respectfully by waving out flame (never blow) - aids prayer and sanctifies surroundings',
+      'Walk on sides of pathways not center - middle reserved for gods and deities in both shrines and temples'
+    ],
+    culturalDonts: [
+      'Don\'t clap hands when praying at Buddhist temples - only bow deeply with palms together, clapping is for shrines only',
+      'Don\'t photograph inside main halls or where signs prohibit - respect sacred spaces and prayer areas',
+      'Don\'t enter off-limits areas marked by ropes or signs - these are sacred or private spaces',
+      'Don\'t speak loudly or behave casually in temple grounds - these are active places of worship requiring reverence',
+      'Don\'t blow out incense flames - always wave them out with your hand to show proper spiritual respect'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

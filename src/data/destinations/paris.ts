@@ -881,6 +881,22 @@ const paris: Destination = {
         'Free walking tours available during safe daytime hours'
       ]
     },
+    culturalSensitivity: {
+      culturalDos: [
+        'Always start conversations with "Bonjour" - proper greetings are fundamental to French social etiquette',
+        'Attempt to speak French even if imperfect - Parisians deeply appreciate the effort and will be more helpful',
+        'Dress elegantly and avoid flashy clothing - Paris values understated sophistication and style',
+        'Take time with meals and savor your food - rushing through dining is considered disrespectful to French culture',
+        'Use formal address "Vous" until invited to use "Tu" - politeness and formality are highly valued'
+      ],
+      culturalDonts: [
+        'Don\'t assume everyone speaks English - always ask politely "Parlez-vous anglais?" before switching languages',
+        'Don\'t eat while walking or on public transport - it\'s considered very poor etiquette in French culture',
+        'Don\'t discuss money or personal finances - these topics are taboo in French social conversations',
+        'Don\'t arrive exactly on time for social events - being 10-15 minutes late is actually preferred',
+        'Don\'t be overly enthusiastic with strangers - French culture values reserved, quiet interaction in public'
+      ]
+    },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

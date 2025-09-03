@@ -704,6 +704,22 @@ const istanbul: Destination = {
       lastUpdated: 'December 2024',
       soloFemaleIncidents: 'Moderate - primarily verbal harassment and persistent attention rather than violent crime'
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Dress modestly covering shoulders, arms, and legs especially in religious sites - Turkey is 99% Muslim with traditional values',
+      'Learn basic Turkish phrases like "Merhaba" (hello) and "Teşekkürler" (thank you) - English is less common than other countries',
+      'Remove shoes when entering mosques and cover your head with a scarf - fundamental Islamic etiquette requirements',
+      'Haggle respectfully in bazaars and with taxi drivers - negotiating prices is expected cultural practice',
+      'Always carry photographic ID (passport) - it\'s legally required and authorities conduct regular checks in busy areas'
+    ],
+    culturalDonts: [
+      'Don\'t wear revealing clothing like crop tops, short shorts, or miniskirts - inappropriate and attracts unwanted attention',
+      'Don\'t drink alcohol excessively - fewer than 10% of Turkish women drink and it makes you a target',
+      'Don\'t accept the first price offered in markets or taxis - tourists are routinely overcharged without negotiation',
+      'Don\'t ignore Islamic customs during Ramadan or religious holidays - show respect for fasting and prayer times',
+      'Don\'t be overly familiar with men you don\'t know - Turkish culture has different boundaries for male-female interactions'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

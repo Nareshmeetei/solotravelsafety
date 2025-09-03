@@ -822,6 +822,22 @@ const johannesburg: Destination = {
         address: '1 Sandton Drive, Sandton 2196, Johannesburg'
       }
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Embrace Ubuntu philosophy "I am because we are" - show compassion, respect, and community spirit toward others',
+      'Show deep respect for elders using appropriate honorifics and formal greetings - this is fundamental in South African culture',
+      'Ask permission before photographing people especially in townships - consent and respect are crucial for cultural sensitivity',
+      'Participate respectfully in braai (barbecue) culture by contributing food or drinks - it\'s a key social bonding tradition',
+      'Tip generously (15-20%) for all services including restaurants, taxis, and guides - tipping culture is very important'
+    ],
+    culturalDonts: [
+      'Don\'t discuss apartheid, race, or politics casually unless locals initiate - these remain sensitive subjects for many',
+      'Don\'t refuse hospitality or invitations abruptly - South Africans value warm hospitality and may take offense',
+      'Don\'t refer to people by skin color or make assumptions about race - avoid racial terminology and generalizations',
+      'Don\'t ignore cultural diversity - South Africa has 11 official languages and many distinct cultural groups',
+      'Don\'t be judgmental about different customs or lifestyles - approach cultural differences with curiosity and respect'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

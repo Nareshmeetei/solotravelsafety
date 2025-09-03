@@ -3,13 +3,14 @@
 
 /*
   # Content Security Policy - YouTube iframe enabled
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.supabase.co https://www.youtube.com https://*.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.perplexity.ai data:; img-src 'self' data: https: blob: https://*.ytimg.com https://i.ytimg.com https://*.youtube.com; connect-src 'self' https://*.supabase.co https://api.netlify.com https://*.sentry.io https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com; media-src 'self' https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com blob:; frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; child-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; worker-src 'self' blob: https://*.youtube.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.supabase.co https://www.youtube.com https://*.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.perplexity.ai data:; img-src 'self' data: https: blob: https://*.ytimg.com https://i.ytimg.com https://*.youtube.com; connect-src 'self' https://*.supabase.co https://api.netlify.com https://*.sentry.io https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com; media-src 'self' https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com blob:; frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; child-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://*.youtube.com; worker-src 'self' blob: https://*.youtube.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
   # Security headers that DON'T interfere with YouTube iframes
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
 
   # CRITICAL: These headers REMOVED to allow YouTube iframes:
   # Cross-Origin-Embedder-Policy: require-corp  <- BLOCKS IFRAMES

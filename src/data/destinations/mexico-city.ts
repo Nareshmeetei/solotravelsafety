@@ -1000,6 +1000,22 @@ const mexicocity: Destination = {
         }
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Dress conservatively in darker colors with longer pants/skirts - Mexico City culture is Catholic and traditional',
+      'Greet people when entering restaurants and establishments - Mexicans value polite social acknowledgments',
+      'Learn basic Spanish greetings and phrases - locals appreciate language efforts and few speak English',
+      'Show respect for Mexican pride and hospitality - accept offered food/drinks gracefully when possible',
+      'Keep purses and valuables close and avoid flashy jewelry - practical safety blends with cultural modesty'
+    ],
+    culturalDonts: [
+      'Don\'t wear shorts or revealing clothing in the city - this marks you as tourist and attracts unwanted attention',
+      'Don\'t assume people speak English - start conversations in Spanish and ask permission before switching languages',
+      'Don\'t flash expensive jewelry or money - Mexicans are modest about wealth and this creates security risks',
+      'Don\'t ignore social greetings in establishments - responding to "hola" and "gracias" shows cultural respect',
+      'Don\'t drink tap water or ignore food safety - stick to bottled water and established restaurants for health'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

@@ -856,6 +856,22 @@ const tokyo: Destination = {
       }
     ]
   },
+  culturalSensitivity: {
+    culturalDos: [
+      'Master the art of bowing - a slight nod shows respect, deeper bows for formal situations like temples and elders',
+      'Remove shoes when entering homes, traditional restaurants, temples, and some shops - look for designated areas',
+      'Use "Itadakimasu" before eating and "Gochisousama-deshita" after meals - essential dining etiquette that shows respect',
+      'Stay quiet on public transport and avoid phone calls - whisper if you must speak to maintain harmony',
+      'Learn basic Japanese phrases like "sumimasen" (excuse me) and "arigatou gozaimasu" (thank you) - effort is deeply appreciated'
+    ],
+    culturalDonts: [
+      'Don\'t tip in restaurants or taxis - it can be considered insulting as exceptional service is expected standard',
+      'Don\'t eat while walking or on public transport - find a designated eating area to show proper respect for food',
+      'Don\'t place chopsticks vertically in rice or pass food chopstick to chopstick - both resemble funeral rituals',
+      'Don\'t blow your nose in public - excuse yourself to a restroom or turn away discreetly',
+      'Don\'t touch people casually or show public displays of affection - Japanese culture values personal space highly'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

@@ -795,6 +795,22 @@ const florence: Destination = {
         'Travel shoulder season (March, November) for 30-40% accommodation savings'
       ]
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Dress stylishly yet modestly - Florentines appreciate fashion sense and proper attire in religious sites',
+      'Greet with "Buongiorno" (morning) or "Buona sera" (evening) - polite greetings are fundamental to Italian social interaction',
+      'Take time to savor meals and appreciate Italian dining culture - rushing through food is considered disrespectful',
+      'Learn basic Italian phrases like "Grazie" and "Prego" - locals deeply appreciate effort to speak their language',
+      'Show reverence in churches and museums - Florence\'s artistic heritage requires respectful, quiet appreciation'
+    ],
+    culturalDonts: [
+      'Don\'t eat while walking or rush through meals - Italian culture values slow, mindful dining experiences',
+      'Don\'t wear revealing clothing in churches or traditional areas - modest dress shows respect for Italian values',
+      'Don\'t expect fast service in restaurants - leisurely dining is part of authentic Florentine culture',
+      'Don\'t ignore personal space boundaries - Italians are expressive but respect physical boundaries with strangers',
+      'Don\'t photograph people without permission - privacy is respected especially in traditional neighborhoods'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

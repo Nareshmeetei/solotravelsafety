@@ -955,6 +955,22 @@ const karachi: Destination = {
         address: 'Plot 4-A, Block 2, Boat Club Road, West Wharf, Karachi'
       }
     },
+  culturalSensitivity: {
+    culturalDos: [
+      'Dress extremely conservatively covering arms, legs, and head with scarf when needed - Pakistan is 97% Muslim and very traditional',
+      'Use "Assalamu Alaikum" greeting and accept Pakistani hospitality gracefully - refusing can be deeply offensive',
+      'Use only your right hand for eating, greeting, and passing objects - left hand is considered unclean in Islamic culture',
+      'Claim to be married even if single to avoid unwanted marriage proposals - being unmarried attracts problematic attention',
+      'Show deep respect for Islamic customs and pray times - religion is central to Pakistani daily life and identity'
+    ],
+    culturalDonts: [
+      'Don\'t smile excessively or make direct eye contact with men - this is misinterpreted as flirting in conservative culture',
+      'Don\'t discuss military, politics, terrorism, or religious debates - these are extremely sensitive and dangerous topics',
+      'Don\'t show physical affection in public even hand-holding - public displays of affection are culturally unacceptable',
+      'Don\'t wear Western clothing that shows skin - even in modern Karachi, conservative dress is essential for safety',
+      'Don\'t refuse food or tea offerings repeatedly - Pakistani hospitality (mehmanawazi) is sacred cultural tradition'
+    ]
+  },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

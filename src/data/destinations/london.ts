@@ -860,6 +860,22 @@ const london: Destination = {
         'Christmas season (November-January) creates magical atmosphere but brings crowds to shopping areas requiring extra vigilance'
       ]
     },
+    culturalSensitivity: {
+      culturalDos: [
+        'Master the art of queuing - always join the back of any line and wait patiently, it\'s fundamental to British culture',
+        'Use "please" and "thank you" constantly - politeness is deeply ingrained and expected in all interactions',
+        'Stand your round at pubs - if drinking with a group, buy drinks for everyone when it\'s your turn',
+        'Arrive 5-10 minutes early for appointments and social gatherings - punctuality is highly valued',
+        'Maintain personal space on public transport - Londoners appreciate quiet, respectful behavior on the tube'
+      ],
+      culturalDonts: [
+        'Don\'t jump queues or cut in line - it\'s considered extremely rude and will draw negative attention',
+        'Don\'t ask personal questions about income, politics, or voting - these topics are considered private',
+        'Don\'t rest elbows on the table during meals - proper table manners are important in British culture',
+        'Don\'t speak too loudly in public spaces - Londoners value understated, quiet conversation',
+        'Don\'t boast or brag about achievements - British culture favors modesty and understatement over showiness'
+      ]
+    },
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
   }

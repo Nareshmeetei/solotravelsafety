@@ -843,16 +843,22 @@ const berlin: Destination = {
         sourceUrl: 'https://www.bvg.de/en'
       }
     ],
-    culturalSensitivityTips: [
-      'Germans value punctuality - arrive exactly on time for appointments',
-      'Direct communication is normal and not considered rude',
-      'Wait for pedestrian signals even when no cars are visible',
-      'Separate recycling properly - Germans take environmental responsibility seriously',
-      'Respect quiet hours (Ruhezeit) from 22:00-06:00 and Sunday afternoons',
-      'Many historical sites require respectful behavior and appropriate dress',
-      'Tipping 5-10% is customary but not mandatory in restaurants',
-      'English is widely spoken, but learning basic German phrases is appreciated'
-    ],
+    culturalSensitivity: {
+      culturalDos: [
+        'Be punctual for all appointments - Germans value timeliness and consider lateness disrespectful',
+        'Embrace direct communication - Germans are straightforward and honest, it\'s not meant to be rude',
+        'Wait for pedestrian signals even when no cars are visible - jaywalking is frowned upon',
+        'Separate recycling properly - Germans take environmental responsibility very seriously',
+        'Respect quiet hours (Ruhezeit) from 22:00-06:00 and Sunday afternoons - keep noise to minimum'
+      ],
+      culturalDonts: [
+        'Don\'t be late for any appointment - even 5 minutes late is considered very rude',
+        'Don\'t expect small talk or excessive friendliness from service staff - efficiency is valued over warmth',
+        'Don\'t jaywalk or ignore traffic signals - Germans follow rules strictly and expect others to do the same',
+        'Don\'t put recyclables in regular trash - improper sorting is taken seriously and can cause offense',
+        'Don\'t discuss WWII or Nazi history casually - approach these sensitive topics with respect and gravity'
+      ]
+    },
     costAndComfort: {
       dailyBudget: {
         range: '$70 - $120 USD / day',
