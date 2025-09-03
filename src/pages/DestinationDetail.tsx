@@ -637,12 +637,19 @@ const DestinationDetail: React.FC = () => {
                   </div>
                 </div>
                 {/* Emergency Phrases - now second */}
-                {dest.safetyTips?.emergencyPhrases && dest.safetyTips?.emergencyPhrases.length > 0 && 
+                {dest.safetyTips?.emergencyPhrases && 
                  !['Australia', 'Canada', 'Ireland', 'New Zealand', 'United Kingdom', 'United States'].includes(dest.country) && (
                   <div className="mb-4">
                     <h4 className="font-display text-red-800 mb-2">Emergency Phrases</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {dest.safetyTips?.emergencyPhrases?.map((phrase: any, index: number) => (
+                    {typeof dest.safetyTips.emergencyPhrases === 'string' ? (
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <p className="text-red-800 text-sm leading-relaxed">
+                          {dest.safetyTips.emergencyPhrases}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {dest.safetyTips.emergencyPhrases?.map((phrase: any, index: number) => (
                         <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
                           <div className="flex items-center justify-between mb-1">
                             <p className="text-red-800 font-medium text-sm">{phrase.english}</p>
@@ -800,7 +807,8 @@ const DestinationDetail: React.FC = () => {
                           <p className="text-red-600 text-xs mt-1">{phrase.localLanguage}</p>
                         </div>
                       ))}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 )}
                 {/* Embassy section (no search) */}
@@ -1315,7 +1323,23 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     {/* YouTube Video Section */}
-                    {dest.youtubeVideo && dest.youtubeVideo.videoId && (
+                    {(dest.youtubeVideos && dest.youtubeVideos.length > 0) ? (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">
+                          See How It's Like
+                        </h3>
+                        <div className="space-y-6">
+                          {dest.youtubeVideos.map((video, index) => (
+                            <YouTubeEmbed
+                              key={video.videoId}
+                              videoId={video.videoId}
+                              title={video.title || `${dest.city} travel video ${index + 1}`}
+                              privacyMode={true}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    ) : dest.youtubeVideo && dest.youtubeVideo.videoId && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">
                           See How It's Like
@@ -1856,10 +1880,27 @@ const DestinationDetail: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Currency Exchange Tips */}
-                    {dest.currency && dest.currency.exchangeTips && (
+                    {/* Currency & Exchange Tips from Cost & Comfort */}
+                    {dest.costAndComfort.currencyExchangeTips && (
                       <div>
-                        <h3 className="text-xl font-display text-gray-900 mb-4">Currency Exchange Tips</h3>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Currency & Exchange Tips</h3>
+                        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <ul className="space-y-3">
+                            {dest.costAndComfort.currencyExchangeTips.map((tip: string, index: number) => (
+                              <li key={index} className="flex items-start space-x-2">
+                                <span className="text-yellow-600 font-bold mt-0.5">•</span>
+                                <span className="text-yellow-900">{tip}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Currency Exchange Tips from currency section (fallback) */}
+                    {!dest.costAndComfort.currencyExchangeTips && dest.currency && dest.currency.exchangeTips && (
+                      <div>
+                        <h3 className="text-xl font-display text-gray-900 mb-4">Currency & Exchange Tips</h3>
                         <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-2">

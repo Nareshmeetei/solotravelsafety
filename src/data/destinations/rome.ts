@@ -1074,7 +1074,17 @@ const rome: Destination = {
     },
   youtubeVideo: {
     videoId: "ciol29dxYeU"
-  }
+  },
+  youtubeVideos: [
+    {
+      videoId: "ciol29dxYeU",
+      title: "Rome travel guide"
+    },
+    {
+      videoId: "7LMz0xAsNPY",
+      title: "Rome solo female travel experience"
+    }
+  ]
 };
 
 export default rome;

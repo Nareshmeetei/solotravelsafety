@@ -274,6 +274,10 @@ export interface Destination {
   youtubeVideo?: {
     videoId: string;
   };
+  youtubeVideos?: {
+    videoId: string;
+    title?: string;
+  }[];
   costAndComfort?: {
     dailyBudget: {
       range: string;
@@ -293,6 +297,13 @@ export interface Destination {
       safetyLevel: 'high' | 'medium' | 'low';
     }[];
     budgetTips: string[];
+    currencyExchangeTips?: string[];
+  };
+  culturalInformation?: string[];
+  practicalInfo?: {
+    moneyAndConnectivity: string[];
+    transportEssentials: string[];
+    soloWomenPerception: string[];
   };
 }
 

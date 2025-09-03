@@ -15,11 +15,20 @@ const stockholm: Destination = {
     reviewCount: 200,
     lastUpdated: '1 day ago',
     harassmentRisk: 'low',
-    description: 'Is Stockholm safe for solo female travellers? Stockholm is one of the safest cities in Europe for solo female travelers, ranking as the 10th safest country globally for women traveling alone. With Sweden\'s progressive gender equality culture, excellent safety infrastructure, and low crime rates, Stockholm offers an ideal destination for independent female travelers seeking both adventure and security.',
+    description: 'Is Stockholm safe for solo female travelers? Stockholm ranks #38 globally as one of the safest cities for women traveling alone, with a 4.4/5 safety rating. Sweden\'s world-renowned gender equality culture, comprehensive safety infrastructure, and extremely low violent crime rates make Stockholm an exceptional destination for solo female travelers seeking Nordic adventures with complete peace of mind.',
     safetyBreakdown: {
-      nightSafety: { score: 8.6, context: 'Very safe at night. Well-lit streets and low crime rates.' },
-      publicTransit: { score: 9.1, context: 'Efficient, clean, and safe public transport. Trains and buses are reliable.' },
-      walkingAlone: { score: 8.9, context: 'Very safe to walk alone. Swedish culture is very respectful.' }
+      nightSafety: { 
+        score: 8.6, 
+        context: 'Stockholm is exceptionally safe at night with well-lit streets throughout the city center and extensive CCTV coverage. Solo female travelers regularly report feeling completely secure walking alone even after midnight. Police presence is visible but unobtrusive, and Swedish cultural norms strongly discourage harassment. The main precautions involve avoiding isolated areas of outer suburbs (Rinkeby, Tensta, Husby) after dark, though even these areas have lower crime rates than many international city centers.' 
+      },
+      publicTransit: { 
+        score: 9.1, 
+        context: 'Stockholm\'s SL public transport system is among Europe\'s safest with comprehensive CCTV monitoring, emergency buttons in every car, and professional staff throughout the network. Sexual harassment incidents are virtually non-existent due to Sweden\'s strong gender equality culture and zero-tolerance policies. The system operates with 98% reliability, and English announcements ensure solo travelers never get lost. Night services and weekend schedules maintain high safety standards with well-lit stations and covered walkways.' 
+      },
+      walkingAlone: { 
+        score: 8.9, 
+        context: 'Walking alone in Stockholm is remarkably safe due to Sweden\'s progressive gender equality culture and strong social norms that discourage bothering strangers. The city features excellent lighting, well-maintained sidewalks, and strategic placement of emergency call points. Solo female travelers consistently report feeling safer than in their home countries. Swedish reserve actually works in favor of women - locals are helpful when approached but respect personal space, creating an ideal environment for independent exploration.' 
+      }
     },
     neighborhoods: {
       safe: [
@@ -115,16 +124,24 @@ const stockholm: Destination = {
 • Emergency number 112 works for all services (police, fire, medical)
 • Trust your instincts - Swedes are reserved but helpful when approached`,
       apps: [
+        'SL',
+        'Citymapper',
+        'Swish',
+        'Google Translate',
         'NomadHer',
-        'Travel Ladies',
-        'bSafe',
-        'Google Translate'
+        'Go Jauntly',
+        'SOS Alarm',
+        'Naturkartan'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
+        { name: 'SL', link: 'https://sl.se/en/', description: 'Official Stockholm public transport app - essential for journey planning, tickets, and real-time updates', rating: 4.7 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best navigation app for Stockholm with real-time transport options and walking routes for solo female safety', rating: 4.8 },
+        { name: 'Swish', link: 'https://www.getswish.se/', description: 'Sweden\'s cashless payment app - essential for solo travelers as most places don\'t accept cash', rating: 4.9 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Camera translation feature perfect for reading Swedish signs and menus - though English is widely spoken', rating: 5.0 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for connecting with verified women travelers safely in Stockholm', rating: 4.8 },
+        { name: 'Go Jauntly', link: 'https://www.gojauntly.com/', description: 'Social walking app for discovering safe walking routes and connecting with other walkers in Stockholm', rating: 4.6 },
+        { name: 'SOS Alarm', link: 'https://www.sosalarm.se/', description: 'Swedish emergency services app with precise location sharing - crucial safety tool for solo travelers', rating: 4.6 },
+        { name: 'Naturkartan', link: 'https://naturkartan.se/', description: 'Nature map app for exploring Stockholm\'s archipelago and green spaces safely with trail information', rating: 4.5 }
       ],
       emergencyPhrases: [
         {
@@ -203,11 +220,17 @@ const stockholm: Destination = {
       police: '112', fire: '112', medical: '112', general: '112'
     },
     currency: {
-      name: 'Swedish Krona', code: 'SEK', exchangeRate: {
-      usd: 0.1050,
-      eur: 0.0895,
-      gbp: 0.0782
-    }, scamWarnings: []
+      name: 'Swedish Krona', 
+      code: 'SEK', 
+      exchangeRate: {
+        usd: 0.1050,
+        eur: 0.0895,
+        gbp: 0.0782
+      },
+      exchangeTips: [
+        'Skip currency exchange offices and use bank ATMs (Swedbank, SEB, Handelsbanken) for best rates with no commission. Stockholm is 95% cashless - get a contactless card and use Swish payment app for seamless transactions. Most cafes and shops refuse cash entirely, making digital payments essential for solo female travelers.'
+      ],
+      scamWarnings: []
     },
     usefulTips: [
       {
@@ -239,11 +262,11 @@ const stockholm: Destination = {
         sourceUrl: 'https://www.onevasco.com/blog/safe-to-visit/sweden'
       },
       {
-        title: 'Use Credit Cards and Payment Apps',
-        description: 'Stockholm is largely cashless. Use credit cards or payment apps for most transactions and avoid carrying large amounts of cash.',
+        title: 'Currency & Exchange Tips',
+        description: 'Skip currency exchange offices and use bank ATMs (Swedbank, SEB, Handelsbanken) for best rates with no commission. Stockholm is 95% cashless - get a contactless card and use Swish payment app for seamless transactions. Most cafes and shops refuse cash entirely, making digital payments essential for solo female travelers.',
         severity: 'low',
-        sourceName: 'Nannybag',
-        sourceUrl: 'https://www.nannybag.com/en/guides/stockholm/stockholm-travel-apps-you-should-download-for-your-trip'
+        sourceName: 'Visit Sweden',
+        sourceUrl: 'https://visitsweden.com/about-sweden/currency-prices/'
       }
     ],
     languages: ['Swedish', 'English (widely spoken)'],
@@ -280,18 +303,18 @@ const stockholm: Destination = {
     ],
   culturalSensitivity: {
     culturalDos: [
-      'Respect personal space and keep a polite distance.',
-      'Be punctual for meetings and public transport.',
-      'Dress appropriately for the weather and setting.',
-      'Use quiet voices in public and on transport.',
-      'Recycle and dispose of waste properly.'
+      'Master the Swedish concept of "lagom" (just the right amount) - avoid extremes in behavior, dress, or conversation for perfect social integration',
+      'Embrace "fika" culture - coffee and pastry breaks are sacred social rituals where solo female travelers can safely connect with locals',
+      'Understand Swedish punctuality obsession - arrive exactly on time, never early or late, as both are considered equally rude',
+      'Practice the "Swedish silence" on public transport - speaking quietly shows respect and helps you blend in seamlessly',
+      'Learn proper recycling etiquette - Swedes take environmental responsibility seriously, and correct sorting shows cultural awareness'
     ],
     culturalDonts: [
-      "Don't cut in line or push ahead.",
-      "Don't speak loudly or draw attention in public.",
-      "Don't ask personal questions on first meeting.",
-      "Don't litter or leave trash in nature.",
-      "Don't make jokes about Sweden\'s history or politics."
+      "Don\'t violate personal space or attempt physical contact - Swedes maintain 1-meter distance and handshakes only for formal introductions",
+      "Don\'t boast about wealth, achievements, or possessions - Swedish \"Law of Jante\" strongly discourages standing out or showing off",
+      "Don\'t expect immediate warmth or friendliness - Swedish reserve is cultural, not personal rejection, patience builds genuine connections",
+      "Don\'t interrupt or speak loudly in public - Swedish conversation culture values listening over talking and quiet voices over volume",
+      "Don\'t expect shops or services to accept cash - Sweden is virtually cashless, and refusing cards makes you appear unprepared"
     ]
   },
   scamWarnings: [],
@@ -707,15 +730,33 @@ const stockholm: Destination = {
           safetyLevel: 'high'
         },
         {
-          method: 'Taxi/Uber',
+          method: 'City Bikes (Stockholm)',
+          cost: '$3/30 mins',
+          safetyDescription: 'Safe cycling with extensive bike lanes and low traffic aggression.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Taxi Stockholm',
+          cost: '$15-30/ride',
+          safetyDescription: 'Licensed professional service with fixed rates and high safety standards.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Uber/Bolt',
           cost: '$10-25/ride',
-          safetyDescription: 'Very safe with professional drivers and regulated services.',
+          safetyDescription: 'App-based rides with GPS tracking and driver verification.',
           safetyLevel: 'high'
         },
         {
           method: 'Walking',
           cost: 'Free',
           safetyDescription: 'Extremely safe with excellent lighting and very low crime rates.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Archipelago Ferries',
+          cost: '$5-15/trip',
+          safetyDescription: 'Safe island hopping with regular schedules and emergency protocols.',
           safetyLevel: 'high'
         }
       ],
@@ -725,6 +766,12 @@ const stockholm: Destination = {
         'Many museums and attractions offer free admission on certain days',
         'Self-catering accommodations help manage food costs',
         'Safety investment pays off in stress-free travel experience'
+      ],
+      currencyExchangeTips: [
+        'Skip currency exchange offices completely - use Swedish bank ATMs (Swedbank, SEB, Handelsbanken) for best exchange rates with minimal fees',
+        'Stockholm is 95% cashless - many cafes and shops refuse cash entirely, so contactless cards and Swish payment app are essential',
+        'Avoid airport currency exchange - rates are 3-5% worse than bank ATMs, better to get cash once in the city center',
+        'Download Revolut or Wise for favorable exchange rates and low fees - works perfectly with Sweden\'s digital payment infrastructure'
       ]
     },
   legalResources: {
@@ -820,7 +867,37 @@ const stockholm: Destination = {
       ]
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "EVMZu7INEGk"
+  },
+  culturalInformation: [
+    'Swedish "allemansrätten" (right to roam) allows solo female travelers to safely explore nature freely - camp, hike, and forage anywhere with respect for environment and property',
+    'Understand the Swedish work-life balance - offices close early (4-5 PM) and weekends are sacred family time, affecting business hours and social dynamics',
+    'Learn about Swedish "jantelagen" (Law of Jante) - cultural philosophy discouraging boasting or standing out, helping solo travelers blend in respectfully',
+    'Master Swedish seasonal rhythms - summer\'s midnight sun creates 24/7 activity, while winter\'s darkness brings cozy indoor culture and seasonal depression awareness',
+    'Embrace Swedish gender equality in practice - women are treated as complete equals, making solo female travel feel natural and unremarkable to locals'
+  ],
+  practicalInfo: {
+    moneyAndConnectivity: [
+      'Swedish Krona (SEK) is the currency, but Sweden is 95% cashless - many places refuse cash entirely, making contactless cards essential',
+      'Free WiFi available in all cafes, libraries, malls, and public spaces - Sweden has some of Europe\'s fastest and most reliable internet',
+      'Mobile coverage is excellent throughout Stockholm and archipelago with 5G networks - tourist SIM cards available at Arlanda Airport',
+      'Swish payment app dominates - download if you get a Swedish bank account, otherwise use contactless cards for everything',
+      'Banking is highly digital - Swedbank, SEB, and Handelsbanken ATMs offer best exchange rates with minimal fees for foreign cards'
+    ],
+    transportEssentials: [
+      'SL (Stockholm Lokaltrafik) app essential for all public transport - buy tickets, plan routes, check real-time updates',
+      'Public transport operates 5:00am-1:00am with night buses (Nattbuss) on weekends - extremely safe with CCTV and emergency buttons',
+      'SL Access card or mobile tickets required - paper tickets being phased out, contactless payment options expanding',
+      'Taxi Stockholm, Uber, and Bolt all operate safely - avoid unmarked vehicles and always use official apps for solo female safety',
+      'Cycling is popular and safe with extensive bike lanes - City Bikes rental system available, but winter conditions can be challenging'
+    ],
+    soloWomenPerception: [
+      'Sweden has world\'s strongest gender equality culture - solo female travelers are completely normalized and widely celebrated',
+      'Swedish men are raised with feminist values - harassment is extremely rare and socially unacceptable with severe legal consequences',
+      'Independent women are the cultural norm - solo dining, traveling, and nightlife participation is standard Swedish behavior',
+      'Government actively promotes women\'s safety with comprehensive support systems, dedicated helplines, and rapid response protocols',
+      'Solo female travelers often report feeling safer in Stockholm than in their home countries - crime against women is exceptionally low'
+    ]
   }
 };
 
