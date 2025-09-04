@@ -276,7 +276,14 @@ const seoul: Destination = {
     ]
   },
   culturalExpectations: {
-    dressCode: 'Seoul is fashion-forward with high style standards. Dress well to blend in - clean, neat, and stylish clothing is appreciated. Modest dress required in temples and palaces (cover shoulders and knees). Business casual is appropriate for upscale restaurants. Comfortable walking shoes essential for subway stairs and hilly terrain.',
+    dressCode: [
+      'Seoul requires fashion-conscious dress culture with high style standards - clean, neat, and well-coordinated clothing essential for blending in',
+      'Korean beauty and fashion standards are elevated - investing in stylish outfits helps solo women feel confident and socially accepted',
+      'Modest dress absolutely required for visiting Gyeongbokgung Palace, Jogyesa Temple, and other cultural sites - cover shoulders and knees completely',
+      'Business casual appropriate for upscale restaurants in Gangnam, Hongdae, and luxury shopping districts like Myeongdong',
+      'Comfortable yet stylish walking shoes crucial for Seoul\'s extensive subway system with many stairs and hilly terrain throughout the city',
+      'Layer clothing for Seoul\'s variable climate and heavily air-conditioned indoor spaces - temperature differences can be significant'
+    ],
     behaviorNorms: [
       'Bow slightly when greeting, especially to elders - handshakes are also acceptable.',
       'Use both hands when giving or receiving items, especially business cards.',
@@ -289,7 +296,15 @@ const seoul: Destination = {
       'Be punctual for appointments and social events.',
       'Show respect to elders and use formal language initially.'
     ],
-    perception: 'Solo female travelers are increasingly common and generally well-respected in Seoul. Korean culture values safety and helping others, so locals are often helpful to solo travelers. Some staring may occur due to curiosity rather than judgment, especially in non-tourist areas. The city has strong social norms that contribute to overall safety for women.'
+    perception: [
+      'Solo female travelers are increasingly welcomed in Seoul as Korean society modernizes and embraces independent women travelers',
+      'Korean culture deeply values safety (anbwon) and helping others, making locals naturally protective and helpful toward solo female visitors',
+      'Confucian respect traditions create generally respectful interactions, with Korean men typically maintaining appropriate boundaries with foreign women',
+      'Some curious staring may occur, especially in non-tourist neighborhoods, but this stems from interest rather than judgment or hostility',
+      'Restaurant culture accommodates solo diners well, particularly in casual settings like Korean BBQ, ramen shops, and convenience stores',
+      'Seoul\'s strong social norms and collective responsibility mindset contribute significantly to overall safety and security for women',
+      'Local women often provide helpful advice about navigation, cultural etiquette, and safety tips - Korean hospitality extends to protecting visitors'
+    ]
   },
   culturalSensitivityTips: [
     'Learn basic Korean greetings like "Annyeonghaseyo" (hello) and "Gamsahamnida" (thank you) - locals deeply appreciate language effort from solo female travelers',
@@ -326,7 +341,28 @@ const seoul: Destination = {
     ],
     scamWarnings: []
   },
-  scamWarnings: [],
+  scamWarnings: [
+    {
+      title: 'Fake Monk Scam',
+      description: 'Fake monks may approach tourists asking for donations. Real Buddhist monks do not actively solicit money from strangers.',
+      severity: 'low'
+    },
+    {
+      title: 'Overpriced Tourist Restaurants',
+      description: 'Some restaurants in tourist areas like Myeongdong may have inflated prices. Check prices beforehand and look for local recommendations.',
+      severity: 'low'
+    },
+    {
+      title: 'Street Game Scams',
+      description: 'Avoid street games or gambling setups, especially around nightlife areas. These are often rigged to take your money.',
+      severity: 'medium'
+    },
+    {
+      title: 'Taxi Overcharging',
+      description: 'Some taxi drivers may take longer routes or refuse to use the meter. Use apps like Kakao Taxi for transparent pricing.',
+      severity: 'low'
+    }
+  ],
   usefulTips: [
     {
       title: 'Use Public Transport and Stay in Busy Areas',
@@ -659,6 +695,20 @@ const seoul: Destination = {
           recommendations: ['Orange and silver taxis are official', 'Avoid unlicensed black cars'],
           companies: ['Licensed Seoul Taxis'],
           link: 'Official taxi stands only'
+        },
+        {
+          type: 'AREX Airport Express',
+          safety: 9.5,
+          recommendations: ['Direct connection to Incheon Airport', 'Most convenient airport option', 'Every 30 minutes'],
+          companies: ['AREX'],
+          link: 'https://www.arex.or.kr/eng/'
+        },
+        {
+          type: 'Seoul Bike (Ddareungi)',
+          safety: 8.2,
+          recommendations: ['24-hour bike sharing system', '2,000+ stations city-wide', 'Use during daytime for safety'],
+          companies: ['Seoul Metropolitan Government'],
+          link: 'https://www.bikeseoul.com/'
         }
       ],
       nightTravel: {

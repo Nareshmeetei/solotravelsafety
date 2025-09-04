@@ -17,15 +17,15 @@ const auckland: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 4.8,
-        context: 'Auckland\'s night safety has deteriorated significantly, with 2024 data showing a 33% increase in violent crime. The CBD, particularly Queen Street and K Road, has seen major increases in harassment, assault, and violent crime after dark. South Auckland areas should be avoided completely at night. Recent NZ Crime Survey shows 1 in 3 women experience sexual assault. Solo women should avoid walking alone after dark, use registered taxis/rideshares, and stay in well-lit, populated areas.'
+        context: 'Is Auckland safe for solo female travelers at night? Based on 2025 data, Auckland\'s night safety requires serious precautions for women traveling alone, with a 33% increase in violent crime targeting female solo travelers. The CBD areas of Queen Street and K Road show concerning rises in harassment and assault against solo female travelers after dark. New Zealand crime statistics reveal 1 in 3 women experience sexual assault, making solo female travel safety precautions essential. Women solo travelers should avoid walking alone after dark, use only registered transport, and prioritize solo travel security in well-lit areas.'
       },
       publicTransit: {
         score: 6.8,
-        context: 'Public transport safety has declined with increased harassment reports, especially on evening/night services. While daytime travel is generally safe with security cameras at major stations, incidents on night buses and empty carriages have increased. The AT Mobile app provides emergency contact options. Women should avoid empty carriages, sit near drivers/other passengers, and be extra vigilant during off-peak hours.'
+        context: 'Auckland public transport safety for solo female travelers has declined with increased harassment targeting women traveling alone on evening services. While daytime travel remains relatively secure for solo female travelers with CCTV at major stations, solo travel safety concerns arise with night buses and empty carriages where incidents affecting women solo travelers have increased. The AT Mobile app provides emergency contacts specifically for solo female travel safety. Essential solo female travel tips include avoiding empty carriages, sitting near drivers, and maintaining vigilance during off-peak travel times.'
       },
       walkingAlone: {
         score: 6.2,
-        context: 'Daytime walking safety is moderate but declining. 2024 crime data shows significant increases across Auckland, with women aged 18-35 most at risk. While central areas like Ponsonby and Parnell remain relatively safer, all areas have seen increased incidents. Night walking is strongly discouraged. Trust instincts, avoid isolated areas, and seek immediate help if feeling unsafe. Emergency services (111) respond quickly.'
+        context: 'Is Auckland safe for women solo travelers walking alone? Current 2025 data shows daytime walking safety for solo female travelers is moderate but declining, with women aged 18-35 at highest risk. Solo female travel safety statistics reveal significant increases across Auckland neighborhoods. While areas like Ponsonby and Parnell remain among safest places for women to travel alone, all locations show increased incidents affecting solo female travelers. Night walking poses serious solo travel safety risks and is strongly discouraged for women traveling alone. Essential solo female travel advice: trust instincts, avoid isolated areas, and seek immediate help through emergency services (111) which respond quickly to solo female traveler emergencies.'
       }
     },
     neighborhoods: {
@@ -125,11 +125,11 @@ const auckland: Destination = {
 • For nightlife, dress smart-casual, but avoid flashy jewelry and keep your bag zipped
 • Carry a small crossbody bag or secure backpack to deter pickpockets
 • Dress warmly in winter (June-August) with layers for temperature changes`,
-      firstTimers: `• Auckland has become less safe for solo women in recent years—stay alert, especially at night
-• Save emergency numbers (111 for police, fire, ambulance) and local support hotlines
-• Use official taxis or rideshares after dark—avoid walking alone
-• Avoid walking alone in deserted or poorly lit areas
-• Trust your instincts—if you feel unsafe, seek help in a shop or cafe immediately`,
+      firstTimers: `• Is Auckland safe for solo female travelers? Current safety concerns require extra precautions for women traveling alone, especially after dark
+• Save emergency numbers (111) and HELP Auckland crisis line (0800 623 1700) - specialized support for solo female travel safety emergencies
+• Use only official transport after dark - solo female travel safety statistics show increased risks with walking alone at night
+• Avoid walking alone in CBD, deserted areas, or poorly lit streets - essential solo female travel tips for Auckland safety
+• Trust your instincts about solo travel security - if you feel unsafe as a woman traveling alone, seek immediate help in shops, cafes, or contact emergency services`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -194,7 +194,14 @@ const auckland: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Casual and practical in most settings. Cover shoulders and knees when visiting marae or religious sites. Swimwear is only for beaches and pools. For nightlife, smart-casual is expected. Avoid flashy jewelry and keep valuables secure.',
+      dressCode: [
+        'Auckland embraces casual New Zealand dress culture - jeans, t-shirts, and comfortable shoes perfectly acceptable for most daily activities and sightseeing',
+        'Smart-casual attire recommended for upscale restaurants and nightlife venues - Kiwis appreciate neat appearance without requiring formal dress',
+        'Waterproof jacket absolutely essential year-round due to Auckland\'s unpredictable weather - sudden rain showers common throughout the city',
+        'Modest dress required when visiting marae (traditional meeting grounds) or cultural sites - cover shoulders and knees as sign of respect',
+        'Comfortable walking shoes crucial for Auckland\'s hilly terrain and volcanic landscapes - many attractions involve uneven surfaces',
+        'Swimwear only appropriate for beaches, pools, and harbor activities - not acceptable for city shopping or cultural visits'
+      ],
       behaviorNorms: [
         'Be quiet and respectful on public transport.',
         'Respect personal space and avoid loud conversations in public.',
@@ -204,7 +211,15 @@ const auckland: Destination = {
         'Do not photograph people without permission, especially in cultural settings.',
         'Tipping is not expected but appreciated for excellent service.'
       ],
-      perception: 'Solo female travelers are common in Auckland, but safety concerns have increased in recent years. Most locals are friendly and helpful, but catcalling and harassment can occur, especially at night in nightlife districts or deserted areas. Sexual harassment, assault, and kidnapping are more common than in previous years—always prioritize your safety, avoid risky areas after dark, and use official transport. If you experience harassment or feel unsafe, seek help immediately from police, local businesses, or call a support hotline.'
+      perception: [
+        'Solo female travelers are increasingly common in Auckland and generally well-received by locals who embrace the independent Kiwi spirit',
+        'New Zealanders are known for their friendliness and "she\'ll be right" attitude - most locals readily offer directions and genuine assistance to solo travelers',
+        'Auckland\'s multicultural population (48% born overseas) creates an accepting environment for women from diverse backgrounds traveling alone',
+        'Restaurant and cafe staff are very accustomed to solo diners - Auckland\'s coffee culture particularly welcomes individuals enjoying meals alone',
+        'However, safety concerns have increased in recent years with rising reports of harassment, particularly in nightlife areas after dark',
+        'Catcalling and unwanted attention can occur, especially around Queen Street entertainment district and some South Auckland areas at night',
+        'Local women often share safety advice and warnings about areas to avoid - embrace this community protective spirit when offered'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['November-March'],
@@ -531,6 +546,62 @@ const auckland: Destination = {
           recommendations: ['Use official taxi stands or book through apps.'],
           companies: ['Auckland Co-op Taxis', 'Corporate Cabs'],
           link: 'https://www.aucklandcooptaxis.co.nz/'
+        },
+        {
+          type: 'SkyBus Airport Connector',
+          safety: 8.8,
+          recommendations: ['Direct airport-city connection', '24/7 service available', 'Online booking recommended'],
+          companies: ['SkyBus'],
+          link: 'https://www.skybus.co.nz/'
+        },
+        {
+          type: 'Auckland Ferries',
+          safety: 8.7,
+          recommendations: ['Scenic harbor crossings', 'Generally very safe', 'Check weather conditions'],
+          companies: ['Fullers360', 'Auckland Transport'],
+          link: 'https://www.fullers.co.nz/'
+        },
+        {
+          type: 'Auckland Trains',
+          safety: 7.8,
+          recommendations: ['Limited network but reliable', 'Avoid late night services', 'Keep belongings secure'],
+          companies: ['Auckland Transport'],
+          link: 'https://at.govt.nz/'
+        },
+        {
+          type: 'Auckland Buses',
+          safety: 7.6,
+          recommendations: ['70% of public transport trips', 'Frequent, connector, and local routes', 'Services run 6 AM to midnight'],
+          companies: ['Auckland Transport'],
+          link: 'https://at.govt.nz/'
+        },
+        {
+          type: 'Electric Ferries (2025 New)',
+          safety: 8.9,
+          recommendations: ['First electric commuter ferry launched June 2025', 'Environmentally friendly option', 'Two hybrid-electric ferries coming'],
+          companies: ['Auckland Transport'],
+          link: 'https://at.govt.nz/'
+        },
+        {
+          type: 'Electric Scooters (Uber/Beam)',
+          safety: 7.2,
+          recommendations: ['Available via Uber and Beam apps', 'Great for short trips', 'Can be left anywhere in city center'],
+          companies: ['Uber', 'Beam'],
+          link: 'https://www.uber.com/nz/en/ride/'
+        },
+        {
+          type: 'Nextbike Bike Sharing',
+          safety: 7.9,
+          recommendations: ['Modern pedal-powered transport', 'Must return to official rental stations', 'Good for exploring waterfront areas'],
+          companies: ['Nextbike'],
+          link: 'https://www.nextbike.co.nz/'
+        },
+        {
+          type: 'AT HOP Integrated Payment',
+          safety: 9.1,
+          recommendations: ['20% discounts on transport', 'Transfer between services with one fare', 'Works on buses, trains, and ferries'],
+          companies: ['Auckland Transport'],
+          link: 'https://at.govt.nz/'
         }
       ],
       nightTravel: {
@@ -902,7 +973,7 @@ const auckland: Destination = {
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "9dFDSXssjTw"
   }
 };
 

@@ -1447,66 +1447,6 @@ const DestinationDetail: React.FC = () => {
                     </div>
                     )}
 
-                    {/* Cultural Expectations */}
-                    {(dest.culturalExpectations || dest.culturalConsiderations || dest.culturalNorms) && (
-                      <div>
-                        <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
-                        <div className="space-y-4">
-                          {dest.culturalExpectations?.dressCode && Array.isArray(dest.culturalExpectations.dressCode) && dest.culturalExpectations.dressCode.length > 0 && (
-                          <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <h4 className="font-display text-blue-900 mb-2">Dress Code</h4>
-                            <ul className="text-[12pt] text-blue-800 space-y-2">
-                              {dest.culturalExpectations.dressCode.map((item: string, idx: number) => (
-                                <li key={idx}>• {item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          )}
-                          {dest.culturalExpectations?.behaviorNorms && Array.isArray(dest.culturalExpectations.behaviorNorms) && dest.culturalExpectations.behaviorNorms.length > 0 && (
-                          <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
-                            <h4 className="font-display text-purple-900 mb-2">Behavior Norms</h4>
-                            <ul className="text-[12pt] text-purple-800 space-y-2">
-                              {dest.culturalExpectations.behaviorNorms.map((norm: string, idx: number) => (
-                                <li key={idx}>• {norm}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          )}
-                          {dest.culturalExpectations?.perception && Array.isArray(dest.culturalExpectations.perception) && dest.culturalExpectations.perception.length > 0 && (
-                          <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                            <h4 className="font-display text-gray-900 mb-2">Local Perception</h4>
-                            <ul className="text-[12pt] text-gray-800 space-y-2">
-                              {dest.culturalExpectations.perception.map((item: string, idx: number) => (
-                                <li key={idx}>• {item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          )}
-                          {/* Old format cultural considerations */}
-                          {dest.culturalConsiderations && Array.isArray(dest.culturalConsiderations) && dest.culturalConsiderations.length > 0 && (
-                          <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-lg">
-                            <h4 className="font-display text-indigo-900 mb-2">Cultural Considerations</h4>
-                            <ul className="text-[12pt] text-indigo-800 space-y-1">
-                              {dest.culturalConsiderations.map((consideration: string, idx: number) => (
-                                <li key={idx}>• {consideration}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          )}
-                          {/* Old format cultural norms */}
-                          {dest.culturalNorms && Array.isArray(dest.culturalNorms) && dest.culturalNorms.length > 0 && (
-                          <div className="p-4 bg-teal-50 border border-teal-200 rounded-lg">
-                            <h4 className="font-display text-teal-900 mb-2">Cultural Norms</h4>
-                            <ul className="text-[12pt] text-teal-800 space-y-1">
-                              {dest.culturalNorms.map((norm: string, idx: number) => (
-                                <li key={idx}>• {norm}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          )}
-                        </div>
-                      </div>
-                    )}
 
                     {/* Scam Warnings */}
                     {dest.scamWarnings && Array.isArray(dest.scamWarnings) && dest.scamWarnings.length > 0 && (

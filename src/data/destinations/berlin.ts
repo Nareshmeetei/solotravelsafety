@@ -297,7 +297,14 @@ const berlin: Destination = {
       }
     },
     culturalExpectations: {
-      dressCode: 'Berlin is casual and accepting of diverse styles. Dress warmly in winter, comfortably in summer. Business casual appropriate for upscale restaurants. Modest dress appreciated at religious sites and formal venues.',
+      dressCode: [
+        'Berlin embraces eclectic and alternative dress culture - individuality and personal expression are celebrated over conformity',
+        'Casual dress perfectly acceptable in most settings - jeans, sneakers, and comfortable clothing are standard throughout the city',
+        'Layer warmly during Berlin winters with temperatures dropping below freezing - thermal clothing, waterproof boots, and heavy coats essential',
+        'Business casual appropriate for upscale restaurants and cultural venues - Germans appreciate neat appearance without requiring formal attire',
+        'Modest dress recommended when visiting churches, synagogues, and historical memorial sites as sign of respect',
+        'Berlin\'s diverse and accepting atmosphere means most clothing styles are welcome - focus on comfort and weather appropriateness'
+      ],
       behaviorNorms: [
         'Germans value punctuality - arrive on time for appointments.',
         'Direct communication is normal and not meant to be rude.',
@@ -310,7 +317,15 @@ const berlin: Destination = {
         'Respect historical sites and memorials with appropriate behavior.',
         'Tipping 5-10% is customary in restaurants.'
       ],
-      perception: 'Solo women travelers are very welcome in Berlin. German culture is progressive and accepting, with strong women\'s rights. The city is international and diverse, making it comfortable for solo female exploration with basic safety precautions.',
+      perception: [
+        'Solo female travelers are exceptionally welcomed in Berlin\'s progressive and gender-equal society - women\'s independence is deeply respected',
+        'German culture values efficiency and directness, meaning locals provide straightforward, honest assistance to solo travelers without ulterior motives',
+        'Berlin\'s international and multicultural atmosphere (30% foreign-born population) creates an inclusive environment for women from all backgrounds',
+        'Restaurant and cafe culture fully embraces solo diners - eating alone is completely normal and socially unremarkable in German society',
+        'Most Berliners speak excellent English, especially younger generations - language barriers rarely create communication difficulties',
+        'The city\'s strong feminist movement and women\'s rights tradition create a supportive environment for independent female travelers',
+        'Local women often provide practical advice about public transport, safe areas, and cultural experiences - embrace this helpful community spirit'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['May-September'],
@@ -611,6 +626,13 @@ const berlin: Destination = {
           recommendations: ['60,000+ vehicles available', 'Good bike infrastructure', 'Daytime use recommended'],
           companies: ['Jelbi (BVG)'],
           link: 'https://www.jelbi.de/'
+        },
+        {
+          type: 'Airport Express (FEX)',
+          safety: 9.0,
+          recommendations: ['Direct connection Brandenburg Airport', 'Fast and reliable service', 'Every 30 minutes'],
+          companies: ['Deutsche Bahn'],
+          link: 'https://www.bahn.de/'
         }
       ],
       nightTravel: {

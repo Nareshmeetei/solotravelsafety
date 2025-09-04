@@ -184,7 +184,14 @@ const barcelona: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Barcelona is stylish but casual. Smart casual is appropriate for restaurants and cultural sites. Beach attire only for beach areas. Comfortable walking shoes essential. Modest dress for religious sites.',
+      dressCode: [
+        'Barcelona embraces effortlessly stylish Mediterranean dress culture - locals look chic while remaining comfortable for city exploration',
+        'Smart-casual attire recommended for restaurants and cultural attractions - Catalans appreciate well-put-together looks without requiring formal dress',
+        'Comfortable walking shoes absolutely essential for Barcelona\'s extensive pedestrian areas, Gothic Quarter cobblestones, and hill climbs to Park Güell',
+        'Beach attire only appropriate for actual beach areas and waterfront - not acceptable for city sightseeing, restaurants, or attractions',
+        'Modest dress required for visiting Sagrada Família, Gothic churches, and other religious sites - cover shoulders and knees',
+        'Light layers recommended for variable weather and air-conditioned museums - Barcelona temperatures can fluctuate throughout the day'
+      ],
       behaviorNorms: [
         'Greet with "Hola" and a friendly demeanor.',
         'Learn basic Spanish phrases - greatly appreciated.',
@@ -197,7 +204,15 @@ const barcelona: Destination = {
         'Queue politely and maintain personal space.',
         'Appreciate art, architecture, and food culture.'
       ],
-      perception: 'Solo women travelers are very welcome in Barcelona. Spanish culture is warm and social, and locals are generally helpful to tourists. The city is progressive and women can dine alone, explore attractions, and enjoy nightlife safely with basic precautions.',
+      perception: [
+        'Solo female travelers are enthusiastically welcomed in Barcelona\'s progressive and cosmopolitan atmosphere - the city embraces independent women',
+        'Catalan culture values equality and inclusivity, creating an environment where solo women feel respected and supported throughout the city',
+        'Restaurant culture fully accommodates solo diners - from tapas bars to fine dining, eating alone is completely normal and socially accepted',
+        'Most Barcelona residents speak multiple languages (Catalan, Spanish, English) and are patient with tourists - communication barriers rarely create problems',
+        'The city\'s vibrant arts and culture scene attracts independent travelers, making solo exploration feel natural and encouraged',
+        'Local women are often friendly and helpful, readily sharing recommendations about safe areas, good restaurants, and cultural experiences',
+        'Barcelona\'s late dining culture (dinner starts around 9-10 PM) means solo women won\'t feel out of place dining alone at traditional Spanish hours'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-October'],
@@ -221,26 +236,69 @@ const barcelona: Destination = {
       'Airport exchanges charge high fees - use city ATMs after arrival',
       'Tipping culture: Round up bills or leave 5-10% for good service',
       'Metro tickets and many small purchases require cash or specific cards',
-      'Keep receipts for tax-free shopping on purchases over €90.15 for non-EU visitors'
-    ],
-    scamWarnings: [
-        'Use official ATMs and avoid tourist area currency exchanges for better rates.'
-      ]
+      'Keep receipts for tax-free shopping on purchases over €90.15 for non-EU visitors',
+      'Use official ATMs and avoid tourist area currency exchanges for better rates.'
+    ]
     },
     scamWarnings: [
       {
         title: 'Las Ramblas Pickpocketing',
-        description: 'Very common on the famous street. Keep valuables secure and be extremely alert.',
+        description: 'Extremely common on Barcelona\'s famous street. Groups work together using distraction techniques - one person bumps into you while another steals. Keep valuables in front pockets, use anti-theft bags, and stay hyper-alert.',
         severity: 'high'
       },
       {
-        title: 'Beach Item Theft',
-        description: 'Items stolen while swimming or sunbathing. Use beach lockers or don\'t bring valuables.',
+        title: 'Metro Pickpocketing',
+        description: 'Pickpockets target tourists on crowded metro lines, especially L3 (green line) to tourist areas. They work in groups during boarding/exiting. Keep bags zipped and in front of you.',
+        severity: 'high'
+      },
+      {
+        title: 'Fake Police Scam',
+        description: 'Scammers pose as plainclothes police asking to check your wallet for "counterfeit money." Real police always show proper ID and never ask to handle your money. Ask to see badge and ID immediately.',
+        severity: 'high'
+      },
+      {
+        title: 'Gold Ring Scam',
+        description: 'Someone "finds" a gold ring near you and offers to sell it cheaply. Ring is worthless brass. While distracted, accomplices pickpocket you. Ignore anyone offering found jewelry.',
         severity: 'medium'
       },
       {
-        title: 'Restaurant Tourist Menus',
-        description: 'Inflated prices near tourist attractions. Look for local recommendations.',
+        title: 'Three Card Monte Street Game',
+        description: 'Card game on streets where you can\'t win - all players are working together. Solo travelers targeted as easy marks. Never participate in street gambling games.',
+        severity: 'medium'
+      },
+      {
+        title: 'Friendship Bracelet Scam',
+        description: 'Friendly person approaches to put bracelet on your wrist, then demands payment. While you\'re dealing with this, accomplices steal belongings. Keep walking, don\'t engage.',
+        severity: 'medium'
+      },
+      {
+        title: 'Distraction ATM Scam',
+        description: 'Someone drops coins or papers near ATM to distract while you withdraw money, then grabs cash or watches PIN. Use ATMs inside banks when possible.',
+        severity: 'medium'
+      },
+      {
+        title: 'Beach Item Theft',
+        description: 'Professional thieves watch for unattended items while you swim or sunbathe. Work in organized groups. Use beach lockers, don\'t bring valuables, or designate someone to watch belongings.',
+        severity: 'medium'
+      },
+      {
+        title: 'Restaurant Tourist Menu Overcharging',
+        description: 'Restaurants near Sagrada Familia, Park Güell charge inflated prices with poor quality. Check prices before ordering, look for places locals frequent.',
+        severity: 'low'
+      },
+      {
+        title: 'Taxi Meter Manipulation',
+        description: 'Some taxis don\'t use meter or claim it\'s broken to overcharge tourists. Insist on meter or agree on price beforehand. Use official taxis or ride-sharing apps.',
+        severity: 'low'
+      },
+      {
+        title: 'Fake Petition Scam',
+        description: 'People with clipboards asking you to sign petitions for "charity" while accomplices pickpocket you. Never stop for clipboard solicitors in tourist areas.',
+        severity: 'low'
+      },
+      {
+        title: 'Bird Poop Scam',
+        description: 'Someone sprays substance on you claiming bird pooped, offers to help clean while stealing belongings. If something drops on you, immediately check pockets and bags.',
         severity: 'low'
       }
     ],
@@ -494,6 +552,41 @@ const barcelona: Destination = {
           recommendations: ['200+ km of bike lanes', 'Good for daytime use', 'Requires annual subscription'],
           companies: ['Bicing'],
           link: 'https://www.bicing.barcelona/'
+        },
+        {
+          type: 'Aerobus (Airport Express)',
+          safety: 9.0,
+          recommendations: ['Direct airport connection', 'A1 to Terminal 1, A2 to Terminal 2', '24/7 service available'],
+          companies: ['TMB'],
+          link: 'https://www.aerobusbcn.com/'
+        },
+        {
+          type: 'Montjuïc Funicular',
+          safety: 8.8,
+          recommendations: ['2-minute ride to Montjuïc from Parallel metro station', 'Valid with Barcelona travel cards', 'Cheapest way up Montjuïc hill'],
+          companies: ['TMB'],
+          link: 'https://www.tmb.cat/en/barcelona/other-transport-tmb/montjuic-funicular'
+        },
+        {
+          type: 'Montjuïc Cable Car (Telefèric)',
+          safety: 8.6,
+          recommendations: ['Scenic ride to Montjuïc Castle', 'Unbeatable panoramic city views', 'Tourist attraction pricing'],
+          companies: ['Telefèric de Montjuïc'],
+          link: 'https://www.telefericdemontjuic.cat/en'
+        },
+        {
+          type: 'Port Cable Car (Transbordador Aeri)',
+          safety: 8.4,
+          recommendations: ['Connects Barceloneta beaches to Montjuïc', 'Stops at Torre de Jaume I in port', 'Scenic harbor crossing'],
+          companies: ['Telefèric del Port'],
+          link: 'https://www.telefericodebarcelona.com/en/'
+        },
+        {
+          type: 'RENFE Trains',
+          safety: 8.9,
+          recommendations: ['Regional and national connections', 'Integrated with Barcelona transport cards', '60-minute validity across systems'],
+          companies: ['RENFE'],
+          link: 'https://www.renfe.com/es/en'
         }
       ],
       nightTravel: {
@@ -791,9 +884,14 @@ const barcelona: Destination = {
       'Don\'t eat dinner before 9pm and expect restaurants to be busy - adapt to local dining hours'
     ]
   },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  youtubeVideos: [
+    {
+      videoId: "80bt-qog5c4"
+    },
+    {
+      videoId: "Wg8Ab6xQ_Gw"
+    }
+  ]
 };
 
 export default barcelona;

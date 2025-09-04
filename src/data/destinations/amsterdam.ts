@@ -631,11 +631,53 @@ const amsterdam: Destination = {
           link: 'https://www.tca.nl/en/'
         },
         {
-          type: 'GVB (Public Transport)',
-          safety: 9.0,
-          recommendations: ['Use the GVB app for tickets and schedules.'],
+          type: 'GVB Trams',
+          safety: 9.2,
+          recommendations: ['18 tram lines crisscross central Amsterdam', 'Most convenient for tourists', 'Use OV-chipkaart or contactless payment'],
           companies: ['GVB'],
           link: 'https://www.gvb.nl/en'
+        },
+        {
+          type: 'GVB Metro',
+          safety: 9.1,
+          recommendations: ['5 metro lines with 59 stops', 'Fastest way to outer districts', 'Well-monitored stations with CCTV'],
+          companies: ['GVB'],
+          link: 'https://www.gvb.nl/en'
+        },
+        {
+          type: 'GVB Buses',
+          safety: 8.9,
+          recommendations: ['44 bus lines including night buses', 'Extensive network to all neighborhoods', 'Many electric buses for cleaner travel'],
+          companies: ['GVB'],
+          link: 'https://www.gvb.nl/en'
+        },
+        {
+          type: 'NS Trains',
+          safety: 9.3,
+          recommendations: ['Direct connections to Schiphol Airport (17 minutes)', 'Regional and international connections', 'Frequent service up to 8 trains/hour'],
+          companies: ['NS (Nederlandse Spoorwegen)'],
+          link: 'https://www.ns.nl/en'
+        },
+        {
+          type: 'GVB Ferries',
+          safety: 9.0,
+          recommendations: ['13 free ferries to Amsterdam Noord', 'Perfect for cyclists and pedestrians', 'Scenic crossing of River IJ'],
+          companies: ['GVB'],
+          link: 'https://www.gvb.nl/en'
+        },
+        {
+          type: 'OV-fiets Bike Rental',
+          safety: 8.7,
+          recommendations: ['Integrated with public transport', '24-hour bike rental available', 'Very popular with locals and tourists'],
+          companies: ['NS/OV-fiets'],
+          link: 'https://www.ns.nl/en/door-to-door/ov-fiets'
+        },
+        {
+          type: 'Amsterdam Water Taxi',
+          safety: 8.8,
+          recommendations: ['Scenic canal transportation', 'Premium service with advance booking', 'Great for special occasions or groups'],
+          companies: ['Various operators'],
+          link: 'https://www.watertaxi-amsterdam.nl/'
         }
       ],
       nightTravel: {
