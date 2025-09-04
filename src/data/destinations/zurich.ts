@@ -14,6 +14,7 @@ const zurich: Destination = {
     reviewCount: 187,
     lastUpdated: '2 hours ago',
     harassmentRisk: 'low',
+    description: 'Is Zurich safe for solo female travelers? Zurich ranks as one of the world\'s safest cities for women traveling alone, consistently placing #6 globally with a 4.8/5 safety rating. This sophisticated alpine metropolis combines Swiss precision with exceptional urban safety, world-class banking security, and legendary Swiss hospitality. With its efficient public transport, pristine infrastructure, and cultural values emphasizing respect and discretion, Zurich offers solo female travelers an ideal blend of international sophistication and comprehensive security in the heart of Europe.',
     safetyBreakdown: {
       nightSafety: {
         score: 9.2,
@@ -75,12 +76,44 @@ const zurich: Destination = {
         link: 'https://www.youthhostel.ch/en/hostels/zurich/'
       },
       {
+        name: 'The Dolder Grand',
+        type: 'hotel',
+        features: ['Luxury hilltop location', 'Spa facilities', 'Panoramic views', 'Premium security'],
+        rating: 9.2,
+        notes: 'World-class luxury hotel with exceptional security standards. Perfect for solo female travelers seeking ultimate comfort and safety with stunning city views.',
+        link: 'https://www.thedoldergrand.com/'
+      },
+      {
         name: 'Hotel Schweizerhof Zürich',
         type: 'hotel',
         features: ['Luxury central location', '24/7 security', 'Premium service', 'Concierge support'],
         rating: 9.0,
         notes: 'Premium option with exceptional security and service. Perfect for solo female travelers seeking luxury with top-tier safety near Hauptbahnhof.',
         link: 'https://www.schweizerhof-zuerich.ch/'
+      },
+      {
+        name: 'Baur au Lac',
+        type: 'hotel',
+        features: ['Historic luxury', 'Lake location', 'Premium security', 'Concierge excellence'],
+        rating: 9.1,
+        notes: 'Legendary luxury hotel with world-class security and service. Perfect for solo female travelers seeking the ultimate in Swiss hospitality and safety.',
+        link: 'https://www.bauraulac.ch/'
+      },
+      {
+        name: 'MEININGER Hotel Zürich Greencity',
+        type: 'hotel',
+        features: ['Modern design', 'Female-friendly', 'Eco-conscious', 'Safe location'],
+        rating: 8.6,
+        notes: 'Contemporary hotel with excellent safety standards and environmental focus. Great for solo female travelers seeking modern amenities in safe location.',
+        link: 'https://www.meininger-hotels.com/hotels/zurich/hotel-zurich-greencity/'
+      },
+      {
+        name: 'Park Hyatt Zurich',
+        type: 'hotel',
+        features: ['Luxury city center', 'Spa facilities', '24/7 security', 'Business center'],
+        rating: 8.9,
+        notes: 'Modern luxury hotel with exceptional safety in prime location. Perfect for solo female business travelers and those seeking contemporary Swiss hospitality.',
+        link: 'https://www.hyatt.com/en-US/hotel/switzerland/park-hyatt-zurich/zurph'
       },
       {
         name: 'Hotel St. Gotthard',
@@ -91,20 +124,20 @@ const zurich: Destination = {
         link: 'https://www.hotel-st-gotthard.ch/'
       },
       {
-        name: 'The Dolder Grand',
+        name: 'Sorell Hotel Zürichberg',
         type: 'hotel',
-        features: ['Luxury hilltop location', 'Spa facilities', 'Panoramic views', 'Premium security'],
-        rating: 9.2,
-        notes: 'World-class luxury hotel with exceptional security standards. Perfect for solo female travelers seeking ultimate comfort and safety with stunning city views.',
-        link: 'https://www.thedoldergrand.com/'
+        features: ['Hillside location', 'Panoramic views', 'Peaceful setting', 'High security'],
+        rating: 8.5,
+        notes: 'Elegant hotel in quiet, safe hillside location with stunning city views. Excellent for solo female travelers seeking tranquility with easy city access.',
+        link: 'https://www.sorell-hotels.com/en/zuerichberg'
       },
       {
-        name: 'MEININGER Hotel Zürich Greencity',
+        name: 'Hotel Glockenhof',
         type: 'hotel',
-        features: ['Modern design', 'Female-friendly', 'Eco-conscious', 'Safe location'],
-        rating: 8.6,
-        notes: 'Contemporary hotel with excellent safety standards and environmental focus. Great for solo female travelers seeking modern amenities in safe location.',
-        link: 'https://www.meininger-hotels.com/hotels/zurich/hotel-zurich-greencity/'
+        features: ['Central location', 'Modern amenities', 'Professional service', '24/7 reception'],
+        rating: 8.2,
+        notes: 'Reliable mid-range hotel with consistent safety standards in central Zurich. Great value for solo female travelers seeking comfort and security.',
+        link: 'https://www.glockenhof.ch/'
       }
     ],
     alerts: [],
@@ -115,24 +148,31 @@ const zurich: Destination = {
 • Smart casual dress perfectly acceptable everywhere
 • Warm layers essential even in summer for evening cooling
 • Swiss appreciate neat, well-dressed appearance`,
-      firstTimers: `• Is Zurich safe for solo female travellers? Absolutely - it ranks #6 globally with 4.8/5 safety rating
-• Perfect for first-time solo female travelers - extremely safe, organized, and welcoming
+      firstTimers: `• Is Zurich safe for solo female travelers? Absolutely - Zurich ranks #6 globally with 4.8/5 safety rating, making it perfect for first-time solo female travelers with exceptional safety, Swiss organization, and welcoming culture
 • English is widely spoken especially in tourist areas and by younger locals
 • Download SBB Mobile and ZVV apps for seamless public transport navigation
 • Switzerland uses contactless payments extensively - cards accepted everywhere
 • Emergency number 112 works for all services (police 117, medical 144, fire 118)
 • Swiss are helpful but respect personal space - don't hesitate to ask for directions or help`,
       apps: [
+        'SBB Mobile',
+        'ZVV',
+        'bSafe',
         'NomadHer',
-        'Travel Ladies',
-        'bSafe', 
-        'Google Translate'
+        'Google Translate',
+        'Alertswiss',
+        'Twint',
+        'TripAdvisor'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
+        { name: 'SBB Mobile', link: 'https://www.sbb.ch/en/timetable/mobile-apps/sbb-mobile.html', description: 'Essential Swiss transport app with real-time schedules, ticket purchasing, and safety features for nationwide travel', rating: 4.8 },
+        { name: 'ZVV', link: 'https://www.zvv.ch/zvv/en/service/apps.html', description: 'Zurich transport app with local trams, buses, and S-Bahn schedules plus route planning for safe city navigation', rating: 4.7 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking, fake call feature, and SOS button - essential for solo female travelers in unfamiliar areas', rating: 4.6 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for connecting with verified women travelers safely in Zurich with local Swiss insights', rating: 4.8 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for German/Swiss German translation with camera feature for menus, signs, and emergency communications', rating: 4.5 },
+        { name: 'Alertswiss', link: 'https://www.alert.swiss/en/', description: 'Official Swiss emergency alert system with weather warnings, safety notifications, and emergency information', rating: 4.6 },
+        { name: 'Twint', link: 'https://www.twint.ch/', description: 'Swiss mobile payment app for contactless transactions - safer than cash and widely accepted throughout Zurich', rating: 4.4 },
+        { name: 'TripAdvisor', link: 'https://www.tripadvisor.com/', description: 'Travel reviews and recommendations with Zurich-specific safety insights and solo female traveler experiences', rating: 4.3 }
       ],
       emergencyPhrases: [
         {
@@ -199,7 +239,7 @@ const zurich: Destination = {
         'Wait to be seated at restaurants and maintain proper table manners',
         'Use formal titles until invited to use informal address'
       ],
-      perception: 'Solo female travelers are extremely common and completely accepted in Zurich. Switzerland\'s law-abiding culture and high gender equality create ideal conditions for independent women travelers. Is Zurich safe for solo female travellers? Absolutely - locals are respectful, helpful, and accustomed to solo women visitors. 2025 travelers report feeling "safer than at home" with minimal concerns about harassment or safety issues.'
+      perception: 'Is Zurich safe for solo female travelers? Yes - solo female travelers are extremely common and completely accepted in Zurich. Switzerland\'s law-abiding culture and high gender equality create ideal conditions for independent women travelers. Is Zurich safe for solo female travellers? Absolutely - locals are respectful, helpful, and accustomed to solo women visitors. 2025 travelers report feeling "safer than at home" with minimal concerns about harassment or safety issues.'
     },
     bestTimeToVisit: {
       safestMonths: ['June-August'],
@@ -775,26 +815,26 @@ const zurich: Destination = {
     },
     costAndComfort: {
       dailyBudget: {
-        range: '120 - 180 CHF / day',
+        range: '$95 - $145 USD / day',
         description: 'Covers accommodation, meals, transport, and activities at a comfortable level.',
         tip: 'Zurich is one of the most expensive cities globally but offers premium safety and quality. Budget accordingly for higher costs but exceptional standards and peace of mind.'
       },
       accommodation: [
         {
           type: 'Hostel (Female Dorm)',
-          avgCost: '45-65 CHF',
+          avgCost: '$36-52 USD',
           safetyNote: 'Excellent safety standards with modern facilities and 24/7 security',
           safetyLevel: 'high'
         },
         {
           type: 'Budget Hotel',
-          avgCost: '120-180 CHF',
+          avgCost: '$95-145 USD',
           safetyNote: 'High safety standards with professional staff and security systems',
           safetyLevel: 'high'
         },
         {
           type: 'Mid-range Hotel',
-          avgCost: '200-350 CHF',
+          avgCost: '$160-280 USD',
           safetyNote: 'Premium safety with concierge services and comprehensive security',
           safetyLevel: 'high'
         }
@@ -802,28 +842,60 @@ const zurich: Destination = {
       transport: [
         {
           method: 'Public Transit (ZVV Day Pass)',
-          cost: '8.80 CHF/day',
+          cost: '$7 USD/day',
           safetyDescription: 'World-class safety with excellent monitoring, emergency systems, and reliability.',
           safetyLevel: 'high'
         },
         {
+          method: 'SBB Swiss Railways (Regional)',
+          cost: '$10-20 USD/trip',
+          safetyDescription: 'Legendary Swiss train system with exceptional safety, punctuality, and comfort for exploring beyond Zurich.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Bike Sharing (PubliBike)',
+          cost: '$20 USD/day',
+          safetyDescription: 'Safe cycling infrastructure with dedicated bike lanes and excellent maintenance throughout Zurich.',
+          safetyLevel: 'high'
+        },
+        {
           method: 'Uber',
-          cost: '15-35 CHF/ride',
+          cost: '$12-28 USD/ride',
           safetyDescription: 'Very safe with GPS tracking, driver verification, and excellent coverage.',
           safetyLevel: 'high'
         },
         {
-          method: 'Licensed Taxi',
-          cost: '20-45 CHF/ride',
-          safetyDescription: 'Safe with professional drivers, regulated fares, and excellent standards.',
+          method: 'Licensed Taxi (Taxi Zurich)',
+          cost: '$16-36 USD/ride',
+          safetyDescription: 'Professional Swiss taxi service with regulated fares, licensed drivers, and excellent safety standards.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Car Rental (Mobility CarSharing)',
+          cost: '$28-48 USD/day',
+          safetyDescription: 'Swiss car-sharing service with well-maintained vehicles and excellent safety standards for day trips.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Airport Express (Train)',
+          cost: '$5 USD/trip',
+          safetyDescription: 'Direct, safe connection between Zurich Airport and city center with frequent service and security.',
           safetyLevel: 'high'
         },
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Extremely safe with excellent lighting, low crime rates, and well-maintained paths.',
+          safetyDescription: 'Extremely safe with excellent lighting, low crime rates, and well-maintained pedestrian infrastructure.',
           safetyLevel: 'high'
         }
+      ],
+      currencyExchangeTips: [
+        'Zurich offers world-class banking with premium safety at all exchange levels',
+        'Use major Swiss banks (UBS, Credit Suisse, Raiffeisen) for best rates and maximum security',
+        'Swiss ATMs are among the world\'s safest - use bank-owned machines for optimal security',
+        'Contactless payments widely accepted - safer for solo travelers than handling cash',
+        'Currency exchange investment pays off in completely stress-free financial transactions',
+        'Swiss Franc stability and banking excellence provide unparalleled financial security'
       ],
       budgetTips: [
         'Zurich offers world-class safety at all budget levels',
@@ -834,7 +906,57 @@ const zurich: Destination = {
       ]
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "_GE3Y_y6EuY"
+  },
+  culturalInformation: {
+    headline: "Is Zurich safe for solo female travelers? Navigating Swiss Culture & Alpine Values",
+    points: [
+      "**Swiss Precision & Punctuality Culture**: Zurich embodies quintessential Swiss values of precision, reliability, and extreme punctuality that create inherently safe environments for solo female travelers. The cultural emphasis on order and predictability means transportation runs exactly on time, appointments are kept precisely, and social interactions follow clear, respectful protocols. This cultural reliability extends to safety - if something seems out of place, it's worth investigating as Swiss maintain consistent, trustworthy patterns.",
+      "**Direct Communication & Personal Space**: Swiss culture values direct, honest communication while maintaining significant personal space and privacy. Solo female travelers benefit from this cultural norm as it eliminates ambiguous social situations - Swiss people say what they mean and respect boundaries clearly. Conversations are polite but not intrusive, creating comfortable environments where women traveling alone can maintain privacy while still receiving helpful assistance when needed.",
+      "**Environmental Consciousness & Quality Standards**: Switzerland's legendary environmental consciousness creates exceptionally clean, well-maintained public spaces that enhance safety for solo female travelers. The cultural commitment to sustainability means excellent lighting, pristine public transport, well-maintained parks, and clean facilities throughout Zurich. This environmental mindset reflects broader cultural values of responsibility and care that extend to community safety.",
+      "**Financial Privacy & Discretion Culture**: Zurich's role as a global financial center has created cultural norms around discretion, privacy, and non-intrusive behavior. Solo female travelers benefit from this 'mind your own business' mentality - locals are helpful when asked but don't pry into personal affairs or make assumptions about solo travelers. This creates ideal conditions for independent exploration without unwanted attention or questions.",
+      "**Multilingual Tolerance & International Awareness**: Despite Swiss German being primary, Zurich's international business culture creates exceptional tolerance for language differences and cultural diversity. Solo female travelers find locals patient with language barriers, willing to switch to English, and culturally aware of international customs. This linguistic flexibility creates welcoming environments for women traveling alone from diverse backgrounds.",
+      "**Alpine Safety Mentality**: Switzerland's mountain culture instills deep respect for safety protocols, preparation, and risk assessment in all activities. This alpine safety consciousness permeates urban life in Zurich, creating environments where safety is prioritized, emergency systems are robust, and people look out for each other. Solo female travelers benefit from this cultural emphasis on prevention and preparedness."
+    ]
+  },
+  practicalInfo: {
+    moneyConnectivity: {
+      headline: "Money & Connectivity Essentials for Zurich - Solo Female Travel Safety Guide",
+      points: [
+        "**Swiss Franc & Premium Banking**: Zurich uses Swiss Franc (CHF) with world-class banking infrastructure. Most places accept contactless cards, but carry cash for small vendors and traditional establishments. Major Swiss banks (UBS, Credit Suisse, Raiffeisen) offer competitive exchange rates with branches throughout central Zurich. Swiss banking security is legendary, making transactions extremely safe.",
+        "**Currency Exchange & ATM Security**: Use major Swiss banks for currency exchange rather than tourist-focused offices for better rates and security. Swiss ATMs are exceptionally safe and reliable - use bank-owned machines when possible. Zurich has extensive ATM networks throughout safe central districts. Swiss banks maintain highest security standards globally.",
+        "**Mobile Connectivity Excellence**: Switzerland has world-class 4G/5G coverage throughout Zurich region. Major carriers include Swisscom, Salt, and Sunrise with excellent coverage. Buy prepaid SIM cards at any electronics store, carrier shop, or major train stations. Free WiFi available at most cafes, libraries, and many public spaces with high-quality connections.",
+        "**Digital Payment Culture**: Zurich extensively uses contactless payments with widespread acceptance of Twint (Swiss mobile payment), Apple Pay, and Google Pay. This cashless culture is safer for solo female travelers as it reduces handling of physical money and speeds up transactions in busy areas like Bahnhofstrasse shopping district."
+      ]
+    },
+    transportEssentials: {
+      headline: "Transport Essentials for Solo Female Safety in Zurich",
+      points: [
+        "**ZVV System Excellence**: Download SBB Mobile and ZVV apps (both 4.8⭐) for real-time schedules and seamless journey planning. Zurich's trams, buses, and S-Bahn operate with world-renowned safety standards, comprehensive CCTV monitoring, emergency communication systems, and Swiss precision timing. Services run frequently until 1:30 AM with night services on weekends.",
+        "**Public Transport Safety Features**: All vehicles and stations feature CCTV monitoring, emergency buttons, multilingual announcements, and professional staff oversight. Swiss transport police patrol regularly, harassment incidents are virtually non-existent, and cleanliness standards are exceptional. The integrated network means minimal waiting and seamless connections throughout the region.",
+        "**Alternative Transport Options**: Uber operates safely throughout Zurich with driver verification and GPS tracking. Licensed Swiss taxis maintain high professional standards with regulated fares and courteous service. Zurich is exceptionally walkable with excellent pedestrian infrastructure, well-maintained sidewalks, and safe cycling infrastructure including bike-sharing systems.",
+        "**Swiss Rail Network Access**: Zurich's central location provides access to Switzerland's legendary rail network with connections throughout Europe. SBB Swiss Railways maintains world-class safety standards, punctuality (average delay under 3 minutes), and comfort. Perfect for solo female travelers wanting to explore Switzerland safely and efficiently."
+      ]
+    },
+    soloWomenPerception: {
+      headline: "How Solo Women Are Perceived in Zurich - Cultural Acceptance Guide",
+      points: [
+        "**Complete Cultural Acceptance**: Solo female travel is completely normalized in Zurich's international, progressive culture. Switzerland ranks among world's top countries for gender equality, creating environments where women traveling alone face zero social stigma. Business culture, tourism industry, and social norms all fully support and expect independent female travelers.",
+        "**Swiss Professional Courtesy**: Swiss cultural values of respect, discretion, and professional courtesy create ideal interactions for solo female travelers. Service industry workers maintain appropriate boundaries while being genuinely helpful. Business interactions follow clear protocols that ensure respectful treatment regardless of gender or travel status.",
+        "**International Business Environment**: Zurich's role as global financial center means locals are accustomed to international business travelers, including solo female professionals. This creates sophisticated, respectful environments where solo women are treated as serious travelers and business people rather than objects of curiosity or concern.",
+        "**Privacy-Respecting Culture**: Swiss cultural emphasis on privacy and non-interference creates perfect conditions for solo female travelers who want independence without unwanted attention. Locals are helpful when approached but respect personal space and don't intrude with questions or assumptions about solo travel choices."
+      ]
+    }
+  },
+  currencyExchangeTips: {
+    headline: "Currency & Exchange Tips for Zurich - Solo Female Travel Safety",
+    tips: [
+      "**Best Exchange Locations**: Use major Swiss banks (UBS, Credit Suisse, Raiffeisen, PostFinance) for competitive rates and maximum security. Central Zurich branches offer excellent service with multilingual staff. Avoid airport exchanges and tourist-focused offices which charge significant premiums - plan to exchange before arrival or at downtown banks.",
+      "**ATM Safety & Strategy**: Swiss ATMs are among world's safest and most reliable. Use bank-owned ATMs when possible for security and fee reduction. Zurich has extensive ATM networks throughout central safe districts including Bahnhofstrasse, Old Town, and major transport hubs. Swiss banking security standards are legendary globally.",
+      "**Credit Card Excellence**: Visa and Mastercard work universally with exceptional fraud protection and security. Swiss businesses prefer contactless payments, which is safer for solo travelers. Notify banks of travel dates to prevent transaction blocks. Switzerland's low crime rates make card usage extremely safe.",
+      "**Digital Payment Innovation**: Switzerland leads in digital payment technology with Twint (Swiss mobile payment app), extensive contactless acceptance, and world-class security systems. These digital approaches are particularly beneficial for solo female travelers in busy tourist areas and public transport systems.",
+      "**Emergency Financial Access**: Keep multiple backup payment methods including emergency cash reserves. Swiss banks offer excellent international wire services and tourist emergency assistance. Major hotels can assist with banking needs, and Swiss financial infrastructure provides rapid emergency money access when needed."
+    ]
   }
 };
 

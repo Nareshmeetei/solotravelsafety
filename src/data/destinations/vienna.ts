@@ -14,6 +14,7 @@ const vienna: Destination = {
     reviewCount: 160,
     lastUpdated: '1 day ago',
     harassmentRisk: 'low',
+    description: 'Is Vienna safe for solo female travelers? Vienna stands as one of Europe\'s safest capitals for women traveling alone, with Austria ranking #8 globally for women\'s safety (Women Peace & Security Index 2023-24). This magnificent imperial city combines world-class cultural sophistication with exceptional urban safety, ranking among the world\'s most livable cities. With its legendary coffee house culture, classical music heritage, and formal Austrian etiquette that emphasizes respect and boundaries, Vienna offers solo female travelers an ideal blend of cultural richness and comprehensive security.',
     safetyBreakdown: {
       nightSafety: {
         score: 8.4,
@@ -74,41 +75,73 @@ const vienna: Destination = {
         name: 'Wombat\'s The City Hostel Vienna - Naschmarkt',
         type: 'hostel',
         features: ['Female-only dorms', 'Prime location', '24/7 reception', 'CCTV surveillance', 'Solo traveler friendly'],
-        rating: 4.6,
+        rating: 8.6,
         notes: 'Rated best hostel for female solo travelers in Vienna. Located in trendy Mariahilf district near Naschmarkt. Excellent safety features and social atmosphere for meeting other travelers.',
         link: 'https://www.wombats-hostels.com/vienna/the-naschmarkt/'
-      },
-      {
-        name: 'Vienna Boutique Hostel',
-        type: 'hostel',
-        features: ['Female-only options', 'Artsy Mariahilf location', 'Sophisticated atmosphere', 'High security'],
-        rating: 4.5,
-        notes: 'Perfect blend of safety and sophistication in the artistic Mariahilf neighborhood. Highly rated by solo female travelers for its secure environment and stylish design.',
-        link: 'https://www.viennaboutiquehostel.com/'
       },
       {
         name: 'Hotel Sacher Wien',
         type: 'hotel',
         features: ['Historic luxury', 'Prime Innere Stadt location', '24/7 concierge', 'Highest security standards'],
-        rating: 4.8,
+        rating: 9.2,
         notes: 'Iconic luxury hotel in heart of Vienna\'s safest district. World-renowned for exceptional service and security. Perfect for solo women seeking ultimate comfort and safety.',
         link: 'https://www.sacher.com/en/hotel-sacher-vienna/'
+      },
+      {
+        name: 'Vienna Boutique Hostel',
+        type: 'hostel',
+        features: ['Female-only options', 'Artsy Mariahilf location', 'Sophisticated atmosphere', 'High security'],
+        rating: 8.5,
+        notes: 'Perfect blend of safety and sophistication in the artistic Mariahilf neighborhood. Highly rated by solo female travelers for its secure environment and stylish design.',
+        link: 'https://www.viennaboutiquehostel.com/'
+      },
+      {
+        name: 'Hotel Imperial Vienna',
+        type: 'hotel',
+        features: ['Imperial luxury', 'Ring Boulevard location', '24/7 security', 'Concierge services'],
+        rating: 9.1,
+        notes: 'Legendary luxury hotel with exceptional security in prime location. Perfect for solo female travelers seeking imperial elegance with world-class safety standards.',
+        link: 'https://www.imperialvienna.com/'
       },
       {
         name: 'JO&JOE Vienna',
         type: 'hostel',
         features: ['Female dorms available', 'Modern design', 'Social spaces', 'Excellent security'],
-        rating: 4.4,
+        rating: 8.4,
         notes: 'Contemporary hostel rated best for female solo travelers. Combines safety with vibrant social atmosphere and modern amenities.',
         link: 'https://www.joandjoe.com/en/hostels/vienna'
+      },
+      {
+        name: 'The Guesthouse Vienna',
+        type: 'hotel',
+        features: ['Boutique luxury', 'Wieden district', 'Personal service', 'High security'],
+        rating: 9.0,
+        notes: 'Elegant boutique hotel in safe Wieden district with personalized service. Exceptional choice for solo female travelers seeking intimate luxury with top-tier safety.',
+        link: 'https://www.theguesthouse-vienna.com/'
       },
       {
         name: 'myNext - Campus Hostel',
         type: 'hostel',
         features: ['Female-only floors', 'University area', 'Safe neighborhood', '24/7 security'],
-        rating: 4.3,
+        rating: 8.3,
         notes: 'Located in safe university district with excellent security measures. Popular with solo female travelers for its peaceful environment and safety features.',
         link: 'https://mynext.at/'
+      },
+      {
+        name: 'Hotel Am Ring',
+        type: 'hotel',
+        features: ['Ringstrasse location', 'Historic charm', '24/7 reception', 'Central safety'],
+        rating: 8.8,
+        notes: 'Charming hotel on Vienna\'s famous Ringstrasse with excellent safety in central location. Ideal for solo female travelers wanting historic atmosphere with modern security.',
+        link: 'https://www.hotelamring.at/'
+      },
+      {
+        name: 'Hilton Vienna Plaza',
+        type: 'hotel',
+        features: ['International standard', 'Schottenring location', 'Business center', 'High security'],
+        rating: 8.9,
+        notes: 'International chain hotel with consistent safety standards in prime central location. Perfect for solo female business travelers and luxury seekers.',
+        link: 'https://www.hilton.com/en/hotels/viehhhi-hilton-vienna-plaza/'
       }
     ],
     alerts: [],
@@ -119,7 +152,7 @@ const vienna: Destination = {
 • Dress smart-casual for restaurants, theaters, and cultural sites - Viennese value neat appearance
 • Avoid flashy jewelry and keep bags secure in crowded tourist areas
 • Always carry a charged phone and emergency contacts`,
-      firstTimers: `• Vienna is perfect for first-time solo women travelers - extremely beginner-friendly
+      firstTimers: `• Is Vienna safe for solo female travelers? Absolutely - Vienna is perfect for first-time solo women travelers with exceptional safety and beginner-friendly culture
 • Save emergency numbers (112 general, 133 police, 144 medical, 122 fire)
 • Download WienMobil app for seamless public transport navigation
 • Most locals speak English, especially in tourist areas and among younger people
@@ -127,16 +160,24 @@ const vienna: Destination = {
 • Stay in central districts (1st-9th) for best safety and accessibility
 • Is Vienna safe for solo female travellers? Absolutely - it's one of Europe's safest capitals`,
       apps: [
+        'WienMobil',
+        'Citymapper',
+        'bSafe',
         'NomadHer',
-        'Travel Ladies',
-        'bSafe', 
-        'Google Translate'
+        'Google Translate',
+        'Tourlina',
+        'My Safetipin',
+        'SkyAlert'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers' },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community app' },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features' },
-        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential translation app for international travel' }
+        { name: 'WienMobil', link: 'https://www.wienerlinien.at/wienmobil-app', description: 'Essential Vienna transport app with real-time schedules, route planning, and safety features for navigating the city safely', rating: 4.8 },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Smart urban navigation for Vienna with real-time transit updates, walking directions, and safety route recommendations', rating: 4.7 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Critical safety app with GPS tracking, fake call feature, and SOS button - essential for solo female travelers in unfamiliar areas', rating: 4.6 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for connecting with verified women travelers safely in Vienna with local cultural tips', rating: 4.8 },
+        { name: 'Google Translate', link: 'https://translate.google.com/', description: 'Essential for German translation with camera feature for menus, signs, and emergency communications', rating: 4.5 },
+        { name: 'Tourlina', link: 'https://www.tourlina.com/', description: 'AI-powered travel companion app specifically designed for solo women travelers with Vienna safety recommendations', rating: 4.4 },
+        { name: 'My Safetipin', link: 'https://safetipin.com/', description: 'Community-driven safety app with neighborhood ratings and real-time safety updates for Vienna districts', rating: 4.3 },
+        { name: 'SkyAlert', link: 'https://www.skyalert.com/', description: 'Emergency alerts and safety notifications system with location-based warnings for Vienna area', rating: 4.2 }
       ],
       emergencyPhrases: [
         {
@@ -193,7 +234,7 @@ const vienna: Destination = {
         'Avoid loud behavior or public displays that draw attention',
         'Respect cultural sites and dress appropriately for churches and museums'
       ],
-      perception: 'Solo female travelers are extremely common and fully accepted in Vienna. Austria ranks #8 globally for women\'s safety (Women Peace & Security Index 2023-24). Is Vienna safe for solo female travellers? Absolutely - locals are respectful, helpful, and accustomed to solo women visitors. The city has a progressive, welcoming attitude toward independent women travelers, with excellent infrastructure supporting safe solo exploration.'
+      perception: 'Is Vienna safe for solo female travelers? Absolutely - solo female travelers are extremely common and fully accepted in Vienna. Austria ranks #8 globally for women\'s safety (Women Peace & Security Index 2023-24). Is Vienna safe for solo female travellers? Yes - locals are respectful, helpful, and accustomed to solo women visitors. The city has a progressive, welcoming attitude toward independent women travelers, with excellent infrastructure supporting safe solo exploration.'
     },
     bestTimeToVisit: {
       safestMonths: ['June-August'],
@@ -932,7 +973,57 @@ const vienna: Destination = {
       ]
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "b6vfzn-uFE0"
+  },
+  culturalInformation: {
+    headline: "Is Vienna safe for solo female travelers? Navigating Austrian Culture & Viennese Traditions",
+    points: [
+      "**Imperial Elegance & Formality**: Vienna maintains its imperial heritage through formal etiquette and structured social interactions. Solo female travelers benefit from this cultural emphasis on politeness and proper behavior - Austrians use formal titles ('Herr/Frau') and maintain respectful distance until invited closer. This formality creates predictable, safe social interactions where boundaries are clearly respected.",
+      "**Coffee House Culture & Solo Dining**: Vienna's legendary coffee house culture perfectly accommodates solo female travelers. The tradition of sitting alone with a newspaper, book, or laptop for hours is not just accepted but celebrated. Famous coffee houses like Café Central, Sacher, and Demel provide safe, elegant spaces for women to enjoy Austrian culture independently without any social stigma.",
+      "**Classical Music & Cultural Refinement**: Vienna's musical heritage creates an atmosphere of cultural sophistication that enhances safety for solo female travelers. The city's focus on opera, classical concerts, and cultural events attracts educated, respectful audiences. Evening cultural activities provide safe, enriching experiences where solo attendance is completely normal and appreciated.",
+      "**Austrian Punctuality & Reliability**: Viennese culture emphasizes extreme punctuality and reliability, creating predictable, trustworthy interactions for solo female travelers. Public transport runs precisely on time, appointments are kept exactly, and social commitments are honored. This cultural reliability extends to safety - if something seems off-schedule or unusual, it's worth investigating as Austrians maintain consistent, dependable patterns.",
+      "**Environmental Awareness & Quality of Life**: Vienna consistently ranks as the world's most livable city due to cultural values emphasizing environmental sustainability, public transport, and community well-being. This cultural focus on collective responsibility creates safer neighborhoods, cleaner public spaces, and more considerate interactions - all benefiting solo female travelers who can trust in well-maintained infrastructure and community-minded citizens.",
+      "**Habsburg Legacy & Historical Awareness**: Vienna's imperial history creates cultural appreciation for grandeur, architecture, and historical preservation. Solo female travelers should understand that Austrians take pride in their cultural heritage - showing respect for historical sites, dressing appropriately for formal venues, and appreciating architectural details demonstrates cultural sensitivity and often leads to warmer local interactions."
+    ]
+  },
+  practicalInfo: {
+    moneyConnectivity: {
+      headline: "Money & Connectivity Essentials for Vienna - Solo Female Travel Safety Guide",
+      points: [
+        "**Euro Currency & Payment Systems**: Vienna uses the Euro with excellent cashless payment infrastructure. Most places accept contactless cards, but carry small cash amounts for traditional coffee houses and markets. ATMs are abundant and safe - use bank-owned machines (Bank Austria, Erste Bank, Raiffeisen) for best rates and security.",
+        "**Banking & Currency Exchange**: Major banks offer competitive exchange rates with branches throughout central Vienna. Avoid airport and tourist area exchanges. Austrian banks maintain high security standards with multilingual staff in tourist districts. Credit cards work everywhere, but notify banks of travel to prevent blocked transactions.",
+        "**Mobile Connectivity**: Austria has excellent 4G/5G coverage throughout Vienna. Major carriers include A1, T-Mobile Austria, and Drei. Buy prepaid SIM cards at any electronics store or carrier shop. Free WiFi available at most cafes, libraries, and public buildings including many tram/metro stations.",
+        "**Digital Payment Culture**: Vienna embraces contactless payments with widespread acceptance of Apple Pay, Google Pay, and contactless cards. This cashless culture is safer for solo female travelers as it reduces handling of physical money and speeds up transactions in busy tourist areas."
+      ]
+    },
+    transportEssentials: {
+      headline: "Transport Essentials for Solo Female Safety in Vienna",
+      points: [
+        "**Wiener Linien System Excellence**: Download WienMobil app (4.8★) for real-time schedules and route planning. Vienna's U-Bahn, trams, and buses operate with exceptional safety standards, comprehensive CCTV monitoring, and emergency buttons. Night services run until 2:30 AM weekends with maintained safety protocols.",
+        "**Public Transport Safety Features**: All stations are well-lit with emergency intercoms and security presence. Transport police patrol regularly, and harassment incidents are extremely rare. The system serves all districts safely, though exercise normal precautions in outer districts (10, 15, 16) late at night.",
+        "**Alternative Transport Options**: Uber and Bolt operate safely with driver verification and GPS tracking. Official taxis are regulated with fixed rates and licensed drivers - use taxi stands or call reputable companies (Taxi 31300, Taxi 40100). Avoid unlicensed taxis which may overcharge tourists.",
+        "**Walking & Cycling Infrastructure**: Vienna features extensive pedestrian zones and excellent lighting throughout central districts. The city maintains safe cycling infrastructure with dedicated bike lanes. Walking is extremely safe during day and night in districts 1-9, with well-maintained sidewalks and active street life."
+      ]
+    },
+    soloWomenPerception: {
+      headline: "How Solo Women Are Perceived in Vienna - Cultural Acceptance Guide",
+      points: [
+        "**Complete Cultural Acceptance**: Solo female travel is completely normalized in Vienna's progressive Austrian culture. Women dining alone, attending opera solo, or exploring museums independently face zero social stigma. Austria ranks #8 globally for women's safety, reflecting deep cultural respect for female independence and autonomy.",
+        "**Professional & Respectful Interactions**: Austrian cultural formality creates predictably respectful interactions with solo female travelers. Service industry workers maintain professional boundaries while being helpful. Business interactions follow formal protocols that ensure appropriate treatment regardless of gender or travel status.",
+        "**Intellectual & Cultural Appreciation**: Vienna's emphasis on education and culture means solo female travelers are often viewed as intellectually curious and culturally sophisticated. Attending concerts, visiting museums, or reading in coffee houses alone is seen as refined behavior that garners respect from locals.",
+        "**Safety Through Social Structure**: Austrian social structure emphasizes order, predictability, and community responsibility, creating inherent safety for solo female travelers. This cultural framework means inappropriate behavior toward women is socially unacceptable and quickly addressed by both authorities and fellow citizens."
+      ]
+    }
+  },
+  currencyExchangeTips: {
+    headline: "Currency & Exchange Tips for Vienna - Solo Female Travel Safety",
+    tips: [
+      "**Best Exchange Locations**: Use major Austrian banks (Bank Austria, Erste Bank, Raiffeisen) for competitive rates and maximum security. Central Vienna branches offer multilingual service and better rates than tourist-focused exchange offices. Avoid airport exchanges which charge premium rates.",
+      "**ATM Safety Strategy**: Austrian ATMs are extremely safe and reliable. Use bank-owned ATMs when possible, preferably inside bank branches for added security. Vienna has extensive ATM networks throughout safe central districts. Withdraw larger amounts less frequently to minimize fees.",
+      "**Credit Card Advantages**: Visa and Mastercard work universally with excellent fraud protection. Many Viennese businesses prefer contactless payments, which is safer for solo travelers. Notify banks of travel dates to prevent transaction blocks. Consider no-foreign-fee cards for cost savings.",
+      "**Digital Payment Security**: Vienna's advanced digital payment infrastructure allows safe, contactless transactions. Apple Pay and Google Pay work extensively, reducing need to handle cash or cards. This digital approach is particularly beneficial for solo female travelers in crowded tourist areas.",
+      "**Emergency Money Access**: Keep backup payment methods including emergency cash reserves. Western Union and MoneyGram have Vienna locations for urgent transfers. Major hotels can assist with banking needs, and Austrian banks offer international wire services for serious emergencies."
+    ]
   }
 };
 

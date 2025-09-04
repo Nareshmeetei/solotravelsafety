@@ -291,21 +291,34 @@ const amsterdam: Destination = {
       }
     },
     culturalExpectations: {
-      dressCode: 'Dress is generally casual and practical, but neat. Jeans, t-shirts, and sneakers are fine in most settings. For business or upscale restaurants, smart-casual is expected. Rain gear is essential year-round. Swimwear is only for pools and beaches. Topless sunbathing is accepted in some parks and beaches, but nudity is only allowed in designated areas.',
-      behaviorNorms: [
-        'Respect personal space and privacy; the Dutch value directness but not intrusion.',
-        'Be punctual for appointments and social events.',
-        'Greet with a handshake and maintain eye contact.',
-        'Tipping is appreciated (5–10%) but not mandatory.',
-        'Don\'t be arrogant or boastful; humility is valued.',
-        'Avoid walking in bike lanes—cyclists have priority and expect you to move.',
-        'Don\'t photograph people in the Red Light District.',
-        'Try to learn and use a few Dutch phrases, even though most people speak English.',
-        'The Dutch are tolerant of different lifestyles and expect the same from visitors.',
-        'Plan visits in advance; unannounced drop-ins are uncommon.',
-        'Join in on "gezelligheid" (coziness, togetherness) in social settings.'
+      dressCode: [
+        'Amsterdam embraces casual and practical dress culture - jeans, t-shirts, and sneakers are perfectly acceptable in most settings for solo female travelers',
+        'Smart-casual attire recommended for business meetings or upscale restaurants - neat appearance is valued over formal dress',
+        'Rain gear absolutely essential year-round due to unpredictable Dutch weather - waterproof jacket and comfortable walking shoes',
+        'For churches or religious sites, dress modestly by covering shoulders and knees as a sign of respect',
+        'Swimwear only appropriate for pools, beaches, and designated sunbathing areas - topless sunbathing accepted in some parks but nudity restricted to designated zones'
       ],
-      perception: 'Solo women travelers are generally respected and safe in Amsterdam. The city is progressive and open-minded, but as in any major city, it\'s wise to stay aware of your surroundings, especially at night or in crowded areas. Catcalling is rare but can happen. Locals are used to solo travelers and are usually helpful if you ask for directions or advice.',
+      behaviorNorms: [
+        'Respect personal space and privacy - the Dutch value directness in communication but not intrusion into personal matters',
+        'Be punctual for appointments and social events - Dutch culture highly values timeliness and being late is considered disrespectful',
+        'Embrace direct communication style - Dutch people are straightforward and honest, this isn\'t meant to be rude but rather efficient',
+        'Greet with firm handshake and maintain eye contact - shows confidence and respect in Dutch social interactions',
+        'Avoid walking or standing in bike lanes (red pavement) - cyclists have absolute priority and will ring bells aggressively if blocked',
+        'Don\'t photograph people in the Red Light District - it\'s disrespectful to workers and can be illegal in some areas',
+        'Learn basic Dutch phrases like "Hallo" and "Dank je wel" - locals appreciate the effort even though most speak excellent English',
+        'Join in on "gezelligheid" (cozy togetherness) in social settings - embrace the friendly, warm Dutch social atmosphere',
+        'Practice humility and avoid boastfulness - Dutch culture values modesty and down-to-earth attitudes',
+        'Plan visits in advance rather than dropping in unannounced - Dutch prefer scheduled social interactions'
+      ],
+      perception: [
+        'Solo women travelers are generally respected and welcomed in Amsterdam\'s progressive and inclusive society - locals actively help lost travelers with directions',
+        'The city embraces diversity and solo female travelers report feeling comfortable and accepted in most social settings and public spaces',
+        'Dutch culture values independence and self-reliance, making solo travel socially acceptable and even admired by locals',
+        'Most Amsterdam residents speak excellent English and are patient with tourists - language barriers rarely create safety concerns',
+        'Catcalling incidents are relatively rare compared to other European capitals, though they can occur in touristy nightlife areas',
+        'Local women often travel alone and will readily share safety advice or recommendations with fellow solo female travelers',
+        'Business owners and service staff are accustomed to solo diners and travelers - you won\'t feel out of place eating or shopping alone'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['June-August'],

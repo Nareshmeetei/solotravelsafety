@@ -301,7 +301,14 @@ const athens: Destination = {
       }
     },
     culturalExpectations: {
-      dressCode: 'Generally casual and relaxed. Modest dress required for Orthodox churches and monasteries - cover shoulders, arms, and legs. Many religious sites provide cover-ups. Beachwear only for beaches and pools. Greeks dress up for evening dining and nightlife.',
+      dressCode: [
+        'Athens embraces casual Mediterranean dress culture - comfortable clothing suitable for walking on ancient cobblestones and uneven archaeological sites',
+        'Modest dress absolutely required for Orthodox churches and monasteries - cover shoulders, arms, and knees (many sites provide cover-ups if needed)',
+        'Smart-casual attire recommended for evening dining and nightlife - Greeks tend to dress up more than other European cities for dinner',
+        'Comfortable walking shoes essential for exploring archaeological sites, marble steps, and historic areas with uneven surfaces',
+        'Beachwear only appropriate for beaches, pools, and designated sunbathing areas - not acceptable for city sightseeing or religious sites',
+        'Light layers recommended for shoulder seasons when temperatures can vary significantly between day and evening'
+      ],
       behaviorNorms: [
         'Greeks are warm and hospitable - accept invitations graciously',
         'Personal space is smaller than in Northern European cultures',
@@ -314,7 +321,15 @@ const athens: Destination = {
         'Remove shoes when entering homes',
         'Don\'t photograph military installations or personnel'
       ],
-      perception: 'Solo female travelers are generally welcomed and respected in Athens. Greek culture is hospitable and family-oriented, though some traditional attitudes remain. Catcalling is uncommon but can occur. Most locals are helpful and protective of solo women travelers, especially older generations who will offer assistance.'
+      perception: [
+        'Solo female travelers are warmly welcomed in Athens thanks to the renowned Greek hospitality (philoxenia) - locals often go out of their way to help',
+        'Greek culture is deeply family-oriented and protective, with many older locals treating solo women travelers like their own daughters or granddaughters',
+        'Most Athenians speak at least basic English and are patient with tourists - language barriers rarely create safety concerns or social awkwardness',
+        'Traditional gender roles still exist in some contexts, but Athens is increasingly progressive and women traveling alone are widely accepted',
+        'Catcalling and street harassment are relatively uncommon compared to other Mediterranean capitals, though isolated incidents can occur in tourist areas',
+        'Restaurant owners and service staff are accustomed to solo diners - you will not feel out of place eating alone in traditional tavernas',
+        'Local women often provide unsolicited but helpful advice about safety, good restaurants, and areas to avoid - embrace this community spirit'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-June', 'September-October'],

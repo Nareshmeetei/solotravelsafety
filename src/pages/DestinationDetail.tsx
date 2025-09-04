@@ -1181,12 +1181,10 @@ const DestinationDetail: React.FC = () => {
                       <div className="mt-4">
                         <h4 className="font-bold text-blue-900 mb-1">Exchange Tips</h4>
                         <div className="text-[10pt] text-blue-800">
-                          {(() => {
-                            const tip = dest.usefulTips?.find((t: any) => t.title?.toLowerCase().includes('currency & exchange tips'));
-                            if (tip) return tip.description;
-                            if (dest.currency?.scamWarnings && dest.currency.scamWarnings.length > 0) return dest.currency.scamWarnings[0];
-                            return null;
-                          })()}
+                          {dest.currency?.exchangeTips && dest.currency.exchangeTips.length > 0 ? 
+                            dest.currency.exchangeTips[0] : 
+                            'Contact your bank for the best exchange rates before traveling.'
+                          }
                         </div>
                       </div>
                     </div>
@@ -1454,30 +1452,34 @@ const DestinationDetail: React.FC = () => {
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
                         <div className="space-y-4">
-                          {dest.culturalExpectations?.dressCode && (
+                          {dest.culturalExpectations?.dressCode && Array.isArray(dest.culturalExpectations.dressCode) && dest.culturalExpectations.dressCode.length > 0 && (
                           <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                             <h4 className="font-display text-blue-900 mb-2">Dress Code</h4>
-                            <div className="text-[12pt] text-blue-800 whitespace-pre-line">
-                              {dest.culturalExpectations.dressCode}
-                            </div>
+                            <ul className="text-[12pt] text-blue-800 space-y-2">
+                              {dest.culturalExpectations.dressCode.map((item: string, idx: number) => (
+                                <li key={idx}>• {item}</li>
+                              ))}
+                            </ul>
                           </div>
                           )}
                           {dest.culturalExpectations?.behaviorNorms && Array.isArray(dest.culturalExpectations.behaviorNorms) && dest.culturalExpectations.behaviorNorms.length > 0 && (
                           <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                             <h4 className="font-display text-purple-900 mb-2">Behavior Norms</h4>
-                            <ul className="text-[12pt] text-purple-800 space-y-1">
+                            <ul className="text-[12pt] text-purple-800 space-y-2">
                               {dest.culturalExpectations.behaviorNorms.map((norm: string, idx: number) => (
                                 <li key={idx}>• {norm}</li>
                               ))}
                             </ul>
                           </div>
                           )}
-                          {dest.culturalExpectations?.perception && (
+                          {dest.culturalExpectations?.perception && Array.isArray(dest.culturalExpectations.perception) && dest.culturalExpectations.perception.length > 0 && (
                           <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
                             <h4 className="font-display text-gray-900 mb-2">Local Perception</h4>
-                            <div className="text-[12pt] text-gray-800 whitespace-pre-line">
-                              {dest.culturalExpectations.perception}
-                            </div>
+                            <ul className="text-[12pt] text-gray-800 space-y-2">
+                              {dest.culturalExpectations.perception.map((item: string, idx: number) => (
+                                <li key={idx}>• {item}</li>
+                              ))}
+                            </ul>
                           </div>
                           )}
                           {/* Old format cultural considerations */}
@@ -1745,42 +1747,33 @@ const DestinationDetail: React.FC = () => {
                       <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Information</h3>
                       <div className="space-y-4">
                         {/* Dress Code */}
-                        {dest.culturalExpectations?.dressCode && (
-                          <div className="p-4 bg-gray-50 rounded-lg">
-                            <h4 className="font-display text-gray-900 mb-2">Dress Code</h4>
-                            <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                              {(Array.isArray(dest.culturalExpectations.dressCode)
-                                ? dest.culturalExpectations.dressCode
-                                : dest.culturalExpectations.dressCode.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
-                              ).map((item: string, idx: number) => (
-                                <li key={idx}>{item.trim()}</li>
+                        {dest.culturalExpectations?.dressCode && Array.isArray(dest.culturalExpectations.dressCode) && dest.culturalExpectations.dressCode.length > 0 && (
+                          <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <h4 className="font-display text-blue-900 mb-2">Dress Code</h4>
+                            <ul className="text-[12pt] text-blue-800 space-y-2">
+                              {dest.culturalExpectations.dressCode.map((item: string, idx: number) => (
+                                <li key={idx}>• {item}</li>
                               ))}
                             </ul>
                           </div>
                         )}
-                        {dest.culturalExpectations?.behaviorNorms && (
-                          <div className="p-4 bg-gray-50 rounded-lg">
-                            <h4 className="font-display text-gray-900 mb-2">Behavior Norms</h4>
-                            <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                              {(Array.isArray(dest.culturalExpectations.behaviorNorms)
-                                ? dest.culturalExpectations.behaviorNorms
-                                : dest.culturalExpectations.behaviorNorms.split(/\n|,|•/).filter(Boolean)
-                              ).map((norm: string, index: number) => (
-                                <li key={index}>{norm.trim()}</li>
+                        {dest.culturalExpectations?.behaviorNorms && Array.isArray(dest.culturalExpectations.behaviorNorms) && dest.culturalExpectations.behaviorNorms.length > 0 && (
+                          <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
+                            <h4 className="font-display text-purple-900 mb-2">Behavior Norms</h4>
+                            <ul className="text-[12pt] text-purple-800 space-y-2">
+                              {dest.culturalExpectations.behaviorNorms.map((norm: string, idx: number) => (
+                                <li key={idx}>• {norm}</li>
                               ))}
                             </ul>
                           </div>
                         )}
                         {/* Solo Women Perception */}
-                        {dest.culturalExpectations?.perception && (
-                          <div className="p-4 bg-gray-50 rounded-lg">
-                            <h4 className="font-display text-gray-900 mb-2">Solo Women Perception</h4>
-                            <ul className="text-gray-700 space-y-1 list-disc list-inside">
-                              {(Array.isArray(dest.culturalExpectations.perception)
-                                ? dest.culturalExpectations.perception
-                                : dest.culturalExpectations.perception.split(/\.|\n|•/).filter((s: string) => s.trim().length > 0)
-                              ).map((item: string, idx: number) => (
-                                <li key={idx}>{item.trim()}</li>
+                        {dest.culturalExpectations?.perception && Array.isArray(dest.culturalExpectations.perception) && dest.culturalExpectations.perception.length > 0 && (
+                          <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                            <h4 className="font-display text-gray-900 mb-2">Local Perception</h4>
+                            <ul className="text-[12pt] text-gray-800 space-y-2">
+                              {dest.culturalExpectations.perception.map((item: string, idx: number) => (
+                                <li key={idx}>• {item}</li>
                               ))}
                             </ul>
                           </div>
