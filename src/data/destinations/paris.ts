@@ -897,9 +897,16 @@ const paris: Destination = {
         'Don\'t be overly enthusiastic with strangers - French culture values reserved, quiet interaction in public'
       ]
     },
-  youtubeVideo: {
-    videoId: "2Xc_D9eQwpM" // See How It's Like: Paris travel experience video
-  }
+  youtubeVideos: [
+    {
+      videoId: "2Xc_D9eQwpM",
+      title: "Paris Solo Female Travel Experience"
+    },
+    {
+      videoId: "vnASw-6bY-o",
+      title: "See How It's Like: Paris Travel Guide"
+    }
+  ]
 };
 
 export default paris;
