@@ -950,7 +950,7 @@ const berlin: Destination = {
       ]
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "fr9MkUTWHco" // See How It's Like: Berlin walkthrough video
   }
 };
 

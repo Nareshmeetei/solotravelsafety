@@ -898,7 +898,7 @@ const paris: Destination = {
       ]
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "2Xc_D9eQwpM" // See How It's Like: Paris travel experience video
   }
 };
 
