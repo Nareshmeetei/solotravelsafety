@@ -186,9 +186,31 @@ const bern: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Practical, warm clothing. No specific restrictions.',
-      behaviorNorms: ['Quiet in public transport', 'Respect personal space'],
-      perception: 'Solo female travelers are common and completely accepted.'
+      dressCode: [
+        'Swiss fashion emphasizes quality over quantity - invest in well-made, durable pieces in neutral colors like black, navy, grey',
+        'Practical outdoor gear is fashionable and socially acceptable - Swiss women commonly wear hiking boots and functional jackets in city settings',
+        'Business casual expected for upscale restaurants and cultural venues - avoid overly casual clothing when dining or visiting museums',
+        'Modest attire appreciated in churches and historical sites - cover shoulders and knees when visiting religious buildings or memorials',
+        'Avoid flashy designer logos or expensive accessories - Swiss culture values understated elegance over conspicuous consumption',
+        'Weather-appropriate layering essential year-round - sudden Alpine weather changes require adaptable clothing system with waterproof outer layer'
+      ],
+      behaviorNorms: [
+        'Punctuality is sacred in Swiss culture - being even 5 minutes late is considered disrespectful and can negatively impact social interactions',
+        'Maintain quiet voices on public transport and in public spaces - loud conversations or phone calls are frowned upon by locals',
+        'Respect personal space and avoid unnecessary physical contact - Swiss people prefer formal interactions until relationships develop naturally',
+        'Direct communication is valued and expected - Swiss people appreciate honesty and straightforward conversation over small talk or indirect hints',
+        'Sunday quiet hours (Sonntagsruhe) strictly observed - avoid noisy activities, shopping, or loud music on Sundays to respect local customs',
+        'Environmental consciousness is deeply embedded - proper recycling, avoiding waste, and using public transport demonstrates cultural respect and integration'
+      ],
+      perception: [
+        'Solo female travel is completely normalized in Switzerland - women traveling alone face no social stigma or unusual attention from locals',
+        'Swiss society strongly supports gender equality and women\'s independence - solo female travelers are viewed as competent, respected individuals',
+        'Restaurant dining alone is common and unremarkable - servers and other patrons treat solo diners with same attention and respect as groups',
+        'Swiss people are helpful but reserved by nature - locals will readily assist with directions or recommendations when asked directly',
+        'Solo women in bars, cafes, or social settings are generally left alone unless they initiate conversation - harassment is rare and socially unacceptable',
+        'Professional and educational environments fully embrace women\'s participation - female solo travelers feel welcomed in all business and academic settings',
+        'Language barriers are minimal - English proficiency is high, especially among younger population and service industry workers in Bern'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['June-August'],
