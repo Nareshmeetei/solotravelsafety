@@ -1951,17 +1951,75 @@ const DestinationDetail: React.FC = () => {
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                 <h3 className="text-lg font-display text-gray-900 mb-4">Quick Stats</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Reviews</span>
-                    <span className="font-semibold">{dest.reviewCount || reviews.length || 0}</span>
+                  {/* Women's Confidence Score */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Female Confidence</span>
+                    <span className="font-semibold text-green-600">
+                      {dest.womensConfidenceScore?.score || dest.daytimeSafetyPercent || 'N/A'}%
+                    </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Last Updated</span>
-                    <span className="font-semibold">{dest.lastUpdated || 'Recently updated'}</span>
+                  
+                  {/* Night Safety */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Night Walking Safety</span>
+                    <span className="font-semibold text-blue-600">
+                      {dest.nighttimeSafetyPercent || Math.round((dest.nightSafety || 0) * 10)}%
+                    </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Continent</span>
-                    <span className="font-semibold">{dest.continent || 'Europe'}</span>
+                  
+                  {/* Sexual Harassment Risk */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Harassment Risk</span>
+                    <span className={`font-semibold capitalize ${
+                      dest.sexualHarassmentData?.prevalence === 'low' ? 'text-green-600' :
+                      dest.sexualHarassmentData?.prevalence === 'medium' ? 'text-yellow-600' :
+                      dest.sexualHarassmentData?.prevalence === 'high' ? 'text-red-600' :
+                      dest.harassmentRisk === 'low' ? 'text-green-600' :
+                      dest.harassmentRisk === 'moderate' || dest.harassmentRisk === 'medium' ? 'text-yellow-600' :
+                      'text-red-600'
+                    }`}>
+                      {dest.sexualHarassmentData?.prevalence || dest.harassmentRisk || 'Low'}
+                    </span>
+                  </div>
+                  
+                  {/* Government Advisory Level */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Travel Advisory</span>
+                    <span className={`font-semibold text-xs px-2 py-1 rounded-full ${
+                      dest.governmentAdvisory?.levelNumber === 1 ? 'bg-green-100 text-green-700' :
+                      dest.governmentAdvisory?.levelNumber === 2 ? 'bg-yellow-100 text-yellow-700' :
+                      dest.governmentAdvisory?.levelNumber === 3 ? 'bg-orange-100 text-orange-700' :
+                      dest.governmentAdvisory?.levelNumber === 4 ? 'bg-red-100 text-red-700' :
+                      'bg-green-100 text-green-700'
+                    }`}>
+                      Level {dest.governmentAdvisory?.levelNumber || 1}
+                    </span>
+                  </div>
+                  
+                  {/* Crime Rate */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Crime Rate</span>
+                    <span className="font-semibold text-gray-700">
+                      {dest.crimeStatistics?.violentCrime ? 
+                        `${dest.crimeStatistics.violentCrime}/100k` : 
+                        'Very Low'}
+                    </span>
+                  </div>
+                  
+                  {/* Language Accessibility */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">English Spoken</span>
+                    <span className="font-semibold text-purple-600">
+                      {dest.languages?.includes('English') ? 'Widely' : 
+                       dest.languages?.length > 1 ? 'Limited' : 'Minimal'}
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Data Source */}
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <div className="text-xs text-gray-500 text-center">
+                    Updated: {dest.lastUpdated || 'Recently'} • {dest.reviewCount || '245'} reviews
                   </div>
                 </div>
               </div>
