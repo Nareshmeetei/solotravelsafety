@@ -140,14 +140,14 @@ const busan: Destination = {
         'KakaoTaxi'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Busan', rating: 4.3 },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety', rating: 4.1 },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with South Korea safety insights', rating: 4.0 },
-        { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Essential Korean navigation app with detailed local info for Busan exploration', rating: 4.7 },
-        { name: 'Busan Metro', link: 'https://www.humetro.busan.kr/', description: 'Official Busan subway app with real-time info and women-only car locations', rating: 4.6 },
-        { name: 'KakaoTaxi', link: 'https://www.kakaocorp.com/page/service/service/KakaoTaxi', description: 'Korea\'s most popular taxi app with verified drivers and GPS tracking', rating: 4.5 }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community for meeting other women travelers safely in Busan' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family' },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch' },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing essential for solo travel safety' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with South Korea safety insights' },
+        { name: 'KakaoMap', link: 'https://map.kakao.com/', description: 'Essential Korean navigation app with detailed local info for Busan exploration' },
+        { name: 'Busan Metro', link: 'https://www.humetro.busan.kr/', description: 'Official Busan subway app with real-time info and women-only car locations' },
+        { name: 'KakaoTaxi', link: 'https://www.kakaocorp.com/page/service/service/KakaoTaxi', description: 'Korea\'s most popular taxi app with verified drivers and GPS tracking' }
       ],
       emergencyPhrases: [
         {
@@ -867,9 +867,45 @@ const busan: Destination = {
           safetyLevel: 'high'
         },
         {
+          method: 'Busan Metro (Subway Lines 1-4)',
+          cost: '$1.50-2.50/ride',
+          safetyDescription: 'Extremely safe with security cameras, well-lit stations, and efficient network reaching major areas. Discount available with Cashbee/T-money cards.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Busan-Gimhae Light Rail (BGL)',
+          cost: '$1.50-3/ride',
+          safetyDescription: 'Safe and convenient for reaching Gimhae and Yangsan areas. Modern system with good security.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'City Buses',
+          cost: '$1.20-2/ride',
+          safetyDescription: 'Safe and comprehensive network reaching all corners of the city. Drivers can be more assertive than Seoul but services are reliable.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'KakaoTaxi App',
+          cost: '$5-12/ride',
+          safetyDescription: 'Safest taxi option with GPS tracking, verified drivers, and app-based payment. Essential for late night travel.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Regular Taxis (Gray)',
+          cost: '$3-10/ride (basic fare 3,300 KRW)',
+          safetyDescription: 'Generally honest and fair meters. Use only licensed taxis with official identification stickers. Insist on meter usage.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Deungdae Call Taxi (600-1000)',
+          cost: '$4-12/ride',
+          safetyDescription: 'City of Busan\'s designated brand taxi with 3-5 minute response time and multilingual interpretation service available.',
+          safetyLevel: 'high'
+        },
+        {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Very safe during day and night',
+          safetyDescription: 'Very safe during day and night with well-lit streets and helpful locals. Even beaches are open 24 hours and feel safe.',
           safetyLevel: 'high'
         }
       ],
@@ -879,6 +915,17 @@ const busan: Destination = {
         'Hostels in Korea maintain high safety standards',
         'Walking is safe and free - take advantage of Busan\'s pedestrian-friendly areas',
         'Korean hospitality industry has strict safety regulations'
+      ],
+      currencyExchangeTips: [
+        'Exchange money in Korea rather than your home country for better rates - avoid airport exchanges except for small amounts (about $50 for initial transport)',
+        'Best exchange locations in Busan: Woori and Youngjin Currency Exchange at Nampo Station Exit 7, and Nayoung ("Grandma") Currency Exchange in Seomyeon',
+        'ATMs offer competitive rates but charge KRW 3,600 ($2.70) fee - use for larger amounts to minimize fee impact',
+        'Choose to be charged in Korean Won (KRW) when using ATMs abroad for fairer rates and lower fees',
+        'Banks offer good rates but charge 1-3% service fees and operate limited hours (9 AM-4 PM, Mon-Fri)',
+        'Find ATMs in major subway stations and convenience stores (7-Eleven, CU, GS25) with generally competitive exchange rates',
+        'Avoid services claiming "no commission" as they typically offer poor exchange rates below mid-market rates',
+        'Inform your bank before traveling and check for partnerships with Korean banks to avoid additional ATM fees',
+        'ATM locations: Major subway stations, convenience stores (24/7), Gimhae Airport, shopping areas, and hotels'
       ]
     },
   culturalSensitivity: {
@@ -898,7 +945,47 @@ const busan: Destination = {
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "fd3SKHano24"
+  },
+  practicalInfo: {
+    moneyAndConnectivity: [
+      'South Korean Won (KRW) is the currency - exchange money at banks or certified exchange centers for best rates',
+      'ATMs widely available in convenience stores and subway stations, most accept international cards with KRW 3,600 fee',
+      'Free WiFi available in most cafes, hotels, and public areas - download KakaoMap and Subway Korea apps before arrival',
+      'Mobile data cards available at airport and convenience stores - helpful for navigation and translation',
+      'Credit cards widely accepted, but carry some cash for traditional markets and small vendors',
+      'Portable WiFi rental available at airports for continuous internet access while exploring Busan'
+    ],
+    transportEssentials: [
+      'Busan Metro (Lines 1-4) connects all major areas - buy T-money card for easy travel and discounts',
+      'KakaoTaxi app essential for safe taxi rides with GPS tracking and verified drivers - download before arrival',
+      'City buses comprehensive but can be crowded during peak hours - metro generally more comfortable for tourists',
+      'Gimhae Light Rail connects downtown to airport - convenient and safe for solo travelers',
+      'Walking is very safe day and night with well-lit streets and helpful locals - major attractions are pedestrian-friendly',
+      'Official taxis (gray) are honest and use meters - insist on meter usage and keep receipt for safety'
+    ],
+    soloWomenPerception: [
+      'Solo female travelers extremely common and completely accepted - Korea ranked among world\'s safest destinations for women in 2025',
+      'Korean culture highly respectful toward women - catcalling and harassment very rare, violent crimes against tourists almost non-existent',
+      'Locals often go out of their way to help solo women travelers with directions and recommendations - hospitality culture is strong',
+      'Women-only subway cars available during peak hours for added comfort and safety',
+      'Hotel and hostel staff trained to assist solo female guests with safety concerns and local navigation',
+      'Conservative dress appreciated but modern, casual wear perfectly acceptable - solo women blend in easily with local fashion'
+    ],
+    dressCode: [
+      'Conservative dress appreciated in temples and traditional areas - cover shoulders and knees out of respect',
+      'Modern, trendy fashion widely acceptable in downtown areas - Busan is fashion-forward and international',
+      'Beach attire appropriate only at beaches and pools - swimwear in city areas draws unwanted attention',
+      'Layers recommended for unpredictable weather - bring light cardigan or jacket for temperature changes',
+      'Comfortable walking shoes essential - Busan has many hills and stairs requiring good footwear for safety'
+    ],
+    behaviorNorms: [
+      'Respect for elders fundamental - use formal language and bow slightly when greeting older people',
+      'Quiet behavior expected on public transport and in public spaces - loud conversations considered rude',
+      'Remove shoes when entering homes and traditional restaurants - indoor/outdoor boundaries strictly observed',
+      'Two-handed giving and receiving of items shows proper respect - especially important with business cards and money',
+      'Punctuality highly valued - arrive on time for appointments and reservations to show cultural respect'
+    ]
   }
 };
 
