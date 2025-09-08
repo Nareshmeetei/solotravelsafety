@@ -192,6 +192,16 @@ const cairo: Destination = {
       ],
       emergencyPhrases: [
         {
+          english: 'NO!',
+          local: 'LA!',
+          localLanguage: 'Arabic'
+        },
+        {
+          english: 'Get away from me!',
+          local: 'Ib\'ad \'anni!',
+          localLanguage: 'Arabic'
+        },
+        {
           english: 'Help me!',
           local: 'Saeiduni!',
           localLanguage: 'Arabic'
@@ -225,39 +235,39 @@ const cairo: Destination = {
           english: 'I feel unsafe.',
           local: 'Ana mish amina.',
           localLanguage: 'Arabic'
-        },
-        {
-          english: 'Get away from me!',
-          local: 'Ib\'ad \'anni!',
-          localLanguage: 'Arabic'
         }
       ]
     },
     culturalExpectations: {
       dressCode: [
+        'Dress extremely conservatively - any exposed skin invites immediate harassment and targeting for women solo travel safety',
         'Long pants and shirts covering arms, chest, and legs completely - revealing clothing dramatically increases harassment risk',
         'Loose-fitting clothing made from breathable fabrics like cotton or linen - in 96-105°F heat, loose clothing keeps you cooler than exposed skin',
         'Maxi skirts or dresses with sleeves - avoid anything tight or form-fitting that attracts unwanted attention',
         'Always carry a scarf for mosque visits and conservative areas - mosques require complete coverage including hair',
         'Light colors help reflect heat while maintaining modesty - choose natural fabrics for extreme temperatures',
         'Closed-toe shoes recommended - avoid sandals showing too much skin which increases harassment',
+        'Understand that solo female travel is extremely unusual and seen as provocative in conservative areas',
         'AVOID COMPLETELY: Any sleeveless tops, tank tops, strapless clothing, shorts, mini skirts, low necklines, crop tops, tight leggings without long covering shirts, sheer fabrics, or beach wear outside resorts'
       ],
       behaviorNorms: [
+        'Be assertively firm when declining offers or advances - politeness is often misinterpreted as interest',
         'Avoid eye contact with men completely - seen as flirtation or invitation in conservative Islamic culture',
-        'Never shake hands or make physical contact with men under any circumstances',
-        'Walk with extreme confidence and purpose - avoid appearing lost or vulnerable as solo women are targeted',
-        'Use assertive body language and firm "LA!" (No!) when declining offers - politeness is misinterpreted as interest',
+        'Never make physical contact with men - no handshakes, high-fives, or casual touch of any kind',
+        'Carry yourself with confident, purposeful body language - avoid appearing lost or vulnerable',
+        'Use assertive body language and firm "LA!" (No!) when declining offers',
         'Remove shoes when entering mosques and traditional homes - use right hand exclusively for eating, greeting, giving items',
         'Show profound respect during prayer times (5 times daily) - dress even more conservatively during Ramadan',
-        'Be extremely firm when declining offers from strangers - don\'t accept invitations to tea or meals (common harassment tactic)',
-        'Learn key Arabic phrases: "Ib\'ad \'anni!" (Get away from me!) and carry a whistle for emergency situations',
+        'Never accept invitations to "traditional" tea or meals from strangers - common harassment tactic against solo female travelers',
+        'Learn key Arabic phrases: "LA!" (No!) and "Ib\'ad \'anni!" (Get away from me!) for setting boundaries',
         'Tip generously (baksheesh) as service providers depend on it - refusing tips can escalate harassment situations',
         'Stay in well-lit, populated areas with security presence - travel in groups when possible as solo women are easy targets'
       ],
       perception: [
         'Solo foreign women are viewed as highly unusual and vulnerable in Egyptian society. Is Cairo safe for solo female travelers? Only with extreme cultural adaptation and safety precautions',
+        'Understand that sexual harassment is unfortunately normalized in Egyptian culture (99.3% prevalence) affecting solo female travel safety',
         'Conservative Islamic society expects women to be accompanied by male relatives, so solo women travelers are often seen as morally questionable or "available"',
+        'Is Cairo safe for solo female travelers culturally? Only with extreme cultural sensitivity and adaptation',
         'Foreign women may be perceived as wealthy, easy targets for scams and harassment',
         'Cultural misunderstandings can escalate harassment situations, and language barriers make it difficult to seek help or assert boundaries',
         'Protection strategies: stay in international hotels with female staff, use only vetted hotel transportation, join organized tours with female guides',
@@ -270,12 +280,16 @@ const cairo: Destination = {
       'Use your right hand exclusively for eating, greeting, and giving/receiving items',
       'Remove shoes when entering mosques and traditional homes',
       'Show profound respect during prayer times (5 times daily) - maintain quiet, respectful demeanor',
+      'Respect Islamic customs especially during prayer times and Ramadan - shows cultural awareness for safe solo travel destinations',
+      'Religious sites require even more conservative behavior - complete silence and deference expected for women traveling alone safety',
       'Tip generously (baksheesh) as service providers depend on it - 10-20 EGP for helpful services',
       'Learn basic Islamic greetings like "As-salamu alaykum" to show cultural respect',
       'Carry modest head covering for mosque visits and conservative areas',
       'Accept offered hospitality graciously - refusing tea/coffee can be offensive',
       'Stand respectfully when hearing call to prayer (Adhan)',
-      'Ask explicit permission before photographing people, especially women'
+      'Ask explicit permission before photographing people, especially women',
+      'Greet women first before acknowledging men in mixed groups',
+      'Respect Ramadan fasting by not eating/drinking publicly during daylight hours'
     ],
     culturalDonts: [
       'Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
@@ -386,34 +400,6 @@ const cairo: Destination = {
         sourceName: "Travel Ladies Community, Egypt Adventures Travel",
         sourceUrl: "https://bea-adventurous.com/is-egypt-safe-for-solo-female-travellers/"
       }
-    ],
-    culturalSensitivityTips: [
-      'Dress extremely conservatively - cover arms, legs, chest completely',
-      'Use assertive "LA!" (No!) when declining offers - politeness misinterpreted',
-      'Respect Islamic prayer times and Ramadan customs',
-      'Tip generously (baksheesh) - refusing tips escalates harassment',
-      'Carry yourself with confident, purposeful body language',
-      'Learn basic Arabic: "Ib\'ad \'anni!" (Get away from me!)',
-      'Don\'t make physical contact with men - no handshakes or touch',
-      'Don\'t make eye contact with men - seen as flirtation',
-      'Don\'t accept invitations to tea/meals from strangers - harassment tactic',
-      'Don\'t travel alone after dark - harassment risks multiply',
-      'Don\'t ignore that solo female travel is extremely unusual here'
-    ],
-    culturalDos: [
-      'Cover your entire body in loose-fitting, modest clothing - arms, legs, chest, midriff completely covered',
-      'Use your right hand exclusively for eating, greeting, and giving/receiving items',
-      'Remove shoes when entering mosques and some traditional homes',
-      'Show profound respect for Islamic prayer times (5 times daily) - avoid interruptions',
-      'Tip generously and immediately - service providers depend on baksheesh for livelihood',
-      'Ask explicit permission before photographing people, especially women',
-      'Greet women first before acknowledging men in mixed groups',
-      'Learn basic Islamic greetings like "As-salamu alaykum" to show respect',
-      'Carry modest head covering for mosque visits and conservative areas',
-      'Respect Ramadan fasting by not eating/drinking publicly during daylight hours',
-      'Show extra reverence at religious sites - maintain quiet, respectful demeanor',
-      'Stand and dress appropriately when hearing call to prayer (Adhan)',
-      'Accept offered hospitality graciously - refusing tea/coffee can be offensive'
     ],
     culturalDonts: [
       'Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
