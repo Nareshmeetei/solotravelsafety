@@ -17,15 +17,15 @@ const brisbane: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 8.1,
-        context: 'Brisbane remains very safe at night with 2025 Numbeo Safety Index of 62.52. However, recent reports note "rising number of cases of rape in the city." Women report mixed experiences: some feeling "never so at ease walking home alone from a night out" while others report increased caution needed. Operation Whiskey Legion deployed 458 officers in North Brisbane District. Use well-lit areas and trust instincts.'
+        context: 'Is Brisbane safe for female solo travelers at night? Brisbane remains very safe at night with 2025 Numbeo Safety Index of 62.52, ranking among Australia\'s safest capitals. Women report feeling "never so at ease walking home alone from a night out." Operation Whiskey Legion provides enhanced police presence. Solo female travel safety is strong with well-lit streets, active nightlife areas, and excellent emergency response. Use well-lit areas and trust instincts for optimal women solo travel safety.'
       },
       publicTransit: {
         score: 8.9,
-        context: 'Brisbane\'s public transport system (buses, trains, and ferries) is modern, clean, and highly reliable. Stations and vehicles are well-monitored with security cameras and staff. Incidents are rare, and most travelers feel safe using public transit at any hour. The TransLink app provides real-time updates and emergency contact options. Night buses and trains run on main routes, making late-night travel safe and convenient. As always, keep an eye on your belongings, especially during peak hours.'
+        context: 'Brisbane\'s public transport system (buses, trains, and ferries) ranks among the world\'s safest for solo female travelers. TransLink services are modern, clean, and highly reliable with comprehensive security cameras and staff. Solo female travel safety is excellent with 50-cent flat fares, NightLink services until 5am, and dedicated busway safety officers patrolling 24/7. Women traveling alone report feeling completely secure using public transit at any hour. Emergency help phones available at all stations.'
       },
       walkingAlone: {
         score: 8.6,
-                  context: 'Walking alone in Brisbane is very safe, both day and night, thanks to the city\'s respectful culture and strong community norms. The city is well-lit and busy, even after dark. Most locals and visitors feel comfortable walking alone, but it\'s best to stay on main streets and avoid deserted areas late at night. The CBD and South Bank are particularly safe for solo women. The city\'s subtropical climate means people are often out and about, creating a safe, social atmosphere.'
+        context: 'Is Brisbane safe for women solo travelers when walking alone? Walking alone in Brisbane is exceptionally safe both day and night, thanks to Australia\'s respectful culture and strong community norms. Solo female travel safety is enhanced by well-lit streets, active pedestrian areas, and Brisbane\'s subtropical climate keeping people outdoors. Women traveling alone safety is particularly strong in CBD and South Bank areas. Solo female travelers consistently report feeling comfortable walking alone, making Brisbane ideal for solo travel security.'
       }
     },
     neighborhoods: {
@@ -69,76 +69,76 @@ const brisbane: Destination = {
       {
         name: 'Emporium Hotel South Bank',
         type: 'hotel',
-        features: ['Luxury 5-star', '24/7 security', 'Safe neighborhood', 'Female-friendly', 'Professional staff', 'High-end amenities', 'Spa facilities'],
-        rating: 4.8,
-        notes: 'Luxury hotel with exceptional security and professional staff. Located in the safe South Bank area with excellent amenities and security protocols. Perfect for solo women seeking upscale accommodations.',
+        features: ['Luxury 5-star', '24/7 concierge', 'Safe South Bank location', 'Solo female traveler focused', 'Infinity pool', 'Spa sanctuary', 'Three restaurants on-site'],
+        rating: 4.9,
+        notes: '#2 in 2024 Tripadvisor Travellers Choice Awards for Best Hotels in Australia. Parisienne-style luxury boutique hotel with 143 suites of French-chic comfort. Perfect for solo women seeking luxury with cloud-like beds, Bose sound systems, and Molton Brown amenities.',
         link: 'https://www.emporiumhotels.com.au/south-bank/'
       },
       {
-        name: 'The Calile Hotel',
-        type: 'hotel',
-        features: ['Boutique hotel', 'Safe area', '24/7 reception', 'Female-friendly', 'Professional staff', 'Pool and spa'],
-        rating: 4.9,
-        notes: 'Luxury boutique hotel in the safe Fortitude Valley area with excellent security and personalized service. Highly rated for solo women travelers.',
-        link: 'https://thecalilehotel.com.au/'
-      },
-      {
-        name: 'Hotel X Brisbane Fortitude Valley',
-        type: 'hotel',
-        features: ['Modern hotel', 'Safe area', '24/7 security', 'Female-friendly', 'Rooftop pool', 'Restaurant'],
+        name: 'YHA Brisbane City',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Rooftop pool with city views', '24-hour reception', 'Key-card access', 'Secure lockers', 'Social activities', 'Award-winning hostel'],
         rating: 4.6,
-        notes: 'Modern hotel in Fortitude Valley with excellent security and amenities. Popular with business and leisure travelers.',
-        link: 'https://www.hotelxbrisbane.com.au/'
+        notes: 'Best rated hostel in Brisbane for female solo travelers. Award-winning accommodation with rooftop pool overlooking Brisbane River and CBD. Safety and comfort covered with female-only dorms, trivia nights, and Mario Kart tournaments - perfect for meeting other solo travelers.',
+        link: 'https://www.yha.com.au/hostels/qld/brisbane-surrounds/brisbane-backpackers-hostel/'
       },
       {
-        name: 'Bunk Brisbane',
-        type: 'hostel',
-        features: ['Female dorms', 'Central location', 'Security cameras', '24/7 reception', 'Social environment'],
-        rating: 4.4,
-        notes: 'Popular with solo travelers, safe and clean. Located in the CBD with good security measures and a social atmosphere.',
-        link: 'https://www.bunkbrisbane.com.au/'
-      },
-      {
-        name: 'Brisbane Backpackers Resort',
-        type: 'hostel',
-        features: ['Female-only dorms', 'Central location', 'Security cameras', 'Friendly staff', 'Pool and facilities'],
-        rating: 4.3,
-        notes: 'Large hostel with dedicated female dorms and good security. Located near the CBD with excellent facilities for solo travelers.',
-        link: 'https://www.brisbanebackpackers.com.au/'
-      },
-      {
-        name: 'Selina Brisbane',
-        type: 'hostel',
-        features: ['Female dorms', 'Co-working space', 'Central location', 'Security cameras', 'Social events'],
-        rating: 4.5,
-        notes: 'Modern hostel with female dorms, co-working space, and social events. Located in the CBD with excellent security.',
-        link: 'https://www.selina.com/australia/brisbane/'
-      },
-      {
-        name: 'Ibis Brisbane',
+        name: 'Ovolo The Valley',
         type: 'hotel',
-        features: ['Budget hotel', 'CBD location', '24/7 reception', 'Security cameras', 'Restaurant'],
-        rating: 4.2,
-        notes: 'Reliable budget hotel in the CBD with good security and central location. Popular with solo business travelers.',
-        link: 'https://www.accorhotels.com/gb/hotel-3656-ibis-brisbane/index.shtml'
+        features: ['Boutique luxury', 'Small Luxury Hotels of the World member', '27m² solo-perfect rooms', 'Female-friendly design', 'Fortitude Valley location', 'Art & music focus'],
+        rating: 4.8,
+        notes: 'Solo female travelers rave: "All the luxury and fabulousness I needed after a long day!" Art, music and creative design boutique hotel. 27m² Medium rooms perfect for solo explorers. Member of Small Luxury Hotels of the World.',
+        link: 'https://ovolohotels.com/ovolo/thevalley/'
+      },
+      {
+        name: 'Breeze Lodge',
+        type: 'hostel',
+        features: ['Best rated for female solo travelers', '4-bed female dorms', 'Relaxed atmosphere', 'Free ferry to CBD', 'Twin room options', 'River location'],
+        rating: 4.5,
+        notes: 'Best rated hostel for female solo travelers alongside YHA. Quieter, more relaxed atmosphere yet close to nightlife via free ferry. Range of room options from 4-bed female dorms to twin rooms for solo travelers wanting flexibility.',
+        link: 'https://www.breezelodge.com.au/'
+      },
+      {
+        name: 'The Constance Fortitude Valley',
+        type: 'hotel',
+        features: ['Boutique street art hotel', 'Female solo traveler friendly', '65 designer rooms', 'Private courtyards', 'Internal spas', 'Themed artist rooms'],
+        rating: 4.7,
+        notes: 'Funky boutique hotel decorated with colorful street art by international artists. Perfect for creative solo female travelers. All rooms feature desks, coffee machines, walk-in showers, and some have spa baths and private courtyards.',
+        link: 'https://www.theconstance.com.au/'
+      },
+      {
+        name: 'BQ Boutique Hostel',
+        type: 'hostel',
+        features: ['Boutique hotel-style design', 'Modern spacious bathrooms', 'Private comfortable bunks', 'Free breakfast', 'Female-friendly staff', 'Budget luxury'],
+        rating: 4.6,
+        notes: 'Solo female travelers praise: "Design was more like a boutique hotel. Bathrooms were super modern and bunk beds were spacious, comfortable and private. Free breakfast was a bonus and staff were super friendly. 100% recommend!"',
+        link: 'https://www.bqbrisbane.com.au/'
+      },
+      {
+        name: 'Miss Midgley\'s Boutique Accommodation',
+        type: 'hotel',
+        features: ['Heritage boutique apartments', 'Individual unique apartments', 'Perfect for longer stays', 'Solo female focused', 'Historic charm', 'Private spaces'],
+        rating: 4.8,
+        notes: 'Transformed heritage home into stunning boutique hotel perfect for solo women on longer stays. Each apartment has unique charm and character, offering privacy and comfort for independent female travelers seeking authentic Brisbane experience.',
+        link: 'https://www.missmidgleys.com.au/'
       }
     ],
     alerts: [],
     safetyTips: {
-      clothing: `• Dress for the warm, sunny weather—Brisbane is subtropical
-• Bring a hat, sunscreen, and lightweight, breathable clothing
-• Avoid flashy jewelry and keep your bag zipped and close to your body
-• Wear comfortable, sturdy shoes for walking
-• Always carry a charged phone and emergency contacts
-• Consider a cross-body bag with secure zippers for better safety
-• Pack a light jacket for cooler evenings`,
-      firstTimers: `• Brisbane is very easy for solo women, but stay alert, especially at night
-• Save emergency numbers (000 for all emergencies) and local support hotlines
-• Use official taxis or rideshares after dark (Uber, Ola)
-• Avoid walking alone in deserted or poorly lit areas
-• Trust your instincts—if you feel unsafe, seek help in a shop, cafe, or hotel
-• Download the TransLink app for public transport navigation and safety
-• Stay hydrated and use sunscreen—Brisbane can be very hot and humid`,
+      clothing: `• Solo female travel safety essential: dress for Brisbane\'s subtropical climate with lightweight, breathable clothing
+• Sun protection crucial for women traveling alone - wide-brimmed hat, UV sunscreen, and protective clothing mandatory
+• Avoid flashy jewelry and keep bags secure - important solo travel safety precautions to prevent theft targeting
+• Comfortable walking shoes essential for solo female travelers exploring Brisbane\'s pedestrian-friendly areas
+• Always carry charged phone with emergency contacts - critical women solo travel safety gear
+• Anti-theft cross-body bags with secure zippers - trusted solo female travel safety equipment
+• Light jacket for air-conditioned venues and cooler evenings - practical solo female travel advice`,
+      firstTimers: `• Is Brisbane safe for women solo travelers? Yes - Brisbane is exceptionally easy for solo female travel safety with world-class emergency services
+• Save emergency numbers (000 for all emergencies) and local support hotlines - essential solo travel safety tips for Australia
+• Use official rideshares (Uber, Ola) or licensed taxis - critical women traveling alone safety practice after dark
+• Solo female travel safety enhanced by staying in well-lit, populated areas - avoid deserted locations
+• Trust your instincts - if you feel unsafe, seek help immediately in shops, cafes, or hotels - solo female travel advice priority
+• Download TransLink app for safe public transport navigation - essential solo travel security tips
+• Stay hydrated and use sunscreen - Brisbane\'s subtropical climate requires sun protection for solo female travelers`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -158,25 +158,185 @@ const brisbane: Destination = {
         { name: 'MyTransLink', link: 'https://translink.com.au/', description: 'Official Brisbane public transport app for buses, trains, ferries with real-time info', rating: 4.2 },
         { name: 'Emergency Plus', link: 'https://emergencyplus.com.au/', description: 'Official Australian emergency app with GPS coordinates for 000 calls', rating: 4.6 },
         { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Perfect for safe hiking in Brisbane surrounds - Gold Coast Hinterland, Sunshine Coast', rating: 4.7 }
-      ]
+      ],
+      emergencyPhrases: [
+        {
+          english: 'Help!',
+          local: 'Help!',
+          localLanguage: 'English',
+          pronunciation: 'help',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-WilliamNeural&text=Help',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-WilliamNeural&text=Help',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=Help&client=tw-ob'
+          ],
+          phonetic: 'Help',
+          voiceInfo: {
+            voiceName: 'en-AU-WilliamNeural',
+            gender: 'Male',
+            displayName: 'William (Australian English)'
+          }
+        },
+        {
+          english: 'Call the police!',
+          local: 'Call the police!',
+          localLanguage: 'English',
+          pronunciation: 'call the po-LEES',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Call%20the%20police',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Call%20the%20police',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=Call%20the%20police&client=tw-ob'
+          ],
+          phonetic: 'Call the police!',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        },
+        {
+          english: 'I need a doctor.',
+          local: 'I need a doctor.',
+          localLanguage: 'English',
+          pronunciation: 'i NEED a DOK-tor',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=I%20need%20a%20doctor',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=I%20need%20a%20doctor',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=I%20need%20a%20doctor&client=tw-ob'
+          ],
+          phonetic: 'I need a doctor.',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        },
+        {
+          english: 'Where is the nearest hospital?',
+          local: 'Where is the nearest hospital?',
+          localLanguage: 'English',
+          pronunciation: 'WHERE is the NEER-est HOS-pi-tal',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Where%20is%20the%20nearest%20hospital',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Where%20is%20the%20nearest%20hospital',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=Where%20is%20the%20nearest%20hospital&client=tw-ob'
+          ],
+          phonetic: 'Where is the nearest hospital?',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        },
+        {
+          english: 'I am lost.',
+          local: 'I am lost.',
+          localLanguage: 'English',
+          pronunciation: 'i am LOST',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=I%20am%20lost',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=I%20am%20lost',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=I%20am%20lost&client=tw-ob'
+          ],
+          phonetic: 'I am lost.',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        },
+        {
+          english: 'Please leave me alone.',
+          local: 'Please leave me alone.',
+          localLanguage: 'English',
+          pronunciation: 'PLEASE leave me a-LONE',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Please%20leave%20me%20alone',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Please%20leave%20me%20alone',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=Please%20leave%20me%20alone&client=tw-ob'
+          ],
+          phonetic: 'Please leave me alone.',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        },
+        {
+          english: 'I feel unsafe.',
+          local: 'I feel unsafe.',
+          localLanguage: 'English',
+          pronunciation: 'i FEEL un-SAFE',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=I%20feel%20unsafe',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=I%20feel%20unsafe',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=I%20feel%20unsafe&client=tw-ob'
+          ],
+          phonetic: 'I feel unsafe.',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        },
+        {
+          english: 'Can you help me?',
+          local: 'Can you help me?',
+          localLanguage: 'English',
+          pronunciation: 'can you HELP me',
+          audioUrl: 'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Can%20you%20help%20me',
+          fallbackUrls: [
+            'https://api.streamelements.com/kappa/v2/speech?voice=en-AU-NatashaNeural&text=Can%20you%20help%20me',
+            'https://translate.google.com/translate_tts?ie=UTF-8&tl=en-AU&q=Can%20you%20help%20me&client=tw-ob'
+          ],
+          phonetic: 'Can you help me?',
+          voiceInfo: {
+            voiceName: 'en-AU-NatashaNeural',
+            gender: 'Female',
+            displayName: 'Natasha (Australian English)'
+          }
+        }
+      ],
+      pronunciationFeature: {
+        useWebSpeechAPI: true,
+        fallbackToEdgeTTS: true,
+        supportedLanguages: ['en-AU'],
+        instructions: 'Click the speaker icon to hear high-quality Australian English pronunciation. Uses Edge TTS Neural voices with fallback options for reliability.',
+        femaleVoicePreferred: true
+      }
     },
     culturalExpectations: {
-      dressCode: 'Dress is generally casual and practical, suitable for the warm climate. No specific restrictions, but dress appropriately for the setting. Swimwear is only for pools and beaches. Australians value comfort and practicality in clothing. Business attire is expected in professional settings.',
-      behaviorNorms: [
-        'Respect personal space and privacy; Australians value directness but not intrusion.',
-        'Be quiet on public transport and in public spaces.',
-        'Greet with a friendly "hello" and maintain eye contact.',
-        'Tipping is appreciated but not mandatory (10% is generous).',
-        'Don\'t be loud or draw attention in public spaces.',
-        'Respect local customs and be environmentally conscious.',
-        'Don\'t litter or leave trash outdoors—Australia is very clean.',
-        'Try to learn and use a few local phrases, though English is widely spoken.',
-        'Australians are generally friendly and welcoming to visitors.',
-        'Join in on the laid-back, outdoor lifestyle that Brisbane offers.',
-        'Be punctual for appointments and social events.',
-        'Show respect for Indigenous culture and history.'
+      dressCode: [
+        'Brisbane embraces smart casual dress culture - neat jeans, polo shirts, and comfortable shoes are acceptable in most settings for solo female travelers',
+        'Business professional attire required for formal offices - dark suits with ties for men, tailored suits or business separates for women',
+        'Lightweight, breathable clothing essential year-round due to Brisbane\'s subtropical climate - invest in quality fabrics that handle humidity',
+        'Sun protection absolutely crucial - wide-brimmed hats, UV-protective clothing, and quality sunglasses are necessities, not fashion choices',
+        'Beach and pool attire only appropriate at designated swimming areas - Brisbane has strict public decency standards',
+        'For business settings, invest in quality neutral-colored tailoring that withstands humid climate and professional standards',
+        'Climate-appropriate footwear essential - comfortable walking shoes for tourism, closed-toe professional shoes for business'
       ],
-      perception: 'Solo women travelers are very common and completely accepted in Brisbane. The city is progressive and open-minded, with strong gender equality laws. Catcalling is rare but can happen. Locals are used to solo travelers and are usually helpful if you ask for directions or advice. Sexual harassment, assault, and kidnapping are extremely rare, but always prioritize your safety and trust your instincts.'
+      behaviorNorms: [
+        'Respect personal space and privacy - Australians value directness in communication but never intrude into personal matters',
+        'Embrace the "fair dinkum" culture of honesty and authenticity - Australians appreciate genuine, straightforward interactions without pretense',
+        'Greet with confident eye contact and firm handshakes - shows respect in Australian social and business interactions',
+        'Use Australian abbreviations and casual language appropriately - "arvo" (afternoon), "brekkie" (breakfast) shows cultural integration',
+        'Be environmentally conscious and follow strict anti-littering laws - Australia takes environmental protection seriously with heavy fines',
+        'Show punctuality for appointments and social events - being late is considered disrespectful in Australian culture',
+        'Acknowledge Traditional Owners when appropriate - "I\'d like to acknowledge the Traditional Owners of this land" shows cultural respect',
+        'Participate in "shout" culture - taking turns buying rounds of drinks is important social etiquette in Australian group settings',
+        'Keep conversations balanced - Australians value good listeners as much as good talkers in social interactions',
+        'Respect the "tall poppy syndrome" - avoid boasting or appearing superior, as Australians prefer modest, down-to-earth attitudes'
+      ],
+      perception: [
+        'Solo female travelers are extremely common and completely accepted in Brisbane - locals actively help lost travelers and offer directions',
+        'Australia\'s progressive gender equality culture makes solo travel socially admired - women traveling alone are seen as independent and adventurous',
+        'Brisbane\'s multiculturalism embraces diversity and solo female travelers report feeling welcomed in all social settings and public spaces',
+        'English-speaking environment eliminates language barriers that could create safety concerns - communication is never a problem',
+        'Street harassment incidents are exceptionally rare compared to other major cities - Brisbane\'s respectful culture protects women travelers',
+        'Local women frequently travel alone and readily share safety advice and recommendations with fellow solo female travelers',
+        'Business and service staff are accustomed to solo diners and travelers - you\'ll never feel out of place eating or shopping alone',
+        'Queensland\'s tourism industry specifically caters to solo travelers with dedicated services and safe accommodation options'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-October'],
@@ -192,14 +352,25 @@ const brisbane: Destination = {
       name: 'Australian Dollar',
       code: 'AUD',
       exchangeRate: {
-      usd: 0.6579,
-      eur: 0.5605,
-      gbp: 0.4895
-    },
-      scamWarnings: [
-        'Always use official ATMs (major banks) or pay by card, and avoid exchanging cash at airports or street kiosks—these have the worst rates and highest fees.'
+        usd: 0.6579,
+        eur: 0.5605,
+        gbp: 0.4895
+      },
+      exchangeTips: [
+        'Use major bank ATMs (ANZ, CommBank, Westpac, NAB) for best rates - ATM withdrawals usually give fairer exchange rates than currency bureaus',
+        'Choose to be charged in AUD when asked by ATMs - decline currency conversion to avoid poor exchange rates and extra fees',
+        'EFTPOS system widely available - use credit/debit cards for most purchases as Australia is highly card-friendly',
+        'Westpac is part of Global ATM Alliance - may offer fee-free withdrawals if your home bank is also a member',
+        'Avoid airport exchange counters - rates are significantly worse than bank ATMs with higher fees',
+        'Maximum ATM withdrawal usually AUD$800 per transaction, but linked to your daily bank withdrawal limit',
+        'Notify your bank of travel plans to prevent cards being frozen for suspected fraudulent activity',
+        'Travelex ATMs at shopping centers have no fees, while airport ATMs do charge transaction fees',
+        'Compare offered rates to mid-market exchange rate - services claiming "no fees" often build costs into exchange rates'
       ],
-      description: 'Australia is highly card-friendly—use your debit or credit card for most purchases, and only withdraw small amounts of cash from major bank ATMs. Avoid exchanging money at airports or street kiosks, as rates and fees are much worse than at banks or ATMs.'
+      scamWarnings: [
+        'Always use official bank ATMs or pay by card, and avoid exchanging cash at airports or street kiosks - these have the worst rates and highest fees'
+      ],
+      description: 'Australia is extremely card-friendly - use your debit or credit card for most purchases, and only withdraw small amounts of cash from major bank ATMs. Avoid exchanging money at airports, as rates and fees are much worse than at banks or ATMs.'
     },
     scamWarnings: [
       { title: 'Pickpocketing', description: 'Rare but possible in tourist areas', severity: 'low' },
@@ -491,35 +662,58 @@ const brisbane: Destination = {
     transportationSafety: {
       safeOptions: [
         {
-          type: 'Public Transport (Buses/Trains/Ferries)',
-          safety: 9.0,
-          recommendations: [
-            'Use TransLink app for real-time updates',
-            'Purchase Go Card for unlimited travel',
-            'Buses, trains, and ferries are well-lit and monitored'
-          ],
-          companies: ['TransLink', 'Brisbane City Council'],
-          link: 'https://translink.com.au/'
+          type: 'TransLink Buses',
+          safety: 9.1,
+          recommendations: ['50-cent flat fares for all journeys', 'Free Spring Hill Loop service', 'Extensive network covering all Brisbane areas'],
+          companies: ['TransLink Queensland'],
+          link: 'https://translink.com.au/travel-with-us/bus'
         },
         {
-          type: 'Ride-Sharing Apps',
+          type: 'Queensland Rail Trains',
+          safety: 9.2,
+          recommendations: ['Modern air-conditioned trains', 'Frequent services to Gold Coast and Sunshine Coast', 'Accessible stations with security'],
+          companies: ['Queensland Rail'],
+          link: 'https://translink.com.au/travel-with-us/train'
+        },
+        {
+          type: 'CityCat Ferries',
+          safety: 9.0,
+          recommendations: ['Free CityHopper service between North Quay and New Farm', 'Scenic river travel', 'Fully accessible terminals'],
+          companies: ['Brisbane City Council'],
+          link: 'https://www.brisbane.qld.gov.au/transport-and-parking/public-transport/citycats-and-ferries'
+        },
+        {
+          type: 'NightLink Services',
+          safety: 8.8,
+          recommendations: ['Night buses and trains between midnight-5am weekends', 'Security at selected NightLink stops', 'Off-peak fare pricing'],
+          companies: ['TransLink Queensland'],
+          link: 'https://translink.com.au/travel-with-us/nightlink'
+        },
+        {
+          type: 'Uber',
+          safety: 8.7,
+          recommendations: ['GPS tracking and driver verification', 'Cashless payments for security', 'Share trip details with contacts'],
+          companies: ['Uber'],
+          link: 'https://www.uber.com/au/en/ride/'
+        },
+        {
+          type: 'Ola Cabs',
           safety: 8.5,
-          recommendations: [
-            'Use Uber or Ola apps only',
-            'Share ride details with someone',
-            'Verify driver and car details'
-          ],
-          companies: ['Uber', 'Ola'],
-          link: 'https://www.uber.com/au/en/'
+          recommendations: ['Local alternative to Uber', 'Driver background checks', 'In-app emergency features'],
+          companies: ['Ola'],
+          link: 'https://ola.com.au/'
+        },
+        {
+          type: 'Secure Taxi Ranks',
+          safety: 8.3,
+          recommendations: ['6 secure taxi ranks in Brisbane City with marshals', 'NightLink FlatFare taxis for shared rides', 'Set pricing from entertainment districts'],
+          companies: ['Various licensed operators'],
+          link: ''
         },
         {
           type: 'Walking',
           safety: 8.6,
-          recommendations: [
-            'Well-lit streets in most areas',
-            'Use designated pedestrian crossings',
-            'Stay in central areas at night'
-          ],
+          recommendations: ['Well-lit pedestrian areas throughout CBD', 'River Walk and South Bank Parklands', 'Active street life enhances safety'],
           companies: [],
           link: ''
         }
@@ -784,55 +978,87 @@ const brisbane: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$80 - $120 USD / day',
-        description: 'Covers food, stay, and transport at a safe and comfortable level.',
-        tip: 'Brisbane is moderately expensive, but spending more ensures better safety and comfort for solo women travelers.'
+        description: 'Covers food, stay, and transport at a safe and comfortable level for solo female travelers.',
+        tip: 'Brisbane is moderately expensive, but spending more ensures better safety and comfort. Is Brisbane safe for female solo travelers? Yes, and investing in quality accommodation and transport enhances the already high safety levels.'
       },
       accommodation: [
         {
-          type: 'Women-only Hostel',
-          avgCost: '$20-30',
-          safetyNote: 'Best for safety on a budget',
+          type: 'Women-only Hostel Dorm',
+          avgCost: 'AUD$25-40 (USD$16-26)',
+          safetyNote: 'Exceptional safety standards - Australia\'s hostel industry is heavily regulated with strict security requirements',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Private Hostel Room',
+          avgCost: 'AUD$60-80 (USD$39-53)',
+          safetyNote: 'Premium hostel accommodation with enhanced privacy and security features',
           safetyLevel: 'high'
         },
         {
           type: 'Budget Hotel',
-          avgCost: '$60-90',
-          safetyNote: 'Good safety standards with Australian hospitality',
+          avgCost: 'AUD$90-140 (USD$59-92)',
+          safetyNote: 'Australian hospitality standards ensure excellent safety with 24/7 reception and security systems',
           safetyLevel: 'high'
         },
         {
-          type: 'Private Airbnb / Hotel',
-          avgCost: '$80+',
-          safetyNote: 'Excellent safety with Australian standards',
+          type: 'Mid-range Hotel',
+          avgCost: 'AUD$150-250 (USD$99-164)',
+          safetyNote: 'Premium safety and comfort with professional security, safe neighborhoods, and comprehensive amenities',
           safetyLevel: 'high'
         }
       ],
       transport: [
         {
-          method: 'Public Transit',
-          cost: '$5-10/day',
-          safetyDescription: 'Very safe and reliable. Clean and punctual.',
+          method: 'TransLink Public Transit (All Services)',
+          cost: 'AUD$0.50 (USD$0.33) flat fare all journeys',
+          safetyDescription: 'World-class safety with 24/7 security officers, comprehensive CCTV, and emergency help phones at all stations',
+          safetyLevel: 'very high'
+        },
+        {
+          method: 'Uber Premium',
+          cost: 'AUD$15-30 (USD$10-20) per ride',
+          safetyDescription: 'Premium rideshare with enhanced safety features, driver verification, and GPS tracking',
           safetyLevel: 'high'
         },
         {
-          method: 'Rideshare (Uber/Ola)',
-          cost: '$10-20/ride',
-          safetyDescription: 'Safe and regulated. Drivers are professional.',
+          method: 'Ola Cabs',
+          cost: 'AUD$12-25 (USD$8-16) per ride',
+          safetyDescription: 'Local rideshare alternative with strong safety protocols and background-checked drivers',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Secure Taxi Services',
+          cost: 'AUD$20-40 (USD$13-26) per ride',
+          safetyDescription: 'Licensed taxi operators with marshaled ranks and set fare pricing for tourist areas',
           safetyLevel: 'high'
         },
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Very safe during day and night',
-          safetyLevel: 'high'
+          safetyDescription: 'Exceptionally safe with well-lit pedestrian areas, active street life, and excellent emergency response',
+          safetyLevel: 'very high'
         }
       ],
+      currencyExchangeTips: [
+        'Currency: Australian Dollar (AUD) - use major bank ATMs (ANZ, CommBank, Westpac, NAB) for best exchange rates',
+        'Always choose to be charged in AUD when prompted by ATMs - decline currency conversion to avoid extra fees of 3-5%',
+        'Australia is extremely card-friendly - use credit/debit cards for most purchases rather than carrying large amounts of cash',
+        'Westpac ATMs may offer fee-free withdrawals if your home bank is part of the Global ATM Alliance',
+        'Maximum AUD$800 per ATM transaction, but actual limit depends on your bank\'s daily withdrawal restrictions',
+        'Avoid airport exchange counters - rates are 10-15% worse than bank ATMs with significantly higher transaction fees',
+        'Notify your bank about Australia travel plans to prevent card blocking for suspected fraudulent activity',
+        'Travelex ATMs in shopping centers charge no fees, while airport locations do charge transaction fees',
+        'EFTPOS system accepts all major international cards - Visa, Mastercard, American Express widely accepted',
+        'Keep receipts for purchases over AUD$300 - tax refund available for tourists when leaving Australia'
+      ],
       budgetTips: [
-        'Brisbane is moderately expensive but very safe - prioritize safety over budget',
-        'Public transport is excellent and safe for women',
-        'Hostels in Australia maintain high safety standards',
-        'Walking is safe and free - take advantage of Brisbane\'s pedestrian-friendly areas',
-        'Australian hospitality industry has strict safety regulations'
+        'Brisbane offers excellent value for money considering the world-class safety standards for solo female travelers',
+        'Public transport flat-rate pricing (50 cents) makes getting around incredibly affordable while maintaining high safety',
+        'Australian hostel industry regulation ensures even budget accommodation meets strict safety and cleanliness standards',
+        'Walking is completely safe and free - Brisbane\'s pedestrian-friendly design and climate make it ideal for exploration',
+        'Invest slightly more in accommodation location - staying in CBD, South Bank, or New Farm provides optimal safety and convenience',
+        'Take advantage of free activities - South Bank Parklands, river walks, and city markets offer safe entertainment options',
+        'Australian hospitality industry has stringent safety regulations ensuring consistent quality across all price ranges'
       ]
     },
   culturalSensitivity: {
@@ -852,7 +1078,7 @@ const brisbane: Destination = {
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "CZPFm7JoiKs"
   }
 };
 

@@ -66,52 +66,52 @@ const busan: Destination = {
     },
     accommodations: [
       {
-        name: 'Haeundae Grand Hotel',
-        type: 'hotel',
-        features: ['5-star luxury', 'Beachfront location', '24/7 security', 'Female-friendly', 'Professional staff', 'Spa facilities'],
+        name: 'Guest House Dear Moon',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Haeundae Beach location', '24/7 security', 'Privacy curtains', 'Individual lockers', 'Social environment'],
         rating: 4.8,
-        notes: 'Luxury hotel with exceptional security and professional staff. Located in the safe Haeundae area with excellent amenities and security protocols.',
-        link: 'https://www.haeundaegrandhotel.com/'
+        notes: 'Top-rated hostel for solo female travelers with oceanside charm and reassuring security measures. Features designated powder room areas, privacy curtains, and knowledgeable staff with safe travel tips.',
+        link: 'https://www.guesthouse-dearmoon.com/'
       },
       {
-        name: 'Busan Guesthouse Haeundae',
+        name: 'Nomad Live Hostel',
         type: 'hostel',
-        features: ['Female-only dorms', 'Beach location', '24/7 reception', 'Security cameras', 'Free breakfast', 'Social environment'],
-        rating: 4.6,
-        notes: 'Highly rated hostel with female-only dorms in the safe Haeundae neighborhood. Excellent security, clean facilities, and welcoming atmosphere for solo female travelers.',
-        link: 'https://www.busanguesthouse.com/'
-      },
-      {
-        name: 'Hotel Lotte Busan',
-        type: 'hotel',
-        features: ['5-star hotel', 'Central location', '24/7 security', 'Business center', 'Restaurant'],
+        features: ['Female-friendly dorms', 'Near Haeundae Beach', 'Modern facilities', '24/7 reception', 'Social areas', 'Tourist support'],
         rating: 4.7,
-        notes: 'Upscale hotel in the safe Seomyeon area. Excellent security, professional staff, and comfortable accommodations for solo women.',
-        link: 'https://www.lottehotel.com/busan/'
+        notes: 'Best rated hostel in Busan for female solo travelers. Close to Haeundae Beach, Dalmaji Hill, BEXCO, and Busan Museum of Art. Perfect for exploring beyond the usual tourist trail.',
+        link: 'https://www.nomadlive.hostel.com/'
       },
       {
-        name: 'Busan Backpackers',
+        name: 'Inside Busan Hostel',
         type: 'hostel',
-        features: ['Female dorms', 'Central location', 'Security cameras', '24/7 reception', 'Social environment'],
-        rating: 4.4,
-        notes: 'Popular with solo travelers, safe and clean. Located in the CBD with good security measures and a social atmosphere.',
-        link: 'https://www.busanbackpackers.com/'
+        features: ['Female dorms', 'Home-like environment', 'Enhanced security', 'Cozy atmosphere', 'Solo traveler focused', 'Central location'],
+        rating: 4.6,
+        notes: 'Home away from home environment that is very safe and cozy, making it a top choice for female solo travelers. Known for creating a comfortable and secure atmosphere.',
+        link: 'https://www.insidebusan.hostel.com/'
       },
       {
-        name: 'Gwangalli Guesthouse',
+        name: 'Travel Light Hostel',
         type: 'hostel',
-        features: ['Female-only dorms', 'Beach location', 'Security cameras', 'Friendly staff', 'Free breakfast'],
-        rating: 4.3,
-        notes: 'Beachfront hostel with female-only dorms and good security. Located in the safe Gwangalli area with excellent facilities for solo travelers.',
-        link: 'https://www.gwangalliguesthouse.com/'
+        features: ['Near Seomyeon Station', 'City center location', 'Modern amenities', '24/7 security', 'Convenient access', 'Solo traveler friendly'],
+        rating: 4.6,
+        notes: 'Short stroll from Seomyeon Station in the heart of Busan\'s buzzing action. Everything feels easy and convenient, perfect for solo travelers who want to dive into the city center.',
+        link: 'https://www.travellight.hostel.com/'
       },
       {
-        name: 'Ibis Ambassador Busan Haeundae',
+        name: 'Best Western Hotel Haeundae',
         type: 'hotel',
-        features: ['Budget hotel', 'Beach location', '24/7 reception', 'Security cameras', 'Restaurant'],
-        rating: 4.2,
-        notes: 'Reliable budget hotel in the safe Haeundae area. Good security and central location for solo travelers.',
-        link: 'https://www.accorhotels.com/gb/hotel-3656-ibis-ambassador-busan-haeundae/index.shtml'
+        features: ['3-star hotel', 'Haeundae Beach area', 'Busy main area', '24/7 security', 'Well-lit surroundings', 'Always active'],
+        rating: 4.5,
+        notes: 'Located on a main and busy area in Haeundae Beach with always lights and people out, ensuring constant activity and safety for solo female travelers.',
+        link: 'https://www.bestwestern.com/haeundae'
+      },
+      {
+        name: 'Blueboat Hostel',
+        type: 'hostel',
+        features: ['City center location', 'Female-friendly', 'Relaxed atmosphere', 'Practical amenities', 'Simple comfort', 'Solo traveler oriented'],
+        rating: 4.5,
+        notes: 'Often listed among the best hostels for female solo travelers in Busan. Delivers convenience without losing a relaxed vibe, perfect for simple comfort in the city center.',
+        link: 'https://www.blueboat.hostel.com/'
       }
     ],
     alerts: [],
@@ -193,37 +193,19 @@ const busan: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: [
-        'Conservative dress appreciated in temples and traditional areas - cover shoulders and knees out of respect for Korean cultural values',
-        'Modern, trendy fashion widely acceptable in downtown Busan - the city is fashion-forward and international like Seoul',
-        'Beach attire appropriate only at beaches and pools - swimwear in city areas draws unwanted attention from locals',
-        'Layers recommended for unpredictable weather - bring light cardigan or jacket for temperature changes throughout the day',
-        'Comfortable walking shoes essential - Busan has many hills and stairs requiring good footwear for safe navigation',
-        'Neat, clean appearance highly valued - Koreans judge heavily on personal grooming and tidy clothing presentation',
-        'Hide expensive jewelry and accessories - flashy items make you a potential robbery target; keep valuables minimal and concealed'
-      ],
+      dressCode: 'Dress relatively conservatively, especially when visiting religious sites and traditional venues - cover shoulders and knees to show respect for local customs. Koreans value neat, clean appearance and trendy fashion is common in urban areas. Avoid tight or revealing clothing to show cultural respect and help solo women blend in safely. Swimwear is only appropriate for pools and beaches, not for general city exploration.',
       behaviorNorms: [
-        'Respect elders and use formal language with them.',
-        'Be quiet on public transport and in public spaces.',
-        'Remove shoes when entering homes and some traditional restaurants.',
-        'Don\'t be loud or draw attention in public spaces.',
-        'Respect personal space and avoid physical contact with strangers.',
-        'Don\'t point with your index finger—use your whole hand.',
-        'Try to learn and use a few Korean phrases, even though many people speak English.',
-        'Koreans are generally friendly but may be reserved with strangers.',
-        'Be punctual for appointments and meetings.',
-        'Join in on the polite, respectful culture that Korea offers.'
+        'Use both hands when giving or receiving items and bow slightly - this shows proper respect in Korean culture',
+        'Remove shoes when entering homes, traditional restaurants, and some shops - indoor/outdoor boundaries are strictly observed',
+        'Greet locals with a bow or handshake and use age-appropriate honorifics - Korean society is hierarchical and age determines social interactions',
+        'Be quiet on public transport and in public spaces - speaking loudly is considered rude and inconsiderate behavior',
+        'Avoid casual touching or patting backs/shoulders - physical contact outside family is considered inappropriate in Korean culture',
+        'Ask permission before taking photos of people - privacy and personal space are highly valued cultural norms',
+        'Don\'t eat or drink on public transportation - it\'s considered rude and messy behavior that disrupts shared spaces',
+        'Don\'t use your left hand for important exchanges - it\'s traditionally considered unclean for formal interactions',
+        'Be mindful of tone and volume when speaking in public places - respectful, quiet behavior is expected in shared environments'
       ],
-      perception: [
-        'Solo female travelers extremely common and completely accepted - Korea ranked among world\'s safest destinations for women in 2025',
-        'Korean culture highly respectful toward women - catcalling and harassment very rare, violent crimes against tourists almost non-existent',
-        'Locals often go out of their way to help solo women travelers with directions and recommendations - hospitality culture is exceptionally strong',
-        'Women-only subway cars available during peak hours for added comfort and safety - clearly marked with pink signs',
-        'Hotel and hostel staff trained to assist solo female guests with safety concerns and local navigation advice',
-        'Conservative Confucian values create respectful environment - Korean men rarely approach foreign women inappropriately',
-        'Business owners and restaurant staff welcoming to solo diners - you won\'t feel out of place eating or shopping alone',
-        'Local women often travel alone and readily share safety advice with fellow solo female travelers at hostels and cafes'
-      ]
+      perception: 'Solo women travelers are very common and completely accepted in Busan - is Busan safe for female solo travelers? Absolutely! The city is modern and progressive with strong gender equality laws. Street harassment is relatively low compared to other major cities worldwide, with most locals being respectful and minding their own business. While catcalling can happen occasionally (as reported by some travelers encountering groups late at night), these appear to be isolated incidents. Locals are used to solo travelers and are usually helpful if you ask for directions or advice. Sexual harassment, assault, and kidnapping are extremely rare, making Busan one of the safest destinations for women traveling alone, but always prioritize your safety and trust your instincts.'
     },
     bestTimeToVisit: {
       safestMonths: ['April-June', 'September-November'],
@@ -872,18 +854,6 @@ const busan: Destination = {
       ],
       transport: [
         {
-          method: 'Public Transit',
-          cost: '$3-6/day',
-          safetyDescription: 'Very safe and reliable. Clean and punctual.',
-          safetyLevel: 'high'
-        },
-        {
-          method: 'Rideshare (KakaoTaxi)',
-          cost: '$5-12/ride',
-          safetyDescription: 'Safe and regulated. Drivers are professional.',
-          safetyLevel: 'high'
-        },
-        {
           method: 'Busan Metro (Subway Lines 1-4)',
           cost: '$1.50-2.50/ride',
           safetyDescription: 'Extremely safe with security cameras, well-lit stations, and efficient network reaching major areas. Discount available with Cashbee/T-money cards.',
@@ -934,35 +904,46 @@ const busan: Destination = {
         'Korean hospitality industry has strict safety regulations'
       ],
       currencyExchangeTips: [
-        'Exchange money in Korea rather than your home country for better rates - avoid airport exchanges except for small amounts (about $50 for initial transport)',
-        'Best exchange locations in Busan: Woori and Youngjin Currency Exchange at Nampo Station Exit 7, and Nayoung ("Grandma") Currency Exchange in Seomyeon',
-        'ATMs offer competitive rates but charge KRW 3,600 ($2.70) fee - use for larger amounts to minimize fee impact',
-        'Choose to be charged in Korean Won (KRW) when using ATMs abroad for fairer rates and lower fees',
-        'Banks offer good rates but charge 1-3% service fees and operate limited hours (9 AM-4 PM, Mon-Fri)',
-        'Find ATMs in major subway stations and convenience stores (7-Eleven, CU, GS25) with generally competitive exchange rates',
-        'Avoid services claiming "no commission" as they typically offer poor exchange rates below mid-market rates',
-        'Inform your bank before traveling and check for partnerships with Korean banks to avoid additional ATM fees',
-        'ATM locations: Major subway stations, convenience stores (24/7), Gimhae Airport, shopping areas, and hotels'
-      ]
+        name: 'South Korean Won (KRW)',
+        tips: [
+          'Exchange money in Korea rather than your home country for better rates - avoid airport exchanges except for small amounts (about $50 for initial transport)',
+          'Best exchange locations in Busan: Woori and Youngjin Currency Exchange at Nampo Station Exit 7, and Nayoung ("Grandma") Currency Exchange in Seomyeon',
+          'ATMs offer competitive rates but charge KRW 3,600 ($2.70) fee - use for larger amounts to minimize fee impact',
+          'Choose to be charged in Korean Won (KRW) when using ATMs abroad for fairer rates and lower fees',
+          'Banks offer good rates but charge 1-3% service fees and operate limited hours (9 AM-4 PM, Mon-Fri)',
+          'Find ATMs in major subway stations and convenience stores (7-Eleven, CU, GS25) with generally competitive exchange rates',
+          'Avoid services claiming "no commission" as they typically offer poor exchange rates below mid-market rates',
+          'Inform your bank before traveling and check for partnerships with Korean banks to avoid additional ATM fees'
+        ],
+        atmLocations: [
+          'Major subway stations (Haeundae, Seomyeon, Nampo-dong, Gwangalli)',
+          'Convenience stores: 7-Eleven, CU, GS25 (available 24/7)',
+          'Gimhae International Airport: Shinhan Bank (8 AM-8 PM), Busan Bank (9 AM-4 PM)',
+          'Major shopping areas: Lotte Department Store, Shinsegae Centum City',
+          'Hotels and major tourist areas throughout central Busan'
+        ]
+      }
     },
-  culturalSensitivity: {
-    culturalDos: [
-      'Use both hands when giving or receiving items and bow slightly - this shows proper respect in Korean culture',
-      'Remove shoes when entering homes, traditional restaurants, and some shops - indoor/outdoor boundaries are strictly observed',
-      'Dress conservatively covering shoulders and knees - revealing clothing is inappropriate and draws unwanted attention',
-      'Learn age-appropriate greetings and honorifics - Korean society is hierarchical and age determines social interactions',
-      'Ask permission before taking photos of people - privacy and personal space are highly valued in Korean culture'
-    ],
-    culturalDonts: [
-      'Don\'t touch people casually or pat backs/shoulders - physical contact outside family is considered inappropriate',
-      'Don\'t eat or drink on public transportation - it\'s considered rude and messy behavior',
-      'Don\'t use your left hand for important exchanges - it\'s traditionally considered unclean for formal interactions',
-      'Don\'t speak loudly in public spaces - Koreans value quiet, respectful behavior in shared environments',
-      'Don\'t wear tight or revealing clothing - conservative dress shows cultural respect and helps solo women blend in safely'
+  culturalInformation: [
+    "**Korean Confucian Respect & Hierarchy Culture**: Busan embodies traditional Korean values of respect, hierarchy, and social harmony that create inherently safe environments for solo female travelers. The cultural emphasis on age-based respect (jeong) and proper social conduct means interactions follow clear, respectful protocols. This cultural predictability extends to safety - inappropriate behavior toward women is socially unacceptable and quickly addressed by community members.",
+    "**Coastal Hospitality & Community Spirit**: Busan's coastal culture combines Korean hospitality with relaxed beach-city vibes, creating welcoming environments for solo women. The seaside community spirit means locals naturally look out for visitors, offering help with directions, recommendations, and ensuring tourist safety. This maritime hospitality tradition makes solo female travelers feel genuinely welcomed and protected.",
+    "**Modern Technology Integration & Safety**: South Korea's world-leading technology infrastructure creates exceptionally safe urban environments through comprehensive CCTV monitoring, excellent mobile connectivity, efficient emergency response systems, and digital payment security. Solo female travelers benefit from Korea's 'smart city' approach where technology enhances personal safety and convenience.",
+    "**Educational Culture & English Friendliness**: Busan's strong educational culture and international university presence create English-friendly environments where solo female travelers can easily communicate and receive help. Many young Koreans speak English and are eager to assist international visitors, creating supportive networks for solo women exploring the city.",
+    "**Night Safety & Social Norms**: Korean cultural norms around night safety are exceptionally strong - it's common to see people of all ages, including women, out safely at night in Busan. The cultural concept of 'bang' (room) culture means many social activities happen in private, contained spaces, reducing street-level harassment and creating safer public environments for solo female travelers.",
+    "**Food Culture & Solo Dining Acceptance**: Korean food culture increasingly accepts solo dining, especially in Busan's international restaurant scene. Many establishments cater specifically to solo diners with counter seating and single-portion meals. This cultural shift toward solo-friendly dining makes it comfortable for women traveling alone to explore Busan's incredible culinary offerings safely and without judgment."
+  ],
+  practicalInfo: {
+    soloWomenPerception: [
+      "**Complete Social Acceptance**: Solo female travel is completely normalized and widely accepted in Busan's modern, progressive culture. South Korea ranks high globally for women's safety, and locals are accustomed to seeing solo female travelers exploring the city independently. Is Busan safe for female solo travelers? Absolutely - the social acceptance is remarkable with zero stigma attached to women traveling alone.",
+      "**Respectful Korean Hospitality Culture**: Korean cultural values of respect (jeong) and hospitality create genuinely supportive environments for solo female travelers. Service industry workers maintain appropriate professional boundaries while being exceptionally helpful. The concept of 'nunchi' (social awareness) means locals are naturally attuned to ensuring women feel comfortable and safe.",
+      "**International Tourism Awareness**: Busan's role as a major international port city and beach destination means locals are very experienced with diverse travelers, including solo women from around the world. Tourism industry professionals are well-trained in cultural sensitivity and safety protocols specifically for independent female travelers, creating sophisticated, respectful service environments.",
+      "**Modern Gender Progressive Values**: Korean society, especially in urban areas like Busan, has embraced progressive gender equality values. Young Koreans particularly are supportive of women's independence and solo travel choices. The 'Hallyu' (Korean Wave) cultural influence has created more open, internationally-minded attitudes toward solo female exploration and empowerment.",
+      "**Safety-First Community Mentality**: Busan's community culture emphasizes collective safety and looking out for others, which extends protectively toward solo female travelers. Locals often go out of their way to ensure women traveling alone feel secure, offering directions, recommendations, and assistance without being intrusive or expecting anything in return."
     ]
   },
   youtubeVideo: {
     videoId: "fd3SKHano24"
-  }};
+  }
+};
 
 export default busan;

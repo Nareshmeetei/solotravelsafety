@@ -17,15 +17,15 @@ const bogota: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 2.8,
-        context: 'Bogotá remains extremely dangerous at night with 2025 Numbeo data showing Safety Index of only 33.28 and night walking safety at 20.01. Colombian survey data shows 30% of women never go out alone at night due to safety concerns. 2024 crime data shows homicides up 8.3%, assaults up 19.1%, and sexual crimes up 58.8%. Women should completely avoid walking alone after dark and use only verified ride-sharing services.'
+        context: 'Is Bogotá safe for female solo travelers at night? Bogotá remains extremely dangerous at night with 2025 Numbeo data showing Safety Index of only 33.28 and night walking safety at 20.01. Colombian survey data shows 30% of women never go out alone at night due to safety concerns. Solo female travel safety is severely compromised after dark - women should completely avoid walking alone and use only verified ride-sharing services for solo travel security.'
       },
       publicTransit: {
         score: 4.2,
-        context: 'Public transport remains highly problematic for women with 84.3% experiencing sexual harassment on Bogotá transit. The city ranked first on worst cities for women in public transport globally. 86.3% of women feel unsafe at transit stops. While TransMilenio has women-only carriages during peak hours, harassment and theft remain endemic. 2024 data shows continued safety concerns despite infrastructure improvements.'
+        context: 'Public transport safety for solo female travelers remains highly problematic with 84.3% experiencing sexual harassment on Bogotá transit. The city ranked first on worst cities for women in public transport globally. Solo travel safety tips: use women-only carriages during peak hours, though harassment and theft remain endemic. Women solo travel safety requires extreme caution on public transport despite infrastructure improvements.'
       },
       walkingAlone: {
         score: 3.2,
-        context: 'Walking alone remains highly dangerous with Numbeo 2025 showing daytime safety at only 48.52/100. Nine out of ten women feel unsafe in public spaces. Crime trends show 19% increase in street crime. Even daytime walking requires extreme caution in tourist areas only. Solo female travelers report catcalling and harassment as "quite common" even in tourist zones. Never walk alone after dark.'
+        context: 'Is Bogotá safe for women solo travelers during the day? Walking alone remains challenging with Numbeo 2025 showing daytime safety at only 48.52/100. Nine out of ten women feel unsafe in public spaces. Solo female travel safety requires extreme caution even in tourist areas. Solo female travelers report catcalling and harassment as "quite common" even in tourist zones. Women traveling alone safety is compromised - never walk alone after dark.'
       }
     },
     neighborhoods: {
@@ -70,60 +70,68 @@ const bogota: Destination = {
     },
     accommodations: [
       {
-        name: 'Casa Legado Hostel',
-        type: 'hostel',
-        features: ['Women-only dorms', '24/7 reception', 'Safe neighborhood', 'Security cameras', 'Free breakfast', 'Social environment'],
-        rating: 4.6,
-        notes: 'Highly rated women-only hostel in the safe Usaquén neighborhood. Excellent security, clean facilities, and welcoming atmosphere for solo female travelers.',
-        link: 'https://www.casalegado.com/'
-      },
-      {
         name: 'Viajero Bogota Hostel & Spa',
         type: 'hostel',
-        features: ['Female-only dorms', 'Central location', '24/7 reception', 'Security cameras', 'Spa facilities', 'Social environment'],
-        rating: 4.5,
-        notes: 'Popular hostel with strong security measures and female-only dorms. Located in a relatively safe area with good transport connections.',
+        features: ['Female-only dorms', 'On-site spa', 'Sauna & steam bath', 'Hydromassage', 'Privacy curtains', 'Secure lockers', 'Social events', 'Salsa classes'],
+        rating: 4.7,
+        notes: 'Top-rated hostel in La Candelaria with resort-level luxury and party atmosphere. Features the Monserrat Spa with sauna, steam bath, and hydromassage circuit. Female-only dorms with privacy curtains, reading lights, and secure lockers. Essential for solo female travelers seeking safety and social connections.',
         link: 'https://www.viajerohostels.com/bogota/'
       },
       {
-        name: 'Marietta - House Of Social Travellers',
+        name: 'Masaya Bogotá',
         type: 'hostel',
-        features: ['Female dorms', 'Welcoming atmosphere', 'Community vibe', 'Security cameras', 'Friendly staff'],
-        rating: 4.4,
-        notes: 'Known for its welcoming atmosphere, safety, and community vibe, especially for solo women. Excellent for meeting other travelers.',
-        link: 'https://www.mariettahostel.com/'
+        features: ['Women-only dorms', 'Historic building', 'Digital nomad friendly', 'Cultural events', 'Art exhibits', 'Live music', '24/7 reception'],
+        rating: 4.6,
+        notes: 'Located in historic La Candelaria, blending traditional Colombian architecture with modern design. Perfect for digital nomads and solo female travelers. Offers cultural activities, art exhibits, and local events. Highly secure with excellent safety measures.',
+        link: 'https://www.masaya-experience.com/'
+      },
+      {
+        name: 'Casa Legado Hostel',
+        type: 'hostel',
+        features: ['Women-only dorms', '24/7 reception', 'Safe Usaquén neighborhood', 'Security cameras', 'Free breakfast', 'Rooftop terrace'],
+        rating: 4.5,
+        notes: 'Highly rated women-only hostel in the extremely safe Usaquén neighborhood. Excellent security, clean facilities, and welcoming atmosphere specifically designed for solo female travelers. Known for creating a supportive community environment.',
+        link: 'https://www.casalegado.com/'
+      },
+      {
+        name: 'Spotty Hostel',
+        type: 'hostel',
+        features: ['Keycard access', 'Female dorms', 'Elevator security', 'Room keycards', 'Safe neighborhood', '24/7 reception'],
+        rating: 4.5,
+        notes: 'Premier security-focused hostel with keycard access to building, elevators, and rooms. Located in a safe area with excellent safety protocols specifically designed for solo female travelers. Highly recommended by women travelers for its security measures.',
+        link: 'https://www.spottyhostel.com/'
       },
       {
         name: 'Botanico Hostel Bogota',
         type: 'hostel',
-        features: ['Female-only dorms', 'Secure setting', 'Clean facilities', 'Excellent location', '24/7 reception'],
-        rating: 4.3,
-        notes: 'Popular for its secure, clean setting and excellent location. Female-only dorms available with good security measures.',
+        features: ['Female-only dorms', 'Secure setting', 'Clean facilities', 'Excellent location', '24/7 reception', 'Garden area'],
+        rating: 4.4,
+        notes: 'Popular for its secure, clean setting and excellent location. Female-only dorms available with comprehensive security measures. Known as one of the best-rated hostels for female solo travelers in Bogotá.',
         link: 'https://www.botanicohostel.com/'
       },
       {
-        name: 'Socialtel Parque 93 Bogota',
+        name: 'Marietta - House Of Social Travellers',
         type: 'hostel',
-        features: ['Female-friendly', 'Safe area', 'Social atmosphere', 'Security cameras', '24/7 reception'],
-        rating: 4.2,
-        notes: 'Located in a safe area with a social atmosphere. Good security and popular with solo travelers.',
-        link: 'https://www.socialtel.com/'
+        features: ['Female dorms', 'Welcoming atmosphere', 'Community vibe', 'Security cameras', 'Social activities', 'Cultural exchange'],
+        rating: 4.3,
+        notes: 'Known for its exceptionally welcoming atmosphere and strong community vibe, especially popular with solo women. Excellent for meeting other female travelers and creating lasting connections. Prioritizes safety and cultural exchange.',
+        link: 'https://www.mariettahostel.com/'
+      },
+      {
+        name: 'Hotel Retiro 84 by MIJ',
+        type: 'hotel',
+        features: ['Safe neighborhood', '24/7 security', 'Female-friendly', 'Business center', 'Safe walking area at night'],
+        rating: 4.6,
+        notes: 'Highly recommended by solo female travelers for its extremely safe location where women can walk at night. Professional staff, excellent security measures, and located in one of Bogotá\'s safest areas for solo female travelers.',
+        link: 'https://www.hotelretiro84.com/'
       },
       {
         name: 'Hotel B3 Virrey',
         type: 'hotel',
-        features: ['4-star hotel', 'Safe neighborhood', '24/7 security', 'Business center', 'Restaurant'],
-        rating: 4.4,
-        notes: 'Upscale hotel in the safe Chicó neighborhood. Excellent security, professional staff, and comfortable accommodations for solo women.',
+        features: ['4-star hotel', 'Safe Chicó neighborhood', '24/7 security', 'Business center', 'Restaurant', 'Concierge'],
+        rating: 4.5,
+        notes: 'Upscale hotel in the extremely safe Chicó neighborhood. Excellent security, professional staff, and comfortable accommodations specifically catering to solo women travelers. Located in one of Bogotá\'s most secure areas.',
         link: 'https://www.hotelb3virrey.com/'
-      },
-      {
-        name: 'Hotel Bioxury',
-        type: 'hotel',
-        features: ['Boutique hotel', 'Zona Rosa location', '24/7 reception', 'Security cameras', 'Restaurant'],
-        rating: 4.3,
-        notes: 'Boutique hotel in the safe Zona Rosa area. Good security and central location for dining and entertainment.',
-        link: 'https://www.hotelbioxury.com/'
       }
     ],
     alerts: [
@@ -131,20 +139,20 @@ const bogota: Destination = {
       { title: 'Transportation Warning', description: 'Avoid hailing taxis on the street', location: 'City-wide', reportCount: 18, severity: 'medium', dateReported: '1 week ago' }
     ],
     safetyTips: {
-      clothing: `• Dress modestly and avoid flashy jewelry—don\'t draw attention to yourself
-• Keep valuables hidden and use anti-theft bags with secure zippers
-• Wear comfortable, sturdy shoes for walking on uneven streets
-• Avoid expensive watches, jewelry, or designer items
-• Always carry a charged phone and emergency contacts
-• Consider a money belt or hidden pouch for important documents
-• Dress appropriately for the altitude and weather changes`,
-      firstTimers: `• Bogotá is challenging for solo women—arrange airport transfers in advance
-• Save emergency numbers (123 for police, 125 for medical, 119 for fire) and local support hotlines
-• Use registered taxis or rideshares only—never hail taxis on the street
-• Avoid walking alone, especially after dark
-• Trust your instincts—if you feel unsafe, seek help immediately
-• Download essential safety apps and keep them updated
-• Acclimatize to the altitude (2,640m) - take it easy for the first few days`,
+      clothing: `• Solo female travel safety essential: dress modestly and avoid flashy jewelry—don\'t draw attention to yourself as women traveling alone
+• Keep valuables hidden and use anti-theft bags with secure zippers—critical solo travel security tips
+• Wear comfortable, sturdy shoes for walking on uneven streets—important for solo female travelers
+• Avoid expensive watches, jewelry, or designer items—key solo female travel safety precautions
+• Always carry a charged phone and emergency contacts—essential women solo travel safety gear
+• Consider a money belt or hidden pouch for important documents—trusted solo female travel safety tips
+• Dress appropriately for the altitude and weather changes—practical solo female travel advice`,
+      firstTimers: `• Is Bogotá safe for women solo travelers? Yes, with proper precautions—arrange airport transfers in advance for solo female travel safety
+• Save emergency numbers (123 for police, 125 for medical, 119 for fire) and local support hotlines—essential solo travel safety tips
+• Use registered taxis or rideshares only—never hail taxis on the street for women traveling alone safety
+• Avoid walking alone, especially after dark—critical for solo female traveler safety
+• Trust your instincts—if you feel unsafe, seek help immediately—solo female travel advice priority
+• Download essential solo female travel safety apps and keep them updated
+• Acclimatize to the altitude (2,640m) - take it easy for the first few days—important solo travel safety guide`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -209,20 +217,34 @@ const bogota: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Dress is generally modest and conservative. Avoid revealing clothing, especially in traditional areas. Colombians value neat, clean appearance. Avoid flashy jewelry or expensive items that could make you a target. Swimwear is only for pools and beaches. The culture values politeness and respect.',
-      behaviorNorms: [
-        'Be cautious with strangers and avoid sharing personal information.',
-        'Avoid political discussions or criticizing the government.',
-        'Be respectful of local customs and traditions.',
-        'Use formal greetings and show respect to elders.',
-        'Don\'t be loud or draw attention in public spaces.',
-        'Try to learn and use a few Spanish phrases, even though many people speak English.',
-        'Colombians are generally friendly but be cautious of overly friendly strangers.',
-        'Avoid discussing sensitive topics like drugs or violence.',
-        'Be punctual for appointments and meetings.',
-        'Join in on "paseo" (strolling) culture in safe areas.'
+      dressCode: [
+        'Professional and neat appearance is highly valued - Bogotanos dress stylishly even in casual settings, helping you blend in safely as a solo female traveler',
+        'Conservative business attire is essential - men wear dark suits with ties, women dress in professional attire with skirts/dresses always worn with pantyhose',
+        'Quality footwear is crucial - polished, clean dress shoes are mandatory as Colombians judge heavily on shoe quality and cleanliness',
+        'Avoid overly casual clothing like shorts, flip-flops, or running shoes in urban areas - this immediately marks you as a tourist target',
+        'Modest coverage is important - avoid revealing clothing that might attract unwanted attention, especially in traditional neighborhoods like La Candelaria',
+        'Weather-appropriate layering - Bogotá\'s cool climate (2,640m elevation) requires jackets and long pants, perfect for conservative dressing',
+        'Hide expensive jewelry and accessories - flashy items make you a robbery target; keep valuables minimal and concealed'
       ],
-      perception: 'Solo women travelers are relatively rare in Bogotá and may attract unwanted attention. The city has a reputation for being dangerous, especially for women. While Colombians are generally friendly and welcoming, there is a significant risk of harassment, assault, and kidnapping. Always prioritize your safety and trust your instincts.'
+      behaviorNorms: [
+        'Use proper time-of-day greetings with eye contact - "Buenos días," "Buenas tardes," "Buenas noches" shows respect and helps solo female travelers integrate safely',
+        'Practice formal courtesy with strangers - use "usted" instead of "tú" until invited to be informal, especially important for women traveling alone',
+        'Show deep respect for family values - Colombians prioritize family highly, and discussing your own family creates positive connections',
+        'Maintain proper table etiquette - keep hands visible, use cutlery always, wait for "Buen provecho" before eating in restaurants',
+        'Learn basic Spanish phrases - locals greatly appreciate the effort and it increases safety for solo women by reducing tourist targeting',
+        'Practice punctuality in business but expect "tiempo colombiano" - social events may start 30-60 minutes late, but business meetings are on time',
+        'Avoid sensitive topics completely - never joke about drugs, violence, or FARC; Colombians find these stereotypes offensive and tiresome'
+      ],
+      perception: [
+        'Solo female travelers are uncommon and will draw significant attention - Bogotanos may stare or comment out of curiosity rather than malice, but stay alert',
+        'Traditional gender roles persist strongly - men often approach women travelers; polite but firm boundaries are essential for safety',
+        'Street harassment occurs regularly throughout the city - catcalling and verbal remarks are common, especially in tourist areas; ignore and keep walking',
+        'Colombian women are protective and helpful - local women often assist solo female travelers and provide safety warnings about dangerous areas or situations',
+        'Dating culture expectations differ greatly - men typically pay and initiate; be clear about intentions to avoid misunderstandings that could compromise safety',
+        'Professional respect exists in business settings - women are treated professionally, though solo female travelers should dress conservatively to avoid unwanted attention',
+        'Machismo culture influences interactions - while most men are respectful, some may be overly persistent; confident, firm responses are necessary',
+        'Safety concerns are acknowledged by locals - Colombians understand the heightened risks for solo women and often offer assistance or warnings'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['December-March'],
@@ -849,57 +871,117 @@ const bogota: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$35 - $65 USD / day',
-        description: 'Covers food, stay, and transport at a safe and comfortable level.',
-        tip: 'Bogotá is relatively affordable, but spending more on accommodation and transport significantly improves safety for solo women travelers.'
+        description: 'Covers food, stay, and transport at a safe and comfortable level for solo female travelers.',
+        tip: 'Bogotá is relatively affordable, but spending more on accommodation and transport significantly improves safety. Is Bogotá safe for female solo travelers? Yes, with proper precautions and budget allocation for safety.'
       },
       accommodation: [
         {
-          type: 'Women-only Hostel',
-          avgCost: '$12-20',
-          safetyNote: 'Best for safety on a budget in safe neighborhoods',
-          safetyLevel: 'medium'
+          type: 'Women-only Hostel Dorm',
+          avgCost: '$6-11 USD (15,000-27,000 COP)',
+          safetyNote: 'Best budget option for solo female travelers - female-only dorms with security features',
+          safetyLevel: 'high'
+        },
+        {
+          type: 'Private Hostel Room',
+          avgCost: '$20-40 USD (50,000-100,000 COP)',
+          safetyNote: 'More privacy while maintaining hostel security and social atmosphere',
+          safetyLevel: 'high'
         },
         {
           type: 'Budget Hotel',
-          avgCost: '$25-45',
-          safetyNote: 'Choose hotels in safe neighborhoods like Zona Rosa or Chapinero',
+          avgCost: '$25-45 USD (62,000-112,000 COP)',
+          safetyNote: 'Choose hotels in safe neighborhoods like Zona Rosa, Chapinero, or Usaquén',
           safetyLevel: 'medium'
         },
         {
-          type: 'Private Airbnb / Hotel',
-          avgCost: '$40+',
-          safetyNote: 'Much safer with verified hosts in secure neighborhoods',
+          type: 'Mid-range Hotel',
+          avgCost: '$50-80 USD (125,000-200,000 COP)',
+          safetyNote: 'Professional security, safe locations, ideal for solo women prioritizing safety',
           safetyLevel: 'high'
         }
       ],
       transport: [
         {
-          method: 'Rideshare (Uber/Cabify)',
-          cost: '$3-8/ride',
-          safetyDescription: 'Safest option, especially at night. Use verified drivers.',
+          method: 'Uber (technically illegal but widely used)',
+          cost: '$3-8 USD (7,500-20,000 COP) per ride',
+          safetyDescription: 'Safest option for solo female travelers. GPS tracking, driver verification, cashless payment. May need to sit in front seat to avoid police.',
           safetyLevel: 'high'
         },
         {
-          method: 'Public Transit',
-          cost: '$0.50-1/day',
-          safetyDescription: 'Use women-only carriages during peak hours. Avoid at night.',
+          method: 'Beat (local rideshare)',
+          cost: '$3-7 USD (7,500-17,500 COP) per ride',
+          safetyDescription: 'Local alternative to Uber with safety tracking. Popular with women travelers.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Cabify (premium rideshare)',
+          cost: '$4-10 USD (10,000-25,000 COP) per ride',
+          safetyDescription: 'Higher-end rideshare with excellent safety features. Preferred by business travelers.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Registered Taxis (Taxis Libres)',
+          cost: '$4-12 USD (10,000-30,000 COP) per ride',
+          safetyDescription: 'Only legal taxi option. Must be ordered by hotel/phone, never hail on street.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'TransMilenio BRT',
+          cost: '$0.75 USD (2,900 COP) per ride + card fee',
+          safetyDescription: 'Use women-only carriages during peak hours. Avoid at night. High theft risk.',
           safetyLevel: 'low'
         },
         {
-          method: 'Walking',
-          cost: 'Free',
-          safetyDescription: 'Not recommended, especially alone or at night',
-          safetyLevel: 'low'
+          method: 'SITP Local Buses',
+          cost: '$0.70 USD (2,700 COP) per ride',
+          safetyDescription: 'Not recommended for solo female travelers - overcrowded and high crime risk.',
+          safetyLevel: 'very low'
         }
       ],
+      currencyExchange: {
+        currency: 'Colombian Peso (COP)',
+        bestRates: [
+          'ATMs inside banks or malls - safest option with best exchange rates for solo female travelers',
+          'Servibanca ATMs - highest daily limit (2,000,000 COP / $500 USD) with reasonable fees (22,500 COP)',
+          'Banco de Bogotá ATMs - 1,600,000 COP limit ($405 USD) with 15,000 COP ($3.80) fee'
+        ],
+        exchangeTips: [
+          'Always select "withdraw in pesos" to avoid Dynamic Currency Conversion markups',
+          'Use ATMs inside hotels, banks, or shopping centers for safety - never street locations',
+          'Avoid airport exchange counters - rates are 10-15% worse than bank ATMs',
+          'La Candelaria historic center has exchange houses but higher theft risk for solo women',
+          'Credit cards accepted at major establishments - often better rates than cash exchange',
+          'Notify your bank about Colombia travel to prevent card blocking'
+        ],
+        safetyTips: [
+          'Never withdraw money at night - use mall ATMs during daytime hours only',
+          'Use enclosed glass ATM booths where available for privacy and security',
+          'Keep cash in multiple locations - money belt, hidden pockets, hotel safe',
+          'Download Nequi app for digital payments to reduce cash carrying risks',
+          'Budget for ATM fees: expect 15,000-26,000 COP ($4-7 USD) per withdrawal'
+        ]
+      },
       budgetTips: [
-        'Bogotá is affordable but safety should be your top priority over budget',
-        'Spend more on accommodation in safe neighborhoods like Zona Rosa or Chapinero',
-        'Download Nequi for digital payments - reduces cash carrying and target risk',
-        'Use Rappi for food/essential deliveries instead of venturing out alone',
-        'Install Moovit for safe TransMilenio navigation with women-only carriages',
-        'Budget for private transportation via Uber/Beat despite legal ambiguity',
-        'Use Taxis Libres as the only legal taxi option with verified drivers'
+        'Safety over budget - invest in secure accommodation and transportation as a solo female traveler',
+        'Stay in safe neighborhoods: Zona Rosa, Chapinero, Usaquén, or Parque 93 area',
+        'Use digital payments via Nequi app to reduce cash carrying and robbery risk',
+        'Download Rappi for food/essential deliveries instead of venturing out alone at night',
+        'Install Moovit for safe TransMilenio navigation with women-only carriage locations',
+        'Budget $15-25 USD daily for safe transportation via rideshare apps',
+        'Book accommodations with 24/7 reception and security cameras for solo female safety',
+        'Eat at hotel restaurants or established places - street food increases illness risk'
+      ],
+      currencyExchangeTips: [
+        'Currency: Colombian Peso (COP) - always select "charge in pesos" to avoid Dynamic Currency Conversion fees of 3-5%',
+        'Best rates: Use bank ATMs inside banks or shopping malls - Servibanca (2M COP limit) or Banco de Bogotá (1.6M COP limit)',
+        'Credit cards offer excellent rates at hotels, restaurants, and major shops - notify your bank about Colombia travel',
+        'ATM safety for solo women: Only withdraw during daytime hours inside secure locations, never at night or street ATMs',
+        'Budget for ATM fees: Expect 15,000-26,000 COP ($4-7 USD) per withdrawal - still better than exchange counters',
+        'Digital payments: Download Nequi app to reduce cash carrying risks and robbery targets for solo female travelers',
+        'Avoid airport exchange counters: Rates are 10-15% worse than bank ATMs with high transaction fees',
+        'Emergency money: Keep USD cash hidden separately; Western Union available in major malls for transfers',
+        'Exchange houses in La Candelaria offer fair rates but higher theft risk - use only during daylight if necessary',
+        'Security tips: Keep cash in multiple locations (money belt, hidden pockets, hotel safe) and never display large amounts'
       ]
     },
   culturalSensitivity: {
@@ -918,9 +1000,18 @@ const bogota: Destination = {
       'Don\'t expect strict punctuality - "tiempo colombiano" allows for lateness up to an hour for social events'
     ]
   },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  youtubeVideos: [
+    {
+      videoId: "OW7fMRewq40",
+      title: "Solo Female Travel in Bogotá: Complete Safety Guide",
+      description: "Comprehensive guide for solo female travelers visiting Bogotá, Colombia. Essential safety tips and real experiences."
+    },
+    {
+      videoId: "3455-IAZdXk",
+      title: "Bogotá Street Life and Culture Experience",
+      description: "Authentic look at daily life and cultural experiences in Colombia's capital city."
+    }
+  ]
 };
 
 export default bogota; 

@@ -758,7 +758,7 @@ const portAuPrince: Destination = {
       ]
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "3dWWgYmH2G4"
   }
 };
 

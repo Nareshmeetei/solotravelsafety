@@ -304,6 +304,8 @@ export interface Destination {
     moneyAndConnectivity: string[];
     transportEssentials: string[];
     soloWomenPerception: string[];
+    dressCode?: string[];
+    behaviorNorms?: string[];
   };
 }
 

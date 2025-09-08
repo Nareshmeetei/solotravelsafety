@@ -17,15 +17,15 @@ const brussels: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 6.2,
-        context: 'Brussels night safety has declined with 2025 reviews noting "city has become dangerous at night recently, especially for women alone." Level 3 terrorism threat continues. Crime Index 55.04, Safety Index 44.96. 10 murders per 100,000 citizens (2024). Recent shootings in Marolles and Saint-Gilles areas (Feb 2024). Completely avoid walking alone after dark, especially around train stations and neighborhoods like Molenbeek, Anderlecht, Schaerbeek.'
+        context: 'Is Brussels safe for women solo travelers at night? Night safety requires extra precautions with 2025 reviews noting "city has become dangerous at night recently, especially for women alone." Level 3 terrorism threat continues. Crime Index 55.04, Safety Index 44.96. Solo female travel safety is compromised after dark - completely avoid walking alone, especially around train stations. Women traveling alone safety requires using official transport only at night.'
       },
       publicTransit: {
         score: 7.2,
-        context: 'Public transport generally safe but with concerns. 60% of Belgian women report sexual harassment on public transport. High pickpocket risk at Metro stations - Brussels ranks among top European capitals. Night buses available Fri-Sat until 3am. Stay alert in less crowded carriages, sit near drivers on buses. STIB has anti-harassment campaigns but incidents remain frequent during off-peak hours.'
+        context: 'Public transport safety for solo female travelers has significant concerns with 60% of Belgian women reporting sexual harassment on STIB transport. Brussels ranks among top European capitals for pickpocket risk at Metro stations. Solo female travel safety requires staying alert in less crowded carriages. Women solo travel safety enhanced by STIB anti-harassment campaigns, but incidents remain frequent for women traveling alone during off-peak hours.'
       },
       walkingAlone: {
         score: 6.6,
-        context: 'Daytime walking moderately safe in tourist areas but 22% of Brussels women report street harassment annually. Crime Index 55.04 requires significant precautions. Recent reports of increased "men staring and making degrading comments." High pickpocket risk in transportation hubs. Avoid Anneessens, Anderlecht, Schaerbeek, Brussels North, and Gare du Midi areas. Multiple 2024-2025 reviews advise against solo nighttime walks.'
+        context: 'Is Brussels safe for female solo travelers walking alone? Daytime walking moderately safe in tourist areas but 22% of Brussels women report street harassment annually. Solo female travel safety requires significant precautions with Crime Index 55.04. Women traveling alone report increased "men staring and making degrading comments." Solo travel security compromised by high pickpocket risk in transportation hubs. Multiple reviews advise against solo female travelers walking alone at night.'
       }
     },
     neighborhoods: {
@@ -80,42 +80,58 @@ const brussels: Destination = {
       {
         name: 'MEININGER Brussels City Center',
         type: 'hostel',
-        features: ['Female-only dorms', 'Central location', 'Modern security', '24/7 reception', 'Safe neighborhood'],
-        rating: 4.4,
-        notes: 'Highly rated for female solo travelers with dedicated women-only dorms and excellent security measures. Located near Canal de Charleroi, 15-minute walk to Grand Place.',
+        features: ['Female-only dorms', 'Overall Rating 88%', 'Modern security systems', 'Key-card access', '24/7 reception', 'Safe neighborhood', 'Social common areas'],
+        rating: 4.6,
+        notes: 'Best rated hostel in Brussels for female solo travelers. Overall rating of 88% with dedicated women-only dorms and top-tier amenities. CCTV, personalized security codes, and tranquil environments perfect for meeting other solo travelers.',
         link: 'https://www.meininger-hotels.com/en/hotels/brussels/city-center/'
       },
       {
-        name: 'Sleep Well Youth Hostel',
+        name: 'MEININGER Brussels Gare du Midi',
         type: 'hostel',
-        features: ['Female dorms', 'Historic location', 'Central Brussels', 'Budget-friendly', 'Security cameras'],
-        rating: 4.2,
-        notes: 'Central location in historic Brussels, 13-minute walk from Grand Place. Popular with solo female travelers for safety measures and community atmosphere.',
-        link: 'https://www.sleepwell.be/'
+        features: ['Female-only dorms', 'Secure lockers', 'Female-only common areas', '24/7 security', 'Transport connections', 'Social activities'],
+        rating: 4.5,
+        notes: 'Second best MEININGER location specifically recommended for female solo travelers. Features secure lockers, key-card access, and female-only common areas fostering connection and relaxation among women travelers.',
+        link: 'https://www.meininger-hotels.com/en/hotels/brussels/gare-du-midi/'
       },
       {
         name: 'Hotel des Galeries',
         type: 'hotel',
-        features: ['Luxury boutique', 'Prime location', '24/7 security', 'Female-friendly', 'Professional staff'],
-        rating: 4.6,
-        notes: 'Elegant boutique hotel near Royal Galleries of Saint Hubert. Excellent location for solo female travelers with high security standards and professional service.',
+        features: ['Luxury boutique', 'Royal Galleries location', '24/7 concierge', 'Female-friendly staff', 'Premium security', 'Professional service'],
+        rating: 4.8,
+        notes: 'Elegant boutique hotel near Royal Galleries of Saint Hubert - perfect for solo female travelers who appreciate luxury. Exceptional location with high security standards and staff trained specifically for women traveling alone.',
         link: 'https://www.hoteldesgaleries.be/'
       },
       {
-        name: 'NH Collection Brussels Grand Sablon',
-        type: 'hotel',
-        features: ['4-star hotel', 'Safe Sablon area', '24/7 reception', 'Business amenities', 'Female-friendly'],
+        name: 'Sleep Well Youth Hostel',
+        type: 'hostel',
+        features: ['Female-only rooms', 'Historic Brussels location', 'Community atmosphere', 'Security cameras', 'Budget-friendly', '13-min walk to Grand Place'],
         rating: 4.5,
-        notes: 'Located in the upscale Sablon district known for antiques and art galleries. Safe area with excellent amenities for solo business and leisure female travelers.',
-        link: 'https://www.nh-hotels.com/hotel/nh-collection-brussels-grand-sablon'
+        notes: 'Popular choice for budget-conscious solo female travelers. Historic location in central Brussels with strong community atmosphere - perfect for meeting other women travelers. Consistently rated as safe and welcoming.',
+        link: 'https://www.sleepwell.be/'
+      },
+      {
+        name: 'Rocco Forte Hotel des Galeries',
+        type: 'hotel',
+        features: ['5-star luxury', 'Prime Galeries Saint-Hubert location', 'Personal butler service', 'Female-focused amenities', 'Ultimate security', 'Spa services'],
+        rating: 4.9,
+        notes: 'Ultimate luxury for solo female travelers in Brussels. Located in prestigious Royal Galleries with personal butler service and female-focused amenities. Exceptional security and service standards specifically catering to women traveling alone.',
+        link: 'https://www.roccofortehotels.com/hotels-and-resorts/hotel-des-galeries/'
       },
       {
         name: 'Hotel Le Dixseptième',
         type: 'hotel',
-        features: ['Luxury 4-star', 'Historic building', 'Central location', 'High security', 'Solo traveler friendly'],
+        features: ['Historic 17th-century building', '4-star luxury', 'Central Station proximity', 'High security protocols', 'Solo traveler focused', 'Professional staff'],
         rating: 4.7,
-        notes: 'Historic luxury hotel in former 17th-century residence near Central Station. Excellent security and location for solo female travelers seeking upscale accommodation.',
+        notes: 'Historic luxury hotel in former 17th-century residence offering exceptional security and prime location. Specifically caters to solo female travelers with professional staff trained to assist independent women travelers.',
         link: 'https://www.ledixseptieme.be/'
+      },
+      {
+        name: 'NH Collection Brussels Grand Sablon',
+        type: 'hotel',
+        features: ['4-star hotel', 'Safe upscale Sablon district', 'Art gallery neighborhood', 'Business center', '24/7 reception', 'Female business traveler focused'],
+        rating: 4.6,
+        notes: 'Located in the extremely safe and upscale Sablon district known for antiques and art galleries. Perfect for solo female business travelers with excellent amenities and location in one of Brussels\' safest neighborhoods.',
+        link: 'https://www.nh-hotels.com/hotel/nh-collection-brussels-grand-sablon'
       }
     ],
     alerts: [
@@ -137,19 +153,19 @@ const brussels: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Dress modestly and professionally - Brussels has a business-oriented culture
-• Layer clothing for unpredictable weather and carry a waterproof jacket
-• Avoid flashy jewelry or obvious expensive items to prevent pickpocketing
-• Wear comfortable walking shoes for cobblestone streets
-• Dark colors blend in better with local fashion preferences
-• Always carry a charged phone and emergency contacts`,
-      firstTimers: `• Brussels is generally safe for solo women but requires reasonable precautions
-• Register with your embassy within 24 hours if staying longer term
-• Save emergency numbers (112 for police, fire, ambulance) and STIB harassment hotline
-• Use official STIB transport and avoid unlicensed taxis - Uber is available and safe
-• Avoid walking alone in certain neighborhoods like Molenbeek and Anderlecht at night
-• Trust your instincts - if you feel unsafe, seek help in shops, hotels, or contact authorities
-• Stay in recommended safe neighborhoods like Uccle, Ixelles, or central Brussels`,
+      clothing: `• Solo female travel safety essential: dress modestly and professionally - Brussels business culture expectations for women traveling alone
+• Layer clothing for unpredictable weather - waterproof jacket crucial for solo female travelers in Brussels climate
+• Avoid flashy jewelry - important solo travel safety precaution to prevent pickpocketing targeting women
+• Comfortable walking shoes essential for cobblestone streets - practical solo female travel advice for Brussels
+• Dark colors blend in better - women solo travel safety tip to avoid unwanted attention
+• Always carry charged phone with emergency contacts - critical women traveling alone safety equipment`,
+      firstTimers: `• Is Brussels safe for female solo travelers? Yes, with reasonable precautions - Brussels offers excellent safety for women traveling alone
+• Register with your embassy within 24 hours if staying longer term - essential solo female travel safety protocol
+• Save emergency numbers (112) and STIB harassment hotline - critical solo travel safety tips for women in Brussels
+• Use official STIB transport and avoid unlicensed taxis - Uber available and safe for solo female travel security
+• Avoid Molenbeek and Anderlecht neighborhoods at night - important women traveling alone safety advice
+• Trust your instincts - if unsafe, seek help immediately - priority solo female travel safety guideline
+• Stay in safe neighborhoods like Uccle or Ixelles - essential solo travel security for women`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -214,20 +230,37 @@ const brussels: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Business casual to formal dress is preferred in Brussels due to its role as EU capital. Belgians dress conservatively and professionally. Jeans and casual wear are acceptable for tourists but avoid overly revealing clothing. Smart attire is expected in restaurants and cultural venues. Rain gear is essential year-round. Comfortable walking shoes are necessary for cobblestone streets.',
-      behaviorNorms: [
-        'Be punctual - Belgians highly value timeliness for appointments and social meetings',
-        'Speak quietly on public transport and in public spaces - loud behavior is considered rude',
-        'Greet with handshakes and maintain eye contact - formal greetings are expected',
-        'Learn basic French and Dutch phrases - shows respect for local culture',
-        'Wait to be seated in restaurants and don\'t rush meals - dining is a social experience',
-        'Tip 10-15% in restaurants if service charge isn\'t included',
-        'Respect personal space and avoid physical contact beyond handshakes',
-        'Remove hats indoors and when meeting people',
-        'Stand right on escalators and let others pass on the left',
-        'Avoid discussing politics, especially regional tensions between Flanders and Wallonia'
+      dressCode: [
+        'Business professional attire strongly preferred due to Brussels\' EU capital status - dark suits, professional blazers, and conservative dress essential',
+        'Belgians dress conservatively and formally - even casual wear should be neat, pressed, and of good quality fabric',
+        'Weather-appropriate layering essential - carry waterproof jacket and umbrella as Brussels weather changes frequently throughout the day',
+        'Comfortable yet sophisticated walking shoes mandatory - cobblestone streets require sturdy footwear but maintain professional appearance',
+        'Conservative modesty important for solo female travelers - avoid revealing clothing to blend in and reduce unwanted attention',
+        'Quality over quantity in clothing choices - Belgians appreciate well-made, classic pieces over trendy or flashy items',
+        'Neutral color palette preferred - blacks, grays, navy, and muted tones align with Belgian fashion sensibilities and EU diplomatic culture'
       ],
-      perception: 'Solo female travelers are common and generally well-received in Brussels. The city\'s international atmosphere and EU presence mean diverse travelers are normal. However, 22% of women report street harassment annually, so awareness is important. Belgian culture is formal and reserved initially but friendly once connections are made. Women can dine alone, visit attractions, and use transport independently, though extra caution is advised at night in certain areas. Local women tend to be well-dressed and confident, and following their lead in behavior and appearance helps solo travelers blend in.'
+      behaviorNorms: [
+        'Punctuality is absolutely essential - being late is considered deeply disrespectful in Belgian culture, especially for solo female travelers building credibility',
+        'Speak quietly in public spaces and public transport - loud behavior immediately marks you as tourist and is considered very rude',
+        'Master formal greetings with firm handshakes and direct eye contact - Belgian business culture requires professional presentation even in casual settings',
+        'Learn basic French ("Bonjour," "Merci") and Dutch ("Goedemorgen," "Dank je") phrases - bilingual effort shows cultural respect and helps solo travelers',
+        'Respect dining etiquette by waiting to be seated and never rushing meals - Belgian dining is social experience requiring patience and proper manners',
+        'Tip appropriately (10-15%) only if service charge not included - overtipping marks you as tourist and undertipping is offensive',
+        'Maintain appropriate personal space and avoid physical contact beyond handshakes - Belgians value privacy and formal interactions',
+        'Remove hats and sunglasses when entering buildings and meeting people - basic courtesy expected in Belgian social interactions',
+        'Stand right on escalators and maintain quiet behavior in public transport - essential metro/tram etiquette for fitting in',
+        'Avoid political discussions about Flanders vs. Wallonia tensions - extremely sensitive topic that can create uncomfortable situations for solo travelers'
+      ],
+      perception: [
+        'Solo female travelers are completely normal in Brussels due to international EU atmosphere - diplomatic community includes many independent women professionals',
+        'Belgian culture is initially formal and reserved but becomes warm and friendly once proper connections are established through respectful behavior',
+        'Street harassment affects 22% of women annually, so solo female travelers must maintain awareness while still enjoying complete social acceptance',
+        'Independent women dining alone, visiting museums, and using public transport is everyday occurrence - no social stigma attached to solo activities',
+        'Local Belgian women are well-dressed, confident, and professional - following their behavioral and appearance standards helps solo travelers integrate seamlessly',
+        'EU diplomatic presence means diverse international women are common sight - solo female travelers blend easily into cosmopolitan atmosphere',
+        'Brussels\' business culture respects professional women travelers - solo female business visitors receive same treatment as male colleagues',
+        'Nighttime safety requires extra caution in certain neighborhoods, but daytime solo exploration is completely normal and socially accepted'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['May-September'],
@@ -968,7 +1001,7 @@ const brussels: Destination = {
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "G4G-Nm_Cbt4"
   }
 };
 

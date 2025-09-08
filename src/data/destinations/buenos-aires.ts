@@ -62,49 +62,57 @@ const buenosAires: Destination = {
       {
         name: 'Che Juan BA Hostel',
         type: 'hostel',
-        features: ['Female dorms', 'Super modern', 'Personal locks', 'Central Palermo location'],
-        rating: 9.0,
-        notes: 'Spotlessly clean modern hostel in safe Palermo with excellent security features and 24/7 staff presence.',
+        features: ['Best for Female Solo Travelers', 'Incredibly stylish design', 'Personal locks on bunks', 'Super modern facilities', '24/7 reception', 'Safe Palermo location'],
+        rating: 4.8,
+        notes: 'Top-rated as "best for Female Solo Travelers" - spotlessly clean modern hostel with incredibly attractive design. Personal locks, awesome kitchen, and most in-demand hostel in BA. Perfect for solo women seeking style and security.',
         link: 'https://www.chejuan.com/'
+      },
+      {
+        name: 'Casa Franca Recoleta Hostel',
+        type: 'hostel',
+        features: ['Historic petit hotel building', 'Cozy curtained bunks', 'Private dorm options', 'Vibrant common areas', 'Community atmosphere', 'Safe Recoleta location'],
+        rating: 4.7,
+        notes: 'Beautiful hostel in historic building with bunks that are cozy and private with curtains. Creates sense of community with vibrant common areas perfect for solo women travelers to share stories and connect.',
+        link: 'https://www.casafranca.com/'
+      },
+      {
+        name: 'Casa Caravan - Plant Based Concept House',
+        type: 'hostel',
+        features: ['Best rated for female solo travelers', 'Eco-friendly sanctuary', 'Plant-based concept', 'Palermo Soho location', 'Female-focused community', 'Sustainable practices'],
+        rating: 4.6,
+        notes: 'Best rated hostel for female solo travelers - cozy and eco-friendly sanctuary in heart of Palermo Soho. Perfect for environmentally conscious solo women seeking sustainable travel and female-focused community.',
+        link: 'https://www.casacaravan.com.ar/'
+      },
+      {
+        name: 'Play Hostel Garden',
+        type: 'hostel',
+        features: ['Historic Tudor-style house', 'Green central patio', 'Co-working space', 'Female-friendly atmosphere', 'Palermo SOHO location', 'Private and shared rooms'],
+        rating: 4.5,
+        notes: 'Best rated hostel for female solo travelers in historic Tudor-style house. Green central patio and co-working space perfect for digital nomads. Excellent community atmosphere for solo women.',
+        link: 'https://www.playhostelgarden.com/'
       },
       {
         name: 'America del Sur Hostel',
         type: 'hostel',
-        features: ['Rooftop terrace', '24-hour staff', 'Free walking tours', 'Central location'],
-        rating: 9.5,
-        notes: 'Consistently rated among world\'s best hostels with exceptional safety record and female-friendly environment.',
+        features: ['World-class hostel rating', 'Rooftop terrace with city views', '24-hour reception', 'Free walking tours', 'Social atmosphere', 'Central location'],
+        rating: 4.7,
+        notes: 'Consistently rated among world\'s best hostels with exceptional safety record. Perfect rooftop terrace for meeting other solo travelers. Strong female-friendly environment with comprehensive security.',
         link: 'https://americadelsur.com.ar/'
-      },
-      {
-        name: 'Sabatico Travelers Hostel',
-        type: 'hostel',
-        features: ['Historic mansion', 'Multilingual staff', 'Safe Recoleta area', 'Cultural activities'],
-        rating: 9.2,
-        notes: 'Beautiful historic property in safest neighborhood with experienced staff and excellent security protocols.',
-        link: 'https://www.sabaticoparktower.com/'
-      },
-      {
-        name: 'Casa Franca Hostel Recoleta',
-        type: 'hostel',
-        features: ['Curtained bunks', 'Historic building', 'Safe neighborhood', 'Female-friendly'],
-        rating: 8.8,
-        notes: 'Charming hostel in upscale Recoleta with privacy features and strong safety reputation among solo female travelers.',
-        link: 'https://www.casafranca.com/'
       },
       {
         name: 'Hotel Madero',
         type: 'hotel',
-        features: ['Luxury hotel', 'Puerto Madero waterfront', '24/7 security', 'Concierge service'],
-        rating: 9.1,
-        notes: 'Premium hotel in safest district with top-tier security and professional service for solo female travelers.',
+        features: ['5-star luxury', 'Puerto Madero waterfront', 'Top-tier security', 'Concierge service', 'Business center', 'Spa facilities'],
+        rating: 4.9,
+        notes: 'Premium luxury hotel in safest Puerto Madero district with exceptional security protocols. Professional service specifically catering to solo female business and leisure travelers. Waterfront location with stunning views.',
         link: 'https://www.hotelmadero.com/'
       },
       {
         name: 'Fierro Hotel Boutique',
         type: 'hotel',
-        features: ['Boutique luxury', 'Palermo location', 'Rooftop pool', 'Personalized service'],
-        rating: 8.9,
-        notes: 'Stylish boutique hotel in trendy Palermo with excellent security and female-friendly atmosphere.',
+        features: ['Boutique luxury design', 'Trendy Palermo location', 'Rooftop pool', 'Personalized service', 'Female-friendly staff', 'Modern amenities'],
+        rating: 4.8,
+        notes: 'Stylish boutique hotel in trendy Palermo neighborhood with excellent security and distinctly female-friendly atmosphere. Rooftop pool and personalized service perfect for solo women seeking luxury.',
         link: 'https://www.fierrohotel.com/'
       }
     ],
@@ -119,16 +127,16 @@ const buenosAires: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Dress stylishly but not flashy - Argentines value fashion but avoid expensive jewelry
-• Comfortable walking shoes for cobblestone streets and long walks
-• Layer clothing for variable weather and air-conditioned spaces
-• Modest dress appreciated at religious sites
-• Avoid displaying expensive accessories or electronics`,
-      firstTimers: `• Buenos Aires is the safest major South American city for solo women
-• Learn basic Spanish with Argentine accent - English less common than in other capitals
-• Exchange currency only at hotels or Western Union, never on street
-• Use SUBE card for all public transport - buy at stations
-• Experience nightlife in Palermo/Recoleta - it's actually safer than staying in`,
+      clothing: `• Solo female travel safety essential: dress stylishly but avoid flashy items - prevent motochorros targeting women traveling alone
+• Comfortable walking shoes crucial for solo female travelers - broken sidewalks dangerous for high heels
+• Layer clothing for variable weather - important women solo travel safety tip for Buenos Aires climate changes
+• Modest dress reduces unwanted attention - key solo travel safety advice to minimize catcalling harassment
+• Never display expensive accessories or electronics visibly - critical women traveling alone safety precaution against robbery`,
+      firstTimers: `• Is Buenos Aires safe for female solo travelers? Yes - Buenos Aires is the safest major South American city for women traveling alone
+• Learn basic Spanish with Argentine accent - essential solo female travel safety tip as English less common than other capitals
+• Exchange currency only at hotels or Western Union - critical women solo travel safety precaution, never use street exchangers
+• Use SUBE card for all public transport - important solo travel security measure, buy at official stations only
+• Experience nightlife in Palermo/Recoleta - unique solo female travel advice where going out is actually safer than staying in`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -193,20 +201,37 @@ const buenosAires: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Buenos Aires is fashion-conscious with European style influence. Dress well but avoid flashy jewelry or expensive accessories. Smart casual for restaurants. Comfortable walking shoes essential for cobblestone streets.',
-      behaviorNorms: [
-        'Greet with kiss on right cheek (women to women/men) - standard social custom.',
-        'Dinner served very late (9-11 PM) - plan accordingly for restaurant reservations.',
-        'Argentines are passionate and direct in conversation - engage with enthusiasm.',
-        'Football (soccer) is deeply important - avoid controversial team comments.',
-        'Punctuality less strict than Northern Europe but arrive within 15 minutes.',
-        'Tipping 10% expected at restaurants and for services.',
-        'Personal space smaller than North American standards.',
-        'Afternoon tea (merienda) culture around 5-6 PM.',
-        'Respect for elders and family values important.',
-        'Political discussions common but can be intense.'
+      dressCode: [
+        'Fashion-conscious European style influence - Argentines dress up more than typical tourists, prioritize quality over quantity in clothing choices',
+        'Avoid flashy jewelry and designer bags - motorcycle robberies (motochorros) specifically target visible expensive items worn by solo women',
+        'Smart casual essential for restaurants - Buenos Aires dining culture expects neat, stylish appearance even in casual settings',
+        'Comfortable walking shoes mandatory - broken sidewalks and cobblestone streets dangerous for high heels or flip-flops',
+        'Modest dress reduces unwanted attention - revealing clothing increases catcalling and harassment for solo female travelers',
+        'Layer clothing for variable weather - Buenos Aires has unpredictable temperature changes requiring adaptable wardrobe',
+        'Dark, neutral colors preferred - blend in with local fashion sensibilities rather than standing out as obvious tourist target'
       ],
-      perception: 'Solo women travelers are welcomed in Buenos Aires. Argentine culture is generally respectful toward women, though street harassment (catcalling) is common. The city has a European feel that makes solo female travel more comfortable than in other South American capitals.',
+      behaviorNorms: [
+        'Master cheek-kiss greeting culture - right cheek kiss standard for women meeting women or men, essential social custom',
+        'Embrace late dining culture (9-11 PM) - restaurants don\'t serve dinner before 8 PM, plan social activities accordingly for solo travelers',
+        'Engage with Argentine passion and directness - locals appreciate enthusiastic conversation and genuine interest in culture',
+        'Respect football (soccer) culture deeply - avoid controversial team comments, learn basic rivalries to connect with locals',
+        'Practice flexible punctuality - arriving 30-40 minutes late often acceptable for casual meetups but arrive within 15 minutes for formal appointments',
+        'Tip 10% at restaurants and services - expected standard throughout Buenos Aires, essential for maintaining good relationships',
+        'Adapt to smaller personal space - North American/European standards don\'t apply, Argentines stand closer during conversation',
+        'Participate in afternoon tea (merienda) culture around 5-6 PM - important social bonding time for solo travelers to meet locals',
+        'Show respect for family values and elders - Argentine culture highly values family connections and generational respect',
+        'Navigate political discussions carefully - common topic but can become intense, especially regarding Falklands/Malvinas conflict'
+      ],
+      perception: [
+        'Solo female travelers are welcomed and common in Buenos Aires - European cultural influence makes independent women socially accepted',
+        'Street harassment (catcalling) is universal - 100% of women experience unsolicited attention, but it\'s considered socially acceptable',
+        'Having male companion dramatically reduces harassment - solo women receive significantly more catcalls and persistent compliments than when accompanied',
+        'Argentine culture generally respectful toward women despite catcalling - harassment is verbal rather than physical in most cases',
+        'Buenos Aires has European feel - makes solo female travel more comfortable than other South American capitals for Western women',
+        'Night safety varies by neighborhood - solo women commonly out in Palermo and Recoleta, but downtown areas lonely after dark',
+        'Solo dining completely normal - restaurants accustomed to independent women diners, no social stigma attached',
+        'Tango culture celebrates strong women - Argentine appreciation for confident, independent female expression through dance and culture'
+      ],
     },
     bestTimeToVisit: {
       safestMonths: ['March-May', 'September-November'],
@@ -821,9 +846,18 @@ const buenosAires: Destination = {
         'Stay in Palermo or Recoleta for best safety-to-value ratio'
       ]
     },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  youtubeVideos: [
+    {
+      videoId: "enu4SH8YPIM",
+      title: "Buenos Aires Solo Female Travel Experience",
+      description: "Real experience of solo female travel in Buenos Aires, Argentina - safety tips and cultural insights."
+    },
+    {
+      videoId: "kHoWOXJouak",
+      title: "Buenos Aires Culture and Lifestyle Guide",
+      description: "Authentic look at Buenos Aires culture, lifestyle, and what to expect as a traveler."
+    }
+  ]
 };
 
 export default buenosAires;

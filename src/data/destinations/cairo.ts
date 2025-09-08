@@ -17,7 +17,7 @@ const cairo: Destination = {
     safetyBreakdown: {
       nightSafety: { 
         score: 2.8, 
-        context: 'Is Cairo safe for solo female travellers at night? Absolutely not without extreme precautions. Cairo has 99.3% harassment rate (UN Women 2024) with risks exponentially higher after dark. Sexual harassment, aggressive following, and assault attempts become frequent after sunset. Women-only transport apps like Wasaleeny essential for any movement. Even luxury hotel areas experience persistent harassment. Tourist police response averages 15-20 minutes. Embassy contact strongly recommended over local authorities.' 
+        context: 'Is Cairo safe for solo female travelers at night? Absolutely not without extreme precautions. Cairo has 99.3% harassment rate (UN Women 2024) with risks exponentially higher after dark. Sexual harassment, aggressive following, and assault attempts become frequent after sunset. Women-only transport apps like Wasaleeny essential for any solo female travel safety. Even luxury hotel areas experience persistent harassment. Tourist police response averages 15-20 minutes. Embassy contact strongly recommended over local authorities for women traveling alone safety.' 
       },
       publicTransit: { 
         score: 4.9, 
@@ -96,28 +96,36 @@ const cairo: Destination = {
         link: 'https://www.sofitel-cairo-nile-el-gezirah.com/'
       },
       {
-        name: 'Steigenberger Hotel El Tahrir',
+        name: 'Cairo Marriott Hotel & Omar Khayyam Casino',
         type: 'hotel',
-        features: ['International chain', 'Central location', 'Good security', 'Female-friendly', 'Professional service', 'Modern amenities', 'Safe environment'],
-        rating: 4.3,
-        notes: 'German-managed hotel with European safety standards and protocols specifically designed for international female guests. Central location with secure transportation arrangements.',
-        link: 'https://www.steigenberger.com/en/hotels/all-hotels/egypt/cairo/steigenberger-hotel-el-tahrir'
+        features: ['Luxury hotel', 'Zamalek location', 'Historic palace', 'Excellent security', 'Expatriate area', 'Female staff available', 'Safe neighborhood', 'Palace architecture'],
+        rating: 4.6,
+        notes: 'Historic palace converted to luxury hotel in the safest area of Cairo - Zamalek. Popular with expatriates and solo female travelers. Leafy location with cafes and safe walking areas.',
+        link: 'https://www.marriott.com/en-us/hotels/caieg-cairo-marriott-hotel-and-omar-khayyam-casino/overview/'
       },
       {
-        name: 'Guardian Guest House',
-        type: 'hotel',
-        features: ['Mid-range hotel', 'Female-friendly', 'Good security', 'Family-run', 'Personal attention', 'Safe environment', 'Central location'],
-        rating: 4.2,
-        notes: 'Family-operated property with special attention to female guest safety. Staff provides personal guidance and safety tips for navigating Cairo. Known for helping solo women travelers with practical advice.',
-        link: 'https://www.guardianguesthouse.com/'
+        name: 'Villa Belle Epoque',
+        type: 'boutique',
+        features: ['Boutique hotel', 'Colonial architecture', 'Maadi location', 'Safe neighborhood', 'Female-friendly', 'Expatriate area', 'Quiet setting', 'Personal service'],
+        rating: 4.5,
+        notes: 'Charming boutique hotel in beautiful Maadi neighborhood, popular with expatriates. Only 20 minutes from downtown but in a quiet, safe residential area. Excellent for solo female travelers seeking personalized service.',
+        link: 'https://www.villabelleepoque.com/'
       },
       {
-        name: 'Osiris Hotel',
+        name: 'Kempinski Nile Hotel',
         type: 'hotel',
-        features: ['Mid-range option', 'Downtown location', 'Security measures', 'Female-friendly', 'Budget-conscious', 'Clean facilities'],
-        rating: 4.0,
-        notes: 'Affordable option with enhanced security measures for female guests. Staff assists with safe transportation and provides practical safety advice for exploring Cairo.',
-        link: 'https://www.osirishotel.com/'
+        features: ['Ultra-luxury hotel', 'Garden City location', 'Premium security', 'Nile views', 'Female concierge', 'International standards', 'Embassy district', '24/7 security'],
+        rating: 4.7,
+        notes: 'Ultra-luxury property in secure Garden City near embassies. Premium security protocols and female concierge services specifically for women travelers. Considered one of the safest hotels in Cairo.',
+        link: 'https://www.kempinski.com/en/nile-hotel-cairo/'
+      },
+      {
+        name: 'Dahab Hostel',
+        type: 'hostel',
+        features: ['Solo traveler favorite', 'Downtown location', 'Female dorms', 'Rooftop area', 'Backpacker community', 'Security lockers', 'Social atmosphere', 'Budget-friendly'],
+        rating: 4.1,
+        notes: 'Popular with solo female backpackers. Offers female-only dormitories and has a strong community feel. Located in downtown Cairo with good security measures for budget travelers. Fan-favorite in travel community.',
+        link: 'https://www.dahabhotel.com/'
       }
     ],
     alerts: [
@@ -154,14 +162,14 @@ const cairo: Destination = {
 • Short sleeves acceptable if shoulders covered - sleeveless never appropriate
 • Head covering required for mosque entry, optional elsewhere
 • Ankle-covering pants/skirts essential - no skin exposure below neck`,
-      firstTimers: `• Is Cairo safe for solo female travellers? Only with extreme precautions and cultural awareness
+      firstTimers: `• Is Cairo safe for solo female travelers? Only with extreme solo female travel safety precautions and cultural awareness
 • Book international hotels with 24/7 security and female staff assistance
 • Arrange all transportation through hotel - never use street taxis or walk alone
-• Download women-only ride apps (Wasaleeny, Pink Taxi) before arrival
+• Download women-only ride apps (Wasaleeny, Pink Taxi) before arrival for women solo travel safety
 • Book female tour guides through reputable companies like EMO Tours
 • Have embassy contact readily available - US Embassy: +20 2 2797 3300
-• Consider travel insurance with evacuation coverage - harassment incidents common
-• Carry whistle and personal alarm - loud noises deter harassers effectively`,
+• Consider travel insurance with evacuation coverage - harassment incidents common for solo female travel
+• Carry whistle and personal alarm - essential solo female travel safety gear`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -173,11 +181,11 @@ const cairo: Destination = {
         'Maps.Me'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community essential for high-risk destinations like Cairo', rating: 4.3 },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button absolutely critical for Cairo harassment', rating: 4.2 },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response crucial for solo women in high-risk areas', rating: 4.1 },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing absolutely essential for Cairo safety monitoring', rating: 4.1 },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Egypt safety warnings and support', rating: 4.0 },
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Solo female travel community essential for high-risk destinations like Cairo', rating: 4.3 },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with panic button critical for solo female travel safety', rating: 4.2 },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'Emergency response app crucial for women traveling alone safety', rating: 4.1 },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Location sharing essential for solo female travel safety monitoring', rating: 4.1 },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with trusted female travel reviewers and Egypt safety support', rating: 4.0 },
         { name: 'Careem', link: 'https://www.careem.com/', description: 'Essential Middle East rideshare - only safe transport option in Cairo', rating: 4.6 },
         { name: 'Wasaleeny', link: 'https://wasaleeny.com/', description: 'Women-only taxi service in Egypt - specifically designed for female passenger safety', rating: 4.3 },
         { name: 'Maps.Me', link: 'https://maps.me/', description: 'Offline navigation essential for Cairo - works without internet and includes safety landmarks', rating: 4.5 }
@@ -226,10 +234,63 @@ const cairo: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Extremely conservative dress mandatory. Long sleeves, full leg coverage, loose fit. Head covering in religious sites. Any skin exposure increases harassment risk significantly.',
-      behaviorNorms: ['Avoid all eye contact with men', 'Never shake hands with men', 'Be extremely firm when declining offers', 'Travel with male companions when possible', 'Stay in groups'],
-      perception: 'Solo foreign women are viewed as highly unusual and vulnerable targets. Conservative Islamic society with deeply ingrained gender segregation expects women to be accompanied by male relatives.'
+      dressCode: [
+        'Long pants and shirts covering arms, chest, and legs completely - revealing clothing dramatically increases harassment risk',
+        'Loose-fitting clothing made from breathable fabrics like cotton or linen - in 96-105°F heat, loose clothing keeps you cooler than exposed skin',
+        'Maxi skirts or dresses with sleeves - avoid anything tight or form-fitting that attracts unwanted attention',
+        'Always carry a scarf for mosque visits and conservative areas - mosques require complete coverage including hair',
+        'Light colors help reflect heat while maintaining modesty - choose natural fabrics for extreme temperatures',
+        'Closed-toe shoes recommended - avoid sandals showing too much skin which increases harassment',
+        'AVOID COMPLETELY: Any sleeveless tops, tank tops, strapless clothing, shorts, mini skirts, low necklines, crop tops, tight leggings without long covering shirts, sheer fabrics, or beach wear outside resorts'
+      ],
+      behaviorNorms: [
+        'Avoid eye contact with men completely - seen as flirtation or invitation in conservative Islamic culture',
+        'Never shake hands or make physical contact with men under any circumstances',
+        'Walk with extreme confidence and purpose - avoid appearing lost or vulnerable as solo women are targeted',
+        'Use assertive body language and firm "LA!" (No!) when declining offers - politeness is misinterpreted as interest',
+        'Remove shoes when entering mosques and traditional homes - use right hand exclusively for eating, greeting, giving items',
+        'Show profound respect during prayer times (5 times daily) - dress even more conservatively during Ramadan',
+        'Be extremely firm when declining offers from strangers - don\'t accept invitations to tea or meals (common harassment tactic)',
+        'Learn key Arabic phrases: "Ib\'ad \'anni!" (Get away from me!) and carry a whistle for emergency situations',
+        'Tip generously (baksheesh) as service providers depend on it - refusing tips can escalate harassment situations',
+        'Stay in well-lit, populated areas with security presence - travel in groups when possible as solo women are easy targets'
+      ],
+      perception: [
+        'Solo foreign women are viewed as highly unusual and vulnerable in Egyptian society. Is Cairo safe for solo female travelers? Only with extreme cultural adaptation and safety precautions',
+        'Conservative Islamic society expects women to be accompanied by male relatives, so solo women travelers are often seen as morally questionable or "available"',
+        'Foreign women may be perceived as wealthy, easy targets for scams and harassment',
+        'Cultural misunderstandings can escalate harassment situations, and language barriers make it difficult to seek help or assert boundaries',
+        'Protection strategies: stay in international hotels with female staff, use only vetted hotel transportation, join organized tours with female guides',
+        'Carry yourself with extreme confidence and assertiveness, have a cover story about meeting husband/family if questioned',
+        'Success requires complete cultural adaptation - dress ultra-conservatively, avoid male interaction, stay in secure areas, and be prepared for constant vigilance'
+      ]
     },
+    culturalDos: [
+      'Cover your entire body in loose-fitting, modest clothing - arms, legs, chest, midriff completely covered',
+      'Use your right hand exclusively for eating, greeting, and giving/receiving items',
+      'Remove shoes when entering mosques and traditional homes',
+      'Show profound respect during prayer times (5 times daily) - maintain quiet, respectful demeanor',
+      'Tip generously (baksheesh) as service providers depend on it - 10-20 EGP for helpful services',
+      'Learn basic Islamic greetings like "As-salamu alaykum" to show cultural respect',
+      'Carry modest head covering for mosque visits and conservative areas',
+      'Accept offered hospitality graciously - refusing tea/coffee can be offensive',
+      'Stand respectfully when hearing call to prayer (Adhan)',
+      'Ask explicit permission before photographing people, especially women'
+    ],
+    culturalDonts: [
+      'Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
+      'Don\'t shake hands with men or initiate any physical contact whatsoever',
+      'Don\'t show public displays of affection - even holding hands draws negative attention',
+      'Don\'t point with your finger - use open hand gesture to indicate direction',
+      'Don\'t show soles of feet when sitting - keep feet flat on floor or crossed ankles only',
+      'Don\'t enter mosques during prayer times unless invited by worshippers',
+      'Don\'t photograph women without explicit permission - extremely sensitive cultural issue',
+      'Don\'t drink alcohol publicly or appear intoxicated - deeply offensive in Islamic culture',
+      'Don\'t use your left hand for eating, greeting, or handling items - considered unclean',
+      'Don\'t ignore or dismiss cultural warnings from locals - they understand the real risks',
+      'Don\'t argue with men publicly - can escalate harassment situations dangerously',
+      'Don\'t travel alone to conservative areas outside Cairo - extremely high risk for solo women'
+    ],
     bestTimeToVisit: {
       safestMonths: ['November-March'],
       events: 'Avoid summer heat (May-September). Ramadan brings cultural sensitivity but reduced services. Christmas/New Year see increased tourism and higher prices.'
@@ -327,51 +388,49 @@ const cairo: Destination = {
       }
     ],
     culturalSensitivityTips: [
-      '• Dress extremely conservatively - any exposed skin invites immediate harassment and targeting',
-      '• Never make physical contact with men - no handshakes, high-fives, or casual touch of any kind',
-      '• Be assertively firm when declining offers or advances - politeness is often misinterpreted as interest',
-      '• Understand that sexual harassment is unfortunately normalized in Egyptian culture (99.3% prevalence)',
-      '• Respect Islamic customs especially during prayer times and Ramadan - shows cultural awareness',
-      '• Learn basic Arabic phrases for setting boundaries - "LA!" (No!) and "Ib\'ad \'anni!" (Get away from me!)',
-      '• Avoid eye contact with men as it can be interpreted as flirtation or invitation',
-      '• Never accept invitations to "traditional" tea or meals from strangers - common harassment tactic',
-      '• Understand that solo female travel is extremely unusual and seen as provocative in conservative areas',
-      '• Carry yourself with confident, purposeful body language - avoid appearing lost or vulnerable',
-      '• Is Cairo safe for solo female travellers culturally? Only with extreme cultural sensitivity and adaptation',
-      '• Religious sites require even more conservative behavior - complete silence and deference expected',
-      '• Tipping (baksheesh) culture is mandatory - refusing tips can escalate harassment situations'
+      'Dress extremely conservatively - cover arms, legs, chest completely',
+      'Use assertive "LA!" (No!) when declining offers - politeness misinterpreted',
+      'Respect Islamic prayer times and Ramadan customs',
+      'Tip generously (baksheesh) - refusing tips escalates harassment',
+      'Carry yourself with confident, purposeful body language',
+      'Learn basic Arabic: "Ib\'ad \'anni!" (Get away from me!)',
+      'Don\'t make physical contact with men - no handshakes or touch',
+      'Don\'t make eye contact with men - seen as flirtation',
+      'Don\'t accept invitations to tea/meals from strangers - harassment tactic',
+      'Don\'t travel alone after dark - harassment risks multiply',
+      'Don\'t ignore that solo female travel is extremely unusual here'
     ],
     culturalDos: [
-      '• Cover your entire body in loose-fitting, modest clothing - arms, legs, chest, midriff completely covered',
-      '• Use your right hand exclusively for eating, greeting, and giving/receiving items',
-      '• Remove shoes when entering mosques and some traditional homes',
-      '• Show profound respect for Islamic prayer times (5 times daily) - avoid interruptions',
-      '• Tip generously and immediately - service providers depend on baksheesh for livelihood',
-      '• Ask explicit permission before photographing people, especially women',
-      '• Greet women first before acknowledging men in mixed groups',
-      '• Learn basic Islamic greetings like "As-salamu alaykum" to show respect',
-      '• Carry modest head covering for mosque visits and conservative areas',
-      '• Respect Ramadan fasting by not eating/drinking publicly during daylight hours',
-      '• Show extra reverence at religious sites - maintain quiet, respectful demeanor',
-      '• Stand and dress appropriately when hearing call to prayer (Adhan)',
-      '• Accept offered hospitality graciously - refusing tea/coffee can be offensive'
+      'Cover your entire body in loose-fitting, modest clothing - arms, legs, chest, midriff completely covered',
+      'Use your right hand exclusively for eating, greeting, and giving/receiving items',
+      'Remove shoes when entering mosques and some traditional homes',
+      'Show profound respect for Islamic prayer times (5 times daily) - avoid interruptions',
+      'Tip generously and immediately - service providers depend on baksheesh for livelihood',
+      'Ask explicit permission before photographing people, especially women',
+      'Greet women first before acknowledging men in mixed groups',
+      'Learn basic Islamic greetings like "As-salamu alaykum" to show respect',
+      'Carry modest head covering for mosque visits and conservative areas',
+      'Respect Ramadan fasting by not eating/drinking publicly during daylight hours',
+      'Show extra reverence at religious sites - maintain quiet, respectful demeanor',
+      'Stand and dress appropriately when hearing call to prayer (Adhan)',
+      'Accept offered hospitality graciously - refusing tea/coffee can be offensive'
     ],
     culturalDonts: [
-      '• Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
-      '• Don\'t shake hands with men or initiate any physical contact whatsoever',
-      '• Don\'t show public displays of affection - even holding hands draws negative attention',
-      '• Don\'t point with your finger - use open hand gesture to indicate direction',
-      '• Don\'t show soles of feet when sitting - keep feet flat on floor or crossed ankles only',
-      '• Don\'t refuse hospitality rudely when offered tea/coffee - polite acceptance shows respect',
-      '• Don\'t enter mosques during prayer times unless invited by worshippers',
-      '• Don\'t photograph women without explicit permission - extremely sensitive cultural issue',
-      '• Don\'t drink alcohol publicly or appear intoxicated - deeply offensive in Islamic culture',
-      '• Don\'t use your left hand for eating, greeting, or handling items - considered unclean',
-      '• Don\'t wear shoes inside mosques, homes, or prayer areas',
-      '• Don\'t ignore or dismiss cultural warnings from locals - they understand the risks',
-      '• Don\'t assume Western feminist ideals apply - adaptation is essential for safety',
-      '• Don\'t argue with men publicly - can escalate harassment situations dangerously',
-      '• Don\'t travel alone to conservative areas outside Cairo - extremely high risk'
+      'Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
+      'Don\'t shake hands with men or initiate any physical contact whatsoever',
+      'Don\'t show public displays of affection - even holding hands draws negative attention',
+      'Don\'t point with your finger - use open hand gesture to indicate direction',
+      'Don\'t show soles of feet when sitting - keep feet flat on floor or crossed ankles only',
+      'Don\'t refuse hospitality rudely when offered tea/coffee - polite acceptance shows respect',
+      'Don\'t enter mosques during prayer times unless invited by worshippers',
+      'Don\'t photograph women without explicit permission - extremely sensitive cultural issue',
+      'Don\'t drink alcohol publicly or appear intoxicated - deeply offensive in Islamic culture',
+      'Don\'t use your left hand for eating, greeting, or handling items - considered unclean',
+      'Don\'t wear shoes inside mosques, homes, or prayer areas',
+      'Don\'t ignore or dismiss cultural warnings from locals - they understand the risks',
+      'Don\'t assume Western feminist ideals apply - adaptation is essential for safety',
+      'Don\'t argue with men publicly - can escalate harassment situations dangerously',
+      'Don\'t travel alone to conservative areas outside Cairo - extremely high risk'
     ],
     womensConfidenceScore: {
       score: 18,
@@ -605,41 +664,84 @@ const cairo: Destination = {
       safeOptions: [
         {
           type: 'Hotel Transportation',
-          safety: 90,
+          safety: 95,
+          cost: '$25-50/day',
           recommendations: [
-            'Always use hotel-arranged transportation',
-            'Most secure option with vetted drivers and tracking',
-            'Essential for airport transfers and site visits',
-            'Worth the premium cost for safety assurance'
+            'Always use hotel-arranged transportation - safest option available',
+            'Vetted drivers with background checks and GPS tracking',
+            'Essential for airport transfers and tourist site visits',
+            'Worth premium cost for safety assurance and peace of mind',
+            'Drivers speak English and know safe routes',
+            'Hotels provide emergency contact during journey'
           ],
-          companies: ['Hotel concierge services'],
+          companies: ['Hotel concierge services', 'Luxury hotel transport'],
+          availability: '24/7 at major hotels',
           link: ''
         },
         {
-          type: 'Uber/Careem with Precautions',
-          safety: 65,
+          type: 'Uber/Careem (Rideshare Apps)',
+          safety: 70,
+          cost: '$10-25/day',
           recommendations: [
-            'Share ride details with someone you trust',
-            'Sit in back seat, keep doors unlocked until moving',
-            'End ride if driver makes you uncomfortable',
-            'Only use during daylight hours',
-            'Verify license plate and driver photo'
+            'Download apps before arrival - many female drivers available',
+            'Share ride details with trusted contact immediately',
+            'Sit in back seat, verify license plate and driver photo',
+            'End ride immediately if driver makes you uncomfortable',
+            'Use only during daylight hours (before sunset)',
+            'Keep phone charged and ready to call for help',
+            'Rides as low as 20 EGP ($1) vs 200 EGP ($8) for street taxis'
           ],
           companies: ['Uber', 'Careem'],
+          availability: 'Widely available in Cairo',
           link: 'https://www.uber.com/'
         },
         {
-          type: 'Metro (Women-only cars ONLY)',
-          safety: 55,
+          type: 'Cairo Metro (Women-Only Cars)',
+          safety: 60,
+          cost: '$0.50-1.00 per ride',
           recommendations: [
-            'Use women-only cars exclusively (marked with pink signs)',
-            'Travel only during daylight hours',
-            'Avoid during rush hour crowding',
-            'Have backup transportation plan',
-            'Never use mixed cars under any circumstances'
+            'Use women-only cars exclusively - typically first/second or fourth/fifth cars',
+            'Look for pink signs indicating female-only sections',
+            'Travel only during daylight hours (before 8 PM)',
+            'Avoid during rush hours (9 AM and 5 PM) due to overcrowding',
+            'Clean, efficient, and affordable but limited destinations',
+            'Does not reach Pyramids or Cairo International Airport',
+            'Have backup transportation plan ready'
           ],
           companies: ['Cairo Metro'],
+          availability: 'Daily service with women-only cars',
           link: 'https://www.cairometro.gov.eg/'
+        },
+        {
+          type: 'White Licensed Taxis',
+          safety: 45,
+          cost: 'Variable - negotiate fare',
+          recommendations: [
+            'Use only as last resort - significant safety concerns',
+            'Ensure meter is running before getting in',
+            'Sit in back seat and keep doors unlocked initially',
+            'Have exact change ready - drivers claim no change',
+            'Share ride details with someone trusted',
+            'Avoid completely after dark'
+          ],
+          companies: ['Licensed white taxi operators'],
+          availability: 'Street hail only',
+          link: ''
+        },
+        {
+          type: 'River Taxi/Ferry',
+          safety: 35,
+          cost: '$0.20-0.50 per trip',
+          recommendations: [
+            'Budget option but limited safety for solo women',
+            'Use only during busy daylight hours',
+            'Stay near other families and women',
+            'Avoid isolated ferry stops',
+            'Have alternative transport plan ready'
+          ],
+          companies: ['Nile River Transport'],
+          availability: 'Limited routes along Nile',
+          link: ''
         }
       ],
       nightTravel: {
@@ -894,8 +996,8 @@ const cairo: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$50 - $120 USD / day',
-        description: 'Prioritizes safety through quality accommodation, reliable transportation, and guided tours. Budget reflects the premium needed for women\'s safety in Cairo.',
-        tip: 'Safety should be the top priority in Cairo. Spending more on secure hotels, private transportation, and professional guides is essential for women travelers.'
+        description: 'Solo female travel safety prioritizes quality accommodation, reliable transportation, and guided tours. Budget reflects the premium needed for women solo travel safety in Cairo.',
+        tip: 'Safety should be the top priority for solo female travelers in Cairo. Spending more on secure hotels, private transportation, and professional guides is essential women traveling alone safety.'
       },
       accommodation: [
         {
@@ -944,17 +1046,27 @@ const cairo: Destination = {
         }
       ],
       budgetTips: [
-        'Prioritize safety over savings - this is not a destination to cut corners on security',
-        'Invest in high-quality accommodation in safe neighborhoods like Zamalek',
-        'Use hotel transportation exclusively - the cost difference could save your life',
-        'Book professional tours with female guides when possible',
-        'Consider travel insurance with evacuation coverage',
-        'Budget extra for tips as security staff and helpful service providers expect compensation'
+        'Prioritize solo female travel safety over savings - this is not a safe solo travel destination to cut corners on security',
+        'Invest in high-quality accommodation in safe neighborhoods like Zamalek for women traveling alone safety',
+        'Use hotel transportation exclusively - essential for solo female travel safety precautions',
+        'Book professional tours with female guides when possible for trusted solo female travel safety tips',
+        'Consider travel insurance with evacuation coverage for solo female travelers',
+        'Budget extra for tips as security staff and helpful service providers expect compensation from women solo travelers'
       ]
     },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  youtubeVideos: [
+    {
+      videoId: "7GQSgZRQ220",
+      title: "Solo Female Travel Cairo Egypt - Safety Tips & Cultural Insights",
+      description: "Essential safety information and cultural guidance for women traveling alone to Cairo, Egypt"
+    },
+    {
+      videoId: "eRS4cYl0e9s",
+      title: "Cairo Travel Experience - What It's Really Like",
+      description: "Authentic travel experience showing the reality of visiting Cairo",
+      timestamp: "660s"
+    }
+  ]
 };
 
 export default cairo;
