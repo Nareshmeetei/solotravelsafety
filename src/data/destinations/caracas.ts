@@ -155,12 +155,12 @@ const caracas: Destination = {
 • Wear simple, worn clothing that doesn\'t stand out - new or branded items attract criminals
 • Keep your phone hidden and never use it openly on streets - phone theft is epidemic
 • Always wear closed-toe shoes for quick movement and avoid anything that looks expensive`,
-      firstTimers: `• Register with your embassy within 24 hours of arrival - critical for emergency evacuation capabilities
-• NEVER walk alone anywhere at any time - even in hotel areas, crime is extremely high
-• Use only Ridery or Yummy ride-sharing apps with GPS tracking - verify driver and license plates
-• Stay in hotels with 24/7 armed security and avoid leaving hotel grounds without professional escort
-• Trust NO strangers offering help or directions - express kidnapping setups are common
-• Carry emergency cash in multiple currencies hidden in different locations on your body`,
+      firstTimers: `• Is Caracas safe for women solo travelers? Absolutely not - register with embassy within 24 hours for critical evacuation capabilities
+• NEVER walk alone anywhere at any time - solo female travel safety requires constant vigilance in world's most dangerous city
+• Use only Ridery or Yummy ride-sharing apps with GPS tracking essential for women traveling alone safety
+• Stay in hotels with 24/7 armed security - solo female travel safety precautions require maximum protection
+• Trust NO strangers offering help - express kidnapping targeting solo female travelers extremely common
+• Carry emergency cash in multiple currencies - solo female travel safety gear includes hidden money distribution`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -225,31 +225,36 @@ const caracas: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: `• CRITICAL: Dress extremely conservatively to avoid unwanted attention - revealing clothing significantly increases assault risk
-• Never wear jewelry, watches, or anything that appears valuable - even fake items attract criminals
-• Avoid bright colors or designer clothing that makes you stand out as a tourist target
-• Long pants and covered shoulders mandatory at all times - shorts/skirts increase harassment risk
-• Wear old, worn clothing that blends in with locals to avoid appearing wealthy
-• Carry clothes in a plain, torn plastic bag rather than luggage to appear less affluent
-• Never wear athletic shoes or new clothing - indicates foreign status and wealth
-• Cover tattoos and remove piercings that might be perceived as Western/valuable`,
-      behaviorNorms: [
-        'Never make eye contact with strangers - perceived as invitation and increases harassment risk',
-        'Walk with purpose and confidence - appearing lost or confused marks you as an easy target',
-        'Do not smile at strangers or be overly friendly - Venezuelan women are reserved with unknown men',
-        'Keep conversations quiet and avoid speaking English in public - foreign accents attract criminals',
-        'Never take photos of people, police, or poverty areas - can provoke violent reactions',
-        'Do not give money to beggars or street children - marks you as wealthy and creates dangerous situations',
-        'Avoid carrying bags or purses - use hidden money belts and distribute cash in multiple body locations',
-        'Never accept help from strangers offering directions or assistance - common robbery setup',
-        'Do not use phones, cameras, or electronic devices visibly on streets - immediate theft risk',
-        'Keep interactions with service staff brief and formal - overfriendliness can be misinterpreted',
-        'Never discuss travel plans, accommodation, or financial status with anyone outside hotel staff',
-        'Maintain serious facial expression and avoid appearing happy or carefree in public',
-        'Do not engage with vendors, taxi drivers, or anyone approaching you on the street',
-        'Keep all valuables completely hidden - even glimpses of cash or cards invite robbery'
+      dressCode: [
+        'Dress extremely conservatively to blend in - revealing clothing significantly increases solo female travel safety risks and assault probability',
+        'Never wear jewelry, watches, or anything appearing valuable - even fake items immediately mark you as wealthy foreign target',
+        'Avoid bright colors or designer clothing that makes you stand out - criminals specifically target well-dressed tourists for robbery',
+        'Long pants and covered shoulders mandatory at all times - shorts/skirts dramatically increase harassment and assault risks',
+        'Wear old, worn clothing that blends with locals - new or branded items signal wealth and foreign status to criminals',
+        'Carry belongings in plain, worn plastic bags rather than luggage - backpacks and suitcases identify you as tourist target',
+        'Never wear athletic shoes or Western-style clothing - immediately identifies foreign status and perceived wealth to robbery gangs',
+        'Cover all tattoos and remove piercings - Western body modifications seen as valuable and mark you as wealthy foreigner'
       ],
-      perception: `Foreign women are seen as extremely wealthy targets regardless of actual income - criminals assume all foreigners have significant money and valuable possessions. Solo female travelers face the highest risk of sexual assault, kidnapping, and violent crime in Caracas. White or light-skinned women are particularly targeted due to perceived wealth. Venezuelan women rarely travel alone and never at night - following local women\'s behavior is essential for survival. Conservative dress and behavior may reduce risk slightly but do not eliminate danger. Local women understand that showing any sign of wealth or foreign status can be fatal. The economic crisis has created desperation-driven crime where criminals have nothing to lose and will use extreme violence for minimal gain. Women are specifically targeted for sexual crimes in addition to robbery, making Caracas one of the most dangerous cities globally for solo female travelers.`
+      behaviorNorms: [
+        'Never make direct eye contact with strangers on streets - perceived as invitation and significantly increases harassment risks',
+        'Walk with purposeful confidence while appearing serious - lost or confused behavior marks you as vulnerable target for criminals',
+        'Do not smile or be overly friendly with unknown men - Venezuelan women are reserved and cautious with strangers',
+        'Keep all conversations quiet and avoid speaking English publicly - foreign accents immediately attract criminal attention',
+        'Never photograph people, police, poverty areas, or military - can provoke immediate violent reactions and dangerous confrontations',
+        'Do not give money to beggars or street children - marks you as wealthy target and creates cascading dangerous situations',
+        'Use hidden money belts and distribute cash throughout body - never carry visible bags or purses that attract thieves',
+        'Never accept help from strangers offering directions or assistance - extremely common setup for robbery and kidnapping schemes'
+      ],
+      perception: [
+        'Is Caracas safe for female solo travelers? Absolutely not - foreign women are seen as extremely wealthy targets regardless of actual income',
+        'Solo female travelers face the highest risk globally of sexual assault, kidnapping, and violent crime in Caracas due to economic desperation',
+        'White or light-skinned women are particularly targeted due to perceived wealth - criminals assume all foreigners have significant money',
+        'Venezuelan women rarely travel alone and never at night - following local women\'s behavior patterns is essential for survival',
+        'Conservative dress and cautious behavior may reduce risk slightly but cannot eliminate the extreme dangers facing women traveling alone',
+        'Local women understand that showing any wealth or foreign status can be fatal - even small indicators trigger violent crime',
+        'Economic crisis created desperation-driven crime where criminals use extreme violence for minimal gain with nothing to lose',
+        'Women are specifically targeted for sexual crimes in addition to robbery - making Caracas among world\'s most dangerous cities for solo female travelers'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['February-April (dry season with better visibility)'],
@@ -403,41 +408,49 @@ const caracas: Destination = {
       }
     ],
     culturalSensitivityTips: [
-      'Venezuelan society is extremely hierarchical - showing wealth or status makes you a target for violent crime',
-      'Never discuss politics, government, or the economic crisis - topics are dangerous and can lead to threats',
-      'Respect the dignity of people despite poverty - many Venezuelans are highly educated professionals affected by the crisis',
-      'Understand that many locals may approach tourists for money or assistance due to economic desperation',
-      'Be aware that Venezuelan culture values family and community - solo travelers are viewed with suspicion',
-      'Religious displays are common - respect Catholic imagery and customs even if not your faith',
-      'Music and dancing are central to Venezuelan culture but nightlife is extremely dangerous for tourists',
-      'Food sharing is important culturally but never accept food from strangers due to drugging risks',
-      'Venezuelan women traditionally dress conservatively - following local dress norms is essential for safety'
+      'Understand extreme economic hardship affects everyone',
+      'Never discuss politics or government - extremely dangerous',
+      'Respect dignity despite visible poverty and struggles', 
+      'Be aware many highly educated people work menial jobs',
+      'Expect approaches for financial help - economic desperation',
+      'Recognize family/community values - solo travel seems odd',
+      'Respect Catholic religious displays and customs',
+      'Appreciate music culture but avoid nightlife completely',
+      'Understand food sharing customs but never accept from strangers',
+      'Follow conservative dress norms of local women',
+      'Be sensitive to hyperinflation impact on daily life',
+      'Show empathy for infrastructure and service challenges',
+      'Don\'t flash foreign currency or electronic devices',
+      'Don\'t trust strangers offering help or directions',
+      'Don\'t eat street food or drink tap water',
+      'Don\'t travel without embassy registration and contacts',
+      'Don\'t assume Western social norms apply here'
     ],
     culturalDos: [
-      'Learn basic Spanish greetings and polite phrases to show respect',
-      'Dress extremely conservatively to blend in with local women',
-      'Show appreciation for Venezuelan culture, music, and food when safe to do so',
-      'Respect religious customs and Catholic traditions',
-      'Be patient with services - infrastructure challenges affect everything',
-      'Show gratitude to hotel staff and security - they are protecting your life',
-      'Keep interactions brief and professional with all locals',
-      'Acknowledge the beauty of Venezuela when speaking with locals (safely)',
-      'Respect local customs around greetings and personal space',
-      'Express sympathy for the difficult situation (without discussing politics)'
+      'Learn basic Spanish greetings like "Buenos días"',
+      'Dress extremely conservatively to blend in',
+      'Show appreciation for culture when safe to do so',
+      'Respect Catholic customs and religious displays',
+      'Be patient with slow services and infrastructure issues',
+      'Show gratitude to hotel security - they protect your life',
+      'Keep all interactions brief and professional',
+      'Acknowledge Venezuela\'s natural beauty when speaking safely',
+      'Respect personal space and local greeting customs',
+      'Express sympathy for difficulties without discussing politics'
     ],
     culturalDonts: [
-      'Never discuss politics, Maduro, Chavez, or the government - extremely dangerous topic',
-      'Don\'t display any wealth, expensive items, or foreign money',
-      'Don\'t take photos in poor areas, of police, or military installations',
-      'Don\'t ignore safety warnings from locals or hotel staff',
-      'Don\'t venture into areas locals advise against - they know current dangers',
-      'Don\'t accept invitations to parties, events, or social gatherings',
-      'Don\'t use dating apps or meet locals for romantic purposes',
-      'Don\'t give money to beggars - creates dangerous situations',
-      'Don\'t criticize Venezuelan culture, food, or customs',
-      'Don\'t compare Venezuela to other countries or discuss how things work elsewhere',
-      'Don\'t photograph people without permission - can provoke violent reactions',
-      'Don\'t walk alone under any circumstances, even short distances'
+      'Never discuss politics or government - extremely dangerous',
+      'Don\'t display wealth, expensive items, or foreign money',
+      'Don\'t photograph poor areas, police, or military',
+      'Don\'t ignore safety warnings from locals or staff',
+      'Don\'t venture into areas locals advise against',
+      'Don\'t accept invitations to social gatherings or parties',
+      'Don\'t use dating apps or meet locals romantically',
+      'Don\'t give money to beggars - creates danger',
+      'Don\'t criticize Venezuelan culture or customs',
+      'Don\'t compare Venezuela to other countries',
+      'Don\'t photograph people without explicit permission',
+      'Don\'t walk alone anywhere, even short distances'
     ],
     womensConfidenceScore: {
       score: 8,
@@ -925,8 +938,8 @@ const caracas: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$200 - $400 USD / day',
-        description: 'Security-focused travel costs 3-4x normal budget due to Venezuela\'s extreme crime levels. Solo women face highest risks and need maximum security measures.',
-        tip: 'NEVER compromise on security to save money - your life is more valuable than money. Venezuela has one of the world\'s highest murder rates and women face extreme risks of sexual assault, kidnapping, and robbery.'
+        description: 'Solo female travel safety requires 3-4x normal budget due to extreme crime levels. Women solo travel safety demands maximum security measures and professional protection services.',
+        tip: 'NEVER compromise on solo female travel safety to save money - Venezuela has world\'s highest murder rates. Solo female travelers face extreme risks requiring trusted solo female travel safety tips and maximum security investment.'
       },
       accommodation: [
         {
@@ -950,21 +963,63 @@ const caracas: Destination = {
       ],
       transport: [
         {
-          method: 'Hotel Transport',
+          method: 'Hotel Transport with Armed Security',
           cost: '$30-60/trip',
-          safetyDescription: 'Essential security measure, only recommended option',
+          safetyDescription: 'Essential security measure - only truly safe option with professional security escort services',
           safetyLevel: 'high'
         },
         {
           method: 'Embassy-verified Private Driver',
           cost: '$40-80/trip',
-          safetyDescription: 'Secure option for longer distances or tours',
+          safetyDescription: 'Secure option for longer distances with background-checked, registered drivers for women traveling alone safety',
           safetyLevel: 'high'
         },
         {
-          method: 'Public Transport',
+          method: 'Yummy Rides App (Daylight Only)',
+          cost: '$15-25/trip',
+          safetyDescription: 'Venezuela\'s #1 transport app with GPS tracking - acceptable for solo female travel safety during daylight with precautions',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Ridery App (Daylight Only)',
+          cost: '$15-25/trip',
+          safetyDescription: 'Venezuelan ride-sharing alternative to Uber - use only during day with GPS sharing for solo female traveler safety',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'SITSSA Airport Bus',
+          cost: '$1-2/trip',
+          safetyDescription: 'Government bus from airport only - acceptable for airport transfer but requires extreme caution',
+          safetyLevel: 'low-medium'
+        },
+        {
+          method: 'Private Airport Shuttle',
+          cost: '$25-35/trip',
+          safetyDescription: 'Pre-arranged airport transfers - safer than public options but verify driver credentials',
+          safetyLevel: 'medium-high'
+        },
+        {
+          method: 'Caracas Metro System',
           cost: '$0.25-0.50/ride',
-          safetyDescription: 'High risk of crime, harassment, and robbery',
+          safetyDescription: 'Extremely dangerous - high robbery, assault, and harassment rates. Infrastructure decay, no security',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Local Buses/Public Transport',
+          cost: '$0.25-0.75/ride',
+          safetyDescription: 'High risk of crime, sexual harassment, and robbery - never recommended for solo female travelers',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Street Taxis',
+          cost: '$5-15/trip',
+          safetyDescription: 'Extremely dangerous - high kidnapping and assault risk, never use unlicensed taxis',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Walking',
+          cost: 'Free',
+          safetyDescription: 'Extremely dangerous - guaranteed targeting for robbery, assault, and worse. Never walk alone anywhere.',
           safetyLevel: 'low'
         }
       ],
@@ -981,8 +1036,17 @@ const caracas: Destination = {
         'Medical emergency fund $5,000+ - Venezuela\'s healthcare system has collapsed and private treatment is expensive'
       ]
     },
+  youtubeVideos: {
+    seeHowItsLike: [
+      {
+        videoId: "7vZ40yEVZmw",
+        title: "Caracas Venezuela - Solo Travel Reality Check",
+        description: "Authentic insights into the challenges and realities of traveling in Caracas with critical safety considerations for solo travelers"
+      }
+    ]
+  },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "7vZ40yEVZmw"
   }
 };
 
