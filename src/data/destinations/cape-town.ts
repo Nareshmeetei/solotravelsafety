@@ -14,6 +14,8 @@ const capetown: Destination = {
     reviewCount: 347,
     lastUpdated: '1 day ago',
     harassmentRisk: 'high',
+    safetyKeywords: ['solo female travel safety', 'women solo travel safety', 'safe solo travel destinations', 'solo female traveler safety', 'women traveling alone safety'],
+    isCapeTownSafeQuestion: 'Is Cape Town safe for female solo travelers? With extreme caution and proper solo female travel safety precautions, Cape Town can be visited by women traveling alone, but it requires staying in secure areas like V&A Waterfront and using verified transport only.',
     safetyBreakdown: {
       nightSafety: { 
         score: 2.0, 
@@ -76,48 +78,72 @@ const capetown: Destination = {
         type: 'hotel', 
         features: ['Ultra-luxury hotel', 'V&A Waterfront location', 'Excellent security', '24/7 professional security', 'Female-friendly staff', 'Safe location', 'Concierge services', 'Airport transfers'], 
         rating: 4.8, 
-        notes: 'Premier choice for solo female travelers located in the secure V&A Waterfront. World-class security protocols and staff specially trained for women\'s safety concerns. Private airport transfers and security escort services available.',
+        notes: 'Premier choice for women solo travel safety in Cape Town, located in the secure V&A Waterfront. World-class security protocols and staff specially trained for solo female traveler safety concerns. Essential for safe solo travel destinations with private airport transfers.',
         link: 'https://www.suninternational.com/table-bay/'
+      },
+      {
+        name: 'One&Only Cape Town',
+        type: 'hotel',
+        features: ['Five-star luxury resort', 'V&A Waterfront marina', 'Exceptional security', 'Private island location', 'World-class spa', 'Multiple restaurants', 'Concierge services', '24/7 security'],
+        rating: 4.9,
+        notes: 'Ultra-luxury resort on private island within V&A Waterfront. Consistently ranked as Cape Town\'s most prestigious accommodation with unmatched security and solo female traveler services. Private marina location offers maximum safety.',
+        link: 'https://www.oneandonlyresorts.com/cape-town'
       },
       {
         name: 'Cape Grace Hotel',
         type: 'hotel',
         features: ['Luxury hotel', 'V&A Waterfront location', 'Exceptional security', 'Safe area', 'Professional staff', 'Female-friendly service', 'Concierge assistance'],
         rating: 4.7,
-        notes: 'Luxury hotel within the secure V&A Waterfront complex. Exceptional security standards and staff experienced with solo female travelers. Located in Cape Town\'s safest tourist area.',
+        notes: 'Luxury hotel within the secure V&A Waterfront complex. Exceptional security standards and staff experienced with solo female travelers. Located in Cape Town\'s safest tourist area with stunning Table Mountain views.',
         link: 'https://www.capegrace.com/'
+      },
+      {
+        name: 'AC Hotel by Marriott Cape Town Waterfront',
+        type: 'hotel',
+        features: ['Modern 4-star hotel', 'V&A Waterfront heart', 'Sleek urban design', 'Safe location', 'Professional service', 'Marriott security standards', 'Easy access to attractions'],
+        rating: 4.6,
+        notes: 'Modern hotel in heart of V&A Waterfront with Marriott\'s renowned safety standards. Ideal for solo female business and leisure travelers seeking contemporary comfort in Cape Town\'s safest area.',
+        link: 'https://www.marriott.com/'
       },
       {
         name: 'The Twelve Apostles Hotel',
         type: 'hotel',
         features: ['Luxury resort', 'Clifton location', 'High security', 'Private grounds', 'Professional staff', 'Safe environment', 'Spa facilities'],
         rating: 4.6,
-        notes: 'Luxury resort with comprehensive security measures and private grounds. Staff provides guidance on safe areas and arranges secure transportation for female guests.',
+        notes: 'Luxury resort with comprehensive security measures and private grounds. Staff provides guidance on safe areas and arranges secure transportation for female guests. Spectacular ocean and mountain views.',
         link: 'https://www.12apostleshotel.com/'
       },
       {
-        name: 'Radisson RED V&A Waterfront',
-        type: 'hotel',
-        features: ['Modern hotel', 'V&A Waterfront location', 'Good security', 'Safe area', 'Professional service', 'Central location'],
-        rating: 4.4,
-        notes: 'Modern hotel within the secure V&A Waterfront area. Good security protocols and staff assistance for solo female travelers. Easy access to restaurants and attractions within the complex.',
-        link: 'https://www.radissonhotels.com/'
+        name: 'Villa Viva Cape Town',
+        type: 'hostel',
+        features: ['5-star luxury hostel', 'Award-winning hostel', 'Female-only dorms available', 'Sustainability focus', 'Contemporary design', 'Solo traveler community', 'Safety-focused', '24/7 security'],
+        rating: 4.8,
+        notes: 'Consistently recommended as the best hostel for solo female travelers in Cape Town. Award-winning 5-star luxury hostel perfect for women traveling alone safety, with emphasis on solo female travel safety precautions, sustainability, and solo traveler community support. Modern amenities with backpacker budget.',
+        link: 'https://www.villavivacapetown.com/'
+      },
+      {
+        name: 'Never at Home Green Point',
+        type: 'hostel',
+        features: ['5-star hostel', 'Green Point location', 'Best large hostel in Africa', 'Female-only dorms', 'Modern facilities', 'Safety-focused', 'Solo traveler community', 'Professional staff'],
+        rating: 4.7,
+        notes: 'Named best large hostel in Africa, located in trendy Green Point. Female-only dorms available with private bathrooms. Professional staff trained in solo female traveler safety. Walking distance to V&A Waterfront.',
+        link: 'https://www.neverathome.com/'
       },
       { 
         name: 'Once in Cape Town', 
         type: 'hostel', 
         features: ['Female dorms', 'Central location', 'Security cameras', '24/7 reception', 'Traveler-friendly', 'Safety briefings'],
         rating: 4.2, 
-        notes: 'Popular backpacker hostel with female-only dorms and security measures. Staff provides comprehensive safety briefings for solo female travelers. Located in city center but requires caution when leaving property.',
+        notes: 'Popular backpacker hostel with female-only dorms and comprehensive security measures. Staff provides detailed safety briefings specifically for solo female travelers. Located in city center but requires caution when leaving property.',
         link: 'https://www.onceincapetown.co.za/'
       },
       {
-        name: 'Daddy Long Legs Hotel',
+        name: 'Southern Sun Waterfront',
         type: 'hotel',
-        features: ['Boutique hotel', 'Long Street location', 'Unique design', 'Security measures', 'Central location'],
-        rating: 4.0,
-        notes: 'Boutique hotel on Long Street with security measures in place. Staff provides safety guidance for female guests exploring the area. Caution required when walking in surrounding area, especially after dark.',
-        link: 'https://www.daddylonglegs.co.za/'
+        features: ['TripAdvisor awarded hotel', '537 beautifully appointed rooms', 'V&A Waterfront heart', 'Tourist-friendly precinct', 'Professional security', '24/7 front desk', 'Safety protocols'],
+        rating: 4.5,
+        notes: 'TripAdvisor-awarded hotel ranked among top Cape Town Central hotels. Located in heart of Cape Town\'s most tourist-friendly and secure precinct. Excellent safety record with solo female travelers.',
+        link: 'https://www.southernsun.com/southern-sun-waterfront-cape-town'
       }
     ],
     alerts: [
@@ -153,12 +179,12 @@ const capetown: Destination = {
 • Layer clothing for quick temperature changes and to hide valuables underneath
 • Wear comfortable, closed-toe shoes for safety and quick movement if needed
 • Carry a decoy wallet with small bills (R100-200) to hand over if robbed`,
-      firstTimers: `• NEVER walk alone anywhere, even during daylight - Cape Town has extreme crime targeting solo women
-• Stay ONLY in V&A Waterfront area - it has 24/7 armed security and controlled access points
-• Book ALL transport through your hotel - public transport has frequent sexual assaults
+      firstTimers: `• Is Cape Town safe for women solo travelers? The answer requires serious precautions - NEVER walk alone anywhere, even during daylight
+• Stay ONLY in V&A Waterfront area for solo female travel safety - it has 24/7 armed security and controlled access points
+• Book ALL transport through your hotel - public transport has frequent sexual assaults affecting women traveling alone
 • Register with your embassy immediately upon arrival for emergency evacuation if needed
-• Carry emergency whistle and personal alarm at all times
-• Have comprehensive travel insurance with medical evacuation coverage - healthcare system is strained`,
+• Carry personal safety alarms for travel - emergency whistle and personal alarm essential at all times
+• Have comprehensive solo female travel safety gear including travel insurance with medical evacuation coverage`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -223,18 +249,36 @@ const capetown: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Cape Town is fashion-conscious but prioritize safety over style - dress conservatively. Avoid safari/khaki clothing - locals recognize tourists immediately and crime follows. Summer: Light cotton layers, closed-toe shoes, sun protection - NEVER bare shoulders/legs alone. Winter: Waterproof layers, warm jacket, boots - Cape Town winters are cold and windy. Beach areas: Cover up when leaving beach - sexual assault rates are highest near beaches. Nightlife: Smart casual required but avoid expensive/flashy items - robberies target well-dressed tourists.',
-      behaviorNorms: [
-        'Never make eye contact with strangers on the street - this can be interpreted as invitation',
-        'Act confident and purposeful - criminals target those who appear lost or vulnerable',
-        'Don\'t engage with street vendors or accept help from strangers - common robbery setup',
-        'Keep conversations quiet - loud foreign accents attract criminal attention',
-        'Never photograph townships or poverty areas without permission - can provoke violent reactions',
-        'Tip generously for security - hotel staff, restaurant security, parking guards protect you',
-        'Don\'t discuss travel plans with strangers - information used to plan robberies',
-        'Always have a local contact visible on your phone - shows you\'re connected and missed if hurt'
+      dressCode: [
+        'Dress conservatively but stylishly - Cape Town is fashion-conscious while prioritizing safety over style',
+        'Wear light cotton layers for summer with closed-toe shoes - essential for safety and quick movement',
+        'Use waterproof layers and warm jackets for winter - Cape Town winters are cold, windy, and rainy',
+        'Cover up immediately when leaving beach areas - sexual assault rates are highest near beaches',
+        'Avoid safari/khaki clothing completely - immediately identifies you as a tourist target',
+        'Choose neutral colors that don\'t draw attention or mark you as a wealthy tourist',
+        'Never wear expensive jewelry, watches, or designer items visible on streets - attracts criminals',
+        'Opt for comfortable shoes you can walk/run in if needed - especially important for nightlife safety'
       ],
-      perception: 'Foreign women are seen as wealthy targets regardless of actual income - criminals assume you have money. Solo female travelers face extreme risk - Cape Town has world\'s highest rates of violence against women. White tourists may face additional targeting in certain areas due to economic inequality. Conservative dress and behavior reduce risk but don\'t eliminate it completely. Local women rarely travel alone after dark - follow their lead for safety cues.'
+      behaviorNorms: [
+        'Greet people with "Sawubona" (Zulu), "Goeie dag" (Afrikaans), or "Hello" (English) to show respect',
+        'Use both hands when giving or receiving items - shows respect in African cultures',
+        'Be patient with service - South Africans value relationship-building over efficiency',
+        'Never make eye contact with strangers on the street - can be misinterpreted as invitation',
+        'Walk with confidence and purpose - criminals target those who appear lost or vulnerable',
+        'Tip generously for security services - parking guards, hotel staff protect solo female travelers',
+        'Never photograph townships or poverty areas without explicit permission - can provoke violence',
+        'Don\'t discuss apartheid politics or racial issues - sensitive topics requiring deep understanding'
+      ],
+      perception: [
+        'Foreign women are automatically assumed to be wealthy targets regardless of actual income',
+        'Solo female travelers face extreme risk due to world\'s highest rates of violence against women',
+        'Local women rarely travel alone, especially after dark - follow their lead for safety cues',
+        'The combination of being foreign and female creates maximum risk profile in Cape Town',
+        'Criminals specifically target solo female travelers as vulnerable and profitable targets',
+        'Economic disparity makes all tourists appear wealthy to potential criminals',
+        'Conservative dress and behavior reduce but don\'t eliminate risks completely',
+        'Even with precautions, risks remain high - constant vigilance is required for safety'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['November-March'],
@@ -297,8 +341,8 @@ const capetown: Destination = {
     ],
     usefulTips: [
       {
-        title: "Stay only in V&A Waterfront for maximum safety",
-        description: "The V&A Waterfront is the only truly safe area in Cape Town with 24/7 security, controlled access, and immediate emergency response. All other areas pose significant safety risks for solo women.",
+        title: "Is Cape Town safe for solo female travelers? Stay only in V&A Waterfront",
+        description: "For women solo travel safety in Cape Town, the V&A Waterfront is the only truly safe area with 24/7 security, controlled access, and immediate emergency response. This is essential solo female travel advice for Cape Town - all other areas pose significant safety risks.",
         severity: "high",
         sourceName: "Cape Town Tourism Safety Report 2025",
         sourceUrl: "https://www.capetown.gov.za/"
@@ -311,8 +355,8 @@ const capetown: Destination = {
         sourceUrl: "https://thebrokebackpacker.com/is-cape-town-safe/"
       },
       {
-        title: "Travel with emergency contact and evacuation insurance",
-        description: "Given Cape Town\'s high crime rates, have 24/7 emergency contacts and comprehensive travel insurance with medical evacuation coverage.",
+        title: "Solo female travel safety gear: Emergency contacts and evacuation insurance",
+        description: "For women traveling alone safely in Cape Town, essential solo female travel safety precautions include 24/7 emergency contacts and comprehensive travel insurance with medical evacuation coverage. This is critical solo female travel advice.",
         severity: "high",
         sourceName: "U.S. State Department Travel Advisory",
         sourceUrl: "https://travel.state.gov/"
@@ -326,28 +370,45 @@ const capetown: Destination = {
       }
     ],
     culturalSensitivityTips: [
-      'Be aware of South Africa\'s complex racial and economic history',
-      'Show respect for all cultural groups and avoid political discussions',
-      'Understand that poverty and inequality contribute to crime rates',
-      'Be sensitive to the legacy of apartheid and ongoing social issues',
-      'Respect local customs and traditional practices',
-      'Avoid photographing people without permission'
+      'Understand apartheid\'s lasting economic inequality impact',
+      'Learn basic greetings: "Sawubona" (Zulu) or "Goeie dag" (Afrikaans)',
+      'Respect "Ubuntu" philosophy of interconnectedness',
+      'Never photograph townships without permission',
+      'Tip generously - it\'s essential for worker survival',
+      'Be patient with service - relationships matter here',
+      'Support local businesses respectfully',
+      'Be discreet with wealth - avoid displaying valuables',
+      'Show respect for all cultural groups and languages',
+      'Understand "braai" culture is central to social bonding',
+      'Be aware of economic disparities with sensitivity',
+      'Use both hands when giving or receiving items',
+      'Don\'t make assumptions based on appearance or accent',
+      'Don\'t ignore or dismiss local cultural warnings',
+      'Don\'t expect Western standards - adapt to local customs'
     ],
     culturalDos: [
-      'Dress modestly to avoid unwanted attention',
-      'Show respect for local customs and traditions',
-      'Be patient with service - safety comes first',
-      'Tip appropriately for good service and security',
-      'Learn basic greetings in local languages',
-      'Respect religious and cultural sites'
+      'Greet with "Sawubona" (Zulu) or "Goeie dag" (Afrikaans)',
+      'Dress conservatively but stylishly for safety and respect',
+      'Tip generously for security services and protection',
+      'Learn apartheid history respectfully at museums',
+      'Show patience with service - relationships matter',
+      'Respect "braai" barbecue culture and social bonding',
+      'Use both hands when giving or receiving items',
+      'Ask permission before photographing people'
     ],
     culturalDonts: [
-      'Don\'t display wealth or expensive items',
-      'Don\'t discuss politics or racial issues',
-      'Don\'t take photos in townships or poor areas',
-      'Don\'t ignore safety warnings from locals or hotels',
-      'Don\'t venture into areas advised against',
-      'Don\'t walk alone under any circumstances'
+      'Never flash expensive items - targets you for robbery',
+      'Don\'t discuss apartheid politics or racial tensions',
+      'Don\'t photograph townships without explicit permission',
+      'Don\'t ignore local safety advice from hotels/locals',
+      'Don\'t walk alone anywhere - extreme safety risks',
+      'Don\'t accept drinks from strangers or leave unattended',
+      'Don\'t venture into informal settlements - very dangerous',
+      'Don\'t use phone openly while waiting for transport',
+      'Don\'t resist if robbed - your life is more valuable',
+      'Don\'t wear safari clothing - marks you as tourist',
+      'Don\'t leave hotel after dark without security escort',
+      'Don\'t exchange money with street vendors or strangers'
     ],
     womensConfidenceScore: {
       score: 18,
@@ -906,21 +967,51 @@ const capetown: Destination = {
           safetyLevel: 'high'
         },
         {
-          method: 'Uber/Bolt (Daylight Only)',
-          cost: '$25-50/day',
-          safetyDescription: 'Acceptable with extreme caution during daylight hours only.',
+          method: 'Uber (Premium Safety Features)',
+          cost: '$30-60/day',
+          safetyDescription: 'Most reliable ride-sharing with comprehensive safety features, driver verification, and GPS tracking. Use only during daylight.',
+          safetyLevel: 'medium-high'
+        },
+        {
+          method: 'Bolt (Budget Ride-Sharing)',
+          cost: '$20-40/day',
+          safetyDescription: 'Cheaper than Uber but fewer safety features. Acceptable with caution during daylight hours only.',
           safetyLevel: 'medium'
         },
         {
-          method: 'Public Transport',
-          cost: '$5-15/day',
-          safetyDescription: 'Extremely dangerous - high assault and harassment rates.',
+          method: 'MyCiti Bus (Daylight Only)',
+          cost: '$8-15/day',
+          safetyDescription: 'Cape Town\'s safest public transport option with secure stations, but only use during daylight with other passengers.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Airport Shuttles Direct',
+          cost: '$25-35 per trip',
+          safetyDescription: 'Verified provider for airport transfers with good safety record and professional drivers.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Golden Arrow Buses',
+          cost: '$3-8/day',
+          safetyDescription: 'NOT RECOMMENDED - Serve crime hotspot areas and frequently targeted for incidents. Avoid completely.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Minibus Taxis',
+          cost: '$2-5/day',
+          safetyDescription: 'Extremely dangerous - reckless driving, sexual harassment, and criminal targeting of tourists. Never use.',
           safetyLevel: 'low'
         },
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Extremely dangerous - never walk alone under any circumstances.',
+          safetyDescription: 'Extremely dangerous - Cape Town has world\'s highest rates of violence against women. Never walk alone.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Rental Car (Not Recommended)',
+          cost: '$35-80/day',
+          safetyDescription: 'High carjacking and smash-and-grab risks. If renting, never drive at night and use only for escorted tours.',
           safetyLevel: 'low'
         }
       ],
@@ -933,8 +1024,19 @@ const capetown: Destination = {
         'Private security tours are worth the premium for safe sightseeing'
       ]
     },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+  youtubeVideos: {
+    seeHowItsLike: [
+      {
+        videoId: "W9DcbaRVGpU",
+        title: "Cape Town Solo Female Travel Experience",
+        description: "Real insights into solo female travel in Cape Town with safety tips and cultural experiences"
+      },
+      {
+        videoId: "1WE_KZLpS-I", 
+        title: "Cape Town Safety Guide for Women",
+        description: "Comprehensive safety guide covering transportation, accommodation, and cultural sensitivity for female travelers"
+      }
+    ]
   }
 };
 
