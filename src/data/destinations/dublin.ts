@@ -17,7 +17,7 @@ const dublin: Destination = {
     safetyBreakdown: {
       nightSafety: { 
         score: 8.0, 
-        context: 'Generally safe at night, though the US Embassy (July 2023) advises avoiding walking alone in Dublin city center after dark due to recent incidents. Well-lit main streets but be cautious in Temple Bar area and O\'Connell Street late at night. Ireland ranked #1 globally for solo female travel safety in 2022 (Bounce), though drug-related activity is visible in some central areas.' 
+        context: 'Is Dublin safe for women solo travelers at night? Generally safe, though the US Embassy (July 2023) advises caution when walking alone in Dublin city center after dark due to recent incidents. Well-lit main streets provide good solo female travel safety, but exercise caution in Temple Bar area and O\'Connell Street late at night. Ireland ranked #1 globally for solo female travel safety in 2022, though drug-related activity is visible in some central areas.' 
       },
       publicTransit: { 
         score: 8.6, 
@@ -25,7 +25,7 @@ const dublin: Destination = {
       },
       walkingAlone: { 
         score: 8.2, 
-        context: 'Ireland has a safety index of 73/100 (Travel Safe Abroad 2024). Daytime safety is excellent at 78.2%, though women should be aware that 52% of Irish women have experienced sexual violence in their lifetime (CSO 2023). Avoid isolated areas and stay alert in tourist zones like Grafton Street where pickpocketing occurs.' 
+        context: 'Dublin walking alone safety for solo female travelers shows Ireland has a safety index of 73/100 (Travel Safe Abroad 2024). Daytime safety is excellent at 78.2%, making it one of the safest places for women to travel alone during daylight hours. However, women should be aware that 52% of Irish women have experienced sexual violence in their lifetime (CSO 2023). Solo female travel safety precautions include avoiding isolated areas and staying alert in tourist zones like Grafton Street where pickpocketing occurs.' 
       }
     },
     neighborhoods: {
@@ -185,20 +185,20 @@ const dublin: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Irish culture values practicality over formality. Dress casually but neatly - jeans and comfortable layers work perfectly. Dublin is style-conscious but not pretentious. Avoid flashy designer items that might attract pickpockets. Weather-appropriate clothing is essential - always carry rain protection. Smart-casual attire works for pubs, restaurants, and cultural venues. Dark colors hide rain spots well.',
+      dressCode: "Irish culture values practicality over formality, especially given Dublin's unpredictable weather. Dress practically with layers and waterproof jackets essential year-round. Choose casual, comfortable clothing - jeans, knitwear, and sturdy shoes fit perfectly with Irish style. Opt for dark colors and avoid white/light clothing to hide rain spots and blend with local fashion. Pack warm layers even in summer as Dublin evenings can be surprisingly cool and damp. Avoid flashy designer items or expensive jewelry to stay safe from pickpockets and fit local modesty values. Wear smart-casual attire for pubs and restaurants - most venues are relaxed but neat appearance is appreciated. Choose comfortable walking shoes with good grip as Dublin's cobblestone streets can be slippery when wet.",
       behaviorNorms: [
-        'Queue politely and respect personal space - Irish people value orderly behavior',
-        'Thank bus drivers when boarding and exiting - it\'s considered good manners',
-        'Engage in friendly conversation - Irish people are naturally chatty and welcoming',
-        'Offer to buy rounds when drinking with locals - it\'s part of pub culture',
-        'Speak at moderate volume in public - loud conversations are considered rude',
-        'Be punctual for arranged meetings - lateness is considered disrespectful',
-        'Show appreciation for Irish history and culture without making political comments',
-        'Respect pub closing times - licensing laws are strictly enforced',
-        'Ask permission before taking photos of locals or in traditional pubs',
-        'Use "please" and "thank you" frequently - politeness is highly valued'
+        'Queue politely and respect personal space - Irish people highly value orderly, courteous behavior',
+        'Thank bus drivers when boarding and exiting - this simple courtesy is deeply appreciated',
+        'Engage warmly in conversation - Irish people are naturally chatty and genuinely interested in visitors',
+        'Offer to buy rounds when drinking with locals - essential part of Irish pub culture and friendship',
+        'Speak at moderate volume in public spaces - loud conversations are considered rude and attention-seeking',
+        'Be punctual for arranged meetings - lateness is seen as disrespectful and inconsiderate',
+        'Show genuine interest in Irish culture and history - but avoid making political comments about sensitive topics',
+        'Respect pub closing times and licensing laws - these are strictly enforced throughout Ireland',
+        'Ask permission before photographing locals - especially in traditional pubs where privacy is valued',
+        'Use \"please,\" \"thank you,\" and \"sorry\" frequently - politeness and courtesy are cornerstone Irish values'
       ],
-      perception: 'Solo female travelers are completely normal and widely accepted in Dublin. Ireland ranked #1 globally for solo female travel safety in 2022. Irish people are naturally helpful toward tourists, especially women traveling alone. Dublin is very progressive and women-friendly. You\'ll find excellent support networks, safe accommodation options, and respectful local interactions. Irish culture has strong traditions of protecting and respecting women travelers.'
+      perception: "Solo female travelers are completely normal and widely welcomed throughout Dublin and Ireland. Is Dublin safe for women solo travelers? Yes - Ireland ranked #1 globally for solo female travel safety in 2022. Irish people are naturally protective and helpful toward tourists, especially women traveling alone. Dublin's progressive, cosmopolitan atmosphere makes solo female travel comfortable and well-supported. You'll find excellent support networks, women-friendly accommodations, and genuinely respectful local interactions. Irish pub culture warmly embraces solo female travelers - locals often adopt lone travelers into their groups. Irish culture has deep traditions of hospitality and protecting visitors, creating natural safety networks. Women traveling alone often report feeling safer in Dublin than in their home cities, and local Irish women are particularly helpful, offering advice and assistance freely."
     },
     governmentAdvisory: {
       level: 'Exercise Normal Precautions',
@@ -209,24 +209,24 @@ const dublin: Destination = {
       reason: 'Low violent crime rates but increased petty crime and incidents targeting tourists.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ireland-travel-advisory.html',
       soloTravelerAdvice: [
-        'Ireland ranked #1 globally for solo female travel safety in 2022',
+        'Is Dublin safe for female solo travelers? Yes - Ireland ranked #1 globally for solo female travel safety in 2022',
         'Download offline maps and transport apps - WiFi isn\'t always available',
         'Get a Leap Card for seamless public transport access across Dublin',
-        'Stay in central Dublin areas like Ballsbridge or Trinity College vicinity for safety',
-        'Book accommodation with 24-hour reception for added security and support'
+        'Stay in central Dublin areas like Ballsbridge or Trinity College vicinity for optimal solo female travel safety',
+        'Book accommodation with 24-hour reception for added women travelers safety and support'
       ]
     },
     costAndComfort: {
       dailyBudget: {
         range: '€70-500 ($79-558) per day',
-        description: 'Updated 2025 costs for solo female travel in Dublin. Budget travelers can manage €70-85/day with hostels and self-catering, while comfortable stays require €150-180/day. Dublin is expensive but offers excellent safety standards.',
+        description: 'Updated 2025 costs for solo female travel in Dublin. Budget travelers can manage €70-85/day with hostels and self-catering, while comfortable stays require €150-180/day. Dublin ranks among the safest countries for solo female travel, and excellent safety standards justify the costs.',
         tip: 'Book accommodation well in advance as Dublin has limited affordable options. Consider staying in neighborhoods like Rathmines or Ranelagh for better value while maintaining safety.'
       },
       accommodation: [
         {
           type: 'Budget Hostels/Shared Rooms',
           avgCost: '€79-100+/night (post-pandemic increase)',
-          safetyNote: 'Prices dramatically increased. Female-only dorms available. Choose reputable hostels with 24/7 reception and security.',
+          safetyNote: 'Prices dramatically increased post-pandemic. Female-only dorms available for solo female travel safety. Choose reputable hostels with 24/7 reception and security.',
           safetyLevel: 'medium'
         },
         {
@@ -250,32 +250,62 @@ const dublin: Destination = {
       ],
       transport: [
         {
-          method: 'Public Transport (Leap Card)',
-          cost: '€6/day (7-day card €40)',
-          safetyDescription: 'Generally safe during day but majority feel unsafe after dark. CCTV coverage, exact change not needed with Leap Card.',
+          method: 'Leap Card (All Public Transport)',
+          cost: 'TFI 90-minute fare €2, Daily cap €8, Weekly cap €32 (2025 prices)',
+          safetyDescription: 'Comprehensive coverage across Dublin Bus, Luas trams, DART trains. CCTV monitoring, generally safe during day',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Dublin Bus Network',
+          cost: 'Single journey €2.40, Daily unlimited €8 with Leap Card',
+          safetyDescription: 'Extensive bus network covering all Dublin areas. Well-lit stops, frequent services, driver assistance available',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Luas Tram System',
+          cost: 'Zone 1-2: €2.10, integrated with Leap Card system',
+          safetyDescription: 'Modern tram system with Red and Green lines. Wheelchair accessible, electronic displays, generally very safe',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'DART Railway',
+          cost: '€3.30 city center zones, beautiful coastal route',
+          safetyDescription: 'Scenic coastal rail service from Howth to Greystones. Well-maintained, punctual, excellent safety record',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Licensed Taxis (Free Now App)',
+          cost: '€6-15 per trip, €20/day average usage',
+          safetyDescription: 'GPS tracked rides, can request female drivers. Use official taxi ranks or verified apps for maximum safety',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Dublin Bikes Scheme',
+          cost: '€5/day, €20/week, first 30 minutes free',
+          safetyDescription: 'Bike-sharing with 100+ stations citywide. Helmets not provided, be cautious in Dublin traffic',
           safetyLevel: 'medium'
         },
         {
           method: 'Walking',
-          cost: 'Free',
-          safetyDescription: 'Dublin city center is very walkable and generally safe. Well-lit streets with good pedestrian infrastructure.',
+          cost: 'Free - Dublin very walkable',
+          safetyDescription: 'Compact city center, well-lit streets, good pedestrian infrastructure. Exercise caution after dark',
           safetyLevel: 'high'
         },
         {
-          method: 'Licensed Taxis/Free Now App',
-          cost: '€20/day average, €6-15 per trip',
-          safetyDescription: 'Safe option with GPS tracking. Can request female drivers through apps. Use official taxi ranks or apps.',
+          method: 'Leap Visitor Card',
+          cost: '€19.50 (1-day), €40 (3-day), €70 (7-day)',
+          safetyDescription: 'Tourist transport pass for unlimited Zone 1 travel. Convenient and safe option for solo travelers',
           safetyLevel: 'high'
         },
         {
-          method: 'Dublin Bikes',
-          cost: '€5/day',
-          safetyDescription: 'Bike-sharing system with stations throughout the city. Generally safe but be cautious in traffic.',
-          safetyLevel: 'medium'
+          method: 'Airport Transfer (Airlink Express)',
+          cost: '€7 to city center, 30-40 minute journey',
+          safetyDescription: 'Direct bus service from Dublin Airport. Frequent departures, luggage space, very reliable',
+          safetyLevel: 'high'
         }
       ],
       budgetTips: [
-        'Use Leap Card for public transport - much cheaper than individual tickets',
+        'Use Leap Card for safe and affordable public transport - much cheaper than individual tickets for solo female travelers',
         'Look for early bird restaurant specials before 7pm for better prices',
         'Many museums offer free admission including National Gallery and National Museum',
         'Pub food often offers better value than restaurants',
@@ -468,14 +498,16 @@ const dublin: Destination = {
       }
     ], // Tips sourced from Go-to-Ireland.com, OneVasco, 2025
     culturalSensitivityTips: [
-      'DO: Greet with a friendly hello and make eye contact - Irish people value direct, warm interaction',
-      'DO: Join in local conversation and humor - Irish are naturally chatty and welcoming to visitors',
-      'DO: Queue patiently and respect personal space - orderly behavior is highly valued',
-      'DO: Thank bus drivers when boarding and exiting - it\'s considered basic courtesy',
-      "DON'T: Joke about Irish history, religion, accents, or stereotypes - these topics are sensitive",
-      "DON'T: Speak loudly or draw attention in public - moderate volume is preferred",
-      "DON'T: Refuse hospitality abruptly - decline politely with appreciation",
-      "DON'T: Discuss money, religion, politics, or Northern Ireland unless invited"
+      'Greet with warm handshakes and make direct eye contact - Irish value genuine connection',
+      'Embrace Irish humor and "craic" culture - join conversations in pubs and social settings',
+      'Be punctual and respectful of time - Irish appreciate reliability and courtesy',
+      'Thank service workers - bus drivers, servers, shop clerks appreciate acknowledgment',
+      'Respect Irish hospitality - accept offers graciously and reciprocate warmth',
+      "Don't joke about Irish stereotypes - leprechauns, accents, or 'top of the morning' phrases",
+      "Don't order an Irish Car Bomb drink - extremely offensive reference to The Troubles",
+      "Don't refuse hospitality abruptly - decline politely with genuine appreciation",
+      "Don't discuss Northern Ireland politics unless locals initiate the conversation",
+      "Don't take someone's pub seat without asking - this can cause serious offense"
     ],
     womensConfidenceScore: {
       score: 47.0, // Numbeo 2025 Safety Index for Dublin
@@ -618,8 +650,28 @@ const dublin: Destination = {
       year: 2025,
       context: 'Dublin ranked #80 safest for women globally, with 28% experiencing harassment in past year vs 13% men'
     },
+    culturalDos: [
+      'Greet with friendly "Hello" or "How are you?" - Irish people appreciate warm, genuine interactions',
+      'Join in pub conversations naturally - locals welcome solo female travelers into their social circles',
+      'Thank bus drivers when boarding and exiting - this simple courtesy is deeply valued in Irish culture',
+      'Offer to buy rounds when drinking with locals - essential part of Irish pub culture and friendship building',
+      'Queue politely and respect personal space - Irish people highly value orderly, courteous behavior',
+      'Engage warmly in conversation - Irish are naturally chatty and genuinely interested in travelers',
+      'Accept hospitality graciously - Irish culture emphasizes generous hosting and genuine care for visitors',
+      'Use "please," "thank you," and "sorry" frequently - politeness is a cornerstone of Irish social interaction'
+    ],
+    culturalDonts: [
+      "Don't joke about Irish stereotypes - leprechauns, accents, or 'top of the morning' phrases are offensive",
+      "Don't order an Irish Car Bomb drink - extremely offensive reference to The Troubles conflict",
+      "Don't refuse hospitality abruptly - decline politely with genuine appreciation for the gesture",
+      "Don't discuss Northern Ireland politics unless locals initiate the conversation first",
+      "Don't take someone's regular pub seat without asking - this can cause serious social offense",
+      "Don't expect everything to run on time - Irish culture operates on 'Irish time' with more relaxed schedules",
+      "Don't be overly loud or demanding - Irish prefer gentle, respectful communication styles",
+      "Don't assume all Irish people know each other - Ireland has over 5 million people across the country"
+    ],
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "kZ06nOhdr6Q" // Dublin travel guide video showing what it's like to visit
   }
 };
 

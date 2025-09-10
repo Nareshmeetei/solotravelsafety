@@ -17,15 +17,15 @@ const copenhagen: Destination = {
     safetyBreakdown: {
       nightSafety: { 
         score: 8.7, 
-        context: 'Copenhagen is exceptionally safe at night for women, ranking #8 globally for solo female travelers (Travel Ladies 2025). Women report only 1.3/5 risk rating for sexual assault concerns. The city is well-lit with considerable police presence and 24/7 metro service. Danish culture strongly promotes gender equality with Denmark ranking #1 on Women\'s Peace & Security Index 2023.' 
+        context: 'Is Copenhagen safe for women solo travelers? Absolutely - Copenhagen ranks #8 globally for solo female travelers (Travel Ladies 2025). Women report only 1.3/5 risk rating for sexual assault and 1.5/5 for harassment. Street harassment incidents are extremely rare due to respectful Danish culture. The city maintains excellent lighting, frequent police patrols, and 24/7 metro service. Danish society strongly promotes gender equality with Denmark ranking #1 on Women\'s Peace & Security Index 2023.' 
       },
       publicTransit: { 
         score: 9.2, 
-        context: 'Copenhagen\'s public transport is among the world\'s safest for women, with 24/7 metro service, excellent CCTV coverage, and helpful staff. Transport safety ratings are 95/100 for women. Metro arrives every 2-4 minutes during rush hour and runs continuously through the night. Single tickets cost 24 DKK, 24-hour passes cost 90 DKK.' 
+        context: 'Copenhagen public transport is exceptionally safe for solo female travelers, ranking among the world\'s best with 95/100 safety ratings. The comprehensive network offers 24/7 metro service with excellent CCTV coverage and helpful multilingual staff. Metro arrives every 2-4 minutes during rush hour and runs continuously through the night, making it ideal for women traveling alone safety. Single tickets cost 24 DKK, 24-hour passes cost 90 DKK.' 
       },
       walkingAlone: { 
         score: 9.1, 
-        context: 'Walking alone in Copenhagen is exceptionally safe for women, with only 1.1/5 risk rating for physical attacks and 1.5/5 for sexual harassment (Travel Ladies 2025). Denmark ranking #1 globally on Women\'s Peace & Security Index 2023. Violent crime rate only 0.7 per 1,000 people annually. Respectful Danish culture ensures women feel secure walking day or night.' 
+        context: 'Solo female travel safety in Copenhagen is exceptional for walking alone, with only 1.1/5 risk rating for physical attacks and 1.5/5 for sexual harassment (Travel Ladies 2025). Is Copenhagen safe for female solo travelers walking? Absolutely - Denmark ranks #1 globally on Women\'s Peace & Security Index 2023. Violent crime rate only 0.7 per 1,000 people annually. Respectful Danish culture ensures women traveling alone feel secure walking day or night.' 
       }
     },
     neighborhoods: {
@@ -154,12 +154,12 @@ const copenhagen: Destination = {
 • Smart-casual attire works for most restaurants and venues
 • Always carry a small backpack or crossbody bag with secure zippers
 • Dress warmly in winter (Nov-Mar) with thermal layers and waterproof outerwear`,
-      firstTimers: `• Copenhagen is exceptionally safe and ranked #8 globally for solo female travelers - very beginner-friendly
+      firstTimers: `• Is Copenhagen safe for women solo travelers? Yes - ranked #8 globally with exceptional solo female travel safety standards, perfect for beginners
 • Download offline maps and transport apps before arriving - essential for navigation
 • English is spoken by 99% of the population - communication is never a problem
 • Get a Copenhagen Card for unlimited transport plus free entry to 87+ attractions
 • Use contactless payment everywhere - Denmark is almost completely cashless
-• Trust your instincts and seek help in shops or cafes if you ever feel uncomfortable
+• Trust your instincts and seek help in shops or cafes if you ever feel uncomfortable - Copenhagen's solo female travel safety culture is exceptional
 • Join local Facebook groups or use women-only travel apps to connect with other female travelers`,
       apps: [
         'NomadHer',
@@ -172,14 +172,14 @@ const copenhagen: Destination = {
         'MobilePay'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Copenhagen exploration', rating: 4.3 },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family', rating: 4.2 },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch', rating: 4.1 },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel safety', rating: 4.1 },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Denmark safety insights', rating: 4.0 },
-        { name: 'DOT Tickets', link: 'https://dinoffentligetransport.dk/', description: 'Official Danish public transport app for buses, trains, metro with real-time info', rating: 4.6 },
-        { name: 'Copenhagen Bikes', link: 'https://bycyklen.dk/', description: 'Official Copenhagen city bike sharing system perfect for exploring safely', rating: 4.4 },
-        { name: 'MobilePay', link: 'https://www.mobilepay.dk/', description: 'Essential Danish payment app - Denmark is 99% cashless society', rating: 4.7 }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe Copenhagen exploration' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with GPS tracking and emergency alerts for family' },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response with automatic police dispatch' },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel safety' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with Denmark safety insights' },
+        { name: 'DOT Tickets', link: 'https://dinoffentligetransport.dk/', description: 'Official Danish public transport app for buses, trains, metro with real-time info' },
+        { name: 'Copenhagen Bikes', link: 'https://bycyklen.dk/', description: 'Official Copenhagen city bike sharing system perfect for exploring safely' },
+        { name: 'MobilePay', link: 'https://www.mobilepay.dk/', description: 'Essential Danish payment app - Denmark is 99% cashless society' }
       ],
       oldAppLinks: [
         {
@@ -239,20 +239,40 @@ const copenhagen: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Danish fashion prioritizes comfort, functionality, and sustainability over flashy styles. Dress casually and practically - Danes value minimalist aesthetics with clean lines and neutral colors. Layer clothing for unpredictable weather with waterproof jackets and comfortable shoes. Avoid expensive jewelry or designer items that draw attention - Danish culture follows "Law of Jante" where standing out is discouraged. Smart-casual works for most restaurants and venues. Winter requires thermal layers and waterproof boots. Danes embrace sustainable fashion with many shopping second-hand or supporting ethical brands.',
-      behaviorNorms: [
-        'Practice direct, honest communication - Danes appreciate straightforward conversation over small talk',
-        'Be punctual and respect time - arriving late is considered disrespectful in Danish culture',
-        'Respect personal space and privacy - maintain appropriate distance and avoid intrusion',
-        'Follow cycling etiquette - use bike lanes properly, signal turns, and respect traffic rules',
-        'Embrace "hygge" culture - appreciate cozy, comfortable atmospheres in cafes and social settings',
-        'Support environmental consciousness - recycle, use public transport, and minimize waste',
-        'Don\'t boast or show off - Danish "Law of Jante" values modesty and equality over individual achievement',
-        'Remove shoes when entering homes and some restaurants',
-        'Keep conversations quiet on public transport and in public spaces',
-        'Tip modestly (5-10%) or round up bills - service charges are typically included'
+      dressCode: [
+        'Dress casually and practically - Danes prioritize comfort, functionality, and sustainability over flashy styles',
+        'Embrace minimalist aesthetics with clean lines and neutral colors - Danish fashion values simplicity and quality',
+        'Layer clothing strategically for unpredictable weather - always carry waterproof jackets and comfortable walking shoes',
+        'Choose sustainable fashion options - many Danes shop second-hand or support ethical brands like Ganni, Wood Wood',
+        'Avoid expensive jewelry, designer logos, or flashy items - Danish "Law of Jante" discourages showing off wealth',
+        'Opt for smart-casual attire for restaurants and venues - overly formal dress appears pretentious in Danish culture',
+        'Pack thermal layers and waterproof boots for winter (Nov-Mar: -5°C to 5°C) - essential for Copenhagen weather',
+        'Use light, breathable layers for summer but always pack rain jacket (Jun-Aug) - sudden showers are common'
       ],
-      perception: 'Solo female travelers are completely normal, common, and well-respected in Copenhagen. Denmark ranks #1 globally on Women, Peace & Security Index with Copenhagen ranked #8 safest for solo women travelers. Danish culture strongly emphasizes gender equality and women\'s rights. Locals are reserved but helpful, and harassment is extremely rare. The progressive society welcomes independent women, and you\'ll blend in easily among other solo female travelers. Danish men are generally respectful and non-intrusive. Women feel safe walking alone at night, using public transport, and exploring independently. Trust your instincts and enjoy the freedom that Copenhagen\'s safety culture provides.'
+      behaviorNorms: [
+        'Practice direct, honest communication - Danes appreciate straightforward conversation over excessive politeness',
+        'Always be punctual - arriving late is deeply disrespectful and Danish culture treats time as sacred',
+        'Respect personal space rigorously - maintain appropriate physical distance in all interactions',
+        'Follow cycling rules religiously - use bike lanes properly, signal turns, and never walk in cycling areas',
+        'Keep public conversations quiet and respectful - loud talking on transport or restaurants is frowned upon',
+        'Book social engagements months in advance - Danes plan their schedules meticulously',
+        'Remove shoes when entering homes and check for some restaurants - this shows cultural awareness',
+        'Split bills on dates and group meals - gender equality means everyone pays their own way as a sign of respect',
+        'Recycle properly and show environmental consciousness - Denmark takes sustainability seriously',
+        'Don\'t take the last item from shared plates during meals - major cultural dining rule'
+      ],
+      perception: [
+        'Solo female travelers are completely normal and well-respected in Copenhagen - it\'s extremely common and widely accepted',
+        'Is Copenhagen safe for solo female travelers? Definitively yes - Denmark ranks #1 on Women\'s Peace & Security Index 2023',
+        'Copenhagen ranks #8 globally for solo female travelers with exceptional safety standards and gender equality',
+        'Danish society is built on gender equality principles, making independent women travelers feel genuinely welcome and safe',
+        'Street harassment is extremely rare (1.5/5 risk rating) due to respectful Danish culture and strong equality values',
+        'Danish men are raised to treat women as complete equals - expect respectful, non-intrusive interactions always',
+        'You\'ll blend in seamlessly among numerous other solo female travelers - the city is full of independent women',
+        'Locals are reserved but genuinely helpful when approached - don\'t mistake cultural reserve for unfriendliness',
+        'Gender equality means no special treatment - you\'ll be treated as an equal in all professional and social situations',
+        'Trust your instincts completely - Copenhagen\'s exceptional safety culture actively supports independent female exploration'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['May-September'],
@@ -343,27 +363,36 @@ const copenhagen: Destination = {
       }
     ],
     culturalSensitivityTips: [
-      'Respect Danish direct communication style',
-      'Be punctual for appointments and meetings',
-      'Follow cycling rules and etiquette',
-      'Show appreciation for Danish culture and design',
-      'Understand the concept of "hygge" (coziness)'
+      'Be punctual - Danish culture treats time as sacred',
+      'Speak directly and honestly - Danes prefer straightforward communication',
+      'Follow cycling rules religiously - use bike lanes and signal turns',
+      'Embrace "hygge" culture - appreciate cozy atmospheres',
+      'Practice environmental consciousness - recycle and use public transport',
+      'Don\'t boast or show off - "Law of Jante" values modesty',
+      'Don\'t be overly formal - Danes prefer casual, authentic interactions',
+      'Don\'t walk in bike lanes - this will earn silent disapproval',
+      'Don\'t take the last item from shared plates - major dining rule',
+      'Don\'t speak loudly in public spaces - maintain respectful volume'
     ],
     culturalDos: [
-      'Dress casually and practically - Danes value comfort and functionality',
-      'Be punctual and respect time - Danish culture highly values punctuality',
-      'Use bike lanes when cycling - Follow traffic rules and bike etiquette',
-      'Show appreciation for Danish design and hygge culture',
-      'Greet people with a firm handshake and direct eye contact',
-      'Respect personal space and privacy - Danes value their personal bubble'
+      'Dress casually and practically - Danes prioritize comfort, functionality, and sustainable fashion over flashy styles',
+      'Be punctual for all appointments - Danish culture considers punctuality sacred, book engagements far in advance',
+      'Use proper cycling etiquette - follow bike lane rules, signal turns, and respect the world\'s best cycling infrastructure',
+      'Greet with firm handshakes and direct eye contact - shake hands with everyone present when arriving and leaving',
+      'Split bills on dates - gender equality means couples typically pay their own way as a sign of respect',
+      'Remove shoes when entering homes and some restaurants - check with hosts first',
+      'Bring thoughtful gifts when invited - flowers, quality chocolates, or wine are appreciated',
+      'Keep conversations quiet in public spaces and transport - respect others\' personal space'
     ],
     culturalDonts: [
-      'Don\'t be overly formal or pretentious - Danes prefer casual, authentic interaction',
-      'Don\'t ignore cycling rules or walk in bike lanes',
-      'Don\'t be late for appointments - This is considered disrespectful',
-      'Don\'t interrupt conversations or speak loudly in public',
-      'Don\'t ignore the weather - Always dress appropriately for Danish climate',
-      'Don\'t make assumptions about Danish socialism or politics'
+      'Don\'t boast or show off achievements - Danish "Law of Jante" discourages standing out or bragging',
+      'Don\'t be aggressively salesly or pushy - Danes are appalled by aggressive sales tactics',
+      'Don\'t walk or cycle in the wrong lanes - bike lanes are sacred and pedestrians will face silent disapproval',
+      'Don\'t take the last item from any shared plate - this is a major Danish dining etiquette rule',
+      'Don\'t speak loudly in public transport or restaurants - maintain quiet, respectful demeanor',
+      'Don\'t be overly formal or use excessive chivalry - gender equality means treating women as equals, not opening doors',
+      'Don\'t arrive unannounced or without advance booking - Danes plan social engagements months ahead',
+      'Don\'t ignore recycling rules - Denmark has world-class environmental standards'
     ],
     womensConfidenceScore: {
       score: 92,
@@ -409,7 +438,7 @@ const copenhagen: Destination = {
       { label: 'Fake Tour Guides (Major Attractions)', frequency: 'Rare', icon: 'Users' }
     ],
     sexualHarassmentData: {
-      prevalence: 'extremely low',
+      prevalence: 'Extremely Low',
       commonLocations: ['Virtually non-existent - Copenhagen ranked #4 safest city globally for women', 'Risk rating only 1.5/5 for harassment, 1.3/5 for sexual assault (Travel Ladies 2025)', 'Danish culture promotes exceptional gender equality and respect'],
       reportingRate: 85, // High reporting rate due to trust in police and legal system
       legalProtection: 'Denmark ranks #1 globally on Women\'s Peace & Security Index 2023. World-class legal framework with strong gender equality laws, excellent police response, and zero tolerance for harassment. Comprehensive victim support services.',
@@ -734,10 +763,8 @@ const copenhagen: Destination = {
       propertyCrime: 43, // per 100,000 (2025 data) - mostly pickpocketing
       sexualAssault: 2.8, // per 100,000 (2025 data) - women rate risk only 1.3/5
       kidnapping: 0.1, // per 100,000 (2025 data) - virtually non-existent
-      terrorismThreat: 4, // Level 4/5 'significant' but no incidents targeting tourists
       source: 'Danish National Police & Travel Ladies Safety Index 2025',
-      year: 2025,
-      context: 'Copenhagen ranked #4 safest city globally for women, with safety index 74/100 and crime index only 25.7/100'
+      year: 2025
     },
     personalSafetyTools: {
       recommendedDevices: [
@@ -824,22 +851,22 @@ const copenhagen: Destination = {
       levelNumber: 2,
       source: 'U.S. Department of State',
       lastUpdated: 'January 2025',
-      details: 'Exercise increased caution in Denmark due to terrorism. Terrorist groups continue plotting possible attacks. Denmark maintains the world\'s lowest crime rates and excellent emergency services, making it one of the safest destinations for women.',
+      details: 'Exercise increased caution in Denmark due to terrorism. Terrorist groups continue plotting possible attacks. However, Denmark maintains the world\'s lowest crime rates and excellent emergency services, making Copenhagen one of the safest countries for solo female travel worldwide.',
       reason: 'Terrorism threat level "significant" (4/5) but exceptionally safe for solo female travelers.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/denmark-travel-advisory.html',
       soloTravelerAdvice: [
-        'Copenhagen ranked #4 safest city globally for women (Travel Ladies 2025)',
-        'Denmark ranks #1 on Women\'s Peace & Security Index 2023',
-        'Crime index only 25.7 with safety index of 74.3 (Numbeo 2025)',
-        'Sexual assault risk only 1.3/5, physical attack risk 1.1/5 for women',
-        'English spoken by 99% of population - excellent communication'
+        'Is Copenhagen safe for women solo travelers? Yes - ranked #4 safest city globally (Travel Ladies 2025)',
+        'Denmark ranks #1 on Women\'s Peace & Security Index 2023 - among safest countries for solo female travel',
+        'Crime index only 25.7 with safety index of 74.3 (Numbeo 2025) - exceptional solo female travel safety',
+        'Sexual assault risk only 1.3/5, physical attack risk 1.1/5 for women - trusted solo female travel safety tips',
+        'English spoken by 99% of population - excellent communication for women traveling alone safety'
       ]
     },
     costAndComfort: {
       dailyBudget: {
         range: '$113 - $275 USD / day',
-        description: 'Updated 2025 costs: Budget travelers $113/day, mid-range $275/day, luxury $713/day. Includes accommodation, meals, transport, and activities. Copenhagen is expensive but exceptional safety standards and 24/7 public transport justify costs.',
-        tip: 'Copenhagen ranks #22 most expensive globally but #4 safest for solo women. Budget minimum $75-120/day for comfortable safe travel. Accommodation $40-85/night, food $52/day, transport $21/day.'
+        description: 'Updated 2025 costs for solo female travelers: Budget $113/day, mid-range $275/day, luxury $713/day. Includes accommodation, meals, transport, and activities. Copenhagen ranks among safest countries for solo female travel, and exceptional safety standards with 24/7 public transport justify the costs.',
+        tip: 'Copenhagen ranks #22 most expensive globally but among the safest places for women to travel alone. Budget minimum $75-120/day for comfortable solo female travel safety. Accommodation $40-85/night, food $52/day, transport $21/day.'
       },
       accommodation: [
         {
@@ -869,115 +896,74 @@ const copenhagen: Destination = {
       ],
       transport: [
         {
-          method: 'Public Transit (Metro/Bus)',
-          cost: '$3.60 single, $12.60 daily, $32.80 for 72h (24-220 DKK)',
-          safetyDescription: '24/7 metro service, 95/100 safety rating for women, CCTV coverage',
+          method: 'Metro (M1, M2, M3, M4)',
+          cost: '$3.60 single, $14.30 daily pass (24-100 DKK)',
+          safetyDescription: '24/7 fully automated service, 95/100 safety rating for women, CCTV coverage, 1.5-2 minute intervals',
           safetyLevel: 'high'
         },
         {
-          method: 'City Bike Rental (Bycyklen)',
-          cost: '$15-20/day (105-140 DKK)',
-          safetyDescription: '400km dedicated cycling paths, world\'s best bike infrastructure',
+          method: 'Public Bus Network',
+          cost: '$3.60 single, same tickets as metro (24 DKK)',
+          safetyDescription: 'Comprehensive bus network, safe day and night, driver assistance available',
           safetyLevel: 'high'
+        },
+        {
+          method: 'S-Train (Urban Rail)',
+          cost: '$3.60 zones 1-4, integrated with metro/bus (24 DKK)',
+          safetyDescription: 'Safe suburban rail connecting Copenhagen areas, operates 5:00-00:30',
+          safetyLevel: 'high',
+        },
+        {
+          method: 'Harbour Bus (Ferry)',
+          cost: 'Same public transport ticket (24 DKK)',
+          safetyDescription: 'Electric boats with 11 stops, scenic and safe water transport',
+          safetyLevel: 'high',
+        },
+        {
+          method: 'City Bike Rental (Bycyklen)',
+          cost: '$15-20/day, $2.50 per 30min (105-140 DKK, 17 DKK)',
+          safetyDescription: '400km dedicated cycling paths, world\'s best bike infrastructure',
+          safetyLevel: 'high',
         },
         {
           method: 'Walking',
           cost: 'Free',
           safetyDescription: 'Exceptionally safe 24/7, violent crime only 0.7/1000 people',
-          safetyLevel: 'high'
+          safetyLevel: 'high',
         },
         {
-          method: 'Licensed Taxis',
-          cost: '$10-20 per trip (70-140 DKK)',
-          safetyDescription: 'Safe and regulated, avoid airport taxis (expensive)',
-          safetyLevel: 'high'
+          method: 'Licensed Taxis (Taxa 4x35, DanTaxi)',
+          cost: '$10-20 per trip, avoid airport taxis (70-140 DKK)',
+          safetyDescription: 'Safe and regulated taxis, use official companies or apps',
+          safetyLevel: 'high',
+        },
+        {
+          method: 'City Pass Travel Card',
+          cost: 'Small: $14.30 (100 DKK), X-Large: $42.90 (300 DKK) daily',
+          safetyDescription: 'Unlimited travel on all transport modes, convenient and safe',
+          safetyLevel: 'high',
+        },
+        {
+          method: 'Copenhagen Card',
+          cost: '24h: $86, 48h: $126, 72h: $154 (includes transport + 70+ attractions)',
+          safetyDescription: 'All transport included plus museum access, excellent value',
+          safetyLevel: 'high',
         }
       ],
       budgetTips: [
         'Copenhagen Card (24h: $60, 48h: $88) includes 87+ attractions plus unlimited transport',
         'Stay in Vesterbro or Nørrebro for great value and safety - trendy areas with lower costs',
         'Shop at Netto, ALDI, Lidl for affordable food - biggest expense savings here',
-        'Free activities: Botanical Gardens, harbor swimming, parks, Nyhavn walking, Round Tower views',
+        'Free safe activities for solo female travelers: Botanical Gardens, harbor swimming, parks, Nyhavn walking, Round Tower views',
         'Happy hour 4-6pm can save $20-30 per meal - restaurant lunch menus cheaper than dinner',
         'Female-only hostels like Generator, Steel House offer excellent value and safety',
         'Use DOT app for public transport tickets - avoid airport taxis (extremely expensive)',
         'Supermarket beer $2 vs bar beer $8-10 - stock up for accommodation consumption',
         'Café breakfast $7 vs hotel breakfast $20-30 - explore local café culture instead'
-      ],
-      mealCosts: {
-        breakfast: '$7-15 (50-105 DKK) at local cafés',
-        lunch: '$15-25 (105-175 DKK) at restaurants', 
-        dinner: '$30-60 (210-420 DKK) at mid-range restaurants',
-        streetFood: '$8-15 (55-105 DKK) for hotdogs, sandwiches',
-        groceries: '$40-60 (280-420 DKK) per week for basic supplies',
-        alcohol: 'Beer $8-10 (55-70 DKK) at bars, $2 (14 DKK) at stores'
-      },
-      moneyTips: [
-        'Denmark is almost completely cashless - bring contactless cards',
-        'Notify bank of travel plans to avoid card blocking',
-        'Use ATMs from major banks (Danske, Nordea, Jyske) for best rates',
-        'Avoid currency exchange at airport - use banks instead',
-        'Download banking apps for account monitoring',
-        'Many places prefer contactless over cash',
-        'Keep minimal cash for tips and small vendors'
       ]
-    },
-    sustainabilityTips: {
-      eco_practices: [
-        'Copenhagen aims to be carbon neutral by 2025 - embrace sustainable travel',
-        'Use excellent public transport and cycling infrastructure instead of taxis',
-        'Denmark has world-class recycling system - separate waste properly',
-        'Support local sustainable restaurants and organic food markets',
-        'Many hotels have green certification - choose eco-friendly accommodation',
-        'Drink tap water (excellent quality) instead of bottled water',
-        'Shop at second-hand stores - Danish vintage fashion is exceptional'
-      ],
-      green_transport: [
-        'Cycle using Bycyklen city bikes - 400km of dedicated bike paths',
-        'Metro and trains run on renewable energy - very eco-friendly',
-        'Walking is safe and pleasant throughout the city',
-        'Electric buses are being introduced across the public transport network'
-      ],
-      responsible_tourism: [
-        'Respect local cycling culture and rules - safety for everyone',
-        'Support local Danish design and sustainable fashion brands',
-        'Visit during off-peak seasons to reduce overtourism impact',
-        'Choose accommodation in residential areas to support local communities',
-        'Learn about Danish sustainability initiatives and hygge culture'
-      ]
-    },
-    seasonalConsiderations: {
-      winter: {
-        months: 'November-March',
-        safety: 'Excellent safety maintained year-round, well-lit streets',
-        pros: ['Fewer tourists', 'Cozy hygge atmosphere', 'Christmas markets', 'Lower accommodation costs'],
-        cons: ['Cold temperatures (0-5°C)', 'Limited daylight hours', 'More rain/snow'],
-        packingEssentials: ['Warm waterproof coat', 'Thermal layers', 'Waterproof boots', 'Gloves and hat']
-      },
-      spring: {
-        months: 'April-May', 
-        safety: 'Perfect safety conditions with longer daylight',
-        pros: ['Pleasant temperatures', 'Blooming parks', 'Fewer crowds', 'Good hotel rates'],
-        cons: ['Unpredictable weather', 'Occasional rain'],
-        packingEssentials: ['Light layers', 'Waterproof jacket', 'Comfortable walking shoes']
-      },
-      summer: {
-        months: 'June-August',
-        safety: 'Peak safety with maximum daylight (19+ hours)',
-        pros: ['Warmest weather', 'Long daylight hours', 'Outdoor dining', 'Festivals and events'],
-        cons: ['Higher costs', 'More tourists', 'Accommodation books up'],
-        packingEssentials: ['Light clothing', 'Sunglasses', 'Light rain jacket', 'Comfortable shoes']
-      },
-      autumn: {
-        months: 'September-October',
-        safety: 'Excellent safety with good visibility',
-        pros: ['Beautiful fall colors', 'Comfortable temperatures', 'Fewer tourists', 'Good weather'],
-        cons: ['Increasing rain', 'Shorter days', 'Weather becoming unpredictable'],
-        packingEssentials: ['Layered clothing', 'Waterproof jacket', 'Warm accessories']
-      }
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "Jxd6vju1QB4" // Copenhagen travel guide video showing what it's like to visit
   }
 };
 
