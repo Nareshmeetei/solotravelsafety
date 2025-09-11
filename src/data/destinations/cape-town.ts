@@ -369,7 +369,7 @@ const capetown: Destination = {
         sourceUrl: "https://www.dailymaverick.co.za/"
       }
     ],
-    culturalSensitivityTips: [
+    culturalSensitivityTipsDetails: [
       'Understand apartheid\'s lasting economic inequality impact',
       'Learn basic greetings: "Sawubona" (Zulu) or "Goeie dag" (Afrikaans)',
       'Respect "Ubuntu" philosophy of interconnectedness',

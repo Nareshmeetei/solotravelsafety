@@ -407,7 +407,7 @@ const caracas: Destination = {
         sourceUrl: "https://docsecurity.org/"
       }
     ],
-    culturalSensitivityTips: [
+    culturalSensitivityTipsDetails: [
       'Understand extreme economic hardship affects everyone',
       'Never discuss politics or government - extremely dangerous',
       'Respect dignity despite visible poverty and struggles', 

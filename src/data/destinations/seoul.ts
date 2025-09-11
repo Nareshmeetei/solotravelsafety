@@ -306,7 +306,7 @@ const seoul: Destination = {
       'Local women often provide helpful advice about navigation, cultural etiquette, and safety tips - Korean hospitality extends to protecting visitors'
     ]
   },
-  culturalSensitivityTips: [
+  culturalSensitivityTipsDetails: [
     'Learn basic Korean greetings like "Annyeonghaseyo" (hello) and "Gamsahamnida" (thank you) - locals deeply appreciate language effort from solo female travelers',
     'Master the Korean age hierarchy system - always address older people formally until invited otherwise, crucial for respectful interactions',
     'Understand Confucian respect culture - bowing depth indicates respect level, essential for temple visits and elder interactions',

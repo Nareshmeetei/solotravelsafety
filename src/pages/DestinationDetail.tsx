@@ -1508,12 +1508,12 @@ const DestinationDetail: React.FC = () => {
                     )}
 
                     {/* Cultural Sensitivity Tips */}
-                    {dest.culturalSensitivityTips && dest.culturalSensitivityTips.length > 0 && (
+                    {(dest.culturalSensitivityTips || dest.culturalSensitivityTipsDetails) && ((dest.culturalSensitivityTips && dest.culturalSensitivityTips.length > 0) || (dest.culturalSensitivityTipsDetails && dest.culturalSensitivityTipsDetails.length > 0)) && (
                       <div>
                         <h3 className="text-xl font-display text-gray-900 mb-4">Cultural Sensitivity Tips</h3>
                         <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-lg">
                           <ul className="text-[12pt] text-indigo-800 space-y-2">
-                            {dest.culturalSensitivityTips?.map((tip: string, idx: number) => (
+                            {(dest.culturalSensitivityTipsDetails || dest.culturalSensitivityTips)?.map((tip: string, idx: number) => (
                               <li key={idx}>• {tip}</li>
                             ))}
                           </ul>

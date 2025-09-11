@@ -662,17 +662,22 @@ const kyoto: Destination = {
       year: 2025,
       context: 'Kyoto safest city in Japan with crime rates among world\'s lowest. Primary concerns are minor theft and natural disasters.'
     },
-    culturalSensitivityTips: [
-      'DO: Bow slightly when greeting locals, especially at temples and traditional establishments',
-      'DO: Remove shoes when entering temples, traditional accommodations, and some restaurants',
-      'DO: Speak quietly on public transport and in public spaces - loud conversation considered rude',
-      'DO: Show respect at religious sites - follow posted rules and photography restrictions',
-      'DO: Queue orderly and wait your turn - cutting in line is very impolite',
-      'DON\'T: Point with your index finger - use open hand to gesture or indicate direction',
-      'DON\'T: Eat or drink while walking in public - finish food/drinks before moving',
-      'DON\'T: Touch religious objects, statues, or artifacts in temples and shrines',
-      'DON\'T: Ignore cultural dress codes at religious sites - cover shoulders and knees',
-      'DON\'T: Tip service staff - tipping is not customary and can cause confusion'
+    culturalSensitivityTipsDetails: [
+      'Understand Japanese bow etiquette deeply - Bowing is fundamental in Japanese culture and shows respect. Solo female travelers who master proper bowing (slight bow for greetings, deeper for temples) often receive warmer treatment and feel more integrated into local customs.',
+      'Master temple and shrine etiquette - Remove shoes, purify hands and mouth at water basins, bow before entering, speak in whispers. Solo female travelers who show reverence for sacred spaces gain respect from locals and temple staff.',
+      'Practice quiet public behavior - Japanese culture values harmony and avoiding disturbance to others. Solo female travelers should speak quietly on trains, walk calmly, and avoid loud phone conversations to blend in respectfully.',
+      'Respect personal space and queuing culture - Japanese people value orderly behavior and personal boundaries. Solo female travelers who queue properly and maintain respectful distance feel safer and more accepted.',
+      'Learn gift-giving and receiving etiquette - Use both hands when giving/receiving items, especially business cards. Solo female travelers who understand these formalities often receive better service and build positive relationships.',
+      'Understand dining customs and restrictions - Don\'t eat while walking, don\'t tip, use chopsticks properly, don\'t stick chopsticks upright in rice. Solo female travelers who follow dining etiquette avoid embarrassing situations.',
+      'Dress modestly for religious and traditional sites - Cover shoulders, knees, and avoid revealing clothing in temples, traditional neighborhoods, and formal settings. This shows cultural respect and helps solo female travelers feel more secure.',
+      'Practice proper photography etiquette - Always ask permission before photographing people, especially women in traditional dress, monks, or ceremonies. Respect no-photo zones in temples and sacred spaces.',
+      'Learn basic Japanese phrases and their proper usage - "Arigatou gozaimasu" (thank you), "Sumimasen" (excuse me/sorry), "Konnichiwa" (hello). Solo female travelers who make effort to speak Japanese often receive exceptional kindness.',
+      'Understand the concept of "omotenashi" (hospitality) - Don\'t refuse kind gestures abruptly, accept help graciously, show appreciation for service. Solo female travelers who respect Japanese hospitality culture feel more welcomed.',
+      'Avoid pointing and inappropriate gestures - Never point with index finger, use open hand instead. Don\'t blow your nose in public, don\'t touch people casually. These actions are considered very rude.',
+      'Don\'t ignore shoe removal customs - Remove shoes when entering homes, temples, traditional restaurants, some shops. Wear clean socks without holes as your feet will be visible. This is non-negotiable in Japanese culture.',
+      'Don\'t eat or drink while walking - Japanese consider this impolite and messy. Finish food and drinks before moving, use designated eating areas. Solo female travelers who follow this rule blend in better.',
+      'Don\'t touch religious objects or sacred items - Never touch Buddha statues, shrine objects, or temple artifacts. This is deeply disrespectful and can cause serious offense to religious practitioners.',
+      'Don\'t tip service staff - Tipping is not customary and can confuse or offend staff. Excellent service is expected without extra payment. Solo female travelers should simply say thank you instead of offering tips.'
     ],
   youtubeVideo: {
     videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID

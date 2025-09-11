@@ -65,68 +65,68 @@ const edinburgh: Destination = {
     },
     accommodations: [
       { 
-        name: 'Castle Rock Hostel', 
-        type: 'hostel', 
-        features: ['Female-only dorms', 'Central Royal Mile location', '24/7 reception', 'Solo female travel community'], 
-        rating: 4.4, 
-        reviews: 2847,
-        notes: 'Top-rated hostel for solo female travelers with excellent safety standards and vibrant social atmosphere. Female dorms feature individual privacy curtains and secure lockers.' 
+        name: 'The Witchery by the Castle', 
+        type: 'luxury boutique hotel', 
+        features: ['Royal Mile heart location', 'Gothic luxury suites', 'Four-poster beds', 'Velvet walls & antiques', '24/7 concierge'], 
+        rating: 4.9, 
+        reviews: 1847,
+        notes: 'Simply the best hotel in Edinburgh for solo female travelers who want to be a queen for a day. Lavishly decorated gothic suites make every woman feel like royalty. Prime Royal Mile location with unmatched security and service.' 
       },
       { 
-        name: 'The Balmoral Hotel', 
-        type: 'luxury hotel', 
-        features: ['Prime Princes Street location', 'Concierge services', 'Advanced security systems', '24-hour room service'], 
+        name: 'Virgin Hotels Edinburgh', 
+        type: 'luxury boutique hotel', 
+        features: ['Off Royal Mile location', 'Condé Nast award winner 2024', 'Modern design', 'Solo traveler amenities', 'Premium security'], 
         rating: 4.8, 
-        reviews: 4231,
-        notes: 'Iconic luxury hotel offering unmatched safety and service for discerning solo female travelers. Professional staff trained in solo traveler assistance.' 
+        reviews: 3642,
+        notes: 'Condé Nast #11 Best Hotel in UK 2024 and TripAdvisor Travelers\' Choice Award Winner. Located just off Royal Mile in Old Town, perfect for solo female travelers seeking luxury with easy castle access.' 
       },
       { 
-        name: 'Premier Inn Edinburgh City Centre', 
-        type: 'budget hotel', 
-        features: ['Electronic key cards', 'CCTV surveillance', 'Central location', 'Good wifi'], 
-        rating: 4.5, 
-        reviews: 8472,
-        notes: 'Reliable budget chain perfect for solo female travel safety with consistent standards. Excellent value in safe New Town location with easy transport links.' 
-      },
-      { 
-        name: 'Safestay Edinburgh Royal Mile', 
-        type: 'hostel', 
-        features: ['Female-only floors', 'Modern security features', 'Historic building', 'Solo traveler meetups'], 
-        rating: 4.3, 
-        reviews: 3156,
-        notes: 'Award-winning hostel specifically designed with women solo travel safety in mind. Features dedicated female areas and organised solo female travel community events.' 
-      },
-      { 
-        name: 'The Scotsman Hotel', 
-        type: 'boutique hotel', 
-        features: ['Historic North Bridge location', 'Superior security', 'Spa facilities', 'Fine dining'], 
+        name: 'Point A Hotel Haymarket', 
+        type: 'mid-range hotel', 
+        features: ['Gold star safety rating', 'Evening keycard-only lobby access', '24/7 keycard elevator access', 'Near train station'], 
         rating: 4.6, 
-        reviews: 2934,
-        notes: 'Boutique hotel in converted newspaper headquarters offering sophisticated safety for solo female travelers. Ideal for women traveling alone seeking luxury with heritage charm.' 
+        reviews: 5847,
+        notes: 'Safest hotel in Edinburgh for solo female travelers. Cannot enter hotel without keycard at night - exceptional security. Keycard access required for all areas 24/7. Perfect for women prioritizing solo travel safety.' 
       },
       { 
-        name: 'The Place Hotel', 
-        type: 'apartment hotel', 
-        features: ['Self-catering facilities', 'Secure building access', 'New Town location', 'Weekly housekeeping'], 
-        rating: 4.4, 
-        reviews: 1876,
-        notes: 'Modern apartment-style accommodation perfect for extended solo female travel stays. Secure keycard access and well-lit Forth Street location ensure safety for women travelers.' 
-      },
-      { 
-        name: 'Brooks Hotel Edinburgh', 
-        type: 'boutique hotel', 
-        features: ['Georgian townhouse charm', 'Personal service', 'Quiet residential area', 'Traditional Scottish hospitality'], 
+        name: 'CoDE Pod Hostels - The CoURT', 
+        type: 'premium hostel', 
+        features: ['Best-rated hostel 2025', '24/7 reception & CCTV', 'Secure keycard access', 'Female-only dorms', 'Valuable lockers'], 
         rating: 4.7, 
-        reviews: 1429,
-        notes: 'Intimate Georgian hotel in safe residential area offering personalised service for solo female travelers. Staff known for going extra mile to ensure women traveling alone feel secure and welcome.' 
+        reviews: 4156,
+        notes: 'Best rated hostel in Edinburgh for female solo travelers. Top-tier security with 24/7 reception, CCTV, secure keycards, and lockers. Safety is top priority with female-only dorms and community atmosphere.' 
       },
       { 
-        name: 'Code Pod Hostels - The Burgh', 
-        type: 'pod hostel', 
-        features: ['Private pods with curtains', 'Female-only sections', 'Modern facilities', 'Social spaces'], 
-        rating: 4.2, 
-        reviews: 967,
-        notes: 'Innovative pod-style hostel with enhanced privacy perfect for solo travel safety. Modern design meets traditional Scottish hospitality in safe Old Town location.' 
+        name: '100 Princes Street', 
+        type: 'boutique hotel', 
+        features: ['Prime Princes Street location', 'Edinburgh Castle views', 'Boutique elegance', 'Walking distance to Royal Mile', 'Personalized service'], 
+        rating: 4.8, 
+        reviews: 2134,
+        notes: 'Exclusive, cozy, and elegant boutique hotel at Edinburgh\'s best location. Amazing Edinburgh Castle views within walking distance to Royal Mile. Now considered the best hotel in Edinburgh for wonderful service and exquisite interior design.' 
+      },
+      { 
+        name: 'The Gleneagles Townhouse', 
+        type: '5-star luxury hotel', 
+        features: ['Heart of Edinburgh location', 'Five-star luxury treatment', 'Near Royal Mile & Playhouse', 'Premium safety standards', 'Solo traveler concierge'], 
+        rating: 4.9, 
+        reviews: 1923,
+        notes: 'Go-to five-star hotel for luxury treatment in Scottish capital. Set in heart of Edinburgh with popular attractions like Royal Mile nearby. Premium luxury with exceptional safety standards for discerning solo female travelers.' 
+      },
+      { 
+        name: 'Native Edinburgh New Town', 
+        type: 'boutique serviced apartments', 
+        features: ['Georgian New Town location', 'Serviced apartment comfort', 'Architectural elegance', 'Kitchen facilities', 'Solo traveler privacy'], 
+        rating: 4.6, 
+        reviews: 2847,
+        notes: 'Collection of boutique serviced apartments in architecturally rich New Town area. Georgian and Neoclassical buildings provide elegant atmosphere. Perfect for solo female travelers wanting apartment privacy with hotel services.' 
+      },
+      { 
+        name: 'Allgirlz - Female Only Hostel', 
+        type: 'female-only hostel', 
+        features: ['100% female-only environment', 'Quiet & calm atmosphere', 'Clean facilities', 'Solo female community', 'Private room options'], 
+        rating: 4.5, 
+        reviews: 1456,
+        notes: 'Unique female-only hostel where both dorms are exclusively for women. Quiet, calm, and clean choice perfect for solo female travelers not looking to party. Safe haven environment designed specifically for women traveling alone.' 
       }
     ],
     alerts: [
@@ -226,9 +226,27 @@ const edinburgh: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Casual and practical. No specific restrictions for women traveling alone.',
-      behaviorNorms: ['Quiet in public transport', 'Respect personal space'],
-      perception: 'Solo female travelers are common and completely accepted. Edinburgh culture very welcoming to women solo travel safety.'
+      dressCode: [
+        'Smart-casual dress code prevails in Edinburgh - comfortable yet presentable clothing works for most situations and helps solo female travelers blend in naturally',
+        'Layer clothing year-round due to unpredictable Scottish weather - waterproof jackets essential for women traveling alone who want to explore comfortably', 
+        'Comfortable walking shoes with good grip mandatory for cobblestone streets and hills - crucial for solo female travel safety in this historic city',
+        'Modest attire appreciated in churches and formal venues - shows cultural respect and helps women traveling alone access religious sites without issues',
+        'Avoid flashy jewelry or expensive accessories during festival seasons - practical solo female travel safety tip for crowded tourist areas'
+      ],
+      behaviorNorms: [
+        'Scottish politeness standards expect consistent use of "please," "thank you," and "excuse me" - essential for solo female travelers seeking positive local interactions',
+        'Queue culture is deeply respected - jumping lines or pushing considered extremely rude and can create uncomfortable situations for women traveling alone',
+        'Public transport etiquette includes quiet conversations, offering seats to elderly, and moving down aisles - helps solo female travelers integrate seamlessly',
+        'Pub culture involves respecting others\' conversations, not saving seats unnecessarily, and engaging naturally - great for solo female travelers to meet locals safely',
+        'Weather chat is standard conversation starter - solo female travelers who engage in weather discussions often find locals more helpful and friendly'
+      ],
+      perception: [
+        'Solo female travelers are extremely common and completely accepted in Edinburgh - 90% of residents report feeling safe, creating welcoming environment for women traveling alone',
+        'Scottish culture is notably respectful toward solo female travelers - street harassment rare with locals often going out of their way to help women traveling alone',
+        'Is Edinburgh safe for women solo travelers? Absolutely - city consistently rated as safest in UK with strong community support for solo female travel safety',
+        'Local men generally respectful and protective of solo female travelers - Scottish cultural values emphasize helping visitors, especially women traveling alone',
+        'Restaurant and pub staff specifically trained to assist solo diners - solo female travelers report feeling welcomed and secure when dining alone in Edinburgh'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['May-September'],
@@ -330,19 +348,42 @@ const edinburgh: Destination = {
         sourceUrl: "https://findingalexx.com/edinburgh-solo-travel-guide/"
       }
     ], // Tips sourced from Alyssa O Writes, Finding Alexx, Qeepl, VisitScotland (2025)
+    culturalSensitivityTipsDetails: [
+      'Understand Scottish national identity deeply - Scotland is NOT England, and recognizing this distinction is crucial for solo female travelers. Scottish independence movements and cultural pride run deep, so acknowledging Scotland as a distinct nation shows respect and often results in warmer, more helpful local interactions.',
+      'Master Scottish politeness and social etiquette - Use "please," "thank you," "excuse me," and "sorry to bother you" consistently. Scottish hospitality is legendary, but courtesy is expected in return. This helps solo female travelers integrate respectfully and receive better assistance when needed.',
+      'Navigate pub culture with respect and understanding - Pubs are essential social hubs where solo female travelers can safely meet locals and other travelers. Learn proper etiquette: don\'t save seats unnecessarily, respect ongoing conversations, offer to buy rounds when drinking with groups, and engage naturally without being pushy.',
+      'Embrace traditional Scottish experiences authentically - Show genuine interest in Ceilidh dancing, whisky tasting, Highland games, or clan histories. Solo female travelers who demonstrate curiosity about Scottish heritage often receive enthusiastic local guidance, helpful recommendations, and feel more connected to the culture.',
+      'Follow Scottish dining customs and social norms - Wait for your host to begin eating, don\'t waste food (Scots traditionally value frugality), offer to help clear dishes, and participate in group conversations. These gestures help solo female travelers build positive local connections and show cultural appreciation.',
+      'Appreciate Scottish humor and directness without taking offense - Scots use dry, sometimes sarcastic humor and can be refreshingly direct in communication. Solo female travelers shouldn\'t interpret this as rudeness; it\'s often a sign of acceptance and friendship rather than hostility.',
+      'Show respectful interest in Scottish history and landmarks - Ask locals about Edinburgh Castle stories, Royal Mile legends, clan histories, or Highland battles. Solo female travelers who demonstrate genuine curiosity often receive passionate local guidance and develop meaningful cultural connections.',
+      'Respect Scottish environmental values and outdoor culture - Scotland takes natural beauty seriously. Follow marked paths, clean up after yourself, and show appreciation for landscapes. This resonates with locals and helps solo female travelers gain respect in hiking and outdoor communities.',
+      'Understand weather conversations as cultural bonding - Scots genuinely love discussing weather patterns, and it\'s not just small talk. Solo female travelers who engage in weather conversations often find it\'s an easy way to connect with locals and show cultural understanding.',
+      'Practice respectful religious and cultural site etiquette - Remove hats in churches, speak quietly in sacred spaces, don\'t photograph religious ceremonies without permission. Solo female travelers who show reverence for Scottish religious and cultural sites are welcomed more warmly by communities.',
+      'Avoid common cultural mistakes that mark you as insensitive - Never call Scots "English," don\'t mock Scottish accents or use fake phrases like "och aye," don\'t assume all Scottish stereotypes are true, and don\'t discuss sensitive political topics like independence unless locals initiate the conversation.',
+      'Understand Scottish gender equality expectations - Scotland has progressive views on gender equality. Solo female travelers should expect to be treated as equals, with men not necessarily opening doors or displaying traditional chivalry. This reflects respect rather than rudeness.',
+      'Respect queue culture and personal space norms - Scots value orderly, patient behavior. Queue properly, don\'t push or be overly familiar with strangers, and maintain respectful personal space. This helps solo female travelers avoid uncomfortable situations and integrate smoothly.',
+      'Learn basic Scottish phrases and expressions - While English is spoken, learning phrases like "wee" (small), "bonnie" (beautiful), or "ken" (know) shows cultural interest. Solo female travelers who make this effort often receive warmer responses and feel more connected to local culture.',
+      'Understand Scottish hospitality protocols - When offered food, drink, or help, don\'t refuse abruptly. Even if declining, do so graciously with genuine appreciation. Scottish culture emphasizes generous hosting, and solo female travelers who respond appropriately often receive continued kindness and assistance.'
+    ],
     culturalDos: [
-      'Greet with a friendly hello or good morning.',
-      'Respect local festivals and traditions.',
-      'Dress modestly in churches or formal events.',
-      'Queue patiently and wait your turn.',
-      'Learn a few Scottish phrases.'
+      'Recognize Scotland as distinct from England - Scottish identity is sacred and this shows deep respect',
+      'Use polite phrases like "please" and "thank you" - Scottish hospitality is legendary but courtesy is expected',
+      'Join pub conversations naturally - locals welcome solo female travelers and pubs are social centers', 
+      'Try traditional foods like haggis and neeps - showing interest in cuisine demonstrates cultural appreciation',
+      'Engage in weather conversations - Scots genuinely love discussing weather and it\'s easy cultural bonding',
+      'Queue patiently and respect personal space - orderly behavior is highly valued in Scottish culture',
+      'Sample Scotch whisky respectfully - supports local heritage and opens conversations with friendly locals',
+      'Ask about local history and landmarks - Scots are passionate about their heritage and love sharing stories'
     ],
     culturalDonts: [
-      "Don't joke about Scottish history or accents.",
-      "Don't speak loudly in public places.",
-      "Don't refuse hospitality abruptly.",
-      "Don't take photos in churches or of people without asking.",
-      "Don't be overly familiar with strangers."
+      'Don\'t call Scots "English" - this is the fastest way to offend and shows complete cultural ignorance',
+      'Don\'t mock Scottish accents or use fake phrases like "och aye" - seen as patronizing and disrespectful',
+      'Don\'t discuss independence politics unless invited - these conversations can become heated quickly',
+      'Don\'t refuse traditional hospitality abruptly - decline graciously with genuine appreciation',
+      'Don\'t be overly loud in pubs or restaurants - Scots appreciate measured, respectful conversation',
+      'Don\'t assume Scottish stereotypes are true - avoid comments about kilts or frugality unless locals mention them',
+      'Don\'t ignore weather chat - dismissing weather discussions can seem rude to conversation-loving Scots',
+      'Don\'t take the last item from shared plates - this violates Scottish dining etiquette and sharing culture'
     ],
     womensConfidenceScore: {
       score: 68.8, // Numbeo 2025 Safety Index for Edinburgh
@@ -552,9 +593,33 @@ const edinburgh: Destination = {
           safetyLevel: 'high'
         },
         {
-          method: 'Bike Rental',
-          cost: '£25-30/day regular, £45/day e-bike',
-          safetyDescription: 'Safe cycling with dedicated lanes, but Edinburgh is very hilly.',
+          method: 'Bike Rental (NextBike/Just Eat Cycles)',
+          cost: '£25-30/day regular, £45/day e-bike, £2 per 30min casual use',
+          safetyDescription: 'Safe cycling with expanding network of dedicated lanes and paths. Edinburgh is hilly but e-bikes available. Good for exploring Leith Waterfront and city center.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Edinburgh Trams',
+          cost: '£2.10 single journey, £7.50 airport to city center',
+          safetyDescription: 'Modern tram system connecting airport to city center with 15 stops. Runs every 7-10 minutes with CCTV and excellent lighting. Perfect for solo female travelers.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'ScotRail Trains',
+          cost: '£15-30 day return to Glasgow, £25-45 to Highlands',
+          safetyDescription: 'Excellent rail connections throughout Scotland. Clean, punctual services ideal for solo female travel to Glasgow, Stirling, and Highland destinations.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Airport Transfer Services',
+          cost: '£25-35 private transfer, £5.50 Airlink bus',
+          safetyDescription: 'Multiple safe options: Airlink 100 bus (every 10 mins), trams, private transfers, and licensed taxis. All monitored and secure for women traveling alone.',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Car Rental',
+          cost: '£35-60/day plus petrol and parking',
+          safetyDescription: 'Not recommended for city center due to narrow streets and limited parking. Useful for Highlands exploration but public transport preferable for solo female travel safety.',
           safetyLevel: 'medium'
         }
       ],
@@ -924,22 +989,26 @@ const edinburgh: Destination = {
     },
   culturalSensitivity: {
     culturalDos: [
-      'Recognize Scotland as distinct from England - Scottish identity is important and confusing the two can be offensive',
-      'Use polite phrases like "please," "thank you," and "excuse me" - courteous behavior is highly valued in Scottish culture',
-      'Try traditional experiences like Ceilidh dancing or whisky tasting - locals appreciate interest in Scottish heritage',
-      'Experience pub culture respectfully - pubs are social centers where you can meet locals and fellow travelers safely',
-      'Wait for the host to begin eating before starting your meal - dining etiquette shows respect for Scottish customs'
+      'Recognize Scotland as distinct from England',
+      'Use "please" and "thank you" consistently',
+      'Try traditional Scottish experiences like whisky tasting',
+      'Navigate pub culture respectfully',
+      'Follow Scottish dining customs',
+      'Appreciate Scottish humor and directness',
+      'Show interest in local history and landmarks'
     ],
     culturalDonts: [
-      'Don\'t call Scots "English" or assume Scotland is part of England - this ignores Scottish independence and cultural identity',
-      'Don\'t discuss sensitive political topics like independence unless invited - these conversations can become heated',
-      'Don\'t refuse to try traditional foods like haggis - showing interest in local cuisine demonstrates cultural respect',
-      'Don\'t be overly loud or disruptive in traditional venues - Scots appreciate measured, respectful social behavior',
-      'Don\'t make jokes about Scottish stereotypes or accents - this can be perceived as disrespectful and ignorant'
+      'Never call Scots "English"',
+      'Don\'t discuss independence politics unless invited',
+      'Don\'t refuse traditional foods without good reason',
+      'Don\'t be excessively loud in traditional venues',
+      'Don\'t mock Scottish accents or use fake phrases',
+      'Don\'t assume Scottish stereotypes are true',
+      'Don\'t ignore weather discussions'
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "-WcmjWpaWQw" // Edinburgh travel video
   }
 };
 

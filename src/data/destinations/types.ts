@@ -110,6 +110,7 @@ export interface Destination {
     sourceUrl: string;
   }[];
   culturalSensitivityTips?: string[];
+  culturalSensitivityTipsDetails?: string[];
   culturalDos?: string[];
   culturalDonts?: string[];
   womensConfidenceScore?: {
