@@ -816,37 +816,37 @@ const florence: Destination = {
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Extremely safe and most efficient in compact historic center - perfect for solo female travelers',
+          safetyDescription: 'Safest option in compact historic center',
           safetyLevel: 'high'
         },
         {
-          method: 'ATAF Public Bus/Tram (T1 & T2 Lines)',
-          cost: '€1.70/ride (€1.50 contactless), 90-minute validity, day passes available',
-          safetyDescription: 'Generally safe with CCTV but high pickpocket risk during crowded times. T2 extends to airport and San Marco (2025)',
+          method: 'ATAF Public Bus/Tram',
+          cost: '$1.80/ride ($1.60 contactless), 90-min validity',
+          safetyDescription: 'Safe with CCTV, watch for pickpockets',
           safetyLevel: 'medium'
         },
         {
-          method: 'Licensed White Taxis',
-          cost: '€25-30 from airport, €10-15 city trips, minimum €3.50-5.30 charge',
-          safetyDescription: 'Very safe, regulated service. Call +39 055 4390 or use "Taxi Move" app. Taxi Rosa priority night service for women',
+          method: 'Licensed Taxis',
+          cost: '$27-32 from airport, $11-16 city trips',
+          safetyDescription: 'Very safe, regulated. Taxi Rosa for women nights',
           safetyLevel: 'high'
         },
         {
-          method: 'Electric Mini-Buses (C1, C2, C3, C4)',
-          cost: '€1.70/ride, same as regular buses',
-          safetyDescription: 'Safe city center circulation, ideal for solo female travelers accessing pedestrian areas',
+          method: 'Electric Mini-Buses',
+          cost: '$1.80/ride',
+          safetyDescription: 'Safe city center access to pedestrian areas',
           safetyLevel: 'high'
         },
         {
-          method: 'Rental Bikes/E-Scooters',
-          cost: '€10-20/day bikes, €15-25/day e-scooters',
-          safetyDescription: 'Exercise caution on cobblestones, stick to bike paths. Not recommended for night travel',
+          method: 'Bike/E-Scooter Rentals',
+          cost: '$11-22/day bikes, $16-27/day e-scooters',
+          safetyDescription: 'Caution on cobblestones, avoid nights',
           safetyLevel: 'medium'
         },
         {
-          method: 'Regional Trains (Trenitalia)',
-          cost: '€8-25 to nearby cities, varies by destination',
-          safetyDescription: 'Safe for day trips to Pisa, Siena. Book through official Trenitalia app for security',
+          method: 'Regional Trains',
+          cost: '$9-27 to nearby cities',
+          safetyDescription: 'Safe for day trips, use official Trenitalia app',
           safetyLevel: 'high'
         }
       ],
@@ -862,32 +862,24 @@ const florence: Destination = {
         'Avoid coperto (cover charge) restaurants - look for locals eating there',
         'Travel shoulder season (March, November) for 30-40% accommodation savings'
       ],
-      currencyExchange: {
-        bestRates: [
-          'Use ATMs affiliated with major banks (Intesa Sanpaolo, UniCredit, BNL) for best exchange rates and security',
-          'Avoid currency exchange offices near tourist attractions - typically 5-8% worse rates than banks',
-          'Notify your bank before travel to prevent card blocks - essential for solo female travel security',
-          'Use contactless payment where possible - safer than carrying large amounts of cash in pickpocket-prone areas'
-        ],
-        atmTips: [
-          'ATMs inside bank branches are safest - avoid standalone machines in isolated areas',
-          'Cover your PIN entry and be aware of surroundings, especially near train stations',
-          'Withdraw larger amounts less frequently to minimize ATM fees and exposure',
-          'Keep backup cards in separate locations from your main wallet'
-        ],
-        scamWarnings: [
-          'Never use currency exchange services offered by street vendors or unlicensed operators',
-          'Avoid "no commission" exchange offices - they make profit through poor exchange rates',
-          'Be cautious of "helpful" strangers at ATMs - a common pickpocket setup',
-          'Double-check restaurant bills - some add inflated exchange rates for non-Euro cards'
-        ],
-        paymentTips: [
-          'Restaurants, hotels, and shops widely accept cards, but small cafes may be cash-only',
-          'Keep small bills for buses, public restrooms, and tipping - drivers rarely have change',
-          'Emergency cash stash recommended - keep €50-100 separate from main wallet',
-          'Mobile payment (Apple Pay, Google Pay) increasingly accepted and very secure for solo travelers'
-        ]
-      }
+      currencyExchangeTips: [
+'Use ATMs affiliated with major banks (Intesa Sanpaolo, UniCredit, BNL) for best exchange rates and security',
+        'Avoid currency exchange offices near tourist attractions - typically 5-8% worse rates than banks',
+        'Notify your bank before travel to prevent card blocks - essential for solo female travel security',
+        'Use contactless payment where possible - safer than carrying large amounts of cash in pickpocket-prone areas',
+        'ATMs inside bank branches are safest - avoid standalone machines in isolated areas',
+        'Cover your PIN entry and be aware of surroundings, especially near train stations',
+        'Withdraw larger amounts less frequently to minimize ATM fees and exposure',
+        'Keep backup cards in separate locations from your main wallet',
+        'Never use currency exchange services offered by street vendors or unlicensed operators',
+        'Avoid "no commission" exchange offices - they make profit through poor exchange rates',
+        'Be cautious of "helpful" strangers at ATMs - a common pickpocket setup',
+        'Double-check restaurant bills - some add inflated exchange rates for non-Euro cards',
+        'Restaurants, hotels, and shops widely accept cards, but small cafes may be cash-only',
+        'Keep small bills for buses, public restrooms, and tipping - drivers rarely have change',
+        'Emergency cash stash recommended - keep $50-100 separate from main wallet',
+        'Mobile payment (Apple Pay, Google Pay) increasingly accepted and very secure for solo travelers'
+      ]
     },
   youtubeVideo: {
     videoId: "E5dn_m93noY"
