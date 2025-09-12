@@ -17,15 +17,15 @@ const florence: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 8.0,
-        context: 'Florence very safe at night in historic center for solo female travel (Travel Ladies 2025). Women consistently report feeling completely secure walking alone at night around Duomo, Ponte Vecchio. 3.5/5 safety rating from female residents. Avoid Santa Maria Novella station area and Cascine Park late night - important solo female travel safety tip.'
+        context: 'Is Florence safe for women solo travelers at night? Yes - Florence ranks among Italy\'s safest destinations for solo female travel at night. Women consistently report feeling secure walking alone around Duomo, Ponte Vecchio with 8.0/10 safety rating. Historic center provides excellent solo female travel safety with good lighting and police presence. Solo travel safety tips: avoid Santa Maria Novella station area and Cascine Park after dark.'
       },
       publicTransit: {
         score: 8.2,
-        context: 'Efficient ATAF buses and trams, generally safe for women traveling alone but pickpocket risk "very high level" in crowded transport (Travel Safe Abroad 2025). Be mindful of groping on public transport - key solo female travel safety concern. Single journey €1-2, but historic center very walkable for solo travelers.'
+        context: 'Florence public transport safety for solo female travelers is good with efficient ATAF buses and trams. Women traveling alone report generally positive experiences, though pickpocket risk remains "very high level" in crowded vehicles. Key solo travel safety tips for women: be mindful of groping on public transport. Contactless payment €1.50, historic center walkable for solo female travel safety.'
       },
       walkingAlone: {
         score: 8.6,
-        context: 'Excellent for solo female travelers - "I felt completely safe walking around" (2025 traveler report). Compact 15-minute walkable center perfect for women traveling alone. Italian catcalling much reduced in metropolitan areas. Respectful locals, no reports of female tourists being sexually assaulted - making it one of the safest places for women to travel alone.'
+        context: 'Is Florence safe for female solo travelers walking alone? Absolutely - 8.6/10 rating makes it one of the safest places for women to travel alone. Solo female travelers consistently report "I felt completely safe walking around." Compact 15-minute walkable center ideal for women solo travel safety. Respectful Italian culture, no reports of sexual assault against female tourists. Florence provides exceptional solo female travel safety conditions.'
       }
     },
     neighborhoods: {
@@ -58,42 +58,66 @@ const florence: Destination = {
       {
         name: 'Hotel Davanzati',
         type: 'hotel',
-        features: ['Historic center location', 'Boutique charm', '24/7 security', 'Female-friendly'],
+        features: ['Historic center location', 'Boutique charm', '24/7 security', 'Female-friendly', '1400s palazzo'],
         rating: 9.0,
-        notes: 'Elegant boutique hotel in historic palazzo, perfect location for solo female travelers.',
+        notes: 'Elegant historic boutique hotel in authentic 1400s palazzo. Exceptional cleanliness, quiet double-glazed windows, and perfect location for solo female travelers. Steps from major attractions with exemplary customer service.',
         link: 'https://www.hoteldavanzati.it/'
-      },
-      {
-        name: 'Plus Florence',
-        type: 'hostel',
-        features: ['Female dorms', 'Modern design', 'Central location', 'Excellent security'],
-        rating: 8.7,
-        notes: 'Contemporary hostel with women-only rooms and great facilities for solo travelers.',
-        link: 'https://www.plushostels.com/florence/'
-      },
-      {
-        name: 'Academy Hostel',
-        type: 'hostel',
-        features: ['Women-only floors', 'Near Accademia', 'Budget-friendly', 'Social atmosphere'],
-        rating: 8.3,
-        notes: 'Popular hostel with female-only accommodations near major museums.',
-        link: 'https://www.academyhostel.eu/'
-      },
-      {
-        name: 'Hotel Pendini',
-        type: 'hotel',
-        features: ['Central Repubblica location', 'Historic building', 'Solo traveler friendly'],
-        rating: 8.5,
-        notes: 'Classic hotel in perfect central location, walking distance to all major sites.',
-        link: 'https://www.hotelpendini.it/'
       },
       {
         name: 'FH55 Hotel Calzaiuoli',
         type: 'hotel',
-        features: ['Prime Duomo location', '24/7 concierge', 'Women-friendly service', 'Rooftop terrace', 'Premium security'],
+        features: ['Prime Duomo location', '24/7 concierge', 'Duomo views', 'Premium security', 'Express check-in'],
         rating: 9.2,
-        notes: 'Luxury boutique hotel directly between Duomo and Palazzo Vecchio. Exceptional safety standards, female-focused amenities, and unbeatable location for solo women travelers. Staff trained in solo traveler assistance.',
+        notes: 'Luxury boutique hotel directly between Duomo and Palazzo Vecchio. Stunning rooms with Duomo views, exceptional safety standards, and 24-hour front desk. Perfect for solo women travelers seeking premium security and location.',
         link: 'https://www.fh55hotels.com/hotel-calzaiuoli-florence/'
+      },
+      {
+        name: 'Hotel Berchielli',
+        type: 'hotel',
+        features: ['Arno River views', 'Central location', 'Ponte Vecchio proximity', 'Garden breakfast', 'Spacious rooms'],
+        rating: 8.8,
+        notes: 'Elegant hotel with beautiful Arno and Ponte Vecchio views. Large comfortable rooms, helpful staff, and tranquil garden for breakfast. Walking distance to Uffizi Gallery - superb for solo female travelers.',
+        link: 'https://www.hotelberchielli.it/'
+      },
+      {
+        name: 'Palazzo Vecchietti Suites',
+        type: 'hotel',
+        features: ['Historic 1578 palazzo', 'Antique furnishings', 'Central location', 'Luxury suites', 'Health safety protocols'],
+        rating: 9.1,
+        notes: 'Luxurious 12-room boutique hotel in former Vecchietti family residence. Exceptional service, comprehensive safety protocols, and prime historic center location. Perfect for discerning solo female travelers.',
+        link: 'https://www.palazzovecchietti.com/'
+      },
+      {
+        name: 'Plus Florence (Academy Hostel)',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Vanity mirrors', 'Welcome cosmetic packs', 'Large bathrooms', 'Security keycards'],
+        rating: 8.7,
+        notes: 'Premium hostel designed for female solo travelers. Women-only dorms with comfort amenities, 10-minute walk from train station. Ages 18-45 only with excellent safety and social atmosphere.',
+        link: 'https://www.plushostels.com/florence/'
+      },
+      {
+        name: 'YellowSquare Florence',
+        type: 'hostel',
+        features: ['Rooftop pool', 'Female dorms', 'Round-the-clock security', 'Central station location', 'Social events'],
+        rating: 8.9,
+        notes: 'Contemporary hostel with rooftop swimming pool and great views. Female-only dorms, keycard access, and vibrant social atmosphere. Ages 18-45, perfect for solo female travelers seeking community.',
+        link: 'https://yellowsquare.com/florence/'
+      },
+      {
+        name: 'Ostello Bello Firenze',
+        type: 'hostel',
+        features: ['Near Duomo', 'Card-operated female dorms', '24-hour staff', 'San Lorenzo location', 'Personal lockers'],
+        rating: 8.8,
+        notes: 'Top safety-focused hostel just moments from Duomo. Card-operated female-only dorms, 24-hour staff presence, and excellent security. Perfect blend of safety and sociability for women solo travelers.',
+        link: 'https://www.ostellobello.com/'
+      },
+      {
+        name: 'Hotel Santa Maria Novella',
+        type: 'hotel',
+        features: ['Historic center', 'Cathedral proximity', '4-star luxury', 'Tuscan hospitality', 'Central square location'],
+        rating: 8.6,
+        notes: 'Panoramic 4-star hotel in historic center with luxury furnishings and attention to detail. Short walk to main attractions, railway station nearby, perfect for solo female travelers exploring Florence.',
+        link: 'https://www.hotelsantamarianovella.it/'
       }
     ],
     alerts: [
@@ -115,16 +139,18 @@ const florence: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Modest dress for churches - cover shoulders and knees
-• Comfortable walking shoes essential for cobblestone streets
-• Stylish but not flashy - Florentines appreciate good style
-• Light layers for variable weather
-• Avoid obvious tourist gear to blend in better`,
-      firstTimers: `• Florence is extremely safe for solo female travelers - one of Italy's safest destinations for women traveling alone
-• Learn basic Italian phrases - locals appreciate the effort and it enhances solo travel safety
-• Book museum tickets in advance to avoid long queues - essential solo female travel tip
-• Be aware of "very high level" pickpocket risk in crowded tourist areas - key women solo travel safety concern
-• Respect church dress codes and photography rules - important for solo female travel etiquette`,
+      clothing: `• Dress "casual elegant" in neutral colors (black, nude, white) - Florentines appreciate sophisticated style over flashy clothing
+• Churches strictly require covered shoulders and knees - always carry a lightweight scarf or cardigan for easy coverage
+• Comfortable walking shoes with good grip essential for slippery cobblestone streets, especially when wet
+• Avoid flip-flops, graphic t-shirts, college hoodies, or very short clothing - immediately marks you as a tourist target
+• Italian women dress stylishly but modestly - never wear revealing tops and bottoms simultaneously
+• Pack versatile pieces that work from day sightseeing to elegant restaurant dining`,
+      firstTimers: `• Florence ranks among Europe's safest cities for solo female travelers - is Florence safe for women solo travelers? Absolutely, with 8.4/10 safety rating
+• Master basic Italian greetings ("Buongiorno," "Buona sera") and phrases ("Grazie," "Prego") - significantly enhances safety and local respect
+• Book Uffizi, Accademia tickets only through official websites - fake skip-the-line sites are increasing, avoid street ticket sellers completely
+• Use anti-theft crossbody bags with zippers facing your body - pickpocketing at "very high level" in tourist areas like Ponte Vecchio, Uffizi vicinity
+• Respect 1-4 PM lunch closure (Pausa di Pranzo) when family shops close - plan shopping and dining around this cultural tradition
+• Join group activities (cooking classes, walking tours) to meet fellow solo female travelers and enhance safety through community`,
       apps: [
         'NomadHer',
         'bSafe',
@@ -189,20 +215,32 @@ const florence: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Florentines dress stylishly and appreciate good fashion. Smart casual is appropriate for most situations. Churches require covered shoulders and knees. Avoid shorts, flip-flops, and overly casual clothing in restaurants and museums.',
-      behaviorNorms: [
-        'Greet with "Buongiorno" (morning) or "Buonasera" (evening).',
-        'Learn basic Italian phrases - locals greatly appreciate effort.',
-        'Meal times are later - lunch 1-3pm, dinner 8-10pm.',
-        'Dress appropriately for churches and religious sites.',
-        'Be patient with service - Italian culture values taking time.',
-        'Tipping 10-15% is appreciated but not mandatory.',
-        'Respect art and cultural heritage - no touching sculptures.',
-        'Walk on the right side of sidewalks and stairs.',
-        'Don\'t eat or drink near monuments and churches.',
-        'Show appreciation for Renaissance art and history.'
+      dressCode: [
+        'Dress "casual elegant" with well-fitted clothing in neutral colors (black, navy, beige) - Florentines appreciate sophisticated style over flashy tourist attire',
+        'Churches strictly enforce covered shoulders and knees - Duomo monitors turn away improperly dressed visitors, always carry lightweight scarf',
+        'Avoid flip-flops, graphic t-shirts, college hoodies, or very short clothing - instantly marks you as American tourist',
+        'Quality over quantity with tailored pieces that fit properly - Italian fashion culture values craftsmanship and good cuts',
+        'Restaurant dining requires effort in appearance - avoid overly casual clothing, Italians appreciate when solo female diners dress appropriately',
+        'Never wear revealing tops and bottoms simultaneously - Italian women dress stylishly but modestly for cultural respect'
       ],
-      perception: 'Solo female travelers are very welcome in Florence - making it one of the safest places for women to travel alone. Italian culture is warm and hospitable, and Florentines are generally helpful to solo female travelers. The city is progressive and women can dine alone, visit museums, and explore safely. Street harassment is rare, creating excellent conditions for women solo travel safety.',
+      behaviorNorms: [
+        'Greet with "Buongiorno" (morning) or "Buona sera" (evening) - fundamental to Italian social interaction and essential for solo female travelers',
+        'Learn basic Italian phrases beyond "Grazie" - even attempting pronunciation significantly improves local interactions and safety',
+        'Respect Pausa di Pranzo (1-4 PM) when family shops close - this sacred lunch time is essential Italian cultural tradition',
+        'Never rush meals - lunch 1-3pm, dinner 8-10pm, Italian culture values slow, social dining experiences for solo travelers',
+        'Never touch artworks, sculptures, or frescoes - show quiet reverence in churches and museums, Florence\'s heritage requires respect',
+        'Use formal "Lei" address until invited to use "tu" - proper protocols with shopkeepers and locals show cultural awareness',
+        'Remove shoes when entering homes and some traditional restaurants - check with hosts first to show cultural sensitivity'
+      ],
+      perception: [
+        'Solo female travelers exceptionally welcome - Florence ranks among Europe\'s safest cities for women traveling alone with progressive attitudes',
+        'Women dining alone completely normal and accepted - many solo female travelers enjoy outdoor cafes for people-watching',
+        'Florentines generally helpful to solo travelers, especially those attempting Italian - warm culture respects personal boundaries',
+        'Street harassment rare due to respectful metropolitan Italian culture - women report feeling secure day and night in historic areas',
+        'Italian men offer genuine assistance without ulterior motives - solo female travelers often receive brotherly protection and friendship',
+        'Modern Italian women are highly educated professionals expecting equal treatment - no excessive chivalry but respectful equality',
+        'Solo female travelers can explore museums, restaurants, and cultural sites safely - Italian culture welcomes independent women'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-June, September-October'],
@@ -252,22 +290,34 @@ const florence: Destination = {
       { label: 'Pickpocketing Near Attractions', frequency: 'Very High Level', icon: 'Hand' },
       { label: 'Train Station Area at Night', frequency: 'Frequent', icon: 'MapPin' },
       { label: 'Fake Museum Ticket Websites', frequency: 'Increasing', icon: 'Globe' },
-      { label: 'Restaurant Tourist Menu Scams', frequency: 'Common', icon: 'UtensilsCrossed' },
+      { label: 'Restaurant Tourist Menu Scams', frequency: 'Common', icon: 'Utensils' },
       { label: 'Aggressive Street Vendors', frequency: 'Daily', icon: 'Users' }
     ],
+    culturalSensitivityTips: [
+      'Dress stylishly and cover shoulders/knees in churches',
+      'Greet with "Buongiorno" or "Buona sera"',
+      'Savor meals slowly - rushing is disrespectful',
+      'Learn basic Italian phrases like "Grazie"',
+      'Show quiet reverence in museums and churches',
+      'Don\'t eat while walking or rush meals',
+      'Don\'t wear revealing clothing in religious areas',
+      'Don\'t expect fast restaurant service',
+      'Don\'t ignore personal space boundaries',
+      'Don\'t photograph people without permission'
+    ],
     culturalDos: [
-      'Learn basic Italian greetings.',
-      'Dress stylishly and appropriately.',
-      'Respect church dress codes.',
-      'Appreciate Renaissance art and culture.',
-      'Be patient with Italian pace of life.'
+      'Dress stylishly and cover shoulders/knees in churches',
+      'Greet with "Buongiorno" or "Buona sera"',
+      'Savor meals slowly - rushing is disrespectful',
+      'Learn basic Italian phrases like "Grazie"',
+      'Show quiet reverence in museums and churches'
     ],
     culturalDonts: [
-      'Don\'t wear casual clothes to nice restaurants.',
-      'Don\'t touch artworks in museums.',
-      'Don\'t eat or drink near monuments.',
-      'Don\'t expect fast service.',
-      'Don\'t ignore church dress codes.'
+      'Don\'t eat while walking or rush meals',
+      'Don\'t wear revealing clothing in religious areas',
+      'Don\'t expect fast restaurant service',
+      'Don\'t ignore personal space boundaries',
+      'Don\'t photograph people without permission'
     ],
     womensConfidenceScore: {
       score: 84.6,
@@ -584,15 +634,15 @@ const florence: Destination = {
       levelNumber: 1,
       source: 'U.S. Department of State',
       lastUpdated: 'January 2025',
-      details: 'Italy is generally safe for travelers. Exercise normal precautions and be aware of petty crime in tourist areas.',
-      reason: 'Generally safe with standard tourist precautions needed.',
+      details: 'Is Florence safe for women solo travelers? Yes - Italy is generally safe for solo female travel. Exercise normal precautions and be aware of petty crime in tourist areas.',
+      reason: 'Generally safe destination for solo female travelers with standard tourist precautions needed.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/italy-travel-advisory.html',
       soloTravelerAdvice: [
-        'Excellent destination for solo female travel - ranked among safest European cities for women traveling alone',
-        'Very safe with rich cultural experiences and women-friendly atmosphere',
-        'Historic center perfect for solo female travel safety - walkable and well-patrolled',
-        'Locals are generally helpful and friendly to solo female travelers',
-        'Strong women solo travel safety network with excellent healthcare and support resources'
+        'Excellent destination for solo female travel - Florence ranked among Europe\'s safest cities for women traveling alone',
+        'Is Florence safe for female solo travelers? Very safe with rich cultural experiences and women-friendly atmosphere',
+        'Historic center perfect for solo female travel safety - walkable, well-lit, and well-patrolled by local police',
+        'Locals are helpful and friendly to solo female travelers - Italian culture welcomes women traveling alone',
+        'Strong women solo travel safety network with excellent healthcare, English-speaking gynecologists, and 24/7 support resources'
       ]
     },
     crimeStatistics: {
@@ -766,19 +816,37 @@ const florence: Destination = {
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Very safe and most efficient in historic center',
+          safetyDescription: 'Extremely safe and most efficient in compact historic center - perfect for solo female travelers',
           safetyLevel: 'high'
         },
         {
-          method: 'ATAF Public Bus/Tram',
-          cost: '€1-2/ride, day passes available',
-          safetyDescription: 'Generally safe but high pickpocket risk in crowded vehicles',
+          method: 'ATAF Public Bus/Tram (T1 & T2 Lines)',
+          cost: '€1.70/ride (€1.50 contactless), 90-minute validity, day passes available',
+          safetyDescription: 'Generally safe with CCTV but high pickpocket risk during crowded times. T2 extends to airport and San Marco (2025)',
           safetyLevel: 'medium'
         },
         {
-          method: 'Licensed Taxi',
-          cost: '€25-30 from airport, €10-15 city trips',
-          safetyDescription: 'Very safe, regulated white taxis. Taxi Rosa service for women 10pm-4am',
+          method: 'Licensed White Taxis',
+          cost: '€25-30 from airport, €10-15 city trips, minimum €3.50-5.30 charge',
+          safetyDescription: 'Very safe, regulated service. Call +39 055 4390 or use "Taxi Move" app. Taxi Rosa priority night service for women',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Electric Mini-Buses (C1, C2, C3, C4)',
+          cost: '€1.70/ride, same as regular buses',
+          safetyDescription: 'Safe city center circulation, ideal for solo female travelers accessing pedestrian areas',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Rental Bikes/E-Scooters',
+          cost: '€10-20/day bikes, €15-25/day e-scooters',
+          safetyDescription: 'Exercise caution on cobblestones, stick to bike paths. Not recommended for night travel',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Regional Trains (Trenitalia)',
+          cost: '€8-25 to nearby cities, varies by destination',
+          safetyDescription: 'Safe for day trips to Pisa, Siena. Book through official Trenitalia app for security',
           safetyLevel: 'high'
         }
       ],
@@ -793,27 +861,57 @@ const florence: Destination = {
         'Book Firenze Card (€85) if visiting 3+ major museums',
         'Avoid coperto (cover charge) restaurants - look for locals eating there',
         'Travel shoulder season (March, November) for 30-40% accommodation savings'
-      ]
+      ],
+      currencyExchange: {
+        bestRates: [
+          'Use ATMs affiliated with major banks (Intesa Sanpaolo, UniCredit, BNL) for best exchange rates and security',
+          'Avoid currency exchange offices near tourist attractions - typically 5-8% worse rates than banks',
+          'Notify your bank before travel to prevent card blocks - essential for solo female travel security',
+          'Use contactless payment where possible - safer than carrying large amounts of cash in pickpocket-prone areas'
+        ],
+        atmTips: [
+          'ATMs inside bank branches are safest - avoid standalone machines in isolated areas',
+          'Cover your PIN entry and be aware of surroundings, especially near train stations',
+          'Withdraw larger amounts less frequently to minimize ATM fees and exposure',
+          'Keep backup cards in separate locations from your main wallet'
+        ],
+        scamWarnings: [
+          'Never use currency exchange services offered by street vendors or unlicensed operators',
+          'Avoid "no commission" exchange offices - they make profit through poor exchange rates',
+          'Be cautious of "helpful" strangers at ATMs - a common pickpocket setup',
+          'Double-check restaurant bills - some add inflated exchange rates for non-Euro cards'
+        ],
+        paymentTips: [
+          'Restaurants, hotels, and shops widely accept cards, but small cafes may be cash-only',
+          'Keep small bills for buses, public restrooms, and tipping - drivers rarely have change',
+          'Emergency cash stash recommended - keep €50-100 separate from main wallet',
+          'Mobile payment (Apple Pay, Google Pay) increasingly accepted and very secure for solo travelers'
+        ]
+      }
     },
-  culturalSensitivity: {
-    culturalDos: [
-      'Dress stylishly yet modestly - Florentines appreciate fashion sense and proper attire in religious sites',
-      'Greet with "Buongiorno" (morning) or "Buona sera" (evening) - polite greetings are fundamental to Italian social interaction',
-      'Take time to savor meals and appreciate Italian dining culture - rushing through food is considered disrespectful',
-      'Learn basic Italian phrases like "Grazie" and "Prego" - locals deeply appreciate effort to speak their language',
-      'Show reverence in churches and museums - Florence\'s artistic heritage requires respectful, quiet appreciation'
-    ],
-    culturalDonts: [
-      'Don\'t eat while walking or rush through meals - Italian culture values slow, mindful dining experiences',
-      'Don\'t wear revealing clothing in churches or traditional areas - modest dress shows respect for Italian values',
-      'Don\'t expect fast service in restaurants - leisurely dining is part of authentic Florentine culture',
-      'Don\'t ignore personal space boundaries - Italians are expressive but respect physical boundaries with strangers',
-      'Don\'t photograph people without permission - privacy is respected especially in traditional neighborhoods'
-    ]
-  },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+    videoId: "E5dn_m93noY"
+  },
+  culturalSensitivityTipsDetails: [
+'Show knowledge of Renaissance history - Mentioning Michelangelo, Leonardo, or Medici often earns passionate local guidance and insider museum tips.',
+    'Dress stylishly in neutral colors - Quality, well-fitted pieces (black, navy, beige) earn better service from fashion-conscious locals.',
+    'Follow church etiquette beyond dress codes - Remove sunglasses, silence phones, no flash photos, whisper only. Respectful behavior earns warm guidance.',
+    'Follow Italian dining rules - No cappuccino after 11 AM, no cheese on seafood pasta, bistecca serves two. Following customs earns complimentary digestivos.',
+    'Respect Pausa di Pranzo (1-4 PM) - Shops close for family time. Showing interest in family histories earns personalized service.',
+    'Use formal address protocols - "Lei" until invited to use "tu," call shopkeepers "Signore/Signora." Proper protocols earn preferential treatment.',
+    'Understand Italian gestures - Elaborate gestures and passionate voices aren\'t aggression but expressiveness. This knowledge makes locals more approachable.',
+    'Learn neighborhood identities - Oltrarno, Santo Spirito, San Lorenzo have distinct cultures and crafts. Supporting local workshops earns community protection.',
+    'Expect gender equality - Modern Italian women expect equal treatment, not excessive chivalry. Italian men offer genuine assistance leading to protective friendships.',
+    'Follow hospitality customs - Bring wine/chocolates/flowers to homes. Arrive 15 minutes late, help cleanup, compliment cooking. Proper etiquette earns continued invitations.',
+    'Show art knowledge beyond photos - Learn about artists and historical contexts. Knowledgeable engagement with guides earns private tours.',
+    'Respect artisan workshops - Learn about craftsmanship quality and price negotiation. Showing respect earns authentic pieces and tutorials.',
+    'Learn about Tuscan wines - Know Chianti Classico and Brunello basics. Wine knowledge earns cellar tours and tastings.',
+    'Respect UNESCO heritage - Don\'t touch historical surfaces or litter near monuments. Environmental respect earns helpful local guidance.',
+    'Adapt to Italian meal times - Dinner 8-10 PM, lunch 1-3 PM. Following local timing avoids frustration.',
+    'Keep Florence clean - Don\'t litter near monuments and respect preservation. Environmental consciousness earns local approval.',
+    'Accept hospitality graciously - Don\'t refuse food/drink offers abruptly. Gracious responses earn continued kindness and protection.',
+    'Avoid sensitive topics - Don\'t discuss politics or economic problems unless locals initiate. Focus on culture, art, and food instead.'
+  ]
 };
 
 export default florence;

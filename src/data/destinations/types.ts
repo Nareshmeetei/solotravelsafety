@@ -111,6 +111,7 @@ export interface Destination {
   }[];
   culturalSensitivityTips?: string[];
   culturalSensitivityTipsDetails?: string[];
+  culturalSensitivityTipsDetailed?: string[];
   culturalDos?: string[];
   culturalDonts?: string[];
   womensConfidenceScore?: {
