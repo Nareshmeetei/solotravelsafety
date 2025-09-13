@@ -18,15 +18,15 @@ const guatemalacity: Destination = {
     safetyBreakdown: {
       nightSafety: { 
         score: 1.9, 
-        context: 'Extremely dangerous at night for solo female travelers with only 20.7% safety rating. Guatemala City has critical-level violent crime including armed robberies, sexual assault, and express kidnappings after dark. US State Department rates the risk as "critical" with Zone 18 designated as "Do Not Travel". Even safe zones like Zona 10 experience crime at night - not recommended for women traveling alone.' 
+        context: 'Extremely dangerous at night for solo female travelers with only 20.7% safety rating. Is Guatemala City safe for female solo travelers at night? Absolutely not - Guatemala City has critical-level violent crime including armed robberies, sexual assault, and express kidnappings after dark. US State Department rates the risk as "critical" with Zone 18 designated as "Do Not Travel". Even safe zones like Zona 10 experience crime at night - not recommended for women traveling alone seeking solo travel safety.' 
       },
       publicTransit: { 
         score: 3.2, 
-        context: 'Public buses (chicken buses) present extreme safety risks for solo female travelers with frequent armed attacks. 2024 government advisories strongly warn women traveling alone against public transportation due to robbery and sexual assault incidents. Uber operates only in Guatemala City and is the safest transport option for solo female travel safety. Licensed yellow taxis are acceptable but white taxis should be avoided completely.' 
+        context: 'Public buses (chicken buses) present extreme safety risks for solo female travelers with frequent armed attacks. Is Guatemala City safe for women solo travelers using public transport? No - 2024 government advisories strongly warn women traveling alone against public transportation due to robbery and sexual assault incidents. Uber operates only in Guatemala City and is the safest transport option for solo female travel safety. Licensed yellow taxis are acceptable but white taxis should be avoided completely.' 
       },
       walkingAlone: { 
         score: 2.5, 
-        context: 'Walking alone is extremely dangerous for solo female travelers and strongly discouraged. With a 45.2% daytime safety rating, Guatemala City has high rates of mugging (concern level 87.4%), sexual harassment targeting women traveling alone, and express kidnapping. Even experienced solo female travelers report feeling unsafe and recommend avoiding solo travel to Guatemala City entirely.' 
+        context: 'Walking alone is extremely dangerous for solo female travelers and strongly discouraged. With a 45.2% daytime safety rating, Guatemala City has high rates of mugging (concern level 87.4%), sexual harassment targeting women traveling alone, and express kidnapping. Even experienced solo female travelers report feeling unsafe and recommend avoiding solo travel to Guatemala City entirely for optimal solo female travel safety.' 
       }
     },
     neighborhoods: {
@@ -52,61 +52,61 @@ const guatemalacity: Destination = {
       avoid: ['Zona 18', 'Villa Nueva', 'Zona 3', 'Zona 21 (Especially at Night)', 'All Zones After 10 PM']
     },
     accommodations: [
-      { 
-        name: 'Hotel Casa Santo Domingo', 
-        type: 'luxury hotel', 
-        features: ['24/7 armed security', 'Zona 10 diplomatic area', 'Female-friendly staff', 'US Embassy proximity', 'Secure parking'], 
-        rating: 4.7, 
-        reviews: 1834,
-        notes: 'Top-rated luxury hotel for solo female travel safety prioritizing maximum security. Features comprehensive safety measures, female-focused amenities, and strategic location near embassies. Highly recommended by experienced solo female travelers seeking safest places for women to travel alone in Guatemala City.' 
+      {
+        name: 'Hyatt Centric Guatemala City',
+        type: 'luxury hotel',
+        features: ['24-hour multilingual staff', '24-hour shuttle service', 'Rooftop terrace', 'Secure keycard access', 'Free parking', 'Zona 10 location'],
+        rating: 4.6,
+        reviews: 602,
+        notes: 'Top-ranked luxury hotel (#1 of 62 hotels) offering maximum solo female travel safety. Features comprehensive security protocols, professional international traveler assistance, and prime safe zone location. Highly recommended by women travelers for Guatemala City safe accommodation.'
       },
-      { 
-        name: 'Real InterContinental Guatemala', 
-        type: 'international hotel', 
-        features: ['Global chain standards', 'Zona 10 location', '24/7 concierge', 'Security personnel', 'Female solo traveler services'], 
-        rating: 4.5, 
-        reviews: 2156,
-        notes: 'Reliable international chain with proven safety standards for solo female travelers. Features dedicated women traveler assistance, secure facilities, and embassy district location. Excellent for business and leisure solo travel.' 
+      {
+        name: 'Real InterContinental Guatemala by IHG',
+        type: 'international hotel',
+        features: ['Global chain standards', 'Zona 10 business district', '24/7 concierge', 'Enhanced security', 'Spa services', 'Business center'],
+        rating: 4.5,
+        reviews: 1517,
+        notes: 'Premium international chain with proven solo female travel safety standards. Features dedicated women business traveler services, secure diplomatic area location, and comprehensive safety amenities. Excellent choice for solo female travelers prioritizing security.'
       },
-      { 
-        name: 'Hotel Barceló Guatemala City', 
-        type: 'chain hotel', 
-        features: ['Zona 10 safe zone', '24-hour reception', 'Airport shuttle service', 'Solo female guest support'], 
-        rating: 4.4, 
+      {
+        name: 'The Westin Camino Real Guatemala',
+        type: 'luxury hotel',
+        features: ['Heated outdoor pool', 'Airport proximity (1.2 miles)', 'Zona 10 safe zone', '24-hour security', 'Spa and fitness center', 'Multiple dining'],
+        rating: 4.6,
+        reviews: 1174,
+        notes: '5-star luxury hotel (#5 ranked) perfect for solo female travelers seeking maximum comfort and security. Features secure Zona 10 location with excellent safety ratings and international traveler services. Reviewers specifically mention safe zone benefits.'
+      },
+      {
+        name: 'Hotel Barceló Guatemala City',
+        type: 'business hotel',
+        features: ['Classic air-conditioned rooms', 'In-room safes', '24-hour reception', 'Airport shuttle (2.5km)', 'Business district location', 'Multilingual staff'],
+        rating: 4.5,
         reviews: 1789,
-        notes: 'Established international chain with strong security protocols specifically adapted for solo female travelers. Offers secure transportation, women-friendly services, and maximum safety location in Zona 10.' 
+        notes: '4.5-star business hotel strategically located for solo female travel safety. Features professional service standards, secure business district placement, and convenient airport access. Guests consistently report feeling safe and well-supported.'
       },
-      { 
-        name: 'Hotel Villa Colonial', 
-        type: 'boutique hotel', 
-        features: ['Zona 10 diplomatic area', 'Personal attention', 'Secure environment', 'Female-managed sections'], 
-        rating: 4.3, 
-        reviews: 892,
-        notes: 'Intimate boutique hotel offering personalized security attention for women travelers. Features female management staff, customized solo travel services, and safe Zona 10 location with embassy proximity.' 
+      {
+        name: 'Villa Nola',
+        type: 'boutique guesthouse',
+        features: ['Gated community security', 'Airport proximity', 'Personalized service', 'Controlled access', 'Intimate setting', 'Solo traveler focused'],
+        rating: 4.7,
+        reviews: 287,
+        notes: 'Exclusive boutique accommodation described as "traveler\'s dream" by solo female guests. Features gated community security, personalized attention, and strategic airport location. Perfect for women travelers seeking intimate, secure accommodation.'
       },
-      { 
-        name: 'Clarion Suites Guatemala', 
-        type: 'extended stay', 
-        features: ['Zona 9/10 border', 'Suite accommodations', 'Kitchen facilities', '24/7 security'], 
-        rating: 4.2, 
-        reviews: 1243,
-        notes: 'Extended stay option perfect for longer visits by solo female travelers. Features apartment-style security, personal space, and safe zone location. Ideal for women needing secure long-term accommodation.' 
+      {
+        name: 'Hotel Casa Veranda Guatemala',
+        type: 'boutique hotel',
+        features: ['24-hour reception', 'Concierge services', 'Currency exchange', '24-hour gym', 'Business center', 'Tour assistance'],
+        rating: 4.4,
+        reviews: 523,
+        notes: 'Full-service boutique hotel offering comprehensive support for solo female travelers. Features 24-hour assistance, secure entry systems, and professional multilingual staff. Excellent choice for women seeking complete travel support services.'
       },
-      { 
-        name: 'Hotel Tikal Futura', 
-        type: 'business hotel', 
-        features: ['Zona 10 center', 'Corporate security standards', 'Female business traveler focused', 'Safe transport arrangements'], 
-        rating: 4.1, 
-        reviews: 967,
-        notes: 'Business-focused hotel with enhanced security measures for professional women travelers. Features dedicated female traveler services, secure meeting spaces, and prime Zona 10 location.' 
-      },
-      { 
-        name: 'Hostal Villa Toscana (Airport)', 
-        type: 'transit hostel', 
-        features: ['Airport proximity', '5-minute Uber to terminal', 'Female-friendly', 'Early departure assistance'], 
-        rating: 4.0, 
-        reviews: 734,
-        notes: 'Highly recommended by solo female travelers for airport transit. Perfect for overnight stays before early flights. Community-vetted as safe option for women in transit through Guatemala City.' 
+      {
+        name: 'Hotel Casa Santo Domingo',
+        type: 'luxury hotel',
+        features: ['24/7 armed security', 'Zona 10 diplomatic area', 'Female-friendly staff', 'US Embassy proximity', 'Secure parking', 'Historic charm'],
+        rating: 4.7,
+        reviews: 1834,
+        notes: 'Historic luxury hotel combining traditional elegance with modern solo female travel safety standards. Features maximum security measures, embassy district location, and specialized women traveler amenities. Consistently rated among safest Guatemala City accommodations.'
       }
     ],
     alerts: [
@@ -223,20 +223,30 @@ const guatemalacity: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Conservative, modest dress essential for solo female travelers. Cover shoulders, knees, and avoid form-fitting clothing. Dark, neutral colors recommended to avoid unwanted attention. Avoid jewelry, designer clothing, or expensive accessories. Traditional Maya populations are very conservative.',
-      behaviorNorms: [
-        'Maintain respectful distance in conversations - personal space highly valued',
-        'Avoid eye contact with men to prevent misinterpretation of interest', 
-        'Never discuss politics, violence, or civil war history - extremely sensitive topics',
-        'Learn basic Spanish greetings - English is limited outside tourist areas',
-        'Show respect for indigenous Maya culture and traditions',
-        'Be cautious with photography - always ask permission, especially of people',
-        'Avoid displays of wealth, technology, or expensive items',
-        'Use formal address (usted) rather than informal (tú) unless invited otherwise',
-        'Respect religious customs - Guatemala is predominantly Catholic',
-        'Understand machismo culture affects interactions - maintain professional distance'
+      dressCode: [
+        'Conservative dress essential for solo female travel safety - cover shoulders and knees at all times, especially in religious sites where sleeveless tops are inappropriate',
+        'Dark, neutral colors (black, navy, brown) recommended to avoid unwanted attention in this class-conscious society - bright colors mark you as foreign tourist',
+        'Business/formal settings require conservative dresses or two-piece suits - Guatemala City has corporate atmosphere where professional appearance matters',
+        'Never wear expensive jewelry, designer clothing, or accessories - major robbery target and displays wealth inappropriately in high-crime city',
+        'Carry lightweight sweater or jacket for churches and 5,000ft elevation - religious sites strictly enforce modest dress codes for women',
+        'Form-fitting clothing attracts dangerous attention - loose, modest clothing helps solo female travelers blend in and stay safer'
       ],
-      perception: 'Solo female travelers are extremely rare in Guatemala City and will attract significant attention. Local culture includes strong machismo elements where lone women may be perceived as vulnerable targets. Conservative Maya and Catholic cultural values mean independent women travelers are unusual and may face curiosity, concern, or unwanted advances. Safety concerns limit solo female tourism, making such travelers highly visible.'
+      behaviorNorms: [
+        'Use formal Spanish greetings "Mucho gusto" for first meetings and "usted" instead of "tú" - proper protocols show cultural respect and improve safety',
+        'Maintain respectful distance in conversations and avoid prolonged eye contact with men - personal space highly valued and prevents misinterpretation',
+        'Never discuss politics, civil war history, or violence - extremely sensitive topics that can create dangerous situations for solo female travelers',
+        'Ask permission before photographing people, especially Indigenous Maya women and children - unauthorized photos have led to violent incidents',
+        'Show deep respect for religious customs in predominantly Catholic country - remove hats in churches, silence phones, dress modestly in religious spaces',
+        'Learn basic Spanish phrases beyond "Hola" - English very limited outside tourist areas and effort demonstrates respect for local culture'
+      ],
+      perception: [
+        'Solo female travelers extremely rare in Guatemala City due to safety concerns - you will attract significant attention and curiosity from locals',
+        'Strong machismo culture means independent women travelers are unusual and may be perceived as vulnerable targets by criminals seeking easy marks',
+        'Conservative Maya and Catholic values create traditional gender role expectations - solo women may face concern, curiosity, or unwanted advances',
+        'Foreign solo women automatically seen as wealthy due to ability to travel independently - this perception increases targeting risk significantly',
+        'Recent feminist activism (2024) shows changing urban attitudes, but traditional views remain dominant and affect solo female travel safety',
+        'Tourist areas more accepting of independent women but extreme caution still required - cultural acceptance does not eliminate security risks'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['November-April'],
@@ -347,6 +357,23 @@ const guatemalacity: Destination = {
         sourceUrl: "https://ladyabroad.com/safety-in-antigua-heres-what-to-know/"
       }
     ], // Tips sourced from Journey By Backpack, Lady Abroad, She Roams The Globe (2025)
+    culturalSensitivityTipsDetails: [
+      'Understand Guatemala\'s conservative Catholic-Maya heritage - 80% Catholic with indigenous influences creating traditional gender role expectations for solo female travelers',
+      'Dress conservatively beyond tourist areas - cover shoulders, knees, avoid form-fitting clothing. Dark neutral colors reduce unwanted attention in this class-conscious society',
+      'Master formal Spanish greetings - "Mucho gusto" for first meetings, "usted" instead of "tú", "Buenos días/tardes" essential for respectful interactions with locals',
+      'Respect indigenous photography boundaries - never photograph Maya women/children without explicit permission. Violent incidents have occurred over unauthorized photos',
+      'Avoid sensitive political topics completely - civil war (1960-1996), government corruption, gang violence are traumatic subjects. Focus on positive cultural aspects only',
+      'Navigate machismo culture carefully - men may be "bold with women" (culturally normalized). Maintain firm boundaries while understanding cultural context',
+      'Show deep religious reverence - remove hats in churches, silence phones, dress modestly in religious spaces. Both Catholic and Maya spiritual practices require respect',
+      'Understand solo women rarity - independent female travelers extremely unusual, making you highly visible. Conservative culture means curiosity but also potential targeting',
+      'Follow gift-giving protocols - use both hands when giving/receiving, bring small gifts to homes. Proper etiquette shows cultural awareness and respect',
+      'Respect personal space norms - maintain respectful distance in conversations, avoid prolonged eye contact with men to prevent misinterpretation of romantic interest',
+      'Learn about Maya cultural heritage - show interest in traditional crafts, textiles, and customs. Knowledge demonstrates respect for indigenous culture beyond tourist stereotypes',
+      'Adapt to formal business culture - Guatemala City has corporate atmosphere where appearance matters. Professional dress and behavior earn better treatment and safety',
+      'Understand family-centered society - family comes first in all decisions. Showing respect for family values and traditions improves local relationships',
+      'Follow religious festival etiquette - Holy Week, Christmas celebrations are sacred. Participate respectfully from appropriate distances or accept invitations graciously',
+      'Respect meal timing and customs - lunch is family time, dinner often late. Wait for host to begin eating, compliment food preparation, offer to help cleanup'
+    ],
     culturalDos: [
       'Stay in safe zones like Zona 10 or 14.',
       'Use registered taxis, Uber, or hotel transport.',
@@ -361,6 +388,22 @@ const guatemalacity: Destination = {
       "Don't accept rides from strangers.",
       "Don't discuss politics in public."
     ],
+    culturalSensitivityTips: {
+      culturalDos: [
+        'Dress modestly - cover shoulders and knees',
+        'Greet with "Mucho gusto" for first meetings',
+        'Ask permission before photographing people',
+        'Use both hands when giving/receiving gifts',
+        'Wait for host to begin eating'
+      ],
+      culturalDonts: [
+        'Don\'t touch someone\'s head - considered sacred',
+        'Don\'t use left hand for giving/receiving objects',
+        'Don\'t point with single finger - use open hand',
+        'Don\'t photograph without permission',
+        'Don\'t interrupt religious ceremonies'
+      ]
+    },
     womensConfidenceScore: {
       score: 37.7, // Numbeo 2025 Safety Index for Guatemala City
       source: "Numbeo 2025",
@@ -600,8 +643,8 @@ const guatemalacity: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '$40 - $70 USD / day',
-        description: 'Updated 2025 costs for solo female travelers prioritizing safety over budget. Security-focused solo female travel requires $40-70/day minimum for safe accommodation and transport. Guatemala City extremely dangerous for budget solo female travel - safety investments essential.',
-        tip: 'Budget should prioritize solo female travel safety - stay in Zona 10 exclusively, use Uber/taxis only, avoid budget accommodations in unsafe areas. Never compromise safety for cost savings when traveling as women alone.'
+        description: 'Updated 2025 costs for solo female travelers prioritizing safety over budget. Is Guatemala City safe for solo female travelers on a budget? No - security-focused solo female travel requires $40-70/day minimum for safe accommodation and transport. Guatemala City extremely dangerous for budget solo female travel - safety investments essential for women solo travel safety.',
+        tip: 'Budget should prioritize solo female travel safety - stay in Zona 10 exclusively, use Uber/taxis only, avoid budget accommodations in unsafe areas. Never compromise safety for cost savings when traveling as women alone seeking safe solo travel destinations.'
       },
       accommodation: [
         {
@@ -633,26 +676,58 @@ const guatemalacity: Destination = {
         {
           method: 'Uber',
           cost: '$2-8 per ride within city',
-          safetyDescription: 'Safest ground transport option. Tracked routes, vetted drivers, cashless payment.',
-          safetyLevel: 'high'
+          safetyDescription: 'Safest ground transport option for solo female travel safety. GPS tracked routes, vetted drivers, cashless payment system.',
+          safetyLevel: 'high',
+          availability: '24/7 in Guatemala City'
+        },
+        {
+          method: 'Hotel-Arranged Private Transfer',
+          cost: '$35-50 airport, $25-40 city transfers',
+          safetyDescription: 'Maximum security for solo female travelers. Vetted drivers, hotel accountability, direct pickup/dropoff.',
+          safetyLevel: 'high',
+          availability: 'Arrange through hotel concierge'
         },
         {
           method: 'Licensed Yellow Taxi',
-          cost: '$5-15 per ride',
-          safetyDescription: 'Acceptable safety but negotiate price beforehand. Never use white taxis.',
-          safetyLevel: 'medium'
+          cost: '$5-15 per ride (negotiate beforehand)',
+          safetyDescription: 'Acceptable safety with proper licenses. Avoid white unlicensed taxis completely.',
+          safetyLevel: 'medium',
+          availability: 'Available citywide, prefer hotel calls'
         },
         {
-          method: 'Private Transfer/Shuttle',
-          cost: '$35 airport transfer, $25-50 for excursions',
-          safetyDescription: 'Hotel-arranged transport is safest for airport and tourist sites.',
-          safetyLevel: 'high'
+          method: 'Tourist Shuttle Services',
+          cost: '$12-15 Guatemala City to Antigua',
+          safetyDescription: 'Dedicated tourist transport with fixed routes. Companies: Trans-land, Shuttle Guatemala, Xocomil Tours.',
+          safetyLevel: 'high',
+          availability: 'Advance booking required (48 hours)'
         },
         {
-          method: 'Public Buses (NOT RECOMMENDED)',
+          method: 'Airport Shuttle Services',
+          cost: '$15 on-demand, 10-15 minute wait',
+          safetyDescription: 'Official airport shuttles with name signs. Safer than street taxis for solo female travelers.',
+          safetyLevel: 'medium-high',
+          availability: 'La Aurora International Airport'
+        },
+        {
+          method: 'Rental Car with Driver',
+          cost: '$45-80 per day with driver',
+          safetyDescription: 'Premium option for extended stays. Local driver knowledge, secure vehicle, flexible scheduling.',
+          safetyLevel: 'high',
+          availability: 'Book through hotels or Xocomil Tours: +502 4937 2368'
+        },
+        {
+          method: 'Express Shuttle Services',
+          cost: '$20-35 to popular destinations',
+          safetyDescription: 'Fast direct routes to Tikal, Lake Atitlán, Copan. Shared with other tourists for safety.',
+          safetyLevel: 'medium-high',
+          availability: 'Daily departures to major destinations'
+        },
+        {
+          method: 'Public Buses (EXTREMELY DANGEROUS)',
           cost: '$1-5',
-          safetyDescription: 'Frequent armed attacks on public buses. AVOID completely for safety.',
-          safetyLevel: 'low'
+          safetyDescription: 'Frequent armed robberies, sexual assault, and violent attacks. NEVER use for solo female travel safety.',
+          safetyLevel: 'extremely low',
+          availability: 'AVOID COMPLETELY - Not recommended for any travelers'
         }
       ],
       budgetTips: [
@@ -697,22 +772,22 @@ const guatemalacity: Destination = {
     },
   culturalSensitivity: {
     culturalDos: [
-      'Greet with "Mucho gusto" when meeting for first time - "Hola" alone is considered too casual for formal interactions',
-      'Dress modestly and conservatively especially in religious sites - appearance is important in this class-conscious society',
-      'Ask permission before photographing people especially Indigenous women and children - consent is crucial for cultural respect',
-      'Use both hands when giving or receiving gifts - shows proper respect and gratitude in Guatemalan culture',
-      'Wait for your host to begin eating before starting meals - dining etiquette demonstrates cultural awareness and politeness'
+      'Dress modestly - cover shoulders and knees',
+      'Greet with "Mucho gusto" for first meetings',
+      'Ask permission before photographing people',
+      'Use both hands when giving/receiving gifts',
+      'Wait for host to begin eating'
     ],
     culturalDonts: [
-      'Don\'t touch someone\'s head - it\'s considered sacred and disrespectful in Mayan cultural beliefs',
-      'Don\'t use your left hand to give or receive objects - it\'s considered impolite in traditional Guatemalan culture',
-      'Don\'t point with a single finger - use an open hand which is more polite and respectful',
-      'Don\'t photograph without permission especially in Indigenous communities - it can be deeply offensive and disrespectful',
-      'Don\'t interrupt religious ceremonies or rituals - show reverence for both Catholic and Mayan spiritual practices'
+      'Don\'t touch someone\'s head - considered sacred',
+      'Don\'t use left hand for giving/receiving objects',
+      'Don\'t point with single finger - use open hand',
+      'Don\'t photograph without permission',
+      'Don\'t interrupt religious ceremonies'
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "WJdPTcJF4Go"
   }
 };
 
