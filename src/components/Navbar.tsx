@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
             className="flex items-center transition-transform duration-300 hover:scale-105 z-50"
           >
             <img 
-              src="/Solo Travel Safety logo 1.svg" 
+              src="/Solo Travel Safety Logo.svg" 
               alt="SoloTravelSafety Logo" 
               className="h-10 sm:h-12 w-auto transition-all duration-300 hover:brightness-110"
             />
@@ -271,7 +271,7 @@ const Navbar: React.FC = () => {
                   className="flex items-center transition-transform duration-300 hover:scale-105"
                 >
                   <img 
-                    src="/Solo Travel Safety logo 1.svg" 
+                    src="/Solo Travel Safety Logo.svg" 
                     alt="SoloTravelSafety Logo" 
                     className="h-8 sm:h-10 w-auto transition-all duration-300 hover:brightness-110"
                   />

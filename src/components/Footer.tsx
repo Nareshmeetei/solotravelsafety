@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <div className="mb-4 flex items-center justify-center">
             <Link to="/" onClick={handleNavClick}>
               <img 
-                src="/Solo Travel Safety logo 1.svg" 
+                src="/Solo Travel Safety Logo.svg" 
                 alt="SoloTravelSafety Logo" 
                 className="h-10 w-auto transition-all duration-300 hover:scale-105 hover:brightness-110"
               />
