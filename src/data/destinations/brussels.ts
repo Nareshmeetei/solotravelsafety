@@ -327,10 +327,34 @@ const brussels: Destination = {
     safetySourceName: 'Numbeo 2025 / Brussels Safety Survey',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Brussels',
     redFlags: [
-      { label: 'Street Harassment (22% of women affected)', frequency: 'Common', icon: 'AlertTriangle' },
-      { label: 'Pickpocketing in Tourist Areas', frequency: 'Most Common', icon: 'Hand' },
-      { label: 'Transport-Related Harassment', frequency: 'Frequent', icon: 'Users' },
-      { label: 'Neighborhood Safety Variation', frequency: 'Ongoing', icon: 'MapPin' }
+      {
+        label: 'Street Harassment (22% of women affected)',
+        frequency: 'Common',
+        icon: 'AlertTriangle',
+        details: '22% of women in Brussels experience street harassment. Common in Molenbeek, Schaerbeek, and around Brussels Central Station. Catcalling, following, and unwanted attention particularly affect solo female travelers.',
+        prevention: 'Avoid eye contact with harassers, stay in well-lit busy areas, use confident body language, report incidents to local authorities'
+      },
+      {
+        label: 'Pickpocketing in Tourist Areas',
+        frequency: 'Most Common',
+        icon: 'Hand',
+        details: 'Grand Place, Brussels Central Station, and EU Quarter are hotspots. Professional teams use distraction techniques during peak tourist hours. Metro stations particularly problematic.',
+        prevention: 'Use anti-theft bags, keep valuables secure, stay alert in crowds, avoid displaying expensive items'
+      },
+      {
+        label: 'Transport-Related Harassment',
+        frequency: 'Frequent',
+        icon: 'Users',
+        details: 'Harassment on Brussels metro, trams, and buses, especially during evening hours. Unwanted comments and inappropriate behavior from other passengers targeting solo women.',
+        prevention: 'Sit near driver/conductor, stay near exits, travel during daylight when possible, report incidents to transport security'
+      },
+      {
+        label: 'Neighborhood Safety Variation',
+        frequency: 'Ongoing',
+        icon: 'MapPin',
+        details: 'Molenbeek, Schaerbeek, and parts of Anderlecht have higher crime rates. Significant safety differences between EU Quarter (safer) and certain immigrant neighborhoods (higher risk).',
+        prevention: 'Research neighborhoods beforehand, stay in Ixelles/Uccle/EU Quarter, avoid poorly lit areas at night, use taxis in unsafe zones'
+      }
     ],
     culturalDos: [
       'Learn basic French/Dutch greetings',

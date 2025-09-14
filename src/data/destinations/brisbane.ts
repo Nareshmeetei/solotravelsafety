@@ -383,10 +383,34 @@ const brisbane: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Brisbane',
     redFlags: [
-      { label: 'Petty Theft (Pickpocketing, Bag Snatching)', frequency: 'Most common', icon: 'Hand' },
-      { label: 'Drug-Related Incidents', frequency: 'Frequent', icon: 'Syringe' },
-      { label: 'Alcohol-Related Violence (Nightlife Areas)', frequency: 'Occasional', icon: 'Beer' },
-      { label: 'Scams (Overcharging, Fake Tours)', frequency: 'Occasional', icon: 'Shield' },
+      {
+        label: 'Petty Theft (Pickpocketing, Bag Snatching)',
+        frequency: 'Most common',
+        icon: 'Hand',
+        details: 'Opportunistic theft in Queen Street Mall, South Bank, and public transport. Bag snatching from outdoor cafes and distraction techniques in tourist areas. Peak during events and weekends.',
+        prevention: 'Use cross-body bags, keep phones secure, stay alert in crowds, avoid displaying valuables'
+      },
+      {
+        label: 'Drug-Related Incidents',
+        frequency: 'Frequent',
+        icon: 'Syringe',
+        details: 'Drug activity in Fortitude Valley nightlife district and some parts of South Brisbane. Occasional drink spiking reported in bars. Random drug-affected behavior on streets.',
+        prevention: 'Avoid Fortitude Valley late night alone, never leave drinks unattended, stay with friends in nightlife areas'
+      },
+      {
+        label: 'Alcohol-Related Violence (Nightlife Areas)',
+        frequency: 'Occasional',
+        icon: 'Beer',
+        details: 'Weekend violence in Fortitude Valley and CBD nightlife zones. Groups of intoxicated men may harass solo women. Late night incidents around bars and clubs.',
+        prevention: 'Travel in groups after midnight, use official transport, avoid confrontations, stay in well-lit areas'
+      },
+      {
+        label: 'Scams (Overcharging, Fake Tours)',
+        frequency: 'Occasional',
+        icon: 'Shield',
+        details: 'Tourist overcharging at some venues, fake tour operators near attractions, and accommodation booking scams. Generally minor financial impact.',
+        prevention: 'Research prices beforehand, book tours through official operators, verify accommodation legitimacy'
+      }
     ],
     usefulTips: [
       {

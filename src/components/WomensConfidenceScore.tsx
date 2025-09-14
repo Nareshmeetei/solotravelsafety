@@ -24,7 +24,7 @@ const WomensConfidenceScore: React.FC<WomensConfidenceScoreProps> = ({ city, cou
 
   return (
     <div className="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
-      <h4 className="text-lg font-display mb-2">Women's Confidence Score</h4>
+      <h4 className="text-lg font-display mb-2 text-neutral-dark">Women's Confidence Score</h4>
       <div className="flex items-center gap-4">
         <div className="w-full">
           <div className="flex justify-between mb-1">

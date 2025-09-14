@@ -431,11 +431,41 @@ const copenhagen: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Copenhagen',
     redFlags: [
-      { label: 'Pickpocketing (Strøget, Central Station, Tourist Areas)', frequency: 'Occasional', icon: 'Hand' },
-      { label: 'Terrorism Threat Level (Significant 4/5)', frequency: 'Ongoing concern', icon: 'AlertTriangle' },
-      { label: 'Currency Exchange Poor Rates (Airport)', frequency: 'Common', icon: 'CreditCard' },
-      { label: 'Taxi Overcharging (Airport Taxis)', frequency: 'Frequent', icon: 'Car' },
-      { label: 'Fake Tour Guides (Major Attractions)', frequency: 'Rare', icon: 'Users' }
+      {
+        label: 'Pickpocketing (Strøget, Central Station, Tourist Areas)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Minor pickpocketing can occur in crowded tourist areas like Strøget pedestrian street, Central Station, and around Nyhavn. Professional pickpockets target tourists with visible valuables, particularly during peak tourist season. Incidents are rare but more common in busy shopping areas.',
+        prevention: 'Use crossbody bags in front position in crowds. Keep valuables in hotel safe. Stay alert on Strøget and near Central Station. Use bags with zippers and RFID protection. Avoid displaying expensive phones or cameras openly.'
+      },
+      {
+        label: 'Terrorism Threat Level (Significant 4/5)',
+        frequency: 'Ongoing concern',
+        icon: 'AlertTriangle',
+        details: 'Denmark maintains terrorism threat level 4 (Significant) following 2019 and 2020 incidents. ISIS has specifically mentioned Denmark as a target due to foreign policy positions. Heightened security around government buildings, Jewish sites, and major events.',
+        prevention: 'Stay alert around government buildings, embassies, and major events. Report suspicious activity immediately. Follow embassy security updates. Avoid large crowds during holidays or political events. Register with embassy upon arrival.'
+      },
+      {
+        label: 'Currency Exchange Poor Rates (Airport)',
+        frequency: 'Common',
+        icon: 'CreditCard',
+        details: 'Airport currency exchange services charge excessive fees (up to 10% commission) and offer poor exchange rates compared to city options. Tourist-focused exchange services also provide unfavorable rates to take advantage of visitors.',
+        prevention: 'Use ATMs in the city for best exchange rates. Avoid airport currency exchange except for small amounts. Use credit cards with no foreign transaction fees. Exchange money at Danish banks for better rates.'
+      },
+      {
+        label: 'Taxi Overcharging (Airport Taxis)',
+        frequency: 'Frequent',
+        icon: 'Car',
+        details: 'Airport taxis frequently overcharge tourists with inflated rates or "special airport fees." Some drivers refuse to use meters or claim meters are broken. Fixed-rate offers are often 2-3x higher than normal taxi fares.',
+        prevention: 'Use public transport (Metro M2 line) from airport - cheaper and reliable. Book official taxi through Copenhagen Taxi app. Always insist on meter usage. Know approximate fare costs beforehand. Consider ride-sharing apps.'
+      },
+      {
+        label: 'Fake Tour Guides (Major Attractions)',
+        frequency: 'Rare',
+        icon: 'Users',
+        details: 'Occasional fake tour guides approach tourists near major attractions like Tivoli Gardens or The Little Mermaid, offering unofficial tours at premium prices. These unqualified guides provide inaccurate information and may lead to overpriced shops.',
+        prevention: 'Book tours through official visitor centers or reputable companies. Verify guide credentials and company licensing. Use official Copenhagen Tourist Board recommendations. Be wary of unsolicited tour offers on the street.'
+      }
     ],
     sexualHarassmentData: {
       prevalence: 'Extremely Low',

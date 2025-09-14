@@ -286,12 +286,48 @@ const florence: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Florence',
     redFlags: [
-      { label: 'Tourist Area Overpricing', frequency: 'Most common', icon: 'DollarSign' },
-      { label: 'Pickpocketing Near Attractions', frequency: 'Very High Level', icon: 'Hand' },
-      { label: 'Train Station Area at Night', frequency: 'Frequent', icon: 'MapPin' },
-      { label: 'Fake Museum Ticket Websites', frequency: 'Increasing', icon: 'Globe' },
-      { label: 'Restaurant Tourist Menu Scams', frequency: 'Common', icon: 'Utensils' },
-      { label: 'Aggressive Street Vendors', frequency: 'Daily', icon: 'Users' }
+      {
+        label: 'Tourist Area Overpricing',
+        frequency: 'Most common',
+        icon: 'DollarSign',
+        details: 'Restaurants and shops near major attractions like Duomo and Uffizi charge 200-400% markup. Tourist menus offer poor quality food at premium prices. Street vendors sell overpriced souvenirs and fake designer goods.',
+        prevention: 'Eat where locals eat - walk 2-3 blocks from major attractions. Research restaurant prices beforehand. Avoid places with tourist menus in multiple languages. Shop at local markets instead of souvenir shops near attractions.'
+      },
+      {
+        label: 'Pickpocketing Near Attractions',
+        frequency: 'Very High Level',
+        icon: 'Hand',
+        details: 'Professional pickpocketing gangs operate around Duomo, Uffizi, Ponte Vecchio, and on crowded buses. They target distracted tourists taking photos or waiting in lines. Groups create distractions while accomplices steal valuables.',
+        prevention: 'Use crossbody bags with zippers in front. Keep phones, cameras, and wallets secure. Stay alert when taking photos. Be extra cautious in crowds and queues. Avoid displaying expensive jewelry or electronics openly.'
+      },
+      {
+        label: 'Train Station Area at Night',
+        frequency: 'Frequent',
+        icon: 'MapPin',
+        details: 'Santa Maria Novella train station area becomes unsafe after dark with increased drug activity, harassment, and petty crime. Solo travelers are approached by aggressive panhandlers and potential scammers.',
+        prevention: 'Avoid the station area after 10 PM. Use taxis or rideshare from/to station at night. Book accommodation away from the immediate station vicinity. Walk in groups if you must pass through the area after dark.'
+      },
+      {
+        label: 'Fake Museum Ticket Websites',
+        frequency: 'Increasing',
+        icon: 'Globe',
+        details: 'Fraudulent websites selling fake tickets to Uffizi, Accademia, and other museums charge full price but provide invalid tickets. Tourists discover the scam only upon arrival, losing money and time.',
+        prevention: 'Buy tickets only from official museum websites. Verify URLs carefully - look for ".it" domains and official logos. Book through verified tour operators only. Avoid third-party ticket resellers with unusually high prices.'
+      },
+      {
+        label: 'Restaurant Tourist Menu Scams',
+        frequency: 'Common',
+        icon: 'Utensils',
+        details: 'Restaurants near attractions offer fixed-price "tourist menus" with poor quality, small portions, and no authentic Italian experience. Some add hidden charges or pressure customers into expensive wine pairings.',
+        prevention: 'Read reviews carefully before dining. Look for restaurants where locals eat - fewer tourists is a good sign. Check prices on the menu before ordering. Avoid places with multilingual menus and aggressive hosts outside.'
+      },
+      {
+        label: 'Aggressive Street Vendors',
+        frequency: 'Daily',
+        icon: 'Users',
+        details: 'Street vendors around major attractions can become aggressive when selling fake designer goods, roses, or selfie sticks. They may follow tourists persistently and use guilt tactics or fake sob stories.',
+        prevention: 'Say "No grazie" firmly and keep walking. Don\'t make eye contact or engage in conversation. Never accept "free" items as they demand payment afterward. Report aggressive behavior to nearby police if necessary.'
+      }
     ],
     culturalSensitivityTips: [
       'Dress stylishly and cover shoulders/knees in churches',

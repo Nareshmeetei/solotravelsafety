@@ -489,10 +489,34 @@ const caracas: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Caracas',
     redFlags: [
-              { label: 'Express Kidnapping & Extortion', frequency: 'Most common', icon: 'Users' },
-        { label: 'Armed Robbery & Violent Assault', frequency: 'Most common', icon: 'PocketKnife' },
-        { label: 'Sexual Harassment & Assault', frequency: 'Frequent', icon: 'AlertTriangle' },
-        { label: 'Currency & ATM-related Crime', frequency: 'Frequent', icon: 'CreditCard' }
+      {
+        label: 'Express Kidnapping & Extortion',
+        frequency: 'Most common',
+        icon: 'Users',
+        details: 'Caracas has the world\'s highest kidnapping rates with over 1,000 incidents monthly. Express kidnapping targets tourists for immediate ATM emptying or ransom demands. Criminal groups specifically target solo female travelers as they appear vulnerable and valuable.',
+        prevention: 'Never travel alone - use security escorts for all movements. Avoid displaying any wealth indicators. Don\'t use ATMs - arrange all money through secure hotel services. Share location constantly with security contacts. Consider hiring professional security detail.'
+      },
+      {
+        label: 'Armed Robbery & Violent Assault',
+        frequency: 'Most common',
+        icon: 'PocketKnife',
+        details: 'Caracas has a murder rate of 76 per 100,000 (world\'s 2nd highest). Armed robberies occur every 15 minutes with frequent escalation to violence. Criminals use military-grade weapons and show no hesitation to harm victims.',
+        prevention: 'Carry dummy wallet with small bills only. Never resist - compliance saves lives. Stay in hotel compounds with armed security. Use armored vehicle transport exclusively. Avoid all street-level movement, especially after dark.'
+      },
+      {
+        label: 'Sexual Harassment & Assault',
+        frequency: 'Frequent',
+        icon: 'AlertTriangle',
+        details: 'Venezuela has a femicide rate of 1.6 per 100,000 women. Solo female travelers face constant aggressive harassment, with incidents escalating to assault attempts. Cultural machismo combined with lawlessness creates extremely dangerous conditions.',
+        prevention: 'Travel with male companion or professional female bodyguard. Dress extremely conservatively. Never walk anywhere alone. Stay in secured hotel areas with female security staff. Have evacuation plan and embassy contacts ready.'
+      },
+      {
+        label: 'Currency & ATM-related Crime',
+        frequency: 'Frequent',
+        icon: 'CreditCard',
+        details: 'ATM crimes include cloning, robbery during withdrawal, and forced emptying of accounts. Exchange rate scams exploit tourists, and counterfeit currency is widespread. Banking system instability means card fraud is rampant.',
+        prevention: 'Never use street ATMs or exchange money outside official banking channels. Bring US cash and exchange at hotels only. Use credit cards with fraud protection and notify bank of travel. Monitor accounts constantly for unauthorized transactions.'
+      }
     ],
     sexualHarassmentData: {
       prevalence: 'extremely high',

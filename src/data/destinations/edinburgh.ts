@@ -306,10 +306,34 @@ const edinburgh: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Edinburgh',
     redFlags: [
-      { label: 'Pickpocketing (Tourist Areas, Festivals)', frequency: 'Occasional', icon: 'Hand' }, // Numbeo 2025, Qeepl 2025
-      { label: 'Bag Snatching (Public Transport, Cafés)', frequency: 'Rare', icon: 'Briefcase' }, // Qeepl 2025
-      { label: 'Scam Artists (Fake Tours, Tickets)', frequency: 'Rare', icon: 'Shield' }, // Qeepl 2025
-      { label: 'Alcohol-Related Disturbances (Nightlife)', frequency: 'Occasional', icon: 'Beer' }, // Qeepl 2025
+      {
+        label: 'Pickpocketing (Tourist Areas, Festivals)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Minor pickpocketing can occur during Edinburgh Festival (August) and around major tourist attractions like Royal Mile and Princes Street. Crowded festival venues and distracted tourists create opportunities for pickpockets.',
+        prevention: 'Use crossbody bags with zippers during festivals. Keep valuables in hotel safe. Stay alert in crowded tourist areas. Use bags with RFID protection. Avoid displaying expensive items openly during peak tourist season.'
+      },
+      {
+        label: 'Bag Snatching (Public Transport, Cafés)',
+        frequency: 'Rare',
+        icon: 'Briefcase',
+        details: 'Occasional bag snatching incidents on public transport or when bags are left unattended in cafés and restaurants. Thieves target unguarded bags and purses, particularly in busy areas.',
+        prevention: 'Keep bags on your lap or between your feet on public transport. Never leave bags unattended in cafés or restaurants. Use bags with secure closures. Stay alert when boarding crowded buses or trams.'
+      },
+      {
+        label: 'Scam Artists (Fake Tours, Tickets)',
+        frequency: 'Rare',
+        icon: 'Shield',
+        details: 'Occasional fake tour operators offering unofficial ghost walks or historical tours at inflated prices. Fake ticket sellers operate around major attractions during peak tourist season.',
+        prevention: 'Book tours through official visitor centers or established companies. Verify tour company credentials and reviews. Buy tickets from official sources only. Be wary of unsolicited tour offers on the street.'
+      },
+      {
+        label: 'Alcohol-Related Disturbances (Nightlife)',
+        frequency: 'Occasional',
+        icon: 'Beer',
+        details: 'Weekend nights, especially during festival season, can see increased alcohol-related incidents in nightlife areas like Grassmarket and Cowgate. Drunk individuals may become aggressive or cause disturbances.',
+        prevention: 'Stay in groups during nightlife activities. Avoid heavily intoxicated individuals. Use licensed taxis or rideshare apps late at night. Stay in well-lit, populated areas. Trust your instincts if situations feel unsafe.'
+      }
     ],
     usefulTips: [
       {

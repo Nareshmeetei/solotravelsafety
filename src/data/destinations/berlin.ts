@@ -379,10 +379,34 @@ const berlin: Destination = {
     safetySourceName: 'Numbeo & Berlin Police Statistics 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Berlin',
     redFlags: [
-      { label: 'Sexual Crime Increase (79%)', frequency: 'Increasing Trend', icon: 'Shield' },
-      { label: 'Tourist Area Harassment', frequency: 'Occasional', icon: 'UserX' },
-      { label: 'Nightlife District Issues', frequency: 'Common', icon: 'AlertTriangle' },
-      { label: 'Drug Activity Zones', frequency: 'Localized', icon: 'Syringe' }
+      {
+        label: 'Sexual Crime Increase (79%)',
+        frequency: 'Increasing Trend',
+        icon: 'Shield',
+        details: '7,475 sexual crimes in 2024 (over 20 daily), representing 79% increase from 2023. 2 rapes occur daily on average. 38% perpetrated by non-German nationals despite comprising only 27.5% of population. 66 women seriously injured, 9 fatally injured in domestic violence.',
+        prevention: 'Stay in well-lit populated areas at night, use registered taxis/rideshare over walking alone, avoid isolated streets, trust instincts if situation feels uncomfortable'
+      },
+      {
+        label: 'Tourist Area Harassment',
+        frequency: 'Occasional',
+        icon: 'UserX',
+        details: 'Unwanted staring and approaching at Alexanderplatz evenings, overly friendly locals offering assistance as theft setups, fake charity workers targeting tourists. Kurfürstendamm area and KaDeWe have pickpocketing and purse snatching incidents.',
+        prevention: 'Stay alert in tourist areas, avoid signing documents for strangers, keep belongings secure on public transport, remain in well-patrolled areas like Mitte/Charlottenburg'
+      },
+      {
+        label: 'Nightlife District Issues',
+        frequency: 'Common',
+        icon: 'AlertTriangle',
+        details: '22.2% of Berlin nightlife participants experienced drink spiking (vs global averages). 54.8% occur in clubs/bars, only 7.2% report to police. 84.9% suspected drugs added to drinks. Almost 20% experienced sexual assault during spiking. Kreuzberg/Friedrichshain have petty crime and violence.',
+        prevention: 'Never leave drinks unattended, use drink covers/test strips, stay with trusted friends, have safety plan, avoid drinks from strangers, use official transport home'
+      },
+      {
+        label: 'Drug Activity Zones',
+        frequency: 'Localized',
+        icon: 'Syringe',
+        details: 'Görlitzer Park is largest drug transfer center with "menacing groups of men loitering," multiple violent incidents and deaths. Leopoldplatz, Kottbusser Tor also hotspots. U-Bahn stations near these areas have visible drug use. Pickpocketing attempts and intimidating atmosphere.',
+        prevention: 'Avoid these areas entirely at night, say not interested and walk away if approached, keep belongings secure with cross-body bags, stay on main well-lit streets'
+      }
     ],
     culturalDos: [
       'Be punctual for all appointments.',

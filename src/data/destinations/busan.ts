@@ -256,10 +256,34 @@ const busan: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Busan',
     redFlags: [
-      { label: 'Petty Theft (Pickpocketing, Bag Snatching)', frequency: 'Occasional', icon: 'Hand' }, // Numbeo 2025, GoWithGuide 2024
-      { label: 'Taxi Overcharging (especially late at night)', frequency: 'Occasional', icon: 'Car' }, // Numbeo 2025, GoWithGuide 2024
-      { label: 'Spy Cameras in Public Restrooms', frequency: 'Rare', icon: 'CameraOff' }, // Visit Korea 2024
-      { label: 'Strong Riptides at Beaches (Haeundae, Gwangalli)', frequency: 'Occasional', icon: 'Waves' } // Visit Korea 2024
+      {
+        label: 'Petty Theft (Pickpocketing, Bag Snatching)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Minor pickpocketing can occur in crowded areas like Seomyeon shopping district, Nampo-dong market, and during festivals like Busan Sea Festival. Bag snatching is rare but possible when bags are left unattended in public spaces or restaurants.',
+        prevention: 'Use crossbody bags in front position in crowds. Keep valuables in hotel safe, not bags. Stay alert in busy markets and tourist areas. Don\'t leave bags unattended in cafes or restaurants, even briefly.'
+      },
+      {
+        label: 'Taxi Overcharging (especially late at night)',
+        frequency: 'Occasional',
+        icon: 'Car',
+        details: 'Some taxi drivers may try to overcharge tourists, especially late at night when public transport stops running. This typically involves refusing to use the meter, claiming a fixed rate, or taking longer routes to destinations.',
+        prevention: 'Use KakaoTaxi app exclusively - shows fare estimate and tracks route. Insist on meter usage for regular taxis. Learn basic Korean phrases: "Meter-reul kyeojuseyo" (Please turn on the meter). Avoid unofficial taxis.'
+      },
+      {
+        label: 'Spy Cameras in Public Restrooms',
+        frequency: 'Rare',
+        icon: 'CameraOff',
+        details: 'Molka (hidden spy cameras) are an ongoing concern in South Korea, particularly in public restrooms, changing rooms, and hotels. While prosecution has increased, this remains a privacy violation issue affecting women.',
+        prevention: 'Check for unusual objects, small holes, or blinking lights in restrooms. Use family/private restrooms when available. Report suspicious devices immediately to police (112). Choose reputable accommodations with good security reviews.'
+      },
+      {
+        label: 'Strong Riptides at Beaches (Haeundae, Gwangalli)',
+        frequency: 'Occasional',
+        icon: 'Waves',
+        details: 'Busan\'s popular beaches experience dangerous riptides that can pull swimmers out to sea. Several drowning incidents occur annually, particularly during typhoon season and high waves. Many tourists underestimate ocean conditions.',
+        prevention: 'Only swim in designated areas with lifeguards present. Check beach safety flags daily - red means no swimming. Learn riptide escape techniques: swim parallel to shore, then back at an angle. Never swim alone or during storms.'
+      }
     ],
     usefulTips: [
       {

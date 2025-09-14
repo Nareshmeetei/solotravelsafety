@@ -67,11 +67,11 @@ const Hero: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50" style={{backgroundImage: 'linear-gradient(to bottom right, var(--tw-gradient-from), #EFEAFF)'}}>
         <div className="absolute inset-0 opacity-60">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#9E7DFF]/20 to-transparent rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#1CAA9C]/20 to-transparent rounded-full blur-3xl animate-float-slow"></div>
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-bl from-[#FFBAD6]/25 to-transparent rounded-full blur-3xl animate-float-medium"></div>
           <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-gradient-to-tr from-[#1CAA9C]/20 to-transparent rounded-full blur-3xl animate-float-fast"></div>
-          <div className="absolute top-1/4 left-1/2 w-64 h-64 bg-gradient-to-br from-[#9E7DFF]/15 to-[#FFBAD6]/15 rounded-full blur-3xl animate-float-reverse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-56 h-56 bg-gradient-to-tl from-[#1CAA9C]/25 to-[#9E7DFF]/15 rounded-full blur-3xl animate-float-slow-reverse"></div>
+          <div className="absolute top-1/4 left-1/2 w-64 h-64 bg-gradient-to-br from-[#1CAA9C]/15 to-[#FFBAD6]/15 rounded-full blur-3xl animate-float-reverse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-56 h-56 bg-gradient-to-tl from-[#1CAA9C]/25 to-[#1CAA9C]/15 rounded-full blur-3xl animate-float-slow-reverse"></div>
         </div>
       </div>
       {/* Two-column layout */}

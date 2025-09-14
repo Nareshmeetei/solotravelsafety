@@ -411,10 +411,34 @@ const athens: Destination = {
     safetySourceName: 'Numbeo 2025 & Athens Tourism Police',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Athens',
     redFlags: [
-      { label: 'Pickpocketing in Tourist Areas', frequency: 'Common', icon: 'Hand' },
-      { label: 'Metro/Transport Theft', frequency: 'Occasional', icon: 'Train' },
-      { label: 'Taxi Overcharging', frequency: 'Occasional', icon: 'Car' },
-      { label: 'Street Vendor Harassment', frequency: 'Occasional', icon: 'Users' }
+      {
+        label: 'Pickpocketing in Tourist Areas',
+        frequency: 'Common',
+        icon: 'Hand',
+        details: 'Professional teams using distraction techniques target solo women at Monastiraki Square, Syntagma Square, Acropolis area, and Plaka district. On metro, thieves jam doors while accomplices unzip backpacks and steal valuables. Organized groups specifically target airport metro line, Piraeus green line, and Parliament crowds.',
+        prevention: 'Hold backpack in front, never leave valuables on metro luggage racks, stay alert during train stops and delays, use X95 express bus from airport instead of metro'
+      },
+      {
+        label: 'Metro/Transport Theft',
+        frequency: 'Occasional',
+        icon: 'Train',
+        details: 'Blue metro line from airport and Green line to Piraeus are primary targets. Thieves position at luggage racks during busy times, coordinate during train delays, and cause artificial "lurching" to create confusion. Monastiraki and Syntagma stations have highest incident rates.',
+        prevention: 'Use X95 express bus from airport, keep bags in front and zipped, avoid luggage racks, download FreeNow app for safe transport alternatives'
+      },
+      {
+        label: 'Taxi Overcharging',
+        frequency: 'Occasional',
+        icon: 'Car',
+        details: 'Solo female tourists charged €160 for €40 rides, drivers manipulate meters between tariffs, refuse card payments to avoid paper trails. Recent arrests include €110 overcharge for €40 airport trip. Commission schemes take passengers to specific hotels for kickbacks.',
+        prevention: 'Use Welcome Pickups, Uber, or FreeNow apps, know fixed airport rates (€35 daytime, €50 night), insist on running meter, take photo of license plate'
+      },
+      {
+        label: 'Street Vendor Harassment',
+        frequency: 'Occasional',
+        icon: 'Users',
+        details: 'While generally respectful, some solo women report uncomfortable attention from groups of men on street corners in Plaka and Monastiraki areas. Vendors use high-pressure sales tactics and extremely friendly approaches to distract tourists during purchases.',
+        prevention: 'Politely decline unsolicited offers, avoid signing petitions from strangers, stay in well-lit tourist areas, practice bargaining like locals, maintain confident demeanor'
+      }
     ],
     culturalDos: [
       'Learn basic Greek greetings',

@@ -246,10 +246,34 @@ const helsinki: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Helsinki',
     redFlags: [
-      { label: 'Pickpocketing (Tourist Areas, Public Transport)', frequency: 'Occasional', icon: 'Hand' }, // Numbeo 2025, Travel Ladies 2025
-      { label: 'Bicycle Theft', frequency: 'Occasional', icon: 'Bike' }, // Numbeo 2025
-      { label: 'Scams (Fake Charities, Overcharging)', frequency: 'Rare', icon: 'Shield' }, // Travel Ladies 2025
-      { label: 'Drunken Disturbances (Nightlife)', frequency: 'Rare', icon: 'Beer' }, // Travel Ladies 2025
+      {
+        label: 'Pickpocketing (Tourist Areas, Public Transport)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Minor pickpocketing can occur in crowded tourist areas like Market Square and Central Station, particularly during summer tourist season. Incidents are rare but more common on busy trams and in crowded shopping areas.',
+        prevention: 'Use crossbody bags with secure closures. Keep valuables in hotel safe. Stay alert in crowded public transport. Avoid displaying expensive items. Use RFID-blocking wallets for card protection.'
+      },
+      {
+        label: 'Bicycle Theft',
+        frequency: 'Occasional',
+        icon: 'Bike',
+        details: 'Bicycle theft occurs in Helsinki, particularly unsecured bikes left in public areas. City bikes and rental bicycles are occasional targets, especially in busy areas near train station and shopping districts.',
+        prevention: 'Always lock rental bikes with provided locks. Use two locks if staying overnight. Park in well-lit, populated areas. Don\'t leave valuable items on bikes. Consider bike insurance for longer stays.'
+      },
+      {
+        label: 'Scams (Fake Charities, Overcharging)',
+        frequency: 'Rare',
+        icon: 'Shield',
+        details: 'Rare incidents include fake charity collectors and occasional overcharging of tourists in restaurants or taxis. Some fake petition signers may attempt distraction techniques near tourist areas.',
+        prevention: 'Verify charity organizations before donating. Check restaurant prices before ordering. Use official taxi services or rideshare apps. Politely decline unsolicited approaches from strangers.'
+      },
+      {
+        label: 'Drunken Disturbances (Nightlife)',
+        frequency: 'Rare',
+        icon: 'Beer',
+        details: 'Occasional alcohol-related disturbances in nightlife areas, particularly on weekend nights. While rarely dangerous, drunk individuals may become loud or inappropriate, especially in bar districts.',
+        prevention: 'Stay in groups during nightlife activities. Avoid overly intoxicated individuals. Use official transport options late at night. Trust your instincts and leave situations that feel uncomfortable.'
+      }
     ],
     usefulTips: [
       {

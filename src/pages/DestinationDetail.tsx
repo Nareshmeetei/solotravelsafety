@@ -1629,12 +1629,12 @@ const DestinationDetail: React.FC = () => {
                                 const appName = e.currentTarget.querySelector('.app-name');
                                 const appIcon = e.currentTarget.querySelector('.app-icon');
                                 if (appName) {
-                                  appName.style.color = '#8342FA';
-                                  appName.style.setProperty('color', '#8342FA', 'important');
+                                  appName.style.color = '#1CAA9C';
+                                  appName.style.setProperty('color', '#1CAA9C', 'important');
                                 }
                                 if (appIcon) {
-                                  appIcon.style.color = '#8342FA';
-                                  appIcon.style.setProperty('color', '#8342FA', 'important');
+                                  appIcon.style.color = '#1CAA9C';
+                                  appIcon.style.setProperty('color', '#1CAA9C', 'important');
                                 }
                                 e.currentTarget.style.borderColor = 'rgba(158, 125, 255, 0.3)';
                               }}
@@ -1642,12 +1642,12 @@ const DestinationDetail: React.FC = () => {
                                 const appName = e.currentTarget.querySelector('.app-name');
                                 const appIcon = e.currentTarget.querySelector('.app-icon');
                                 if (appName) {
-                                  appName.style.color = '#111827';
-                                  appName.style.setProperty('color', '#111827', 'important');
+                                  appName.style.color = '#474747';
+                                  appName.style.setProperty('color', '#474747', 'important');
                                 }
                                 if (appIcon) {
-                                  appIcon.style.color = '#111827';
-                                  appIcon.style.setProperty('color', '#111827', 'important');
+                                  appIcon.style.color = '#474747';
+                                  appIcon.style.setProperty('color', '#474747', 'important');
                                 }
                                 e.currentTarget.style.borderColor = '#e5e7eb';
                               }}
@@ -2169,12 +2169,12 @@ const DestinationDetail: React.FC = () => {
                             const accommodationName = e.currentTarget.querySelector('.accommodation-name');
                             const accommodationIcon = e.currentTarget.querySelector('.lucide-external-link');
                             if (accommodationName) {
-                              accommodationName.style.color = '#8342FA';
-                              accommodationName.style.setProperty('color', '#8342FA', 'important');
+                              accommodationName.style.color = '#1CAA9C';
+                              accommodationName.style.setProperty('color', '#1CAA9C', 'important');
                             }
                             if (accommodationIcon) {
-                              accommodationIcon.style.color = '#8342FA';
-                              accommodationIcon.style.setProperty('color', '#8342FA', 'important');
+                              accommodationIcon.style.color = '#1CAA9C';
+                              accommodationIcon.style.setProperty('color', '#1CAA9C', 'important');
                             }
                             e.currentTarget.style.borderColor = 'rgba(158, 125, 255, 0.3)';
                           }}
@@ -2182,8 +2182,8 @@ const DestinationDetail: React.FC = () => {
                             const accommodationName = e.currentTarget.querySelector('.accommodation-name');
                             const accommodationIcon = e.currentTarget.querySelector('.lucide-external-link');
                             if (accommodationName) {
-                              accommodationName.style.color = '#111827';
-                              accommodationName.style.setProperty('color', '#111827', 'important');
+                              accommodationName.style.color = '#474747';
+                              accommodationName.style.setProperty('color', '#474747', 'important');
                             }
                             if (accommodationIcon) {
                               accommodationIcon.style.color = '#9CA3AF';
@@ -2258,7 +2258,7 @@ const DestinationDetail: React.FC = () => {
         >
           <div 
             className="w-full max-w-md max-h-[80vh] overflow-y-auto rounded-3xl shadow-2xl" 
-            style={{backgroundColor: '#FFFFFF'}}
+            style={{backgroundColor: '#F1F1F1'}}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}

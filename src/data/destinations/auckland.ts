@@ -283,10 +283,34 @@ const auckland: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Auckland',
     redFlags: [
-      { label: 'Theft & Property Crime', frequency: 'Most common', icon: 'Hand' },
-      { label: 'Violent Assaults', frequency: 'Frequent', icon: 'PocketKnife' },
-      { label: 'Drug-Related Incidents', frequency: 'Frequent', icon: 'Syringe' },
-      { label: 'Gang Activity & Ram Raids', frequency: 'Occasional', icon: 'Users' },
+      {
+        label: 'Theft & Property Crime',
+        frequency: 'Most common',
+        icon: 'Hand',
+        details: 'Vehicle-related theft is most common, targeting valuables in rental cars and campervans. Hotel room theft increasing in tourist areas. Opportunistic theft on Queen Street and K Road, especially 9pm-1am when "drugged up people looking for trouble" are present.',
+        prevention: 'Never leave valuables visible in vehicles, use hotel safes, stay alert in tourist areas during peak crime hours, avoid displaying expensive electronics, use contactless payments'
+      },
+      {
+        label: 'Violent Assaults',
+        frequency: 'Frequent',
+        icon: 'PocketKnife',
+        details: 'Auckland violent crime increased 33% in 2024 with 20,000 more victims. Waitematā district saw 33% rise in stranger violence. Notable incident: German backpacker gang-raped in CBD on New Year\'s Day. Central and South Auckland have highest assault rates.',
+        prevention: 'Avoid walking alone after dark, stay in well-lit populated areas, use official transportation at night, avoid isolated parks, consider North Shore accommodation over central/South Auckland'
+      },
+      {
+        label: 'Drug-Related Incidents',
+        frequency: 'Frequent',
+        icon: 'Syringe',
+        details: 'Cocaine use more than doubled in Auckland 2021-2023. Women face 13% drink spiking risk vs 9% for men. 54.8% of spiking occurs in clubs/bars. Only 7.2% of incidents reported to police. Drug-affected individuals common on streets 9pm-1am.',
+        prevention: 'Never leave drinks unattended, watch drinks being prepared, stick to reputable venues in Viaduct/Wynyard Quarter, avoid central Auckland late at night, use official transport'
+      },
+      {
+        label: 'Gang Activity & Ram Raids',
+        frequency: 'Occasional',
+        icon: 'Users',
+        details: 'Over 10,000 gang members as of 2024, though ram raids dropped from 173 to 59 incidents. Gangs Act 2024 banned patches in November. South and West Auckland have higher gang activity. While ram raids target stores not tourists, they create unpredictable dangerous situations.',
+        prevention: 'Avoid South and West Auckland especially at night, stay in central well-patrolled tourist areas, report suspicious group activity, be aware ram raids can create sudden dangerous situations'
+      }
     ],
     culturalDos: [
       'Respect Māori culture.',

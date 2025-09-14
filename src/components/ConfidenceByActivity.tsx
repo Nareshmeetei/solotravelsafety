@@ -28,7 +28,7 @@ const getColor = (confidence: number) => {
 
 const ConfidenceByActivity: React.FC<ConfidenceByActivityProps> = ({ activities = defaultActivities }) => (
   <div className="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
-    <h4 className="text-lg font-display mb-2">Confidence by Activity</h4>
+    <h4 className="text-lg font-display mb-2 text-neutral-dark">Confidence by Activity</h4>
     <ul className="space-y-2">
       {activities.map((activity, idx) => (
         <li key={idx} className="flex items-center">

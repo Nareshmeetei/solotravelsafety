@@ -247,10 +247,34 @@ const denpasar: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Denpasar',
     redFlags: [
-      { label: 'Petty Theft', frequency: 'Common', icon: 'Hand' },
-      { label: 'Tourist Scams', frequency: 'Frequent', icon: 'AlertTriangle' },
-      { label: 'Traffic Accidents', frequency: 'Occasional', icon: 'Car' },
-      { label: 'Sexual Harassment', frequency: 'Occasional', icon: 'Shield' },
+      {
+        label: 'Petty Theft',
+        frequency: 'Common',
+        icon: 'Hand',
+        details: 'Pickpocketing and bag snatching are common in crowded areas like Kuta beach, Ubud markets, and temple complexes. Motorcycle thieves grab bags from pedestrians and restaurant tables. Beach theft while swimming is frequent.',
+        prevention: 'Use waterproof bags at beaches. Keep valuables in hotel safe. Use crossbody bags with zippers. Don\'t leave items on restaurant tables. Stay alert in crowded tourist areas and markets.'
+      },
+      {
+        label: 'Tourist Scams',
+        frequency: 'Frequent',
+        icon: 'AlertTriangle',
+        details: 'Common scams include fake taxi meters, overpriced temple tours, counterfeit goods, and "traditional blessing" ceremonies demanding money. Fake travel agents sell non-existent tours or overcharge for legitimate ones.',
+        prevention: 'Use Grab/GoJek apps for transport. Book tours through reputable hotels. Research fair prices beforehand. Politely decline unsolicited offers. Verify travel agent credentials. Pay only agreed prices.'
+      },
+      {
+        label: 'Traffic Accidents',
+        frequency: 'Occasional',
+        icon: 'Car',
+        details: 'Bali\'s chaotic traffic, poor road conditions, and inexperienced scooter drivers cause frequent accidents. Many rental scooters lack proper insurance or safety equipment. Medical facilities outside main areas are limited.',
+        prevention: 'Wear helmets on scooters always. Choose reputable rental companies with insurance. Avoid driving during rain or at night. Use Grab for longer distances. Check brakes and lights before riding.'
+      },
+      {
+        label: 'Sexual Harassment',
+        frequency: 'Occasional',
+        icon: 'Shield',
+        details: 'While less common than other issues, solo female travelers may experience persistent attention from local men, especially on beaches or in bars. Unwanted touching can occur in crowded areas or during massage services.',
+        prevention: 'Dress modestly, especially at temples and traditional areas. Book massages at reputable spas, not beach vendors. Stay in groups during nightlife. Be firm but respectful when declining advances.'
+      }
     ],
     culturalDos: [
       'Dress modestly for temples.',

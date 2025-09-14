@@ -351,17 +351,23 @@ const bern: Destination = {
       {
         label: 'Pickpocketing in tourist areas',
         frequency: 'Occasional',
-        icon: 'Hand'
+        icon: 'Hand',
+        details: 'Minor pickpocketing incidents occasionally occur at Bern Railway Station, Old Town crowded areas during festivals, and popular tourist sites like Zytglogge clock tower. Generally involves distraction techniques in crowded spaces. Much lower risk than other European cities.',
+        prevention: 'Use cross-body bags with zippers, stay aware in crowded festival areas, keep valuables in hotel safe, maintain vigilance at train station'
       },
       {
         label: 'Bicycle theft',
         frequency: 'Occasional',
-        icon: 'Bike'
+        icon: 'Bike',
+        details: 'Bike theft affects tourists using rental bicycles or staying longer-term. Most common at train station bike parking, near universities, and overnight street parking. High-end bikes and e-bikes particularly targeted. Generally non-violent property crime.',
+        prevention: 'Use high-quality locks, park in well-lit monitored areas, avoid leaving bikes overnight on streets, use hotel/accommodation secure bike storage'
       },
       {
         label: 'Tourist scams',
         frequency: 'Rare',
-        icon: 'AlertTriangle'
+        icon: 'AlertTriangle',
+        details: 'Rare instances of overcharging at some tourist restaurants, fake charity collectors near train station, and occasional overpriced souvenir sales. Much less sophisticated than scams in other cities. Generally minor financial impact.',
+        prevention: 'Research restaurant prices beforehand, politely decline street charity requests, compare souvenir prices across shops, use official tourist information'
       }
     ],
     sexualHarassmentData: {

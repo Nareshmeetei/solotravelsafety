@@ -279,10 +279,34 @@ const bangkok: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Bangkok',
     redFlags: [
-      { label: 'Taxi/Tuk-tuk Overcharging', frequency: 'Very Common', icon: 'Car' },
-      { label: 'Tourist Scams (Gems, Tailors)', frequency: 'Common', icon: 'AlertTriangle' },
-      { label: 'Red-light District Issues', frequency: 'Occasional', icon: 'Shield' },
-      { label: 'Flooding During Rainy Season', frequency: 'Seasonal', icon: 'Cloud' }
+      {
+        label: 'Taxi/Tuk-tuk Overcharging',
+        frequency: 'Very Common',
+        icon: 'Car',
+        details: 'Taxi drivers refuse meters, demanding 300-1,000+ baht instead of official rates (35 baht base + 5 baht/km). "Closed attraction" scam claims Grand Palace/temples closed, taking tourists to commission shops. Tuk-tuks charge 150+ baht for 30-60 baht journeys.',
+        prevention: 'Always insist on meter use or exit, use Grab app for fixed pricing, book through hotel taxi stands, use Google Maps to monitor routes, try MuvMi electric tuk-tuks'
+      },
+      {
+        label: 'Tourist Scams (Gems, Tailors)',
+        frequency: 'Common',
+        icon: 'AlertTriangle',
+        details: 'Well-dressed "students" claim fake temple closures near attractions, leading to jewelry stores. Active tailor scams include Sukanya Fashion demanding full payment for poor-quality polyester passed as silk. Tuk-tuk drivers offer "free government rides" requiring shop stops.',
+        prevention: 'Decline all unsolicited approaches near attractions, never accept "free" transportation, temples are rarely closed, research shop reputations online first'
+      },
+      {
+        label: 'Red-light District Issues',
+        frequency: 'Occasional',
+        icon: 'Shield',
+        details: 'Nana Plaza is "most problematic" with aggressive tactics and neglected environment. Patpong has persistent tipping pressure with staff encouraging payment "in not-so-friendly ways." Drink spiking documented in Thai media. Solo women highly visible and vulnerable.',
+        prevention: 'Avoid all three districts when traveling alone, if visiting go with trusted groups only, choose Soi Cowboy if curiosity compels visit, never leave drinks unattended'
+      },
+      {
+        label: 'Flooding During Rainy Season',
+        frequency: 'Seasonal',
+        icon: 'Cloud',
+        details: '737 flood-risk locations in Bangkok. 2025 rainfall 493.5mm vs 398.4mm average. MRT stations flood, major roads impassable. Leptospirosis risk from contaminated floodwater, dengue fever peaks July-August. Engine damage from driving through deep water.',
+        prevention: 'Wear boots in floodwater, wash thoroughly after contact, never drive through deep water, monitor weather via Traffy Fondue app, stay in well-drained areas like Siam/Riverside/Sukhumvit'
+      }
     ],
     culturalDos: [
       'Dress modestly, especially at temples.',

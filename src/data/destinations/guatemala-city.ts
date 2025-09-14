@@ -315,10 +315,34 @@ const guatemalacity: Destination = {
     safetySourceName: 'Numbeo 2024',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Guatemala-City',
     redFlags: [
-      { label: 'Violent Crime (Muggings, Armed Robbery)', frequency: 'Most common', icon: 'PocketKnife' }, // Numbeo 2024, US State Dept 2025
-      { label: 'Taxi Scams & Express Kidnapping', frequency: 'Frequent', icon: 'Car' }, // Numbeo 2024, BHTP 2025
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Frequent', icon: 'Hand' }, // Numbeo 2024
-      { label: 'Corruption & Police Bribery', frequency: 'Occasional', icon: 'Shield' }, // Numbeo 2024
+      {
+        label: 'Violent Crime (Muggings, Armed Robbery)',
+        frequency: 'Most common',
+        icon: 'PocketKnife',
+        details: 'Guatemala City has one of the world\'s highest violent crime rates targeting solo female travelers. Armed robberies occur in broad daylight, even in "safe" zones like Zona 10. Criminals use guns and knives to force victims to surrender money, phones, and jewelry. Express kidnapping involves forcing victims to ATM withdrawals under threat. Solo women are specifically targeted as easy marks due to perceived vulnerability and wealth.',
+        prevention: 'Stay in groups, use hotel transport, avoid displaying valuables, carry decoy wallet, never resist armed attackers'
+      },
+      {
+        label: 'Taxi Scams & Express Kidnapping',
+        frequency: 'Frequent',
+        icon: 'Car',
+        details: 'White unlicensed taxis and some registered drivers work with criminal networks to kidnap solo female travelers for forced ATM withdrawals. Victims are driven to multiple ATMs while threatened with weapons until daily withdrawal limits are reached. Some cases involve sexual assault during extended captivity. Fake taxis use accomplices to rob passengers before abandoning them in dangerous areas.',
+        prevention: 'Use only Uber or hotel-arranged transport, never street-hailed taxis, verify driver identity, share ride details with contacts'
+      },
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Frequent',
+        icon: 'Hand',
+        details: 'Professional pickpocketing rings specifically target solo female tourists in markets, transport hubs, and crowded areas. Motorcycle thieves snatch purses and phones from pedestrians, often causing injury when victims don\'t release items quickly. Distraction techniques include staged accidents, fake assistance offers, and coordinated group tactics while accomplices steal belongings.',
+        prevention: 'Use anti-theft crossbody bags, keep phones hidden, avoid crowds, stay alert in markets, secure bag zippers facing body'
+      },
+      {
+        label: 'Corruption & Police Bribery',
+        frequency: 'Occasional',
+        icon: 'Shield',
+        details: 'Some corrupt police officers target solo female tourists for fabricated traffic violations or document checks, demanding immediate cash payments to avoid "arrest." Fake police impersonate officers using realistic uniforms and badges to extort money or commit robbery. Real officers may demand bribes for basic assistance or reporting crimes, especially targeting vulnerable solo travelers.',
+        prevention: 'Always verify police credentials, request supervisor presence, contact embassy for serious issues, never pay bribes alone'
+      }
     ],
     usefulTips: [
       {

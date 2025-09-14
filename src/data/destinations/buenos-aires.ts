@@ -278,11 +278,41 @@ const buenosAires: Destination = {
     safetySourceName: 'US State Department & Argentina Tourism 2025',
     safetySourceUrl: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/argentina-travel-advisory.html',
     redFlags: [
-      { label: 'Phone Snatching (Motochorros)', frequency: 'Very Common', icon: 'Smartphone' },
-      { label: 'Economic Desperation Crime', frequency: 'Increasing', icon: 'TrendingUp' },
-      { label: 'Street Harassment (Catcalling)', frequency: 'Universal (100%)', icon: 'UserX' },
-      { label: 'Currency Exchange Scams', frequency: 'Common', icon: 'DollarSign' },
-      { label: 'Express Kidnapping', frequency: 'Rare but Serious', icon: 'AlertTriangle' }
+      {
+        label: 'Phone Snatching (Motochorros)',
+        frequency: 'Very Common',
+        icon: 'Smartphone',
+        details: 'Motorcycle thieves (motochorros) target pedestrians using phones on streets. This is the #1 crime against tourists in Buenos Aires, occurring multiple times daily throughout the city. Thieves work in pairs - one drives while the other snatches phones/bags from unsuspecting pedestrians.',
+        prevention: 'Never use your phone visibly on streets. Duck into cafes, shops, or restaurants to check messages. Keep phones in front zippered pockets. Use smartwatch for quick checks. Walk away from curb when possible.'
+      },
+      {
+        label: 'Economic Desperation Crime',
+        frequency: 'Increasing',
+        icon: 'TrendingUp',
+        details: 'Argentina\'s 55.5% poverty rate and 289% inflation in 2024 has dramatically increased opportunistic theft. Desperate individuals increasingly target foreigners in tourist areas, believing them to have valuable items or cash.',
+        prevention: 'Avoid displaying wealth - no expensive jewelry, designer bags, or electronics. Use digital payments when possible. Carry small amount of cash as "mugger\'s money." Stay alert in tourist zones where desperation meets opportunity.'
+      },
+      {
+        label: 'Street Harassment (Catcalling)',
+        frequency: 'Universal (100%)',
+        icon: 'UserX',
+        details: '100% of women experience catcalling in Buenos Aires - it\'s considered culturally normal. Harassment ranges from persistent compliments to vulgar comments. Solo women receive significantly more attention than those with male companions.',
+        prevention: 'Learn key phrases: "Por favor, dejame en paz" (Please leave me alone). Wear headphones to avoid engagement. Don\'t make eye contact with harassing men. Text 22676 (ACOSO) to report with location details.'
+      },
+      {
+        label: 'Currency Exchange Scams',
+        frequency: 'Common',
+        icon: 'DollarSign',
+        details: 'Arbolitos (street money exchangers) on Florida Street collaborate with criminal accomplices. After exchanging money at attractive rates, victims are followed and robbed. Fake bills are common, and some exchangers use sleight-of-hand to shortchange customers.',
+        prevention: 'Only exchange at hotels, Western Union, or authorized casa de cambio. Bring new, pristine US$100 bills for best rates. Avoid Florida Street exchangers entirely. Use MEP credit card rate when possible.'
+      },
+      {
+        label: 'Express Kidnapping',
+        frequency: 'Rare but Serious',
+        icon: 'AlertTriangle',
+        details: 'Criminals force victims to withdraw money from multiple ATMs while held briefly. Though rare, this targets solo travelers who appear wealthy. Victims are typically released after emptying daily withdrawal limits from several ATMs.',
+        prevention: 'Use ATMs only inside banks or shopping centers, never isolated street machines. Vary your routine and ATM locations. Tell contacts your plans. If targeted, comply and don\'t resist - report immediately after safe.'
+      }
     ],
     culturalDos: [
       'Learn basic Spanish with Argentine accent.',

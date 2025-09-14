@@ -308,11 +308,41 @@ const barcelona: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Barcelona',
     redFlags: [
-      { label: 'Las Ramblas Pickpocketing', frequency: 'Very Common', icon: 'Hand' },
-      { label: 'Beach Theft', frequency: 'Common', icon: 'ShoppingBag' },
-      { label: 'Nightlife Sexual Harassment', frequency: 'Increasing', icon: 'Shield' },
-      { label: 'Tourist Area Stalking', frequency: 'Occasional', icon: 'UserX' },
-      { label: 'Fake Police Scams', frequency: 'Rare but Serious', icon: 'AlertTriangle' }
+      {
+        label: 'Las Ramblas Pickpocketing',
+        frequency: 'Very Common',
+        icon: 'Hand',
+        details: 'Barcelona is Europe\'s #1 pickpocketing destination with 48.1% of all crimes. Organized teams use group distractions while accomplices steal. Young girls (8 years old) create loud distractions. 25% chance of experiencing pickpocketing during visit. La Barceloneta Metro Station saw 47% theft increase in 2024.',
+        prevention: 'Use cross-body bags with zippers, purchase phone leashes (most stolen item), stay alert in crowds near Sagrada Familia, avoid engaging strangers asking directions'
+      },
+      {
+        label: 'Beach Theft',
+        frequency: 'Common',
+        icon: 'ShoppingBag',
+        details: 'Organized teams use spotter systems to identify unattended items at Barceloneta Beach. Scooter bag snatching peaks in summer near beach promenades. Bicycle/moped thieves steal phones directly from hands. Beach lockers not guaranteed available.',
+        prevention: 'Use beach lockers at Nova Icaria/Bogatell/Mar Bella, ask bars/hotels to store belongings, choose quieter local beaches, never leave belongings unattended while swimming'
+      },
+      {
+        label: 'Nightlife Sexual Harassment',
+        frequency: 'Increasing',
+        icon: 'Shield',
+        details: '1,144 sexual assault reports in 2024 (3.9% increase). Hospital Clínic treated 784 cases (15% increase). Barrio Gótico labyrinthine layout dangerous at night for solo women. 42 nightlife establishments have anti-harassment protocols with 756 staff trained.',
+        prevention: 'Stay on well-lit streets like Passeig de Gracia after 1 AM, travel in groups of 2+ after midnight, use licensed taxis/rideshare, choose Eixample over Gothic Quarter'
+      },
+      {
+        label: 'Tourist Area Stalking',
+        frequency: 'Occasional',
+        icon: 'UserX',
+        details: '175,000 registered crimes in 2024 (105 per 1,000 inhabitants). Street muggings with force occur 1-4 AM near Port Olímpic bars. Criminals work in pairs/groups to confuse victims. El Raval has frequent robberies and drug crime.',
+        prevention: 'Stay in safer areas like Eixample/Sarrià-Sant Gervasi, avoid El Raval and La Mina at night, be wary of multiple people gaining attention simultaneously'
+      },
+      {
+        label: 'Fake Police Scams',
+        frequency: 'Rare but Serious',
+        icon: 'AlertTriangle',
+        details: 'Scammers ask for directions, then 2-3 men approach with fake IDs claiming to be police investigating drugs/terrorism. They assault and steal when victims show wallet. Late-night version checks for "counterfeit money." Target intoxicated tourists leaving bars.',
+        prevention: 'Only deal with uniformed police, request to go to official police station, don\'t take out valuables on street, don\'t engage strangers asking directions'
+      }
     ],
     culturalDos: [
       'Learn basic Spanish greetings.',

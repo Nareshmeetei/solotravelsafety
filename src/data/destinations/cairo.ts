@@ -291,20 +291,6 @@ const cairo: Destination = {
       'Greet women first before acknowledging men in mixed groups',
       'Respect Ramadan fasting by not eating/drinking publicly during daylight hours'
     ],
-    culturalDonts: [
-      'Never wear revealing clothing - no sleeveless tops, shorts, tight clothing, low necklines',
-      'Don\'t shake hands with men or initiate any physical contact whatsoever',
-      'Don\'t show public displays of affection - even holding hands draws negative attention',
-      'Don\'t point with your finger - use open hand gesture to indicate direction',
-      'Don\'t show soles of feet when sitting - keep feet flat on floor or crossed ankles only',
-      'Don\'t enter mosques during prayer times unless invited by worshippers',
-      'Don\'t photograph women without explicit permission - extremely sensitive cultural issue',
-      'Don\'t drink alcohol publicly or appear intoxicated - deeply offensive in Islamic culture',
-      'Don\'t use your left hand for eating, greeting, or handling items - considered unclean',
-      'Don\'t ignore or dismiss cultural warnings from locals - they understand the real risks',
-      'Don\'t argue with men publicly - can escalate harassment situations dangerously',
-      'Don\'t travel alone to conservative areas outside Cairo - extremely high risk for solo women'
-    ],
     bestTimeToVisit: {
       safestMonths: ['November-March'],
       events: 'Avoid summer heat (May-September). Ramadan brings cultural sensitivity but reduced services. Christmas/New Year see increased tourism and higher prices.'
@@ -455,11 +441,41 @@ const cairo: Destination = {
     safetySourceName: 'Egyptian Ministry of Tourism and Antiquities',
     safetySourceUrl: 'https://www.egypt.travel/',
     redFlags: [
-      { label: 'Sexual Harassment & Assault', frequency: 'Most common', icon: 'AlertTriangle' },
-      { label: 'Aggressive Following & Stalking', frequency: 'Frequent', icon: 'UserX' },
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Frequent', icon: 'Hand' },
-      { label: 'Tourist Scams & Overcharging', frequency: 'Frequent', icon: 'DollarSign' },
-      { label: 'Transport-Related Incidents', frequency: 'Frequent', icon: 'Car' }
+      {
+        label: 'Sexual Harassment & Assault',
+        frequency: 'Most common',
+        icon: 'AlertTriangle',
+        details: 'UN Women reports 99.3% of Egyptian women experience sexual harassment. Foreign women face additional targeting due to perceived vulnerability and cultural misunderstandings. Harassment ranges from staring, verbal comments, following, to inappropriate touching and assault attempts in all areas.',
+        prevention: 'Dress ultra-conservatively (cover everything except hands/face). Never make eye contact with men. Stay in luxury hotels with security. Use only hotel transport or Careem/Uber. Travel with female guide. Have whistle/personal alarm ready. Contact embassy immediately if incidents occur.'
+      },
+      {
+        label: 'Aggressive Following & Stalking',
+        frequency: 'Frequent',
+        icon: 'UserX',
+        details: 'Solo foreign women are frequently followed by groups of men, especially in tourist areas like Khan el-Khalili and downtown Cairo. Persistent following can last for blocks, with men trying to corner women in isolated areas. This is considered "normal" behavior by many locals.',
+        prevention: 'Walk with purpose and confidence. Avoid making eye contact. Duck into hotels or shops if followed. Learn Arabic phrases: "Ib\'ad \'anni!" (Get away!). Never go to secondary locations. Use Careem/Uber exclusively for transport. Stay in crowded, well-lit areas only.'
+      },
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Frequent',
+        icon: 'Hand',
+        details: 'Crowded areas like markets, metro stations, and tourist sites see frequent theft targeting tourists. Bag snatchers often work in groups, creating distractions while accomplices steal belongings. Women carrying obvious tourist items (cameras, designer bags) are prime targets.',
+        prevention: 'Use crossbody bags worn in front. Keep valuables in hotel safe, carry only cash needed for the day. Use money belt under clothing. Avoid displaying cameras, phones, or jewelry. Stay alert in crowded areas. Consider dummy wallet with small bills.'
+      },
+      {
+        label: 'Tourist Scams & Overcharging',
+        frequency: 'Frequent',
+        icon: 'DollarSign',
+        details: 'Foreign women face aggressive vendor harassment that often becomes sexual. Common scams include fake antiquities, carpet shops, essential oils, and "traditional" invitations that lead to harassment situations. Overcharging can be 10-20x normal prices.',
+        prevention: 'Research fair prices beforehand. Say "LA!" (No!) firmly and keep walking. Never accept invitations for tea, shopping, or "tours" from strangers. Shop in fixed-price hotel boutiques. Use hotel concierge for recommendations. Pay only agreed prices.'
+      },
+      {
+        label: 'Transport-Related Incidents',
+        frequency: 'Frequent',
+        icon: 'Car',
+        details: 'Sexual assault and harassment in taxis and public transport are common. Street taxis are particularly dangerous, with drivers locking doors or taking women to isolated areas. Even official taxis pose risks. Metro groping is frequent despite women-only cars.',
+        prevention: 'Use only Careem/Uber with GPS tracking and driver details. Share ride info with contacts. Always use women-only metro cars (pink signs). Never use street taxis, microbuses, or regular buses. Have hotel arrange all transport when possible.'
+      }
     ],
     sexualHarassmentData: {
       prevalence: 'extremely high',

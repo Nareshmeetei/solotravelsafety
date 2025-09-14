@@ -391,10 +391,34 @@ const paris: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Paris',
     redFlags: [
-      { label: 'Pickpocketing in Tourist Areas', frequency: 'Common', icon: 'Hand' },
-      { label: 'Metro Harassment Reports', frequency: 'Occasional', icon: 'Users' },
-      { label: 'Street Scams', frequency: 'Common', icon: 'AlertTriangle' },
-      { label: 'Neighborhood Safety Variation', frequency: 'Ongoing', icon: 'MapPin' }
+      {
+        label: 'Pickpocketing in Tourist Areas',
+        frequency: 'Common',
+        icon: 'Hand',
+        details: 'Professional pickpocketing gangs operate around Eiffel Tower, Louvre, Notre-Dame, and major Metro stations. They use distraction techniques, fake petitions, and "gold ring" scams. Tourist-heavy areas see multiple incidents daily.',
+        prevention: 'Use crossbody bags with zippers in front. Keep valuables in hotel safe. Stay alert around major attractions. Ignore people approaching with petitions or "found" items. Use bags with RFID protection.'
+      },
+      {
+        label: 'Metro Harassment Reports',
+        frequency: 'Occasional',
+        icon: 'Users',
+        details: 'Women report harassment on crowded Metro lines, including inappropriate touching, verbal harassment, and persistent following. Incidents increase during rush hours and on lines serving nightlife areas.',
+        prevention: 'Move to different train cars if feeling uncomfortable. Stand near other women or families. Report incidents to Metro security. Use official taxis or rideshare late at night instead of Metro.'
+      },
+      {
+        label: 'Street Scams',
+        frequency: 'Common',
+        icon: 'AlertTriangle',
+        details: 'Common scams include fake gold ring finds, petition signers who pickpocket, fake charity collectors, and overcharging at tourist restaurants. "Three card monte" gambling scams target curious onlookers.',
+        prevention: 'Never stop for strangers approaching you. Ignore "found" items and refuse to sign petitions. Research restaurant prices beforehand. Use official tour operators only. Walk confidently and purposefully.'
+      },
+      {
+        label: 'Neighborhood Safety Variation',
+        frequency: 'Ongoing',
+        icon: 'MapPin',
+        details: '2023 police reports show significant safety variations between arrondissements. Northern suburbs (18th, 19th, 20th) have higher crime rates. Some areas see drug activity and gang presence, making them unsafe for solo women after dark.',
+        prevention: 'Stay in central arrondissements (1st-8th) after dark. Research neighborhood safety before booking accommodation. Use official transport after 10 PM. Avoid isolated areas and trust your instincts about unsafe situations.'
+      }
     ],
     culturalDos: [
       'Learn basic French greetings.',

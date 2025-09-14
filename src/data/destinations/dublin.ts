@@ -455,10 +455,34 @@ const dublin: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Dublin',
     redFlags: [
-      { label: 'Pickpocketing (Tourist Areas, Public Transport)', frequency: 'Most common', icon: 'Hand' }, // Numbeo 2025, U30X 2025
-      { label: 'Drug Activity & Dealing', frequency: 'Frequent', icon: 'Syringe' }, // Numbeo 2025
-      { label: 'ATM/Card Skimming', frequency: 'Occasional', icon: 'CreditCard' }, // OneVasco 2025
-      { label: 'Overcharging Taxi Drivers', frequency: 'Occasional', icon: 'Car' }, // OneVasco 2025
+      {
+        label: 'Pickpocketing (Tourist Areas, Public Transport)',
+        frequency: 'Most common',
+        icon: 'Hand',
+        details: 'Pickpocketing occurs frequently in tourist areas like Grafton Street, Temple Bar, and major transport hubs including Connolly and Heuston stations. Thieves target distracted tourists, especially those with visible valuables or phones.',
+        prevention: 'Use crossbody bags with zippers in front. Keep valuables in hotel safe. Stay alert on crowded public transport. Avoid displaying expensive phones or jewelry. Use RFID-blocking wallets for card protection.'
+      },
+      {
+        label: 'Drug Activity & Dealing',
+        frequency: 'Frequent',
+        icon: 'Syringe',
+        details: 'Visible drug dealing and drug users are common in certain areas, particularly around O\'Connell Street, Moore Street, and some parts of Temple Bar. This creates unpredictable situations and potential safety concerns for tourists.',
+        prevention: 'Avoid loitering in areas with visible drug activity. Walk confidently through problem areas without stopping. Report suspicious activity to Gardaí (Irish police). Stay in well-lit, populated areas. Trust your instincts and leave if you feel unsafe.'
+      },
+      {
+        label: 'ATM/Card Skimming',
+        frequency: 'Occasional',
+        icon: 'CreditCard',
+        details: 'Card skimming devices have been found on ATMs in tourist areas, particularly around major shopping streets and transport hubs. Criminals use these to steal card information and PIN numbers from unsuspecting users.',
+        prevention: 'Use ATMs inside banks when possible. Check for unusual devices or loose parts before inserting your card. Cover your PIN when entering it. Monitor bank statements regularly. Notify bank immediately of any suspicious transactions.'
+      },
+      {
+        label: 'Overcharging Taxi Drivers',
+        frequency: 'Occasional',
+        icon: 'Car',
+        details: 'Some taxi drivers, particularly at airports or tourist areas, may overcharge visitors by taking longer routes, claiming meters are broken, or adding unwarranted fees. This especially targets tourists unfamiliar with local rates.',
+        prevention: 'Use ride-sharing apps like Uber or Bolt for transparent pricing. Always insist on meter usage in official taxis. Research approximate fare costs beforehand. Ask hotel staff for reliable taxi company recommendations.'
+      }
     ],
     usefulTips: [
       {

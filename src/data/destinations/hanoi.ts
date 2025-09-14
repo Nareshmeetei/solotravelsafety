@@ -272,10 +272,34 @@ const hanoi: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Hanoi',
     redFlags: [
-      { label: 'Traffic Safety', frequency: 'Most common', icon: 'Car' },
-      { label: 'Petty Theft', frequency: 'Occasional', icon: 'Hand' },
-      { label: 'Tourist Scams', frequency: 'Occasional', icon: 'AlertTriangle' },
-      { label: 'Food Safety Issues', frequency: 'Frequent', icon: 'Utensils' },
+      {
+        label: 'Traffic Safety',
+        frequency: 'Most common',
+        icon: 'Car',
+        details: 'Hanoi\'s chaotic traffic with millions of motorbikes poses the biggest safety risk. Pedestrians are forced into roads due to parked motorbikes on sidewalks. Traffic accidents involving tourists are frequent, especially when riding rented scooters.',
+        prevention: 'Use Grab for transportation instead of street motorbike taxis. Look both ways constantly when crossing streets. Never rent a motorbike without proper insurance and experience. Walk defensively and stay alert at all times.'
+      },
+      {
+        label: 'Petty Theft',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Bag snatching from motorbikes and pickpocketing occurs in crowded tourist areas like Old Quarter and Dong Xuan Market. Phone snatching while taking photos is common. Thieves target distracted tourists.',
+        prevention: 'Use crossbody bags worn in front. Keep phones secure when taking photos. Avoid displaying expensive items. Stay alert in crowded markets and tourist areas. Use hotel safes for valuables.'
+      },
+      {
+        label: 'Tourist Scams',
+        frequency: 'Occasional',
+        icon: 'AlertTriangle',
+        details: 'Common scams include fake currency exchange, overcharging for tours, counterfeit goods, and restaurant bill padding. Motorbike taxi drivers may take longer routes or demand higher fares from foreigners.',
+        prevention: 'Use official exchange counters or ATMs. Book tours through reputable companies. Check bills carefully before paying. Use Grab for transparent pricing. Research fair prices beforehand.'
+      },
+      {
+        label: 'Food Safety Issues',
+        frequency: 'Frequent',
+        icon: 'Utensils',
+        details: 'Street food and tap water can cause stomach issues for foreign travelers. Food poisoning from unhygienic preparation or contaminated ingredients is common, especially from street vendors with poor sanitation practices.',
+        prevention: 'Drink only bottled or boiled water. Choose busy street food stalls with high turnover. Avoid raw vegetables and unpeeled fruits. Watch food being prepared fresh. Carry stomach medication as precaution.'
+      }
     ],
     culturalDos: [
       'Dress modestly in temples and local areas.',

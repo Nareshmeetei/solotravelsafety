@@ -447,11 +447,41 @@ const capetown: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Cape-Town',
     redFlags: [
-      { label: 'Sexual Assault & Gender-Based Violence', frequency: 'Most common', icon: 'AlertTriangle' },
-      { label: 'Armed Robbery & Mugging', frequency: 'Most common', icon: 'PocketKnife' },
-      { label: 'Kidnapping & Human Trafficking', frequency: 'Frequent', icon: 'Shield' },
-      { label: 'Carjacking & Smash-and-Grab', frequency: 'Frequent', icon: 'Car' },
-      { label: 'Gang Violence & Territorial Crime', frequency: 'Frequent', icon: 'Users' }
+      {
+        label: 'Sexual Assault & Gender-Based Violence',
+        frequency: 'Most common',
+        icon: 'AlertTriangle',
+        details: 'South Africa has the world\'s highest rate of reported sexual assault with 40% of women experiencing rape in their lifetime. Cape Town sees 1 sexual assault reported every 8 minutes. Solo female travelers are specifically targeted, with incidents occurring even in "safe" tourist areas like V&A Waterfront surroundings.',
+        prevention: 'Never walk alone anywhere, including daytime. Stay only in V&A Waterfront with 24/7 security. Use verified hotel transport exclusively. Travel in groups with reputable tour companies. Have emergency contacts ready. Consider personal GPS tracker and panic alarm.'
+      },
+      {
+        label: 'Armed Robbery & Mugging',
+        frequency: 'Most common',
+        icon: 'PocketKnife',
+        details: 'Cape Town has over 15,000 armed robberies annually. Criminals often use knives, guns, or weapons to target tourists. Solo women are seen as easy targets, especially those with visible valuables. Robberies escalate quickly to violence if victims resist.',
+        prevention: 'Carry minimal cash in dummy wallet. Leave all jewelry and expensive items at hotel. Don\'t resist armed robbers - compliance saves lives. Use hotel safe for valuables. Avoid displaying phones, cameras, or bags. Never wear expensive clothing or accessories.'
+      },
+      {
+        label: 'Kidnapping & Human Trafficking',
+        frequency: 'Frequent',
+        icon: 'Shield',
+        details: 'Cape Town is a human trafficking hub with over 30,000 victims. Solo foreign women are targeted for kidnapping, often from tourist areas. Victims are drugged, taken to secondary locations, and trafficked. Express kidnapping for ATM money also common.',
+        prevention: 'Never go to secondary locations with strangers. Don\'t accept drinks from anyone. Use GPS sharing apps constantly. Stay in groups at all times. Have regular check-ins with contacts. Use only verified, tracked transportation. Trust no one offering "help" or "opportunities".'
+      },
+      {
+        label: 'Carjacking & Smash-and-Grab',
+        frequency: 'Frequent',
+        icon: 'Car',
+        details: 'Cape Town averages 45 carjackings daily. Criminals target rental cars and tourists at traffic lights, intersections, and parking lots. Smash-and-grab attacks occur while vehicles are stopped, with thieves breaking windows to steal belongings or force entry.',
+        prevention: 'Use only reputable car rental with security features. Keep doors locked, windows up at all times. Don\'t stop at red lights - treat as yield signs with police permission. Hide all belongings from view. Park only in secured, monitored lots. Consider hiring driver instead of driving.'
+      },
+      {
+        label: 'Gang Violence & Territorial Crime',
+        frequency: 'Frequent',
+        icon: 'Users',
+        details: 'Cape Town has over 130 active gangs controlling territories throughout the city. Tourists can unknowingly enter gang territories and become victims of violence, extortion, or be caught in crossfire. Gang members specifically target foreign women for robbery and assault.',
+        prevention: 'Research gang territory maps before travel. Stick to tourist police patrolled areas only. Never explore "authentic" neighborhoods without professional security guide. Avoid all township tours. Use hotel concierge for all activity planning. Don\'t venture outside secure hotel zones.'
+      }
     ],
     sexualHarassmentData: {
       prevalence: 'extremely high',

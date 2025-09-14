@@ -25,7 +25,7 @@ const SafetyByTimeOfDay: React.FC<SafetyByTimeOfDayProps> = ({ daytimeSafetyPerc
 
   return (
     <div className="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
-      <h4 className="text-lg font-display mb-2">Safety by Time of Day</h4>
+      <h4 className="text-lg font-display mb-2 text-neutral-dark">Safety by Time of Day</h4>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="flex-1 flex items-center">
           <Sun className="h-8 w-8 text-yellow-400 mr-4" />

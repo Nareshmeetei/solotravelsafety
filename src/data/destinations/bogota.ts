@@ -277,10 +277,34 @@ const bogota: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Bogota',
     redFlags: [
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Most common', icon: 'Hand' }, // Numbeo 2025, World Nomads 2024, Dragonfly 2024
-      { label: 'Muggings & Armed Robbery', frequency: 'Frequent', icon: 'PocketKnife' }, // Numbeo 2025, Dragonfly 2024
-      { label: 'Taxi Scams & Overcharging', frequency: 'Frequent', icon: 'Car' }, // Numbeo 2025, World Nomads 2024
-      { label: 'Drink Spiking & Drugging', frequency: 'Occasional', icon: 'Syringe' }, // World Nomads 2024
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Most common',
+        icon: 'Hand',
+        details: 'Extremely common in TransMilenio stations, La Candelaria historic district, and crowded markets. Teams work together using distraction techniques. Motorcycle thieves snatch bags and phones from pedestrians. Peak times during rush hours and tourist events.',
+        prevention: 'Use anti-theft crossbody bags, keep phones hidden, avoid TransMilenio during peak hours, stay alert in crowds, keep valuables in hotel safe'
+      },
+      {
+        label: 'Muggings & Armed Robbery',
+        frequency: 'Frequent',
+        icon: 'PocketKnife',
+        details: 'Armed robberies target solo travelers, especially women, in poorly lit areas and certain neighborhoods. Express kidnapping involves forcing victims to ATM withdrawals. Higher risk after dark and in areas like Ciudad Bolívar, Bosa, and parts of La Candelaria.',
+        prevention: 'Never resist armed attackers, carry decoy wallet, avoid walking alone at night, use Uber instead of walking, stay in safe neighborhoods like Zona Rosa'
+      },
+      {
+        label: 'Taxi Scams & Overcharging',
+        frequency: 'Frequent',
+        icon: 'Car',
+        details: 'Unlicensed taxis overcharge tourists and may be involved in robberies. Some drivers work with criminals for express kidnapping. Fake meters and route manipulation common. Airport taxis particularly problematic for solo female travelers.',
+        prevention: 'Use only Uber or official taxi apps, verify driver identity and license plate, share ride details with contacts, never use street-hailed taxis'
+      },
+      {
+        label: 'Drink Spiking & Drugging',
+        frequency: 'Occasional',
+        icon: 'Syringe',
+        details: 'Scopolamine (devil\'s breath) used to drug victims in bars and nightlife areas, making them compliant for robbery or assault. Particularly targets solo female travelers. Zona Rosa nightlife district has reported incidents.',
+        prevention: 'Never leave drinks unattended, don\'t accept drinks from strangers, travel with trusted friends in nightlife areas, stay in groups at bars/clubs'
+      }
     ],
     usefulTips: [
       {

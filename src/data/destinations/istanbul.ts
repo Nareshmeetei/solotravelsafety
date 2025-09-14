@@ -286,11 +286,41 @@ const istanbul: Destination = {
     safetySourceName: 'Travel Ladies & Solo Female Travel Community 2025',
     safetySourceUrl: 'https://travelladies.app/safety/turkey/istanbul',
     redFlags: [
-      { label: 'Street Harassment (Tourist Areas)', frequency: 'Common', icon: 'AlertTriangle' },
-      { label: 'Aggressive Vendors (Bazaars)', frequency: 'Very Common', icon: 'ShoppingBag' },
-      { label: 'Taxi Overcharging', frequency: 'Common', icon: 'Car' },
-      { label: 'Pickpocketing (Public Transport)', frequency: 'Occasional', icon: 'Hand' },
-      { label: 'Fake Police Scams', frequency: 'Rare', icon: 'Shield' }
+      {
+        label: 'Street Harassment (Tourist Areas)',
+        frequency: 'Common',
+        icon: 'AlertTriangle',
+        details: 'Solo female travelers commonly experience catcalling, persistent following, and unwanted attention from men, especially in tourist areas like Sultanahmet and Grand Bazaar. Cultural norms make solo women objects of curiosity, leading to uncomfortable situations.',
+        prevention: 'Dress modestly covering shoulders and knees. Avoid eye contact with harassing men. Learn basic Turkish phrases: "Beni rahat bırak" (Leave me alone). Walk confidently and ignore catcalls. Stay in busy, well-populated areas.'
+      },
+      {
+        label: 'Aggressive Vendors (Bazaars)',
+        frequency: 'Very Common',
+        icon: 'ShoppingBag',
+        details: 'Vendors in Grand Bazaar and Spice Bazaar use aggressive tactics on solo female tourists, including persistent following, grabbing arms, and blocking paths. They exploit cultural politeness and may become sexually inappropriate in their sales approach.',
+        prevention: 'Say "Hayır, teşekkürler" (No, thank you) firmly and keep walking. Don\'t feel obligated to be polite if vendors become aggressive. Avoid making eye contact. Shop with confidence and don\'t hesitate to be rude if necessary.'
+      },
+      {
+        label: 'Taxi Overcharging',
+        frequency: 'Common',
+        icon: 'Car',
+        details: 'Taxi drivers frequently overcharge tourists, especially solo women, by not using meters, claiming meters are broken, or taking longer routes. Airport taxis are notorious for excessive pricing and fake additional fees.',
+        prevention: 'Use rideshare apps like BiTaksi or Uber when available. Always insist on meter usage. Know approximate fare costs beforehand. Use official airport shuttles instead of airport taxis. Learn to count to 10 in Turkish for meter reading.'
+      },
+      {
+        label: 'Pickpocketing (Public Transport)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Pickpocketing occurs on crowded public transport, particularly on trams and buses serving tourist routes between Sultanahmet and Beyoğlu. Thieves target distracted tourists with visible valuables.',
+        prevention: 'Use crossbody bags worn in front on public transport. Keep phones and cameras secure. Be extra vigilant during rush hours. Use bags with zippers and RFID protection. Stay alert when boarding crowded vehicles.'
+      },
+      {
+        label: 'Fake Police Scams',
+        frequency: 'Rare',
+        icon: 'Shield',
+        details: 'Rare but serious scam where fake police officers approach tourists claiming to check for counterfeit money or drugs, then steal money or demand bribes. They may work with accomplices who initially approach victims.',
+        prevention: 'Real Turkish police wear uniforms and have proper ID. Ask to see official identification. Never hand over money or passport without being taken to a real police station. Contact tourist police at 153 if suspicious.'
+      }
     ],
     usefulTips: [
       {

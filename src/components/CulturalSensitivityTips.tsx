@@ -8,7 +8,7 @@ interface CulturalSensitivityTipsProps {
 
 const CulturalSensitivityTips: React.FC<CulturalSensitivityTipsProps> = ({ dos, donts }) => (
   <div className="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
-    <h4 className="text-lg font-display mb-2">Cultural Sensitivity Tips</h4>
+    <h4 className="text-lg font-display mb-2 text-neutral-dark">Cultural Sensitivity Tips</h4>
     <ul className="space-y-2 mb-4">
       {dos.map((tip, idx) => (
         <li key={idx} className="flex items-center">
