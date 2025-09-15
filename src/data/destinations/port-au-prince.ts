@@ -263,11 +263,41 @@ const portAuPrince: Destination = {
     safetySourceName: 'Multiple Government Travel Advisories 2025',
     safetySourceUrl: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/haiti-travel-advisory.html',
     redFlags: [
-      { label: 'Mass Kidnappings for Ransom', frequency: 'Daily', icon: 'Users' },
-      { label: 'Systematic Sexual Violence', frequency: 'Daily', icon: 'AlertTriangle' },
-      { label: 'Gang-Controlled Territory (80-90%)', frequency: 'Permanent', icon: 'Shield' },
-      { label: 'Armed Robbery & Carjacking', frequency: 'Hourly', icon: 'Car' },
-      { label: 'Murder & Violent Assault', frequency: 'Daily', icon: 'Skull' }
+      {
+        label: 'Mass Kidnappings for Ransom',
+        frequency: 'Daily',
+        icon: 'Users',
+        details: 'Haiti has one of the world\'s highest kidnapping rates with over 1,600+ cases in 2023. Gangs target anyone perceived as having money, including foreign aid workers and journalists.',
+        prevention: 'DO NOT TRAVEL - US State Dept Level 4 advisory. If already present, contact embassy immediately for evacuation assistance'
+      },
+      {
+        label: 'Systematic Sexual Violence',
+        frequency: 'Daily',
+        icon: 'AlertTriangle',
+        details: 'UN reports widespread sexual violence as a weapon of gang control. Women and girls face extreme risk of assault, with over 3,000 cases reported in first half of 2023.',
+        prevention: 'Immediate evacuation recommended. Contact embassy, avoid all movement outside secure compounds if present'
+      },
+      {
+        label: 'Gang-Controlled Territory (80-90%)',
+        frequency: 'Permanent',
+        icon: 'Shield',
+        details: 'Armed gangs control 80-90% of Port-au-Prince. The G9 gang federation operates with impunity, controlling roads, ports, and fuel supplies.',
+        prevention: 'No safe areas exist. All travel strongly discouraged by international governments. Embassy assistance required'
+      },
+      {
+        label: 'Armed Robbery & Carjacking',
+        frequency: 'Hourly',
+        icon: 'Car',
+        details: 'Violent robberies and carjackings occur throughout the day. Armed gangs operate checkpoints and target vehicles for theft and ransom.',
+        prevention: 'Avoid all ground transportation. Embassy or UN transport only. Do not drive or use local transport'
+      },
+      {
+        label: 'Murder & Violent Assault',
+        frequency: 'Daily',
+        icon: 'Skull',
+        details: 'Haiti has one of world\'s highest murder rates. Over 4,700 people killed in 2023. Violence includes torture, executions, and public displays of brutality.',
+        prevention: 'Immediate departure essential. Contact embassy for emergency evacuation. Avoid all public areas'
+      }
     ],
     culturalDos: [
       'Contact embassy immediately if in Haiti',

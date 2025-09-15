@@ -301,21 +301,29 @@ const zurich: Destination = {
         label: 'Pickpocketing in Crowded Areas & Transit',
         frequency: 'Rare',
         icon: 'Hand',
+        details: 'Very rare pickpocketing incidents in busy areas like Bahnhofstrasse shopping district and main train station during peak tourist season.',
+        prevention: 'Keep valuables secure, use hotel safes, stay alert in crowded areas, secure bags with zippers'
       },
       {
         label: 'Scams (ATM, Fake Police, Overcharging)',
         frequency: 'Rare',
         icon: 'CreditCard',
+        details: 'Rare incidents of ATM skimming, fake police approaches, and tourist overcharging at some establishments.',
+        prevention: 'Use ATMs inside banks, verify police credentials, check prices beforehand, cover PIN when entering'
       },
       {
         label: 'Nightlife Drunk Behavior (Langstrasse)',
         frequency: 'Rare',
         icon: 'Beer',
+        details: 'Occasional rowdy behavior in nightlife districts like Langstrasse, particularly on weekends. Generally more noise than danger.',
+        prevention: 'Stay aware in nightlife areas, avoid confrontations with intoxicated individuals, use official transport'
       },
       {
         label: 'Bike Theft',
         frequency: 'Rare',
         icon: 'Bike',
+        details: 'Occasional theft of unlocked or poorly secured bicycles, particularly at train stations and popular areas. Generally low crime rates overall.',
+        prevention: 'Always lock bikes with quality locks, use designated bike parking areas, consider bike insurance for rentals'
       },
     ],
   culturalSensitivity: {

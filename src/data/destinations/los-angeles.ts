@@ -377,10 +377,34 @@ const losAngeles: Destination = {
     safetySourceName: 'Travel Ladies Community & LAPD 2024',
     safetySourceUrl: 'https://travelladies.app/safety/united-states/los-angeles',
     redFlags: [
-      { label: 'Property Crime & Car Break-ins', frequency: 'Most Common', icon: 'Car' },
-      { label: 'Pickpocketing in Tourist Areas', frequency: 'Common', icon: 'Hand' },
-      { label: 'Street Harassment (Hollywood/Venice)', frequency: 'Occasional', icon: 'AlertTriangle' },
-      { label: 'Scams & Overcharging (Tours/Parking)', frequency: 'Occasional', icon: 'DollarSign' }
+      {
+        label: 'Property Crime & Car Break-ins',
+        frequency: 'Most Common',
+        icon: 'Car',
+        details: 'Car break-ins are extremely common throughout LA, especially in tourist areas like Hollywood, Venice Beach, and downtown. Thieves target rental cars and vehicles with visible items.',
+        prevention: 'Never leave anything visible in cars, use valet parking when possible, avoid street parking in tourist areas, rent cars without tourist company stickers'
+      },
+      {
+        label: 'Pickpocketing in Tourist Areas',
+        frequency: 'Common',
+        icon: 'Hand',
+        details: 'Pickpockets operate at Hollywood Walk of Fame, Venice Beach, and crowded events. Distraction techniques used while accomplices steal from bags and pockets.',
+        prevention: 'Keep valuables in front pockets, use crossbody bags, stay alert in crowds, avoid displaying expensive items or large amounts of cash'
+      },
+      {
+        label: 'Street Harassment (Hollywood/Venice)',
+        frequency: 'Occasional',
+        icon: 'AlertTriangle',
+        details: 'Solo female travelers may experience harassment from street performers, vendors, or individuals in Hollywood and Venice Beach areas, particularly at night.',
+        prevention: 'Stay in well-lit busy areas, travel with others after dark, use rideshare instead of walking alone, trust your instincts and leave uncomfortable situations'
+      },
+      {
+        label: 'Scams & Overcharging (Tours/Parking)',
+        frequency: 'Occasional',
+        icon: 'DollarSign',
+        details: 'Tourist-targeted scams include overpriced tours, fake celebrity sightings, parking lot scams, and inflated prices at tourist attractions.',
+        prevention: 'Research tour companies beforehand, check parking prices before leaving car, be skeptical of "deals", use official attraction websites for tickets'
+      }
     ],
     culturalDos: [
       'Rent a car or use rideshare apps',

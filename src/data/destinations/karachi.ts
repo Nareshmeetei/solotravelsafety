@@ -554,10 +554,34 @@ const karachi: Destination = {
     daytimeSafetyPercent: 52.3, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Karachi)
     nighttimeSafetyPercent: 29.2, // Source: Numbeo 2025 (https://www.numbeo.com/crime/in/Karachi)
     redFlags: [
-      { label: 'Mobile Phone Snatching', frequency: 'Most common', icon: 'Smartphone' }, // CPLC 2025, Times of Karachi 2025
-      { label: 'Vehicle Theft & Snatching', frequency: 'Most common', icon: 'Car' }, // CPLC 2025, Times of Karachi 2025
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Frequent', icon: 'Hand' }, // Numbeo 2025
-      { label: 'Kidnapping for Ransom', frequency: 'Occasional', icon: 'Users' }, // CPLC 2025
+      {
+        label: 'Mobile Phone Snatching',
+        frequency: 'Most common',
+        icon: 'Smartphone',
+        details: 'Street criminals target mobile phones, often operating on motorcycles in pairs. Solo female travelers are particularly vulnerable. Over 70% of street crimes involve phone theft.',
+        prevention: 'Keep phones hidden, avoid using phones on streets, use cheap backup phone for navigation, stay alert in traffic'
+      },
+      {
+        label: 'Vehicle Theft & Snatching',
+        frequency: 'Most common',
+        icon: 'Car',
+        details: 'Armed carjacking and motorcycle snatching are common. Criminals target rental cars and vehicles with foreign occupants. Often involves weapons.',
+        prevention: 'Use registered taxis or rideshare apps only, avoid driving at night, keep doors locked, use secure parking'
+      },
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Frequent',
+        icon: 'Hand',
+        details: 'Professional pickpockets operate in crowded markets, public transport, and tourist areas. Bag snatching from motorcycles is increasing.',
+        prevention: 'Use money belts, carry minimal cash, secure bags across body, avoid crowded bazaars alone'
+      },
+      {
+        label: 'Kidnapping for Ransom',
+        frequency: 'Occasional',
+        icon: 'Users',
+        details: 'Express kidnapping and ransom cases target wealthy-appearing foreigners. Can involve demands for ATM withdrawals or family ransom.',
+        prevention: 'Stay in groups, use reputable guides, avoid isolated areas, inform contacts of travel plans, use security services'
+      }
     ],
     usefulTips: [
       {

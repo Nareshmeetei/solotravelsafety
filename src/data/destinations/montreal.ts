@@ -256,10 +256,34 @@ const montreal: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Montreal',
     redFlags: [
-      { label: 'Petty Theft (Tourist Areas)', frequency: 'Occasional', icon: 'Hand' },
-      { label: 'Bicycle Theft', frequency: 'Occasional', icon: 'Bike' },
-      { label: 'Winter Weather Hazards', frequency: 'Seasonal', icon: 'Cloud' },
-      { label: 'Pickpocketing (Festivals)', frequency: 'Rare', icon: 'Users' }
+      {
+        label: 'Petty Theft (Tourist Areas)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Minor theft can occur in busy tourist areas like Old Montreal and during large events. Generally low-level opportunistic crime.',
+        prevention: 'Keep valuables secure, don\'t leave bags unattended, use hotel safes, stay aware in crowded areas'
+      },
+      {
+        label: 'Bicycle Theft',
+        frequency: 'Occasional',
+        icon: 'Bike',
+        details: 'Bike theft is common, especially of unlocked or poorly secured bicycles near metro stations and university areas.',
+        prevention: 'Always use quality locks, park in designated areas, consider bike insurance, use BIXI bike share system'
+      },
+      {
+        label: 'Winter Weather Hazards',
+        frequency: 'Seasonal',
+        icon: 'Cloud',
+        details: 'Harsh winter conditions with ice, snow, and extreme cold can be dangerous for unprepared travelers. Slips and falls are common.',
+        prevention: 'Wear appropriate winter clothing, use proper footwear with grip, check weather forecasts, stay indoors during storms'
+      },
+      {
+        label: 'Pickpocketing (Festivals)',
+        frequency: 'Rare',
+        icon: 'Users',
+        details: 'Rare incidents of pickpocketing during major festivals like Jazz Festival or Just for Laughs when crowds are largest.',
+        prevention: 'Stay alert during festivals, keep valuables in front pockets, use crossbody bags, avoid carrying unnecessary items'
+      }
     ],
     culturalDos: [
       'Say "Bonjour" when entering shops and restaurants',

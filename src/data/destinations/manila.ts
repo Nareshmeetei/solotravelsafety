@@ -299,10 +299,34 @@ const manila: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Manila',
     redFlags: [
-      { label: 'Violent Crime (Muggings, Armed Robbery)', frequency: 'Most common', icon: 'PocketKnife' }, // Numbeo 2025, PH Gov 2025
-      { label: 'Scams (Taxi, ATM, Fake Police)', frequency: 'Most common', icon: 'Shield' }, // Numbeo 2025, PH Gov 2025
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Frequent', icon: 'Hand' }, // Numbeo 2025
-      { label: 'Drug-Related Incidents', frequency: 'Frequent', icon: 'Syringe' }, // Numbeo 2025
+      {
+        label: 'Violent Crime (Muggings, Armed Robbery)',
+        frequency: 'Most common',
+        icon: 'Knife',
+        details: 'Manila has significant violent crime rates including armed robbery and muggings, particularly targeting foreign tourists. Solo female travelers face increased risks.',
+        prevention: 'Avoid displaying valuables, stay in secure areas, use hotel transport, never walk alone after dark, carry minimal cash'
+      },
+      {
+        label: 'Scams (Taxi, ATM, Fake Police)',
+        frequency: 'Most common',
+        icon: 'Shield',
+        details: 'Common scams include taxi overcharging, ATM skimming, fake police demanding bribes, and romance scams targeting solo travelers.',
+        prevention: 'Use rideshare apps, cover ATM PIN, verify police credentials, be skeptical of overly friendly strangers'
+      },
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Frequent',
+        icon: 'Hand',
+        details: 'Professional thieves operate in crowded areas, markets, and public transport. Motorcycle-riding bag snatchers target pedestrians.',
+        prevention: 'Use money belts, secure bags across body, stay alert in crowds, avoid walking near streets with heavy traffic'
+      },
+      {
+        label: 'Drug-Related Incidents',
+        frequency: 'Frequent',
+        icon: 'Pill',
+        details: 'Drug-related violence and crime affect many areas. Tourists may be targeted for theft to fund drug purchases or inadvertently encounter drug activity.',
+        prevention: 'Avoid certain neighborhoods, stay in tourist areas, use reputable accommodations, report suspicious activity'
+      }
     ],
     usefulTips: [
       {

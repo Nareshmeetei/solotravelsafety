@@ -267,12 +267,48 @@ const lisbon: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Lisbon',
     redFlags: [
-      { label: 'Street Harassment & Catcalling', frequency: 'Common for solo women at night', icon: 'AlertTriangle' },
-      { label: 'Tram 28 Pickpocketing Hub', frequency: 'Daily occurrences reported', icon: 'Hand' },
-      { label: 'Martim Moniz Area After Dark', frequency: 'High harassment risk for women alone', icon: 'MapPin' },
-      { label: 'Tourist Overcharging & Menu Scams', frequency: 'Frequent in tourist zones', icon: 'DollarSign' },
-      { label: 'Steep Cobblestone Falls', frequency: 'Regular incidents reported', icon: 'Mountain' },
-      { label: 'Fake Drug Dealers Targeting Tourists', frequency: 'Common in Bairro Alto', icon: 'Shield' }
+      {
+        label: 'Street Harassment & Catcalling',
+        frequency: 'Common for solo women at night',
+        icon: 'AlertTriangle',
+        details: 'Solo female travelers report increased harassment in nightlife areas, particularly Bairro Alto and Cais do Sodré. Groups of men may follow or make persistent comments.',
+        prevention: 'Travel in groups after dark, stick to well-lit main streets, use rideshare for late-night transport, trust your instincts'
+      },
+      {
+        label: 'Tram 28 Pickpocketing Hub',
+        frequency: 'Daily occurrences reported',
+        icon: 'Hand',
+        details: 'Famous Tram 28 is prime target for organized pickpockets who work in teams. Tourists distracted by sights become easy victims during crowded rides.',
+        prevention: 'Keep bags in front, avoid rush hours, secure valuables in inner pockets, stay alert at stops'
+      },
+      {
+        label: 'Martim Moniz Area After Dark',
+        frequency: 'High harassment risk for women alone',
+        icon: 'MapPin',
+        details: 'Martim Moniz square and surrounding streets have increased reports of harassment toward solo women after 9 PM. Drug activity and loitering groups present.',
+        prevention: 'Avoid this area after dark, use alternative routes to Rossio, take taxis/Uber instead of walking through'
+      },
+      {
+        label: 'Tourist Overcharging & Menu Scams',
+        frequency: 'Frequent in tourist zones',
+        icon: 'DollarSign',
+        details: 'Restaurants near major attractions often have inflated prices or hidden charges. Some establishments charge extra for bread, olives, or "couvert" without explanation.',
+        prevention: 'Check prices before ordering, ask about couvert charges, read reviews, eat where locals dine'
+      },
+      {
+        label: 'Steep Cobblestone Falls',
+        frequency: 'Regular incidents reported',
+        icon: 'Mountain',
+        details: 'Lisbon\'s famous cobblestone streets become slippery when wet. Regular injuries occur on steep hills, especially in Alfama and Bairro Alto districts.',
+        prevention: 'Wear proper grip shoes, walk carefully on wet stones, use handrails when available, consider Uber for steep climbs'
+      },
+      {
+        label: 'Fake Drug Dealers Targeting Tourists',
+        frequency: 'Common in Bairro Alto',
+        icon: 'Shield',
+        details: 'Individuals approach tourists offering drugs or hashish, often as setup for robbery or scam. Particularly common in nightlife areas.',
+        prevention: 'Ignore all drug offers, walk away immediately, don\'t engage in conversation, report aggressive dealers to police'
+      }
     ],
     culturalDos: [
       'Learn basic Portuguese greetings.',

@@ -336,23 +336,31 @@ const mexicocity: Destination = {
       {
         label: 'Mugging & Armed Robbery',
         frequency: 'Most common',
-        icon: 'PocketKnife',
+        icon: 'Knife',
+        details: 'Armed robbery and muggings are significant concerns, especially targeting tourists. Solo female travelers face increased risks in certain areas of the city.',
+        prevention: 'Avoid displaying valuables, stay in safe neighborhoods, use hotel transport, never walk alone at night, carry minimal cash'
       },
       {
         label: 'Pickpocketing & Bag Snatching',
         frequency: 'Most common',
         icon: 'Hand',
+        details: 'Professional thieves operate in crowded areas like markets, metro stations, and tourist attractions. Bag snatching from motorcycles also occurs.',
+        prevention: 'Keep bags in front, use money belts, stay alert in crowds, secure bags across body, avoid displaying phones or cameras openly'
       },
       {
         label: 'Taxi Scams & Unlicensed Taxis',
         frequency: 'Frequent',
         icon: 'Car',
+        details: 'Unlicensed taxis may overcharge, take longer routes, or be involved in robberies. Some taxi drivers collaborate with criminals.',
+        prevention: 'Use official taxi stands or rideshare apps only, verify taxi credentials, agree on fare beforehand, avoid hailing taxis on street'
       },
       {
         label: 'Corruption & Bribery',
         frequency: 'Frequent',
-        icon: 'CreditCard',
-      },
+        icon: 'DollarSign',
+        details: 'Police may demand bribes from tourists, especially during traffic stops or document checks. Fake police also operate in tourist areas.',
+        prevention: 'Ask for official receipts, request supervisor, know your rights, carry copies of documents, use embassy contacts if needed'
+      }
     ],
     usefulTips: [
       {

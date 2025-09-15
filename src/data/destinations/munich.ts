@@ -320,22 +320,30 @@ const munich: Destination = {
         label: 'Pickpocketing in Tourist Areas',
         frequency: 'Occasional',
         icon: 'Hand',
+        details: 'Pickpocketing can occur in crowded tourist areas like Marienplatz, Oktoberfest, and Christmas markets. Professional thieves target distracted tourists.',
+        prevention: 'Keep valuables in front pockets, use money belts, stay alert in crowds, secure bags with zippers, avoid displaying expensive items'
       },
       {
         label: 'Scams (Fake Police, ATM, Charity)',
         frequency: 'Occasional',
         icon: 'CreditCard',
+        details: 'Scams include fake charity collectors, ATM skimming devices, and occasional fake police asking for document checks.',
+        prevention: 'Use ATMs in banks, verify police credentials, ignore charity solicitors, cover PIN when entering, be skeptical of unsolicited approaches'
       },
       {
         label: 'Drunk Behavior at Festivals',
         frequency: 'Occasional',
-        icon: 'Beer',
+        icon: 'Wine',
+        details: 'During Oktoberfest and other beer festivals, intoxicated individuals may become rowdy or inappropriate, particularly toward solo female travelers.',
+        prevention: 'Stay in groups during festivals, avoid heavily intoxicated areas, use official festival security, leave uncomfortable situations immediately'
       },
       {
         label: 'Bike Lane Accidents',
         frequency: 'Occasional',
         icon: 'Bike',
-      },
+        details: 'Pedestrians unfamiliar with bike lane systems may accidentally walk in bike paths, leading to collisions with cyclists.',
+        prevention: 'Stay aware of bike lane markings, look both ways when crossing, avoid walking in red-marked bike lanes, follow traffic signals'
+      }
     ], // Sources: https://www.numbeo.com/crime/in/Munich, https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/germany-travel-advisory.html, https://www.gov.uk/foreign-travel-advice/germany/safety-and-security, https://www.realjourneytravels.com/is-munich-safe/
   culturalSensitivity: {
     culturalDos: [

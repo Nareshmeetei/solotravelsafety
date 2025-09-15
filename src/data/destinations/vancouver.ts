@@ -323,16 +323,22 @@ const vancouver: Destination = {
         label: 'Pickpocketing & Distraction Theft (Tourist Areas, Transit)',
         frequency: 'Occasional',
         icon: 'Hand',
+        details: 'Petty theft occurs in busy areas like Granville Street, Gastown, and on SkyTrain during peak tourist season and rush hours.',
+        prevention: 'Keep valuables secure, use crossbody bags, stay alert on public transit, avoid displaying expensive items'
       },
       {
         label: 'Car Break-ins & Auto Theft',
         frequency: 'Occasional',
         icon: 'Car',
+        details: 'Vehicle break-ins are common when items are left visible, particularly in parking lots near beaches, hiking trails, and tourist attractions.',
+        prevention: 'Never leave anything visible in cars, use secure parking lots, remove all items from view before parking'
       },
       {
         label: 'Drug Activity & Open Use (Certain Districts)',
         frequency: 'Occasional',
         icon: 'Syringe',
+        details: 'Open drug use visible in certain areas like parts of the Downtown Eastside, though generally not dangerous to tourists who avoid these areas.',
+        prevention: 'Stay in tourist and residential areas, avoid Downtown Eastside at night, don\'t engage with individuals under influence'
       },
       {
         label: 'Aggressive Panhandling & Street Harassment',

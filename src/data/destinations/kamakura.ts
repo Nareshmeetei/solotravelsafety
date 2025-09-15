@@ -239,10 +239,34 @@ const kamakura: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Tokyo',
     redFlags: [
-      { label: 'Pickpocketing (Tourist Areas, Crowded Sites)', frequency: 'Rare', icon: 'Hand' }, // Numbeo 2025, Travel Ladies 2025
-      { label: 'Bicycle Theft', frequency: 'Rare', icon: 'Bike' }, // Numbeo 2025
-      { label: 'Overpriced Tours & Shops', frequency: 'Rare', icon: 'CreditCard' }, // Travel Ladies 2025
-      { label: 'Unwanted Attention (Staring, Photos)', frequency: 'Rare', icon: 'EyeOff' }, // Travel Ladies 2025
+      {
+        label: 'Pickpocketing (Tourist Areas, Crowded Sites)',
+        frequency: 'Rare',
+        icon: 'Hand',
+        details: 'Very rare incidents of pickpocketing at crowded temple sites during peak tourist seasons. Most occur at Hase Temple and Great Buddha statue areas when visitors are distracted taking photos.',
+        prevention: 'Keep bags zipped and in front, secure valuables in inner pockets, remain aware in crowds during festivals'
+      },
+      {
+        label: 'Bicycle Theft',
+        frequency: 'Rare',
+        icon: 'Bike',
+        details: 'Occasional theft of unlocked rental bicycles, particularly near train stations and popular temple areas. Mostly opportunistic rather than organized crime.',
+        prevention: 'Always lock rental bikes, use designated bike parking areas, avoid leaving bikes unattended for extended periods'
+      },
+      {
+        label: 'Overpriced Tours & Shops',
+        frequency: 'Rare',
+        icon: 'CreditCard',
+        details: 'Some tourist-focused shops and tour operators charge premium prices for souvenirs and guided experiences, particularly near major temples.',
+        prevention: 'Compare prices, read reviews before booking tours, shop at local stores away from main tourist sites'
+      },
+      {
+        label: 'Unwanted Attention (Staring, Photos)',
+        frequency: 'Rare',
+        icon: 'Eye',
+        details: 'Occasional staring or photo-taking by locals curious about foreign visitors, particularly solo female travelers. Generally harmless cultural curiosity.',
+        prevention: 'Dress modestly at temples, politely decline photos, move to busier areas if uncomfortable'
+      }
     ],
     usefulTips: [
       {

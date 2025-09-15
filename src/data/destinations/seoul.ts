@@ -454,16 +454,22 @@ const seoul: Destination = {
       label: 'Pickpocketing in Crowded Markets',
       frequency: 'Occasional',
       icon: 'Hand',
+      details: 'Rare pickpocketing incidents in very crowded areas like Myeongdong shopping district and traditional markets during peak hours.',
+      prevention: 'Keep valuables in front pockets, use money belts, stay alert in crowds, secure bags with zippers facing inward'
     },
     {
       label: 'Drink Spiking in Nightlife Districts',
       frequency: 'Rare',
       icon: 'Beer',
+      details: 'Very rare incidents of drink spiking reported in nightlife areas like Hongdae and Gangnam, particularly targeting solo female travelers.',
+      prevention: 'Never leave drinks unattended, don\'t accept drinks from strangers, stay with trusted friends, use drink covers'
     },
     {
       label: 'Taxi Overcharging (Late Night)',
       frequency: 'Occasional',
       icon: 'Car',
+      details: 'Some taxi drivers may overcharge foreign tourists, especially late at night or from airport, by taking longer routes or claiming meter is broken.',
+      prevention: 'Use rideshare apps like KakaoTaxi, ensure meter is running, know approximate fare beforehand, learn key destination names in Korean'
     },
     {
       label: 'Heatwaves & Air Quality (Summer)',

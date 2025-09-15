@@ -300,13 +300,55 @@ const madrid: Destination = {
     safetySourceName: 'Travel Ladies Community & Policia Nacional 2024',
     safetySourceUrl: 'https://travelladies.app/safety/spain/madrid',
     redFlags: [
-      { label: 'Pickpocketing in Tourist Areas', frequency: 'Most common', icon: 'Hand' },
-      { label: 'Distraction Theft at Cafes', frequency: 'Frequent', icon: 'UserX' },
-      { label: 'Fake Police Scams', frequency: 'Occasional', icon: 'Shield' },
-      { label: 'Overcharging at Tourist Restaurants', frequency: 'Occasional', icon: 'DollarSign' },
-      { label: 'ATM Skimming Devices', frequency: 'Occasional', icon: 'CreditCard' },
-      { label: 'Unlicensed Taxi Drivers', frequency: 'Rare', icon: 'Car' },
-      { label: 'Street Vendor Overcharging', frequency: 'Frequent', icon: 'ShoppingBag' }
+      {
+        label: 'Pickpocketing in Tourist Areas',
+        frequency: 'Most common',
+        icon: 'Hand',
+        details: 'Professional pickpockets operate in groups at Puerta del Sol, Gran Vía, and major attractions. They use distraction techniques while accomplices steal from bags and pockets.',
+        prevention: 'Keep bags in front, use zippered pockets, stay alert in crowds, avoid displaying valuables, be wary of staged distractions'
+      },
+      {
+        label: 'Distraction Theft at Cafes',
+        frequency: 'Frequent',
+        icon: 'UserX',
+        details: 'Thieves target outdoor cafes and terraces, especially in tourist areas. They create distractions while stealing phones, bags, or wallets left on tables.',
+        prevention: 'Keep belongings on your lap or secured to chair, never leave items unattended, choose seats away from street access'
+      },
+      {
+        label: 'Fake Police Scams',
+        frequency: 'Occasional',
+        icon: 'Shield',
+        details: 'Scammers pose as plainclothes police asking to check documents or claiming drug investigations. Real police have proper identification and uniforms.',
+        prevention: 'Ask to see official badge and ID, request uniformed officer, never hand over passport, ask to go to police station'
+      },
+      {
+        label: 'Overcharging at Tourist Restaurants',
+        frequency: 'Occasional',
+        icon: 'DollarSign',
+        details: 'Some restaurants near major attractions inflate prices or add unexpected charges. Tourist menus may be overpriced compared to local options.',
+        prevention: 'Check prices before ordering, read reviews, eat where locals dine, ask about charges for bread or service'
+      },
+      {
+        label: 'ATM Skimming Devices',
+        frequency: 'Occasional',
+        icon: 'CreditCard',
+        details: 'Card skimming devices attached to ATMs in tourist areas can steal card information. Criminals may also shoulder surf to see PIN numbers.',
+        prevention: 'Use ATMs inside banks, cover PIN when entering, check for unusual devices on card slot, monitor bank statements'
+      },
+      {
+        label: 'Unlicensed Taxi Drivers',
+        frequency: 'Rare',
+        icon: 'Car',
+        details: 'Unlicensed taxis may overcharge tourists or take longer routes. Official Madrid taxis are white with red diagonal stripe.',
+        prevention: 'Use official taxi stands, ensure meter is running, use rideshare apps, check taxi license displayed'
+      },
+      {
+        label: 'Street Vendor Overcharging',
+        frequency: 'Frequent',
+        icon: 'ShoppingBag',
+        details: 'Street vendors near attractions often charge inflated prices for souvenirs, scarves, or trinkets. Aggressive sales tactics target tourists.',
+        prevention: 'Negotiate prices, shop at regular stores for comparison, walk away if pressured, avoid engaging with persistent vendors'
+      }
     ],
     culturalDos: [
       'Learn basic Spanish greetings and phrases',

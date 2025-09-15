@@ -907,12 +907,48 @@ const saoPaulo: Destination = {
   safetySourceName: 'Numbeo 2025',
   safetySourceUrl: 'https://www.numbeo.com/crime/in/Sao-Paulo',
   redFlags: [
-    { label: 'Phone/Camera Theft', frequency: 'Extremely Common', icon: 'Smartphone' },
-    { label: 'Armed Robbery', frequency: 'Very Common', icon: 'Zap' },
-    { label: 'Express Kidnapping', frequency: 'Common', icon: 'AlertTriangle' },
-    { label: 'Pickpocketing (Metro/Buses)', frequency: 'Very Common', icon: 'Hand' },
-    { label: 'Sexual Harassment', frequency: 'Common', icon: 'UserX' },
-    { label: 'Fake Police Scams', frequency: 'Occasional', icon: 'Shield' }
+    {
+      label: 'Phone/Camera Theft',
+      frequency: 'Extremely Common',
+      icon: 'Smartphone',
+      details: 'Phone and camera theft is endemic in São Paulo, especially on public transport and tourist areas. Thieves work in coordinated groups.',
+      prevention: 'Use cheap backup phone, avoid displaying devices, keep valuables hidden, use phone cases that look worn'
+    },
+    {
+      label: 'Armed Robbery',
+      frequency: 'Very Common',
+      icon: 'Zap',
+      details: 'Armed robberies occur frequently throughout the city, targeting tourists with weapons. Resistance can be deadly.',
+      prevention: 'Carry decoy wallet, comply immediately with demands, avoid wearing jewelry, use hotel transport, never resist'
+    },
+    {
+      label: 'Express Kidnapping',
+      frequency: 'Common',
+      icon: 'AlertTriangle',
+      details: 'Criminals kidnap victims for hours to withdraw money from ATMs or demand quick ransom payments from family.',
+      prevention: 'Inform contacts of plans, use reputable transport only, avoid isolated areas, carry emergency contacts'
+    },
+    {
+      label: 'Pickpocketing (Metro/Buses)',
+      frequency: 'Very Common',
+      icon: 'Hand',
+      details: 'Professional pickpocketing gangs operate throughout public transport system, especially during rush hours.',
+      prevention: 'Keep bags in front, use money belts, stay alert during boarding, avoid displaying cash or valuables'
+    },
+    {
+      label: 'Sexual Harassment',
+      frequency: 'Common',
+      icon: 'UserX',
+      details: 'Solo female travelers frequently experience harassment, catcalling, and inappropriate touching, especially in crowded areas.',
+      prevention: 'Travel in groups when possible, trust instincts, use women-only metro cars, avoid isolated areas'
+    },
+    {
+      label: 'Fake Police Scams',
+      frequency: 'Occasional',
+      icon: 'Shield',
+      details: 'Criminals pose as police officers to rob tourists, claiming document checks or drug investigations.',
+      prevention: 'Ask for official ID, request to go to police station, never hand over documents or money to plainclothes officers'
+    }
   ],
   culturalExpectations: {
     dressCode: 'São Paulo is fashion-conscious - dress well to blend in and stay safe. Appearance matters greatly in Brazilian culture. Avoid displaying expensive items, jewelry, or designer clothing that attracts thieves. Dress conservatively for safety: covered shoulders, no short shorts. Business casual appropriate for upscale areas. Comfortable, closed-toe shoes essential for walking on uneven streets.',

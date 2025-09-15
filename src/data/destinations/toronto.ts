@@ -253,16 +253,22 @@ const toronto: Destination = {
         label: 'Pickpocketing & Bag Snatching (Tourist Areas, Transit)',
         frequency: 'Occasional',
         icon: 'Hand',
+        details: 'Petty theft occurs in busy areas like CN Tower vicinity, Harbourfront, and on crowded TTC public transit during rush hours.',
+        prevention: 'Keep valuables secure, use crossbody bags, stay alert on transit, avoid displaying expensive items openly'
       },
       {
         label: 'Organized Theft Rings (Events, Crowds)',
         frequency: 'Occasional',
         icon: 'Users',
+        details: 'Professional thieves work in groups at major events, festivals, and large gatherings like at Rogers Centre or during Pride events.',
+        prevention: 'Stay alert at large events, keep bags in front, use money belts, avoid bringing unnecessary valuables to crowds'
       },
       {
         label: 'Car Break-ins & Auto Theft',
         frequency: 'Occasional',
         icon: 'Car',
+        details: 'Vehicle break-ins targeting items left visible in cars, particularly in parking lots near tourist attractions and shopping areas.',
+        prevention: 'Never leave valuables visible in vehicles, use secure parking, consider valet services at hotels and restaurants'
       },
       {
         label: 'Street Harassment (Low, but Present)',

@@ -355,16 +355,22 @@ const tokyo: Destination = {
       label: 'Pickpocketing & Purse Snatching (Nightlife Areas)',
       frequency: 'Occasional',
       icon: 'Hand',
+      details: 'Very rare pickpocketing incidents, mostly in crowded nightlife districts like Shibuya and Shinjuku during peak hours. Japan has extremely low theft rates.',
+      prevention: 'Keep valuables secure during festivals and crowded events, use hotel safes, remain aware in large crowds'
     },
     {
       label: 'Groping & Harassment on Public Transit',
       frequency: 'Occasional',
       icon: 'AlertTriangle',
+      details: 'Sexual harassment on crowded trains, while uncommon, has been reported. Japan provides women-only train cars to address this issue.',
+      prevention: 'Use women-only train cars during rush hours, report incidents immediately, carry emergency alarm, stay near other women'
     },
     {
       label: 'Overpriced Tourist Shops/Tours',
       frequency: 'Occasional',
       icon: 'CreditCard',
+      details: 'Some tourist-focused shops and tour operators charge premium prices, particularly in areas like Harajuku and around major temples.',
+      prevention: 'Compare prices, read reviews before booking tours, shop at local stores away from main tourist sites'
     },
     {
       label: 'Earthquakes & Natural Disasters',

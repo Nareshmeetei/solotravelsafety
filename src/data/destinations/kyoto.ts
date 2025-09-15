@@ -242,10 +242,34 @@ const kyoto: Destination = {
     daytimeSafetyPercent: 89.1, // Source: Numbeo 2025, Travel Ladies 2025
     nighttimeSafetyPercent: 82.9, // Source: Numbeo 2025, Travel Ladies 2025
     redFlags: [
-      { label: 'Pickpocketing (Tourist Areas, Public Transport)', frequency: 'Rare', icon: 'Hand' }, // Numbeo 2025, Travel Ladies 2025
-      { label: 'Bicycle Theft', frequency: 'Rare', icon: 'Bike' }, // Numbeo 2025
-      { label: 'Overpriced Tours & Shops', frequency: 'Rare', icon: 'CreditCard' }, // Travel Ladies 2025
-      { label: 'Unwanted Attention (Staring, Photos)', frequency: 'Rare', icon: 'EyeOff' }, // Travel Ladies 2025
+      {
+        label: 'Pickpocketing (Tourist Areas, Public Transport)',
+        frequency: 'Rare',
+        icon: 'Hand',
+        details: 'Extremely rare pickpocketing incidents at crowded temples like Kiyomizu-dera during cherry blossom and autumn seasons. Japan has one of world\'s lowest theft rates.',
+        prevention: 'Keep valuables secure during festivals, remain aware in crowds at popular temples, use hotel safes'
+      },
+      {
+        label: 'Bicycle Theft',
+        frequency: 'Rare',
+        icon: 'Bike',
+        details: 'Occasional theft of unlocked rental bikes, mostly at train stations. Very low crime rates overall with most bikes recovered.',
+        prevention: 'Always lock rental bikes, use designated parking areas, register bike rentals properly'
+      },
+      {
+        label: 'Overpriced Tours & Shops',
+        frequency: 'Rare',
+        icon: 'CreditCard',
+        details: 'Some tourist-targeted shops charge premium prices for traditional crafts and souvenirs, particularly in Gion and Arashiyama districts.',
+        prevention: 'Compare prices, read reviews, shop at local markets, negotiate respectfully at traditional shops'
+      },
+      {
+        label: 'Unwanted Attention (Staring, Photos)',
+        frequency: 'Rare',
+        icon: 'Eye',
+        details: 'Occasional curiosity from locals toward foreign visitors, especially in traditional districts. Generally respectful cultural interest.',
+        prevention: 'Dress modestly at temples, politely decline photos, respect photography restrictions in sacred areas'
+      }
     ],
     usefulTips: [
       {

@@ -540,16 +540,22 @@ const riodejaneiro: Destination = {
         label: 'Pickpocketing & Bag Snatching',
         frequency: 'Most common',
         icon: 'Hand',
+        details: 'Professional thieves operate on beaches, public transport, and tourist areas. Bag snatching from motorcycles is common on busy streets.',
+        prevention: 'Use money belts, carry minimal items to beach, secure bags across body, avoid displaying valuables, stay alert in crowds'
       },
       {
         label: 'Armed Robbery & Mugging',
         frequency: 'Frequent',
         icon: 'PocketKnife',
+        details: 'Armed robberies occur throughout Rio, targeting tourists with phones, jewelry, and cash. Favela areas and isolated beaches are particularly dangerous.',
+        prevention: 'Carry decoy wallet, avoid favela areas, stay in groups, use hotel transport, never resist armed robbers'
       },
       {
         label: 'Scams (ATM, Card Cloning, Overcharging)',
         frequency: 'Frequent',
         icon: 'CreditCard',
+        details: 'ATM skimming devices, fake police asking for documents, overcharging at restaurants, and fake tour operators target tourists.',
+        prevention: 'Use ATMs inside banks, verify police credentials, check restaurant prices, book tours through reputable companies'
       },
       {
         label: 'Sexual Harassment & Beach Theft',

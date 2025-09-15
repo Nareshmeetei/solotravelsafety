@@ -301,10 +301,34 @@ const reykjavik: Destination = {
     safetySourceName: 'Travel Ladies 2025, Iceland Crime Statistics, WEF Gender Gap Report 2024',
     safetySourceUrl: 'https://travelladies.app/safety/iceland/reykjavik',
     redFlags: [
-      { label: 'Rapid Weather Changes', frequency: 'Daily', icon: 'CloudRain' },
-      { label: 'Tourist Price Premium', frequency: 'Common', icon: 'DollarSign' },
-      { label: 'Slippery Winter Surfaces', frequency: 'Seasonal', icon: 'AlertTriangle' },
-      { label: 'Weekend Nightlife Crowds', frequency: 'Occasional', icon: 'Users' }
+      {
+        label: 'Rapid Weather Changes',
+        frequency: 'Daily',
+        icon: 'CloudRain',
+        details: 'Iceland weather changes extremely rapidly. Sunny conditions can turn to storms within minutes, especially dangerous for outdoor activities.',
+        prevention: 'Check weather forecasts hourly, dress in layers, carry waterproof gear, download weather apps, inform others of plans'
+      },
+      {
+        label: 'Tourist Price Premium',
+        frequency: 'Common',
+        icon: 'DollarSign',
+        details: 'Iceland is expensive with significant tourist markups on food, accommodation, and activities. Budget travelers may face financial strain.',
+        prevention: 'Book accommodations early, cook own meals, shop at budget stores like Bonus, compare tour prices, bring snacks'
+      },
+      {
+        label: 'Slippery Winter Surfaces',
+        frequency: 'Seasonal',
+        icon: 'AlertTriangle',
+        details: 'Ice-covered sidewalks and surfaces are extremely slippery from October to April. Falls and injuries are common among tourists.',
+        prevention: 'Wear proper grip shoes or ice spikes, walk carefully, use handrails, avoid rushing on icy surfaces'
+      },
+      {
+        label: 'Weekend Nightlife Crowds',
+        frequency: 'Occasional',
+        icon: 'Users',
+        details: 'Reykjavik nightlife can get rowdy on weekends with heavy drinking culture. Crowds and intoxicated individuals may create uncomfortable situations.',
+        prevention: 'Stay aware in nightlife areas, travel in groups, avoid overly intoxicated areas, use official taxis for transport'
+      }
     ],
     culturalDos: [
       'Remove shoes when entering homes - essential cultural respect',

@@ -237,16 +237,22 @@ const singapore: Destination = {
         label: 'Pickpocketing in Crowded Tourist Areas',
         frequency: 'Occasional',
         icon: 'Hand',
+        details: 'Rare pickpocketing incidents in very crowded tourist areas like Orchard Road shopping district and during major events or festivals.',
+        prevention: 'Keep valuables secure, use hotel safes, stay alert in crowds, avoid displaying expensive items openly'
       },
       {
         label: 'Taxi Overcharging/Unlicensed Taxis',
         frequency: 'Occasional',
         icon: 'Car',
+        details: 'Some unlicensed taxi operators at airport or tourist areas may overcharge. Official taxis are regulated and safe.',
+        prevention: 'Use official taxi stands, ensure meter is running, use rideshare apps like Grab, check taxi license displayed'
       },
       {
         label: 'Fake Goods & Tourist Scams',
         frequency: 'Occasional',
         icon: 'CreditCard',
+        details: 'Tourist-targeted scams include fake branded goods, overpriced tours, and gem scams particularly in shopping areas.',
+        prevention: 'Shop at reputable stores, verify tour operators, be skeptical of deals too good to be true, check reviews'
       },
       {
         label: 'Heat Exhaustion & Dehydration',

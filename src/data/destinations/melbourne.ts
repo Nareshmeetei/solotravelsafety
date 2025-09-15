@@ -215,10 +215,34 @@ const melbourne: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Melbourne',
     redFlags: [
-      { label: 'Theft & Shoplifting (Tourist Areas, CBD)', frequency: 'Most common', icon: 'Hand' },
-      { label: 'Alcohol-Related Violence (Nightlife Areas)', frequency: 'Occasional', icon: 'Beer' },
-      { label: 'Scams (ATM, Online, Ticket)', frequency: 'Occasional', icon: 'Shield' },
-      { label: 'Bicycle Theft', frequency: 'Occasional', icon: 'Bike' },
+      {
+        label: 'Theft & Shoplifting (Tourist Areas, CBD)',
+        frequency: 'Most common',
+        icon: 'Hand',
+        details: 'Petty theft and pickpocketing occur in busy CBD areas, Flinders Street Station, and major shopping districts. Tourist-targeted theft at cafes and markets.',
+        prevention: 'Keep valuables secure, don\'t leave items unattended at cafes, use hotel safes, stay alert in crowded areas'
+      },
+      {
+        label: 'Alcohol-Related Violence (Nightlife Areas)',
+        frequency: 'Occasional',
+        icon: 'Wine',
+        details: 'Late-night violence can occur in nightlife districts like Chapel Street and King Street, particularly on weekends. Mostly between intoxicated individuals.',
+        prevention: 'Avoid heavily intoxicated areas late at night, travel in groups, use rideshare, don\'t engage with aggressive individuals'
+      },
+      {
+        label: 'Scams (ATM, Online, Ticket)',
+        frequency: 'Occasional',
+        icon: 'Shield',
+        details: 'ATM skimming at tourist locations, fake ticket sales for events, online accommodation scams, and romance scams targeting travelers.',
+        prevention: 'Use ATMs in banks, buy tickets from official sources, verify online bookings, be cautious of unsolicited approaches'
+      },
+      {
+        label: 'Bicycle Theft',
+        frequency: 'Occasional',
+        icon: 'Bike',
+        details: 'Bike theft is common, especially of unlocked or poorly secured bicycles near train stations and popular areas.',
+        prevention: 'Always lock bikes with quality locks, use designated bike parking, consider bike insurance for rentals'
+      }
     ],
     usefulTips: [
       {

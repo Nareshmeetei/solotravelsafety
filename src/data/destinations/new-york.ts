@@ -285,10 +285,34 @@ const newYork: Destination = {
     safetySourceName: 'NYPD Crime Statistics 2025',
     safetySourceUrl: 'https://www.nyc.gov/site/nypd/stats/crime-statistics/crime-statistics-landing.page',
     redFlags: [
-      { label: 'Pickpocketing (Tourist Areas)', frequency: 'Occasional', icon: 'Hand' },
-      { label: 'Street Harassment (Verbal)', frequency: 'Occasional', icon: 'Users' },
-      { label: 'Subway Delays/Disruptions', frequency: 'Common', icon: 'Train' },
-      { label: 'Aggressive Panhandling', frequency: 'Occasional', icon: 'MessageSquare' }
+      {
+        label: 'Pickpocketing (Tourist Areas)',
+        frequency: 'Occasional',
+        icon: 'Hand',
+        details: 'Pickpocketing occurs in crowded tourist areas like Times Square, Central Park, and subway stations. Professional thieves target distracted tourists.',
+        prevention: 'Keep valuables in front pockets, use crossbody bags, stay alert in crowds, avoid displaying expensive items or large amounts of cash'
+      },
+      {
+        label: 'Street Harassment (Verbal)',
+        frequency: 'Occasional',
+        icon: 'Users',
+        details: 'Solo female travelers may experience catcalling or unwanted comments, particularly in busy areas and at night.',
+        prevention: 'Walk confidently, ignore harassment, stay in well-lit areas, use headphones if needed, trust your instincts and move to safe spaces'
+      },
+      {
+        label: 'Subway Delays/Disruptions',
+        frequency: 'Common',
+        icon: 'Train',
+        details: 'NYC subway frequently experiences delays, service changes, and disruptions that can leave travelers stranded or late.',
+        prevention: 'Allow extra travel time, check MTA app for updates, have backup transportation plans, carry phone charger for long delays'
+      },
+      {
+        label: 'Aggressive Panhandling',
+        frequency: 'Occasional',
+        icon: 'MessageSquare',
+        details: 'Some individuals may be persistent or aggressive when asking for money, particularly in tourist areas and near subway entrances.',
+        prevention: 'Politely decline and keep walking, avoid engaging, don\'t feel obligated to give money, move to busier areas if uncomfortable'
+      }
     ],
     culturalDos: [
       'Walk with purpose and confidence - blend in with local pace',

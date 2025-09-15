@@ -201,11 +201,41 @@ const johannesburg: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Johannesburg',
     redFlags: [
-      { label: 'Violent Crime (Muggings, Armed Robbery)', frequency: 'Most common', icon: 'PocketKnife' },
-      { label: 'Car Theft & Smash-and-Grab', frequency: 'Most common', icon: 'Car' },
-      { label: 'Kidnapping & Express Kidnapping', frequency: 'Frequent', icon: 'Users' },
-      { label: 'Sexual Assault & Rape', frequency: 'Frequent', icon: 'AlertTriangle' },
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Frequent', icon: 'Hand' }
+      {
+        label: 'Violent Crime (Muggings, Armed Robbery)',
+        frequency: 'Most common',
+        icon: 'Knife',
+        details: 'Johannesburg has extremely high violent crime rates with armed robberies occurring frequently throughout the city. Solo female travelers are particularly vulnerable targets. Criminals use weapons including guns and knives. Express kidnappings for ATM withdrawals are increasing by 264%.',
+        prevention: 'Stay in secure areas (Sandton, Rosebank, Melrose Arch), use only pre-arranged transport, never display valuables, return to accommodation before sunset'
+      },
+      {
+        label: 'Car Theft & Smash-and-Grab',
+        frequency: 'Most common',
+        icon: 'Car',
+        details: 'Vehicle-related crimes are endemic in Johannesburg with smash-and-grab attacks at traffic lights and carjacking at gunpoint. Criminals target rental cars and vehicles with visible valuables. Tourist vehicles are specifically targeted.',
+        prevention: 'Keep windows up and doors locked, avoid displaying bags/phones in cars, use secure parking only, never stop for strangers, use Uber/Bolt instead of driving'
+      },
+      {
+        label: 'Kidnapping & Express Kidnapping',
+        frequency: 'Frequent',
+        icon: 'Users',
+        details: '51% of South African kidnapping incidents occur in Gauteng Province. Express kidnapping involves forcing victims to ATMs for cash withdrawals, often including sexual assault. 264% increase in kidnapping cases over past decade.',
+        prevention: 'Travel with trusted local guides only, avoid isolated areas completely, use emergency apps (Namola, iFearLess), share live location with contacts, never walk alone anywhere'
+      },
+      {
+        label: 'Sexual Assault & Rape',
+        frequency: 'Frequent',
+        icon: 'AlertTriangle',
+        details: '9,252 rape cases recorded April-June 2023. Sexual assault incidents have "sky-rocketed" according to safety reports. Solo female travelers face very high risk of sexual violence, particularly during other crimes.',
+        prevention: 'Stay only in secure accommodations with 24/7 security, never go out alone after dark, avoid all public transport, carry legal pepper spray, use women-only ride services when available'
+      },
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Frequent',
+        icon: 'Hand',
+        details: 'Professional pickpocketing and bag snatching gangs operate throughout tourist areas and transportation hubs. Often involves distraction techniques or violence. Targeting of phones and valuables is systematic.',
+        prevention: 'Use money belts, keep valuables hidden, carry decoy wallet, avoid displaying phones/electronics, use cross-body bags with zippers facing inward'
+      }
     ],
     usefulTips: [
       {

@@ -342,16 +342,22 @@ const vienna: Destination = {
         label: 'Pickpocketing in Crowded Areas & Transit',
         frequency: 'Occasional',
         icon: 'Hand',
+        details: 'Pickpocketing can occur in busy tourist areas like Schönbrunn Palace, city center, and on crowded public transport during peak hours.',
+        prevention: 'Keep bags in front, use money belts, stay alert on transit, secure bags with zippers facing inward'
       },
       {
         label: 'Scams (Fake Police, ATM, Charity)',
         frequency: 'Occasional',
         icon: 'CreditCard',
+        details: 'Scams include fake charity collectors, ATM skimming devices, and occasional fake police asking for document checks.',
+        prevention: 'Use ATMs inside banks, verify police credentials, ignore charity solicitors, cover PIN when entering'
       },
       {
         label: 'Street Harassment (Catcalling, Staring)',
         frequency: 'Rare',
         icon: 'AlertTriangle',
+        details: 'Rare incidents of catcalling or inappropriate behavior toward solo female travelers, mainly in nightlife areas.',
+        prevention: 'Trust your instincts, avoid isolated areas at night, stay in well-lit public areas, report serious incidents'
       },
       {
         label: 'Bike Theft',

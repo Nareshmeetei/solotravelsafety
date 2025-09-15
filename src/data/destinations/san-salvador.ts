@@ -366,16 +366,22 @@ const sansalvador: Destination = {
         label: 'Pickpocketing & Bag Snatching (Markets, Buses)',
         frequency: 'Frequent',
         icon: 'Hand',
+        details: 'Professional thieves operate in crowded markets like Mercado Central and on public buses. Bag snatching from motorcycles is common.',
+        prevention: 'Use money belts, carry minimal cash, secure bags across body, avoid displaying valuables, stay alert in crowds'
       },
       {
         label: 'Armed Robbery & Mugging (Especially at Night)',
         frequency: 'Frequent',
         icon: 'PocketKnife',
+        details: 'Armed robbery rates are high, particularly after dark. Solo female travelers face increased risks in many areas of the city.',
+        prevention: 'Never walk alone at night, use hotel transport, carry decoy wallet, avoid displaying valuables, never resist armed robbers'
       },
       {
         label: 'Taxi Scams & Unlicensed Taxis',
         frequency: 'Occasional',
         icon: 'Car',
+        details: 'Unlicensed taxis may overcharge, take longer routes, or be involved in robberies. Some drivers collaborate with criminals.',
+        prevention: 'Use official taxi companies only, agree on fare beforehand, avoid hailing taxis on street, use rideshare apps when available'
       },
       {
         label: 'Gang Activity in Certain Districts',

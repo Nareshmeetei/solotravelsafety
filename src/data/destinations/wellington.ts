@@ -323,16 +323,22 @@ const wellington: Destination = {
         label: 'Car Break-ins & Theft (Rental Cars, Trailheads)',
         frequency: 'Occasional',
         icon: 'Car',
+        details: 'Vehicle break-ins occur at hiking trailheads and tourist parking areas when items are left visible. Rental cars are often targeted.',
+        prevention: 'Never leave valuables visible in cars, use secure parking, remove all items before parking at trails'
       },
       {
         label: 'Petty Theft & Pickpocketing (Tourist Areas)',
         frequency: 'Rare',
         icon: 'Hand',
+        details: 'Very rare incidents of petty theft in busy areas like Cuba Street, waterfront, and during events. New Zealand has very low crime rates.',
+        prevention: 'Keep valuables secure, use hotel safes, stay aware in crowds during events'
       },
       {
         label: 'Nightlife Drunk Behavior (Downtown, Waterfront)',
         frequency: 'Rare',
         icon: 'Beer',
+        details: 'Occasional rowdy behavior from intoxicated individuals in nightlife areas, particularly on weekends around Courtenay Place.',
+        prevention: 'Stay aware in nightlife districts, avoid confrontations, travel in groups at night, use official taxis'
       },
       {
         label: 'Earthquakes & Natural Disasters',

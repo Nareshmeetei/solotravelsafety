@@ -357,21 +357,29 @@ const oslo: Destination = {
         label: 'Pickpocketing in Tourist Areas',
         frequency: 'Occasional',
         icon: 'Hand',
+        details: 'Petty theft can occur in busy tourist areas like Karl Johans gate and around major attractions. Generally low-level opportunistic crime.',
+        prevention: 'Keep valuables secure, use hotel safes, stay alert in crowded areas, avoid displaying expensive items openly'
       },
       {
         label: 'Drug Activity in Some Districts',
         frequency: 'Occasional',
         icon: 'Syringe',
+        details: 'Some areas like parts of Grønland district may have visible drug activity, though generally not dangerous to tourists.',
+        prevention: 'Avoid known drug activity areas at night, stay in well-lit public areas, don\'t engage with suspicious individuals'
       },
       {
         label: 'Nighttime Drunk Behavior',
         frequency: 'Occasional',
         icon: 'Beer',
+        details: 'Weekend nights can see intoxicated individuals, particularly in nightlife areas. Generally more rowdy than dangerous.',
+        prevention: 'Stay aware in nightlife districts, avoid confrontations with intoxicated people, travel in groups at night when possible'
       },
       {
         label: 'Stabbings or Gang-Related Incidents (Rare)',
         frequency: 'Rare',
         icon: 'PocketKnife',
+        details: 'Very rare violent incidents, usually gang-related and not targeting tourists. Oslo remains one of Europe\'s safest capitals.',
+        prevention: 'Avoid known trouble areas, stay in tourist and residential areas, report suspicious activity to police'
       },
     ], // Sources: https://www.numbeo.com/crime/in/Oslo, https://travelladies.app/safety/norway/oslo, https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/norway-travel-advisory.html
   culturalSensitivity: {

@@ -439,22 +439,30 @@ const rome: Destination = {
       {
         label: 'Pickpocketing & Metro/Bus Theft',
         frequency: 'Most common',
-        icon: 'Hand'
+        icon: 'Hand',
+        details: 'Professional pickpocketing gangs operate on public transport and around major attractions like Colosseum, Vatican, and Spanish Steps.',
+        prevention: 'Keep bags in front, use money belts, stay alert on metro, avoid displaying valuables, secure bags with zippers facing inward'
       },
       {
         label: 'Street Harassment & Catcalling',
         frequency: 'Most common',
-        icon: 'AlertTriangle'
+        icon: 'AlertTriangle',
+        details: 'Solo female travelers commonly experience catcalling and inappropriate comments, particularly around tourist areas and nightlife districts.',
+        prevention: 'Ignore harassment, walk confidently, stay in well-lit areas, use headphones if needed, trust instincts and move to safe spaces'
       },
       {
         label: 'Tourist Area Overcharging',
         frequency: 'Frequent',
-        icon: 'CreditCard'
+        icon: 'CreditCard',
+        details: 'Restaurants near major attractions inflate prices significantly. Cover charges and service fees often not disclosed upfront.',
+        prevention: 'Check prices before ordering, ask about additional charges, eat where locals dine, read reviews, verify bills carefully'
       },
       {
         label: 'Fake Petition & Document Scams',
         frequency: 'Frequent',
-        icon: 'Shield'
+        icon: 'Shield',
+        details: 'Scammers with clipboards approach tourists with fake petitions or claim to be police checking documents while accomplices steal.',
+        prevention: 'Ignore petition solicitors, verify police credentials, keep walking, don\'t show documents to unofficial people'
       },
       {
         label: 'Distraction Theft Techniques',

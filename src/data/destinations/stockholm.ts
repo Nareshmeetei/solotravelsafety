@@ -284,16 +284,22 @@ const stockholm: Destination = {
         label: 'Pickpocketing in Tourist Areas & Public Transit',
         frequency: 'Frequent',
         icon: 'Hand',
+        details: 'Pickpocketing occurs in crowded tourist areas like Gamla Stan (Old Town) and on public transport, especially during rush hours and summer tourist season.',
+        prevention: 'Keep bags in front, use money belts, stay alert on crowded transport, secure bags with zippers facing inward'
       },
       {
         label: 'Taxi Overcharging/Unlicensed Taxis',
         frequency: 'Occasional',
         icon: 'Car',
+        details: 'Some unlicensed taxi operators may overcharge tourists, particularly at airport or train stations. Official taxis display clear pricing.',
+        prevention: 'Use official taxi companies, check fare estimates beforehand, use rideshare apps, ensure meter is running'
       },
       {
         label: 'ATM Skimming & Card Fraud',
         frequency: 'Occasional',
         icon: 'CreditCard',
+        details: 'Card skimming devices occasionally found on ATMs in tourist areas. Sweden is largely cashless, making card fraud a concern.',
+        prevention: 'Use ATMs inside banks, cover PIN when entering, check for unusual devices on card slot, monitor bank statements'
       },
       {
         label: 'Bar/Restaurant Overcharging Scams',

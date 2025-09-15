@@ -239,10 +239,34 @@ const prague: Destination = {
     safetySourceName: 'Numbeo 2025 & Prague Police Statistics',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Prague',
     redFlags: [
-      { label: 'Public Transport Harassment (33% women)', frequency: 'Occasional', icon: 'AlertTriangle' },
-      { label: 'Currency Exchange Scams', frequency: 'Common', icon: 'DollarSign' },
-      { label: 'Tourist Restaurant Overcharging', frequency: 'Occasional', icon: 'Utensils' },
-      { label: 'Pickpocketing in Tourist Areas', frequency: 'Rare', icon: 'Hand' }
+      {
+        label: 'Public Transport Harassment (33% women)',
+        frequency: 'Occasional',
+        icon: 'AlertTriangle',
+        details: 'Studies show 33% of women experience harassment on Prague public transport, including unwanted comments, touching, or following.',
+        prevention: 'Sit near other women or families, trust your instincts, change seats if uncomfortable, report serious incidents to authorities'
+      },
+      {
+        label: 'Currency Exchange Scams',
+        frequency: 'Common',
+        icon: 'DollarSign',
+        details: 'Exchange offices in tourist areas offer poor rates or use deceptive tactics. Street money changers operate illegal schemes.',
+        prevention: 'Use bank ATMs, avoid street exchangers, check rates before exchange, count money carefully, use official exchange offices'
+      },
+      {
+        label: 'Tourist Restaurant Overcharging',
+        frequency: 'Occasional',
+        icon: 'Utensils',
+        details: 'Restaurants in tourist areas may have inflated prices or add unexpected charges like bread, nuts, or service fees.',
+        prevention: 'Check prices before ordering, ask about additional charges, read reviews, eat where locals dine, verify bills carefully'
+      },
+      {
+        label: 'Pickpocketing in Tourist Areas',
+        frequency: 'Rare',
+        icon: 'Hand',
+        details: 'Occasional pickpocketing in very crowded tourist areas like Old Town Square and Charles Bridge, particularly during peak season.',
+        prevention: 'Keep valuables in front pockets, use money belts, stay alert in crowds, secure bags with zippers facing inward'
+      }
     ],
     culturalDos: [
       'Learn basic Czech greetings.',

@@ -277,21 +277,29 @@ const nagano: Destination = {
         label: 'Earthquakes & Natural Disasters',
         frequency: 'Occasional',
         icon: 'AlertTriangle',
+        details: 'Japan experiences frequent earthquakes and occasional typhoons. Mountain areas face additional risks from landslides and extreme weather.',
+        prevention: 'Download earthquake alert apps, know evacuation procedures, check weather forecasts, avoid hiking during storms'
       },
       {
         label: 'Wildlife (Bears, Hornets, Snakes)',
         frequency: 'Occasional',
         icon: 'Shield',
+        details: 'Mountain and forest areas have Asian black bears, giant hornets, and venomous snakes. Encounters are rare but potentially dangerous.',
+        prevention: 'Make noise while hiking, carry bear bells, avoid approaching wildlife, stick to marked trails, carry first aid supplies'
       },
       {
         label: 'Overpriced Tourist Shops/Tours',
         frequency: 'Occasional',
         icon: 'CreditCard',
+        details: 'Some tourist-focused shops and tour operators charge premium prices, particularly near ski resorts and popular temples.',
+        prevention: 'Compare prices, read reviews, shop at local stores, book tours through reputable companies, ask locals for recommendations'
       },
       {
         label: 'Staring or Unwanted Attention',
         frequency: 'Rare',
         icon: 'EyeOff',
+        details: 'Foreign visitors may experience staring or curiosity from locals, particularly in rural areas. Generally harmless cultural curiosity.',
+        prevention: 'Dress modestly, be respectful of local customs, politely decline photos, move to busier areas if uncomfortable'
       },
     ], // Sources: https://www.numbeo.com/crime/in/Tokyo, https://travelladies.app/safety/japan/nagano, https://wakokujp.com/most-dangerous-animals-in-japan/, https://earthquakelist.org/japan/nagano/
     usefulTips: [

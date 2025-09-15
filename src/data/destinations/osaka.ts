@@ -263,22 +263,30 @@ const osaka: Destination = {
       {
         label: 'Train Crowding During Rush Hours',
         frequency: 'Daily 7-9 AM, 5-7 PM',
-        icon: 'Users'
+        icon: 'Users',
+        details: 'Osaka trains become extremely crowded during rush hours, which can be uncomfortable and potentially unsafe for solo travelers.',
+        prevention: 'Use women-only train cars during rush hours, travel outside peak times when possible, stay near train doors, keep bags secure'
       },
       {
         label: 'Potential Groping on Packed Trains (Chikan)',
         frequency: 'Rare but reported',
-        icon: 'AlertTriangle'
+        icon: 'AlertTriangle',
+        details: 'Sexual harassment on crowded trains, while rare, has been reported. Japan has women-only train cars to address this issue.',
+        prevention: 'Use women-only train cars, report incidents immediately, carry emergency alarm, stay near other women when possible'
       },
       {
         label: 'Nightlife Overcharging',
         frequency: 'Occasional in some districts',
-        icon: 'CreditCard'
+        icon: 'CreditCard',
+        details: 'Some bars and clubs in entertainment districts like Shinsekai may have hidden charges or overcharge foreign visitors.',
+        prevention: 'Check prices before ordering, ask about cover charges, stick to reputable establishments, read reviews beforehand'
       },
       {
         label: 'Language Barrier in Emergencies',
         frequency: 'Common',
-        icon: 'MessageSquare'
+        icon: 'MessageSquare',
+        details: 'Limited English proficiency among locals can create challenges during emergencies or when seeking help.',
+        prevention: 'Learn basic Japanese emergency phrases, use translation apps, carry emergency contact cards in Japanese, know key locations in Japanese'
       }
     ],
     usefulTips: [

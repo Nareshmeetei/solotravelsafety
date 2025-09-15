@@ -428,10 +428,34 @@ const lagos: Destination = {
     safetySourceName: 'Numbeo 2025',
     safetySourceUrl: 'https://www.numbeo.com/crime/in/Lagos',
     redFlags: [
-      { label: 'Violent Crime (Muggings, Armed Robbery)', frequency: 'Most common', icon: 'PocketKnife' }, // Numbeo 2025, UK Gov 2025
-      { label: 'Scams (ATM, Fake Police, Internet Fraud)', frequency: 'Most common', icon: 'Shield' }, // Numbeo 2025, UK Gov 2025
-      { label: 'Car Theft & Carjacking', frequency: 'Frequent', icon: 'Car' }, // Numbeo 2025
-      { label: 'Pickpocketing & Bag Snatching', frequency: 'Frequent', icon: 'Hand' }, // Numbeo 2025
+      {
+        label: 'Violent Crime (Muggings, Armed Robbery)',
+        frequency: 'Most common',
+        icon: 'Knife',
+        details: 'Lagos has extremely high violent crime rates with armed robbery and assault common throughout the city. Solo female travelers face particular risks. Armed gangs operate openly.',
+        prevention: 'Never travel alone, use hotel security escort, avoid displaying valuables, stay in secured compounds only'
+      },
+      {
+        label: 'Scams (ATM, Fake Police, Internet Fraud)',
+        frequency: 'Most common',
+        icon: 'Shield',
+        details: 'Nigeria is global center for internet fraud and advance fee scams. ATM skimming and fake police extortion target tourists. Card cloning extremely common.',
+        prevention: 'Use cash only, avoid all ATMs, never give documents to "police", exchange money at hotels only'
+      },
+      {
+        label: 'Car Theft & Carjacking',
+        frequency: 'Frequent',
+        icon: 'Car',
+        details: 'Carjacking at gunpoint is frequent, especially targeting vehicles with foreign occupants. Traffic jams make vehicles vulnerable to armed attacks.',
+        prevention: 'Use hotel transport only, avoid driving, keep windows up and doors locked, travel with security'
+      },
+      {
+        label: 'Pickpocketing & Bag Snatching',
+        frequency: 'Frequent',
+        icon: 'Hand',
+        details: 'Organized pickpocketing gangs operate in markets and crowded areas. Bag snatching from motorcycles common. Targeting of foreign women systematic.',
+        prevention: 'Use money belts, carry minimal items, stay in hotel groups, avoid markets and crowded areas'
+      }
     ],
     usefulTips: [
       "Never use ATMs alone - always have hotel security present for all financial transactions",
