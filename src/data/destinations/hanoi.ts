@@ -139,16 +139,28 @@ const hanoi: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Dress modestly - cover shoulders and knees in temples
-• Light, breathable clothing for humid weather
-• Avoid revealing clothing to reduce attention
-• Bring layers for air-conditioned spaces
-• Comfortable walking shoes for uneven sidewalks`,
-      firstTimers: `• Essential solo female travel safety tips: Download Grab app for safe transportation
-• Cross streets carefully - traffic doesn't stop for pedestrians
-• Eat street food from busy stalls with high turnover
-• Keep passport copy - originals required for hotel check-in
-• Learn basic Vietnamese phrases for emergencies - crucial solo travel safety precautions`,
+      clothing: `• Safety-first dress code: Cover shoulders and knees always - revealing clothing attracts unwanted attention and makes you stand out as a vulnerable tourist
+• Temple requirements: Absolutely no tank tops, shorts, or low-cut clothing in religious sites - bring lightweight scarf for quick shoulder coverage
+• Climate-appropriate fabrics: Pack breathable cotton and linen in light colors that don't cling to skin in humid 80-90°F weather
+• Strategic layering: Bring cardigan or light jacket for heavily air-conditioned restaurants, buses, and hotels (can drop to 65°F inside)
+• Footwear for safety: Sturdy walking shoes with good grip for uneven sidewalks and chaotic motorbike traffic - avoid flip-flops except at accommodation
+• Anti-theft clothing: Use crossbody bags worn in front, avoid expensive jewelry or watches that attract motorbike snatchers
+• Maxi dresses and long skirts: Perfect for staying cool while meeting cultural modesty expectations - comfortable and respectful
+• Sun protection essentials: Wide-brimmed hat and sunglasses for powerful Vietnamese sun, plus lightweight long sleeves for UV protection
+• Practical packing: Dark colors hide dirt from pollution and travel, neutral tones help you blend in with local fashion
+• Money belt necessity: Hidden money belt worn under clothing to protect cash and documents from pickpockets in crowded markets`,
+      firstTimers: `• Transportation safety priority: Download Grab app immediately - safer than street taxis with verified drivers, GPS tracking, and upfront pricing (rides cost $1-4)
+• Traffic survival skills: Cross streets slowly and predictably - motorbikes flow around you, never run or stop suddenly, traffic doesn't follow Western rules
+• Street food safety protocol: Eat only from busy stalls with high turnover where you see food cooked fresh - avoid raw vegetables and ice unless from reputable places
+• Document security: Keep passport copies separate from originals, originals required for hotel check-in, store digital copies in cloud for emergencies
+• Emergency Vietnamese vocabulary: Learn "Cứu tôi!" (Help!), "Gọi công an!" (Call police!), "Tôi cảm thấy không an toàn" (I feel unsafe) - essential for solo female safety
+• Cash management: Vietnam is cash-based society - withdraw larger amounts from bank ATMs to avoid fees, carry small bills for street vendors
+• Scam awareness essentials: Beware donut vendors offering tastes then overcharging, currency swap scams with similar-looking bills, never accept "free" street food
+• Motorbike snatcher protection: Hold bags on side away from traffic, grip phones tightly when using outdoors, thieves target distracted pedestrians
+• Safe accommodation areas: Stay in Old Quarter or French Quarter for walkability and police presence, avoid remote suburban areas especially at night
+• Night safety timing: Hanoi safe until 1-2 AM with active street life, but stick to well-lit main streets, avoid dark alleys and empty areas
+• Local women allies: Vietnamese women often approach solo female travelers to help - accept assistance graciously as locals are protective of foreign women
+• Health precautions: Drink only bottled water, carry hand sanitizer for street food, pack stomach medication for adjustment period to local cuisine`,
       apps: [
         'NomadHer',
         'Travel Ladies',
@@ -213,20 +225,44 @@ const hanoi: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Vietnamese culture is conservative. Dress modestly, especially when visiting temples, government buildings, or local neighborhoods. Avoid revealing clothing, short shorts, or low necklines. Business casual is appropriate for most situations. Remove shoes when entering homes and some restaurants.',
-      behaviorNorms: [
-        'Bow slightly when greeting elders or officials.',
-        'Use both hands when giving or receiving business cards or gifts.',
-        'Remove shoes when entering homes, temples, and some restaurants.',
-        'Avoid pointing with your finger - use your whole hand.',
-        'Don\'t touch people\'s heads, especially children.',
-        'Show respect for Ho Chi Minh and Vietnamese history.',
-        'Bargaining is expected in markets but be respectful.',
-        'Tipping is not traditional but appreciated in tourist areas.',
-        'Public displays of affection are generally discouraged.',
-        'Be patient with service - punctuality may be flexible.'
+      dressCode: [
+        'Vietnamese culture values conservative dress - modesty is essential for solo female travel safety in Hanoi, helping you blend in respectfully',
+        'Cover shoulders and knees always, especially in temples, government buildings, and local neighborhoods - fundamental cultural requirement',
+        'Avoid revealing clothing like short shorts, tank tops, low necklines, or crop tops - attracts unwanted attention and shows cultural insensitivity',
+        'Choose lightweight, breathable fabrics in neutral or dark colors (black, gray, navy, brown) that provide full coverage while staying cool',
+        'Pack a lightweight scarf or shawl for quick shoulder coverage when entering religious sites - essential for temple visits',
+        'Wear closed-toe shoes in rural areas and when visiting families - flip-flops considered too casual for respectful interactions',
+        'Business casual appropriate for most urban situations - neat, modest appearance demonstrates respect for Vietnamese professional culture',
+        'Remove shoes when entering homes, temples, and some traditional restaurants - check for shoe racks at entrances as mandatory requirement',
+        'Light layers work best for Hanoi\'s humid climate while maintaining modesty - long sleeves can be rolled up when appropriate',
+        'Avoid clothing with political messages, offensive symbols, or inappropriate imagery that could cause cultural misunderstandings'
       ],
-      perception: 'Solo female travelers are generally safe in Hanoi - one of the safest places for women to travel alone in Asia. Though you may attract curious looks and questions about being alone, Vietnamese people are typically helpful and protective of foreign women. Some men may be overly helpful, but harassment is uncommon. Local women often approach solo travelers to offer assistance.'
+      behaviorNorms: [
+        'Bow your head slightly when greeting elders, officials, or people in positions of authority - demonstrates proper respect in hierarchical Vietnamese society',
+        'Use both hands when giving or receiving business cards, money, or gifts - single-handed exchanges considered highly disrespectful and rude',
+        'Remove shoes when entering homes, temples, and some restaurants - check for shoe racks at entrances as this is mandatory cultural practice',
+        'Avoid pointing with your index finger - use your whole hand or nod in the direction instead to show politeness',
+        'Never touch anyone\'s head, especially children - the head is considered the most sacred body part in Vietnamese Buddhist culture',
+        'Show genuine respect for Ho Chi Minh and Vietnamese history - avoid negative political comments or criticisms of national figures',
+        'Bargaining is expected in markets but maintain respectful, non-aggressive approach - smile, be patient, and keep interactions friendly',
+        'Tipping not traditional but appreciated in tourist areas - 5-10% sufficient in restaurants serving foreigners, round up for small services',
+        'Public displays of affection are discouraged - hold hands discreetly but avoid kissing, hugging, or intimate touching in public spaces',
+        'Be patient with service and schedules - Vietnamese culture operates on more flexible time than Western standards, especially outside tourist areas',
+        'Learn basic Vietnamese phrases like \"Xin chào\" (hello) and \"Cảm ơn\" (thank you) - locals deeply appreciate foreigners who make language efforts',
+        'Accept hospitality graciously when offered food, drink, or assistance - refusing abruptly can be interpreted as rude or dismissive of kindness'
+      ],
+      perception: [
+        'Solo female travelers are generally very safe and welcomed in Hanoi - it\'s consistently ranked as one of the safest places for women to travel alone in Asia',
+        'Is Hanoi safe for female solo travelers? Absolutely yes - Vietnamese culture traditionally respects and protects women, extending this protective courtesy to foreign visitors',
+        'You may attract curious looks and friendly questions about traveling alone, but this stems from genuine cultural concern rather than judgment or harassment',
+        'Vietnamese people are typically helpful and protective toward foreign women - locals often go out of their way to assist solo travelers with directions and recommendations',
+        'Some Vietnamese men may be overly helpful or persistent in offering assistance, but harassment is uncommon compared to many other Southeast Asian destinations',
+        'Local Vietnamese women frequently approach solo female travelers to offer assistance, practice English, or simply share cultural experiences and local insights',
+        'Street harassment is almost nonexistent in Vietnamese culture - catcalling and aggressive behavior toward women is socially unacceptable and frowned upon',
+        'Solo dining and independent exploration is completely normal - Vietnamese society doesn\'t stigmatize women who are independent and traveling alone',
+        'Trust your instincts completely - if someone makes you uncomfortable, Vietnamese culture actively supports seeking help from nearby people, shops, or businesses',
+        'Women traveling alone consistently report feeling safer in Hanoi than in their home cities due to the respectful, protective cultural attitudes toward female independence'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['October-April'],
@@ -895,29 +931,67 @@ const hanoi: Destination = {
       ],
       transport: [
         {
-          method: 'Grab Ride',
-          cost: '$1-4/ride',
-          safetyDescription: 'Safest option with driver verification and tracking',
+          method: 'Grab Car/GrabBike',
+          cost: '$1-4 per ride (25,000-100,000 VND)',
+          safetyDescription: 'Safest option with driver verification, GPS tracking, and upfront pricing. Choose GrabCar over GrabBike for maximum safety',
           safetyLevel: 'high'
         },
         {
-          method: 'Public Bus',
-          cost: '$0.30-0.50/ride',
-          safetyDescription: 'Cheap but crowded, watch for pickpockets',
+          method: 'Hanoi Metro (Lines 2A & 3)',
+          cost: '$0.30-0.65 per ride (7,000-15,000 VND)',
+          safetyDescription: 'Modern, air-conditioned metro system with CCTV monitoring. Metro Card offers unlimited 72-hour rides for 150,000 VND',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'City Bus Network',
+          cost: '$0.30-0.65 per ride (7,000-15,000 VND)',
+          safetyDescription: 'Extensive network with HanoiBus app for real-time tracking. AC buses available on select routes, watch for pickpockets during rush hour',
           safetyLevel: 'medium'
         },
         {
-          method: 'Motorbike Taxi',
-          cost: '$0.50-2/ride',
-          safetyDescription: 'Convenient but less safe, use reputable drivers',
+          method: 'Be/Other Ride-Hailing Apps',
+          cost: '$1-3 per ride (competitive with Grab)',
+          safetyDescription: 'Local alternative to Grab with similar safety features and often better rates',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Licensed Taxis (Mai Linh, Taxi Group)',
+          cost: '$0.40-0.48 per km (10,000-12,000 VND)',
+          safetyDescription: 'Official taxis with meters, about 20,000 licensed vehicles. Always insist on meter usage',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Traditional Xe ôm (Motorbike Taxi)',
+          cost: '$0.65-0.85 per km (15,000-20,000 VND)',
+          safetyDescription: 'Convenient but higher risk due to chaotic traffic. Agree on price beforehand, wear provided helmet',
           safetyLevel: 'low'
         },
         {
-          method: 'Walking',
+          method: 'Walking in Old Quarter',
           cost: 'Free',
-          safetyDescription: 'Generally safe but traffic is dangerous',
+          safetyDescription: 'Generally safe for short distances, but extremely dangerous traffic. Walk slowly and predictably when crossing streets',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Airport Transfer (Bus 86)',
+          cost: '$1.40 from airport to city center',
+          safetyDescription: 'Budget option to city center, takes 45-60 minutes depending on traffic',
           safetyLevel: 'medium'
         }
+      ],
+      currencyExchangeTips: [
+        'Vietnam uses Vietnamese Dong (VND) with approximately 25,800 VND to $1 USD in 2025 - smart currency practices enhance solo female travel safety',
+        'Avoid airport currency exchange - rates are unfavorable with high fees. Change only small amounts for taxi fare to city center',
+        'Gold and jewelry stores (red/gold colored shops) on main streets offer best exchange rates with no fees - safer than unofficial vendors',
+        'ATMs are widespread but charge high fees - withdraw larger amounts at once to minimize charges, use bank ATMs over private ones',
+        'Inform your bank of travel plans to avoid card blocking - essential since many transactions require cards in tourist areas',
+        'Carry mix of small and large bills - street vendors prefer cash, larger hotels and restaurants accept cards',
+        'Use official banks (Vietcombank, BIDV, Techcombank) for safest currency exchange with proper receipts and security',
+        'Never exchange money with unofficial street vendors or individuals approaching you - dangerous for solo female travelers, may involve counterfeit currency',
+        'Keep emergency cash hidden separately from daily spending money in money belt - essential safety precaution for solo women',
+        'Download currency conversion apps offline (XE Currency, Currency Converter Plus) - helpful when WiFi unavailable in rural areas',
+        'Credit cards widely accepted in hotels and upscale restaurants but cash needed for street food, local transport, and small vendors',
+        'Count change carefully - currency swap scams common where vendors switch large bills for smaller ones during transactions'
       ],
       budgetTips: [
         'Use Grab ($1-4/ride) instead of street motorbike taxis for safety',
@@ -946,9 +1020,138 @@ const hanoi: Destination = {
       'Don\'t interrupt religious ceremonies or speak loudly in temples - maintain quiet reverence during spiritual practices'
     ]
   },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  culturalSensitivityTips: [
+    'Safety first: Dress modestly covering shoulders and knees - Vietnamese culture values modesty, revealing clothing attracts unwanted attention and makes you stand out as a vulnerable tourist',
+    'Master emergency communication: Learn "Cứu tôi!" (Help!), "Gọi công an!" (Call police!), "Tôi cảm thấy không an toàn" (I feel unsafe) - essential phrases for solo female travel safety',
+    'Transportation safety: Use Grab app exclusively instead of street taxis or motorbike taxis - verified drivers, GPS tracking, and upfront pricing protect solo women from scams and unsafe situations',
+    'Cultural blending for safety: Remove shoes in temples, bow head respectfully, use both hands for exchanges - proper etiquette helps you blend in and gain local protection as a respectful female visitor',
+    'Trust local women: Vietnamese women frequently approach solo female travelers to help - accept assistance graciously as locals are naturally protective of foreign women, but trust your instincts',
+    'Avoid common cultural mistakes: Never touch heads, point feet at Buddha statues, or show public affection - these offenses can cause serious cultural incidents and unwanted confrontations',
+    'Scam awareness: Beware currency swap scams (20,000 vs 200,000 dong bills) and donut vendor scams on Hanoi streets - count change carefully and only accept what you specifically request',
+    'Night safety protocol: While Hanoi is safe until 1-2 AM with active street life, avoid dark alleys and poorly lit areas - stick to well-populated streets in Old Quarter and French Quarter'
+  ],
+  culturalSensitivityTipsDetailed: {
+    title: 'Cultural Sensitivity & Safety Guide for Solo Female Travelers in Hanoi',
+    introduction: 'Is Hanoi safe for women solo travelers culturally? Yes - Hanoi ranks #16 safest for solo female travelers with a 4.2/5 safety rating. Vietnamese culture deeply respects women, but understanding local customs is crucial for safety. Recent 2025 reports show instances of sexual assault, harassment, and violence against female foreigners in urban centers, making cultural awareness essential for protection.',
+    sections: [
+      {
+        title: 'Sexual Harassment & Personal Safety Protection',
+        tips: [
+          'Street harassment is relatively low in Hanoi compared to other cities - Vietnamese culture values respect, making catcalling and aggressive behavior socially unacceptable',
+          'However, documented cases exist: sexual assault, harassment, and violence against women have been reported in Vietnam, including rape and gang rape in urban centers and tourist destinations',
+          'Women may face sexual harassment in various settings including beach trips, bar clubs, taxis, and public transportation - stay vigilant in these environments',
+          'Trust local women - Vietnamese women frequently approach solo female travelers to offer assistance, practice English, or share cultural experiences',
+          'If someone makes you uncomfortable, Vietnamese culture actively supports seeking help from nearby people, shops, or businesses - don\'t hesitate to ask for assistance',
+          'Avoid walking alone late at night, especially in poorly lit or deserted areas - while Hanoi is generally safe, incidents have been documented',
+          'Use Grab ride-hailing app instead of street taxis, especially at night - it\'s safer with driver verification and GPS tracking',
+          'Keep your belongings in sight at all times and avoid displaying expensive jewelry or electronics that attract unwanted attention',
+          'If experiencing harassment, firmly say "Xin hãy để tôi yên" (Please leave me alone) and move to a populated area immediately'
+        ]
+      },
+      {
+        title: 'Religious and Sacred Sites Safety & Etiquette',
+        tips: [
+          'Remove shoes before entering temples, pagodas, and some traditional restaurants - mandatory cultural requirement that shows respect',
+          'Dress conservatively with covered shoulders and knees in all religious sites - revealing clothing like tank tops and shorts are inappropriate and may attract unwanted attention',
+          'Choose modest colors like gray, black, cream, navy, or soft pastels when visiting temples - avoid bright, flashy colors that draw attention',
+          'Never sit with your feet pointing toward Buddha statues or religious altars - this is considered very impolite and offensive behavior',
+          'Never touch offerings on altars in temples and houses as they are meant for the deceased - touching them is deeply disrespectful',
+          'Maintain quiet, respectful behavior in temples - speak softly or stay silent, avoid intrusive photography without permission',
+          'Make monetary donations using both hands as a sign of respect - single-handed giving is considered rude',
+          'Avoid touching religious statues, artifacts, or monks unless specifically invited - unauthorized touching is offensive',
+          'Walk slowly and observe what locals are doing - follow their lead to avoid cultural mistakes',
+          'Ask permission before taking photos in sacred spaces - many areas prohibit photography entirely'
+        ]
+      },
+      {
+        title: 'Social Interactions & Communication Safety',
+        tips: [
+          'Use both hands when giving or receiving business cards, money, or gifts - single-handed exchanges are considered highly disrespectful',
+          'Bow your head slightly when greeting elders, officials, or people in authority - demonstrates proper respect in hierarchical Vietnamese society',
+          'Never touch anyone\'s head, especially children - the head is considered the most sacred body part in Vietnamese Buddhist culture',
+          'Learn essential safety phrases: "Cứu tôi!" (Help!), "Gọi công an!" (Call police!), "Tôi cảm thấy không an toàn" (I feel unsafe)',
+          'Vietnamese people may laugh when you approach - this is their cultural way of life, not mockery, as expressing anger openly is inappropriate',
+          'Accept hospitality graciously when offered food or drink - refusing abruptly can be interpreted as rude, but trust your instincts about safety',
+          'Avoid pointing with your index finger - use your whole hand or nod in the direction to show politeness',
+          'Be patient with language barriers - Vietnamese people deeply appreciate foreigners who attempt to communicate in Vietnamese',
+          'Understand that "yes" doesn\'t always mean agreement - Vietnamese often say yes to avoid confrontation, so clarify important matters',
+          'Express emotions calmly - showing anger or frustration openly is considered "losing face" and being very rude in Vietnamese culture'
+        ]
+      },
+      {
+        title: 'Scam Prevention & Street Safety',
+        tips: [
+          'Currency swap scam: Vietnam has similar-looking bills - blue 20,000 dong can be mistaken for 200,000 dong. Always count change carefully and be aware vendors may swap larger bills for smaller ones',
+          'Donut scam on Hanoi streets: Ladies selling donuts offer free tastes, load bags full, then charge exorbitant amounts for inedible donuts fried in cheap oil. Only accept what you specifically request',
+          'Familiarize yourself with typical tourist scams initiated through casual conversation - remain alert and don\'t trust overly friendly strangers immediately',
+          'Always negotiate prices upfront for taxis, street food, and market items - avoid inflated tourist pricing',
+          'Be extra cautious in crowded markets, tourist areas, and transport hubs where pickpocketing occurs - keep valuables secure',
+          'Avoid vendors who are overly persistent or aggressive - politely but firmly decline and walk away',
+          'Never exchange money with street vendors or unofficial sources - use official banks or gold jewelry stores for better rates',
+          'Trust your instincts - if a situation feels wrong, remove yourself immediately regardless of cultural politeness',
+          'Keep emergency cash hidden separately from daily spending money for safety situations'
+        ]
+      },
+      {
+        title: 'Dress Code for Safety & Cultural Respect',
+        tips: [
+          'Prioritize modesty over fashion - Vietnamese women dress conservatively, and revealing clothing attracts unwanted attention from men',
+          'Cover shoulders and knees always, especially in temples, government buildings, and local neighborhoods - fundamental safety and cultural requirement',
+          'Avoid low necklines, short skirts, crop tops, or tight-fitting clothes that may be misinterpreted or draw harassment',
+          'Pack lightweight, breathable fabrics in neutral colors (black, gray, navy, brown) that provide full coverage while staying cool',
+          'Carry a lightweight scarf or shawl for quick shoulder coverage - essential for temple visits and conservative areas',
+          'Wear closed-toe shoes in rural areas and when visiting families - flip-flops are too casual and show disrespect',
+          'Choose practical walking shoes with good grip - Hanoi\'s uneven sidewalks and motorbike traffic require stable footwear',
+          'Avoid clothing with political messages, offensive symbols, or inappropriate imagery that could cause misunderstandings or unwanted attention',
+          'Dress for the weather but maintain modesty - light layers work best for Hanoi\'s humid climate',
+          'Remove hats and sunglasses when entering restaurants, homes, or meeting people as a sign of respect'
+        ]
+      },
+      {
+        title: 'Public Behavior & Social Safety',
+        tips: [
+          'Public displays of affection are strongly discouraged - hold hands discreetly but avoid kissing, hugging, or intimate touching in public spaces',
+          'Keep conversations quiet in public transport and restaurants - loud talking is considered rude and draws unwanted attention',
+          'Never express anger or frustration publicly - resolve issues calmly and privately as emotional outbursts are seen as very disrespectful',
+          'Be punctual for appointments and social meetings - lateness is considered disrespectful and may damage relationships',
+          'Queue politely and respect personal space - Vietnamese culture values orderly, courteous behavior',
+          'Don\'t refuse hospitality abruptly, but trust safety instincts - decline politely with genuine appreciation if uncomfortable',
+          'Avoid controversial topics like politics, Vietnam War, or criticizing Ho Chi Minh - these can cause serious offense or unwanted attention',
+          'Learn basic Vietnamese phrases beyond greetings - "Cảm ơn" (thank you), "Xin lỗi" (sorry), "Không, cảm ơn" (No, thank you)',
+          'Observe local women\'s behavior and follow their lead in social situations - they can provide the best cultural guidance',
+          'Maintain dignity and composure even in stressful situations - shouting or aggressive behavior will not help and may escalate problems'
+        ]
+      },
+      {
+        title: 'Temple & Sacred Space Detailed Safety Protocol',
+        tips: [
+          'Never sit with feet pointing toward Buddha - this is extremely offensive and locals will be genuinely upset',
+          'Remove shoes, hats, and sunglasses before entering - check for shoe racks and follow local example',
+          'Wear long pants or skirts that cover knees completely - shorts are absolutely forbidden in temples regardless of length',
+          'Cover shoulders with sleeves or shawl - sleeveless tops are never acceptable in sacred spaces',
+          'Move slowly and quietly - sudden movements or loud noises disrupt others\' prayers and meditation',
+          'Don\'t touch, climb on, or lean against statues, altars, or religious artifacts - this is sacrilegious',
+          'Photography rules vary - always ask permission first, many temples prohibit photos entirely',
+          'Don\'t turn your back to Buddha statues when leaving - walk backwards respectfully or bow before turning',
+          'Avoid visiting during prayer times or ceremonies unless specifically invited - respect religious activities',
+          'Make donations respectfully using both hands - even small amounts are appreciated when given properly',
+          'If unsure about protocol, observe locals first or ask temple staff - they appreciate respectful curiosity',
+          'Don\'t use temples as tourist photo backgrounds - treat them as active religious spaces, not tourist attractions'
+        ]
+      }
+    ],
+    safetyNote: 'These cultural sensitivity guidelines are based on 2025 safety reports and real traveler experiences. Following them enhances solo female travel safety by helping you blend in respectfully while avoiding situations that could attract unwanted attention or put you at risk. Remember: sexual harassment, assault, and safety should always be your top priority - when in doubt, prioritize your safety over cultural politeness.'
+  },
+  youtubeVideos: [
+    {
+      videoId: "iXm3hzNiJWg",
+      title: "Hanoi Travel Guide - What It's Like to Visit"
+    },
+    {
+      videoId: "1h4NA96vjOE",
+      title: "Hanoi Travel Experience"
+    },
+  ]
 };
 
 export default hanoi;
