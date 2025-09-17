@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             Solo Female Travel Safety Made Simple
           </h1>
           <p className="mb-10 text-lg text-gray-600 sm:text-xl animate-fade-in-up animate-delay-200 text-left">
-            Get trusted solo travel safety tips, real solo female travel experiences, and safety reviews from women travelers. Find the safest countries for solo female travel with our comprehensive solo travel safety guide and community support.
+            Get trusted solo travel safety tips, real solo female travel experiences, and safety reviews from women travelers. Find the safest countries for solo travel with our comprehensive solo travel safety guide and community support.
           </p>
         </div>
         {/* Right: Signup Form */}
