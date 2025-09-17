@@ -353,6 +353,18 @@ const nagano: Destination = {
       "Don't eat or drink while walking in public.",
       "Don't take photos in temples without permission.",
       "Don't tip in restaurants—service charge is included."
+    ],
+    culturalSensitivityTips: [
+      'Nagano represents traditional Japanese mountain culture with deep Buddhist heritage, particularly around Zenkoji Temple, one of Japan\'s most important pilgrimage sites. Solo female travelers should understand that this spiritual significance requires extra respect for religious customs and contemplative atmosphere.',
+      'The Japanese concept of "satoyama" (living harmoniously with nature) is especially strong in Nagano\'s mountain communities. Solo female travelers who show appreciation for environmental preservation, seasonal awareness, and respectful interaction with natural spaces will connect with fundamental local values.',
+      'Nagano\'s hot spring (onsen) culture has specific etiquette that reflects Japanese values of purification, relaxation, and social harmony. Solo female travelers should learn proper onsen protocols, understand gender-separated bathing customs, and appreciate these spaces as places for spiritual and physical cleansing.',
+      'The prefecture\'s agricultural heritage, particularly around rice cultivation and traditional crafts, remains central to local identity. Solo female travelers who show interest in local farming practices, seasonal foods, and traditional arts will demonstrate cultural appreciation and often receive warm local guidance.',
+      'Japanese hospitality ("omotenashi") in Nagano often includes mountain hospitality traditions where helping travelers is considered a moral obligation. Solo female travelers should receive this help graciously while understanding it reflects deep cultural values of community care and mountain solidarity.',
+      'Nagano\'s Buddhist temple culture involves daily spiritual practices that locals take seriously. Solo female travelers should approach temples with reverence, participate respectfully in prayer rituals when appropriate, and understand that these are living spiritual communities, not tourist attractions.',
+      'The concept of "mono no aware" (awareness of impermanence) is particularly relevant in Nagano\'s mountain environment with dramatic seasonal changes. Solo female travelers who appreciate this aesthetic philosophy will better understand local art, architecture, and the cultural significance of seasonal festivals.',
+      'Japanese group harmony ("wa") is especially important in Nagano\'s close-knit mountain communities. Solo female travelers should be particularly mindful of behavior that might disrupt community harmony, speak quietly, and show extra consideration for local customs.',
+      'Nagano\'s winter sports culture reflects Japanese values of perseverance, respect for nature, and community cooperation. Solo female travelers who show appreciation for these sports traditions, whether participating or observing, will connect with important aspects of local culture and pride.',
+      'The preservation of traditional architecture and cultural practices in Nagano represents Japanese values of maintaining cultural continuity while adapting to modern life. Solo female travelers who show respect for these preserved traditions and historical sites help maintain these cultural treasures for future generations.'
     ]
   },
     // Add Women’s Confidence Score (Numbeo 2025)

@@ -291,11 +291,23 @@ const melbourne: Destination = {
     culturalDonts: [
       "Don't be loud or disruptive in public - Australians value considerate behavior",
       "Don't cut in line or push ahead - queue etiquette strictly observed",
-      "Don't make jokes about race or religion - multicultural society values respect", 
+      "Don't make jokes about race or religion - multicultural society values respect",
       "Don't stare at others or invade personal space - personal boundaries important",
       "Don't litter or disrespect public spaces - environmental consciousness high",
       "Don't assume everyone drinks alcohol - respect personal choices",
       "Don't be impatient with service - laid-back culture values politeness"
+    ],
+    culturalSensitivityTips: [
+      'Melbourne is one of the world\'s most multicultural cities, with people from over 200 countries calling it home. Solo female travelers should appreciate this diversity and show respect for the many different cultural communities, languages, and traditions that coexist throughout the city.',
+      'Australian "mateship" culture emphasizes equality, mutual support, and fair treatment for all. Solo female travelers who embrace these egalitarian values and treat everyone with equal respect, regardless of background or occupation, will connect with fundamental Australian cultural principles.',
+      'The concept of "tall poppy syndrome" means Australians are suspicious of people who boast or act superior. Solo female travelers who remain humble, avoid bragging about achievements or wealth, and show genuine interest in others will be much better received.',
+      'Indigenous Australian culture has over 60,000 years of history and remains significant in Melbourne. Solo female travelers who show respect for Aboriginal heritage, learn about local Wurundjeri culture, and approach indigenous history with sensitivity will demonstrate cultural awareness.',
+      'Australian humor tends to be self-deprecating, ironic, and includes friendly teasing as a sign of acceptance. Solo female travelers who can appreciate this humor style while understanding cultural boundaries will find it easier to connect with locals.',
+      'Coffee culture is exceptionally sophisticated in Melbourne, with baristas taking great pride in their craft. Solo female travelers who show appreciation for quality coffee, learn café etiquette, and engage respectfully with coffee culture will experience an important aspect of Melbourne identity.',
+      'Environmental consciousness is strong in Australian culture, from recycling to sustainable practices. Solo female travelers who demonstrate environmental awareness, participate in eco-friendly activities, and respect natural spaces will align with important Australian values.',
+      'Work-life balance is highly valued in Australian culture, with emphasis on outdoor activities, sports, and leisure time. Solo female travelers who show appreciation for Melbourne\'s outdoor lifestyle and participate in recreational activities will better understand local priorities.',
+      'Australian directness in communication should not be mistaken for rudeness - it reflects cultural values of honesty and straightforwardness. Solo female travelers who appreciate direct communication and respond authentically will navigate social interactions more successfully.',
+      'Sports culture, particularly Australian Rules Football (AFL), is central to Melbourne identity. Solo female travelers who show interest in local sports, even if not participating, will find sports serve as a common cultural connection point with locals.'
     ],
 
     womensConfidenceScore: {

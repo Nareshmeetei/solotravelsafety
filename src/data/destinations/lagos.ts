@@ -489,6 +489,18 @@ const lagos: Destination = {
       "Don't wear revealing or tight clothing.",
       "Don't discuss sensitive political topics."
     ],
+    culturalSensitivityTips: [
+      'Nigeria is Africa\'s most populous country with over 250 ethnic groups, each with distinct languages, traditions, and customs. Solo female travelers should understand that Lagos represents this incredible diversity, where Yoruba culture predominates but Igbo, Hausa, and many other cultures coexist.',
+      'Religious diversity is significant in Lagos, with Christianity and Islam both prominent, plus traditional African spiritual practices. Solo female travelers should show respect for all religious traditions and understand that spirituality plays a central role in most Nigerians\' daily lives.',
+      'Yoruba culture, predominant in Lagos, emphasizes respect for elders, community solidarity, and rich artistic traditions. Solo female travelers who show proper respect to older people and demonstrate interest in Yoruba art, music, and dance will find deeper cultural connections.',
+      'Nigerian English is widely spoken but includes local expressions and phrases that reflect cultural values. Learning basic Yoruba greetings like "Bawo" (how are you) and "E ku aaro" (good morning) shows cultural appreciation and often results in warmer interactions.',
+      'Family and community structures are central to Nigerian culture, with extended families and community obligations taking priority over individual preferences. Solo female travelers should understand that collective well-being often supersedes personal choice in social interactions.',
+      'Nigerian fashion and personal presentation are important cultural expressions, with colorful fabrics and elaborate styles reflecting cultural pride. Solo female travelers who appreciate and respectfully engage with local fashion culture will find it opens doors to meaningful cultural exchanges.',
+      'Food culture in Nigeria includes complex traditions around sharing meals, eating customs, and hospitality. Solo female travelers who show appreciation for local cuisine and understand eating etiquette (using right hand, accepting offered food graciously) will connect with fundamental cultural values.',
+      'Negotiation and relationship-building are integral to Nigerian business and social culture. Solo female travelers should understand that building personal connections often precedes practical arrangements, and patience with relationship-building processes shows cultural understanding.',
+      'Music and dance are central to Nigerian cultural expression, from traditional drumming to contemporary Afrobeats. Solo female travelers who show appreciation for Nigerian musical heritage will find music serves as a bridge to deeper cultural understanding and connection.',
+      'Economic inequality and social challenges are visible realities in Lagos. Solo female travelers should approach these issues with sensitivity, understanding that despite economic difficulties, Nigerians maintain strong cultural pride, resilience, and hospitality toward respectful visitors.'
+    ],
     womensConfidenceScore: {
       score: 22.4, // Numbeo 2025 Safety Index for Lagos
       source: "Numbeo 2025",

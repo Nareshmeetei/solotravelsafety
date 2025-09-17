@@ -319,6 +319,18 @@ const kamakura: Destination = {
       "Don't leave shoes on in homes or temples.",
       "Don't use unofficial taxis."
     ],
+    culturalSensitivityTips: [
+      'Kamakura is considered the spiritual heart of Japanese Buddhism and Zen philosophy, with a history dating back over 800 years as Japan\'s former capital. Solo female travelers should understand that this city holds deep religious significance and approach temples and shrines with appropriate reverence and respect.',
+      'Japanese concepts of "wa" (harmony) and "omotenashi" (hospitality) are especially pronounced in Kamakura\'s traditional atmosphere. Solo female travelers who show respect for group harmony, avoid disruptive behavior, and appreciate subtle acts of kindness will find deeper cultural connections.',
+      'Temple and shrine etiquette is crucial in Kamakura, home to the famous Great Buddha and numerous sacred sites. Solo female travelers should learn proper bowing techniques, purification rituals at temple entrances, and understand that these are active places of worship, not just tourist attractions.',
+      'The concept of "mono no aware" (awareness of the impermanence of things) is central to Japanese aesthetic philosophy, particularly evident in Kamakura\'s seasonal beauty. Solo female travelers who appreciate this sensitivity to transient beauty will better understand Japanese cultural values and seasonal celebrations.',
+      'Quiet contemplation and mindfulness are valued in Kamakura\'s spiritual environment. Solo female travelers should embrace peaceful reflection, speak softly in sacred spaces, and understand that silence is often more appropriate than conversation in temples and meditation areas.',
+      'Japanese gift-giving culture includes bringing "omiyage" (souvenirs) when visiting or staying with locals. Solo female travelers who understand this reciprocity culture and participate appropriately will show cultural awareness and respect for Japanese social customs.',
+      'Seasonal awareness is important in Japanese culture, with each season bringing specific activities, foods, and festivals. Solo female travelers who show appreciation for seasonal changes and participate in season-appropriate activities will connect more deeply with local cultural rhythms.',
+      'The Japanese concept of "ikigai" (life purpose) and work-life philosophy influences daily interactions. Solo female travelers who show respect for people\'s dedication to their crafts, jobs, and life pursuits will better understand Japanese cultural values and work ethic.',
+      'Photography etiquette is especially important at religious sites in Kamakura. Solo female travelers should always ask permission before photographing people, understand when photography is prohibited in sacred spaces, and show respect for others\' spiritual practices.',
+      'The practice of "forest bathing" (shinrin-yoku) and nature appreciation is deeply rooted in Japanese culture. Solo female travelers who participate respectfully in Kamakura\'s hiking trails and natural spaces will connect with important aspects of Japanese environmental philosophy and wellness practices.'
+    ],
     womensConfidenceScore: {
       score: 77.1, // Numbeo 2025 Safety Index for Japan
       source: "Numbeo 2025",

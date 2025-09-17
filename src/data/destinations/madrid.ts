@@ -364,6 +364,18 @@ const madrid: Destination = {
       "Don't rush meals - dining is social time",
       "Don't wear flip-flops or very casual clothes in city center"
     ],
+    culturalSensitivityTips: [
+      'Spanish culture prioritizes family, community, and social connections above individual achievement. Solo female travelers who show genuine interest in building relationships and participating in social activities will find Spanish people incredibly welcoming and protective.',
+      'The concept of "tertulia" (informal gatherings for conversation) is central to Spanish social life. Solo female travelers who engage in café conversations, show interest in local opinions, and participate in social discussions will experience authentic Spanish culture.',
+      'Spanish time culture operates on a different rhythm - late dinners (9-11 PM), afternoon siestas, and leisurely conversations are cultural norms. Solo female travelers who adapt to this relaxed pace will avoid frustration and better connect with local lifestyle.',
+      'Spanish regional identity is extremely strong, with distinct languages, traditions, and cultural pride in different regions. Solo female travelers who show appreciation for Madrid\'s unique Castilian heritage and avoid comparing it to other Spanish regions will demonstrate cultural sensitivity.',
+      'Spanish language appreciation goes beyond basic communication - Spaniards take pride in their language and regional dialects. Learning Madrid-specific expressions and showing effort to speak Spanish, even imperfectly, often results in enthusiastic local support.',
+      'The Spanish concept of "quedar" (making plans to meet up) reflects cultural values of spontaneous socializing. Solo female travelers who are open to flexible social arrangements and last-minute invitations will better integrate into Spanish social culture.',
+      'Food culture in Spain is deeply social, with long meals serving as important bonding time. Solo female travelers who embrace the multi-course meal tradition, late dining times, and communal eating customs will connect with fundamental Spanish values.',
+      'Spanish fashion and personal presentation are important cultural expressions, especially in Madrid. Solo female travelers who dress stylishly and pay attention to appearance will show respect for Spanish cultural values and often receive better treatment.',
+      'The Spanish passion for debate and animated discussion should not be mistaken for aggression. Solo female travelers who understand that louder, more expressive communication styles reflect engagement rather than hostility will navigate social situations more successfully.',
+      'Spanish hospitality traditions include offering food, drinks, and assistance to guests. Solo female travelers who accept these offerings graciously and reciprocate when possible will demonstrate understanding of Spanish generosity culture and often gain protective relationships.'
+    ],
     womensConfidenceScore: {
       score: 89.2,
       source: "Travel Ladies Community & INE España 2024",

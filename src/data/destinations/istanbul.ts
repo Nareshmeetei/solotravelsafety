@@ -26,7 +26,7 @@ const istanbul: Destination = {
       },
       walkingAlone: { 
         score: 6.5, 
-        context: 'Walking alone as a solo female traveler in Istanbul is generally safe in tourist areas during daylight hours. Main districts like Sultanahmet, Beyoglu, and Kadikoy have good pedestrian traffic and police presence. However, women may experience catcalling and unwanted attention, especially in bazaar areas. Cultural norms mean solo women attract curiosity. Dress modestly to minimize attention and stick to busy streets.' 
+        context: 'Is Istanbul safe for women solo travelers when walking alone? Yes, with awareness. Solo female travel safety in Istanbul is generally good in tourist areas during daylight hours. Main districts like Sultanahmet, Beyoglu, and Kadikoy have good pedestrian traffic and police presence. However, women traveling alone may experience catcalling and unwanted attention, especially in bazaar areas. Cultural norms mean solo women attract curiosity. Dress modestly to minimize attention and stick to busy streets for optimal solo female travel safety.' 
       }
     },
     neighborhoods: {
@@ -229,18 +229,36 @@ const istanbul: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Turkey is secular but culturally conservative. Dress modestly covering shoulders, chest, and knees. Hijab not required but bring scarf for mosque visits. Avoid tight or revealing clothing to minimize unwanted attention from men. More conservative dress recommended outside tourist areas.',
-      behaviorNorms: [
-        'Remove shoes when entering mosques and some traditional homes',
-        'Use right hand for greetings, eating, and passing items - left hand considered unclean',
-        'Keep public displays of affection minimal - hand-holding acceptable but kissing discouraged',
-        'Show respect during call to prayer times - avoid loud conversations near mosques',
-        'Bargaining expected in markets and bazaars but not in regular stores',
-        'Tipping customary - 10-15% at restaurants, round up for taxis and services',
-        'Accept Turkish hospitality graciously but set boundaries if feeling overwhelmed',
-        'Learn basic greetings in Turkish - shows respect and often improves interactions'
+      dressCode: [
+        'Istanbul dress code is relaxed in tourist areas - you can dress as you would in Milan, Paris, or London without strict requirements',
+        'Modest covering preferred for solo female travelers - lightweight long pants, tops covering shoulders reduce unwanted male attention',
+        'Mosque visits require head covering - pack lightweight scarves for Hagia Sophia, Blue Mosque, and other religious sites',
+        'Conservative neighborhoods need modest dress - cover knees and shoulders when exploring local areas beyond tourist zones',
+        'Summer clothing acceptable in central areas - shorts and tank tops fine in Sultanahmet, Beyoglu, and Nişantaşı districts'
       ],
-      perception: 'Is Istanbul safe for female solo travelers? Yes, with cultural awareness. Solo women attract curiosity rather than hostility in Turkish culture. Turkish people are generally hospitable and protective of female guests. However, persistent male attention and street harassment do occur, especially in tourist areas. Women traveling alone often report feeling welcome but advise being firm with boundaries and dressing conservatively to minimize unwanted attention.'
+      behaviorNorms: [
+        'Turkish hospitality culture is strong - graciously accept offered tea or food but set clear boundaries when feeling overwhelmed',
+        'Right hand use essential - use right hand for greetings, eating, receiving items as left hand considered unclean in Islamic tradition',
+        'Mosque etiquette strictly observed - remove shoes, dress modestly, avoid loud conversations during prayer times (5 times daily)',
+        'Bargaining expected in Grand Bazaar and markets - negotiate prices confidently but remain respectful, not in regular shops',
+        'Personal space differs from Western norms - expect closer conversations and more physical proximity than typical in Europe/America',
+        'Public displays of affection minimized - hand-holding acceptable but kissing discouraged, especially in conservative areas',
+        'Tipping culture standard - 10-15% in restaurants, round up taxi fares, tip hotel staff and tour guides appropriately',
+        'Language appreciation valued - learning "Merhaba" (hello), "Teşekkürler" (thank you), "Özür dilerim" (excuse me) enhances interactions',
+        'Ramadan respect important - during religious periods, eat/drink discretely in public, understand reduced service hours',
+        'Gender interaction boundaries exist - Turkish men may interpret friendliness differently, maintain professional distance with strangers'
+      ],
+      perception: [
+        'Is Istanbul safe for women solo travelers? Yes, with cultural awareness - Turkey welcomes female visitors but requires understanding of local customs',
+        'Solo female travelers attract curiosity, not hostility - Turkish culture views women guests as honored visitors deserving protection',
+        'Street harassment occurs but remains verbal - persistent male attention, catcalling, and following happen especially in bazaar areas',
+        'Tourist police presence strong in Sultanahmet - female travelers report feeling secure in main historic district with constant monitoring',
+        'Local women provide excellent support networks - Turkish women often assist solo female travelers with directions and safety advice',
+        'Cultural misunderstandings common - friendly behavior sometimes misinterpreted, firm boundaries essential with male interactions',
+        'Protective cultural values work in favor - Turkish honor culture means locals often intervene when women face harassment',
+        'Evening safety varies by neighborhood - stick to well-lit tourist areas after dark, avoid isolated streets in conservative districts',
+        'Transportation generally safe for women - metro has women-only sections during peak hours, taxis regulated and monitored'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-May', 'September-October'],
@@ -371,13 +389,25 @@ const istanbul: Destination = {
     ],
     culturalDonts: [
       'Don\'t wear revealing clothes, especially when visiting religious sites',
-      'Don\'t refuse Turkish hospitality abruptly - decline politely if needed', 
+      'Don\'t refuse Turkish hospitality abruptly - decline politely if needed',
       'Don\'t point feet toward people when sitting - it\'s considered rude',
       'Don\'t eat or drink in public during Ramadan daylight hours',
       'Don\'t photograph people without permission, especially women',
       'Don\'t engage with aggressive street vendors or fake guides',
       'Don\'t walk alone in deserted areas late at night',
       'Don\'t assume everyone speaks English - learn basic Turkish phrases'
+    ],
+    culturalSensitivityTips: [
+      'Turkey straddles both Europe and Asia, creating a unique cultural bridge between East and West. Understanding this duality helps solo female travelers appreciate Istanbul\'s complex identity, where modern European influences blend with traditional Islamic and Ottoman heritage.',
+      'Islamic culture is central to Turkish society, though Turkey is officially secular. Solo female travelers should respect religious customs, especially during prayer times and the holy month of Ramadan, while understanding that Turkish Islam tends to be more moderate and tourist-friendly than in other Muslim countries.',
+      'Turkish hospitality is legendary and deeply ingrained in the culture. Solo female travelers will often be invited for tea or meals by locals who genuinely want to help. This hospitality reflects cultural values of generosity and honor, though always use judgment about accepting invitations.',
+      'The Ottoman Empire\'s multicultural legacy still influences Istanbul today. Understanding this history helps solo female travelers appreciate the city\'s diverse neighborhoods, architectural styles, and the blend of Greek, Armenian, Jewish, and Turkish cultural influences throughout the city.',
+      'Turkish language appreciation goes a long way with locals. Learning basic phrases like "Merhaba" (hello), "Teşekkür ederim" (thank you), and "Affedersiniz" (excuse me) shows respect for Turkish culture and often results in warmer interactions and better treatment.',
+      'Family and honor are central to Turkish culture, which influences social interactions. Solo female travelers who show respect for family values and understand that personal honor is important will navigate social situations more successfully.',
+      'Tea culture is fundamental to Turkish social life, with çay (tea) served throughout the day as a gesture of friendship and hospitality. Solo female travelers who participate respectfully in tea culture will find it opens doors to authentic cultural experiences and connections.',
+      'Gender roles in Turkey are evolving, especially in Istanbul, but traditional expectations still influence social dynamics. Solo female travelers should understand that while Istanbul is generally progressive, conservative attitudes may still be encountered, particularly in older generations.',
+      'Turkish cuisine is a source of national pride with deep cultural significance. Solo female travelers who show appreciation for local food, ask about ingredients and preparation methods, and avoid commenting on cultural differences will find food becomes a bridge to meaningful cultural exchanges.',
+      'The concept of "namus" (honor and dignity) is important in Turkish culture. Solo female travelers who dress modestly, behave respectfully, and show appreciation for Turkish customs demonstrate understanding of these cultural values, resulting in more positive interactions.'
     ],
     womensConfidenceScore: {
       score: 68.4,
@@ -667,27 +697,75 @@ const istanbul: Destination = {
       ],
       transport: [
         {
-          method: 'Public Transport (Istanbulkart)',
-          cost: '$0.40/ride, $8/weekly pass',
-          safetyDescription: 'Metro, tram, bus system generally safe with some pickpocketing on tourist routes. Women-only sections on some buses',
-          safetyLevel: 'medium'
-        },
-        {
-          method: 'BiTaksi/Uber',
-          cost: '$3-8 typical rides within city',
-          safetyDescription: 'Much safer than street taxis with GPS tracking and driver ratings. Preferred for solo women',
+          method: 'Metro System (M1-M11 Lines)',
+          cost: '27 TL per ride with Istanbulkart ($0.85)',
+          safetyDescription: 'Excellent safety with 11 metro lines operating 06:00-00:00. Modern, clean, and secure with CCTV. Connects European and Asian sides efficiently',
           safetyLevel: 'high'
         },
         {
-          method: 'Street Taxis',
-          cost: '$2-6 typical rides (if meter used)',
-          safetyDescription: 'Can be problematic for solo women - overcharging and inappropriate behavior reported',
-          safetyLevel: 'low to medium'
+          method: 'Tram Lines (T1-T5)',
+          cost: '27 TL per ride with Istanbulkart',
+          safetyDescription: 'T1 tram serves Sultanahmet, Topkapi Palace, Grand Bazaar. Can be crowded but generally safe. Watch for pickpockets during peak hours',
+          safetyLevel: 'medium-high'
         },
         {
-          method: 'Walking',
+          method: 'Marmaray Cross-Bosphorus Train',
+          cost: '27-59.79 TL depending on distance',
+          safetyDescription: 'Revolutionary underwater tunnel connecting continents. Safe, modern, and efficient with frequent service every 5-10 minutes',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Ferry System (Bosphorus/Golden Horn)',
+          cost: '38-89 TL depending on route',
+          safetyDescription: 'Beautiful and safe water transport. Routes from Karakoy/Eminonu to Kadikoy/Uskudar. Also serves Princes Islands',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Bus Network (400+ lines)',
+          cost: '27 TL with Istanbulkart',
+          safetyDescription: 'Comprehensive but can be crowded. Women-only sections during peak hours. Good for reaching areas not served by metro/tram',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Metrobus (BRT System)',
+          cost: '27 TL, 24/7 service',
+          safetyDescription: 'Rapid transit system running 24 hours. Can be extremely crowded but efficient for long distances across the city',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'BiTaksi App (Recommended)',
+          cost: '$3-8 typical rides',
+          safetyDescription: 'Safest taxi option for solo female travelers. Driver ratings, route tracking, and cashless payment. Preferred over street taxis',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Uber',
+          cost: '$4-10 typical rides',
+          safetyDescription: 'International rideshare with good safety features. GPS tracking, driver information, and cashless payment for solo women',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Street Taxis (Yellow)',
+          cost: '$2-6 if meter used',
+          safetyDescription: 'Regulated but problematic for solo women. Reports of overcharging, route manipulation, and inappropriate behavior. Use apps instead',
+          safetyLevel: 'low-medium'
+        },
+        {
+          method: 'HAVAIST Airport Shuttle',
+          cost: '$3-5 to city center',
+          safetyDescription: 'Official airport transport. Safe, affordable, and comfortable alternative to taxis. Regular service to major districts',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Walking in Tourist Areas',
           cost: 'Free',
-          safetyDescription: 'Generally safe in tourist areas during day but harassment possible. Avoid isolated areas at night',
+          safetyDescription: 'Safe in Sultanahmet, Beyoglu, and Nisantasi during daylight. Good pedestrian infrastructure but expect street harassment',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Dolmus (Shared Minibuses)',
+          cost: '$0.50-1.50 for short routes',
+          safetyDescription: 'Traditional shared transport for local areas. Cheap but language barrier and crowded conditions. Better for adventurous travelers',
           safetyLevel: 'medium'
         }
       ],
@@ -750,9 +828,53 @@ const istanbul: Destination = {
       'Don\'t be overly familiar with men you don\'t know - Turkish culture has different boundaries for male-female interactions'
     ]
   },
+  culturalInformation: {
+    dressCode: [
+      'Business and formal settings: Conservative dress required - cover shoulders, chest, and knees for professional meetings and upscale venues',
+      'Tourist areas flexibility: Casual Western clothing acceptable in Sultanahmet, Beyoglu, and Nişantaşı - dress as you would in European cities',
+      'Mosque visiting essentials: Headscarves mandatory for women, modest clothing covering arms and legs, remove shoes at entrance',
+      'Street harassment reduction: Modest clothing significantly reduces unwanted male attention - lightweight pants and tops covering shoulders recommended',
+      'Seasonal considerations: Summer heat makes modest dressing challenging - choose breathable fabrics that still provide coverage'
+    ],
+    behaviorNorms: [
+      'Turkish hospitality traditions: Accept offered tea or coffee graciously but set boundaries - excessive generosity can lead to expectations',
+      'Islamic cultural practices: Use right hand for eating, greetings, and transactions - left hand considered unclean in religious tradition',
+      'Personal space norms: Expect closer physical proximity in conversations and public spaces than typical Western standards',
+      'Religious respect requirements: Avoid loud conversations near mosques during call to prayer (5 times daily), dress appropriately',
+      'Bargaining culture mastery: Expected in Grand Bazaar and markets - start at 30% of asking price, negotiate respectfully',
+      'Gender interaction boundaries: Maintain professional distance with unknown men - friendliness sometimes misinterpreted as romantic interest',
+      'Tipping standards: 10-15% in restaurants, round up taxi fares, tip hotel staff appropriately for quality service',
+      'Language appreciation: Learning basic Turkish phrases shows respect and significantly improves local interactions and safety',
+      'Public behavior expectations: Minimize public displays of affection, avoid excessive drinking, respect conservative social norms',
+      'Ramadan sensitivity: During religious periods, eat and drink discretely in public, understand reduced business hours'
+    ],
+    soloWomenPerception: [
+      'Is Istanbul safe for female solo travelers? Yes, with cultural awareness - Turkey maintains strong protective traditions for female guests',
+      'Cultural curiosity versus hostility: Solo women attract interest rather than aggression - Turkish culture views female visitors as honored guests',
+      'Street harassment reality: Verbal harassment occurs, particularly in tourist bazaars - catcalling, following, and persistent attention common',
+      'Local women support networks: Turkish women often assist solo female travelers with directions, safety advice, and cultural guidance',
+      'Tourist police protection: Strong security presence in Sultanahmet historic district provides immediate assistance for female travelers',
+      'Evening safety considerations: Well-lit tourist areas generally safe after dark, but avoid isolated streets in conservative neighborhoods',
+      'Transportation safety for women: Metro systems have women-only carriages during peak hours, official taxis are regulated and monitored',
+      'Cultural misunderstanding risks: Friendly Western behavior sometimes misinterpreted - maintain clear boundaries with male interactions',
+      'Traditional protective values: Turkish honor culture means locals often intervene when women face harassment or need assistance'
+    ]
+  },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+    videoId: "r4b_D4SEVHc"
+  },
+  youtubeVideos: [
+    {
+      videoId: "r4b_D4SEVHc",
+      title: "Solo Female Travel Istanbul - Complete Safety Guide",
+      description: "Comprehensive guide for solo female travelers exploring Istanbul's culture, safety, and attractions"
+    },
+    {
+      videoId: "zyC52TKUEbc",
+      title: "Istanbul Travel Experience - Solo Female Perspective",
+      description: "Real experiences and practical tips for women traveling alone in Istanbul"
+    }
+  ]
 };
 
 export default istanbul;

@@ -396,6 +396,18 @@ const oslo: Destination = {
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in nature.",
       "Don't make jokes about Norway\'s history or politics."
+    ],
+    culturalSensitivityTips: [
+      'Norwegian culture emphasizes equality, modesty, and social democratic values with a strong emphasis on "janteloven" (Law of Jante) that discourages boasting or standing out. Solo female travelers who demonstrate humility, avoid bragging about achievements or wealth, and show genuine interest in others will be much better received.',
+      'Environmental consciousness is deeply ingrained in Norwegian culture, from recycling and conservation to outdoor recreation that respects nature. Solo female travelers who demonstrate environmental awareness and participate in sustainable practices will show understanding of fundamental Norwegian values.',
+      'The concept of "friluftsliv" (outdoor life) is central to Norwegian identity, emphasizing the right to roam freely in nature and the importance of outdoor activities for mental and physical well-being. Solo female travelers who appreciate this connection to nature will understand core Norwegian cultural values.',
+      'Norwegian work-life balance prioritizes equality, family time, and personal well-being over career advancement. Solo female travelers who understand that many businesses close early and Norwegians value their free time will better navigate cultural rhythms and social expectations.',
+      'Gender equality is not just policy but a lived reality in Norway, consistently ranking #1-3 globally on gender equality indices. Solo female travelers will find this reflected in equal treatment, shared responsibilities, and the complete normality of women traveling and living independently.',
+      'Norwegian language appreciation shows cultural respect, though English proficiency is excellent. Learning basic phrases like "Takk" (thanks), "Unnskyld" (excuse me), and "Hyggelig å møte deg" (nice to meet you) demonstrates cultural effort and often results in warmer interactions.',
+      'The concept of "hygge" and "koselig" (coziness and comfort) reflects Norwegian values of simple pleasures, quality time, and authentic experiences. Solo female travelers who appreciate these concepts and participate in cozy social activities will connect with important cultural values.',
+      'Norwegian social interaction tends to be reserved initially but genuine once relationships develop. Solo female travelers should not mistake initial reserve for unfriendliness - Norwegians simply prefer meaningful connections over superficial social interactions.',
+      'Historical pride in Viking heritage, while balanced with modern progressive values, remains significant to Norwegian identity. Solo female travelers who show respectful interest in Norwegian history and cultural achievements will often find locals eager to share their heritage.',
+      'Norwegian trust culture operates on high social trust and community cooperation. Solo female travelers who demonstrate trustworthiness, follow social rules, and participate in community-minded behavior will experience the benefits of this high-trust society.'
     ]
   },
   legalResources: {

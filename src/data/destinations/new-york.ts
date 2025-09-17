@@ -328,6 +328,18 @@ const newYork: Destination = {
       'Don\'t take photos of strangers without permission',
       'Don\'t be offended by direct communication style'
     ],
+    culturalSensitivityTips: [
+      'New York City is one of the world\'s most diverse cities, with people from virtually every country, culture, and background living and working together. Solo female travelers should appreciate this incredible diversity and show respect for the many different cultural communities, languages, and traditions that coexist throughout the five boroughs.',
+      'New York\'s fast-paced culture values efficiency, directness, and time management. Solo female travelers who adapt to the quick rhythm of city life, walk with purpose, and communicate directly will better integrate into the local culture while understanding that apparent brusqueness often reflects efficiency rather than rudeness.',
+      'The concept of "mind your own business" is central to New York culture, allowing people from different backgrounds to coexist respectfully. Solo female travelers should understand that New Yorkers generally respect privacy and personal space, even in crowded conditions, and that this cultural norm actually creates a safe environment for independent women.',
+      'New York\'s neighborhood identity is extremely strong, with each area having distinct cultural characteristics, from Little Italy to Chinatown to Harlem. Solo female travelers who show appreciation for neighborhood-specific cultures and histories will gain deeper insights into the city\'s complex cultural landscape.',
+      'The city\'s work culture emphasizes ambition, innovation, and professional achievement. Solo female travelers who show respect for New Yorkers\' career dedication and understand that work often takes priority in social interactions will better navigate the city\'s professional and social dynamics.',
+      'New York\'s food culture reflects its global diversity, with authentic cuisine from virtually every culture represented. Solo female travelers who explore different cultural food scenes and show appreciation for authentic ethnic restaurants will experience one of the city\'s greatest cultural treasures.',
+      'The arts and creativity culture in New York values innovation, expression, and pushing boundaries. Solo female travelers who show interest in the city\'s museums, theaters, galleries, and street art will connect with fundamental aspects of New York\'s cultural identity and creative energy.',
+      'Public transportation etiquette reflects New York values of efficiency and mutual consideration in crowded spaces. Solo female travelers who learn subway and bus customs, move quickly but considerately, and help others navigate will demonstrate understanding of urban community cooperation.',
+      'New York\'s tipping culture is not just customary but essential for service workers\' livelihoods. Solo female travelers who tip appropriately (18-22% for restaurants, $1-2 per drink at bars) show understanding of local economic realities and respect for service industry workers.',
+      'The concept of "New York resilience" reflects the city\'s ability to adapt, recover, and thrive despite challenges. Solo female travelers who show appreciation for this resilient spirit and avoid stereotypes about New Yorkers being unfriendly will often discover the genuine helpfulness and community spirit beneath the fast-paced exterior.'
+    ],
     womensConfidenceScore: {
       score: 78.0,
       source: 'Travel Ladies 2025 & NYPD Crime Statistics',

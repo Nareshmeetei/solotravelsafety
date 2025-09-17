@@ -321,6 +321,18 @@ const stockholm: Destination = {
       "Don\'t expect immediate warmth or friendliness - Swedish reserve is cultural, not personal rejection, patience builds genuine connections",
       "Don\'t interrupt or speak loudly in public - Swedish conversation culture values listening over talking and quiet voices over volume",
       "Don\'t expect shops or services to accept cash - Sweden is virtually cashless, and refusing cards makes you appear unprepared"
+    ],
+    culturalSensitivityTips: [
+      'Sweden is built on the principle of "lagom" (balance/moderation) - understanding this concept of "just the right amount" guides all social interactions.',
+      'Swedish is the primary language, but most Swedes speak excellent English - making an effort with basic Swedish phrases shows cultural respect.',
+      'The "Law of Jante" (Jantelagen) emphasizes humility and equality - avoid boasting or standing out, as modesty is highly valued.',
+      'Environmental consciousness is deeply embedded in Swedish culture - showing respect for nature and sustainability aligns with national values.',
+      'Swedish work-life balance is sacred - understanding concepts like "fika" (coffee break) and family time demonstrates cultural awareness.',
+      'Gender equality is fundamental to Swedish society - Sweden leads globally in women\'s rights and equality initiatives.',
+      'Personal space and privacy are highly valued - respecting boundaries and avoiding intrusive questions builds trust with locals.',
+      'Swedish punctuality reflects respect for others\' time - being precisely on time shows cultural understanding and consideration.',
+      'The concept of "allemansrätten" (right to roam) reflects Swedish relationship with nature - understanding outdoor ethics is important.',
+      'Swedish decision-making emphasizes consensus and discussion - patience with deliberative processes shows respect for democratic values.'
     ]
   },
   scamWarnings: [],

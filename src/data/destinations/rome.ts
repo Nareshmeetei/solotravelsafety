@@ -694,6 +694,18 @@ const rome: Destination = {
       "Don't show expensive jewelry.",
       "Don't walk alone in isolated areas at night."
     ],
+    culturalSensitivityTips: [
+      'Italian culture places immense pride in historical heritage, artistic achievements, and Rome\'s role as the center of both the Roman Empire and Catholic Church. Solo female travelers who show genuine appreciation for this layered history and cultural significance will connect with fundamental Italian values.',
+      'The concept of "bella figura" (making a good impression) is central to Italian culture, emphasizing style, elegance, and proper presentation. Solo female travelers who dress appropriately, show attention to personal appearance, and understand the importance of good presentation will demonstrate cultural awareness.',
+      'Italian family values remain central to social structure, with strong family bonds, respect for elders, and multi-generational relationships. Solo female travelers who show interest in family traditions and understand that family obligations often take priority will better navigate Italian social customs.',
+      'Food culture in Italy involves deep traditions around meal timing, preparation methods, and regional specialties. Solo female travelers who respect Italian dining customs, avoid food-related cultural mistakes (like cappuccino after meals), and show appreciation for culinary heritage will connect with essential cultural values.',
+      'Catholic traditions deeply influence Italian culture, from daily customs to major celebrations and architectural heritage. Solo female travelers who show respect in religious sites, understand the cultural significance of Catholic traditions, and dress appropriately will demonstrate cultural sensitivity.',
+      'Italian language appreciation is important for showing cultural respect, even though many Romans speak English in tourist areas. Learning basic Italian phrases like "Buongiorno" (good morning), "Grazie" (thank you), and "Scusi" (excuse me) demonstrates cultural effort.',
+      'The concept of "passeggiata" (evening stroll) represents Italian values of social interaction, community connection, and enjoying life\'s pleasures. Solo female travelers who participate in this cultural tradition will experience authentic Italian social life.',
+      'Italian regional pride is significant, with Romans having particular pride in their city\'s unique history and culture distinct from other Italian regions. Solo female travelers who show specific appreciation for Roman heritage rather than generalizing about "Italian" culture will demonstrate cultural understanding.',
+      'Art and architecture appreciation is fundamental to Italian cultural identity, with Romans living surrounded by millennia of artistic achievement. Solo female travelers who show genuine interest in artistic heritage and understand the cultural significance of Rome\'s monuments will connect with local pride.',
+      'Italian social interaction emphasizes warmth, expressiveness, and personal relationships over efficiency. Solo female travelers who embrace the relationship-building approach, show patience with slower service, and appreciate animated conversation styles will better integrate into Roman social culture.'
+    ],
     womensConfidenceScore: {
       score: 63.9,
       source: "Safearound & Numbeo 2025",

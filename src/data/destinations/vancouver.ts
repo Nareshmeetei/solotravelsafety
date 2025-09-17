@@ -868,6 +868,18 @@ const vancouver: Destination = {
       'Don\'t make insensitive comments about cultures - multiculturalism requires respect for all traditions and backgrounds',
       'Don\'t litter or ignore environmental conservation - Canadians highly value environmental responsibility',
       'Don\'t stand too close in social interactions - Canadians maintain arm\'s length personal space boundaries'
+    ],
+    culturalSensitivityTips: [
+      'Vancouver represents Canadian multiculturalism at its finest, with significant Asian populations and Indigenous heritage creating a unique Pacific Coast identity.',
+      'English is the primary language, with significant Mandarin and Cantonese speakers - showing appreciation for linguistic diversity demonstrates cultural awareness.',
+      'Indigenous reconciliation with First Nations peoples is actively practiced - understanding traditional Coast Salish territories shows respect for original inhabitants.',
+      'Environmental consciousness is deeply embedded in Vancouver culture - appreciation for nature, recycling, and sustainable living reflects core values.',
+      'The concept of "Canadian mosaic" means cultural groups maintain distinct identities while contributing to collective Canadian society.',
+      'Outdoor recreation culture defines Vancouver lifestyle - hiking, skiing, and water activities are central to local identity and social bonding.',
+      'Asian cultural influence is profound and celebrated - understanding East Asian business practices and social customs enhances local integration.',
+      'Canadian politeness involves frequent use of "please," "thank you," and "sorry" - this reflects genuine courtesy rather than superficial politeness.',
+      'Work-life balance prioritizes quality of life over pure ambition - understanding this helps appreciate Vancouver\'s relaxed yet professional atmosphere.',
+      'Universal healthcare and social programs reflect Canadian values of collective care and support for community members.'
     ]
   },
   youtubeVideo: {

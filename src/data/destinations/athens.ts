@@ -454,6 +454,18 @@ const athens: Destination = {
       'Don\'t be impatient with Greek time',
       'Don\'t skip the afternoon coffee ritual'
     ],
+    culturalSensitivityTips: [
+      'Greece is the birthplace of democracy and Western philosophy - showing appreciation for Greek contributions to civilization demonstrates cultural respect.',
+      'Greek language has a unique alphabet and ancient heritage - making an effort with basic Greek phrases like "Yia sou" and "Efcharisto" shows cultural courtesy.',
+      'Greek Orthodox Christianity deeply influences daily life and traditions - showing respect in churches and understanding religious customs is important.',
+      'The concept of "philoxenia" (love of strangers) is central to Greek hospitality - accepting offered food and drink graciously honors this tradition.',
+      'Family bonds are extremely strong in Greek culture - showing interest in family relationships and respecting elders demonstrates cultural awareness.',
+      'Greek time culture operates on a leisurely "siga siga" (slowly slowly) pace - patience with timing shows respect for Mediterranean lifestyle.',
+      'Food culture is central to Greek social life - understanding dining customs, sharing mezze, and appreciating traditional cuisine shows cultural appreciation.',
+      'Greek pride in ancient heritage runs deep - showing genuine interest in history and archaeology creates positive connections with locals.',
+      'Coffee culture is a social ritual - taking time for proper Greek coffee conversations demonstrates understanding of social customs.',
+      'Regional variations exist throughout Greece - showing awareness of local customs and island-specific traditions demonstrates cultural sensitivity.'
+    ],
     womensConfidenceScore: {
       score: 72.8,
       source: 'Numbeo 2025 & Travel Ladies Community',
@@ -962,6 +974,70 @@ const athens: Destination = {
         sourceUrl: 'https://www.visitgreece.gr/'
       }
     ],
+    culturalSensitivityTips: [
+      'Master essential Greek phrases with proper pronunciation - "Yia sou" (hello), "Efcharisto poli" (thank you very much), "Signomi" (excuse me), "Borite na me voithisete?" (can you help me?) show deep respect for Greek language and earn enthusiastic assistance from proud locals',
+      'Respect Greek Orthodox customs religiously - Cover shoulders and knees in churches, don\'t turn back to icons, remove hats, cross yourself respectfully; proper religious etiquette demonstrates profound cultural awareness and often earns protective guidance from devout locals',
+      'Embrace Greek philoxenia (love of strangers) wholeheartedly - Accept offered food, coffee, or assistance graciously as refusal deeply offends; this sacred hospitality tradition builds powerful protective relationships essential for solo female travel safety',
+      'Navigate Greek time culture ("siga siga") patiently - Meals last hours, appointments flexible, rushing appears disrespectful; understanding leisurely Mediterranean pace prevents frustration and helps build meaningful relationships crucial for cultural protection',
+      'Follow traditional Mediterranean dining customs precisely - Lunch 2-4pm, dinner after 9-10pm, sharing mezze plates essential, never refuse grandmother\'s cooking; proper dining etiquette demonstrates cultural understanding and earns family-like protection',
+      'Honor Greek family values and hierarchy deeply - Greeks prioritize family above everything; showing genuine interest in family traditions, asking about children/grandparents demonstrates respect and often results in protective, nurturing treatment from locals',
+      'Appreciate Greek historical pride and achievements sensitively - Show genuine interest in ancient Greek contributions to democracy, philosophy, arts; historical knowledge and respect often leads to passionate local guidance and insider cultural experiences',
+      'Master Greek coffee culture and conversation rituals - Greek coffee takes 30+ minutes, cafes are social hubs, rushing is offensive; participating in leisurely coffee conversations builds essential relationships for solo female travel safety and cultural integration'
+    ],
+    culturalSensitivityTipsDetailed: {
+      title: 'Cultural Sensitivity & Safety Guide for Solo Female Travelers in Athens',
+      introduction: 'Is Athens safe for women solo travelers culturally? Yes - Greece has strong traditions of philoxenia (hospitality) and family protection that extend to female visitors. However, understanding Greek Orthodox customs, Mediterranean social rhythms, and traditional gender expectations is crucial for solo female travelers to maximize safety and cultural acceptance in this ancient yet modern city.',
+      sections: [
+        {
+          title: 'Greek Orthodox Customs & Religious Respect',
+          tips: [
+            'Master church dress codes absolutely - Cover shoulders, knees, avoid low necklines, wear modest colors; proper attire prevents ejection and shows profound respect that earns protective guidance from devout worshippers',
+            'Follow sacred church etiquette precisely - Don\'t turn back to icons, remove hats, maintain silence, avoid flash photography, cross yourself when others do; respectful behavior often results in personal invitations to family celebrations',
+            'Understand icon veneration traditions deeply - Greeks kiss icons and light candles for prayers; showing reverence (even as non-Orthodox) demonstrates cultural sensitivity and often earns spiritual guidance and community protection',
+            'Participate respectfully in religious processions - Easter epitafios, August 15 celebrations; step aside reverently, dress appropriately, don\'t interrupt prayers; respectful observation often leads to dinner invitations and cultural immersion',
+            'Learn essential Orthodox vocabulary - "Christos Anesti/Alithos Anesti" (Easter), "Kali Anastasi" (good resurrection), "Agia Sofia" (holy wisdom); religious knowledge impresses locals and opens doors to deeper cultural experiences',
+            'Navigate fasting periods sensitively - Lent, Assumption fasts affect restaurant menus; understanding Orthodox calendar helps with dining choices and shows cultural awareness that earns respect from traditional families',
+            'Respect monastery visiting rules - Some monasteries restrict female visitors or have specific hours; following guidelines demonstrates deep cultural respect and often results in meaningful spiritual conversations',
+            'Understand name day celebrations - More important than birthdays in Greece; acknowledging someone\'s name day shows cultural sophistication and often leads to protective relationships'
+          ]
+        },
+        {
+          title: 'Mediterranean Social Dynamics & Hospitality',
+          tips: [
+            'Embrace sacred philoxenia (love of strangers) tradition - Greeks take hospitality as divine duty; never refuse offered food, coffee, or assistance as this deeply offends and prevents protective relationship building essential for solo female safety',
+            'Master Greek "siga siga" (slowly slowly) philosophy completely - Meals last 3+ hours, conversations meander, rushing is deeply offensive; understanding leisurely pace prevents frustration and builds meaningful relationships crucial for cultural protection',
+            'Navigate intensely family-centered social structure - Greeks live for family; asking about children, grandparents, family traditions demonstrates respect and often results in adoption into protective family networks',
+            'Honor traditional age hierarchy absolutely - Greeks revere elders above all; standing for older people, using formal titles, seeking their advice often provides invaluable safety guidance and community protection',
+            'Understand expressive gesture communication - Greeks use dramatic hand movements; learn positive gestures, avoid "moutza" (open palm), appreciate theatrical communication style that enhances social bonding and acceptance',
+            'Master sacred coffee culture rituals - Greek coffee preparation is ceremony, conversation is art, rushing is sacrilege; participating in hours-long coffee sessions builds essential relationships for solo female travel safety',
+            'Appreciate Greek emotional expressiveness - Loud conversations are normal, passionate discussions show engagement; understanding emotional culture helps navigate social situations and build genuine protective connections',
+            'Follow taverna social customs - Sharing mezze plates mandatory, refusing food offensive, contributing to group atmosphere expected; proper taverna behavior demonstrates cultural integration and earns protective treatment'
+          ]
+        },
+        {
+          title: 'Traditional Gender Expectations & Modern Navigation',
+          tips: [
+            'Understand traditional vs. modern Greek attitudes - Older generations may have traditional gender expectations while younger Greeks are more progressive; adapting approach accordingly ensures comfort',
+            'Navigate evening social customs - Traditional families may expect women home earlier; understanding local family dynamics helps you blend in and avoid standing out',
+            'Respect dress codes in traditional areas - More conservative attire in rural areas and traditional neighborhoods shows cultural sensitivity and prevents unwanted attention',
+            'Understand Greek men\'s protective instincts - Many Greek men feel obligated to help women; accepting appropriate assistance while maintaining boundaries creates positive interactions',
+            'Learn about Greek women\'s social roles - Modern Greek women are educated professionals; connecting with local women often provides the strongest safety networks and cultural insights',
+            'Navigate nightlife expectations safely - Greek nightlife starts very late; understanding timing and social dynamics helps you participate safely in cultural experiences'
+          ]
+        },
+        {
+          title: 'Historical Pride & Cultural Appreciation',
+          tips: [
+            'Show genuine interest in Greek history - Greeks are passionate about their heritage; demonstrating historical knowledge often results in enthusiastic guidance and protection',
+            'Understand national pride sensitivities - Avoid comparisons that diminish Greek achievements; respectful appreciation of Greek contributions to civilization builds positive relationships',
+            'Learn about modern Greek struggles and resilience - Understanding recent economic challenges shows empathy and often leads to deeper, protective relationships with locals',
+            'Respect archaeological sites and ancient heritage - Follow rules strictly, don\'t touch artifacts; proper behavior at historical sites demonstrates cultural respect and responsibility',
+            'Appreciate Greek contributions to democracy and philosophy - Showing knowledge of Socrates, Plato, democracy origins impresses locals and often leads to educational conversations and guidance',
+            'Understand regional differences and island vs. mainland culture - Each area has distinct characteristics; showing awareness of local specifics demonstrates respectful preparation and cultural sensitivity'
+          ]
+        }
+      ]
+    },
     costAndComfort: {
       dailyBudget: {
         range: '$45 - $85 USD / day',
@@ -1087,7 +1163,7 @@ const athens: Destination = {
   },
   youtubeVideos: [
     {
-      videoId: "Xl2strJuKiw"
+      videoId: "NtCEMuSCcf4"
     },
     {
       videoId: "uSQP6IeZ7UI"

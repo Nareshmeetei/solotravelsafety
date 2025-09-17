@@ -889,6 +889,16 @@ const berlin: Destination = {
         sourceUrl: 'https://www.bvg.de/en'
       }
     ],
+    culturalSensitivityTips: [
+      'Master German punctuality culture - Arrive exactly on time for all appointments; being late is deeply disrespectful in German culture and can affect your professional and social relationships',
+      'Embrace direct German communication - Germans are straightforward and honest, not rude; understanding this cultural trait helps build genuine trust and safety networks with locals',
+      'Follow strict traffic rules religiously - Wait for pedestrian signals even with no cars visible; jaywalking is heavily frowned upon and can result in fines or negative social judgment',
+      'Learn essential German phrases - "Guten Tag" (good day), "Danke" (thanks), "Entschuldigung" (excuse me), "Hilfe" (help) show respect and earn helpful assistance from generally reserved Germans',
+      'Respect German environmental consciousness - Separate recycling properly, use public transport, avoid waste; environmental responsibility is deeply important to Germans and demonstrates cultural awareness',
+      'Understand German privacy and personal space - Germans value privacy highly; avoid oversharing personal information initially and respect physical boundaries for better cultural integration',
+      'Navigate German bureaucracy respectfully - Bring all required documents, be patient with processes, follow rules precisely; showing respect for systems earns cooperation and assistance',
+      'Appreciate German work-life balance - Don\'t expect business calls after hours, respect quiet times (Ruhezeit), understand Sunday closures; respecting boundaries helps build positive local relationships'
+    ],
     culturalSensitivity: {
       culturalDos: [
         'Be punctual for all appointments - Germans value timeliness and consider lateness disrespectful',

@@ -313,6 +313,18 @@ const portAuPrince: Destination = {
       "Don't display any valuables or foreign currency",
       "Don't travel without professional security escort"
     ],
+    culturalSensitivityTips: [
+      'Haiti has a rich cultural heritage blending African, French, and indigenous Taíno influences, but current security conditions make cultural exploration extremely dangerous for solo female travelers. Understanding this cultural richness intellectually is important, but physical safety must take absolute priority.',
+      'Haitian Creole (Kreyòl) and French are the official languages, reflecting the country\'s complex colonial history. While language appreciation is culturally important, solo female travelers should prioritize safety communication with security personnel and embassy contacts over cultural language learning.',
+      'Vodou (Voodoo) is an important spiritual practice combining African traditions with Catholic influences, but solo female travelers should not attempt to explore religious sites or practices due to extreme security risks in current conditions.',
+      'Haitian music, art, and literature represent incredibly rich cultural traditions, but solo female travelers should appreciate these through secure channels, documentaries, and cultural centers outside of Haiti rather than attempting in-person cultural experiences.',
+      'Family and community bonds are central to Haitian culture, with strong traditions of mutual support during hardships. Solo female travelers should understand that current security recommendations may seem to conflict with cultural hospitality, but safety must override cultural norms.',
+      'Economic challenges and political instability have severely impacted daily life in Port-au-Prince. Solo female travelers should approach any discussion of Haiti\'s situation with deep sensitivity, understanding that current conditions represent crisis rather than normal Haitian culture.',
+      'Haitian cuisine reflects the country\'s cultural diversity and creativity, but solo female travelers should not attempt to experience local food culture due to security risks. Appreciating Haitian culinary traditions should be done in safer locations.',
+      'Education and intellectual achievement are highly valued in Haitian culture, but current conditions make educational or cultural exchange visits extremely dangerous for solo female travelers.',
+      'Haitian resilience and survival skills in the face of challenges are remarkable cultural characteristics. Solo female travelers should show deep respect for this resilience while understanding that visiting during current crisis conditions would only add to local burdens.',
+      'Environmental and historical preservation is culturally important to Haitians, but solo female travelers should support these efforts through international organizations rather than attempting personal visits to historical or natural sites due to security risks.'
+    ],
     womensConfidenceScore: {
       score: 5.2,
       source: "Multiple Government Advisories 2025",

@@ -379,6 +379,18 @@ const vienna: Destination = {
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
       "Don't make jokes about Austria\'s history or politics."
+    ],
+    culturalSensitivityTips: [
+      'Austria has a rich imperial history and cultural heritage - showing appreciation for Habsburg legacy and classical music traditions demonstrates cultural respect.',
+      'German is the official language with a distinct Austrian dialect - making an effort with basic German phrases like "Guten Tag" and "Danke" shows cultural courtesy.',
+      'Formality and proper etiquette are highly valued - using titles like "Herr" and "Frau" with surnames until invited to use first names is important.',
+      'Coffee house culture is central to Viennese identity - understanding café traditions and taking time to enjoy coffee properly shows cultural appreciation.',
+      'Classical music and arts are fundamental to Austrian identity - showing interest in Mozart, Beethoven, and Vienna\'s musical heritage creates cultural connections.',
+      'Environmental consciousness and quality of life are prioritized - Austria\'s commitment to sustainability and work-life balance reflects national values.',
+      'Punctuality is sacred in Austrian culture - arriving exactly on time for appointments shows respect and cultural understanding.',
+      'Catholic traditions influence many cultural practices - showing respect for religious customs and holidays demonstrates cultural sensitivity.',
+      'Austrian cuisine and wine culture are sources of national pride - appreciating local specialties like schnitzel and Austrian wines shows cultural interest.',
+      'The concept of "Gemütlichkeit" (coziness/comfort) reflects Austrian approach to hospitality and social interactions - embracing this warmth is culturally appreciated.'
     ]
   },
   scamWarnings: [],

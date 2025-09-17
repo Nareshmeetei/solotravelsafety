@@ -290,6 +290,18 @@ const denpasar: Destination = {
       "Don't show soles of feet to others.",
       "Don't refuse offered food/drink rudely."
     ],
+    culturalSensitivityTips: [
+      'Bali is a Hindu island in the world\'s largest Muslim country, creating a unique cultural blend. Understanding this helps solo female travelers appreciate the island\'s distinctive traditions, religious practices, and social customs that differ from both mainland Indonesia and Western cultures.',
+      'Hindu-Balinese culture is deeply spiritual with daily temple offerings, ceremonies, and rituals. Solo female travelers should show respect for these practices by dressing modestly near temples, being quiet during ceremonies, and understanding that spirituality permeates daily life.',
+      'The concept of "Tri Hita Karana" (harmony between humans, nature, and gods) governs Balinese philosophy. This influences everything from environmental practices to social interactions, helping explain the island\'s emphasis on balance and respect for natural surroundings.',
+      'Balinese social hierarchy is complex but welcoming to respectful visitors. Solo female travelers benefit from understanding that courtesy, humility, and showing proper respect to elders and religious figures will result in warm, helpful interactions with locals.',
+      'Language appreciation is important - learning basic Balinese or Indonesian phrases like "Selamat pagi" (good morning) and "Terima kasih" (thank you) shows cultural respect and often results in more positive interactions and better treatment.',
+      'Traditional dress codes are significant, especially near temples and during ceremonies. Solo female travelers should cover shoulders and legs when visiting temples, and during religious festivals like Galungan and Kuningan, modest dress throughout the island shows cultural sensitivity.',
+      'Family and community values are central to Balinese life. Solo female travel is understood and accepted, but travelers who show interest in local family traditions and community activities will find deeper cultural connections and support.',
+      'Environmental consciousness is deeply rooted in Balinese Hindu beliefs. Solo female travelers can show respect by participating in eco-friendly practices, avoiding single-use plastics, and supporting local environmental initiatives.',
+      'The concept of "saving face" is important in Balinese culture. Avoiding confrontational behavior, speaking softly, and resolving disagreements privately rather than publicly shows cultural understanding and maintains harmony.',
+      'Understanding the significance of Nyepi (Day of Silence) and other religious observances helps solo female travelers plan respectfully around sacred times when normal activities cease and the island observes spiritual reflection.'
+    ],
     womensConfidenceScore: {
       score: 68.2,
       source: "Numbeo 2025",

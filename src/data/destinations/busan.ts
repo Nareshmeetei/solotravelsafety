@@ -322,6 +322,16 @@ const busan: Destination = {
         sourceUrl: "https://english.visitkorea.or.kr/"
       }
     ],
+    culturalSensitivityTips: [
+      'Learn essential Korean phrases - "Annyeonghaseyo" (hello), "Gamsahamnida" (thank you), "Joesonghamnida" (excuse me), "Doumyeon" (help) show respect for Korean language and earn warm assistance from locals',
+      'Master Korean bowing etiquette - Slight bow when greeting, deeper bow for elders; proper respect demonstrates cultural understanding and often results in protective, helpful treatment from Koreans',
+      'Understand Korean age hierarchy (Sunbae/Hoobae) - Show extra respect to older people, use formal language initially; understanding social hierarchy helps navigate Korean culture safely and build respectful relationships',
+      'Follow Korean shoe removal customs - Remove shoes in homes, some restaurants, temples, traditional venues; this fundamental courtesy shows cultural awareness and prevents social awkwardness',
+      'Respect Korean temple and spiritual etiquette - Modest dress, quiet behavior, no pointing at Buddha statues; proper religious respect demonstrates cultural sensitivity and earns community acceptance',
+      'Navigate Korean group dining culture - Wait for eldest to start eating, use both hands when receiving items, share dishes properly; understanding dining customs helps with social integration and safety networking',
+      'Understand Korean concept of "nunchi" (social awareness) - Read social situations, don\'t interrupt, be sensitive to group dynamics; cultural intuition helps avoid uncomfortable situations and builds positive relationships',
+      'Follow Korean public behavior norms - Keep voices low on transport, avoid public displays of affection, respect personal space; proper public etiquette helps you blend in and avoid unwanted attention'
+    ],
     culturalDos: [
       'Use public transport and official taxis.',
       'Dress modestly in temples.',

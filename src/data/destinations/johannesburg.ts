@@ -294,6 +294,18 @@ const johannesburg: Destination = {
       "Don't venture outside safe neighborhoods without local guides",
       "Don't trust dating apps or meet strangers from social media"
     ],
+    culturalSensitivityTips: [
+      'South Africa is known as the "Rainbow Nation" with 11 official languages and immense cultural diversity including African, European, Indian, and mixed heritage communities. Understanding this complexity helps solo female travelers appreciate the rich cultural tapestry while being sensitive to historical and ongoing tensions.',
+      'The legacy of apartheid continues to shape South African society, creating visible economic inequalities and social challenges. Solo female travelers should approach discussions about race, inequality, and history with sensitivity, understanding that these are deeply personal and complex issues for all South Africans.',
+      'Ubuntu philosophy ("I am because we are") emphasizes community, compassion, and interconnectedness in African culture. Solo female travelers who understand this concept will better appreciate South African values of collective responsibility and community support.',
+      'Language diversity is extraordinary in Johannesburg, with English widely spoken but Zulu, Afrikaans, Sotho, and other languages commonly used. Learning basic greetings in local languages like "Sawubona" (Zulu) or "Dumela" (Sotho) shows cultural respect and often creates positive connections.',
+      'Economic inequality is stark and visible throughout Johannesburg. Solo female travelers should be sensitive about displays of wealth and understand that poverty-driven crime is a reality, while also recognizing the resilience and dignity of communities facing economic challenges.',
+      'Religious diversity includes Christianity (majority), traditional African religions, Islam, Hinduism, and Judaism. Solo female travelers should show respect for all religious practices and understand that spirituality plays an important role in many South Africans\' lives.',
+      'Braai (barbecue) culture is central to South African social life across all communities. If invited to participate, it\'s considered an honor and represents acceptance into the social group, though solo female travelers should exercise caution about accepting invitations from strangers.',
+      'Music and dance are integral to South African culture, from traditional African rhythms to jazz, gospel, and contemporary styles. Solo female travelers who show appreciation for local music culture will find it\'s a safe way to connect with South African heritage.',
+      'Art and literature reflect South Africa\'s complex history and diverse cultures. Visiting galleries, museums, and cultural centers in safe areas helps solo female travelers understand the country\'s cultural narrative while staying in secure environments.',
+      'Tipping culture is important as service workers often depend on tips for survival due to economic conditions. Solo female travelers should tip generously while being discreet about handling money, understanding that good tipping reflects both cultural awareness and personal safety through positive local relationships.'
+    ],
     womensConfidenceScore: {
       score: 19.2,
       source: "Numbeo 2025",

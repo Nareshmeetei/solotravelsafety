@@ -410,6 +410,18 @@ const capetown: Destination = {
       'Don\'t leave hotel after dark without security escort',
       'Don\'t exchange money with street vendors or strangers'
     ],
+    culturalSensitivityTips: [
+      'South Africa is known as the "Rainbow Nation" with 11 official languages and diverse cultural communities. Understanding this diversity and showing respect for all groups is essential for positive interactions.',
+      'The legacy of apartheid still impacts daily life and economic inequality. Be sensitive to these ongoing social challenges and approach discussions about race and history with respect and humility.',
+      'Ubuntu philosophy ("I am because we are") emphasizes interconnectedness and community support. Solo female travelers can benefit from understanding this cultural value of collective responsibility.',
+      'Language appreciation goes a long way - learn basic greetings in Afrikaans ("Goeie dag"), Xhosa ("Sawubona"), or English. Most South Africans speak multiple languages and appreciate the effort.',
+      'Economic inequality is visible throughout Cape Town. Be discreet with displays of wealth and tip generously, as service workers often depend on tips for survival.',
+      'Braai (barbecue) culture is central to South African social life. If invited to participate, it\'s considered an honor and shows acceptance into the community.',
+      'Respect for elders and authority figures is important in South African culture. Address older people respectfully and show deference to cultural and community leaders.',
+      'Photography etiquette is crucial - never photograph people without permission, especially in townships or informal settlements. This is considered exploitative and can provoke negative reactions.',
+      'Understanding the difference between cultural areas and tourist zones helps with appropriate behavior. Townships have their own cultural norms and should only be visited with respectful, guided tours.',
+      'Religious diversity is significant, with Christianity, Islam, Judaism, Hinduism, and traditional African religions coexisting. Show respect for all religious practices and dress appropriately when visiting religious sites.'
+    ],
     womensConfidenceScore: {
       score: 18,
       source: 'Travel Ladies Community Survey 2025',

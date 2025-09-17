@@ -449,6 +449,16 @@ const brisbane: Destination = {
         sourceUrl: "https://www.brisbane.qld.gov.au/community-support-and-safety/health-and-safety/personal-safety"
       }
     ],
+    culturalSensitivityTips: [
+      'Embrace Australian directness and informality - Aussies are straightforward without meaning offense; understanding this cultural trait helps build genuine friendships and safety networks with locals',
+      'Learn essential Australian phrases - "G\'day" (hello), "Cheers" (thanks), "No worries" (you\'re welcome), "Fair dinkum" (really/genuine) show cultural understanding and earn warm responses from Brisbanites',
+      'Understand "mateship" culture - Australians value loyalty and helping others; embracing this community spirit often results in protective local relationships and safety assistance when needed',
+      'Follow Australian sun safety religiously - "Slip, Slop, Slap" (shirt, sunscreen, hat); showing proper sun protection demonstrates local awareness and prevents health issues during solo travel',
+      'Respect Indigenous Australian culture - Learn about local Aboriginal and Torres Strait Islander heritage; showing cultural sensitivity earns respect and often leads to educational cultural experiences',
+      'Navigate Australian egalitarian values - Avoid appearing pretentious or "putting on airs"; humility and treating everyone equally is deeply valued in Australian culture',
+      'Understand Queensland\'s relaxed subtropical culture - Embrace casual dress codes, outdoor lifestyle, early dining; adapting to local rhythms helps with social integration and safety networking',
+      'Follow Australian environmental consciousness - Don\'t litter, respect wildlife, understand bushfire safety; environmental respect is fundamental to Australian identity and earns community acceptance'
+    ],
     culturalDos: [
       'Greet with a friendly hello and make eye contact.',
       'Respect personal space and privacy.',

@@ -340,6 +340,18 @@ const osaka: Destination = {
       "Don't take photos in temples without permission.",
       "Don't tip in restaurants—service charge is included.",
       "Don't point feet at people or religious objects."
+    ],
+    culturalSensitivityTips: [
+      'Osaka is known as the "Kitchen of Japan" with a distinctive food culture that reflects Kansai region values of enjoyment, humor, and community bonding through shared meals. Solo female travelers who embrace Osaka\'s food culture and participate in communal dining experiences will connect with fundamental aspects of local identity.',
+      'Osaka dialect (Osaka-ben) and humor culture is more casual and expressive than standard Japanese, reflecting local values of warmth, friendliness, and direct communication. Solo female travelers who appreciate Osaka\'s distinctive cultural personality and humor will find locals more approachable than in other Japanese cities.',
+      'The concept of "kuishinbo" (foodie culture) in Osaka goes beyond eating to represent cultural values of appreciation for craftsmanship, quality ingredients, and social bonding. Solo female travelers who show genuine interest in food culture and culinary traditions will experience authentic Osaka hospitality.',
+      'Osaka\'s merchant culture (historically "nation\'s kitchen") emphasizes practical business sense, value for money, and straightforward dealing. Solo female travelers who appreciate this mercantile heritage and understand bargaining culture in markets will better connect with local traditions.',
+      'Japanese concepts of "omotenashi" (hospitality) are expressed more warmly and directly in Osaka than elsewhere in Japan. Solo female travelers should receive this hospitality graciously while understanding that Osaka people may be more openly helpful and talkative than typical Japanese stereotypes suggest.',
+      'Osaka Castle and historical sites represent the city\'s role as a political and cultural center during Japan\'s unification. Solo female travelers who show interest in this history and understand Osaka\'s significance in Japanese culture will demonstrate cultural appreciation.',
+      'The concept of "ninjo" (human feeling/empathy) is particularly strong in Osaka culture, emphasizing emotional connections and mutual support. Solo female travelers who respond to this warmth authentically and show genuine interest in people will often receive protective, family-like treatment.',
+      'Osaka\'s festival culture, including major celebrations like Tenjin Matsuri, represents community solidarity and joy. Solo female travelers who show appreciation for festival traditions and participate respectfully will experience authentic Japanese community culture.',
+      'The Japanese art of "omotenashi" in Osaka includes the tradition of making guests feel at home through food, conversation, and care. Solo female travelers should appreciate this hospitality while understanding it reflects deep cultural values of community care and inclusion.',
+      'Osaka\'s working-class heritage and pride in practical skills creates a culture that values authenticity over formality. Solo female travelers who show genuine interest in local crafts, traditional skills, and working culture will connect with important aspects of Osaka\'s cultural identity.'
     ]
   },
   womensConfidenceScore: {

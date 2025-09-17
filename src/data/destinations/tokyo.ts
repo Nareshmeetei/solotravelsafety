@@ -892,6 +892,18 @@ const tokyo: Destination = {
       'Don\'t place chopsticks vertically in rice or pass food chopstick to chopstick - both resemble funeral rituals',
       'Don\'t blow your nose in public - excuse yourself to a restroom or turn away discreetly',
       'Don\'t touch people casually or show public displays of affection - Japanese culture values personal space highly'
+    ],
+    culturalSensitivityTips: [
+      'Japan operates on principles of "wa" (harmony) and "omotenashi" (hospitality) - understanding these concepts helps navigate social interactions successfully.',
+      'Japanese language has complex levels of politeness - learning basic polite phrases like "arigato gozaimasu" and "sumimasen" shows deep respect.',
+      'Bowing is the traditional greeting with specific depths for different situations - a slight bow (15 degrees) is appropriate for most interactions.',
+      'The concept of "reading the air" (kuuki o yomu) means understanding unspoken social cues and maintaining group harmony.',
+      'Respect for elders and hierarchy is fundamental - using proper honorifics and showing deference to age and position is crucial.',
+      'Group consensus and avoiding individual standout behavior reflects collectivist values - blending in respectfully is valued over standing out.',
+      'Punctuality is sacred in Japanese culture - arriving exactly on time shows respect for others and demonstrates cultural understanding.',
+      'Gift-giving culture follows specific protocols - presenting gifts with both hands and appropriate wrapping shows cultural awareness.',
+      'Shinto and Buddhist traditions influence daily life - showing respect at shrines and temples demonstrates spiritual sensitivity.',
+      'The concept of "gaman" (enduring the seemingly unbearable with patience) reflects Japanese resilience and should be appreciated respectfully.'
     ]
   },
   youtubeVideo: {

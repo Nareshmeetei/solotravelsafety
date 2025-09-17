@@ -634,6 +634,18 @@ const karachi: Destination = {
       "Don't wear revealing or tight clothing.",
       "Don't discuss sensitive political topics."
     ],
+    culturalSensitivityTips: [
+      'Pakistan is an Islamic Republic where religion plays a central role in daily life and social customs. Solo female travelers should understand that Islamic values deeply influence everything from dress codes to social interactions, and showing respect for religious practices is essential for positive experiences.',
+      'Pakistani culture emphasizes family honor, respect for elders, and traditional gender roles. Solo female travelers should understand that conservative social structures influence interactions and that showing respect for family values and traditional customs will result in more welcoming treatment.',
+      'Urdu is the national language, though English is widely spoken in urban areas like Karachi. Learning basic Urdu phrases like "Assalam-o-Alaikum" (peace be upon you), "Shukriya" (thank you), and "Maaf kijiye" (excuse me) shows cultural respect and often results in warmer interactions.',
+      'Pakistani hospitality is legendary, with guests treated as blessings from God according to Islamic tradition. Solo female travelers may receive generous invitations for tea or meals, though they should exercise caution and use judgment about accepting invitations from strangers while appreciating the genuine cultural value placed on hospitality.',
+      'Modest dress is not just religiously required but culturally essential for solo female travelers. Understanding that covering arms, legs, and hair (especially in religious areas) shows respect for local values and significantly impacts how you are treated and perceived by locals.',
+      'The concept of "izzat" (honor and dignity) is central to Pakistani culture, affecting family relationships and social interactions. Solo female travelers who behave in ways that show understanding of honor culture will navigate social situations more successfully.',
+      'Religious observances like daily prayers (5 times), Friday prayers, Ramadan fasting, and Islamic holidays deeply structure Pakistani life. Solo female travelers should show respect during prayer times, avoid eating publicly during Ramadan daylight hours, and appreciate the spiritual significance of these practices.',
+      'Pakistani food culture reflects centuries of Mughal, Persian, and Central Asian influences. Solo female travelers who show appreciation for local cuisine, understand eating customs (using right hand, sharing meals), and respect dietary restrictions will find food becomes a bridge to cultural understanding.',
+      'Art and literature have rich traditions in Pakistan, from classical poetry to contemporary expression. Solo female travelers who show interest in Pakistani cultural heritage, including famous poets like Allama Iqbal and traditional crafts, will find deeper cultural connections.',
+      'The concept of "purdah" (privacy/modesty) extends beyond dress to social interactions and personal space. Solo female travelers should understand that maintaining appropriate boundaries in mixed-gender interactions shows cultural sensitivity and helps ensure respectful treatment.'
+    ],
     womensConfidenceScore: {
       score: 43.0, // Numbeo 2025 Safety Index for Karachi
       source: "Numbeo 2025",

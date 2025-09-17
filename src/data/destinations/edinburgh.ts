@@ -409,6 +409,18 @@ const edinburgh: Destination = {
       'Don\'t ignore weather chat - dismissing weather discussions can seem rude to conversation-loving Scots',
       'Don\'t take the last item from shared plates - this violates Scottish dining etiquette and sharing culture'
     ],
+    culturalSensitivityTips: [
+      'Scottish national identity is distinct from English identity, with a proud history of independence and cultural autonomy. Solo female travelers who understand and respect Scotland\'s unique heritage, language variations, and cultural traditions will find much warmer receptions and deeper connections.',
+      'The concept of "Scottish hospitality" is legendary and genuine - locals take pride in welcoming visitors and showing their city\'s best features. Solo female travelers who are open to recommendations and show genuine interest in local culture will often receive unexpected kindness and helpful guidance.',
+      'Edinburgh\'s history spans over 1,000 years, from ancient Celtic settlements to modern cultural capital. Understanding the significance of landmarks like Edinburgh Castle, the Royal Mile, and Arthur\'s Seat helps solo female travelers appreciate the city\'s layered cultural heritage.',
+      'Scottish English includes many distinctive words and phrases that are part of daily conversation. Learning basic Scottish vocabulary like "ken" (know), "braw" (good), or "lass" (young woman) shows cultural appreciation and often delights locals.',
+      'Weather conversation is a genuine cultural bonding activity in Scotland, not just small talk. Solo female travelers who engage authentically in weather discussions will find it opens doors to deeper conversations and local insights.',
+      'Pub culture is central to Scottish social life, serving as community gathering places for all ages and genders. Solo female travelers can safely experience authentic Scottish culture in pubs, where locals are welcoming and conversations flow naturally.',
+      'Scottish pride in local traditions like Highland Games, Burns Night, and Hogmanay runs deep. Solo female travelers visiting during these celebrations or showing interest in Scottish poetry, music, and dance will experience the culture at its most vibrant.',
+      'The Edinburgh Festival transforms the city every August into a global cultural hub. Understanding the significance of this festival and the city\'s role as a UNESCO City of Literature helps solo female travelers appreciate Edinburgh\'s contemporary cultural importance.',
+      'Scottish values emphasize equality, community spirit, and intellectual discourse. Solo female travelers will find Edinburgh particularly welcoming, as the city has a strong tradition of progressive values and respect for independent women.',
+      'Environmental consciousness and outdoor culture are important to many Scots. Solo female travelers who show appreciation for Scotland\'s natural beauty and outdoor activities like hiking Arthur\'s Seat or exploring the surrounding countryside will connect with local values.'
+    ],
     womensConfidenceScore: {
       score: 68.8, // Numbeo 2025 Safety Index for Edinburgh
       source: "Numbeo 2025",

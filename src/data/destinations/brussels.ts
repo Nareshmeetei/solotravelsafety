@@ -948,6 +948,16 @@ const brussels: Destination = {
         sourceUrl: 'https://safe.brussels/statistics'
       }
     ],
+    culturalSensitivityTips: [
+      'Learn both French and Dutch basics - "Bonjour/Goedemorgen" (hello), "Merci/Dank je" (thanks), "Excusez-moi/Excuseer me" (excuse me); Brussels is officially bilingual and showing respect for both languages enhances safety networking',
+      'Understand Belgian linguistic sensitivity - Ask which language people prefer before speaking; linguistic politics are complex, and cultural awareness prevents awkward situations and builds positive local relationships',
+      'Respect European Union formality - Brussels is the EU capital with diplomatic protocols; dressing professionally and understanding formal cultural norms helps navigate this international environment safely',
+      'Navigate Belgian reserve and privacy - Belgians are initially more reserved than neighboring countries; patience in building relationships creates stronger, more reliable safety networks for solo female travelers',
+      'Follow Belgian dining etiquette - Hands visible on table, formal service expectations, punctuality for reservations; proper restaurant behavior demonstrates cultural understanding and earns respectful treatment',
+      'Understand Belgian chocolate and beer culture respectfully - Appreciate local craftsmanship without appearing as tourist consumer; genuine interest in Belgian traditions often leads to protective local guidance',
+      'Respect Belgium\'s complex history sensitively - Understand colonial history, WWI/WWII significance, linguistic divisions; historical awareness shows cultural depth and earns local respect',
+      'Navigate Brussels\' international atmosphere - Blend respect for local Belgian culture with awareness of diverse expat communities; cultural sophistication helps build broad safety networks in this cosmopolitan city'
+    ],
     costAndComfort: {
       dailyBudget: {
         range: '$85 - $125 USD / day',

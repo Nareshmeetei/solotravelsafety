@@ -491,6 +491,18 @@ const seoul: Destination = {
       "Don't tip in restaurants or taxis - not customary and can cause confusion or embarrassment for service workers",
       "Don't blow your nose in public - extremely rude, excuse yourself to bathroom or turn away discreetly",
       "Don't touch Korean people casually - physical contact limited to handshakes and bows, personal space is highly valued"
+    ],
+    culturalSensitivityTips: [
+      'South Korea is a Confucian society where age hierarchy, respect for elders, and proper etiquette are fundamental to social interactions.',
+      'Korean language has complex honorific systems - learning basic polite phrases like "annyeonghaseyo" and "gamsahamnida" shows cultural respect.',
+      'Bowing is the traditional greeting - a slight bow (15 degrees) is appropriate for most situations as a solo female traveler.',
+      'Korean work culture emphasizes dedication and long hours - understanding this helps appreciate why evening social life starts very late.',
+      'Family honor and reputation are extremely important - showing respect for family values creates positive connections with locals.',
+      'Korean hospitality (jeong) involves deep emotional connections - accepting kindness graciously builds trust and community support.',
+      'Educational achievement is highly valued - showing respect for knowledge and learning demonstrates cultural understanding.',
+      'Group harmony (nunchi) means reading social situations carefully - being aware of group dynamics helps navigate social settings safely.',
+      'Buddhist and Confucian traditions influence daily life - showing respect for temples, meditation practices, and philosophical discussions is appreciated.',
+      'Korean beauty and fashion culture is significant - dressing well and maintaining good appearance shows respect for social norms and personal safety.'
     ]
   },
   legalResources: {

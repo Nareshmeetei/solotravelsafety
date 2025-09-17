@@ -407,11 +407,23 @@ const mexicocity: Destination = {
       'Learn and use basic Spanish phrases.'
     ],
     culturalDonts: [
-      'Don’t discuss politics, crime, or drug cartels.',
-      'Don’t refuse hospitality outright—decline politely if needed.',
-      'Don’t wear flashy jewelry or display wealth.',
-      'Don’t take photos of people without permission.',
-      'Don’t enter churches or sacred sites in revealing clothing.'
+      "Don't discuss politics, crime, or drug cartels.",
+      "Don't refuse hospitality outright—decline politely if needed.",
+      "Don't wear flashy jewelry or display wealth.",
+      "Don't take photos of people without permission.",
+      "Don't enter churches or sacred sites in revealing clothing."
+    ],
+    culturalSensitivityTips: [
+      'Mexican culture blends indigenous heritage (Aztec, Maya, and other pre-Columbian civilizations) with Spanish colonial influences and modern values. Solo female travelers who show appreciation for this complex cultural layering and avoid oversimplifying Mexican identity will demonstrate cultural sensitivity.',
+      'Family is the cornerstone of Mexican society, with extended family networks providing support, identity, and social structure. Solo female travelers who show respect for family values, ask about family when appropriate, and understand that family obligations often take priority will connect with fundamental Mexican values.',
+      'Catholic traditions deeply influence Mexican culture, from daily religious practices to major celebrations like Día de los Muertos. Solo female travelers who show respect in churches, appreciate religious festivals, and understand the cultural significance of Catholic customs will gain cultural acceptance.',
+      'Mexican hospitality is generous and heartfelt, with hosts often sharing whatever they have regardless of economic circumstances. Solo female travelers should accept offered food, drinks, or assistance graciously, understanding that refusal can be interpreted as rejection of friendship.',
+      'Spanish language appreciation is crucial in Mexico City, where Spanish is spoken with distinctive Mexican expressions and cultural references. Learning basic phrases like "Buenos días" (good morning), "Muchas gracias" (thank you very much), and "Con permiso" (excuse me) shows cultural respect.',
+      'The concept of "personalismo" means relationships and personal connections are valued over efficiency or rules. Solo female travelers who invest time in building relationships, show interest in people as individuals, and understand that business often follows friendship will navigate interactions more successfully.',
+      'Mexican time culture operates more flexibly than rigid schedules, with social relationships often taking priority over punctuality. Solo female travelers who are patient with timing, understand that relationship-building may precede tasks, and adapt to this rhythm will avoid frustration.',
+      'Indigenous heritage remains significant in Mexican identity, from food traditions to artistic expressions and spiritual practices. Solo female travelers who show appreciation for indigenous contributions to Mexican culture and approach this heritage with respect will demonstrate cultural awareness.',
+      'Mexican food culture involves complex traditions around meal timing, communal eating, and regional specialties. Solo female travelers who embrace proper meal etiquette, show appreciation for regional cuisine, and understand food\'s social significance will connect with fundamental cultural values.',
+      'Economic inequality is visible throughout Mexico City, but Mexican dignity and pride in cultural heritage remain strong across all economic levels. Solo female travelers should approach economic differences with sensitivity while showing genuine respect for Mexican accomplishments in art, cuisine, and cultural preservation.'
     ],
   
     womensConfidenceScore: {

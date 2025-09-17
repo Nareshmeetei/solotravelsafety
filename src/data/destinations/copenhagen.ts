@@ -14,6 +14,8 @@ const copenhagen: Destination = {
     reviewCount: 456,
     lastUpdated: '5 minutes ago',
     harassmentRisk: 'low',
+    safetyKeywords: ['solo female travel safety', 'women solo travel safety', 'safe solo travel destinations', 'solo female traveler safety', 'women traveling alone safety'],
+    isCopenhagenSafeQuestion: 'Is Copenhagen safe for female solo travelers? Absolutely - Copenhagen ranks #8 globally for solo female travelers with exceptional safety standards, world-class gender equality, and a 92% confidence score from women travelers.',
     safetyBreakdown: {
       nightSafety: { 
         score: 8.7, 
@@ -363,16 +365,16 @@ const copenhagen: Destination = {
       }
     ],
     culturalSensitivityTips: [
-      'Be punctual - Danish culture treats time as sacred',
-      'Speak directly and honestly - Danes prefer straightforward communication',
-      'Follow cycling rules religiously - use bike lanes and signal turns',
-      'Embrace "hygge" culture - appreciate cozy atmospheres',
-      'Practice environmental consciousness - recycle and use public transport',
-      'Don\'t boast or show off - "Law of Jante" values modesty',
-      'Don\'t be overly formal - Danes prefer casual, authentic interactions',
-      'Don\'t walk in bike lanes - this will earn silent disapproval',
-      'Don\'t take the last item from shared plates - major dining rule',
-      'Don\'t speak loudly in public spaces - maintain respectful volume'
+      'Danish culture is built on the concept of "Janteloven" (Law of Jante), which emphasizes modesty, equality, and not standing out from others. Understanding this helps explain why Danes avoid bragging, prefer understated behavior, and value collective harmony over individual achievement.',
+      'Punctuality is considered sacred in Danish culture - being even 5 minutes late is seen as deeply disrespectful. Danes plan their schedules months in advance and expect the same from others, so always confirm timing and arrive exactly on time.',
+      'The cycling culture in Copenhagen is more than transportation - it\'s a way of life representing environmental consciousness, efficiency, and democratic values. Respecting bike lanes and cycling etiquette shows understanding of core Danish values.',
+      'Hygge (pronounced "hoo-gah") is central to Danish culture, representing coziness, comfort, and togetherness. Solo female travelers can embrace hygge by enjoying candlelit cafes, cozy atmospheres, and simple pleasures that emphasize quality over quantity.',
+      'Danish directness should not be mistaken for rudeness - it reflects cultural values of honesty, efficiency, and respect for others\' time. Danes appreciate straightforward communication and may find excessive politeness or small talk unnecessary.',
+      'Environmental consciousness is deeply ingrained in Danish society. Showing respect for sustainability through recycling, using public transport, and making eco-friendly choices demonstrates cultural awareness and aligns with Danish values.',
+      'Gender equality is not just a policy but a lived reality in Denmark. Solo female travelers will find this reflected in equal treatment, shared responsibilities, and the complete normality of women traveling, working, and living independently.',
+      'Danish work-life balance prioritizes family time and personal well-being. Understanding that many businesses close early and Danes value their free time helps explain cultural rhythms and social expectations.',
+      'The concept of "folkelighed" (being of the people) values simplicity, authenticity, and connecting with ordinary life. Solo female travelers who embrace simple pleasures and authentic experiences will find deeper cultural connections.',
+      'Danish social interactions tend to be reserved initially but genuine once established. Don\'t mistake initial reserve for unfriendliness - Danes simply prefer meaningful connections over superficial social interactions.'
     ],
     culturalDos: [
       'Dress casually and practically - Danes prioritize comfort, functionality, and sustainable fashion over flashy styles',
@@ -992,9 +994,19 @@ const copenhagen: Destination = {
         'Café breakfast $7 vs hotel breakfast $20-30 - explore local café culture instead'
       ]
     },
-  youtubeVideo: {
-    videoId: "Jxd6vju1QB4" // Copenhagen travel guide video showing what it's like to visit
-  }
+  youtubeVideos: [
+    {
+      videoId: "Jxd6vju1QB4",
+      title: "Copenhagen Solo Female Travel Experience - What It's Really Like",
+      description: "Authentic solo female travel experience in Copenhagen showcasing the city's exceptional safety, bike culture, and female-friendly atmosphere"
+    },
+    {
+      videoId: "2JlN6hGKVWQ",
+      title: "Copenhagen Safety Guide for Women Travelers",
+      description: "Comprehensive safety guide covering Copenhagen's exceptional standards for solo female travelers, public transport safety, and cultural insights",
+      timestamp: "120s"
+    }
+  ]
 };
 
 export default copenhagen;

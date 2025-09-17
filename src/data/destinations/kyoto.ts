@@ -357,6 +357,18 @@ const kyoto: Destination = {
       "Don't enter private areas of temples or shrines.",
       "Don't ignore etiquette signs or instructions."
     ],
+    culturalSensitivityTips: [
+      'Kyoto served as Japan\'s imperial capital for over 1,000 years and remains the spiritual and cultural heart of traditional Japanese civilization. Solo female travelers should understand that this city represents the pinnacle of Japanese aesthetic refinement, religious devotion, and cultural preservation.',
+      'The concept of "wabi-sabi" (finding beauty in imperfection and impermanence) is deeply embedded in Kyoto\'s temples, gardens, and traditional arts. Solo female travelers who appreciate this aesthetic philosophy will better understand Japanese cultural values and the significance of Kyoto\'s preserved heritage.',
+      'Geisha and maiko culture in Kyoto\'s historic districts like Gion represents centuries of refined artistic tradition. Solo female travelers should show respect by observing quietly, not following or photographing without permission, and understanding that these are dedicated artists, not tourist attractions.',
+      'Temple and shrine etiquette is especially important in Kyoto, home to over 2,000 religious sites including UNESCO World Heritage temples. Solo female travelers should learn proper purification rituals, bowing techniques, and understand the difference between Buddhist temples and Shinto shrines.',
+      'The traditional tea ceremony ("sado" or "chado") embodies Japanese values of harmony, respect, purity, and tranquility. Solo female travelers who participate respectfully in tea ceremony experiences will gain deep insights into Japanese spiritual and aesthetic principles.',
+      'Seasonal appreciation is fundamental to Kyoto culture, from cherry blossoms (sakura) to autumn leaves (momiji). Solo female travelers who show awareness of seasonal significance and participate in seasonal activities like hanami (flower viewing) will connect with core Japanese cultural practices.',
+      'Traditional crafts like kimono weaving, pottery, and incense making have been preserved in Kyoto for centuries. Solo female travelers who show appreciation for these artisanal traditions and support local craftspeople demonstrate understanding of Japanese cultural heritage preservation.',
+      'The concept of "omotenashi" (selfless hospitality) is particularly refined in Kyoto\'s traditional establishments. Solo female travelers should receive this hospitality graciously while understanding it reflects deep cultural values of service and respect for guests.',
+      'Meditation and mindfulness practices at Kyoto\'s Zen temples offer authentic spiritual experiences. Solo female travelers who approach these opportunities with appropriate reverence and openness will gain insights into Japanese Buddhist philosophy and meditation traditions.',
+      'The preservation of traditional architecture and urban planning in Kyoto\'s historic districts reflects Japanese values of cultural continuity. Solo female travelers who show respect for these preserved environments and follow local guidelines help maintain these precious cultural spaces for future generations.'
+    ],
     womensConfidenceScore: {
       score: 77.1, // Numbeo 2025 Safety Index for Japan (Kyoto aligns with national average)
       source: "Numbeo 2025",

@@ -326,6 +326,69 @@ const zurich: Destination = {
         prevention: 'Always lock bikes with quality locks, use designated bike parking areas, consider bike insurance for rentals'
       },
     ],
+    usefulTips: [
+      {
+        title: "Get a Zurich Card for maximum savings and convenience",
+        description: "Zurich Card provides free public transport and discounts at 43+ museums and attractions. Essential for solo female travelers wanting to explore safely and economically.",
+        severity: "low",
+        sourceName: "Zürich Tourism 2025",
+        sourceUrl: "https://www.zuerich.com/en/visit/zurich-card"
+      },
+      {
+        title: "Master Swiss punctuality - transport runs exactly on schedule",
+        description: "Swiss public transport operates with clockwork precision. Arrive 2-3 minutes before departure time as trains and trams leave exactly on schedule.",
+        severity: "low",
+        sourceName: "SBB Swiss Federal Railways 2025",
+        sourceUrl: "https://www.sbb.ch/en"
+      },
+      {
+        title: "Plan shopping around limited hours - most close by 6:30 PM",
+        description: "Swiss shops typically close by 6:30 PM weekdays and are closed Sundays. Plan shopping accordingly and use Saturday for major purchases.",
+        severity: "low",
+        sourceName: "Zürich Tourism 2025",
+        sourceUrl: "https://www.zuerich.com/en/visit/shopping"
+      },
+      {
+        title: "Drink excellent free tap water and carry a reusable bottle",
+        description: "Swiss tap water quality is exceptional and free in restaurants. Carry a reusable bottle to save money and stay hydrated while exploring.",
+        severity: "low",
+        sourceName: "Swiss Water Quality Association 2025",
+        sourceUrl: "https://www.svgw.ch/en"
+      },
+      {
+        title: "Don't worry about Swiss German - English is widely spoken",
+        description: "Swiss German sounds very different from standard German, but most locals speak excellent English, especially in business and tourism.",
+        severity: "low",
+        sourceName: "Switzerland Tourism 2025",
+        sourceUrl: "https://www.myswitzerland.com/en-us/planning/about-switzerland/languages/"
+      }
+    ],
+    culturalSensitivityTips: [
+      'Switzerland operates on principles of precision, quality, and discretion - understanding these values helps navigate Swiss social and business culture.',
+      'German, French, Italian, and Romansh are official languages, with Swiss German being the primary dialect in Zurich - showing appreciation for linguistic diversity is valued.',
+      'Punctuality is sacred in Swiss culture - arriving exactly on time shows respect and demonstrates understanding of Swiss efficiency values.',
+      'Direct democracy and consensus-building are fundamental to Swiss identity - respecting structured decision-making processes shows cultural awareness.',
+      'Environmental stewardship is deeply embedded in Swiss culture - showing respect for nature and recycling practices aligns with national values.',
+      'Quality over quantity philosophy influences all aspects of life - appreciating craftsmanship, precision, and attention to detail resonates with Swiss values.',
+      'Privacy and discretion are highly valued - maintaining professional boundaries and avoiding personal questions respects Swiss social norms.',
+      'Banking and financial services culture emphasizes trust and confidentiality - understanding Switzerland\'s reputation for discretion is culturally important.',
+      'Outdoor recreation and alpine culture are central to Swiss identity - showing appreciation for hiking, skiing, and mountain activities creates connections.',
+      'Work-life balance includes structured leisure time - understanding Swiss approach to scheduled relaxation and vacation time demonstrates cultural sensitivity.'
+    ],
+    culturalDos: [
+      'Greet with a polite "Grüezi" and use formal titles.',
+      'Be punctual for meetings and public transport.',
+      'Respect quiet zones and personal space.',
+      'Dress neatly, especially in restaurants and theaters.',
+      'Recycle and dispose of waste properly.'
+    ],
+    culturalDonts: [
+      "Don't cut in line or push ahead.",
+      "Don't speak loudly or draw attention in public.",
+      "Don't ask personal questions on first meeting.",
+      "Don't litter or leave trash in public spaces.",
+      "Don't make jokes about Switzerland's history or politics."
+    ],
   culturalSensitivity: {
     culturalDos: [
       'Greet with a polite "Grüezi" and use formal titles.',
@@ -340,6 +403,18 @@ const zurich: Destination = {
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
       "Don't make jokes about Switzerland's history or politics."
+    ],
+    culturalSensitivityTips: [
+      'Switzerland operates on principles of precision, quality, and discretion - understanding these values helps navigate Swiss social and business culture.',
+      'German, French, Italian, and Romansh are official languages, with Swiss German being the primary dialect in Zurich - showing appreciation for linguistic diversity is valued.',
+      'Punctuality is sacred in Swiss culture - arriving exactly on time shows respect and demonstrates understanding of Swiss efficiency values.',
+      'Direct democracy and consensus-building are fundamental to Swiss identity - respecting structured decision-making processes shows cultural awareness.',
+      'Environmental stewardship is deeply embedded in Swiss culture - showing respect for nature and recycling practices aligns with national values.',
+      'Quality over quantity philosophy influences all aspects of life - appreciating craftsmanship, precision, and attention to detail resonates with Swiss values.',
+      'Privacy and discretion are highly valued - maintaining professional boundaries and avoiding personal questions respects Swiss social norms.',
+      'Banking and financial services culture emphasizes trust and confidentiality - understanding Switzerland\'s reputation for discretion is culturally important.',
+      'Outdoor recreation and alpine culture are central to Swiss identity - showing appreciation for hiking, skiing, and mountain activities creates connections.',
+      'Work-life balance includes structured leisure time - understanding Swiss approach to scheduled relaxation and vacation time demonstrates cultural sensitivity.'
     ]
   },
     // Add Women’s Confidence Score (Numbeo 2025, Travel Ladies 2025)

@@ -354,6 +354,18 @@ const reykjavik: Destination = {
       "Don't be loud in public spaces - quiet culture preferred",
       "Don't underestimate nature - respect weather and terrain"
     ],
+    culturalSensitivityTips: [
+      'Icelandic culture is deeply connected to nature and environmental preservation, with profound respect for the island\'s unique geological and ecological systems. Solo female travelers who demonstrate environmental consciousness and show reverence for natural sites will connect with fundamental Icelandic values.',
+      'The concept of "þetta reddast" (it will all work out) reflects Icelandic resilience and optimistic problem-solving approach developed through centuries of surviving harsh conditions. Solo female travelers who embrace this positive, adaptable mindset will better understand Icelandic cultural philosophy.',
+      'Icelandic folklore and belief in hidden people (huldufólk) remains culturally significant, with many Icelanders maintaining respectful attitudes toward these traditions. Solo female travelers should approach folklore topics with genuine interest rather than skepticism or mockery.',
+      'Gender equality is not just policy but lived reality in Iceland, consistently ranking #1 globally on gender equality indices. Solo female travelers will find this reflected in equal treatment, shared responsibilities, and the complete normality of women traveling and living independently.',
+      'Icelandic literature and storytelling traditions, from medieval sagas to modern poetry, are central to cultural identity. Solo female travelers who show interest in Icelandic literary heritage and contemporary authors will demonstrate appreciation for core cultural values.',
+      'The Icelandic language is fiercely protected and cherished as a connection to ancient Norse heritage. While English is widely spoken, learning basic Icelandic phrases like "Takk" (thanks) and "Halló" (hello) shows cultural respect.',
+      'Icelandic social interaction tends to be reserved initially but warm once relationships develop. Solo female travelers should understand that initial quietness reflects cultural norms of respecting personal space rather than unfriendliness.',
+      'The concept of "lagom" (just the right amount) influences Icelandic approaches to consumption, lifestyle, and social interaction. Solo female travelers who appreciate moderation and avoid excess will show understanding of Icelandic cultural values.',
+      'Icelandic work-life balance emphasizes family time, outdoor activities, and creative pursuits alongside professional responsibilities. Solo female travelers who show appreciation for this balanced approach will better understand local priorities and cultural rhythms.',
+      'Hot spring and swimming culture represents important social and wellness traditions in Iceland. Solo female travelers who participate respectfully in these communal activities, understanding the cultural significance of thermal baths, will experience authentic Icelandic social life.'
+    ],
     womensConfidenceScore: {
       score: 94.5,
       source: "Iceland Gender Equality Index 2024 & Travel Ladies 2025",

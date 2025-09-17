@@ -274,6 +274,18 @@ const singapore: Destination = {
       "Don\'t jaywalk or litter - Singapore\'s S$300-S$1000 fines are religiously enforced, and tourists receive no special treatment",
       "Don\'t touch anyone\'s head or point with your feet - deeply offensive in Hindu and Buddhist cultures prevalent here",
       "Don\'t bring durian fruit into hotels, taxis, or public transport - the smell ban is strictly enforced with fines and social shame"
+    ],
+    culturalSensitivityTips: [
+      'Singapore is a multicultural melting pot where Chinese, Malay, Indian, and Western cultures blend seamlessly in daily life.',
+      'English is the primary language but learning basic greetings in Mandarin ("ni hao"), Malay ("selamat pagi"), and Tamil ("vanakkam") shows respect.',
+      'Religious diversity is celebrated - respect all faiths equally and dress modestly when visiting temples, mosques, churches, and gurdwaras.',
+      'The concept of "racial harmony" is fundamental to Singaporean identity - showing appreciation for diversity strengthens community bonds.',
+      'Food culture transcends ethnic boundaries - sharing meals at hawker centers is the best way to understand Singapore\'s multicultural harmony.',
+      '"Singlish" (Singapore English) reflects the multicultural blend - understanding this local pidgin helps connect with locals authentically.',
+      'Efficiency and order are highly valued - punctuality, following rules, and respecting systems demonstrates cultural awareness.',
+      'Family values remain strong across all ethnic communities - showing respect for elders and family relationships is universally appreciated.',
+      'The "kampong spirit" (community cooperation) still influences modern Singapore - participating in community events builds local connections.',
+      'Singapore\'s "clean and green" philosophy reflects environmental consciousness - demonstrating eco-awareness aligns with national values.'
     ]
   },
     // Add Women’s Confidence Score (Numbeo 2025, Forbes, SCMP)

@@ -324,6 +324,18 @@ const lisbon: Destination = {
       "Don't ignore steep terrain when planning walks.",
       "Don't skip trying pastéis de nata."
     ],
+    culturalSensitivityTips: [
+      'Portuguese culture values a relaxed approach to life with emphasis on family, tradition, and enjoying simple pleasures. Solo female travelers who embrace this slower pace and show appreciation for Portuguese customs around food, family, and leisure will find more authentic cultural connections.',
+      'The concept of "saudade" is central to Portuguese culture - a deep emotional state of nostalgic longing for something absent. Understanding this uniquely Portuguese sentiment helps solo female travelers appreciate the country\'s literature, music (fado), and cultural expressions.',
+      'Portuguese hospitality is warm but reserved, reflecting cultural values of respect and dignity. Solo female travelers should expect genuine kindness but understand that Portuguese people may initially appear more formal than in other Southern European countries.',
+      'Food culture is central to Portuguese social life, with long meals serving as important family and social bonding time. Solo female travelers who take time to enjoy meals properly, show appreciation for local cuisine, and understand Portuguese dining customs will connect with fundamental cultural values.',
+      'Portuguese language appreciation goes a long way, as locals are proud of their distinct language (not Spanish). Learning basic phrases like "Bom dia" (good morning), "Obrigada" (thank you - feminine form), and "Com licença" (excuse me) shows cultural respect.',
+      'Historical pride is important to Portuguese culture, from the Age of Exploration to maritime heritage. Solo female travelers who show interest in Portuguese history, explorers like Vasco da Gama, and cultural achievements will find locals eager to share their heritage.',
+      'Catholic traditions remain culturally significant even among non-practicing Portuguese. Solo female travelers should show respect in churches and religious sites, understanding that these places hold deep cultural meaning beyond tourism.',
+      'Regional identity is strong throughout Portugal, with distinct traditions, dialects, and specialties. Solo female travelers who show appreciation for regional differences and local traditions will demonstrate cultural sensitivity and gain deeper insights.',
+      'The Portuguese concept of "desenrascanço" (ability to find creative solutions with limited resources) reflects cultural values of ingenuity and resilience. Solo female travelers who are adaptable and appreciate resourcefulness will better understand Portuguese culture.',
+      'Environmental consciousness and connection to the ocean are deeply rooted in Portuguese culture. Solo female travelers who show respect for Portugal\'s natural beauty, coastal heritage, and environmental values will connect with important aspects of Portuguese identity.'
+    ],
     womensConfidenceScore: {
       score: 82.4,
       source: "Numbeo 2025",

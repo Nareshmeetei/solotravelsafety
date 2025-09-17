@@ -282,6 +282,18 @@ const prague: Destination = {
       'Don\'t be loud on public transport.',
       'Don\'t ignore church dress codes.'
     ],
+    culturalSensitivityTips: [
+      'Czech culture emphasizes intellectual achievement, cultural sophistication, and historical pride, particularly in Prague\'s role as the "City of a Hundred Spires." Solo female travelers who show genuine appreciation for Prague\'s architectural heritage, classical music tradition, and literary culture will connect with fundamental Czech values.',
+      'The concept of "Czech skepticism" reflects a cultural preference for realistic thinking, understated communication, and wariness of excessive enthusiasm. Solo female travelers who approach interactions with measured enthusiasm and avoid overly effusive behavior will be better received.',
+      'Beer culture in the Czech Republic is not just about drinking but represents centuries of brewing tradition, social bonding, and cultural identity. Solo female travelers who show respect for beer culture, understand pub etiquette, and appreciate the craftsmanship will experience authentic Czech social life.',
+      'Czech language appreciation shows cultural respect, even though many younger Czechs speak English. Learning basic phrases like "Dobrý den" (good day), "Děkuji" (thank you), and "Promiňte" (excuse me) demonstrates cultural effort and often results in warmer interactions.',
+      'Historical consciousness is central to Czech identity, from medieval times through communist era to modern independence. Solo female travelers who show understanding of Prague\'s complex history and avoid oversimplifying political transitions will demonstrate cultural sensitivity.',
+      'The Czech concept of "pohodlí" (comfort/coziness) reflects values of enjoying simple pleasures, quality time with friends, and authentic experiences. Solo female travelers who appreciate cozy cafés, leisurely conversations, and unhurried social time will connect with Czech lifestyle values.',
+      'Czech fashion and personal presentation tend toward understated elegance rather than flashy displays. Solo female travelers who dress stylishly but modestly, appreciate quality over quantity, and avoid conspicuous consumption will show cultural understanding.',
+      'Environmental consciousness and outdoor recreation are important to Czech culture, from hiking in Bohemian forests to cycling along rivers. Solo female travelers who show appreciation for nature preservation and participate in outdoor activities will connect with Czech values.',
+      'Czech music and arts culture has deep classical traditions alongside contemporary innovations. Solo female travelers who show interest in Prague\'s concert halls, galleries, and cultural events will experience important aspects of Czech cultural pride and artistic achievement.',
+      'The Czech value of "privacy" means people generally respect personal space and avoid intrusive questions. Solo female travelers should understand that initial reserve is not unfriendliness but reflects cultural norms of respectful distance until relationships develop naturally.'
+    ],
     womensConfidenceScore: {
       score: 86.0,
       source: "Travel Ladies & Prague Police Statistics 2025",

@@ -747,6 +747,16 @@ const bangkok: Destination = {
         sourceUrl: 'https://www.bangkokstreetfood.guide/'
       }
     ],
+    culturalSensitivityTips: [
+      'Master temple etiquette - Remove shoes, cover shoulders/knees, don\'t turn back to Buddha images; proper religious respect prevents cultural offense and earns local protective guidance',
+      'Learn essential Thai phrases - "Sawasdee ka" (hello), "Khop khun ka" (thank you), "Chuay duay" (help please) show respect and earn warm assistance from locals for enhanced solo female travel safety',
+      'Practice the Wai greeting - Hands together, slight bow shows cultural respect; Thai people appreciate this traditional courtesy and respond with helpful, protective attitudes toward solo travelers',
+      'Understand "Kreng Jai" concept - Thai indirect communication avoids confrontation; if uncomfortable, smile politely and move to busier areas rather than direct confrontation for safer cultural navigation',
+      'Respect royal family absolutely - Never criticize monarchy or step on currency with King\'s image; showing proper reverence prevents serious legal and social problems for foreign visitors',
+      'Follow modest dress codes - Light, breathable clothing covering shoulders/knees prevents unwanted attention; conservative attire shows cultural sensitivity and helps with temple access and local respect',
+      'Navigate Thai time culture - "Jai yen yen" (cool heart) patience prevents frustration; understanding relaxed timing helps build positive relationships essential for solo female travel safety networks',
+      'Use proper eating etiquette - Fork and spoon (not hands except fruit), don\'t waste food, share dishes; correct dining behavior demonstrates cultural understanding and earns social acceptance'
+    ],
     culturalSensitivity: {
       culturalDos: [
         'Always remove shoes when entering temples and traditional homes - this is fundamental respect',

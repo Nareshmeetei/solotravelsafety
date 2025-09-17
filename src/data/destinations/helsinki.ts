@@ -72,74 +72,74 @@ const helsinki: Destination = {
       {
         name: 'Hotel Kämp',
         type: 'luxury hotel',
-        features: ['Prime central location', 'Historic luxury', '24/7 concierge', 'High security'],
+        features: ['Prime central location', 'Historic luxury', '24/7 concierge', 'High security', 'Finnish grand hotel since 1887'],
         rating: 4.8,
-        notes: 'Helsinki\'s most prestigious hotel in the heart of the city. Exceptional safety standards and English-speaking staff experienced with solo female travelers.',
+        notes: 'Helsinki\'s most prestigious hotel where world leaders and celebrities stay. Established in 1887, offers 179 spacious rooms with marble bathrooms, free parking, and airport shuttle. Exceptional safety standards for solo female travelers.',
         link: 'https://www.hotelkamp.fi/'
-      },
-      {
-        name: 'Scandic Helsinki City',
-        type: 'hotel',
-        features: ['Central location', 'Modern facilities', 'Solo-friendly', '24/7 reception'],
-        rating: 4.6,
-        notes: 'Reliable Scandic chain with excellent safety standards. Popular with business and leisure travelers. Walking distance to main attractions.',
-        link: 'https://www.scandichotels.com/hotels/finland/helsinki/scandic-helsinki-city'
-      },
-      {
-        name: 'Hotel Arthur',
-        type: 'boutique hotel',
-        features: ['Quiet location', 'Female-friendly', 'Historic charm', 'Safe neighborhood'],
-        rating: 4.5,
-        notes: 'Charming hotel in peaceful Töölö district. Excellent safety record and particularly welcoming to solo female guests. Close to parks and museums.',
-        link: 'https://www.hotelarthur.fi/'
-      },
-      {
-        name: 'Hostel Diana Park',
-        type: 'hostel',
-        features: ['Female dorms', 'Central location', 'Social atmosphere', 'English-speaking staff'],
-        rating: 4.3,
-        notes: 'Popular backpacker hostel with female-only dorms and excellent safety measures. Great for meeting other solo travelers in safe environment.',
-        link: 'https://www.dianapark.fi/'
-      },
-      {
-        name: 'CheapSleep Hostel Helsinki',
-        type: 'hostel',
-        features: ['Budget-friendly', 'Female sections', 'Safe area', 'Kitchen facilities'],
-        rating: 4.1,
-        notes: 'Clean, safe budget option with women-only areas. Located in safe residential area with good transport connections.',
-        link: 'https://www.cheapsleep.fi/'
       },
       {
         name: 'The Yard Hostel',
         type: 'boutique hostel',
-        features: ['Best hostel in Finland 2018-2020', 'Central location', 'Female-friendly environment', 'Premium amenities'],
+        features: ['Best hostel in Finland 2018-2020', 'Female-only dorms', 'Shoes-off policy', 'Premium amenities', 'Curtained beds'],
         rating: 4.7,
-        notes: 'Best-rated hostel in Helsinki for solo female travelers. Boutique hostel in heart of city with exceptional safety standards and community atmosphere.',
+        notes: 'Award-winning boutique hostel perfect for solo female travelers. Only a few rooms on one floor creating cozy living room atmosphere. Incredibly clean, spacious rooms with curtains, and relaxing communal spaces.',
         link: 'https://www.theyardhostel.com/'
       },
       {
         name: 'Hotel Katajanokka',
         type: 'unique hotel',
-        features: ['Historic converted prison', 'Unique architecture', 'Safe Katajanokka district', '24/7 security'],
+        features: ['Historic converted prison from 1837', 'Unique architecture', 'Safe Katajanokka district', '24/7 security', 'Free breakfast & dinner'],
         rating: 4.6,
-        notes: 'Fascinating historic hotel converted from old prison. Located in extremely safe Katajanokka district with excellent security and solo traveler-friendly services.',
+        notes: 'Fascinating atmospheric hotel built into old prison cells from 1837. Located on peaceful Katajanokka Island with breakfast, dinner, and afternoon coffee included. Free weekend sauna access and 24/7 gym.',
         link: 'https://www.hotelkatajanokka.fi/'
       },
       {
-        name: 'Hotel Indigo Helsinki',
+        name: 'Hotel Indigo Helsinki - Boulevard',
         type: 'boutique hotel',
-        features: ['Modern design', 'Central location', 'Solo traveler programs', 'English-speaking staff'],
+        features: ['Modern design', 'Central Bulevardi location', 'IHG hotel brand', 'English-speaking staff', 'Great breakfast'],
         rating: 4.5,
-        notes: 'Stylish boutique hotel with excellent solo female traveler services. Central location with top safety ratings and concierge assistance.',
-        link: 'https://www.ihg.com/hotelindigo/hotels/us/en/helsinki/helfi/hoteldetail'
+        notes: 'Highly-rated boutique hotel (#8 of 69 in Helsinki) with 8.9/10 rating from verified reviews. Solo female travelers praise friendly staff, central walkable location, and delicious healthy breakfast options.',
+        link: 'https://www.ihg.com/hotelindigo/hotels/us/en/helsinki/helin/hoteldetail'
       },
       {
-        name: 'Hotel Finn',
-        type: 'city hotel',
-        features: ['Heart of Helsinki', 'Clean & secure', 'Reasonable prices', 'Solo-friendly policies'],
+        name: 'Hotel Arthur',
+        type: 'boutique hotel',
+        features: ['Quiet Töölö location', 'Female-friendly', 'YMCA-supported', 'Historic charm', 'Rooftop city views'],
+        rating: 4.5,
+        notes: 'Charming hotel near Helsinki Cathedral with work desks, TV, and private bathrooms. Top-floor rooms offer Helsinki rooftop views. Profits support local children and youth activities through Helsinki YMCA.',
+        link: 'https://www.hotelarthur.fi/'
+      },
+      {
+        name: 'Hostel Diana Park',
+        type: 'hostel',
+        features: ['Female-only dorms', 'Central location', '10 min to train station', 'Clean facilities', 'Calm atmosphere'],
+        rating: 4.3,
+        notes: 'Best Helsinki hostel for solo travelers with clean facilities, comfortable beds, and great location. Not a party hostel - perfect for meeting others in calm, casual setting. Praised for safety by female travelers.',
+        link: 'https://www.dianapark.fi/'
+      },
+      {
+        name: 'Eurohostel Helsinki',
+        type: 'hostel',
+        features: ['Free morning sauna', 'Traditional Finnish experience', 'Modern facilities', '24/7 reception', 'Budget-friendly'],
+        rating: 4.2,
+        notes: 'Unique hostel offering free traditional Finnish sauna every morning. Great introduction to Finnish culture while providing safe, clean accommodation for solo female travelers at budget-friendly prices.',
+        link: 'https://www.eurohostel.fi/'
+      },
+      {
+        name: 'Scandic Grand Central Helsinki',
+        type: 'hotel',
+        features: ['Next to main train station', 'Stunning interior design', 'Spacious rooms', 'Central location', 'Business facilities'],
         rating: 4.4,
-        notes: 'Clean, secure, and reasonably priced option right in the heart of Helsinki. Excellent for solo female travelers with professional staff and safe location.',
-        link: 'https://www.hotelfinn.fi/'
+        notes: 'Ideally located next to Central Station (#20 of 69 hotels) with stunning interior design and spacious, relaxing rooms. Perfect base for sightseeing with friendly, helpful staff.',
+        link: 'https://www.scandichotels.com/hotels/finland/helsinki/scandic-grand-central-helsinki'
+      },
+      {
+        name: 'Hotel Haven',
+        type: 'luxury hotel',
+        features: ['137 luxurious rooms', 'Finnish design', 'Ultima restaurant', 'Gold and silver accents', 'Central harbor location'],
+        rating: 4.6,
+        notes: 'Luxury hotel featuring distinctly Finnish designs with gold and silver accents. Revolutionary Ultima restaurant grows ingredients on-site using futuristic techniques. Excellent for solo female travelers seeking luxury.',
+        link: 'https://www.hotelhaven.fi/'
       }
     ],
     alerts: [
@@ -196,20 +196,37 @@ const helsinki: Destination = {
       emergencyPhrases: ['Apu (Help)', 'Soita poliisille (Call the police)']
     },
     culturalExpectations: {
-      dressCode: 'Practical, warm clothing. No specific restrictions.',
-      behaviorNorms: [
-        'Maintain quiet, respectful behavior on public transport - Finns value peaceful commutes',
-        'Respect generous personal space - stand arm\'s length apart when possible',
-        'Remove shoes when entering Finnish homes - essential cultural courtesy',
-        'Sauna etiquette: shower before entering, sit on towel, no swimwear in traditional saunas',
-        'Punctuality highly valued - arrive exactly on time for appointments and social meetings',
-        'Direct communication appreciated - Finns prefer honest, straightforward conversation',
-        'Avoid excessive small talk with strangers - comfortable silence is normal and respected',
-        'Queue politely and wait your turn - cutting in line considered very rude',
-        'Keep voices low in restaurants and public spaces - loud talking draws negative attention',
-        'Tipping not expected but appreciated for exceptional service (5-10% maximum)'
+      dressCode: [
+        'Business: Conservative and stylish attire - dark suits for formal meetings, smart casual for tech industries',
+        'Daily wear: Practical over fashionable - Finns prioritize comfort and functionality in clothing choices',
+        'Winter essentials (Nov-Mar): Thermal layers, waterproof boots, insulated jackets - quality winter gear crucial for safety',
+        'Avoid flashy or expensive items - Finnish culture values modesty and discretion over displays of wealth',
+        'Smart-casual works for most restaurants and venues - overly formal dress can appear pretentious in Finnish culture'
       ],
-      perception: 'Is Helsinki safe for female solo travelers? Absolutely - solo female travelers are extremely common and completely normalized. Helsinki ranks as one of the safest places for women to travel alone worldwide, with progressive culture valuing gender equality above all. Finnish society actively protects women\'s safety through excellent public infrastructure, respectful social norms, and zero tolerance for harassment. Solo women dining, traveling, and exploring alone is so normal that locals barely notice. Finnish men are taught from childhood to respect women\'s independence and personal space. The concept of bothering or catcalling women is culturally unacceptable. Women feel safer walking alone in Helsinki at midnight than in most other cities during daylight. Finnish culture celebrates female independence - solo female travelers often report feeling more respected and safer than in their home countries. Public spaces, transport, and nightlife venues maintain exceptionally high safety standards specifically protecting women\'s comfort and security.'
+      behaviorNorms: [
+        'Direct communication is valued - Finns appreciate honest, straightforward conversation without excessive politeness',
+        'Punctuality is sacred - arrive exactly on time for all appointments, being late is deeply disrespectful',
+        'Respect personal space - maintain arm\'s length distance, avoid unnecessary physical contact or intrusion',
+        'Comfortable silence is normal - don\'t feel pressured to fill quiet moments with small talk or chatter',
+        'Queue culture is strict - never cut in line, wait patiently for your turn in all situations',
+        'Keep voices low in public spaces - loud talking on transport or in restaurants draws negative attention',
+        'Remove shoes when entering homes - essential cultural courtesy that shows respect for Finnish traditions',
+        'Trust and honesty are foundational - when Finns give their word, it\'s considered an unbreakable bond',
+        'Modesty is highly valued - avoid bragging about accomplishments or distinguishing yourself in groups',
+        'Environmental consciousness expected - Finns take sustainability seriously, recycle properly and use public transport'
+      ],
+      perception: [
+        'Solo female travelers are completely normalized in Helsinki - it\'s extremely common and widely accepted in Finnish society',
+        'Is Helsinki safe for female solo travelers? Absolutely - Finland ranks among world\'s most gender-equal countries with exceptional safety',
+        'Finnish culture is built on egalitarian principles - women are treated as complete equals in all professional and social situations',
+        'Gender equality is fundamental to Finnish society - men are raised to respect women\'s independence and personal space completely',
+        'Street harassment is virtually non-existent due to respectful Finnish culture and strong equality values in society',
+        'Solo women dining, traveling, and exploring alone is so normal that locals barely notice - it\'s part of everyday life',
+        'Finnish legislation emphasizes individual freedom - women\'s independence is legally protected and culturally celebrated',
+        'Public spaces, transport, and venues maintain high safety standards specifically protecting women\'s comfort and security',
+        'Solo female travelers often report feeling safer in Helsinki than in their home countries - exceptional cultural respect',
+        'Trust is foundational in Finnish society - locals are genuinely helpful when approached, despite initial reserved demeanor'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['June-August'],
@@ -312,6 +329,64 @@ const helsinki: Destination = {
         sourceUrl: "https://www.myhelsinki.fi/visit/plan-your-trip/guide-to-helsinki/"
       }
     ], // Tips sourced from MyHelsinki, Numbeo (2025)
+    culturalSensitivityTips: [
+      'Respect personal space religiously - Maintain arm\'s length distance in all interactions, as Finns deeply value privacy and personal boundaries for solo female travel safety',
+      'Master Finnish punctuality culture - Arrive exactly on time for all appointments; being late is deeply disrespectful in Finnish culture and can affect your safety network',
+      'Embrace comfortable silence - Don\'t fill every moment with conversation; Finns interpret forced small talk as superficial, which can hinder building trust for solo female travel safety',
+      'Follow sauna etiquette precisely - Shower before entering, sit on towel, no swimwear in traditional saunas; proper etiquette earns local trust and cultural protection',
+      'Learn essential Finnish phrases - "Kiitos" (thank you), "Anteeksi" (excuse me), "Apu" (help) earn warm guidance from initially reserved locals for enhanced safety',
+      'Show environmental consciousness - Follow recycling rules meticulously as Finns take sustainability seriously; environmental respect demonstrates cultural awareness',
+      'Understand gender equality expectations - Finnish women expect complete equality, not chivalry; excessive courtesy can seem patronizing in this progressive society',
+      'Respect "Law of Jante" principles - Avoid boasting about achievements or wealth; modesty and humility are fundamental values for social acceptance and protection'
+    ],
+    culturalSensitivityTipsDetailed: {
+      title: 'Cultural Sensitivity & Safety Guide for Solo Female Travelers in Helsinki',
+      introduction: 'Is Helsinki safe for women solo travelers culturally? Absolutely - Helsinki ranks among the world\'s safest cities with exceptional gender equality. Finland ranks #1 on Women\'s Peace & Security Index 2023, making it ideal for solo female travel. Finnish culture deeply values personal space, honesty, and respect for individual privacy, creating an exceptionally welcoming environment for women traveling alone.',
+      sections: [
+        {
+          title: 'Personal Space & Social Interactions',
+          tips: [
+            'Respect personal space religiously - Maintain arm\'s length distance in all interactions, as Finns deeply value privacy and personal boundaries',
+            'Master the art of comfortable silence - Don\'t fill every moment with conversation; Finns are comfortable with quiet and interpret forced small talk as superficial',
+            'Understand Finnish directness as respect - When Finns speak directly without softening language, they\'re showing you respect by being honest rather than diplomatic',
+            'Follow queue culture strictly - Never cut in line or rush others; patience is highly valued and cutting lines is considered deeply rude',
+            'Gender equality is fundamental - Finnish women expect complete equality, not chivalry; excessive courtesy can seem patronizing in this progressive society',
+            'Social invitations require advance planning - Finns schedule social engagements weeks or months ahead; spontaneous invitations are rare'
+          ]
+        },
+        {
+          title: 'Communication & Language Safety',
+          tips: [
+            'Learn essential Finnish phrases - "Kiitos" (thank you), "Anteeksi" (excuse me), "Apu" (help) earn warm guidance from initially reserved locals',
+            'Ask "Puhutko Englantia?" before speaking English - shows respect for Finnish language and earns positive responses',
+            'English proficiency is exceptional - 99% in Helsinki speak English, making communication easy for solo female travelers',
+            'Avoid personal questions initially - Income, relationships, or family topics are considered intrusive; stick to neutral subjects like weather, culture, or travel',
+            'Appreciate genuine conversations - Finns prefer meaningful discussions over small talk; show genuine interest in Finnish culture, saunas, or nature'
+          ]
+        },
+        {
+          title: 'Cultural Etiquette & Safety Protocols',
+          tips: [
+            'Follow sauna etiquette precisely - Shower before entering, sit on towel, no swimwear in traditional saunas; proper etiquette earns local trust and cultural protection',
+            'Remove shoes when entering homes - Essential cultural courtesy showing respect; always check if restaurants require this too',
+            'Respect punctuality obsession - Arrive exactly on time for all appointments; being late is deeply disrespectful and can damage safety networks',
+            'Show environmental consciousness - Follow recycling rules meticulously as Finns take sustainability seriously; environmental respect demonstrates cultural awareness',
+            'Follow "Law of Jante" principles - Avoid boasting about achievements or wealth; modesty and humility are fundamental values for social acceptance',
+            'Respect work-life balance boundaries - Don\'t expect business interactions after hours; Finns fiercely protect family time and personal space'
+          ]
+        },
+        {
+          title: 'Winter Safety & Seasonal Considerations',
+          tips: [
+            'Understand seasonal mood variations - Winter darkness affects social interactions; show understanding during short daylight months for cultural sensitivity',
+            'Prepare for extreme weather - Quality winter clothing is essential for safety; locals appreciate visitors who take Finnish weather seriously',
+            'Respect indoor shoe customs year-round - Removing shoes prevents bringing snow/mud inside and shows cultural understanding',
+            'Coffee culture is central - Accept coffee offers graciously as refusing is considered rude; Finnish coffee culture is key to building social connections',
+            'Nature holds spiritual significance - Finns have deep connection to forests and lakes; show environmental respect to earn trust and outdoor invitations'
+          ]
+        }
+      ]
+    },
     culturalDos: [
       'Use public transport and city bikes.',
       'Keep valuables secure in crowded areas.',
@@ -554,9 +629,9 @@ const helsinki: Destination = {
     
     costAndComfort: {
       dailyBudget: {
-        range: '$77 - $188 USD / day',
-        description: 'Helsinki is expensive but safe. Budget travelers $77/day with hostels and local food. Mid-range $188/day with hotels and restaurants. Luxury $429/day.',
-        tip: 'Finland uses contactless payments everywhere. Budget extra for quality winter clothing if visiting November-March.'
+        range: '$88 - $215 USD / day',
+        description: 'Updated 2025 costs: Budget travelers $88/day with hostels and self-catering. Mid-range $215/day with hotels and restaurants. Luxury $450/day. Helsinki ranks among world\'s safest cities for solo female travelers, justifying premium costs.',
+        tip: 'Finland is 99% cashless society. Budget extra for quality winter clothing if visiting November-March. HSL transport passes offer excellent value for solo travelers.'
       },
       accommodation: [
         {
@@ -580,27 +655,51 @@ const helsinki: Destination = {
       ],
       transport: [
         {
-          method: 'HSL Public Transport',
-          cost: '$3.20/single ticket, $9/day pass',
-          safetyDescription: 'Extremely safe, efficient system covering trams, buses, metro, trains with excellent safety record',
+          method: 'HSL Metro (Subway)',
+          cost: '$3.20 single, $60.10 monthly',
+          safetyDescription: 'Exceptionally safe automated system serving central Helsinki and suburbs with excellent safety record and CCTV coverage',
           safetyLevel: 'high'
         },
         {
-          method: 'City Bikes',
-          cost: '$5/day, included in HSL tickets',
-          safetyDescription: 'Very safe with dedicated bike lanes and helmet availability',
+          method: 'HSL Trams',
+          cost: '$3.20, unlimited transfers',
+          safetyDescription: 'Very safe tram network including tourist ring routes (lines 2&3) perfect for sightseeing safely',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'HSL Buses & Night Buses',
+          cost: '$3.20, night service available',
+          safetyDescription: 'Comprehensive safe bus network with night service allowing safe late-night travel for solo women',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'HSL Ferries (Suomenlinna)',
+          cost: 'Included in HSL ticket',
+          safetyDescription: 'Safe ferry service to islands like Suomenlinna Fortress, integral part of public transport system',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Helsinki City Bikes',
+          cost: '$5 daily, $35 seasonal',
+          safetyDescription: '4,600 bikes at 460 stations with dedicated bike lanes throughout the city, very safe cycling infrastructure',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Commuter Trains (VR)',
+          cost: 'HSL integrated tickets',
+          safetyDescription: 'Safe commuter rail connecting Helsinki to surrounding areas with reliable, punctual service',
           safetyLevel: 'high'
         },
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Extremely safe day and night with excellent pedestrian infrastructure',
+          safetyDescription: 'Extremely safe day and night with excellent pedestrian infrastructure, well-lit streets, and respectful culture',
           safetyLevel: 'high'
         },
         {
-          method: 'Taxi/Uber',
-          cost: '$15-25 typical rides',
-          safetyDescription: 'Very safe with regulated drivers and modern fleet',
+          method: 'Taxi/Ride Services',
+          cost: '$15-25 per ride',
+          safetyDescription: 'Very safe with regulated drivers, modern fleet, and app-based booking options',
           safetyLevel: 'high'
         }
       ],
@@ -615,7 +714,52 @@ const helsinki: Destination = {
         'Many museums offer free entry on certain days or hours',
         'Use contactless payment everywhere - cash rarely needed',
         'Budget for winter clothing if visiting in cold months'
+      ],
+      currencyExchangeTips: [
+        'Finland uses Euro (EUR) - widely accepted across European Union for easy travel',
+        'Finland is almost entirely cashless - cards accepted everywhere, even for small purchases like coffee',
+        'Use bank ATMs from major Finnish banks (Nordea, OP, S-Bank) for best exchange rates and security',
+        'Notify your bank of travel plans to avoid card blocking - essential as cash is rarely used',
+        'Mobile payment apps like MobilePay are popular but require Finnish bank account',
+        'Avoid currency exchange at airports - rates are poor compared to city banks or ATMs',
+        'Contactless payments preferred - tap cards or mobile payments are standard throughout Helsinki',
+        'Keep minimal cash for emergencies - most transactions including public transport are card-based',
+        'Download offline banking apps - helpful for account monitoring and currency conversion',
+        'RFID-blocking wallets recommended - protect contactless cards from potential skimming'
       ]
+    },
+    practicalInfo: {
+      culturalInformation: {
+        dressCode: [
+          'Business conservative: Dark suits for formal meetings, smart casual acceptable in tech industries',
+          'Practical daily wear prioritized over fashion: Finns value comfort, functionality, and understated style',
+          'Winter clothing essential (Nov-Mar): Quality thermal layers, waterproof boots, insulated jackets crucial for safety',
+          'Avoid flashy displays of wealth: Finnish modesty culture discourages expensive jewelry or designer logos',
+          'Smart-casual for dining: Most restaurants welcome relaxed attire, overly formal dress may seem pretentious'
+        ],
+        behaviorNorms: [
+          'Direct communication valued: Finns appreciate honest, straightforward conversation without excessive pleasantries',
+          'Punctuality is sacred principle: Arrive exactly on time for appointments - lateness deeply disrespectful',
+          'Personal space highly respected: Maintain arm\'s length distance, avoid unnecessary physical contact',
+          'Comfortable silence is normal: Don\'t feel pressured to fill quiet moments with small talk',
+          'Queue culture strictly observed: Never cut lines, wait patiently in all public situations',
+          'Low voices in public spaces: Loud talking on transport or restaurants draws negative attention',
+          'Remove shoes in homes: Essential cultural courtesy showing respect for Finnish traditions',
+          'Trust forms relationship foundation: When Finns give their word, it\'s considered unbreakable bond',
+          'Modesty highly valued: Avoid bragging about accomplishments or trying to distinguish yourself in groups'
+        ],
+        soloWomenPerception: [
+          'Solo female travel completely normalized: Extremely common and widely accepted throughout Finnish society',
+          'Is Helsinki safe for women solo travelers? Yes - Finland ranks among world\'s most gender-equal countries',
+          'Egalitarian culture treats women as equals: No special treatment, just complete respect in all situations',
+          'Street harassment virtually non-existent: Respectful Finnish culture and strong equality values prevent it',
+          'Solo dining/exploring unnoticed: So normal that locals barely register women traveling alone',
+          'Gender equality legally protected: Finnish legislation emphasizes individual freedom and women\'s independence',
+          'Exceptional cultural respect: Solo female travelers often feel safer than in their home countries',
+          'Finnish men raised to respect women: Personal space and independence completely honored',
+          'Public venues maintain high safety standards: Transport, restaurants, nightlife prioritize women\'s comfort'
+        ]
+      }
     },
   culturalSensitivity: {
     culturalDos: [
@@ -634,7 +778,7 @@ const helsinki: Destination = {
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "MY4aTIZr6D8" // Helsinki travel guide showing what it's like to visit
   }
 };
 

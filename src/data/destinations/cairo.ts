@@ -404,6 +404,18 @@ const cairo: Destination = {
       'Don\'t argue with men publicly - can escalate harassment situations dangerously',
       'Don\'t travel alone to conservative areas outside Cairo - extremely high risk'
     ],
+    culturalSensitivityTips: [
+      'Egypt is a conservative Islamic society where women\'s modesty and proper behavior are deeply valued. Understanding and respecting these cultural norms is essential for both safety and positive interactions.',
+      'Islamic traditions emphasize respect for religious practices and beliefs. Solo female travelers should show particular respect during prayer times (5 times daily) by maintaining quiet, respectful behavior.',
+      'Egyptian culture values hospitality and generosity. When offered tea, coffee, or food, accept graciously as refusal can be seen as rude, though be cautious about accepting invitations from strangers as a solo female traveler.',
+      'Family honor and respect for elders are central to Egyptian culture. Address older people with titles like "Uncle" (Amm) or "Aunt" (Tante) even with strangers to show respect.',
+      'Conservative dress and behavior are not just religious requirements but cultural expectations. Solo female travelers who dress modestly are showing respect for local values and ensuring their own safety.',
+      'Arabic language appreciation goes a long way. Learning basic greetings like "As-salamu alaykum" (Peace be upon you) and "Shukran" (Thank you) shows cultural respect and often results in more helpful interactions.',
+      'Egyptian social structure still values male protection of women. Understanding this cultural context helps explain why solo female travel is unusual and why local men may feel obligated to "help" or comment.',
+      'Religious calendar awareness is important. During Ramadan, respect fasting by not eating or drinking publicly during daylight hours, even as a non-Muslim visitor.',
+      'Photography etiquette is crucial - always ask permission before photographing people, especially women, and respect when someone declines. Taking photos without permission is considered very rude.',
+      'Tipping culture (baksheesh) is integral to Egyptian society. Service workers depend on tips for their livelihood, so generous tipping is both culturally expected and helps ensure better service and protection.'
+    ],
     womensConfidenceScore: {
       score: 18,
       source: 'Travel Ladies Community Survey 2024',

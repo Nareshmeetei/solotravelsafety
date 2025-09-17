@@ -360,6 +360,18 @@ const wellington: Destination = {
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
       "Don't make jokes about New Zealand\\'s history or politics."
+    ],
+    culturalSensitivityTips: [
+      'New Zealand is founded on biculturalism between Māori (indigenous) and Pākehā (European) cultures, with growing multicultural diversity.',
+      'Te Reo Māori is an official language alongside English - learning basic greetings like "Kia ora" shows respect for indigenous culture.',
+      'The Treaty of Waitangi is fundamental to New Zealand\'s national identity - understanding this founding document demonstrates cultural awareness.',
+      'Environmental conservation is deeply embedded in New Zealand culture - "clean and green" values reflect national priorities and Māori spiritual connection to land.',
+      'Egalitarian values mean hierarchy is less pronounced - New Zealand prides itself on being a classless society where everyone is treated equally.',
+      'Outdoor recreation culture is central to Kiwi identity - showing appreciation for hiking, rugby, and adventure sports creates instant connections.',
+      'The concept of "she\'ll be right" reflects New Zealand\'s laid-back, problem-solving attitude and optimistic approach to challenges.',
+      'Work-life balance is prioritized over pure ambition - understanding New Zealand\'s quality of life focus demonstrates cultural alignment.',
+      'Regional pride is strong throughout New Zealand - showing interest in local areas and avoiding Auckland-centric assumptions is appreciated.',
+      'Progressive social values lead globally - New Zealand\'s history with women\'s rights, LGBTQ+ equality, and social justice reflects national character.'
     ]
   },
   scamWarnings: [],

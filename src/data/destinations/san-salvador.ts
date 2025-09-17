@@ -858,6 +858,18 @@ const sansalvador: Destination = {
       "Don't ignore local customs.",
       "Don't refuse offered hospitality rudely."
     ],
+    culturalSensitivityTips: [
+      'El Salvador is a predominantly Catholic country where family and community bonds are extremely important to daily life.',
+      'Spanish is the official language, and making an effort to speak even basic Spanish phrases will be greatly appreciated by locals.',
+      'Salvadorans are known for their warmth and hospitality - accepting invitations for meals or coffee is considered respectful.',
+      'Religious traditions are deeply embedded in culture, with many celebrations and holidays centered around Catholic saints and festivals.',
+      'Family gatherings and extended family relationships are central to Salvadoran society - showing respect for elders is crucial.',
+      'The concept of "personalismo" means building personal relationships before conducting business or asking for favors.',
+      'Food culture is important - traditional dishes like pupusas represent national pride and sharing meals builds social bonds.',
+      'Given recent history of civil conflict, avoid discussing politics or violence - focus on positive aspects of culture and heritage.',
+      'Gender roles can be traditional in some areas, but women are increasingly taking leadership roles in society and business.',
+      'Time moves at a more relaxed pace - "Salvadoran time" means arriving 15-30 minutes late to social events is normal and expected.'
+    ],
     personalSafetyTools: {
       recommendedDevices: [
         'Personal safety alarm',

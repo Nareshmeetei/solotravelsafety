@@ -759,6 +759,18 @@ const saoPaulo: Destination = {
       "Don't expect punctuality rigidity - 15-30 minute delays are normal 'Brazilian time,' showing impatience is culturally offensive",
       "Don't dress too casually in upscale areas - underdressing in Jardins or business districts marks you as target and shows disrespect"
     ],
+    culturalSensitivityTips: [
+      'Brazil is a diverse, multicultural society where São Paulo represents the melting pot of over 100 ethnic communities living together.',
+      'Portuguese is the official language - making an effort to speak basic Portuguese will earn respect and help with safety navigation.',
+      'Brazilians value personal relationships and warmth - building rapport through friendly conversation is essential for solo female travelers.',
+      'Football (soccer) culture is central to identity - showing genuine interest in local teams creates connections and community acceptance.',
+      'Family bonds are extremely strong in Brazilian culture - respecting family values and asking about families shows cultural appreciation.',
+      'Brazilian hospitality is legendary - accepting offers of help or food demonstrates respect for cultural values and builds local support.',
+      'The concept of "jeitinho brasileiro" means creative problem-solving - embrace flexibility and avoid rigid scheduling expectations.',
+      'São Paulo pride runs deep - residents are proud of their city being Brazil\'s economic and cultural capital, acknowledge this positively.',
+      'Social hierarchy and respect for elders are important - using proper titles like "Senhor/Senhora" initially shows cultural awareness.',
+      'Brazilian culture values celebration and joy - participating in local festivals and showing appreciation for music and dance is welcomed.'
+    ],
     womensConfidenceScore: {
       score: 58.2,
       source: "Travel Ladies & Solo Female Travel Communities 2025",

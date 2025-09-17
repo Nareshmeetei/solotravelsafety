@@ -327,6 +327,18 @@ const toronto: Destination = {
       "Don't ask personal questions on first meeting.",
       "Don't litter or leave trash in public spaces.",
       "Don't make jokes about Canada\'s history or politics."
+    ],
+    culturalSensitivityTips: [
+      'Canada is built on multiculturalism and "unity in diversity" - Toronto represents this ideal with over 200 ethnic groups living harmoniously together.',
+      'English and French are official languages, though Toronto is primarily English-speaking - showing appreciation for Canada\'s bilingual heritage is respected.',
+      'Canadian politeness is legendary - saying "please," "thank you," and "sorry" frequently demonstrates understanding of core cultural values.',
+      'Indigenous reconciliation is an important ongoing conversation - showing respect for First Nations, Métis, and Inuit heritage is culturally significant.',
+      'Environmental consciousness and outdoor culture are central to Canadian identity - appreciating nature and sustainability shows cultural alignment.',
+      'Hockey culture transcends sport and represents national identity - showing interest in hockey creates instant connections with locals.',
+      'The concept of "Canadian mosaic" differs from American "melting pot" - cultural groups maintain distinct identities while contributing to collective Canadian identity.',
+      'Universal healthcare and social safety nets reflect Canadian values of care and community support for all residents.',
+      'Regional pride is strong - Torontonians take pride in their city being Canada\'s largest and most diverse metropolitan area.',
+      'Work-life balance and quality of life are prioritized - understanding Canada\'s emphasis on family time and leisure demonstrates cultural awareness.'
     ]
   },
     // Add Women’s Confidence Score (Travel Ladies, Numbeo 2025)

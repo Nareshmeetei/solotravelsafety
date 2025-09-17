@@ -379,6 +379,18 @@ const manila: Destination = {
       'Don\'t openly criticize local customs, religion, or the Philippines itself.',
       'Don\'t flaunt wealth or act arrogantly; humility is highly valued.'
     ],
+    culturalSensitivityTips: [
+      'Filipino culture is built on "kapamilya" (family) values that extend beyond blood relations to include friends, neighbors, and even respectful strangers. Solo female travelers who understand this inclusive family concept and show genuine interest in Filipino relationships will often be embraced with protective care.',
+      'The concept of "utang na loob" (debt of gratitude) governs Filipino social relationships, where kindness creates lasting bonds of mutual obligation. Solo female travelers who show appreciation for help received and offer assistance when possible will build meaningful protective relationships.',
+      'Filipino hospitality involves sharing whatever they have, regardless of economic circumstances. Solo female travelers should accept offered food, drinks, or assistance graciously, understanding that refusal can be deeply hurtful to Filipino pride and generosity.',
+      'Spanish colonial heritage mixed with indigenous traditions creates Philippines\' unique Catholic culture. Solo female travelers who show respect for religious practices, attend mass if invited, and understand the importance of family religious traditions will gain cultural acceptance.',
+      'The concept of "hiya" (shame/modesty) influences Filipino behavior, emphasizing humility and avoiding actions that bring shame to family or community. Solo female travelers who dress modestly, speak softly, and avoid boastful behavior will show cultural understanding.',
+      'Filipino English includes unique expressions and cultural references that reflect local values and humor. Solo female travelers who learn basic Tagalog phrases like "Salamat" (thank you), "Kumusta" (how are you), and "Pasensya na" (sorry) show cultural respect.',
+      'Regional diversity is significant across the Philippines\' 7,000+ islands, with different languages, traditions, and cultural practices. Solo female travelers who show appreciation for Manila\'s specific cultural mix and avoid generalizing about "Filipino" culture will demonstrate sensitivity.',
+      'Food culture involves communal eating, sharing dishes, and using hands for certain foods. Solo female travelers who participate respectfully in Filipino dining customs, try local foods, and show appreciation for culinary traditions will connect with fundamental cultural values.',
+      'Economic inequality is visible throughout Manila, but Filipino dignity and pride remain strong regardless of circumstances. Solo female travelers should approach economic differences with sensitivity, avoiding pity while showing genuine respect for people\'s resilience and humanity.',
+      'Filipino work culture emphasizes relationships and face-saving over efficiency. Solo female travelers who are patient with service, understand that relationship-building often precedes business, and avoid showing frustration publicly will navigate interactions more successfully.'
+    ],
     womensConfidenceScore: {
       score: 35.5,
       source: "Numbeo 2025 & Travel Ladies Community Reports",
