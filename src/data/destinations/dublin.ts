@@ -695,7 +695,7 @@ const dublin: Destination = {
       "Don't assume all Irish people know each other - Ireland has over 5 million people across the country"
     ],
   youtubeVideo: {
-    videoId: "kZ06nOhdr6Q" // Dublin travel guide video showing what it's like to visit
+    videoId: "a-ke-9nq1Iw" // Dublin travel guide video showing what it's like to visit
   }
 };
 
