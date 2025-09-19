@@ -59,9 +59,9 @@ export interface Destination {
     }[];
   };
   culturalExpectations: {
-    dressCode: string;
+    dressCode: string[];
     behaviorNorms: string[];
-    perception: string;
+    perception: string[];
   };
   bestTimeToVisit: {
     safestMonths: string[];

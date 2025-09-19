@@ -10,23 +10,23 @@ const karachi: Destination = {
     nightSafety: 1.9,
     publicTransit: 2.5,
     walkingAlone: 2.2,
-    tags: ['warning-flags', 'high-risk', 'harassment-concerns'],
+    tags: ['warning-flags', 'high-risk', 'harassment-concerns', 'solo-female-travel', 'cultural-sensitivity', 'safety-precautions'],
     bgColor: 'bg-red-75',
     reviewCount: 487,
     lastUpdated: '3 days ago',
     harassmentRisk: 'high',
     safetyBreakdown: {
-      nightSafety: { 
-        score: 1.9, 
-        context: 'Extremely dangerous at night with only 29.2% nighttime safety rating (Numbeo 2025). High violent crime including kidnapping, sexual assault, and armed robbery. July 2025 US Consulate security alert warns of threats to high-end hotels. Social norms strongly discourage women being out alone after dark.' 
+      nightSafety: {
+        score: 1.9,
+        context: 'Is Karachi safe for women solo travelers at night? No - extremely dangerous with only 29.2% nighttime safety rating (Numbeo 2025). High violent crime including kidnapping, sexual assault, and armed robbery targeting solo female travelers. July 2025 US Consulate security alert warns of threats to high-end hotels. Social norms strongly discourage women being out alone after dark.'
       },
       publicTransit: { 
         score: 2.5, 
         context: 'Public transport presents significant harassment risks with frequent sexual harassment reported on overcrowded buses and trains. Recent incidents include ride-hailing drivers assaulting female passengers. US government personnel have transportation restrictions due to security concerns.' 
       },
-      walkingAlone: { 
-        score: 2.2, 
-        context: 'Walking alone strongly discouraged for women. Sexual harassment "almost unavoidable" according to 2025 travel reports. 235 sexual assault cases recorded in first 4 months of 2025. High mobile phone snatching (most common crime) and street harassment including following and inappropriate touching.' 
+      walkingAlone: {
+        score: 2.2,
+        context: 'Is Karachi safe for female solo travelers walking alone? Strongly discouraged due to high harassment risks. Sexual harassment "almost unavoidable" according to solo female travel safety reports 2025. 235 sexual assault cases recorded in first 4 months of 2025. High mobile phone snatching (most common crime) and street harassment including following and inappropriate touching targeting women traveling alone.'
       }
     },
     neighborhoods: {
@@ -59,61 +59,61 @@ const karachi: Destination = {
       ]
     },
     accommodations: [
-      { 
-        name: 'Mövenpick Hotel Karachi', 
-        type: 'hotel', 
-        features: ['DHA location', 'International security standards', '24/7 concierge', 'Airport transfers'], 
-        rating: 4.4, 
-        notes: 'Premium international hotel in Defence area with highest security standards for solo female travelers. Recent US consulate advisory warns of threats to high-end hotels - check current security status before booking.' 
+      {
+        name: 'Mövenpick Hotel Karachi',
+        type: 'hotel',
+        features: ['Ranked #1 of 57 hotels', '5-star luxury downtown', 'Free WiFi & parking', 'Airport shuttle', 'Central location', 'Spa facilities'],
+        rating: 4.6,
+        notes: '#1 ranked hotel in Karachi with excellent safety record. Solo female travelers love the attentive staff, housekeeping service, and secure location near city center with easy access to markets and airport.'
       },
-      { 
-        name: 'Karachi Marriott Hotel', 
-        type: 'hotel', 
-        features: ['24-hour front desk', '24-hour room service', 'Security personnel', 'Key card elevator access', 'Central location'], 
-        rating: 4.0, 
-        notes: 'Ranked #2 of 57 hotels in Karachi on TripAdvisor. International chain with established safety protocols. Located on Abdullah Haroon Road in secure upscale area near Clifton.' 
+      {
+        name: 'Avari Towers Karachi',
+        type: 'hotel',
+        features: ['4.5-star luxury', 'Free airport shuttle', 'Full-service spa', 'Outdoor pool', 'Business facilities', '24/7 room service'],
+        rating: 4.7,
+        notes: 'Travelers consistently praise the helpful staff and excellent room service. Known as "the most safe secure hotel in Karachi" with comprehensive 24-hour services and strong security reputation among solo female travelers.'
       },
-      { 
-        name: 'Avari Towers Karachi', 
-        type: 'hotel', 
-        features: ['24-hour concierge', 'Free airport shuttle', 'Valet parking', 'Valuables storage', '280 rooms'], 
-        rating: 4.2, 
-        notes: 'Specifically noted as "the most safe secure hotel in Karachi" by travelers. Comprehensive 24-hour services with strong security reputation among international visitors.' 
+      {
+        name: 'Pearl Continental Hotel Karachi',
+        type: 'hotel',
+        features: ['4.5-star hotel', 'Thai massage & spa', 'Steam room facilities', '24-hour business center', 'Airport shuttles', 'Meeting rooms'],
+        rating: 4.5,
+        notes: 'Luxury hotel tailored for business and leisure travelers. Located 10 miles from airport with scheduled shuttles. Excellent for solo female business travelers with comprehensive amenities and security protocols.'
       },
-      { 
-        name: 'Pearl Continental Hotel Karachi', 
-        type: 'hotel', 
-        features: ['Luxury accommodation', 'Clifton location', 'Security staff', 'Business facilities'], 
-        rating: 4.3, 
-        notes: 'Established luxury hotel with strong security protocols for women traveling alone. Located in Clifton area. Arrange all transfers through hotel for enhanced solo travel safety.' 
+      {
+        name: 'Karachi Marriott Hotel',
+        type: 'hotel',
+        features: ['5-star luxury', 'Near Clifton Beach', 'Family-friendly', 'Business center', 'Meeting facilities', 'Plush neighborhood location'],
+        rating: 4.5,
+        notes: 'International Marriott standards with spacious, comfortable rooms. Located in plush neighborhood surrounded by major shopping malls. Ideal for both corporate and leisure solo female travelers.'
       },
-      { 
-        name: 'Beach Luxury Hotel (Avari Group)', 
-        type: 'hotel', 
-        features: ['Beach location', '24-hour front desk', 'Outdoor pool', 'Concierge services', 'Avari Group reputation'], 
-        rating: 3.8, 
-        notes: 'Only beach hotel in Karachi, owned by reputable Avari Group. Guests praise "amazing, captivating and beautiful" venue with "very helpful and supportive" staff.' 
+      {
+        name: 'Orchid Inn Executive Guest House',
+        type: 'guesthouse',
+        features: ['Traveler-recommended choice', 'Clean & comfortable', 'Professional staff', 'Safe location', 'Convenient access', 'Budget-friendly'],
+        rating: 4.6,
+        notes: 'Highly recommended by repeat solo travelers: "After trying several places, Orchid Inn has been my go-to. Clean, comfortable, helpful staff, and location is both safe and convenient." Perfect for budget-conscious solo female travelers.'
       },
-      { 
-        name: 'Orchards Cottage Hotel', 
-        type: 'hotel', 
-        features: ['High security walls with barbed wire', 'Armed guards 24/7', 'Walking distance to Dolmen Mall', 'Clifton location'], 
-        rating: 4.0, 
-        notes: 'UK visitors rated positively, noted as being in "safe part of the city" with excellent security including armed guards. Five-minute walk to Dolmen Mall and Clifton Beach.' 
+      {
+        name: 'Subhan Palace Guest House',
+        type: 'guesthouse',
+        features: ['3-star rating', 'Family environment', '2.5 miles from airport', 'Car rental service', 'Excellent value', 'Good user ratings'],
+        rating: 4.5,
+        notes: 'Provides family atmosphere with excellent value. Very close to Jinnah International Airport with car rental services. Great for solo female travelers who want a more intimate, family-style accommodation.'
       },
-      { 
-        name: 'Ramada Creek Hotel Karachi', 
-        type: 'hotel', 
-        features: ['International chain', 'DHA Defence', 'Security measures', 'Restaurant'], 
-        rating: 4.2, 
-        notes: 'International standard hotel in Defence area. Safer location but solo female travelers should still exercise extreme caution when leaving premises.' 
+      {
+        name: 'The Red Tree II Executive Guest House',
+        type: 'guesthouse',
+        features: ['Garden setting', 'Free parking', '24-hour front desk', 'Free WiFi', 'Great views', 'Professional service'],
+        rating: 4.4,
+        notes: 'Executive-level guest house with excellent reviews for views and professional service. 24-hour front desk provides security for solo female travelers. Beautiful garden setting offers peaceful environment.'
       },
-      { 
-        name: 'Local Guesthouses (Limited Options)', 
-        type: 'hotel', 
-        features: ['Budget-friendly', 'Varies by location', 'Basic security', 'Local connections'], 
-        rating: 3.5, 
-        notes: 'Very limited and not recommended for solo female travelers. Hostel culture is minimal in Karachi. Stick to established international or high-end local hotels for safety.' 
+      {
+        name: 'Ambiance Boutique Art Hotel',
+        type: 'boutique',
+        features: ['5-star rating', 'Near Seaview Beach', 'Clean design', 'Amazing restaurant', 'Caring staff', 'Art-focused theme'],
+        rating: 4.8,
+        notes: 'Highest-rated boutique option with excellent user ratings. Solo female travelers appreciate the caring staff, amazing restaurant, and clean artistic design. Perfect for those seeking unique, high-quality accommodation near the beach.'
       }
     ],
     alerts: [
@@ -152,23 +152,32 @@ const karachi: Destination = {
     ],
     safetyTips: {
       clothing: [
-        'Dress extremely modestly - complete coverage except feet, ankles, hands, lower arms, and neck',
-        'Long sleeves and loose-fitting long pants or ankle-length skirts required at all times',
-        'Head covering recommended, especially in religious areas and conservative neighborhoods',
-        'No form-fitting, revealing, or Western-style clothing that draws attention',
-        'Completely hide all jewelry, expensive accessories, and technology to avoid theft targeting',
-        'Carry modest backup clothing in case of dress code violations or emergencies'
+        'Shalwar Kameez (traditional Pakistani outfit) is IDEAL - lightweight, culturally appropriate, and most comfortable for weather',
+        'Purchase local clothing upon arrival at Anarkali Bazaar or local markets - helps you blend in and shows cultural respect',
+        'Long sleeves and loose-fitting long pants or ankle-length skirts required at all times - avoid any form-fitting clothing',
+        'Head covering (dupatta/scarf) essential - carry at all times for mosque visits and conservative areas',
+        'Kurta with loose trousers or jeans acceptable as Western alternative, but ensure modest length covering backside',
+        'Completely avoid shorts, sleeveless tops, tight clothing, or low necklines - these attract unwanted attention and harassment',
+        'Hide all expensive jewelry, watches, and technology to avoid becoming theft target',
+        'Pack lightweight fabrics (cotton, linen) suitable for hot weather while maintaining full coverage',
+        'Bring backup modest clothing for emergencies or unexpected dress code requirements',
+        'Consider dupatta (scarf) as both cultural accessory and practical covering for varying situations',
+        'Choose earth-tone colors over bright colors - neutral colors like beige, brown, navy help you blend in better',
+        'Ensure clothing is not see-through or transparent when wet - test fabrics before wearing in humid weather'
       ],
       firstTimers: [
-        'Is Karachi safe for women solo travelers? Only with extensive precautions - not recommended for solo female travel',
-        'Is Karachi safe for female solo travelers? Consider alternative destinations due to high harassment and assault risks',
-        'Book accommodation exclusively in DHA/Defence or Clifton areas regardless of cost',
-        'Arrange pre-paid private airport transfers through international hotels - never use public transport',
-        'Download Iyzil safety app (Pakistan-specific) and My SOS Family before arrival',
-        'Share live location with trusted contacts using Life360 throughout entire stay',
-        'Never venture anywhere alone - always travel with hotel-arranged guides or local contacts',
-        'Consider Karachi as brief transit point only - minimize time in city due to safety concerns',
-        'Have emergency evacuation plan and funds ready for immediate departure if needed'
+        'Is Karachi safe for women solo travelers? Only with extensive precautions and local guidance - requires careful planning',
+        'Is Karachi safe for female solo travelers? While challenging, possible with proper safety measures and cultural awareness',
+        'Purchase Shalwar Kameez immediately upon arrival - helps you blend in and shows cultural respect',
+        'Book accommodation exclusively in DHA/Defence or Clifton areas regardless of cost for maximum security',
+        'Arrange pre-paid private airport transfers through international hotels - avoid unregulated transport',
+        'Consider women-only Pink Bus Service during peak hours (8-9am, 5-6pm) for safer public transport option',
+        'Download essential apps: Life360, My SOS Family, Karachi Metro Bus app, and Breeze app for BRT',
+        'Share live location with trusted contacts throughout entire stay using multiple tracking methods',
+        'Connect with local women through hotel staff or expat communities for cultural guidance and safety',
+        'Learn basic Urdu phrases ("Assalam-o-Alaikum", "Shukriya", "Maaf kijiye") to show respect',
+        'Have emergency evacuation plan and funds ready for immediate departure if needed',
+        'Register with your embassy immediately upon arrival and maintain regular contact'
       ],
       travelAdvisory: {
         level: 'Level 3: Reconsider Travel',
@@ -186,7 +195,7 @@ const karachi: Destination = {
           'Women afraid to use public transport due to molestation incidents',
           'Sexual harassment "almost unavoidable" according to 2025 travel reports',
           'Conservative society with strong gender segregation norms',
-          'Solo female travelers extremely rare and attract unwanted attention'
+          'Solo female travelers extremely rare but increasing with proper precautions and cultural sensitivity'
         ],
         emergencyContacts: {
           usConsulate: '+92 21 3527 5000',
@@ -362,9 +371,32 @@ const karachi: Destination = {
       }
     },
     culturalExpectations: {
-      dressCode: 'Extremely conservative dress required. Long sleeves, long pants/skirts, loose-fitting clothing. Head covering recommended in many areas. Avoid any form-fitting or revealing clothing.',
-      behaviorNorms: ['Avoid eye contact with men', 'Do not travel alone anywhere', 'Respect Islamic customs and prayer times', 'Avoid physical contact with opposite gender', 'Never discuss politics, religion, or regional tensions'],
-      perception: 'Solo female travelers are extremely rare and attract significant unwanted attention. Conservative society with gender segregation norms. Foreign women may face harassment and inappropriate behavior. This makes Karachi challenging for women traveling alone safety-wise.'
+      dressCode: [
+        'Shalwar Kameez (traditional Pakistani outfit) is most appropriate and comfortable - acts like "socially acceptable pajamas" for hot weather',
+        'Western clothes acceptable but must cover everything except feet, ankles, hands, lower arms and neck - no exceptions for foreign tourists',
+        'Long-sleeved kurta with loose trousers or jeans as alternative to traditional dress - ensure kurta covers backside completely',
+        'Head covering (dupatta/hijab) essential for mosque visits and recommended in conservative areas - carry lightweight scarf at all times',
+        'Choose lightweight cotton or linen fabrics for comfort while maintaining full coverage - avoid transparent or form-fitting materials',
+        'Select earth-tone colors (beige, brown, navy) over bright colors to blend in and avoid unwanted attention from locals',
+        'Purchase traditional clothing at Anarkali Bazaar upon arrival - shows cultural respect and helps solo female travelers integrate better'
+      ],
+      behaviorNorms: [
+        'Use "Assalamu Alaikum" greeting and accept Pakistani hospitality gracefully - refusing food or tea offerings can be deeply offensive',
+        'Use only right hand for eating, greeting, and passing objects - left hand considered unclean in Islamic culture',
+        'Avoid excessive smiling or direct eye contact with men - easily misinterpreted as flirting in conservative Pakistani culture',
+        'Show deep respect during Islamic prayer times (5 times daily) and religious observances - stop activities when call to prayer sounds',
+        'Claim to be married even if single to avoid unwanted marriage proposals - single status attracts problematic attention and harassment',
+        'Learn basic Urdu phrases like "Shukriya" (thank you) and "Maaf kijiye" (excuse me) - shows respect for local culture',
+        'Accept that personal space concepts differ - maintain respectful distance while understanding Pakistani warmth and hospitality customs'
+      ],
+      perception: [
+        'Solo female travelers are extremely rare in Karachi and attract significant attention - prepare for constant stares and questions',
+        'Conservative Islamic society expects women to travel with male guardian or family members - solo status often misunderstood',
+        'Claiming married status provides social protection and reduces harassment - wear simple ring and mention "husband" when appropriate',
+        'Western appearance and behavior can be seen as invitation for unwanted advances - cultural sensitivity essential for safety',
+        'Cultural concept of "izzat" (honor/dignity) affects how women are perceived - modest behavior reflects well on foreign visitors',
+        'Understanding "purdah" (privacy/modesty) extends beyond dress to social interactions - respect gender segregation norms in public spaces'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['December-May'],
@@ -586,14 +618,14 @@ const karachi: Destination = {
     usefulTips: [
       {
         title: "Solo female travel safety: Dress modestly and avoid flashy accessories",
-        description: "Wear loose, modest clothing and avoid drawing attention with jewelry or expensive items. Essential safety tip for women traveling alone to reduce unwanted attention.",
+        description: "Essential solo travel safety tip for women - wear loose, modest clothing and avoid drawing attention with jewelry or expensive items. Crucial for solo female travel safety in conservative destinations like Karachi.",
         severity: "high",
         sourceName: "Traveler Wiz (2025)",
         sourceUrl: "https://www.travelerwiz.com/travel-guide/what-do-female-tourists-wear-in-pakistan/"
       },
       {
         title: "Solo travel security: Use registered taxis or rideshare apps only",
-        description: "Avoid public transport and unregistered taxis. Use apps like Careem or Uber for safer, trackable rides, especially important for solo female travel safety at night.",
+        description: "Critical solo female travel safety precaution - avoid public transport and unregistered taxis. Use apps like Careem or Uber for safer, trackable rides. Essential safety tip for women solo travelers, especially at night when harassment risks increase significantly.",
         severity: "high",
         sourceName: "Karachi Police (2025)",
         sourceUrl: "https://karachipolice.gov.pk/"
@@ -606,8 +638,8 @@ const karachi: Destination = {
         sourceUrl: "https://www.numbeo.com/crime/in/Karachi"
       },
       {
-        title: "Solo female travel precautions: Avoid walking alone after dark",
-        description: "Critical safety tip for women traveling alone - plan your movements to avoid being out alone at night. Stick to well-lit, busy areas and avoid deserted streets.",
+        title: "Is Karachi safe for solo female travelers after dark? No - avoid walking alone",
+        description: "Critical solo female travel safety precaution - plan your movements to avoid being out alone at night. Women solo travelers must stick to well-lit, busy areas and avoid deserted streets. Essential safety advice for female solo travelers visiting Pakistan.",
         severity: "high",
         sourceName: "Karachi Police (2025)",
         sourceUrl: "https://karachipolice.gov.pk/"
@@ -920,9 +952,39 @@ const karachi: Destination = {
           safetyLevel: 'high'
         },
         {
+          method: 'Pink Bus Service (Women-Only)',
+          cost: '$0.55-0.83 per ride',
+          safetyDescription: 'Dedicated women-only bus service launched 2023. Air-conditioned with clean facilities. Peak hours 8-9am, 5-6pm.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Green Line BRT (Women\'s Section)',
+          cost: '$0.10-0.38 per ride',
+          safetyDescription: 'Dedicated women\'s compartments with separate entrances. State-of-the-art buses for comfortable experience.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Electric Bus Service (EV-1, EV-2)',
+          cost: 'Low fare',
+          safetyDescription: 'New air-conditioned electric buses with dedicated women\'s seating. Routes: CMH Malir to Dolmen Mall, Bahria Town to Malir Halt.',
+          safetyLevel: 'medium'
+        },
+        {
+          method: 'Auto Rickshaw (with local guidance)',
+          cost: '$0.07 per km (Rs10 per 6km)',
+          safetyDescription: 'Local women use daily with good safety record. 50,000+ operating. Ensure driver reputation through hotel/local contacts.',
+          safetyLevel: 'medium'
+        },
+        {
           method: 'Careem (with extreme caution)',
           cost: '$3-8 per ride',
           safetyDescription: 'Recent sexual assault incidents by drivers. Share ride details, verify driver identity.',
+          safetyLevel: 'low'
+        },
+        {
+          method: 'Bykea Bike/Motorcycle App',
+          cost: '$1-3 per ride',
+          safetyDescription: 'Local bike/motorcycle ride-hailing. Not recommended for solo female travelers due to safety concerns.',
           safetyLevel: 'low'
         },
         {
@@ -930,29 +992,20 @@ const karachi: Destination = {
           cost: '$3-8 per ride',
           safetyDescription: 'Limited coverage in Karachi. Safer than local transport but still risks for women.',
           safetyLevel: 'low'
-        },
-        {
-          method: 'Public Transport (NOT RECOMMENDED)',
-          cost: '$0.18 per trip',
-          safetyDescription: 'Frequent sexual harassment on overcrowded buses. AVOID completely.',
-          safetyLevel: 'low'
-        },
-        {
-          method: 'Licensed Taxi',
-          cost: 'Initial fee $0.97 + $0.42/km',
-          safetyDescription: 'Unregulated with safety concerns. Only use with hotel arrangement.',
-          safetyLevel: 'low'
         }
       ],
       budgetTips: [
         'Stay only in international hotels in DHA/Defence areas - safety over savings',
-        'Arrange all transport through hotel - never use public transport',
+        'Use women-only Pink Bus Service or BRT women\'s sections for safer public transport when needed',
+        'Arrange airport transfers and private transport through hotel for maximum solo female travel safety',
         'Eat only at hotel restaurants or established places in safe areas',
-        'Avoid street food and local markets due to safety concerns',
+        'Eat at hotel restaurants or established places in DHA/Clifton for solo female travel safety',
+        'Avoid street food and crowded local markets due to harassment and safety concerns',
         'Budget extra for private security/guides when leaving hotel',
         'Purchase comprehensive travel insurance with emergency evacuation',
         'Keep emergency cash for immediate departure if needed',
-        'Consider Karachi as brief transit point only - minimize time in city',
+        'Consider Karachi as brief transit point for solo female travelers - minimize time in city due to safety challenges',
+        'Connect with other solo female travelers through hotel concierge or women\'s travel communities',
         'Book accommodation with 24/7 security and international standards',
         'Budget for premium airport transfer services through hotel'
       ]
@@ -1007,9 +1060,16 @@ const karachi: Destination = {
       'Don\'t refuse food or tea offerings repeatedly - Pakistani hospitality (mehmanawazi) is sacred cultural tradition'
     ]
   },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  youtubeVideos: [
+    {
+      videoId: "Dt_2lgrp_6c",
+      title: "Karachi Travel Experience"
+    },
+    {
+      videoId: "MSs8QCOOyf0",
+      title: "Additional Karachi Insights"
+    }
+  ]
 };
 
 export default karachi;
