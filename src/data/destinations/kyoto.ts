@@ -9,23 +9,25 @@ const kyoto: Destination = {
     nightSafety: 9.5,
     publicTransit: 9.8,
     walkingAlone: 8.9,
-    tags: ['insider-tips'],
+    tags: ['insider-tips', 'extremely-safe'],
     bgColor: 'bg-purple-50',
     reviewCount: 1247,
     lastUpdated: '4 hours ago',
     harassmentRisk: 'low',
+    safetyKeywords: ['solo female travel safety', 'women solo travel safety', 'safe solo travel destinations', 'solo female traveler safety', 'women traveling alone safety'],
+    isKyotoSafeQuestion: 'Is Kyoto safe for female solo travelers? Absolutely - Kyoto ranks among the world\'s safest cities with crime index only 14.33/100 and exceptional infrastructure supporting solo female travelers including women-only train cars and female-friendly accommodations.',
     safetyBreakdown: {
       nightSafety: {
         score: 9.5,
-        context: 'Kyoto ranked as one of the world\'s safest cities in 2025 with exceptionally low crime rates. Women feel extremely safe walking alone at night - overall safety rating 4.3/5. Well-lit streets, heavy police presence, and virtually no street harassment make Kyoto ideal for solo female travelers.'
+        context: 'Is Kyoto safe for women solo travelers at night? Absolutely - Kyoto ranked as one of the world\'s safest cities in 2025 with crime index only 14.33/100. Women report feeling extremely safe walking alone at night with overall safety rating 4.3/5. Well-lit streets, heavy police presence, and virtually no street harassment make Kyoto ideal for solo female travel safety.'
       },
       publicTransit: {
         score: 9.8,
-        context: 'World-class safety with women-only train cars on Hankyu and Keihan Lines during rush hours. Extremely rare incidents of inappropriate behavior. Public transport operates efficiently with excellent safety protocols and 24/7 security presence.'
+        context: 'Kyoto public transport offers world-class safety for women traveling alone with women-only train cars on Hankyu and Keihan Lines during rush hours. Extremely rare incidents of inappropriate behavior make this one of the safest solo travel destinations. Public transport operates efficiently with excellent safety protocols and 24/7 security presence.'
       },
       walkingAlone: {
         score: 8.9,
-        context: 'Japan rates 4.9/5 for women\'s safety overall. Sexual harassment risk only 1.3/5, assault risk 1.1/5. Occasional staring but verbal/physical harassment virtually nonexistent. Crime affecting tourists extremely low in Kyoto.'
+        context: 'Is Kyoto safe for female solo travelers walking alone? Yes - Japan rates 4.9/5 for women\'s safety overall with sexual harassment risk only 1.3/5 and assault risk 1.1/5. Occasional staring occurs but verbal/physical harassment is virtually nonexistent. Crime affecting tourists is extremely low, making Kyoto one of the safest places for women to travel alone.'
       }
     },
     neighborhoods: {
@@ -50,44 +52,68 @@ const kyoto: Destination = {
     },
     accommodations: [
       {
-        name: 'Kyoto Hana Hostel',
-        type: 'hostel',
-        features: ['Female dorms', 'Central Gion location', '24/7 reception', 'Rooftop terrace'],
-        rating: 4.7,
-        notes: 'Popular with solo female travelers, excellent safety record and clean facilities. Located in safest part of Kyoto.',
-        link: 'https://www.kyotohana-hostel.com/'
+        name: 'Six Senses Kyoto',
+        type: 'hotel',
+        features: ['Luxury suites', 'Wellness spa', 'Sustainable design', 'Higashiyama location', '24/7 security', 'English concierge'],
+        rating: 4.9,
+        notes: 'Ultra-luxury hotel opened 2024 with exceptional solo female traveler safety. 81 rooms featuring sustainable design with views of 16th-century Toyokuni Shrine.',
+        link: 'https://www.sixsenses.com/en/resorts/kyoto'
+      },
+      {
+        name: 'Park Hyatt Kyoto',
+        type: 'hotel',
+        features: ['Luxury suites', 'Traditional aesthetics', 'Hillside location', 'Premium security', '24/7 concierge'],
+        rating: 4.8,
+        notes: 'Luxury hotel in peaceful Higashiyama district with 70 rooms. Exceptional safety record and service specifically praised by solo female travelers.',
+        link: 'https://www.hyatt.com/en-US/hotel/japan/park-hyatt-kyoto/kyoto'
       },
       {
         name: 'Hotel Granvia Kyoto',
         type: 'hotel',
-        features: ['JR Station connection', 'Premium security', 'English concierge', '24/7 front desk'],
-        rating: 4.8,
-        notes: 'Luxury hotel directly connected to Kyoto Station with exceptional safety standards and comprehensive guest services.',
+        features: ['JR Station connection', 'Premium security', 'English concierge', '24/7 front desk', 'Swimming pool'],
+        rating: 4.7,
+        notes: 'Luxury hotel directly connected to Kyoto Station with exceptional safety standards. Maximum convenience for solo travelers with direct station access.',
         link: 'https://www.granvia-kyoto.co.jp/en/'
       },
       {
-        name: 'Piece Hostel Kyoto',
-        type: 'hostel',
-        features: ['Female dorms', 'Cafe/restaurant', 'Modern design', 'Central Gion'],
-        rating: 4.6,
-        notes: 'Boutique hostel with female-only rooms, exceptional cleanliness, and prime location for safe walking to attractions.',
-        link: 'https://www.piecehostel.com/kyoto/'
-      },
-      {
-        name: 'The Westin Miyako Kyoto',
+        name: 'GOOD NATURE HOTEL KYOTO',
         type: 'hotel',
-        features: ['Mountain setting', 'Premium security', 'Spa facilities', 'Garden views'],
-        rating: 4.5,
-        notes: 'Historic luxury hotel offering exceptional safety in peaceful Higashiyama area with shuttle services to major attractions.',
-        link: 'https://www.marriott.com/hotels/travel/kixwi-the-westin-miyako-kyoto/'
+        features: ['Sustainable practices', 'Central location', 'Excellent breakfast', 'Modern amenities', '24/7 front desk'],
+        rating: 4.6,
+        notes: 'Featured in TripAdvisor\'s best hotels list. Known for exceptional breakfast and solo female traveler-friendly atmosphere with sustainable focus.',
+        link: 'https://goodnaturehotel.jp/en/'
       },
       {
-        name: 'Khaosan Kyoto Guest House',
+        name: 'Hyatt Place Kyoto',
+        type: 'hotel',
+        features: ['Modern amenities', 'Subway access', 'English-speaking staff', '24/7 front desk', 'Fitness center'],
+        rating: 4.6,
+        notes: 'Directly above Marutamachi subway station with excellent transport access. Popular with solo female business travelers for safety and convenience.',
+        link: 'https://www.hyatt.com/en-US/hotel/japan/hyatt-place-kyoto/kyoto'
+      },
+      {
+        name: 'Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji',
+        type: 'hotel',
+        features: ['Downtown location', 'Traditional design', 'Station proximity', '24/7 security', 'English support'],
+        rating: 4.5,
+        notes: 'Near Kyoto-Kawaramachi Station in safe downtown area. Blends traditional Japanese design with modern safety features for solo travelers.',
+        link: 'https://www.gardenhotels.co.jp/kyoto-kawaramachi/'
+      },
+      {
+        name: 'Nine Hours Kyoto',
         type: 'hostel',
-        features: ['Female dorms', 'Traditional architecture', 'Rooftop area', 'Kitchen facilities'],
-        rating: 4.4,
-        notes: 'Budget-friendly option with excellent security, female-only rooms, and helpful English-speaking staff in safe central location.',
-        link: 'https://www.khaosan-kyoto.com/'
+        features: ['Women-only floor', 'High-tech capsules', 'Central location', '24/7 access', 'Modern security'],
+        rating: 4.5,
+        notes: 'High-concept capsule hotel with dedicated women-only floor. Excellent safety with modern technology and prime downtown location for solo female travelers.',
+        link: 'https://ninehours.co.jp/kyoto/'
+      },
+      {
+        name: 'CAFETEL Kyoto Sanjo for Ladies',
+        type: 'hostel',
+        features: ['Women-only hotel', 'River views', 'Station connection', 'Cafe facility', '24/7 security'],
+        rating: 4.5,
+        notes: 'Exclusively for women travelers, facing Kamogawa River. Directly linked to Sanjo Station with exceptional safety and female-only environment.',
+        link: 'https://cafetel.jp/sanjo-ladies/'
       }
     ],
     alerts: [
@@ -187,7 +213,26 @@ const kyoto: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Japanese culture values modesty and respect, especially in religious sites. Cover shoulders and knees when visiting temples and shrines. Casual, neat clothing is appropriate for city areas. Remove shoes when entering temples, traditional ryokan, and some restaurants. Avoid flashy or revealing clothing. Dark colors are practical and respectful.',
+      dressCode: [
+        'Cover shoulders and knees when visiting temples and shrines - this is strictly enforced at all sacred sites',
+        'Smart casual attire appropriate for most restaurants, always remove shoes when entering traditional establishments',
+        'Japanese culture values modesty - avoid revealing clothing, mini skirts, low-cut tops, or tight-fitting garments',
+        'Dress in layers as Kyoto weather varies significantly between seasons - essential for comfort and cultural appropriateness',
+        'Wear easy-to-remove shoes as you\'ll frequently need to take them off at temples, ryokan, and traditional restaurants',
+        'Choose dark, neutral colors for temple visits - practical and shows respect for sacred environments',
+        'Business casual required for upscale kaiseki restaurants and traditional tea ceremony experiences',
+        'Pack comfortable walking shoes with good support - Kyoto involves extensive walking on uneven temple paths'
+      ],
+      perception: [
+        'Solo female travelers are extremely common and widely accepted - Japan has one of the world\'s most welcoming cultures for women traveling alone',
+        'Japanese culture is exceptionally respectful toward women, harassment is virtually nonexistent with only 1.3/5 sexual harassment risk rating',
+        'Locals are particularly helpful toward solo female tourists, especially if you appear lost or confused - asking for directions is safe and welcome',
+        'Kyoto has excellent infrastructure specifically supporting solo female travelers including women-only train cars and female-only accommodations',
+        'Women traveling alone are viewed positively as independent and adventurous, not as unusual or concerning - solo travel is celebrated',
+        'Traditional hospitality (omotenashi) means solo female travelers often receive extra care and attention from service staff',
+        'Temple staff and monks are accustomed to solo female visitors and provide guidance respectfully without judgment',
+        'Local women often approach solo female travelers to offer assistance with navigation, cultural questions, or recommendations'
+      ],
       behaviorNorms: [
         'Bow slightly when greeting locals, especially elders and service staff',
         'Speak quietly on public transport - phone calls are considered rude',
@@ -199,8 +244,7 @@ const kyoto: Destination = {
         'Offer and receive business cards with both hands and a slight bow',
         'Be punctual - lateness is considered disrespectful',
         'Show appreciation for hospitality but don\'t tip (not customary in Japan)'
-      ],
-      perception: 'Solo female travelers are extremely common and widely accepted in Kyoto. Japanese culture is respectful toward women, and harassment is virtually nonexistent. You may receive curious but respectful attention. Locals are generally helpful toward lost tourists, especially women traveling alone. Kyoto has excellent infrastructure supporting solo female travelers with women-only train cars and female-friendly accommodations.'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['March-May', 'September-November'],
@@ -266,7 +310,7 @@ const kyoto: Destination = {
       {
         label: 'Unwanted Attention (Staring, Photos)',
         frequency: 'Rare',
-        icon: 'Eye',
+        icon: 'EyeOff',
         details: 'Occasional curiosity from locals toward foreign visitors, especially in traditional districts. Generally respectful cultural interest.',
         prevention: 'Dress modestly at temples, politely decline photos, respect photography restrictions in sacred areas'
       }
@@ -344,30 +388,38 @@ const kyoto: Destination = {
       }
     ],
     culturalDos: [
-      'Dress modestly at temples and shrines.',
-      'Remove shoes when entering homes or temples.',
-      'Speak quietly in public and on transport.',
-      'Respect local customs and bow when greeting.',
-      'Ask before taking photos of people or religious sites.'
+      'Bow slightly when greeting people, especially at temples - proper etiquette shows respect for Japanese customs',
+      'Remove shoes when entering temples, ryokan, traditional restaurants, and homes - essential cultural practice',
+      'Speak quietly on public transport and in temples - noise pollution is considered very rude in Japanese culture',
+      'Queue orderly and respect personal space - Japanese society values harmony and order above individual needs',
+      'Ask permission before photographing people or sacred objects - especially important for geisha and maiko in Gion',
+      'Use both hands when giving or receiving items like business cards, gifts, or payments - shows proper respect',
+      'Master chopstick etiquette - never stick them upright in rice or pass food chopstick to chopstick',
+      'Be punctual for all appointments and reservations - lateness is considered deeply disrespectful in Japan'
     ],
     culturalDonts: [
-      "Don't talk loudly or make phone calls on public transport.",
-      "Don't eat or drink while walking in public.",
-      "Don't touch or point at religious objects.",
-      "Don't enter private areas of temples or shrines.",
-      "Don't ignore etiquette signs or instructions."
+      "Don't eat or drink while walking in public areas - finish food before moving, use designated eating areas",
+      "Don't point with your finger - use an open hand instead, pointing is considered extremely rude",
+      "Don't touch religious statues, Buddha images, or temple artifacts - deeply sacred and strictly forbidden",
+      "Don't ignore photography restrictions in sacred areas - some temples prohibit all photos, respect these rules",
+      "Don't tip service staff - it's not customary and can confuse or offend, excellent service is expected without tips",
+      "Don't blow your nose in public - use a tissue privately or excuse yourself to a restroom",
+      "Don't talk loudly or make phone calls on public transport - maintain quiet, respectful atmosphere",
+      "Don't enter temple grounds without proper purification - wash hands and mouth at water basins first"
     ],
     culturalSensitivityTips: [
-      'Kyoto served as Japan\'s imperial capital for over 1,000 years and remains the spiritual and cultural heart of traditional Japanese civilization. Solo female travelers should understand that this city represents the pinnacle of Japanese aesthetic refinement, religious devotion, and cultural preservation.',
-      'The concept of "wabi-sabi" (finding beauty in imperfection and impermanence) is deeply embedded in Kyoto\'s temples, gardens, and traditional arts. Solo female travelers who appreciate this aesthetic philosophy will better understand Japanese cultural values and the significance of Kyoto\'s preserved heritage.',
-      'Geisha and maiko culture in Kyoto\'s historic districts like Gion represents centuries of refined artistic tradition. Solo female travelers should show respect by observing quietly, not following or photographing without permission, and understanding that these are dedicated artists, not tourist attractions.',
-      'Temple and shrine etiquette is especially important in Kyoto, home to over 2,000 religious sites including UNESCO World Heritage temples. Solo female travelers should learn proper purification rituals, bowing techniques, and understand the difference between Buddhist temples and Shinto shrines.',
-      'The traditional tea ceremony ("sado" or "chado") embodies Japanese values of harmony, respect, purity, and tranquility. Solo female travelers who participate respectfully in tea ceremony experiences will gain deep insights into Japanese spiritual and aesthetic principles.',
-      'Seasonal appreciation is fundamental to Kyoto culture, from cherry blossoms (sakura) to autumn leaves (momiji). Solo female travelers who show awareness of seasonal significance and participate in seasonal activities like hanami (flower viewing) will connect with core Japanese cultural practices.',
-      'Traditional crafts like kimono weaving, pottery, and incense making have been preserved in Kyoto for centuries. Solo female travelers who show appreciation for these artisanal traditions and support local craftspeople demonstrate understanding of Japanese cultural heritage preservation.',
-      'The concept of "omotenashi" (selfless hospitality) is particularly refined in Kyoto\'s traditional establishments. Solo female travelers should receive this hospitality graciously while understanding it reflects deep cultural values of service and respect for guests.',
-      'Meditation and mindfulness practices at Kyoto\'s Zen temples offer authentic spiritual experiences. Solo female travelers who approach these opportunities with appropriate reverence and openness will gain insights into Japanese Buddhist philosophy and meditation traditions.',
-      'The preservation of traditional architecture and urban planning in Kyoto\'s historic districts reflects Japanese values of cultural continuity. Solo female travelers who show respect for these preserved environments and follow local guidelines help maintain these precious cultural spaces for future generations.'
+      'Bow respectfully when entering temples and meeting locals - shows proper Japanese etiquette',
+      'Appreciate seasonal traditions like cherry blossoms and autumn leaves - connect with Japanese nature worship',
+      'Respect geisha and maiko as artists, not tourist attractions - observe quietly without following',
+      'Learn temple purification rituals - wash hands and mouth at water basins before entering',
+      'Embrace "omotenashi" hospitality graciously - accept kindness with proper appreciation',
+      'Understand "wabi-sabi" philosophy - find beauty in imperfection and impermanence',
+      'Support traditional crafts like kimono and pottery - preserve Kyoto\'s cultural heritage',
+      "Don't rush through temples - take time for contemplation and respect sacred spaces",
+      "Don't photograph without permission - especially geisha, religious ceremonies, or private moments",
+      "Don't ignore purification rituals - essential respect for Buddhist and Shinto traditions",
+      "Don't speak loudly in temples or traditional areas - maintain peaceful, reverent atmosphere",
+      "Don't touch religious objects or artifacts - strictly forbidden and deeply disrespectful"
     ],
     womensConfidenceScore: {
       score: 77.1, // Numbeo 2025 Safety Index for Japan (Kyoto aligns with national average)
@@ -402,14 +454,6 @@ const kyoto: Destination = {
     ],
   
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy {city}',
-        address: '{address}',
-        phone: '{phone}',
-        email: 'consular{country-code}@state.gov',
-        emergency: '{phone}',
-        link: 'https://{country-code}.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Consulate General Osaka-Kobe',
@@ -621,8 +665,8 @@ const kyoto: Destination = {
     costAndComfort: {
       dailyBudget: {
         range: '¥3,000-12,000 ($20-80 USD) per day',
-        description: '2025 costs: Budget travelers ¥3,000-5,000/day with hostels and street food. Mid-range ¥8,000-12,000/day with hotel and restaurant meals. Kyoto offers good value with excellent safety standards.',
-        tip: 'Japan is cash-based - use 7-Eleven ATMs. IC card (ICOCA) essential for transport. Temple entrance fees ¥300-600 each.'
+        description: '2025 costs: Budget travelers ¥3,000-5,000/day ($20-33) with hostels and street food. Mid-range ¥8,000-12,000/day ($53-80) with hotel and restaurant meals. Kyoto offers good value with excellent safety standards.',
+        tip: 'Japan is cash-based - use 7-Eleven ATMs. IC card (ICOCA) essential for transport. Temple entrance fees ¥300-600 ($2-4) each.'
       },
       accommodation: [
         {
@@ -654,37 +698,72 @@ const kyoto: Destination = {
         {
           method: 'Public Transport (IC Card)',
           cost: '¥1,000-1,500/day ($7-10)',
-          safetyDescription: 'Exceptionally safe with women-only cars during rush hour',
+          safetyDescription: 'Exceptionally safe with women-only cars during rush hour on Hankyu and Keihan lines',
           safetyLevel: 'high'
         },
         {
           method: 'Walking',
           cost: 'Free',
-          safetyDescription: 'Extremely safe day and night with excellent lighting',
+          safetyDescription: 'Extremely safe day and night with excellent lighting and low crime rates',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'City Bus',
+          cost: '¥230 per ride ($1.50), ¥600 day pass ($4)',
+          safetyDescription: 'Extensive network with updated 2024 fares, very safe for solo female travelers',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Express Tourist Bus',
+          cost: '¥500 per ride ($3.30) - new 2024 service',
+          safetyDescription: 'Direct routes to major attractions every 8 minutes from Kyoto Station',
           safetyLevel: 'high'
         },
         {
           method: 'Taxi',
-          cost: '¥600 initial + ¥100/280m',
-          safetyDescription: 'Very safe but expensive - use for late night or emergencies',
+          cost: '¥600 initial ($4) + ¥100/280m ($0.70)',
+          safetyDescription: 'Very safe but expensive - drivers are professional and honest',
           safetyLevel: 'high'
         },
         {
           method: 'Rental Bicycle',
           cost: '¥1,000-2,000/day ($7-13)',
-          safetyDescription: 'Safe with dedicated bike lanes, theft extremely rare',
+          safetyDescription: 'Safe with dedicated bike lanes, theft extremely rare, popular with locals',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'Subway (Tozai/Karasuma Lines)',
+          cost: '¥220-360 per ride ($1.50-2.40)',
+          safetyDescription: 'Two efficient lines connecting major areas, excellent safety record',
+          safetyLevel: 'high'
+        },
+        {
+          method: 'JR Trains',
+          cost: 'Varies by distance ($2-30+ for regional/Shinkansen)',
+          safetyDescription: 'Connects to other cities including direct Shinkansen to Tokyo and Osaka',
           safetyLevel: 'high'
         }
       ],
       budgetTips: [
         'Use IC card (ICOCA) for seamless public transport - much cheaper than individual tickets',
-        'Many temples free to visit - only famous ones charge ¥300-600 entrance fees',
-        'Convenience store meals excellent value and safe - ¥300-800 per meal',
-        'Temple food (shojin ryori) offers cultural dining experience at reasonable prices',
+        'Many temples free to visit - only famous ones charge ¥300-600 ($2-4) entrance fees',
+        'Convenience store meals excellent value and safe - ¥300-800 ($2-5) per meal',
+        'Temple food (shojin ryori) offers cultural dining experience at reasonable prices ¥1,500-3,000 ($10-20)',
         'Free WiFi widely available at stations, convenience stores, and tourist areas',
-        'Purchase city bus day pass for ¥600 if visiting multiple temples',
-        'Lunch sets at restaurants much cheaper than dinner - same quality',
-        '7-Eleven ATMs best for international cards - available 24/7'
+        'Purchase city bus day pass for ¥600 ($4) if visiting multiple temples',
+        'Lunch sets at restaurants ¥800-1,500 ($5-10) much cheaper than dinner - same quality',
+        '7-Eleven ATMs best for international cards - available 24/7 with reasonable fees'
+      ],
+      currencyExchangeTips: [
+        'Japan remains largely cash-based despite 2024 digital payment increases - carry ¥50,000-100,000 ($330-670) for solo travelers',
+        'Use 7-Eleven (Seven Bank) ATMs - 25,000 machines nationwide, 24/7 service, ¥100,000 ($670) daily limit',
+        'Japan Post ATMs also excellent - 30,000 locations, ¥50,000 ($330) daily limit, accept international cards',
+        'New banknotes issued in 2024 (older notes still valid) - familiarize yourself with updated ¥1,000, ¥5,000, ¥10,000 designs',
+        'Credit cards offer best exchange rates for large purchases at hotels and department stores - avoid cash advance fees',
+        'Avoid airport exchange counters - rates 5-10% worse than ATMs with additional service fees',
+        'IC card (ICOCA) can be topped up with cash ¥1,000-10,000 ($7-67) for seamless transport and convenience store purchases',
+        'Keep small denominations (¥10-500 coins, ¥1,000 notes) for vending machines, temple donations ¥100-300 ($0.70-2)',
+        'Many restaurants and small shops still cash-only - always have backup ¥5,000-10,000 ($33-67) available'
       ]
     },
     crimeStatistics: {
@@ -716,7 +795,7 @@ const kyoto: Destination = {
       'Don\'t tip service staff - Tipping is not customary and can confuse or offend staff. Excellent service is expected without extra payment. Solo female travelers should simply say thank you instead of offering tips.'
     ],
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "VZ_qP1MrWXI"
   }
 };
 
