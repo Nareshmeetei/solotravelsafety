@@ -1558,26 +1558,11 @@ const DestinationDetail: React.FC = () => {
                     {/* Safety Tips */}
                     <div>
                       <h3 className="text-xl font-display text-gray-900 mb-4">Safety Tips</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                          <h4 className="font-display text-blue-900 mb-2">Clothing Recommendations</h4>
-                          {Array.isArray(dest.safetyTips?.clothing) || (typeof dest.safetyTips?.clothing === 'string' && dest.safetyTips?.clothing.match && dest.safetyTips?.clothing.match(/[\n•]/)) ? (
-                            <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
-                              {(Array.isArray(dest.safetyTips?.clothing)
-                                ? dest.safetyTips?.clothing
-                                : dest.safetyTips?.clothing.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
-                              ).map((item: string, idx: number) => (
-                                <li key={idx}>{item.trim()}</li>
-                              ))}
-                            </ul>
-                          ) : (
-                            <p className="text-sm text-blue-800">{dest.safetyTips?.clothing}</p>
-                          )}
-                        </div>
+                      <div className="space-y-4">
                         <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                           <h4 className="font-display text-purple-900 mb-2">First-Timer Tips</h4>
                           {Array.isArray(dest.safetyTips?.firstTimers) || (typeof dest.safetyTips?.firstTimers === 'string' && dest.safetyTips?.firstTimers.match && dest.safetyTips?.firstTimers.match(/[\n•]/)) ? (
-                            <ul className="text-sm text-purple-800 list-disc list-inside space-y-1">
+                            <ul className="text-[12pt] text-purple-800 list-disc list-inside space-y-2">
                               {(Array.isArray(dest.safetyTips?.firstTimers)
                                 ? dest.safetyTips?.firstTimers
                                 : dest.safetyTips?.firstTimers.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
@@ -1586,7 +1571,22 @@ const DestinationDetail: React.FC = () => {
                               ))}
                             </ul>
                           ) : (
-                            <p className="text-sm text-purple-800">{dest.safetyTips?.firstTimers}</p>
+                            <p className="text-[12pt] text-purple-800">{dest.safetyTips?.firstTimers}</p>
+                          )}
+                        </div>
+                        <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                          <h4 className="font-display text-blue-900 mb-2">Clothing Recommendations</h4>
+                          {Array.isArray(dest.safetyTips?.clothing) || (typeof dest.safetyTips?.clothing === 'string' && dest.safetyTips?.clothing.match && dest.safetyTips?.clothing.match(/[\n•]/)) ? (
+                            <ul className="text-[12pt] text-blue-800 list-disc list-inside space-y-2">
+                              {(Array.isArray(dest.safetyTips?.clothing)
+                                ? dest.safetyTips?.clothing
+                                : dest.safetyTips?.clothing.split(/[\n•]/).filter((s: string) => s.trim().length > 0)
+                              ).map((item: string, idx: number) => (
+                                <li key={idx}>{item.trim()}</li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="text-[12pt] text-blue-800">{dest.safetyTips?.clothing}</p>
                           )}
                         </div>
                       </div>

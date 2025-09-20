@@ -60,95 +60,124 @@ const lisbon: Destination = {
     },
     accommodations: [
       {
-        name: 'The Lumiares Hotel & Spa',
-        type: 'hotel',
-        features: ['Luxury hotel', 'Central location', '24/7 security', 'Female-friendly'],
-        rating: 9.1,
-        notes: 'Luxury boutique hotel in Chiado with excellent security and concierge services for solo female travelers.',
+        name: 'Solar do Castelo - A Luxury Collection Hotel',
+        type: 'luxury hotel',
+        features: ['Former 18th-century mansion', 'Inside castle walls', '24/7 concierge', 'Historic royal palace location', 'Premium security', 'Female-friendly staff'],
+        rating: 4.6,
+        notes: 'Built within the walls of Castelo de São Jorge on the site of former royal palace kitchens. Perfect for solo female travelers wanting to experience luxury with unparalleled safety in historic setting. "Like living as a queen" according to solo female travel guides.',
+        costRange: '€250-400/night',
+        safetyLevel: 'maximum',
+        link: 'https://www.marriott.com/en-us/hotels/lissf-solar-do-castelo-a-luxury-collection-hotel-lisbon/'
+      },
+      {
+        name: 'The Lumiares Hotel & Spa - Bairro Alto',
+        type: 'luxury boutique hotel',
+        features: ['Apartment-style rooms', 'Rooftop bar', '24/7 room service', 'Spa services', 'Personal trainer available', 'Underground parking'],
+        rating: 4.7,
+        notes: 'Portuguese luxury hotel group offering apartment-style accommodations in safe Bairro Alto. Solo female travelers rave about feeling like they have their own apartment with hotel services. Chic Portuguese flair with high ceilings and natural light.',
+        costRange: '€180-320/night',
+        safetyLevel: 'highest',
         link: 'https://www.thelumiares.com/'
       },
       {
-        name: 'Lisb\'On Hostel',
-        type: 'hostel',
-        features: ['Female dorms', 'Central location', 'Modern security', 'Social atmosphere'],
-        rating: 8.7,
-        notes: 'Popular hostel with female-only dorms and excellent security measures. Great for meeting other travelers.',
-        link: 'https://www.lisbonhostel.com/'
+        name: 'Hotel Avenida Palace',
+        type: '5-star boutique hotel',
+        features: ['Historic building', 'Recently renovated', 'Opulent interiors', 'Central Rossio location', 'Free breakfast included', 'English-speaking staff'],
+        rating: 4.5,
+        notes: 'Historic 5-star boutique hotel offering "luxury at highly affordable price" according to solo travel reviews. Recently renovated with opulent rooms and communal spaces. Perfect central location for solo female exploration with excellent value.',
+        costRange: '€145-220/night',
+        safetyLevel: 'highest',
+        link: 'https://www.hotelavenidapalace.pt/'
       },
       {
-        name: 'Yes! Lisbon Hostel',
-        type: 'hostel',
-        features: ['Women-only rooms', 'Rooftop terrace', 'Central Chiado location'],
-        rating: 8.9,
-        notes: 'Modern hostel with women-only accommodations and great location in safe Chiado district.',
-        link: 'https://www.yeslisbon.com/'
-      },
-      {
-        name: 'Home Lisbon Hostel',
-        type: 'hostel',
-        features: ['Female dorms', 'Cozy atmosphere', 'Safe neighborhood'],
-        rating: 8.5,
-        notes: 'Small, intimate hostel with female dorms and homey atmosphere in safe residential area.',
-        link: 'https://www.homelisbon.com/'
+        name: 'Lisbon Art Stay - Baixa-Chiado',
+        type: 'design boutique hotel',
+        features: ['Vibrant contemporary design', 'Rooftop speakeasy', 'Bar and lounge', 'Near Commerce Square', 'Instagram-worthy interiors', 'Solo traveler favorite'],
+        rating: 4.8,
+        notes: 'Incredibly vibrant design hotel in safest Baixa-Chiado area near Commerce Square. Features stunning decor, bar/lounge, plus rooftop speakeasy. Highly recommended by solo female travelers for its aesthetic appeal and central safety.',
+        costRange: '€120-200/night',
+        safetyLevel: 'highest',
+        link: 'https://www.lisbonart.com/'
       },
       {
         name: 'Dear Lisbon Gallery House',
-        type: 'boutique hotel',
-        features: ['Design hotel', 'Art gallery', 'Safe São Bento area', 'Co-working space'],
-        rating: 9.0,
-        notes: 'Best overall boutique hotel with stunning restaurant and art gallery in creative São Bento district. Perfect for solo female travelers seeking culture and safety.',
+        type: 'design boutique hotel',
+        features: ['Art gallery integrated', 'Co-working space', 'São Bento creative district', 'Cultural experiences', 'Design-focused', 'Female solo traveler recommended'],
+        rating: 4.6,
+        notes: 'Best overall boutique hotel combining stunning restaurant and integrated art gallery in creative São Bento district. Perfect for solo female travelers seeking culture, safety, and unique experiences in one of Lisbon\'s most artistic neighborhoods.',
         costRange: '€80-120/night',
-        safetyLevel: 'highest'
+        safetyLevel: 'highest',
+        link: 'https://www.dearlisbon.com/'
       },
       {
         name: 'Alecrim ao Chiado',
         type: 'mid-range hotel',
-        features: ['Central Chiado location', 'Air conditioning', 'Modern security', 'Walking distance to attractions'],
-        rating: 8.8,
-        notes: 'Right in heart of Chiado shopping district. Air conditioning essential for summer. Excellent value for central location.',
+        features: ['Heart of Chiado shopping', 'Air conditioning', 'Modern security', 'Walking distance to attractions', 'Budget-friendly luxury'],
+        rating: 4.5,
+        notes: 'Right in heart of Chiado shopping district with essential air conditioning for summer comfort. Excellent value for central location. Solo female travelers praise the convenient location and modern amenities at reasonable prices.',
         costRange: '€60-90/night',
-        safetyLevel: 'high'
+        safetyLevel: 'high',
+        link: 'https://www.alecrima.com/'
+      },
+      {
+        name: 'Hotel LX Rossio',
+        type: 'budget hotel',
+        features: ['Central Baixa/Chiado location', 'Budget-friendly', 'Historic building', 'Near major attractions', 'Clean and safe'],
+        rating: 4.5,
+        notes: 'Low-cost hotel in the absolute heart of Lisbon in safest Baixa/Chiado neighborhood. Perfect central location for solo female travel Lisbon exploration. Excellent budget option without compromising on safety and location.',
+        costRange: '€45-70/night',
+        safetyLevel: 'high',
+        link: 'https://www.hotellxrossio.com/'
+      },
+      {
+        name: 'Yes! Lisbon Hostel',
+        type: 'modern hostel',
+        features: ['Women-only rooms available', 'Central Chiado location', 'Rooftop terrace', '5 minutes to waterfront', 'Highly rated by solo women'],
+        rating: 4.8,
+        notes: '10/10 rating from women solo travelers! Safe place even in mixed rooms, very clean space. Amazing location less than 5 minutes from the sea. Perfect for solo female travelers seeking social atmosphere with safety.',
+        costRange: '€25-45/night',
+        safetyLevel: 'high',
+        link: 'https://www.yeslisbon.com/'
       },
       {
         name: 'Sant Jordi Hostels Lisbon',
-        type: 'hostel',
-        features: ['Female-only dorms', 'Mixed dorms', 'Private rooms', 'Near public transport', 'Social activities'],
-        rating: 8.6,
-        notes: 'Fun, friendly environment perfect for solo female travelers. Wide range of room options. Close to public transportation.',
-        costRange: '€20-35/night',
-        safetyLevel: 'high'
-      },
-      {
-        name: 'Good Morning Lisbon Hostel',
         type: 'social hostel',
-        features: ['Historic center location', 'Daily happy hour', 'Group activities', 'Walking tours', 'Female dorms'],
-        rating: 8.7,
-        notes: 'Designed for making friends with complimentary events. Perfect for solo travelers wanting social atmosphere. Centrally located.',
-        costRange: '€18-30/night',
-        safetyLevel: 'high'
-      },
-      {
-        name: 'Safestay Bairro Alto',
-        type: 'hostel',
-        features: ['Historic building', 'Central Bairro Alto', 'Female dorms', 'Rooftop terrace', '24/7 security'],
-        rating: 8.4,
-        notes: 'Historic hostel in vibrant Bairro Alto nightlife district. Great for solo female travelers who want nightlife access with safety.',
-        costRange: '€22-38/night',
-        safetyLevel: 'high'
+        features: ['Female-only dorms', 'Fun friendly environment', 'Close to public transport', 'Social activities', 'Private rooms available'],
+        rating: 4.6,
+        notes: 'Highly recommended for incredible solo stay experience. Very fun, friendly environment perfect for solo female travelers. Excellent proximity to public transportation with wide range of accommodation options.',
+        costRange: '€20-35/night',
+        safetyLevel: 'high',
+        link: 'https://www.santjordihostels.com/'
       }
     ],
     alerts: [],
     safetyTips: {
-      clothing: `• Comfortable walking shoes essential for Lisbon's hills and cobblestones
-• Light layers for variable weather - can be cool in mornings/evenings
-• Modest dress for churches and religious sites
-• Avoid flashy jewelry in tourist areas
-• Bring a light jacket for ocean breezes`,
-      firstTimers: `• Lisbon is very safe for solo women with basic precautions
-• Learn basic Portuguese phrases - locals appreciate the effort
-• Use official taxis or Uber for late night transport
-• Save emergency number 112 and tourist police contacts
-• Stay hydrated when walking the hills - carry water`,
+      clothing: [
+        'Comfortable walking shoes with excellent grip absolutely essential for Lisbon\'s steep cobblestone hills that become dangerously slippery when wet',
+        'Light layers for unpredictable Atlantic weather - mornings and evenings can be surprisingly cool even in summer months',
+        'Modest dress covering shoulders and knees required for churches, monasteries, and religious sites throughout Lisbon',
+        'Avoid wearing any flashy jewelry, expensive watches, or designer items in tourist areas to prevent targeting by pickpockets',
+        'Pack a lightweight jacket or cardigan for ocean breezes and unexpected rain showers typical of Atlantic coastal climate',
+        'Choose neutral colors (navy, black, grey) that don\'t mark you as tourist and blend with Portuguese fashion preferences',
+        'Bring crossbody bag worn in front or hidden money belt for valuables - backpacks make easy targets on crowded Tram 28',
+        'Pack closed-toe shoes only - sandals inadequate for cobblestone navigation and mark you as tourist in local areas',
+        'Include lightweight scarf for quick shoulder coverage when entering religious sites or conservative neighborhood areas',
+        'Avoid bright colors, logos, or anything that screams "tourist" - Portuguese locals dress conservatively and appreciate understated style'
+      ],
+      firstTimers: [
+        'Is Lisbon safe for solo female travelers? Absolutely - Portugal ranks 7th safest capital worldwide with excellent track record for women traveling alone',
+        'Book verified high-rated accommodations in central neighborhoods: Chiado, Baixa, or Príncipe Real for maximum solo female travel safety',
+        'Master Tram 28 safely by keeping bags in front, avoiding rush hours, and staying alert - it\'s "pickpocket\'s heaven" according to travel guides',
+        'Learn basic Portuguese phrases like "Obrigada" (thank you), "Socorro" (help), and "Onde fica...?" (where is?) - locals deeply appreciate the effort',
+        'Use official taxis, Uber, or Bolt for all late-night transport - never walk alone in Martim Moniz or Intendente areas after dark',
+        'Save essential numbers: Emergency 112, Tourist Police +351 21 342 1634, APAV victim support 116 006 (English available)',
+        'Stay hydrated when walking Lisbon\'s steep hills - carry water and use elevators/funiculars like Elevador de Santa Justa when tired',
+        'Avoid restaurant hustlers on Rua Augusta with fake menus - ask about "couvert" charges and eat where Portuguese locals dine',
+        'Download safety apps before arrival: NomadHer (female community), bSafe (panic button), Life360 (location sharing), Citymapper (transport)',
+        'Book authentic Fado shows through reputable venues like Casa de Linhares - avoid street ticket sellers with fake performances',
+        'Understand harassment patterns: mainly occurs in Martim Moniz after dark and from drunk tourists in Bairro Alto - travel in groups at night',
+        'Pack grippy walking shoes essential for cobblestone streets that become slippery when wet - falls are regular safety concern in hills'
+      ],
       apps: [
         'NomadHer',
         'Travel Ladies',
@@ -213,20 +242,39 @@ const lisbon: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Lisbon is casual but neat. Portuguese dress modestly for churches and religious sites. Business casual is appropriate for nicer restaurants. Comfortable walking shoes are essential due to hills and cobblestones. Beach wear only for coastal areas.',
-      behaviorNorms: [
-        'Greet with handshakes and maintain eye contact.',
-        'Portuguese appreciate politeness and patience.',
-        'Learn basic Portuguese phrases - locals are helpful when you try.',
-        'Tipping 10% is customary in restaurants.',
-        'Meal times are later - lunch 1-3pm, dinner 8-10pm.',
-        'Be patient with service - Portuguese culture values taking time.',
-        'Respect religious sites and dress modestly in churches.',
-        'Public displays of affection should be modest.',
-        'Queue politely and wait your turn.',
-        'Show interest in Portuguese culture and history.'
+      dressCode: [
+        'Lisbon casual but neat dress code - Portuguese appreciate well-presented appearance without being overly formal',
+        'Modest coverage of shoulders and knees absolutely required in churches, monasteries, and religious sites throughout the city',
+        'Business casual appropriate for nicer restaurants and evening dining - avoid overly casual beach wear in city center',
+        'Comfortable walking shoes with excellent grip essential due to steep hills and slippery cobblestone streets',
+        'Neutral colors (navy, black, grey) preferred over bright tourist clothing - helps blend with local Portuguese fashion style',
+        'Lightweight layers recommended for unpredictable Atlantic coastal weather that can change quickly throughout the day',
+        'Beach wear and flip-flops only appropriate for coastal areas like Cascais - never acceptable in Lisbon city center'
       ],
-      perception: 'Solo women travelers are very welcome in Lisbon. Portuguese culture is warm and hospitable, and locals are generally helpful to tourists. The city is progressive and women can dine alone, explore attractions, and use transport independently without issues. Street harassment is rare.',
+      behaviorNorms: [
+        'Greet with firm handshakes and maintain direct eye contact - Portuguese value formal, respectful personal interactions',
+        'Portuguese deeply appreciate politeness, patience, and visitors who make effort to learn basic language phrases',
+        'Learn essential Portuguese phrases like "Obrigada" (thank you), "Com licença" (excuse me) - locals are helpful when you try',
+        'Tipping 10% customary in restaurants and expected for good service - leave cash on table rather than adding to card',
+        'Respect Portuguese meal times: lunch 1-3pm, dinner 8-10pm - many restaurants close during afternoon siesta period',
+        'Be patient with relaxed service pace - Portuguese culture values taking time and building relationships over rushing',
+        'Show genuine interest in Portuguese history, maritime exploration, and cultural achievements - locals love sharing heritage',
+        'Queue politely and wait your turn in shops, restaurants, and transport - jumping queues is considered very rude',
+        'Public displays of affection should be modest and discrete - Portuguese prefer reserved public behavior',
+        'Embrace slower pace of life and "saudade" cultural concept - understanding Portuguese emotional depth enhances cultural connection'
+      ],
+      perception: [
+        'Solo women travelers extremely welcome in Lisbon - Portuguese culture is warm, hospitable, and genuinely helpful to tourists',
+        'Is Lisbon safe for women solo travelers? Absolutely - city is progressive where women can dine alone, explore attractions, and use transport independently',
+        'Street harassment rare compared to other European capitals - most Portuguese men are respectful and incidents mainly involve drunk tourists',
+        'Local perception of solo female travelers is very positive - seen as independent, adventurous people worthy of respect and assistance',
+        'Portuguese society has strong family values but fully accepts women traveling independently and making their own choices',
+        'Business and service interactions treat solo women equally - no discrimination in restaurants, shops, or professional settings',
+        'Safety concerns for solo women focus on tourist-targeting crimes rather than gender-based harassment from local population',
+        'Cultural acceptance of female independence very high - solo women feel comfortable in bars, restaurants, and cultural venues alone',
+        'Local women often approach solo female travelers to offer help and recommendations - sisterhood mentality common',
+        'Government and tourism industry actively promote Lisbon as safe solo female travel destination with comprehensive support services'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-October'],
@@ -308,21 +356,38 @@ const lisbon: Destination = {
         icon: 'Shield',
         details: 'Individuals approach tourists offering drugs or hashish, often as setup for robbery or scam. Particularly common in nightlife areas.',
         prevention: 'Ignore all drug offers, walk away immediately, don\'t engage in conversation, report aggressive dealers to police'
+      },
+      {
+        label: 'Violent Crime (Muggings, Armed Robbery)',
+        frequency: 'Rare but isolated incidents reported',
+        icon: 'PocketKnife',
+        details: 'While Lisbon is very safe overall, isolated incidents of mugging and theft have been reported in less touristy areas and late at night. Solo female travelers should remain vigilant, especially in peripheral neighborhoods and when walking alone after dark.',
+        prevention: 'Stick to well-lit central areas, avoid displaying valuables, use registered taxis or rideshare after dark, stay in groups when possible'
       }
     ],
     culturalDos: [
-      'Learn basic Portuguese greetings.',
-      'Dress modestly in religious sites.',
-      'Be patient with service.',
-      'Try local cuisine.',
-      'Respect Portuguese customs.'
+      'Learn basic Portuguese greetings like "Bom dia" (good morning) and "Obrigada" (thank you) - locals deeply appreciate language efforts',
+      'Dress modestly covering shoulders and knees in churches, monasteries, and religious sites throughout Lisbon',
+      'Be patient with relaxed Portuguese service culture - meals and interactions take time and rushing is considered rude',
+      'Try local cuisine especially pastéis de nata, bacalhau dishes, and regional wines - food culture is central to Portuguese identity',
+      'Respect Portuguese customs around family time, especially during Sunday family meals and holiday celebrations',
+      'Greet people properly with handshakes and direct eye contact - Portuguese value formal, respectful personal interactions',
+      'Show interest in Portuguese history, especially maritime exploration and cultural achievements - locals love sharing heritage',
+      'Use proper table manners and wait for everyone to be served before eating - communal dining etiquette is important',
+      'Embrace the Portuguese concept of "saudade" (nostalgic longing) when discussing culture, music, and literature',
+      'Accept offered food and drink graciously when visiting Portuguese homes - refusing hospitality can cause serious offense'
     ],
     culturalDonts: [
-      "Don't rush meals - enjoy the experience.",
-      "Don't wear beach clothes in the city.",
-      "Don't be impatient with slower service.",
-      "Don't ignore steep terrain when planning walks.",
-      "Don't skip trying pastéis de nata."
+      "Don't rush meals or show impatience with relaxed Portuguese dining pace - meals are social experiences to be savored slowly",
+      "Don't wear beach clothes, flip-flops, or revealing clothing in the city center - Portuguese dress more conservatively than other Southern Europeans",
+      "Don't be impatient with slower service or bureaucracy - Portuguese culture values taking time and building relationships over efficiency",
+      "Don't ignore steep terrain when planning walks - Lisbon's hills require proper footwear and realistic expectations about walking distances",
+      "Don't skip trying pastéis de nata or other traditional sweets - refusing local food specialties can be seen as cultural disrespect",
+      "Don't speak Spanish assuming Portuguese people understand - Portuguese is a distinct language and assuming otherwise can offend locals",
+      "Don't compare Portugal to Spain repeatedly - Portuguese are proud of their unique culture and don't appreciate constant Spanish comparisons",
+      "Don't expect everything to be open during traditional siesta time (1-3 PM) - many shops and restaurants close for afternoon break",
+      "Don't refuse offered coffee or small snacks in social situations - this goes against Portuguese hospitality traditions",
+      "Don't be loud or boisterous in public spaces, churches, or on public transport - Portuguese prefer quieter, more reserved public behavior"
     ],
     culturalSensitivityTips: [
       'Portuguese culture values a relaxed approach to life with emphasis on family, tradition, and enjoying simple pleasures. Solo female travelers who embrace this slower pace and show appreciation for Portuguese customs around food, family, and leisure will find more authentic cultural connections.',
@@ -469,14 +534,6 @@ const lisbon: Destination = {
       ]
     },
     legalResources: {
-      embassy: {
-        name: 'U.S. Embassy Lisbon',
-        address: 'Avenida das Forças Armadas, 1600-081 Lisboa',
-        phone: '+351 21 727 3300',
-        email: 'lisbonacs@state.gov',
-        emergency: '+351 21 727 3300',
-        link: 'https://pt.usembassy.gov/'
-      },
       embassies: [
         {
           name: 'U.S. Embassy Lisbon',
@@ -749,46 +806,60 @@ const lisbon: Destination = {
     },
     usefulTips: [
       {
-        title: 'Avoid Martim Moniz Area After Dark',
-        description: 'Solo women report guaranteed catcalling and staring from groups of men in Martim Moniz area after dark. Choose well-lit central areas like Chiado or Bairro Alto for evening activities.',
-        severity: 'high',
-        sourceName: 'Reddit Solo Female Travel Community',
-        sourceUrl: 'https://www.reddit.com/r/solotravel/'
+        title: 'Is Lisbon Safe for Solo Female Travelers?',
+        description: 'Absolutely - Lisbon ranks as the 7th safest capital worldwide with excellent safety for solo women. Portugal has decreased street crime by 7% in 2024, making it one of Europe\'s safest destinations for female solo travel.',
+        severity: 'low',
+        sourceName: 'Global Peace Index 2024 & Portugal Tourism Safety',
+        sourceUrl: 'https://www.visionofhumanity.org/maps/'
       },
       {
-        title: 'Tram 28 Pickpocket Prevention Strategy',
-        description: 'Tram 28 is pickpocket central with daily occurrences reported. Keep valuables in front pockets, stay alert during busy tourist hours, and consider using metro/buses for safer travel.',
+        title: 'Book High-Rated Solo Female Accommodations',
+        description: 'Stay in proven solo female traveler favorites: Solar do Castelo (luxury), Lisbon Art Stay (design), or Yes! Lisbon Hostel (budget). All rated 4.5+ stars with verified safety for women traveling alone.',
         severity: 'medium',
-        sourceName: 'Solo Female Travel Forums',
+        sourceName: 'Solo Female Travel Accommodation Reviews',
         sourceUrl: 'https://www.tripadvisor.com/'
       },
       {
-        title: 'Authentic Fado Show Recommendations',
-        description: 'Book Fado shows at Casa de Linhares or Tasca do Chico for authentic experiences. Avoid tourist trap venues with fake performances that overcharge and provide poor quality entertainment.',
-        severity: 'low',
-        sourceName: 'Local Lisbon Guides',
-        sourceUrl: 'https://www.lisbonlux.com/'
-      },
-      {
-        title: 'Choose Safe Central Neighborhoods',
-        description: 'Use central neighborhoods like Chiado, Baixa, or Príncipe Real for accommodation. These areas have well-lit streets with good security, 24/7 activity, and easy access to attractions.',
-        severity: 'low',
-        sourceName: 'Solo Travel Safety Guide',
-        sourceUrl: 'https://www.globe-gazers.com/'
-      },
-      {
-        title: 'Navigate Lisbon\'s Hills Safely',
-        description: 'Master Lisbon\'s hills with comfortable walking shoes and use elevators/funiculars when possible. Cobblestone streets cause frequent falls, especially when wet during rainy season.',
+        title: 'Master Tram 28 Pickpocket Prevention',
+        description: 'Tram 28 is "pickpocket\'s heaven" with daily organized theft. Keep bags in front, avoid rush hours, secure valuables in inner pockets, or use metro/buses for safer tourist transport.',
         severity: 'medium',
-        sourceName: 'Lisbon Tourism Board',
+        sourceName: 'Lisbon Safety Travel Forums',
+        sourceUrl: 'https://community.ricksteves.com/'
+      },
+      {
+        title: 'Avoid Restaurant Tourist Traps and Overcharging',
+        description: 'Beware aggressive restaurant hustlers on Rua Augusta with fake menus. Ask about "couvert" charges (€2-3 for bread/olives), check prices before ordering, and eat where locals dine.',
+        severity: 'medium',
+        sourceName: 'Rick Steves Travel Forum',
+        sourceUrl: 'https://community.ricksteves.com/travel-forum/tourist-scams/lisbon-restaurant-scam'
+      },
+      {
+        title: 'Choose Safest Neighborhoods for Solo Women',
+        description: 'Book accommodations in Chiado, Baixa, or Príncipe Real for maximum safety. These central areas offer 24/7 activity, excellent lighting, and easy access to attractions with minimal harassment.',
+        severity: 'low',
+        sourceName: 'Solo Female Travel Guides',
+        sourceUrl: 'https://asinglewomantraveling.com/lisbon-solo-travel/'
+      },
+      {
+        title: 'Navigate Cobblestone Hills Safely',
+        description: 'Essential grippy shoes for Lisbon\'s steep cobblestones that become slippery when wet. Use elevators/funiculars for safety, especially Elevador de Santa Justa for amazing city views.',
+        severity: 'medium',
+        sourceName: 'Lisbon Tourism Safety Guide',
         sourceUrl: 'https://www.visitlisboa.com/'
       },
       {
-        title: 'Is Lisbon Safe for Women Solo Travelers?',
-        description: 'Yes, Lisbon is very safe for solo female travel, but avoid walking alone at night in Intendente and Arroios areas. Stick to central neighborhoods with good lighting and regular foot traffic.',
+        title: 'Understand Harassment Patterns and Avoidance',
+        description: 'Solo women experience catcalling mainly in Martim Moniz after dark and from drunk tourists in Bairro Alto. Travel in groups at night and stick to well-lit central streets.',
+        severity: 'high',
+        sourceName: 'Solo Female Travel Safety Reports',
+        sourceUrl: 'https://aloneandabroad.com/'
+      },
+      {
+        title: 'Book Authentic Fado Shows Safely',
+        description: 'Avoid tourist trap Fado venues with fake performances. Book at Casa de Linhares or Tasca do Chico for authentic experiences. Many scammers sell fake tickets on streets.',
         severity: 'low',
-        sourceName: 'Women Solo Travel Safety Reports',
-        sourceUrl: 'https://www.theladywhotravels.com/'
+        sourceName: 'Lisbon Cultural Guides',
+        sourceUrl: 'https://www.lisbonlux.com/'
       }
     ],
     costAndComfort: {
@@ -895,6 +966,18 @@ const lisbon: Destination = {
         'Invest in Uber/Bolt for late night returns (€5-12) instead of walking - small cost for major safety improvement',
         'Stay in neighborhoods with 24/7 activity (Bairro Alto, Chiado) - vibrant areas cost similar but offer natural safety',
         'Pack comfortable walking shoes - saves money on transport while keeping you safe on Lisbon\'s steep cobblestone hills'
+      ],
+      currencyExchangeTips: [
+        'Portugal uses Euro (EUR) - no currency exchange needed for EU travelers, convenient for solo female travel planning',
+        'ATMs widely available and safe to use in central Lisbon areas like Chiado, Baixa, and Príncipe Real with good security',
+        'Avoid currency exchange at tourist hotspots (Rossio Square, Rua Augusta) - rates significantly worse than banks or ATMs',
+        'Choose EUR over your home currency when paying by card - your bank offers better exchange rates than Portuguese businesses',
+        'Many restaurants and shops accept contactless payments - safer than carrying large amounts of cash as solo female traveler',
+        'Withdraw cash at bank-operated ATMs inside branches for maximum security - avoid standalone machines in tourist areas',
+        'Budget €40-70 daily for solo female travel including accommodation, meals, and transport with good safety standards',
+        'Tipping culture: 10% in restaurants, round up for taxis, €1-2 for helpful hotel staff - always leave cash tips',
+        'Major credit cards accepted everywhere but carry some cash for traditional pastéis de nata shops and small family restaurants',
+        'Emergency cash backup recommended €100-200 in hidden money belt - Portugal is very safe but preparation essential for solo travelers'
       ]
     },
   culturalSensitivity: {
@@ -913,9 +996,16 @@ const lisbon: Destination = {
       'Don\'t be surprised by relaxed pace of life - embrace Portuguese "slow living" culture rather than rushing'
     ]
   },
-  youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+  youtubeVideos: [
+    {
+      videoId: "cOv9pfEYddQ",
+      title: "Lisbon Travel Guide"
+    },
+    {
+      videoId: "_0A5BX82jj8",
+      title: "Lisbon Travel Scams and Safety Tips"
+    }
+  ]
 };
 
 export default lisbon;
