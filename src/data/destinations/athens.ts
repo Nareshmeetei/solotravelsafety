@@ -974,16 +974,6 @@ const athens: Destination = {
         sourceUrl: 'https://www.visitgreece.gr/'
       }
     ],
-    culturalSensitivityTips: [
-      'Master essential Greek phrases with proper pronunciation - "Yia sou" (hello), "Efcharisto poli" (thank you very much), "Signomi" (excuse me), "Borite na me voithisete?" (can you help me?) show deep respect for Greek language and earn enthusiastic assistance from proud locals',
-      'Respect Greek Orthodox customs religiously - Cover shoulders and knees in churches, don\'t turn back to icons, remove hats, cross yourself respectfully; proper religious etiquette demonstrates profound cultural awareness and often earns protective guidance from devout locals',
-      'Embrace Greek philoxenia (love of strangers) wholeheartedly - Accept offered food, coffee, or assistance graciously as refusal deeply offends; this sacred hospitality tradition builds powerful protective relationships essential for solo female travel safety',
-      'Navigate Greek time culture ("siga siga") patiently - Meals last hours, appointments flexible, rushing appears disrespectful; understanding leisurely Mediterranean pace prevents frustration and helps build meaningful relationships crucial for cultural protection',
-      'Follow traditional Mediterranean dining customs precisely - Lunch 2-4pm, dinner after 9-10pm, sharing mezze plates essential, never refuse grandmother\'s cooking; proper dining etiquette demonstrates cultural understanding and earns family-like protection',
-      'Honor Greek family values and hierarchy deeply - Greeks prioritize family above everything; showing genuine interest in family traditions, asking about children/grandparents demonstrates respect and often results in protective, nurturing treatment from locals',
-      'Appreciate Greek historical pride and achievements sensitively - Show genuine interest in ancient Greek contributions to democracy, philosophy, arts; historical knowledge and respect often leads to passionate local guidance and insider cultural experiences',
-      'Master Greek coffee culture and conversation rituals - Greek coffee takes 30+ minutes, cafes are social hubs, rushing is offensive; participating in leisurely coffee conversations builds essential relationships for solo female travel safety and cultural integration'
-    ],
     culturalSensitivityTipsDetailed: {
       title: 'Cultural Sensitivity & Safety Guide for Solo Female Travelers in Athens',
       introduction: 'Is Athens safe for women solo travelers culturally? Yes - Greece has strong traditions of philoxenia (hospitality) and family protection that extend to female visitors. However, understanding Greek Orthodox customs, Mediterranean social rhythms, and traditional gender expectations is crucial for solo female travelers to maximize safety and cultural acceptance in this ancient yet modern city.',

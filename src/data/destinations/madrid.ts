@@ -17,7 +17,7 @@ const madrid: Destination = {
     safetyBreakdown: {
       nightSafety: {
         score: 8.4,
-        context: 'Madrid is exceptionally safe for women at night with excellent police presence and well-lit streets. Solo female travelers consistently report feeling comfortable walking alone after dark in central areas like Malasaña, La Latina, and Salamanca. The city has one of the lowest violent crime rates in Europe. Street harassment is minimal and non-threatening compared to other major capitals. Areas remain bustling until late with active nightlife creating natural safety through visibility.'
+        context: 'Is Madrid safe for women solo travelers at night? Absolutely - Madrid is exceptionally safe for women at night with excellent police presence and well-lit streets. Solo female travelers consistently report feeling comfortable walking alone after dark in central areas like Malasaña, La Latina, and Salamanca. The city has one of the lowest violent crime rates in Europe. Street harassment is minimal and non-threatening compared to other major capitals. Areas remain bustling until late with active nightlife creating natural safety through visibility.'
       },
       publicTransit: {
         score: 8.8,
@@ -25,7 +25,7 @@ const madrid: Destination = {
       },
       walkingAlone: {
         score: 8.7,
-        context: 'Madrid is considered one of the safest cities for women to walk alone, even at night. The main concern is pickpocketing rather than personal safety threats. Streets are well-lit, police presence is visible, and locals are helpful. Solo female travelers consistently rate Madrid as feeling safer than most major European capitals. Areas like Salamanca, Retiro, and central zones are particularly safe for walking.'
+        context: 'Is Madrid safe for solo female travel and walking alone? Yes, Madrid is considered one of the safest cities for women to walk alone, even at night. The main concern is pickpocketing rather than personal safety threats. Streets are well-lit, police presence is visible, and locals are helpful. Solo female travelers consistently rate Madrid as feeling safer than most major European capitals. Areas like Salamanca, Retiro, and central zones are particularly safe for walking.'
       }
     },
     neighborhoods: {
@@ -87,36 +87,44 @@ const madrid: Destination = {
         link: 'https://www.theprincipalmadridhotel.com/'
       },
       {
-        name: 'Sungate One Madrid',
-        type: 'hostel',
-        features: ['Female-only rooms', 'No bunk beds', 'Central location', 'High security', 'Solo female focused'],
+        name: 'Hotel Orfila',
+        type: 'hotel',
+        features: ['5-star boutique', 'Chamberí district', 'Garden terrace', 'Personalized service', 'Ultra-safe location'],
+        rating: 4.7,
+        notes: 'Intimate luxury hotel in one of Madrid\'s safest neighborhoods. Exceptional attention to solo female travelers with elegant garden setting.',
+        link: 'https://www.hotelorfila.com/'
+      },
+      {
+        name: 'Hotel Único Madrid',
+        type: 'hotel',
+        features: ['5-star luxury', 'Salamanca district', '24/7 concierge', 'Premium location', 'Women-friendly staff'],
         rating: 4.6,
-        notes: 'Top-rated hostel specifically designed for solo female travelers. Female-only rooms with individual beds and enhanced security measures.',
-        link: 'https://sungatehostels.com/madrid/'
+        notes: 'Small luxury hotel in heart of Salamanca district. Renowned for exceptional service to solo female travelers with highest safety standards.',
+        link: 'https://www.hotelunico.com/'
       },
       {
-        name: 'OK Madrid Hostel',
+        name: 'Onefam Sungate Madrid',
         type: 'hostel',
-        features: ['Female-only dorms', 'Historical building', 'Air conditioning', 'En-suite bathrooms', 'Central location'],
+        features: ['Female-only rooms', 'Party-safe atmosphere', 'Central Sol location', 'Enhanced security', 'Solo female focused'],
+        rating: 4.6,
+        notes: 'Top-rated hostel for solo female travelers with excellent cleanliness and safety standards. Considered "The Best Hostel in Madrid" by multiple sources.',
+        link: 'https://onefam.com/hostels/madrid/'
+      },
+      {
+        name: 'The Hat Madrid',
+        type: 'hostel',
+        features: ['Stylish design', 'Family-friendly atmosphere', 'Female dorms', 'Rooftop bar', 'Safety-focused'],
         rating: 4.5,
-        notes: 'Beautiful hostel in renovated historical building. Excellent female-only facilities and strong community feel.',
-        link: 'https://okhostels.com/madrid/'
+        notes: 'Cool, visually pleasing hostel with excellent safety measures. Recommended as best for female solo travelers with secure atmosphere.',
+        link: 'https://thehatmadrid.com/'
       },
       {
-        name: 'Generator Madrid',
+        name: 'Safestay Madrid',
         type: 'hostel',
-        features: ['Modern design', 'Gran Vía area', 'Female dorms', 'Social spaces', '24/7 reception'],
-        rating: 4.4,
-        notes: 'Contemporary hostel popular with solo travelers. Excellent safety features and social atmosphere near Gran Vía.',
-        link: 'https://generatorhostels.com/destinations/madrid/'
-      },
-      {
-        name: 'Safestay Madrid Central',
-        type: 'hostel',
-        features: ['19th-century palace', 'Female-only dorms', 'Premium location', 'Modern facilities', 'High security'],
-        rating: 4.3,
-        notes: 'Stylish hostel in restored palace with excellent security. Popular choice for solo female travelers in central Madrid.',
-        link: 'https://safestay.com/madrid-central/'
+        features: ['All-girls rooms', 'Coworking space', 'Rooftop bar', 'Daily tours', 'Women and older traveler focused'],
+        rating: 4.5,
+        notes: 'Stylish hostel specifically great for women and older travelers. Features free daily tours, movie nights, and long-stay rates.',
+        link: 'https://safestay.com/madrid/'
       }
     ],
     alerts: [
@@ -130,16 +138,25 @@ const madrid: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Dress stylishly but not overly flashy - Madrid values good appearance but avoid displaying expensive jewelry
-• Comfortable walking shoes essential - Madrid has many cobblestone streets and extensive walking areas
-• Layer clothing for temperature changes - Spanish buildings often have different heating/cooling than expected
-• Carry a small crossbody bag that zips closed - backpacks and open bags are targets for pickpockets
-• Keep copies of important documents separate from originals`,
-      firstTimers: `• Is Madrid safe for female solo travelers? Yes, it's one of Europe's safest capitals with excellent infrastructure
-• Learn basic Spanish phrases - locals appreciate the effort and English is less common than other European capitals
-• Embrace the late dining culture - restaurants don't serve dinner until 9-11 PM
-• Use the metro system confidently - it's safe, efficient, and covers the entire city
-• Siesta time (2-5 PM) affects shop hours, plan accordingly for a more relaxed pace`,
+      clothing: `• Dress stylishly but avoid flashy displays of wealth - Madrid values good presentation so think smart casual to chic rather than athletic wear
+• Invest in quality comfortable walking shoes with good grip - Madrid's cobblestone streets and extensive pedestrian areas require proper footwear
+• Layer clothing strategically for temperature variations - Spanish buildings may have different heating/cooling than expected, and weather can change quickly
+• Choose a small crossbody bag with zippers and internal pockets - avoid backpacks or open tote bags as these are primary pickpocket targets
+• Dress appropriately for church visits - bring a light scarf to cover shoulders and avoid short skirts or revealing clothing
+• Pack a lightweight jacket even in summer - air conditioning in restaurants and shops can be intense
+• Keep copies of passport, visa, and important documents separate from originals in different bag compartments
+• Consider bringing a small day pack with anti-theft features for sightseeing while keeping valuables in secure crossbody bag
+• Avoid wearing expensive jewelry or watches prominently - thieves specifically target tourist areas for valuable accessories`,
+      firstTimers: `• Is Madrid safe for women solo travelers? Absolutely - Madrid ranks as one of Europe's safest capitals with exceptional infrastructure and low crime rates
+• Download essential apps before arrival: EMT Madrid for buses, Citymapper for navigation, and NomadHer for female travel community
+• Learn basic Spanish phrases like "¿Habla inglés?" and "No hablo español" - locals genuinely appreciate effort and become incredibly helpful
+• Embrace Spanish dining culture: lunch 2-4 PM, dinner 9-11 PM, and never rush meals as dining is important social time
+• Use the metro system confidently - it's one of Europe's safest with excellent CCTV coverage, police presence, and runs until 1:30 AM
+• Respect siesta time (2-5 PM) when shops close - perfect time for Retiro Park walks or museum visits
+• Keep emergency cash (€50-100) separate from daily money - most places accept cards but small bars might be cash-only
+• Trust your instincts and local advice - Spanish people are naturally protective of solo female travelers
+• Book accommodations in Salamanca or Retiro districts for maximum safety and easy metro access
+• Pack comfortable walking shoes for cobblestone streets and extensive pedestrian areas throughout the city`,
       apps: [
         'NomadHer',
         'Travel Ladies', 
@@ -204,7 +221,15 @@ const madrid: Destination = {
       ]
     },
     culturalExpectations: {
-      dressCode: 'Madrid values style and good appearance. Dress elegantly but not flashily - think smart casual to chic. Comfortable walking shoes are essential for cobblestone streets. Layers are recommended as Spanish buildings may have different heating/cooling than expected. Avoid revealing clothing when visiting churches or formal venues.',
+      dressCode: [
+        'Madrid values style and sophisticated appearance - dress smart casual to chic rather than overly casual athletic wear',
+        'Comfortable walking shoes with excellent grip essential for cobblestone streets and extensive pedestrian areas throughout the city',
+        'Modest coverage of shoulders and knees absolutely required in churches, cathedrals, and religious sites like Almudena Cathedral',
+        'Business casual appropriate for nicer restaurants and evening dining - avoid beach wear or flip-flops in city center areas',
+        'Neutral and stylish colors preferred over bright tourist clothing - helps blend with fashionable Spanish dress sense',
+        'Lightweight layers recommended for temperature changes - Spanish buildings may have different heating/cooling than expected',
+        'Crossbody bags with zippers preferred over backpacks for safety - thieves target tourist-style bags in crowded areas'
+      ],
       behaviorNorms: [
         'Greet with two kisses on cheeks for friends and acquaintances - common social custom',
         'Lunch typically 2-4 PM, dinner 9-11 PM - embrace the late dining culture',
@@ -217,11 +242,22 @@ const madrid: Destination = {
         'Learn basic Spanish phrases - locals genuinely appreciate the effort',
         'Be patient with the relaxed pace - punctuality is less strict than northern Europe'
       ],
-      perception: 'Madrid is exceptionally welcoming to solo female travelers. Spanish culture is warm and inclusive, with locals being helpful and protective toward tourists. Women traveling alone are well-accepted and face minimal judgment. The city\'s progressive attitudes and strong feminist movements create a supportive environment. Most interactions are respectful, and locals often go out of their way to help lost tourists.'
+      perception: [
+        'Solo women travelers extremely welcome in Madrid - Spanish culture is warm, hospitable, and genuinely protective toward female tourists',
+        'Is Madrid safe for women solo travelers? Absolutely - city is progressive where women can dine alone, explore attractions, and use transport independently',
+        'Street harassment minimal compared to other European capitals - most Spanish men are respectful and incidents mainly involve drunk tourists',
+        'Local perception of solo female travelers is very positive - seen as independent, adventurous people worthy of respect and assistance',
+        'Spanish society has strong family values but fully accepts women traveling independently and making their own choices',
+        'Business and service interactions treat solo women equally - no discrimination in restaurants, shops, or professional settings',
+        'Safety concerns for solo women focus on pickpocketing rather than gender-based harassment from local Spanish population',
+        'Cultural acceptance of female independence very high - solo women feel comfortable in bars, restaurants, and cultural venues alone',
+        'Local women often approach solo female travelers to offer help and recommendations - sisterhood mentality common in Madrid',
+        'Government and tourism industry actively promote Madrid as safe solo female travel destination with comprehensive support services'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['March-May', 'September-November'],
-      events: 'Spring (March-May) offers perfect weather (18-24°C) with blooming parks and fewer tourist crowds, creating optimal solo female travel conditions. Fall (September-November) provides comfortable temperatures and beautiful autumn colors with excellent safety conditions. Summer (June-August) can reach 40°C+ with intense heat waves, but nights remain very safe with vibrant outdoor dining and nightlife. Winter (December-February) is mild (5-15°C) with occasional rain but maintains excellent safety standards. Madrid Pride (July) and La Paloma Festival (August) create bustling but safe environments with increased police presence. San Isidro Festival (May 15) celebrates Madrid\'s patron saint with traditional events and enhanced security. Christmas markets (December-January) in Plaza Mayor are magical and well-patrolled.'
+      events: 'Is Madrid safe for solo female travelers year-round? Yes, Madrid maintains excellent safety standards throughout all seasons. Spring (March-May) offers perfect weather (18-24°C) with blooming parks and fewer tourist crowds, creating optimal solo female travel conditions. Fall (September-November) provides comfortable temperatures and beautiful autumn colors with excellent safety conditions. Summer (June-August) can reach 40°C+ with intense heat waves, but nights remain very safe with vibrant outdoor dining and nightlife. Winter (December-February) is mild (5-15°C) with occasional rain but maintains excellent safety standards. Madrid Pride (July) and La Paloma Festival (August) create bustling but safe environments with increased police presence. San Isidro Festival (May 15) celebrates Madrid\'s patron saint with traditional events and enhanced security. Christmas markets (December-January) in Plaza Mayor are magical and well-patrolled.'
     },
     governmentAdvisory: {
       level: 'Exercise Normal Precautions',
@@ -262,7 +298,11 @@ const madrid: Destination = {
         'Always select "charge in local currency" (EUR) when paying by card to avoid poor conversion rates',
         'Keep some cash - smaller bars, markets, and traditional restaurants may be cash-only',
         'El Corte Inglés department store offers decent exchange rates if banks are closed',
-        'Avoid airport currency exchanges - rates can be 20-30% worse than city bank ATMs'
+        'Avoid airport currency exchanges - rates can be 20-30% worse than city bank ATMs',
+        'Consider using Revolut or Wise cards for excellent exchange rates and no foreign transaction fees',
+        'Many places accept contactless payments - very convenient and safer than carrying large amounts of cash',
+        'Withdraw larger amounts less frequently to minimize ATM fees - most banks charge per transaction',
+        'Keep emergency cash (€100-200) hidden separately from daily spending money for security'
       ],
       scamWarnings: [
         'Use official ATMs from major banks - avoid standalone machines in tourist areas',
@@ -365,16 +405,17 @@ const madrid: Destination = {
       "Don't wear flip-flops or very casual clothes in city center"
     ],
     culturalSensitivityTips: [
-      'Spanish culture prioritizes family, community, and social connections above individual achievement. Solo female travelers who show genuine interest in building relationships and participating in social activities will find Spanish people incredibly welcoming and protective.',
-      'The concept of "tertulia" (informal gatherings for conversation) is central to Spanish social life. Solo female travelers who engage in café conversations, show interest in local opinions, and participate in social discussions will experience authentic Spanish culture.',
-      'Spanish time culture operates on a different rhythm - late dinners (9-11 PM), afternoon siestas, and leisurely conversations are cultural norms. Solo female travelers who adapt to this relaxed pace will avoid frustration and better connect with local lifestyle.',
-      'Spanish regional identity is extremely strong, with distinct languages, traditions, and cultural pride in different regions. Solo female travelers who show appreciation for Madrid\'s unique Castilian heritage and avoid comparing it to other Spanish regions will demonstrate cultural sensitivity.',
-      'Spanish language appreciation goes beyond basic communication - Spaniards take pride in their language and regional dialects. Learning Madrid-specific expressions and showing effort to speak Spanish, even imperfectly, often results in enthusiastic local support.',
-      'The Spanish concept of "quedar" (making plans to meet up) reflects cultural values of spontaneous socializing. Solo female travelers who are open to flexible social arrangements and last-minute invitations will better integrate into Spanish social culture.',
-      'Food culture in Spain is deeply social, with long meals serving as important bonding time. Solo female travelers who embrace the multi-course meal tradition, late dining times, and communal eating customs will connect with fundamental Spanish values.',
-      'Spanish fashion and personal presentation are important cultural expressions, especially in Madrid. Solo female travelers who dress stylishly and pay attention to appearance will show respect for Spanish cultural values and often receive better treatment.',
-      'The Spanish passion for debate and animated discussion should not be mistaken for aggression. Solo female travelers who understand that louder, more expressive communication styles reflect engagement rather than hostility will navigate social situations more successfully.',
-      'Spanish hospitality traditions include offering food, drinks, and assistance to guests. Solo female travelers who accept these offerings graciously and reciprocate when possible will demonstrate understanding of Spanish generosity culture and often gain protective relationships.'
+      'Greet with "dos besos" (two cheek kisses) among friends or handshake for formal meetings - Spanish value warm, personal interactions',
+      'Say "por favor" and "gracias" frequently - politeness and courtesy are fundamental to Spanish social interaction',
+      'Dress stylishly in smart casual clothing - avoid overly casual athletic wear in city center, Spanish appreciate good presentation',
+      'Embrace late dining culture with lunch at 2-4 PM and dinner after 9 PM - rushing meals is considered disrespectful',
+      'Learn basic Spanish phrases like "Buenos días" and "¿Habla inglés?" - even simple efforts earn enthusiastic local support',
+      'Accept offered hospitality graciously - Spanish generosity is genuine and refusal can be seen as rude or ungrateful',
+      'Don\'t expect strict punctuality in social settings - Spanish often arrive 30+ minutes late and this is culturally normal',
+      'Don\'t be offended by animated conversations - Spanish passion for debate reflects engagement, not hostility or aggression',
+      'Don\'t ignore siesta time (2-5 PM) when shops close - respect this sacred midday rest tradition',
+      'Don\'t wear revealing clothing in churches or formal venues - cover shoulders and knees out of cultural respect',
+      'Don\'t rush through meals or skip courses - dining is sacred social time in Spanish culture'
     ],
     womensConfidenceScore: {
       score: 89.2,
@@ -820,23 +861,23 @@ const madrid: Destination = {
       ]
     },
   culturalSensitivity: {
-    culturalDos: [
-      'Greet with "dos besos" (two cheek kisses) and use "Buenos días/tardes" - warm greetings are fundamental to Spanish social interaction',
-      'Adapt to Spanish meal times - lunch around 2pm, dinner after 9pm, and embrace the leisurely dining pace',
-      'Learn key Spanish phrases like "por favor" and "gracias" - locals greatly appreciate language efforts even if basic',
-      'Respect siesta time (2-5pm) when shops close - plan activities around this important cultural break period',
-      'Be patient with relaxed timekeeping - events often start 30+ minutes late and this is culturally normal'
+    dressCode: 'Madrid values style and good appearance. Dress elegantly but not flashily - think smart casual to chic. Comfortable walking shoes are essential for cobblestone streets. Layers are recommended as Spanish buildings may have different heating/cooling than expected. Avoid revealing clothing when visiting churches or formal venues.',
+    behaviorNorms: [
+      'Greet with two kisses on cheeks for friends and acquaintances - common social custom',
+      'Lunch typically 2-4 PM, dinner 9-11 PM - embrace the late dining culture',
+      'Siesta time 2-5 PM affects shop hours - plan accordingly',
+      'Dress stylishly - appearance and presentation are valued in Spanish culture',
+      'Tipping not mandatory but 5-10% appreciated at restaurants',
+      'Spanish conversation tends to be louder and more animated - this is normal',
+      'Sunday is family day - many shops close, perfect for parks and museums',
+      'Physical greetings and touch during conversation are common and not inappropriate',
+      'Learn basic Spanish phrases - locals genuinely appreciate the effort',
+      'Be patient with the relaxed pace - punctuality is less strict than northern Europe'
     ],
-    culturalDonts: [
-      'Don\'t be offended by Spanish directness - blunt communication is cultural norm, not rudeness or intrusion',
-      'Don\'t expect shops and businesses to be open during siesta hours - respect this sacred midday rest tradition',
-      'Don\'t arrive exactly on time to social events - showing up 30 minutes late is actually expected and appropriate',
-      'Don\'t wear beach attire in city areas - cover up with proper clothing when transitioning from beach to urban areas',
-      'Don\'t mistake Spanish male flirtation for harassment - most interactions are playful cultural behavior, not aggression'
-    ]
+    perception: 'Madrid is exceptionally welcoming to solo female travelers. Spanish culture is warm and inclusive, with locals being helpful and protective toward tourists. Women traveling alone are well-accepted and face minimal judgment. The city\'s progressive attitudes and strong feminist movements create a supportive environment. Most interactions are respectful, and locals often go out of their way to help lost tourists.'
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
+    videoId: "Gu7JDzo43Zs"
   }
 };
 

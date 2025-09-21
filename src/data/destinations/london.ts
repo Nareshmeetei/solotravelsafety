@@ -62,7 +62,7 @@ const london: Destination = {
     accommodations: [
       {
         name: 'Hostelle - All-Women Hostel',
-        type: 'female-only hostel',
+        type: 'hostel',
         features: ['Women-only accommodation', 'Female staff', 'Safe central location', 'Community atmosphere'],
         rating: 9.2,
         notes: 'London\'s first and only all-women hostel providing the safest environment for solo female travelers. Located in central London with excellent security and welcoming community.',
@@ -70,7 +70,7 @@ const london: Destination = {
       },
       {
         name: 'Onefam Waterloo',
-        type: 'social hostel',
+        type: 'hostel',
         features: ['Female dorms available', 'Central location', 'Daily activities', 'Near Waterloo Station'],
         rating: 8.9,
         notes: 'Top choice for solo female travelers seeking social atmosphere. Safe area near Thames with organized activities and easy transport access. Female-only dorms with privacy curtains and lockers.',
@@ -86,7 +86,7 @@ const london: Destination = {
       },
       {
         name: 'The Z Hotel Piccadilly',
-        type: 'boutique hotel',
+        type: 'hotel',
         features: ['Central location', 'Modern security', 'Compact luxury', 'Solo-friendly'],
         rating: 8.8,
         notes: 'Perfect for solo female travelers wanting hotel comfort in central location. Small but stylish rooms, excellent security, and prime Piccadilly location near theaters and shops.',
@@ -94,7 +94,7 @@ const london: Destination = {
       },
       {
         name: 'Premier Inn London County Hall',
-        type: 'budget hotel',
+        type: 'hotel',
         features: ['Affordable luxury', 'Thames views', 'Safe location', '24/7 reception'],
         rating: 8.5,
         notes: 'Excellent value for solo travelers with hotel security and comfort. Located on South Bank with stunning Thames and Big Ben views, walking distance to attractions.',
@@ -102,7 +102,7 @@ const london: Destination = {
       },
       {
         name: 'The Zetter Townhouse Marylebone',
-        type: 'boutique hotel',
+        type: 'hotel',
         features: ['Boutique charm', 'Safe neighborhood', 'Personalized service', 'Luxury amenities'],
         rating: 9.0,
         notes: 'Charming boutique hotel in one of London\'s safest neighborhoods. Perfect for solo female travelers seeking luxury and personal service in beautiful Marylebone setting.',
@@ -111,25 +111,29 @@ const london: Destination = {
     ],
     alerts: [],
     safetyTips: {
-      clothing: [
-        'London weather is unpredictable - pack layers including waterproof jacket for frequent rain',
-        'Comfortable walking shoes essential for cobblestone streets and extensive walking',
-        'Dress code varies by venue - smart casual for restaurants, some require jackets for fine dining',
-        'No specific modest dress requirements, but dress appropriately for religious sites',
-        'Avoid flashy jewelry on public transport to prevent theft'
-      ],
-      firstTimers: [
-        'London is excellent for first-time solo female travelers with English language and helpful locals',
-        'Get Oyster Card or use contactless payment for all public transport - most convenient system',
-        'Download Tube map offline as mobile signal poor underground in some stations',
-        'Book popular restaurants and theater shows in advance, especially weekends',
-        'Stand right, walk left on escalators - serious London etiquette',
-        'Tipping 10-15% expected in restaurants but not mandatory in pubs or cafes',
-        'Museum entry often free but special exhibitions charge - plan accordingly',
-        'Keep right when walking on busy streets and always wait at pedestrian crossings',
-        'Pub culture central to London life - safe spaces for solo female travelers to experience local culture',
-        'Weather changes quickly - always carry umbrella and light jacket even in summer'
-      ],
+      clothing: `• Pack layers and quality waterproof jacket for unpredictable weather and frequent rain
+• Wear comfortable, waterproof walking shoes essential for cobblestone streets
+• Dress smart casual for restaurants, formal attire for upscale establishments
+• Cover shoulders and knees when visiting religious sites
+• Avoid flashy jewelry on public transport to prevent theft
+• Bring compact umbrella - essential year-round London accessory
+• Choose dark colors for practical city exploration
+• Pack versatile pieces that work day to night
+• Consider theft-proof bags with hidden zippers and RFID blocking
+• Dress confidently and purposefully to project safety awareness
+• Business casual works well for most London venues`,
+      firstTimers: `• London is excellent for first-time solo female travelers with English language and helpful locals
+• Get Oyster Card or use contactless payment for all public transport
+• Download offline Tube map and Citymapper app - mobile signal poor underground
+• Book popular restaurants and theater shows in advance, especially weekends
+• Stand right, walk left on escalators - serious London etiquette
+• Tipping 10-15% expected in restaurants but not mandatory in pubs
+• Many major museums are free (British Museum, Tate Modern, National Gallery)
+• Look right first when crossing streets - UK drives on left side
+• Emergency number is 999 for police, fire, ambulance
+• Pub culture is central to London life - very safe spaces for solo female travelers
+• Weather changes quickly - always carry umbrella and light jacket
+• London ranks as one of world's safest major cities for solo female travelers`,
       apps: [
         'NomadHer',
         'Travel Ladies',
@@ -141,14 +145,14 @@ const london: Destination = {
         'National Rail'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe London exploration', rating: 4.3 },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with UK safety insights and tips', rating: 4.0 },
-        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring', rating: 4.1 },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel', rating: 4.1 },
-        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best London transport app with real-time tube, bus and rail updates', rating: 4.7 },
-        { name: 'TfL Go', link: 'https://tfl.gov.uk/', description: 'Official Transport for London app with live departure times', rating: 4.5 },
-        { name: 'National Rail', link: 'https://www.nationalrail.co.uk/', description: 'Essential for UK train travel to Edinburgh, Bath, and other destinations', rating: 4.4 }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe London exploration' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with UK safety insights and tips' },
+        { name: 'bSafe', link: 'https://getbsafe.com/', description: 'Personal safety app with emergency features and location sharing' },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response for added security while exploring' },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially useful for solo travel' },
+        { name: 'Citymapper', link: 'https://citymapper.com/', description: 'Best London transport app with real-time tube, bus and rail updates' },
+        { name: 'TfL Go', link: 'https://tfl.gov.uk/', description: 'Official Transport for London app with live departure times' },
+        { name: 'National Rail', link: 'https://www.nationalrail.co.uk/', description: 'Essential for UK train travel to Edinburgh, Bath, and other destinations' }
       ],
       emergencyPhrases: [
         {
@@ -191,80 +195,6 @@ const london: Destination = {
           local: 'Can you help me?',
           localLanguage: 'English'
         }
-      ],
-      embassies: [
-        {
-          name: 'U.S. Embassy London',
-          address: '33 Nine Elms Lane, London SW11 7US',
-          phone: '+44 20 7499 9000',
-          emergency: '+44 20 7499 9000',
-          link: 'https://uk.usembassy.gov/',
-          services: 'American Citizen Services, Emergency Assistance, Passport Services'
-        },
-        {
-          name: 'German Embassy London',
-          address: '23 Belgrave Square, London SW1X 8PZ',
-          phone: '+44 20 7824 1300',
-          emergency: '+44 20 7824 1300',
-          link: 'https://london.diplo.de/',
-          services: 'German Citizen Services, Consular Assistance'
-        },
-        {
-          name: 'French Embassy London',
-          address: '58 Knightsbridge, London SW1X 7JT',
-          phone: '+44 20 7073 1000',
-          emergency: '+44 20 7073 1000',
-          link: 'https://uk.ambafrance.org/',
-          services: 'French Citizen Services, Visa Services'
-        },
-        {
-          name: 'Spanish Embassy London',
-          address: '39 Chesham Place, London SW1X 8SB',
-          phone: '+44 20 7235 5555',
-          emergency: '+44 20 7235 5555',
-          link: 'https://www.exteriores.gob.es/embajadas/londres',
-          services: 'Spanish Citizen Services, Emergency Assistance'
-        },
-        {
-          name: 'Australian High Commission London',
-          address: 'Strand, London WC2B 4LA',
-          phone: '+44 20 7379 4334',
-          emergency: '+44 20 7379 4334',
-          link: 'https://uk.embassy.gov.au/',
-          services: 'Australian Citizen Services, Consular Support'
-        },
-        {
-          name: 'Canadian High Commission London',
-          address: 'Canada House, Trafalgar Square, London SW1Y 5BJ',
-          phone: '+44 20 7004 6000',
-          emergency: '+44 20 7004 6000',
-          link: 'https://www.canadainternational.gc.ca/united_kingdom-royaume_uni/',
-          services: 'Canadian Citizen Services, Emergency Support'
-        },
-        {
-          name: 'Netherlands Embassy London',
-          address: '38 Hyde Park Gate, London SW7 5DP',
-          phone: '+44 20 7590 3200',
-          emergency: '+44 20 7590 3200',
-          link: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/united-kingdom',
-          services: 'Dutch Citizen Services, Consular Affairs'
-        },
-        {
-          name: 'Swiss Embassy London',
-          address: '16-18 Montagu Place, London W1H 2BQ',
-          phone: '+44 20 7616 6000',
-          emergency: '+44 20 7616 6000',
-          link: 'https://www.eda.admin.ch/london',
-          services: 'Swiss Citizen Services, Emergency Assistance'
-        },
-        {
-          name: 'Indian High Commission London',
-          address: 'India House, Aldwych, London WC2B 4NA',
-          phone: '+44 20 7836 8484',
-          emergency: '+44 20 7836 8484',
-          link: 'https://www.hcilondon.gov.in/',
-          services: 'Indian Citizen Services, Visa Services'
-        }
       ]
     },
     currency: {
@@ -305,40 +235,66 @@ const london: Destination = {
     safetySourceName: 'Metropolitan Police Crime Statistics 2024',
     safetySourceUrl: 'https://www.met.police.uk/sd/stats-and-data/',
     redFlags: [
-      { label: 'Phone Snatching on Public Transport', frequency: 'Daily occurrences in rush hour', icon: 'Smartphone' },
-      { label: 'Drink Spiking in Nightlife Areas', frequency: 'Reported weekly in Soho/Shoreditch', icon: 'AlertTriangle' },
-      { label: 'Unlicensed Minicab Approaches', frequency: 'Common outside stations after midnight', icon: 'Car' },
-      { label: 'Aggressive Fake Charity Collectors', frequency: 'Daily near major tourist attractions', icon: 'Users' },
-      { label: 'Tourism Area Overcharging', frequency: 'Common in Oxford Street/Covent Garden', icon: 'DollarSign' }
+      { label: 'Phone Snatching on Public Transport', frequency: 'Most common', icon: 'Smartphone' },
+      { label: 'Drink Spiking in Nightlife Areas', frequency: 'Frequent', icon: 'AlertTriangle' },
+      { label: 'Unlicensed Minicab Approaches', frequency: 'Frequent', icon: 'Car' },
+      { label: 'Aggressive Fake Charity Collectors', frequency: 'Frequent', icon: 'Users' },
+      { label: 'Tourism Area Overcharging', frequency: 'Occasional', icon: 'DollarSign' }
     ],
     culturalDos: [
-      'Queue properly - jumping queues is seriously offensive to Londoners',
-      'Say please, thank you, and sorry frequently - politeness is highly valued',
-      'Stand right on escalators, walk left - tube etiquette taken very seriously',
-      'Offer your seat to elderly, pregnant, or disabled passengers on public transport',
-      'Respect personal space - avoid standing too close in conversations'
+      'Queue properly without cutting - jumping lines is deeply offensive',
+      'Use "please," "thank you," and "sorry" frequently - politeness is fundamental',
+      'Stand right on escalators, walk left - serious tube etiquette',
+      'Offer seats to elderly, pregnant, or disabled passengers on transport',
+      'Respect personal space - maintain arm\'s length in conversations',
+      'Buy rounds at pubs when drinking with locals - essential pub culture',
+      'Arrive punctually for appointments - British value timekeeping',
+      'Keep voices low on public transport - quiet commutes are valued'
     ],
     culturalDonts: [
-      'Don\'t block tube doors or rush onto trains before passengers exit',
-      'Don\'t speak loudly on public transport - Londoners value quiet commutes',
-      'Don\'t tip in pubs or when buying drinks at bars',
-      'Don\'t expect shops to be open on Sundays - many close early or stay closed',
-      'Don\'t assume all areas are safe after dark - research neighborhoods first'
+      "Don't jump queues or cut in lines - extremely rude and draws negative attention",
+      "Don't block tube doors or board before passengers exit - causes major irritation",
+      "Don't tip at pubs when buying drinks at the bar - not expected",
+      "Don't ask personal questions about income or politics - considered private topics",
+      "Don't speak loudly in public spaces - British prefer understated conversation",
+      "Don't boast or brag about achievements - modesty is highly valued",
+      "Don't expect immediate friendships - British social warming takes time",
+      "Don't ignore 'Mind the Gap' warnings - serious safety reminder on transport"
     ],
     culturalExpectations: {
       dressCode: [
-        'London weather is unpredictable - pack layers including waterproof jacket for frequent rain',
-        'Comfortable walking shoes essential for cobblestone streets and extensive walking',
-        'Dress code varies by venue - smart casual for restaurants, some require jackets for fine dining',
-        'No specific modest dress requirements, but dress appropriately for religious sites',
-        'Avoid flashy jewelry on public transport to prevent theft'
+        'London weather is unpredictable - pack layers including waterproof jacket for frequent rain showers',
+        'Comfortable, waterproof walking shoes essential for cobblestone streets and extensive daily walking',
+        'Dress code varies by venue - smart casual for restaurants, formal attire for upscale establishments',
+        'No specific modest dress requirements, but dress respectfully for religious sites with covered shoulders/knees',
+        'Avoid flashy jewelry on public transport to prevent theft - keep valuables hidden and secure',
+        'Business casual works for most London venues - city has sophisticated dress culture',
+        'Dark colors recommended for city exploration - practical for urban environment and frequent rain',
+        'Pack versatile pieces that transition day to night - London nightlife welcomes solo female travelers'
       ],
       behaviorNorms: [
-        'Queue properly - jumping queues is seriously offensive to Londoners',
-        'Say please, thank you, and sorry frequently - politeness is highly valued',
-        'Stand right on escalators, walk left - tube etiquette taken very seriously',
-        'Offer your seat to elderly, pregnant, or disabled passengers on public transport',
-        'Respect personal space - avoid standing too close in conversations'
+        'Master British queuing culture religiously - jumping lines is deeply offensive and marks you as inconsiderate',
+        'Use "please," "thank you," and "sorry" constantly - British politeness is fundamental to social acceptance',
+        'Stand right on escalators, walk left - tube etiquette taken very seriously, violating causes irritation',
+        'Offer your seat to elderly, pregnant, or disabled passengers - transport courtesy builds community protection',
+        'Respect personal space and the "invisible bubble" - avoid standing too close or unnecessary touching',
+        'Learn British indirect communication - "quite nice" means excellent, "not too bad" means very good',
+        'Understand pub culture etiquette - round buying, proper ordering at bar, closing time customs',
+        'Practice British understatement - avoid boasting, use modest language, appreciate self-deprecating humor',
+        'Follow pedestrian protocols - look right first when crossing, walk purposefully, make eye contact when asking for help',
+        'Respect environmental consciousness - recycling important, public transport preferred, sustainability valued'
+      ],
+      perception: [
+        'Is London safe for female solo travelers? Absolutely - London has exceptional reputation for welcoming solo women',
+        'Solo female travel is extremely common and culturally accepted - no stigma or unusual attention',
+        'British culture highly respects women\'s independence and solo exploration - considered normal and admirable',
+        'Local women frequently travel alone and will offer help and guidance to solo female visitors',
+        'Restaurant staff, hotel personnel, and service workers are accustomed to solo female diners and guests',
+        'London\'s diverse, multicultural population creates inclusive environment for women from all backgrounds',
+        'Strong legal framework protects women\'s rights with dedicated support services and police units',
+        'Solo women perception in London is overwhelmingly positive - seen as confident, independent, and interesting',
+        'British social culture values women\'s autonomy - solo travel viewed as personal strength rather than vulnerability',
+        'London ranks in top global destinations for solo female travel safety and cultural acceptance'
       ]
     },
     emergencyInfo: {
@@ -373,8 +329,7 @@ const london: Destination = {
           phone: '+44 20 3456 7890',
           emergency: true,
           specialties: ['Emergency Medicine', 'Women\'s Health', 'International Patients', 'Mental Health'],
-          link: 'https://www.uclh.nhs.uk/',
-          notes: 'Major teaching hospital with excellent emergency department, 24/7 services, and international patient support'
+          link: 'https://www.uclh.nhs.uk/'
         },
         {
           name: 'St. Thomas\' Hospital',
@@ -382,8 +337,7 @@ const london: Destination = {
           phone: '+44 20 7188 7188',
           emergency: true,
           specialties: ['Emergency Medicine', 'Trauma Center', 'Women\'s Services', 'Mental Health'],
-          link: 'https://www.guysandstthomas.nhs.uk/',
-          notes: 'Historic hospital opposite Westminster with major trauma center and comprehensive emergency services'
+          link: 'https://www.guysandstthomas.nhs.uk/'
         },
         {
           name: 'Royal London Hospital',
@@ -391,8 +345,7 @@ const london: Destination = {
           phone: '+44 20 7377 7000',
           emergency: true,
           specialties: ['Major Trauma Centre', 'Emergency Medicine', 'Sexual Health', 'Mental Health Crisis'],
-          link: 'https://www.bartshealth.nhs.uk/royal-london',
-          notes: 'East London\'s major trauma center with 24/7 emergency services and specialized assault support unit'
+          link: 'https://www.bartshealth.nhs.uk/royal-london'
         },
         {
           name: 'Chelsea and Westminster Hospital',
@@ -400,8 +353,7 @@ const london: Destination = {
           phone: '+44 20 3315 8000',
           emergency: true,
           specialties: ['Emergency Medicine', 'Women\'s Health', 'HIV Services', 'Mental Health'],
-          link: 'https://www.chelwest.nhs.uk/',
-          notes: 'Modern hospital serving West London with excellent emergency care and specialized women\'s health services'
+          link: 'https://www.chelwest.nhs.uk/'
         },
         {
           name: 'The London Clinic (Private)',
@@ -409,8 +361,7 @@ const london: Destination = {
           phone: '+44 20 7935 4444',
           emergency: true,
           specialties: ['Private Emergency Care', 'Women\'s Health', 'International Patients', 'Mental Health'],
-          link: 'https://www.thelondonclinic.co.uk/',
-          notes: 'Premier private hospital with 24/7 emergency services, multilingual staff, and luxury amenities for international patients'
+          link: 'https://www.thelondonclinic.co.uk/'
         }
       ],
       pharmacies: [
@@ -420,16 +371,14 @@ const london: Destination = {
           phone: '+44 20 7734 6126',
           hours: '24 hours daily',
           emergency: true,
-          link: 'https://www.boots.com/',
-          notes: 'Central London\'s only 24-hour pharmacy, emergency contraception available, tourist-friendly location'
+          link: 'https://www.boots.com/'
         },
         {
           name: 'Zafash Pharmacy (24hr)',
           address: '233-235 Old Brompton Road, London SW5 0EA',
           phone: '+44 20 7373 2798',
           hours: '24 hours daily',
-          emergency: true,
-          notes: 'South Kensington 24-hour pharmacy near museums district, women\'s health products, emergency services'
+          emergency: true
         },
         {
           name: 'Boots Oxford Street',
@@ -437,8 +386,7 @@ const london: Destination = {
           phone: '+44 20 7629 6557',
           hours: 'Mon-Sat 8:00-22:00, Sun 12:00-18:00',
           emergency: false,
-          link: 'https://www.boots.com/',
-          notes: 'Large pharmacy in shopping district with comprehensive women\'s health section and travel clinic'
+          link: 'https://www.boots.com/'
         },
         {
           name: 'John Bell & Croyden',
@@ -446,8 +394,7 @@ const london: Destination = {
           phone: '+44 20 7935 5555',
           hours: 'Mon-Fri 8:30-18:00, Sat 9:00-17:00',
           emergency: false,
-          link: 'https://www.johnbellcroyden.co.uk/',
-          notes: 'Historic luxury pharmacy near Oxford Street with extensive health and beauty products, personal consultation services'
+          link: 'https://www.johnbellcroyden.co.uk/'
         }
       ],
       womensHealth: {
@@ -472,9 +419,28 @@ const london: Destination = {
           'Public toilets in stations and shopping centers often have vending machines',
           'Wide variety of brands including organic and eco-friendly options'
         ]
-      }
+      },
+      vaccinations: [
+        'No special vaccinations required for UK travel',
+        'Routine vaccinations (MMR, DPT, flu) should be up to date',
+        'COVID-19 vaccination status may affect entry requirements'
+      ],
+      healthRisks: [
+        'Very low health risks in London',
+        'Air pollution in central areas during peak traffic times',
+        'Seasonal flu during winter months',
+        'Rare cases of food poisoning from street vendors'
+      ]
     },
     legalResources: {
+      embassy: {
+        name: 'U.S. Embassy London',
+        address: '33 Nine Elms Lane, London SW11 7US',
+        phone: '+44 20 7499 9000',
+        email: 'londonacs@state.gov',
+        emergency: '+44 20 7499 9000',
+        link: 'https://uk.usembassy.gov/'
+      },
       embassies: [
         {
           name: 'U.S. Embassy London',
@@ -556,137 +522,97 @@ const london: Destination = {
         'Seek medical attention if needed and request police liaison at hospital'
       ]
     },
-    emergencyContacts: [
-      {
-        name: 'Emergency Services',
-        number: '999',
-        type: 'Police/Fire/Ambulance'
-      },
-      {
-        name: 'Non-Emergency Police',
-        number: '101',
-        type: 'Crime Reporting'
-      },
-      {
-        name: 'NHS Non-Emergency',
-        number: '111',
-        type: 'Medical Advice'
-      },
-      {
-        name: 'British Transport Police',
-        number: '0800 40 50 40',
-        type: 'Transport Crime'
-      },
-      {
-        name: 'Tourist Helpline',
-        number: '+44 20 7234 5800',
-        type: 'Tourist Assistance'
-      }
-    ],
     usefulTips: [
       {
-        title: 'Master London\'s Public Transport System',
-        description: 'Get Oyster Card or use contactless payment for buses, tubes, and overground. Download offline Tube map as mobile signal poor underground. Stand right, walk left on escalators - serious London etiquette.',
+        title: 'Master London\'s Public Transport System for Solo Female Travel Safety',
+        description: 'London\'s transport is exceptionally safe for women solo travelers. Get Oyster Card or contactless payment for all services. Download offline Tube map as mobile signal poor underground. Stand right, walk left on escalators - serious London etiquette that shows cultural respect.',
         severity: 'low',
         sourceName: 'Transport for London',
         sourceUrl: 'https://tfl.gov.uk/'
       },
       {
-        title: 'Avoid Peak Hour Phone Snatching',
-        description: 'Phone snatching epidemic on Central, Northern, and District lines during rush hour 7-9am and 5-7pm. Keep devices secure, use wired headphones, and stay alert near station exits where thieves target distracted tourists.',
-        severity: 'medium',
-        sourceName: 'Metropolitan Police Crime Prevention',
+        title: 'Prevent Phone Snatching on London Transport - Critical Safety Tip',
+        description: 'Phone snatching soared 83% in 2024. Moped thieves and pickpockets target Central, Northern, District lines during rush hour 7-9am & 5-7pm. Keep devices secure in inner pockets, use wired headphones, wear bags in front, stay alert near exits. Walk against traffic to avoid moped attacks.',
+        severity: 'high',
+        sourceName: 'Metropolitan Police Crime Statistics 2024',
         sourceUrl: 'https://www.met.police.uk/'
       },
       {
-        title: 'Is London Safe for Women Solo Travelers?',
-        description: 'Yes, London is very safe for solo female travelers with excellent infrastructure and low violent crime rates. Central zones 1-2 are particularly safe day and night. Avoid isolated areas in outer boroughs after dark.',
+        title: 'Is London Safe for Female Solo Travelers? The Complete Answer',
+        description: 'Yes, London is extremely safe for women solo travelers with world-class infrastructure and low violent crime rates. Central zones 1-2 are particularly safe day and night. Ranks in top 7 safest destinations for solo female travel globally. Avoid isolated outer borough areas after dark.',
         severity: 'low',
-        sourceName: 'Solo Female Travel Safety Reports',
+        sourceName: 'Solo Female Travel Safety Reports 2024',
         sourceUrl: 'https://travelladies.app/'
       },
       {
-        title: 'Navigate London\'s Drinking Culture Safely',
-        description: 'Pub culture central to London social life and generally very safe for solo women. However, drink spiking reported in Soho, Shoreditch nightlife areas. Never leave drinks unattended, use drink covers, and stay with groups.',
+        title: 'Navigate London Nightlife Safely as Solo Female Traveler',
+        description: 'Pub culture central to London social life and generally very safe for solo women. Use "Ask for Angela" safety code in venues. Drink spiking reported in Soho/Shoreditch - never leave drinks unattended, use drink covers, accept drinks only from bartenders.',
         severity: 'medium',
-        sourceName: 'London Nightlife Safety Network',
+        sourceName: 'London Nightlife Safety Network 2024',
         sourceUrl: 'https://www.drinkaware.co.uk/'
       },
       {
-        title: 'Choose Licensed Transportation Only',
-        description: 'Only use black cabs (licensed taxis), Uber, or pre-booked minicabs. Unlicensed minicabs approach solo women outside stations after midnight - they lack insurance and safety checks. Licensed vehicles show TfL badges.',
+        title: 'Transportation Safety for Women Traveling Alone',
+        description: 'Only use licensed black cabs (with TfL badges), Uber, or pre-booked minicabs. Unlicensed minicabs approach solo women outside stations after midnight - they lack insurance and safety checks. Share journey details with trusted contacts.',
         severity: 'high',
         sourceName: 'Transport for London Safety Guidelines',
         sourceUrl: 'https://tfl.gov.uk/modes/taxis-and-minicabs'
       },
       {
-        title: 'Budget Smart for London\'s High Costs',
-        description: 'London is expensive but manageable with smart planning. Many museums free, Borough Market affordable eats, happy hours common 5-7pm. Book accommodations in Zones 1-2 for safety even if costs more.',
+        title: 'Solo Female Travel Safety Budget Tips for London',
+        description: 'London is expensive but manageable with smart safety-first planning. Book accommodations in safe Zones 1-2 even if more expensive. Many museums free, Borough Market for affordable quality food, happy hours 5-7pm for cultural experiences.',
         severity: 'low',
-        sourceName: 'London Budget Travel Guide',
+        sourceName: 'London Budget Travel Guide 2024',
         sourceUrl: 'https://www.visitlondon.com/'
+      },
+      {
+        title: 'Avoid Tourist Scams Targeting Solo Female Travelers',
+        description: 'Be aware of fake charity collectors with emotional manipulation near Oxford Street/Covent Garden. Check restaurant bills for hidden service charges. Avoid moped theft by walking against traffic and keeping valuables secure.',
+        severity: 'medium',
+        sourceName: 'Tourist Safety Reports 2024',
+        sourceUrl: 'https://www.met.police.uk/'
+      },
+      {
+        title: 'Emergency Preparedness for Solo Women in London',
+        description: 'Download offline maps, enable location sharing with trusted contacts. Know emergency numbers (999). London has excellent emergency response with specialized support for women. Keep embassy contact information readily available.',
+        severity: 'low',
+        sourceName: 'UK Emergency Services',
+        sourceUrl: 'https://www.gov.uk/'
       }
     ],
     culturalSensitivityTips: [
-      'Master British politeness and queuing culture religiously - Always say "please," "thank you," "sorry," queue patiently without cutting; British politeness is fundamental to social acceptance and often results in helpful guidance from reserved but protective locals',
-      'Learn essential British phrases and expressions - "Excuse me" (to get attention), "Cheers" (thanks), "Brilliant" (great), "Mind the gap," "Sorry to bother you"; understanding British idioms shows cultural effort and earns warmer responses from initially reserved Londoners',
-      'Understand British reserve and personal space deeply - Don\'t expect immediate friendships, avoid oversharing personal information, respect the "invisible bubble" around people; patience with British social warming creates stronger, more reliable safety networks',
-      'Navigate British pub culture safely and respectfully - Understand round-buying system, pub etiquette, closing times (11pm weekdays); proper pub behavior demonstrates cultural integration and helps build protective local relationships in safe social environments',
-      'Respect British work-life balance and timing - Avoid calling after hours, understand lunch hour sacredness (12-1pm), respect weekend privacy; boundary awareness shows cultural sophistication and builds professional respect essential for business travel safety',
-      'Master London\'s transport etiquette precisely - Stand right on escalators, let passengers off first, offer seats to elderly/pregnant women, keep backpacks in front; proper tube etiquette prevents conflicts and demonstrates cultural awareness',
-      'Understand British understatement and indirect communication - "Not bad" means very good, "quite nice" means excellent, criticism delivered gently; understanding communication style prevents misunderstandings and helps build genuine relationships',
-      'Appreciate British multicultural awareness sensitively - London is incredibly diverse; show respect for all cultures, avoid stereotypes, understand that "British" includes many ethnicities; cultural sophistication enhances safety through broader community acceptance'
+      'Master British politeness - Always say "please," "thank you," "sorry" and queue patiently without cutting',
+      'Learn key phrases - "Excuse me," "Cheers" (thanks), "Brilliant" (great), "Mind the gap"',
+      'Respect personal space - Don\'t expect immediate friendships, avoid oversharing, respect the "invisible bubble"',
+      'Follow pub etiquette - Understand round-buying system, closing times (11pm weekdays)',
+      'Master tube etiquette - Stand right on escalators, let passengers off first, keep backpacks in front',
+      'Understand British communication - "Not bad" means very good, "quite nice" means excellent',
+      'Appreciate London\'s diversity - Show respect for all cultures, understand "British" includes many ethnicities',
+      'Don\'t speak loudly in public - Londoners prefer quiet, understated conversation in restaurants and transport',
+      'Don\'t jump queues or cut lines - Queue-jumping is deeply offensive and will cause social friction',
+      'Don\'t ask personal questions about income or politics - These topics are considered private and intrusive',
+      'Don\'t tip at pubs when ordering drinks - Tipping is not expected at bars, only in restaurants'
     ],
-    culturalSensitivityTipsDetailed: {
-      title: 'Cultural Sensitivity & Safety Guide for Solo Female Travelers in London',
-      introduction: 'Is London safe for women solo travelers culturally? Absolutely - the UK ranks among the world\'s safest countries for women, with London being exceptionally welcoming to solo female travelers. However, understanding British social etiquette, from queuing culture to pub protocols, is essential for maximizing safety and gaining acceptance in this polite but reserved society that values proper conduct above all.',
-      sections: [
-        {
-          title: 'British Politeness & Social Etiquette',
-          tips: [
-            'Master the art of British queuing - Never cut in line, wait patiently, maintain proper spacing; queue-jumping is deeply offensive and can cause serious social friction affecting your safety and acceptance',
-            'Use "please," "thank you," and "sorry" constantly - British politeness is not superficial but fundamental to social functioning; excessive politeness opens doors and builds protective relationships',
-            'Understand British indirect communication - "Quite nice" means excellent, "not too bad" means very good; learning understatement prevents misunderstandings and helps navigate social situations safely',
-            'Respect personal space and the "invisible bubble" - Stand arm\'s length apart, avoid unnecessary touching, don\'t stare; space respect is crucial for British comfort and relationship building',
-            'Learn proper small talk protocols - Weather discussions are safe conversation starters, avoid overly personal questions initially; appropriate conversation builds gradual trust essential for safety networks',
-            'Master British apology culture - Say "sorry" even when not at fault, it\'s social lubrication not admission of guilt; understanding apology culture prevents social awkwardness and builds rapport'
-          ]
-        },
-        {
-          title: 'Pub Culture & Social Safety Navigation',
-          tips: [
-            'Understand round-buying etiquette - When someone buys a round, you\'re expected to reciprocate; participating in rounds integrates you into protective social groups and builds lasting connections',
-            'Learn pub closing time customs - Last orders at 11pm weekdays, drinking-up time until 11:30pm; understanding timing prevents awkward situations and helps with safe evening planning',
-            'Navigate pub food culture - Order at the bar, find your own table, no table service expected; proper pub behavior demonstrates cultural awareness and helps you blend in safely',
-            'Understand British drinking pace - Pacing is important, rounds can be refused politely, food is essential; drinking responsibly maintains safety while participating in British social culture',
-            'Know pub safety protocols - Women\'s safety initiatives like "Ask for Angela," safe spaces policies; understanding these systems provides protection while enjoying British pub culture',
-            'Respect pub conversation etiquette - Avoid controversial topics initially, understand banter vs. serious discussion, respect local regulars; proper behavior builds protective local relationships'
-          ]
-        },
-        {
-          title: 'Transport Etiquette & Urban Navigation',
-          tips: [
-            'Master escalator etiquette religiously - Stand right, walk left, never block the walking side; violating this rule causes serious irritation and marks you as inconsiderate tourist',
-            'Follow tube boarding protocols - Let passengers off first, move down inside carriages, remove backpack in crowded areas; proper behavior prevents conflicts and shows cultural awareness',
-            'Understand British transport courtesy - Offer seats to elderly/pregnant women, keep conversations quiet, avoid eating smelly food; courtesy builds positive interactions and community protection',
-            'Learn bus etiquette specifics - Thank the driver when exiting, press stop button once only, move to back of bus; proper bus behavior demonstrates cultural integration and respect',
-            'Navigate London walking culture - Walk quickly and purposefully, stay left on sidewalks, make eye contact when asking for help; confident movement and cultural awareness enhance safety',
-            'Understand contactless payment culture - Tap cards/phones for all transport, cash rarely used; payment literacy shows cultural adaptation and prevents tourist targeting'
-          ]
-        },
-        {
-          title: 'Multicultural London & Professional Interactions',
-          tips: [
-            'Appreciate London\'s incredible diversity respectfully - British identity includes all ethnicities and backgrounds; showing cultural sophistication enhances safety through broader community acceptance',
-            'Understand British work culture boundaries - Punctuality is crucial, meetings start on time, personal/professional separation respected; professional respect builds reliable business safety networks',
-            'Navigate British service culture appropriately - Service staff are professional not servile, tipping 10-15% in restaurants expected; respectful treatment of service workers builds positive community relationships',
-            'Learn British humor appreciation - Self-deprecating humor is common, sarcasm shows affection, don\'t take teasing personally; humor understanding helps build genuine protective friendships',
-            'Respect British environmental consciousness - Recycling is important, sustainability valued, public transport preferred; environmental awareness shows cultural alignment and community respect',
-            'Understand British royal and historical sensitivity - Show respect for traditions while understanding modern perspectives; balanced historical appreciation builds positive relationships across generations'
-          ]
-        }
-      ]
-    },
+    culturalSensitivityTipsDetailed: [
+      'Master British queuing culture as fundamental safety behavior and social integration tool - Queue-jumping is one of the most offensive acts in British society and can cause aggressive confrontations, verbal abuse, or complete social ostracism. Proper queuing (waiting patiently in single file, maintaining space, not pushing) demonstrates respect and cultural awareness that often results in helpful guidance from protective locals. British people will go out of their way to help tourists who show proper queue etiquette, while queue-jumpers are actively shunned and may face hostile reactions that compromise personal safety',
+      'Navigate British politeness as protective social armor and conflict prevention strategy - Excessive use of "please," "thank you," "sorry," and "excuse me" isn\'t superficial politeness but creates protective social barriers that prevent conflicts before they start. British politeness opens doors, diffuses tension, earns forgiveness for cultural mistakes, and builds safety networks with reserved but genuinely helpful locals. Say "sorry" even when not at fault (it\'s social lubrication), always say "please" when asking for anything, and thank people profusely - this linguistic courtesy acts as social armor protecting solo female travelers',
+      'Decode British indirect communication patterns for safer social navigation and relationship building - British understatement is complex: "quite nice" means excellent, "not too bad" means very good, "interesting" often means polite disagreement, "I hear what you\'re saying" means disagreement, "with respect" means strong disagreement. Understanding this communication style prevents misunderstandings, helps build genuine relationships crucial for solo female traveler safety, and allows you to read social situations accurately to avoid uncomfortable or potentially unsafe scenarios',
+      'Respect British personal space boundaries and privacy culture religiously to avoid social friction - Stand arm\'s length apart in conversations, avoid unnecessary touching or physical contact, don\'t stare at people, avoid oversharing personal information (income, relationships, politics), and respect the "invisible bubble" around each person. British discomfort with space violations can lead to cold treatment, exclusion from helpful social networks, or being labeled as pushy American/tourist. Personal space respect is crucial for British comfort and prevents being socially ostracized',
+      'Master London transport etiquette to prevent conflicts and ensure smooth daily movement - Stand right on escalators (walk left), let passengers off before boarding, move down inside carriages, remove backpack in crowded areas, offer seats to elderly/pregnant/disabled, keep conversations quiet, avoid eating smelly food. Tube etiquette violations cause serious irritation and can lead to public confrontations, angry comments, or even physical pushing. Transport courtesy is taken extremely seriously and proper behavior ensures safe, conflict-free daily travel',
+      'Navigate British pub culture safely and authentically for social integration and local protection - Understand complex round-buying system (when someone buys drinks for group, you\'re expected to reciprocate or politely decline the round entirely), know closing times (last orders 11pm weekdays, 11:30pm drinking-up time), use "Ask for Angela" safety code if feeling threatened, order at bar (no table service), find your own seating. Proper pub behavior integrates you into protective local social groups, while pub faux pas can lead to exclusion or uncomfortable situations affecting your safety network',
+      'Handle British work and business culture professionally to build reliable safety networks - Arrive exactly on time (being late is deeply disrespectful), respect sacred lunch hour boundaries (12-1pm), understand queue culture applies to professional settings, avoid overly familiar behavior initially, dress appropriately for business context. British business culture values punctuality, proper procedure, and gradual relationship building. Professional cultural awareness builds reliable business safety networks essential for business travelers and creates professional contacts who can assist in emergencies',
+      'Appreciate London\'s multicultural complexity sensitively to enhance community safety and acceptance - British identity includes all ethnicities and backgrounds, avoid assumptions about accents or appearance, show respect for diverse communities (Hindu, Muslim, Jewish, Caribbean, African, etc.), understand that "British" doesn\'t mean white or native-born. Cultural sophistication enhances safety through broader community acceptance in this global city where showing cultural awareness and respect opens doors across all communities and creates diverse safety networks',
+      'Understand British reserve versus warmth dynamics for authentic relationship building - Don\'t expect immediate friendships or warm welcomes, allow relationships to develop naturally over time, appreciate subtle humor and self-deprecation, understand that initial coldness often masks genuine helpfulness. British people are genuinely helpful but need time to warm up. Patience with British social warming creates stronger, more reliable safety networks than aggressive American-style friendliness, which can backfire and mark you as culturally clueless',
+      'Navigate British class consciousness carefully to blend in and avoid social targeting - Understand subtle social hierarchies based on accent, education, behavior, and dress, dress appropriately for different venues (pubs vs. restaurants vs. hotels), be aware of accent and language differences indicating class background, avoid ostentatious displays of wealth. Class awareness helps you blend in rather than stand out as vulnerable tourist target, and understanding these dynamics helps you navigate social situations safely without inadvertently offending or appearing naive',
+      'Master British humor and banter safely to build protective relationships - Self-deprecating humor is highly valued, gentle teasing often shows affection, don\'t take sarcasm personally (it\'s often affectionate), understand dry wit and irony, avoid American-style enthusiasm which can seem fake. British humor is complex but understanding it helps build genuine protective relationships, prevents cultural misunderstandings that could affect your safety, and shows cultural sophistication that earns respect and local support',
+      'Respect British environmental and social consciousness to earn community acceptance - Recycling is extremely important (separate bins for different materials), public transport strongly preferred over cars, queueing for everything is sacred social behavior, environmental sustainability is valued, understated wealth display preferred over ostentation. Showing environmental and social awareness demonstrates cultural alignment and earns local respect and protection, while ignoring these values marks you as culturally insensitive tourist',
+      'Navigate London\'s seasonal social rhythms effectively for appropriate cultural participation - Summer brings outdoor pub culture with beer gardens and longer days (pubs stay open later), winter emphasizes cozy indoor gatherings and shorter social interactions, spring brings optimism and chattiness, autumn returns to reserved indoor culture. Seasonal awareness helps you participate safely in appropriate local activities, understand changing social patterns, and adapt your behavior to match local expectations throughout the year',
+      'Handle British customer service and shopping culture respectfully to build positive community relationships - Service staff are professional not servile, tipping 10-15% expected in restaurants but not in pubs or when buying drinks at bar, Sunday shopping hours severely limited (many shops close early or stay closed), queue patiently in shops, say please and thank you constantly. Respectful treatment of service workers builds positive community relationships enhancing your safety network and ensures you receive helpful service rather than cold treatment',
+      'Understand British conflict avoidance and complaint culture for safer social navigation - British people avoid direct confrontation but may complain later or give cold treatment, understand passive-aggressive communication style, recognize when you\'ve committed social faux pas (sudden coldness, short responses), apologize profusely for any mistakes. Understanding conflict patterns helps you navigate social situations safely, repair cultural mistakes before they affect your safety network, and recognize when you need to change behavior to maintain local support',
+      'Master British small talk and conversation etiquette for social integration - Weather discussions are always safe conversation starters, avoid personal questions about income/relationships/politics initially, understand that "How are you?" expects "Fine, thanks" not detailed response, learn to appreciate understated conversation style. Proper conversation skills help build gradual relationships essential for solo female traveler safety, while conversation mistakes can lead to social exclusion or uncomfortable situations affecting your local support network',
+      'Navigate British drinking culture safely while maintaining cultural authenticity - Understand difference between pub culture (casual, standing, ordering at bar) and restaurant culture (table service, more formal), know your limits in social drinking situations, understand that refusing drinks is acceptable if done politely, recognize signs of problem drinking in others and extract yourself safely. Safe participation in British drinking culture allows cultural integration while maintaining personal safety and avoiding potentially dangerous situations with intoxicated individuals',
+      'Respect British privacy culture and information sharing boundaries - Avoid asking personal questions about income, family relationships, or political views until relationships develop, understand that British people share personal information gradually, don\'t expect immediate openness or emotional sharing, respect that some topics (family, money, politics) remain private even in friendships. Privacy respect builds trust essential for genuine safety relationships, while boundary violations can lead to social exclusion or uncomfortable situations affecting your local support system'
+    ],
     costAndComfort: {
       dailyBudget: {
         range: '$80 - $150 USD / day',
@@ -698,36 +624,31 @@ const london: Destination = {
           type: 'Female-Only Hostel',
           avgCost: '$40-60/night',
           safetyNote: 'Safest budget option - Hostelle offers all-women environment in central London',
-          safetyLevel: 'highest',
-          bestAreas: 'Central London, Zone 1'
+          safetyLevel: 'high'
         },
         {
           type: 'Social Hostel (Female Dorms)',
           avgCost: '$35-55/night',
           safetyNote: 'Excellent security with female-only dorms, 24-hour reception, and central locations',
-          safetyLevel: 'high',
-          bestAreas: 'Waterloo, London Bridge, King\'s Cross'
+          safetyLevel: 'high'
         },
         {
           type: 'Budget Chain Hotel',
           avgCost: '$80-120/night',
           safetyNote: 'Premier Inn, Travelodge with consistent safety standards and 24/7 reception',
-          safetyLevel: 'high',
-          bestAreas: 'County Hall, Tower Bridge, Covent Garden'
+          safetyLevel: 'high'
         },
         {
           type: 'Boutique Hotel',
           avgCost: '$150-250/night',
           safetyNote: 'Personal service, central locations, excellent security in safest neighborhoods',
-          safetyLevel: 'highest',
-          bestAreas: 'Marylebone, South Kensington, Bloomsbury'
+          safetyLevel: 'high'
         },
         {
           type: 'Luxury Hotel',
           avgCost: '$300-500+/night',
           safetyNote: 'Maximum security, concierge services, premium locations for ultimate safety',
-          safetyLevel: 'maximum',
-          bestAreas: 'Mayfair, Knightsbridge, Covent Garden'
+          safetyLevel: 'high'
         }
       ],
       transport: [
@@ -735,43 +656,37 @@ const london: Destination = {
           method: 'London Underground (Tube)',
           cost: '$3-6/ride',
           safetyDescription: 'Exceptionally safe with extensive CCTV, British Transport Police presence, and emergency buttons. Avoid rush hour crowds for pickpocket prevention.',
-          safetyLevel: 'highest',
-          femaleTraverlerTips: 'Use contactless payment, download offline maps, stand right on escalators, trust journey planner apps'
+          safetyLevel: 'high'
         },
         {
           method: 'London Buses',
           cost: '$2.50/ride',
           safetyDescription: 'Very safe with CCTV, good lighting, and frequent services. Night buses available but use caution on late-night services in outer areas.',
-          safetyLevel: 'high',
-          femaleTraverlerTips: 'Sit near driver if feeling unsafe, have exact change or contactless, check night bus routes in advance'
+          safetyLevel: 'high'
         },
         {
           method: 'Black Cabs (Licensed Taxis)',
           cost: '$15-40/ride',
           safetyDescription: 'Safest transport option with regulated drivers, GPS tracking, and insurance. All drivers pass extensive background checks and "The Knowledge" test.',
-          safetyLevel: 'highest',
-          femaleTraverlerTips: 'Hail from street or taxi ranks, check TfL license badge, use contactless payment when possible'
+          safetyLevel: 'high'
         },
         {
           method: 'Uber/Licensed Minicabs',
           cost: '$8-25/ride',
           safetyDescription: 'Safe with GPS tracking, driver ratings, and trip sharing features. Only use TfL-licensed operators through official apps.',
-          safetyLevel: 'high',
-          femaleTraverlerTips: 'Share journey with trusted contact, verify driver and license plate, sit behind driver for safety'
+          safetyLevel: 'high'
         },
         {
           method: 'Walking',
           cost: 'Free',
           safetyDescription: 'Very safe in central London with excellent street lighting, police presence, and busy pedestrian areas during day and evening.',
-          safetyLevel: 'high',
-          femaleTraverlerTips: 'Use well-lit main streets, avoid shortcuts through parks after dark, carry charged phone with maps'
+          safetyLevel: 'high'
         },
         {
           method: 'Cycling (Boris Bikes)',
           cost: '$3-12/day',
           safetyDescription: 'Generally safe with expanding cycle lanes, but London traffic requires confidence. Helmet not provided with bike share.',
-          safetyLevel: 'medium',
-          femaleTraverlerTips: 'Bring own helmet, stick to cycle superhighways, avoid rush hour traffic, use lights after dark'
+          safetyLevel: 'medium'
         }
       ],
       budgetTips: [
@@ -784,6 +699,20 @@ const london: Destination = {
         'Use contactless payment cap (£8.50/day) instead of individual Tube tickets - automatic best price guarantee',
         'Walk between central attractions (Covent Garden to Tower Bridge) - free sightseeing and most routes well-lit and safe',
         'Eat at Borough Market for quality food at reasonable prices - safer and more authentic than street food'
+      ],
+      currencyExchangeTips: [
+        'Use contactless payment everywhere - London is nearly cashless with excellent card acceptance',
+        'Avoid airport currency exchange - rates are 10-15% worse than city options',
+        'Withdraw from official bank ATMs only - Halifax, Barclays, HSBC offer best rates with security',
+        'Always choose GBP when asked about currency conversion - avoid dynamic currency conversion fees',
+        'Notify your bank before travel to prevent card blocks - essential for seamless payments',
+        'Keep small amounts of cash for emergencies - some markets and tips still require cash',
+        'Use Revolut or Wise cards for best exchange rates - popular among smart travelers',
+        'ATM withdrawal limits typically £300-500 per transaction - plan accordingly for larger expenses',
+        'Contactless payment limit is £100 - use chip & PIN for larger purchases',
+        'Check ATMs for skimming devices - choose machines inside banks when possible',
+        'Cover PIN entry with hand - pickpockets may watch from behind',
+        'Use well-lit ATMs in busy areas - avoid isolated or poorly lit machines'
       ]
     },
     
@@ -796,149 +725,33 @@ const london: Destination = {
       reason: 'Generally very safe country with excellent infrastructure, low crime rates, and strong rule of law.',
       link: 'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/united-kingdom-travel-advisory.html',
       soloTravelerAdvice: [
-        'Is London safe for female solo travelers? Absolutely - one of the world\'s safest major cities with excellent infrastructure',
-        'Outstanding destination for solo female travel safety with English language and helpful, diverse population',
-        'World-class public transport system makes solo travel safe and convenient throughout the city',
-        'Solo travel safety for women beginners is exceptional - perfect introduction to European travel',
-        'Strong legal protections and police response make London ideal for first-time solo female travelers',
-        'Extensive support services and women-friendly culture throughout the multicultural city'
+        'Is London safe for women solo travelers? Absolutely - London ranks as one of the world\'s safest major cities for solo female travel',
+        'Is London safe for female solo travelers? Yes, with outstanding infrastructure and English language accessibility',
+        'Solo female travel safety in London is exceptional with world-class public transport and helpful, diverse population',
+        'Women solo travel safety statistics show London in top 7 safest destinations globally',
+        'Solo travel safety for women beginners is outstanding - perfect introduction to European solo female travel',
+        'Strong legal protections and specialized police response make London ideal for first-time solo female travelers',
+        'Trusted solo female travel safety tips confirm London\'s reputation as safest places for women to travel alone',
+        'Extensive support services and women-friendly culture throughout this multicultural city'
       ]
     },
     bestTimeToVisit: {
-      overall: 'April to June and September to October',
-      weather: 'London has a temperate oceanic climate with mild temperatures year-round. Spring (April-June) offers pleasant weather with blooming parks and longer days. Autumn (September-October) provides comfortable temperatures and fewer crowds.',
-      safety: 'London maintains consistent high safety levels year-round for solo female travelers. Summer months see more tourists which can increase pickpocketing, while winter months have shorter daylight hours affecting evening safety perception.',
-      costs: 'Peak season (July-August) brings highest accommodation prices and crowds. Shoulder seasons (April-June, September-October) offer best value with good weather. Winter (November-March) has lowest prices but shorter days and frequent rain.',
-      crowding: 'July-August are busiest with international tourists. December shopping season also very crowded. April-May and September-October offer perfect balance of good weather and manageable crowds.',
       safestMonths: ['April', 'May', 'September', 'October'],
-      events: 'Spring and early autumn offer optimal conditions with comfortable weather, longer daylight hours, moderate tourist crowds reducing pickpocket risks, and pleasant temperatures for extended outdoor exploration. Major events like Notting Hill Carnival (August), Pride London (June-July), Wimbledon (June-July), and New Year\'s Eve require extra awareness but maintain strong police presence. Summer months see increased pickpocketing due to tourist crowds, while winter months have shorter daylight hours affecting evening safety perception.',
-      monthlyBreakdown: {
-        january: { weather: 'Cold, wet (2-7°C)', safety: 'High', crowds: 'Low', notes: 'Post-holiday sales, shorter days, budget-friendly' },
-        february: { weather: 'Cold, occasional snow (2-8°C)', safety: 'High', crowds: 'Low', notes: 'Valentine\'s events, still budget season' },
-        march: { weather: 'Cool, spring begins (4-11°C)', safety: 'High', crowds: 'Medium', notes: 'Daffodils bloom, longer days returning' },
-        april: { weather: 'Mild, spring bloom (6-14°C)', safety: 'High', crowds: 'Medium', notes: 'Easter holidays, perfect walking weather' },
-        may: { weather: 'Pleasant, sunny days (9-17°C)', safety: 'High', crowds: 'Medium-High', notes: 'Chelsea Flower Show, ideal weather' },
-        june: { weather: 'Warm, long days (12-20°C)', safety: 'High', crowds: 'High', notes: 'Wimbledon, longest days, excellent weather' },
-        july: { weather: 'Warmest month (14-22°C)', safety: 'High', crowds: 'Very High', notes: 'Peak tourist season, highest prices' },
-        august: { weather: 'Warm, occasional rain (14-22°C)', safety: 'Medium-High', crowds: 'Very High', notes: 'Edinburgh Festival affects travel, busy' },
-        september: { weather: 'Pleasant, fewer crowds (11-19°C)', safety: 'High', crowds: 'Medium', notes: 'Perfect weather, autumn colors begin' },
-        october: { weather: 'Cool, autumn colors (8-15°C)', safety: 'High', crowds: 'Medium', notes: 'Beautiful parks, comfortable temperatures' },
-        november: { weather: 'Cool, frequent rain (5-11°C)', safety: 'High', crowds: 'Low', notes: 'Guy Fawnes, Christmas markets start' },
-        december: { weather: 'Cold, wet, dark (3-8°C)', safety: 'High', crowds: 'Medium', notes: 'Christmas markets, festive atmosphere, short days' }
-      }
-    },
-    safestMonths: {
-      highest: ['April', 'May', 'September', 'October'],
-      reason: 'Spring and early autumn offer optimal conditions: comfortable weather for walking, longer daylight hours, moderate tourist crowds reducing pickpocket risks, and pleasant temperatures for extended outdoor exploration.',
-      considerations: {
-        summer: 'July-August see increased pickpocketing due to tourist crowds, especially on public transport during rush hours. Higher vigilance needed in tourist areas.',
-        winter: 'November-February have shorter daylight hours (8 hours vs 16 in summer) affecting perception of safety in evening activities. Wet weather requires extra caution on slippery surfaces.',
-        events: 'Major events like Notting Hill Carnival (August), New Year\'s Eve, and Pride (June) bring large crowds requiring extra awareness but maintain strong police presence.',
-        transport: 'All months maintain excellent transport safety, but summer months see more crowded tubes increasing pickpocket risks during peak tourist season.'
-      },
-      monthlyRatings: {
-        january: { rating: 8.0, notes: 'High safety, low crowds, shorter days limit evening activities' },
-        february: { rating: 8.1, notes: 'Excellent safety, minimal tourists, cold but manageable' },
-        march: { rating: 8.3, notes: 'Good safety, spring weather improving, moderate crowds' },
-        april: { rating: 8.7, notes: 'Excellent conditions, perfect weather, reasonable crowds' },
-        may: { rating: 8.8, notes: 'Peak safety month, beautiful weather, manageable tourism' },
-        june: { rating: 8.4, notes: 'Good safety, excellent weather, increasing crowds' },
-        july: { rating: 7.9, notes: 'High tourist crowds increase pickpocket risk, vigilance needed' },
-        august: { rating: 7.8, notes: 'Peak tourist season, highest crime against visitors' },
-        september: { rating: 8.8, notes: 'Excellent safety, perfect weather, crowds decreasing' },
-        october: { rating: 8.6, notes: 'Very safe, comfortable weather, low tourist density' },
-        november: { rating: 8.2, notes: 'Good safety, shorter days begin affecting evening plans' },
-        december: { rating: 8.0, notes: 'Safe but dark early, Christmas crowds manageable' }
-      }
-    },
-    eventsAndNotes: {
-      majorEvents: [
-        {
-          name: 'Notting Hill Carnival',
-          dates: 'Late August (Bank Holiday Weekend)',
-          safetyNotes: 'Europe\'s largest street festival with 2+ million attendees. Generally very safe with heavy police presence, but crowds are intense. Avoid bringing valuables, stay hydrated, and plan exit strategies. Pickpocketing increases during this period.',
-          femaleTraverlerTips: 'Travel in groups when possible, wear comfortable shoes, bring minimal cash, and stay aware of surroundings in dense crowds.'
-        },
-        {
-          name: 'Pride London',
-          dates: 'Late June/Early July',
-          safetyNotes: 'Massive celebration with 1+ million attendees. Very safe and inclusive environment with strong police support. London is extremely LGBTQ+ friendly. Main safety concern is crowd management and dehydration.',
-          femaleTraverlerTips: 'Excellent event for solo female travelers. Bring water, wear sunscreen, and join the welcoming community atmosphere.'
-        },
-        {
-          name: 'Wimbledon Championships',
-          dates: 'Late June - Early July',
-          safetyNotes: 'Prestigious tennis tournament with excellent security. Very safe but expect increased tourism in SW London. Transport to Wimbledon gets crowded. Book accommodation early.',
-          femaleTraverlerTips: 'Perfect event for solo attendance. Queue for day tickets or buy in advance. The area is very safe for solo female spectators.'
-        },
-        {
-          name: 'London Fashion Week',
-          dates: 'February and September',
-          safetyNotes: 'Industry event increasing activity in central London areas like Somerset House and venues across the city. Generally very safe but areas become busier with fashion industry professionals.',
-          femaleTraverlerTips: 'Great time for solo female travelers interested in fashion. Many public events and exhibitions. Dress stylishly to fit in.'
-        },
-        {
-          name: 'New Year\'s Eve Fireworks',
-          dates: 'December 31st',
-          safetyNotes: 'Major event with road closures and 100,000+ attendees along Thames. Free but ticketed event with security checks. Very safe but extremely crowded. Plan transport in advance as tube services affected.',
-          femaleTraverlerTips: 'Arrive early, dress warmly, bring phone chargers, and plan meeting points if traveling with others. Consider watching from restaurants or pubs for better experience.'
-        },
-        {
-          name: 'Changing of the Guard',
-          dates: 'Year-round (schedules vary)',
-          safetyNotes: 'Popular tourist attraction at Buckingham Palace. Very safe but can get extremely crowded, especially in summer. Pickpocketing concern in dense crowds.',
-          femaleTraverlerTips: 'Arrive 30 minutes early for best viewing spots. Keep valuables secure and be prepared for pushing crowds. Alternative viewing at Horse Guards Parade less crowded.'
-        }
-      ],
-      seasonalConsiderations: {
-        spring: 'Perfect season for solo female travel. Parks blooming, comfortable temperatures, and longer days provide excellent walking conditions. Crime rates lowest during these months.',
-        summer: 'Peak tourist season brings crowds and increased petty crime. Stay extra vigilant on public transport and in tourist areas. Excellent weather for outdoor activities.',
-        autumn: 'Ideal conditions return with comfortable temperatures and beautiful foliage. Fewer tourists mean better prices and less crowded attractions.',
-        winter: 'Shortest days (sunset around 3:30pm in December) limit outdoor activities. However, Christmas markets and festive atmosphere create magical experiences. Indoor attractions perfect during this season.'
-      },
-      monthlyHighlights: {
-        january: 'New Year\'s Day Parade, museum sales, winter theater season',
-        february: 'Chinese New Year celebrations in Chinatown, Valentine\'s Day events',
-        march: 'St. Patrick\'s Day festivities, spring flowers in parks',
-        april: 'Easter celebrations, perfect weather for walking tours',
-        may: 'Chelsea Flower Show, bank holiday weekend activities',
-        june: 'Trooping the Colour, Wimbledon begins, longest days',
-        july: 'Summer festivals, outdoor cinema screenings, peak weather',
-        august: 'Notting Hill Carnival, Edinburgh Festival affects travel',
-        september: 'London Fashion Week, perfect weather returns',
-        october: 'Autumn colors in parks, comfortable walking weather',
-        november: 'Guy Fawkes Night, Christmas markets begin',
-        december: 'Christmas markets, festive lights, Boxing Day sales'
-      },
-      travelTips: [
-        'Book accommodations 2-3 months in advance for summer visits to ensure safety-first locations in central zones',
-        'London weather is unpredictable year-round - always pack layers and waterproof jacket regardless of season',
-        'Summer months require sun protection - London sun can be stronger than expected, especially during long daylight hours',
-        'Winter visits need warm, waterproof gear and appreciation for shorter days limiting evening outdoor activities',
-        'Spring and autumn offer best value for money with excellent weather and lower accommodation prices',
-        'Major events like Carnival and Pride require advance planning but offer incredible cultural experiences safely',
-        'Christmas season (November-January) creates magical atmosphere but brings crowds to shopping areas requiring extra vigilance'
-      ]
-    },
-    culturalSensitivity: {
-      culturalDos: [
-        'Master the art of queuing - always join the back of any line and wait patiently, it\'s fundamental to British culture',
-        'Use "please" and "thank you" constantly - politeness is deeply ingrained and expected in all interactions',
-        'Stand your round at pubs - if drinking with a group, buy drinks for everyone when it\'s your turn',
-        'Arrive 5-10 minutes early for appointments and social gatherings - punctuality is highly valued',
-        'Maintain personal space on public transport - Londoners appreciate quiet, respectful behavior on the tube'
-      ],
-      culturalDonts: [
-        'Don\'t jump queues or cut in line - it\'s considered extremely rude and will draw negative attention',
-        'Don\'t ask personal questions about income, politics, or voting - these topics are considered private',
-        'Don\'t rest elbows on the table during meals - proper table manners are important in British culture',
-        'Don\'t speak too loudly in public spaces - Londoners value understated, quiet conversation',
-        'Don\'t boast or brag about achievements - British culture favors modesty and understatement over showiness'
-      ]
+      events: 'Spring and early autumn offer optimal conditions with comfortable weather, longer daylight hours, moderate tourist crowds reducing pickpocket risks, and pleasant temperatures for extended outdoor exploration. Major events like Notting Hill Carnival (August), Pride London (June-July), Wimbledon (June-July), and New Year\'s Eve require extra awareness but maintain strong police presence. Summer months see increased pickpocketing due to tourist crowds, while winter months have shorter daylight hours affecting evening safety perception.'
     },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+    videoId: "aTpBqBjIpeo" // London travel experience video
+  },
+  youtubeVideos: [
+    {
+      videoId: "aTpBqBjIpeo",
+      title: "Solo Female Travel Experience in London"
+    },
+    {
+      videoId: "vIlSr8VAIeA",
+      title: "London Scams to Avoid - Safety Tips"
+    }
+  ]
 };
 
 export default london;

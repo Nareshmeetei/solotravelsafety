@@ -13,7 +13,7 @@ const losAngeles: Destination = {
     bgColor: 'bg-yellow-25',
     reviewCount: 287,
     lastUpdated: '1 day ago',
-    harassmentRisk: 'moderate',
+    harassmentRisk: 'medium',
     safetyBreakdown: {
       nightSafety: {
         score: 6.4,
@@ -76,7 +76,7 @@ const losAngeles: Destination = {
         type: 'hotel',
         features: ['Luxury 5-star', 'Iconic property', '24/7 security', 'Female-friendly', 'Concierge services', 'Valet parking'],
         rating: 4.8,
-        notes: 'Legendary luxury hotel with impeccable security and service. Solo female travelers consistently rate it as extremely safe with attentive staff.',
+        notes: 'Legendary luxury hotel with impeccable security and service. Solo female travelers consistently rate it as extremely safe with attentive staff and prime Beverly Hills location.',
         link: 'https://www.dorchestercollection.com/en/los-angeles/the-beverly-hills-hotel/'
       },
       {
@@ -84,40 +84,48 @@ const losAngeles: Destination = {
         type: 'hotel',
         features: ['Beachfront luxury', 'Santa Monica location', '24/7 front desk', 'High security', 'Ocean views'],
         rating: 4.7,
-        notes: 'Elegant beachfront hotel in safe Santa Monica area. Excellent reviews from solo female travelers for safety and location.',
+        notes: 'Elegant beachfront hotel in safest Santa Monica area. Excellent reviews from solo female travelers for safety, location, and solo-friendly atmosphere.',
         link: 'https://www.hotelcasadelmar.com/'
-      },
-      {
-        name: 'Samesun Hollywood',
-        type: 'hostel',
-        features: ['Female-only dorms', 'Central Hollywood', 'Modern security', '24/7 staff', 'Social atmosphere'],
-        rating: 4.4,
-        notes: 'Top-rated hostel with dedicated female dorms and excellent security. Popular with solo female backpackers.',
-        link: 'https://www.samesun.com/hostels/hollywood/'
-      },
-      {
-        name: 'HI Los Angeles - Santa Monica',
-        type: 'hostel',
-        features: ['Female dorms', 'Beach location', 'Secure lockers', 'International crowd', 'Clean facilities'],
-        rating: 4.3,
-        notes: 'Hostelling International property one block from beach. Excellent safety record and female-friendly environment.',
-        link: 'https://www.hiusa.org/hostels/california/santa-monica/los-angeles-santa-monica'
       },
       {
         name: 'The London West Hollywood',
         type: 'hotel',
         features: ['Boutique luxury', 'West Hollywood location', 'Rooftop pool', '24/7 concierge', 'LGBTQ+ friendly'],
         rating: 4.6,
-        notes: 'Upscale hotel in safe West Hollywood area. Great for solo female travelers with excellent security and central location.',
+        notes: 'Upscale hotel in safe West Hollywood area. Perfect for solo female travelers with excellent security, central location, and welcoming atmosphere.',
         link: 'https://www.thelondonwesthollywood.com/'
       },
       {
-        name: 'STAY OPEN Venice Beach',
+        name: 'Hotel Figueroa',
+        type: 'hotel',
+        features: ['Historic property', 'Female-founded', 'Downtown LA', 'Solo-friendly', 'Feminist heritage', 'Unique design'],
+        rating: 4.5,
+        notes: 'Historic hotel set up by women for women with deep feminist roots. Exceptional choice for solo female travelers seeking empowering, safe accommodation with character.',
+        link: 'https://www.hotelfigueroa.com/'
+      },
+      {
+        name: 'Freehand Los Angeles',
         type: 'hostel',
-        features: ['Pod-style accommodation', 'Beach location', 'Unique design', '24/7 access', 'Social spaces'],
-        rating: 4.2,
-        notes: 'Innovative pod hotel directly on Venice Beach. Modern security systems and good reviews from solo female travelers.',
-        link: 'https://stayopen.com/venice-beach/'
+        features: ['Premium hostel', 'Female-only dorms', 'Downtown location', 'Designed by Roman & Williams', 'En-suite bathrooms', 'Solo traveler focused'],
+        rating: 4.5,
+        notes: 'Premium downtown hostel with thoughtfully designed female-only dorms. Excellent choice for solo female travelers wanting luxury hostel experience with top safety standards.',
+        link: 'https://www.freehandhotels.com/los-angeles/'
+      },
+      {
+        name: 'HI Los Angeles - Santa Monica',
+        type: 'hostel',
+        features: ['Female dorms', 'Beach location', 'Secure lockers', 'International crowd', 'Clean facilities', 'Steps from beach'],
+        rating: 4.5,
+        notes: 'Hostelling International property one block from beach in safest LA area. Exceptional safety record, female-friendly environment, and perfect for solo beach lovers.',
+        link: 'https://www.hiusa.org/hostels/california/santa-monica/los-angeles-santa-monica'
+      },
+      {
+        name: 'Melrose Hostel',
+        type: 'hostel',
+        features: ['Solo traveler focused', 'Female-only dorms', 'Central LA location', 'Near attractions', 'Security system', 'Community atmosphere'],
+        rating: 4.5,
+        notes: 'Designed specifically for solo travelers with large female-only dorms (up to 14 beds). Perfect central location near Thai Town, Koreatown, and Hollywood for solo exploration.',
+        link: 'https://www.melrosehostel.com/'
       }
     ],
     alerts: [
@@ -131,16 +139,28 @@ const losAngeles: Destination = {
       }
     ],
     safetyTips: {
-      clothing: `• Dress in layers - LA weather can vary greatly between coast and inland areas
-• Comfortable walking shoes essential - limited walkability in many areas
-• Sun protection crucial - bring hat, sunglasses, and high SPF sunscreen
-• Avoid flashy jewelry and designer items in tourist areas to prevent theft
-• Keep bags zipped and secure, especially on public transport and busy streets`,
-      firstTimers: `• Los Angeles is generally safe for solo women with proper precautions and area awareness
-• Rent a car or rely on rideshare - the city is designed around car travel
-• Research neighborhoods before booking accommodation - safety varies dramatically by area
-• Save emergency numbers and carry a fully charged phone at all times
-• Trust your instincts - if an area feels unsafe, leave immediately and find a public place`,
+      clothing: `• Dress in layers - LA weather varies greatly between coast (cooler) and inland areas (warmer)
+• Comfortable, supportive walking shoes essential - many areas require extensive walking on uneven surfaces
+• Sun protection crucial year-round - bring wide-brimmed hat, UV sunglasses, and SPF 50+ sunscreen
+• Avoid flashy jewelry, designer bags, and expensive watches in tourist areas to prevent theft targeting
+• Choose crossbody bags with zippers facing body, especially on Metro and in crowded areas like Hollywood
+• Pack versatile clothing for different neighborhoods - casual for beach areas, smart-casual for upscale dining
+• Bring light jacket or sweater for evening - coastal areas can get cool even in summer
+• Consider theft-proof bags with RFID blocking and hidden zippers for valuables
+• Wear closed-toe shoes for hiking in Griffith Park or other outdoor activities
+• Pack swimwear for beach activities in Santa Monica, Venice, and Malibu areas`,
+      firstTimers: `• Is Los Angeles safe for women solo travelers? Yes, with proper precautions and neighborhood awareness - crime has decreased 30% over 20 years
+• Rent a car or rely heavily on Uber/Lyft - LA is designed around car culture, not walkable public transit
+• Research neighborhoods thoroughly before booking - safety varies dramatically between areas like Beverly Hills (very safe) vs. Skid Row (avoid completely)
+• Save emergency numbers (911) and carry a fully charged phone with offline maps at all times
+• Trust your instincts - if an area feels unsafe, leave immediately and seek busy, well-lit public places
+• Book accommodation in safe areas (Santa Monica, Beverly Hills, West Hollywood) even if more expensive
+• Avoid Metro Rail after 8 PM - sexual battery cases increased 65% in 2024, violent crime up 15.6%
+• Stay in groups when possible in Hollywood and Venice Beach areas, especially after dark
+• Download safety apps like Citizen for real-time crime alerts and bSafe for emergency features
+• Keep car doors locked and windows up - car break-ins are the most common crime in tourist areas
+• Never leave anything visible in rental cars - thieves specifically target vehicles with items inside
+• Use hotel valet parking when available - parking structures become unsafe after dark`,
       apps: [
         'NomadHer',
         'Travel Ladies',
@@ -152,14 +172,14 @@ const losAngeles: Destination = {
         'Citizen'
       ],
       appLinks: [
-        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe LA exploration', rating: 4.3 },
-        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with LA safety insights', rating: 4.0 },
-        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing', rating: 4.2 },
-        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for solo women in large cities', rating: 4.1 },
-        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially important in sprawling LA', rating: 4.1 },
-        { name: 'Uber', link: 'https://www.uber.com/', description: 'Essential ride-hailing in car-dependent LA with driver verification', rating: 4.4 },
-        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Best app for safe hiking in Griffith Park, Hollywood Hills and Malibu', rating: 4.7 },
-        { name: 'Citizen', link: 'https://citizen.com/', description: 'Real-time crime and safety alerts for LA neighborhoods', rating: 4.2 }
+        { name: 'NomadHer', link: 'https://www.nomadher.com/', description: 'Female-only travel community perfect for safe LA exploration' },
+        { name: 'Travel Ladies', link: 'https://travelladies.app/', description: 'Solo female travel community with LA safety insights' },
+        { name: 'bSafe', link: 'https://www.getbsafe.com/', description: 'Personal safety app with emergency features and location sharing' },
+        { name: 'Noonlight', link: 'https://www.noonlight.com/', description: 'One-button emergency response essential for solo women in large cities' },
+        { name: 'Life360', link: 'https://www.life360.com/', description: 'Family location sharing especially important in sprawling LA' },
+        { name: 'Uber', link: 'https://www.uber.com/', description: 'Essential ride-hailing in car-dependent LA with driver verification' },
+        { name: 'AllTrails', link: 'https://www.alltrails.com/', description: 'Best app for safe hiking in Griffith Park, Hollywood Hills and Malibu' },
+        { name: 'Citizen', link: 'https://citizen.com/', description: 'Real-time crime and safety alerts for LA neighborhoods' }
       ],
       emergencyPhrases: [
         {
@@ -308,20 +328,44 @@ const losAngeles: Destination = {
       }
     },
     culturalExpectations: {
-      dressCode: 'Los Angeles fashion is generally casual and laid-back, but varies by neighborhood and occasion. Beachwear is appropriate for coastal areas like Santa Monica and Venice. Business casual or smart-casual is expected for upscale restaurants in Beverly Hills or West Hollywood. Comfortable shoes are essential due to extensive walking in some areas. Layering is recommended due to temperature variations between coast and inland areas.',
-      behaviorNorms: [
-        'Car culture dominates - most locals drive everywhere and public transit use is limited',
-        'Health and fitness culture is prominent - many locals are health-conscious and active',
-        'Entertainment industry influences social interactions - networking is common',
-        'Tipping is standard (18-22% at restaurants, $1-2 per drink at bars)',
-        'Environmental consciousness is valued - bring reusable water bottles and bags',
-        'Personal space is respected - maintain appropriate distance in conversations',
-        'Punctuality is important for business but social events may start later',
-        'Small talk about weather, entertainment, or fitness is common',
-        'Diverse communities mean cultural sensitivity is appreciated',
-        'Technology use is widespread - smartphones and apps are essential for navigation'
+      dressCode: [
+        'Los Angeles fashion is casual and laid-back but varies significantly by neighborhood and occasion',
+        'Beachwear is perfectly appropriate for coastal areas like Santa Monica, Venice, and Malibu',
+        'Business casual or smart-casual expected for upscale restaurants in Beverly Hills and West Hollywood',
+        'Comfortable, supportive shoes essential due to extensive walking on uneven surfaces',
+        'Layering recommended due to temperature variations between coast and inland areas throughout day',
+        'Avoid flashy jewelry and designer items in tourist areas to prevent theft targeting',
+        'Pack versatile clothing that transitions from beach casual to upscale dining',
+        'Sun protection essential year-round - wide-brimmed hats and UV sunglasses recommended'
       ],
-      perception: 'Los Angeles is generally welcoming to solo female travelers, especially in tourist and upscale areas. The city\'s diversity means women from all backgrounds typically feel comfortable. However, some areas may have different cultural dynamics. The entertainment industry culture can sometimes lead to unwanted attention, but this is generally limited to specific venues. Most locals are helpful and protective of tourists, particularly in safe neighborhoods.'
+      behaviorNorms: [
+        'Car culture dominates - most locals drive everywhere and public transit use is limited to specific routes',
+        'Health and fitness culture is prominent - many locals are health-conscious, active, and discuss wellness topics',
+        'Entertainment industry influences social interactions - networking and "industry talk" is common in many areas',
+        'Tipping is standard and expected (18-22% at restaurants, $1-2 per drink at bars, valet parking)',
+        'Environmental consciousness is highly valued - bring reusable water bottles, bags, and support sustainability',
+        'Personal space is respected - maintain appropriate distance in conversations and avoid unnecessary physical contact',
+        'Punctuality is crucial for business meetings but social events may start 15-30 minutes later than stated',
+        'Small talk about weather, entertainment industry, fitness trends, or local events is common and welcomed',
+        'Diverse communities mean cultural sensitivity and awareness is greatly appreciated and expected',
+        'Technology use is widespread and essential - smartphones and apps required for navigation, parking, ordering',
+        'Casual attitude toward celebrity sightings - acting unimpressed shows local sophistication',
+        'Food culture is diverse and experimental - showing interest in different cuisines demonstrates cultural appreciation',
+        'Traffic complaints are universal conversation starters - all locals can relate to transportation challenges',
+        'Beach and outdoor lifestyle culture emphasizes work-life balance and outdoor activity participation'
+      ],
+      perception: [
+        'Los Angeles is generally very welcoming to solo female travelers, especially in tourist and upscale areas',
+        'The city\'s incredible diversity (69.7% ethnic diversity) means women from all backgrounds typically feel comfortable and accepted',
+        'Is Los Angeles safe for female solo travelers? Yes, locals are generally helpful and protective of tourists in safe neighborhoods',
+        'Entertainment industry culture can sometimes lead to unwanted attention, but this is limited to specific venues and areas',
+        'Solo female travel is common and accepted - many local women travel alone regularly throughout the city',
+        'Different neighborhoods have varying cultural dynamics - Santa Monica/Beverly Hills very female-friendly vs. some downtown areas requiring more caution',
+        'Latino and diverse communities are generally welcoming and supportive of female travelers showing cultural respect',
+        'Tech and startup culture in areas like Santa Monica creates progressive, female-friendly environments',
+        'Beach culture promotes body positivity and acceptance, making solo female travelers feel comfortable',
+        'Strong feminist movements and women\'s rights awareness create supportive environment for independent women travelers'
+      ]
     },
     bestTimeToVisit: {
       safestMonths: ['April-June', 'September-November'],
@@ -332,7 +376,6 @@ const losAngeles: Destination = {
       fire: '911',
       medical: '911',
       general: '911',
-      touristHelpline: '+1 213-689-8822'
     },
     currency: {
       name: 'US Dollar',
@@ -379,17 +422,13 @@ const losAngeles: Destination = {
     redFlags: [
       {
         label: 'Property Crime & Car Break-ins',
-        frequency: 'Most Common',
+        frequency: 'Most common',
         icon: 'Car',
-        details: 'Car break-ins are extremely common throughout LA, especially in tourist areas like Hollywood, Venice Beach, and downtown. Thieves target rental cars and vehicles with visible items.',
-        prevention: 'Never leave anything visible in cars, use valet parking when possible, avoid street parking in tourist areas, rent cars without tourist company stickers'
       },
       {
         label: 'Pickpocketing in Tourist Areas',
-        frequency: 'Common',
+        frequency: 'Frequent',
         icon: 'Hand',
-        details: 'Pickpockets operate at Hollywood Walk of Fame, Venice Beach, and crowded events. Distraction techniques used while accomplices steal from bags and pockets.',
-        prevention: 'Keep valuables in front pockets, use crossbody bags, stay alert in crowds, avoid displaying expensive items or large amounts of cash'
       },
       {
         label: 'Street Harassment (Hollywood/Venice)',
@@ -444,7 +483,7 @@ const losAngeles: Destination = {
       { label: 'Dining Alone', confidence: 85, source: 'Solo Female Travelers Club 2024', sourceUrl: 'https://www.solofemaletravelers.club/' }
     ],
     sexualHarassmentData: {
-      prevalence: 'moderate',
+      prevalence: 'medium',
       commonLocations: ['Hollywood Boulevard tourist areas', 'Venice Beach boardwalk', 'Crowded public transit', 'Some nightlife districts in West Hollywood', 'Tourist attractions with street performers'],
       reportingRate: 45,
       legalProtection: 'Strong legal protections under California and federal law. Los Angeles has comprehensive anti-harassment legislation with specialized LAPD units. Tourist police available in major areas.',
@@ -546,6 +585,14 @@ const losAngeles: Destination = {
       ]
     },
     legalResources: {
+      embassy: {
+        name: 'U.S. Embassy/Consulates',
+        address: 'Various consulates in LA',
+        phone: '+1 323-857-4494',
+        email: 'acslosangeles@state.gov',
+        emergency: '+1 323-857-4494',
+        link: 'https://travel.state.gov/content/travel/en/consularnotification/ConsularNotificationandAccess/unitedstates.html'
+      },
       embassies: [
         {
           name: 'British Consulate General Los Angeles',
@@ -983,7 +1030,7 @@ const losAngeles: Destination = {
           type: 'Mid-range Hotel',
           avgCost: '$80-200',
           safetyNote: 'Choose locations carefully - area matters more than price',
-          safetyLevel: 'medium-high'
+          safetyLevel: 'medium'
         },
         {
           type: 'Hostel',
@@ -1021,13 +1068,13 @@ const losAngeles: Destination = {
           method: 'Metro Bus (DASH)',
           cost: '$0.50-1.75/ride',
           safetyDescription: 'DASH buses safer than Metro Rail, sit near driver, daytime recommended',
-          safetyLevel: 'medium-high'
+          safetyLevel: 'medium'
         },
         {
           method: 'Yellow Cab/Official Taxis',
           cost: '$20-50/ride',
           safetyDescription: 'Traditional taxis from official stands, ensure meter running',
-          safetyLevel: 'medium-high'
+          safetyLevel: 'medium'
         },
         {
           method: 'Metro Bike Share',
@@ -1056,6 +1103,20 @@ const losAngeles: Destination = {
         'LAX FlyAway bus ($9.75) much cheaper than rideshare for airport trips',
         'DASH buses ($0.50) are the cheapest and safest public transit option',
         'Metro Bike Share ($1.75/30min) affordable for short trips in safe areas'
+      ],
+      currencyExchangeTips: [
+        'Use credit cards and contactless payments - widely accepted throughout LA with better security than cash',
+        'Notify banks before travel to prevent card blocks - essential for seamless payments in car-dependent city',
+        'ATMs available everywhere - use official bank machines (Bank of America, Wells Fargo, Chase) for safety',
+        'Avoid currency exchange at LAX airport - rates are poor with high fees, use city ATMs instead',
+        'US tipping culture is mandatory - budget 18-22% for restaurants, $1-2 per drink, valet parking fees',
+        'Mobile payment apps (Apple Pay, Google Pay) widely accepted and safer than carrying cash',
+        'Keep small bills for parking meters and tips - many situations still require cash payments',
+        'Budget for parking costs - $5-25/day depending on area, valet parking $20-50 in upscale areas',
+        'Tourist areas may have inflated prices - check menus and parking signs before committing',
+        'Use ride-sharing apps for transparent pricing - avoid cash transactions with unlicensed drivers',
+        'Credit card fraud protection better than cash - report suspicious activity immediately',
+        'Carry backup payment method - have two different cards from different banks for emergencies'
       ]
     },
   culturalSensitivity: {
@@ -1075,8 +1136,18 @@ const losAngeles: Destination = {
     ]
   },
   youtubeVideo: {
-    videoId: "dQw4w9WgXcQ" // PLACEHOLDER - Update with actual video ID
-  }
+    videoId: "Q1ecECQ8gsw" // Solo female travel experience in LA
+  },
+  youtubeVideos: [
+    {
+      videoId: "Q1ecECQ8gsw",
+      title: "Solo Female Travel Experience in Los Angeles"
+    },
+    {
+      videoId: "Gf4b0vMAUq4",
+      title: "Los Angeles Dangers and Safety Tips for Travelers"
+    }
+  ]
 };
 
 export default losAngeles;
